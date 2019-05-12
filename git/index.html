@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="git config core.ignorecase false，关闭git忽略大小写配置，即可检测到大小写名称更改git diff –name-only 2ef1bdc 34er24er git init                                                  # 初始化本地git仓库（创建新仓库）git config –global user.name">
+<meta name="keywords" content="za, git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git">
+<meta property="og:url" content="http://yoursite.com/git/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="git config core.ignorecase false，关闭git忽略大小写配置，即可检测到大小写名称更改git diff –name-only 2ef1bdc 34er24er git init                                                  # 初始化本地git仓库（创建新仓库）git config –global user.name">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-12T16:57:14.212Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git">
+<meta name="twitter:description" content="git config core.ignorecase false，关闭git忽略大小写配置，即可检测到大小写名称更改git diff –name-only 2ef1bdc 34er24er git init                                                  # 初始化本地git仓库（创建新仓库）git config –global user.name">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>git</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../curl/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/git/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/git/&text=git"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/git/&title=git"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/git/&is_video=false&description=git"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=git&body=Check out this article: http://yoursite.com/git/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/git/&title=git"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/git/&title=git"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/git/&title=git"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/git/&title=git"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/git/&name=git&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Note-ssh-environment-should-not-be-used-as-it"><span class="toc-number">1.</span> <span class="toc-text">Note: ~/.ssh/environment should not be used, as it</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#already-has-a-different-purpose-in-SSH"><span class="toc-number">2.</span> <span class="toc-text">already has a different purpose in SSH.</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Note-Don’t-bother-checking-SSH-AGENT-PID-It’s-not-used"><span class="toc-number">3.</span> <span class="toc-text">Note: Don’t bother checking SSH_AGENT_PID. It’s not used</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#by-SSH-itself-and-it-might-even-be-incorrect"><span class="toc-number">4.</span> <span class="toc-text">by SSH itself, and it might even be incorrect</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#for-example-when-using-agent-forwarding-over-SSH"><span class="toc-number">5.</span> <span class="toc-text">(for example, when using agent-forwarding over SSH).</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#if-your-keys-are-not-stored-in-ssh-id-rsa-pub-or-ssh-id-dsa-pub-you’ll-need"><span class="toc-number">6.</span> <span class="toc-text">if your keys are not stored in ~/.ssh/id_rsa.pub or ~/.ssh/id_dsa.pub, you’ll need</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#to-paste-the-proper-path-after-ssh-add"><span class="toc-number">7.</span> <span class="toc-text">to paste the proper path after ssh-add</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        git
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Hexo</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-12T16:57:14.211Z" itemprop="datePublished">2019-05-13</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="../tags/za-git/">za, git</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>git config core.ignorecase false，关闭git忽略大小写配置，即可检测到大小写名称更改<br>git diff –name-only 2ef1bdc 34er24er</p>
+<p>git init                                                  # 初始化本地git仓库（创建新仓库）<br>git config –global user.name “xxx”                       # 配置用户名<br>git config –global user.email “<a href="mailto:xxx@xxx.com" target="_blank" rel="noopener">xxx@xxx.com</a>“              # 配置邮件<br>git config –global color.ui true                         # git status等命令自动着色<br>git config –global color.status auto<br>git config –global color.diff auto<br>git config –global color.branch auto<br>git config –global color.interactive auto<br>git config –global –unset http.proxy                    # remove  proxy configuration on git<br>git clone git+ssh:<a href="mailto://git@192.168.53.168" target="_blank" rel="noopener">//git@192.168.53.168</a>/VT.git             # clone远程仓库<br>git status                                                # 查看当前版本状态（是否修改）<br>git add xyz                                               # 添加xyz文件至index<br>git add .                                                 # 增加当前子目录下所有更改过的文件至index<br>git commit -m ‘xxx’                                       # 提交<br>git commit –amend -m ‘xxx’                               # 合并上一次提交（用于反复修改）<br>git commit -am ‘xxx’                                      # 将add和commit合为一步<br>git rm xxx                                                # 删除index中的文件<br>git rm -r *                                               # 递归删除<br>git rm –cached [file/dir]                                # 删除索引。 包括正索引和负索引 （负即是 ignore）<br>git log                                                   # 显示提交日志<br>git log -1                                                # 显示1行日志 -n为n行<br>git log -5<br>git log –stat                                            # 显示提交日志及相关变动文件<br>git log -p -m<br>git show dfb02e6e4f2f7b573337763e5c0013802e392818         # 显示某个提交的详细内容<br>git show dfb02                                            # 可只用commitid的前几位<br>git show HEAD                                             # 显示HEAD提交日志<br>git show HEAD^                                            # 显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本 ^5为上5个版本<br>git show v2.0                                             # 显示v2.0的日志及详细内容<br>git show dev                                             # 显示 dev 分支最后一次 commit 细节<br>git show-branch                                           # 图示当前分支历史<br>git show-branch –all                                     # 图示所有分支历史<br>git show HEAD@{5}<br>git show master@{yesterday}                               # 显示master分支昨天的状态<br>git show HEAD~3<br>git show -s –pretty=raw 2be7fcb476<br>git show [commit]                                         # 显示某次提交的元数据和内容变化<br>git show –name-only [commit]                             # 显示某次提交发生变化的文件<br>git show [commit]:[filename]                              # 显示某次提交时，某个文件的内容</p>
+<p>git tag                                                   # 显示已存在的tag<br>git tag -a v2.0 -m ‘xxx’                                  # 增加v2.0的tag</p>
+<p>git log v2.0                                              # 显示v2.0的日志<br>git diff                                                  # 显示所有未添加至index的变更<br>git diff –cached                                         # 显示所有已添加index但还未commit的变更<br>git diff HEAD^                                            # 比较与上一个版本的差异<br>git diff HEAD – ./lib                                    # 比较与HEAD版本lib目录的差异<br>git diff origin/master..master                            # 比较远程分支master上有本地分支master上没有的<br>git diff origin/master..master –stat                     # 只显示差异的文件，不显示具体内容<br>git diff –name-status master..dev          #差异的文件和状态<br>git diff –name-only head~1             ＃差异的文件<br>git remote add origin git+ssh:<a href="mailto://git@192.168.53.168" target="_blank" rel="noopener">//git@192.168.53.168</a>/VT.git # 增加远程定义（用于push/pull/fetch）<br>git branch                                                # 显示本地分支<br>git branch –contains 50089                               # 显示包含提交50089的分支<br>git branch -a                                             # 显示所有分支<br>git branch -r                                             # 显示所有原创分支<br>git branch –merged                                       # 显示所有已合并到当前分支的分支<br>git branch –no-merged                                    # 显示所有未合并到当前分支的分支<br>git branch -m master master_copy                          # 本地分支改名<br>git checkout -b master_copy                               # 从当前分支创建新分支master_copy并检出<br>git checkout -b master master_copy                        # 上面的完整版<br>git checkout features/performance                         # 检出已存在的features/performance分支<br>git checkout –track hotfixes/BJVEP933                    # 检出远程分支hotfixes/BJVEP933并创建本地跟踪分支<br>git checkout v2.0                                         # 检出版本v2.0<br>git checkout -b devel origin/develop                      # 从远程分支develop创建新本地分支devel并检出<br>git checkout –track origin/daves_branch<br>Git checkout –orphan <branchname>          # 创建空白分支<br>git checkout – README                                    # 检出head版本的README文件（可用于修改错误回退）<br>git merge origin/master                                   # 合并远程master分支至当前分支<br>git cherry-pick ff44785404a8e                             # 合并提交ff44785404a8e的修改<br>git push origin master                                    # 将当前分支push到远程master分支<br>git push origin dev:remote-dev          # 提交本地分支dev到远程，远程分支名为 remote-dev<br>git push origin :hotfixes/BJVEP933                        # 删除远程仓库的hotfixes/BJVEP933分支<br>git push origin –delete <branchname>                     # 删除远程分支<br>git push –tags                                           # 把所有tag推送到远程仓库<br>git fetch                                                 # 获取所有远程分支（不更新本地分支，另需merge）<br>git fetch –prune                                         # 获取所有原创分支并清除服务器上已删掉的分支<br>git pull origin master                                    # 获取远程分支master并merge到当前分支<br>git mv README README2                                     # 重命名文件README为README2<br>git reset –hard HEAD                                     # 将当前版本重置为HEAD（通常用于merge失败回退）<br>git rebase<br>Git rebase origin/release/rt215           # 先  fetch ,  再 rebase 远程分支<br>git branch -d BJVEP933                           # 删除分支BJVEP933（本分支修改已合并到其他分支）<br>git branch -D BJVEP933                           # 强制删除分支BJVEP933<br>git ls-files                                              # 列出git index包含的文件</branchname></branchname></p>
+<p>git whatchanged                                           # 显示提交历史对应的文件修改<br>git revert dfb02e6e4f2f7b573337763e5c0013802e392818       # 撤销提交dfb02e6e4f2f7b573337763e5c0013802e392818<br>git ls-tree HEAD                                          # 内部命令：显示某个git对象<br>git rev-parse v2.0                                        # 内部命令：显示某个ref对于的SHA1 HASH<br>git reflog                                                # 显示所有提交，包括孤立节点<br>git log –pretty=format:’%h %s’ –graph                   # 图示提交日志<br>git log –oneline –decorate –graph –all        # 图示提交分支日志</p>
+<p>git stash                                                 # 暂存当前修改，将所有至为HEAD状态<br>git stash list                                            # 查看所有暂存<br>git stash show -p stash@{0}                               # 参考第一次暂存<br>git stash apply stash@{0}                                 # 应用第一次暂存<br>git grep “delete from”                                    # 文件中搜索文本“delete from”<br>git grep -e ‘#define’ –and -e SORT_DIRENT<br>git gc<br>git fsck</p>
+<p>git log –stat                                            # 显示commit历史，以及每次commit发生变更的文件<br>git reflog                                                # 显示当前分支的最近几次提交<br>git log [tag] HEAD –pretty=format:%s                     # 显示某个commit之后的所有变动，每个commit占据一行<br>git log [tag] HEAD –grep feature                         # 显示某个commit之后的所有变动，其”提交说明”必须符合搜索条件<br>git log –follow [file] / git whatchanged [file]          # 显示某个文件的版本历史，包括文件改名<br>git log -p [file]                                         # 显示指定文件相关的每一次diff<br>git diff –cached [file]                                  # 显示暂存区和上一个commit的差异<br>git diff HEAD                                             # 显示工作区与当前分支最新commit之间的差异</p>
+<p>git commit -v                                             # 提交时显示所有diff信息<br>git commit –amend -m [message]                           # 使用一次新的commit，替代上一次提交 如果代码没有任何新变化，则用来改写上一次commit的提交信息<br>git commit –amend [file1] [file2] …                    # 重做上一次commit，并包括指定文件的新变化<br>git checkout [commit] [file]                              # 恢复某个commit的指定文件到暂存区和工作区<br>git checkout .                                            # 恢复暂存区的所有文件到工作区<br>git reset [file]                                          # 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变<br>git reset –hard                                          # 重置暂存区与工作区，与上一次commit保持一致<br>git reset [commit]                                        # 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变<br>git reset –hard [commit]                                 # 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致<br>git reset –keep [commit]                                 # 重置当前HEAD为指定commit，但保持暂存区和工作区不变<br>git revert [commit]                                       # 新建一个commit，用来撤销指定commit  后者的所有变化都将被前者抵消，并且应用到当前分支<br>git archive -o latest.zip HEAD/master/hash<br>git archive mast &gt; project.zip<br>git archive batch –format=tar  -o web.tar</p>
+<ol>
+<li>git branch -avv -vv 能显示当前本地 branch 对应的 origin branch，以及最后一次提交的信息。 -a 为显示所有的branch，包括本地branch以及远程branch。 一起组合的时候，能让你清晰的了解当前所有的branch信息。 </li>
+<li>git remote show origin 显示 origin 的详细信息，包括了branch track 的信息。 </li>
+<li>git push -u /–set-upstream 首次push的时候，会设置自动将远程branch作为默认的 push branch,但并不会作为默认的pull branch，所以直接输入 git pull 的时候，会有出错提示。 那么，可以在再次push的时候，加上-u 或者–set-upstream，则会将默认的push branch同时设置为pull branch，这样，该remote branch就成为了 tracking branch，之后就可以直接输入 git pull 来更新本地branch了。 </li>
+<li>get pull –rebase      git pull将远程branch更新到本地，如果远程branch有更新，则会和当前branch做merge。一般来说merge并产生不友好的commit信息，当你再次push到git服务器上之后，会给其他的合作开发人员带来极为麻烦的合并。–rebase则会在git pull 之后以远程分支为基本来应用本地的更新，生成的更新记录则会更友好。 </li>
+<li>git rebase –onto master server client 如果没有 –onto master，是将 client 以 server 为基准进行rebase，即将client对server的共同祖先的改动接到server的HEAD上，有了 –onto master，则是将这个改动接到 master的HEAD后面。在同时开发多个分支，并且在需要应用某些不是以 master 为基础创建的分支的时候，特别有用。 <br>Delete a Git branch both locally and in GitHub<br>Delete a remote branch: git push origin –delete <branchname><br>git push origin :<branchname><br>To remove a local branch from your machine:<br>git branch -d the_local_branch</branchname></branchname></li>
+</ol>
+<p>Push local branch to remote<br>why-do-i-need-to-do-set-upstream-all-the-time<br>git push -u origin <branchname><br>git push -u origin <branchname> = git push origin <branchname> + git branch –set-upstream-to origin/my_branch<br>git branch –set-upstream-to origin/my_branch = git branch -u origin/my_branch<br>Pull remote branch to local<br>git checkout -b <localname> origin/<remotename><br>Example: pull then merge into another branch<br>my local 2 brach: dev work my working branch : work then I need to pull some new code from dev then merge into branch work<br>on <strong>work</strong>: g stash<br>on <strong>work</strong>: gco dev<br>on <strong>dev</strong>: gl –rebase<br>on <strong>dev</strong>: gco work<br>on <strong>work</strong>: g rebase dev<br>on <strong>work</strong>: g stash pop<br>recover current changes<br>this recover current changes but do nothing with a commit git checkout -f<br>PS: git reset head~ will undo a head commit, but recover nothing.<br>add or edit a remote url<br>How to change a remote repository URI using Git?<br>via command:<br>add: git remote add origin ssh://newhost.com/usr/local/gitroot/myproject.git<br>set: git remote set-url origin ssh://newhost.com/usr/local/gitroot/newproject.git<br>Check your local repo-folder/.git/config file for:<br>[remote “origin”]<br>    fetch = +refs/heads/<em>:refs/remotes/origin/</em><br>    url = <a href="https://user:password@code.google.com/p/project-name/" target="_blank" rel="noopener">https://user:password@code.google.com/p/project-name/</a><br>git diff commit<br>git log<br>then find commit version string in such:<br>commit 48c47872e21283ec483b65a85cba7dac07dd60e0<br>Author: rup <a href="mailto:&#x75;&#x67;&#x6c;&#x79;&#x73;&#111;&#117;&#x6c;&#64;&#x66;&#111;&#x78;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" target="_blank" rel="noopener">&#x75;&#x67;&#x6c;&#x79;&#x73;&#111;&#117;&#x6c;&#64;&#x66;&#111;&#x78;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a><br>Date:   Thu Jan 23 01:14:38 2014 +0800</remotename></localname></branchname></branchname></branchname></p>
+<pre><code>update post
+</code></pre><p>then show target version with current HEAD:<br>git diff 48c47872e21283ec483b65a85cba7dac07dd60e0 HEAD<br>or previous version with previous’ previous version:<br>git diff HEAD~1 HEAD~2<br>or compare with commit string:<br>git diff 48c47872e21283ec483b65a85cba7dac07dd60e0 f28a263731d3bd492a839037cbca4f12afcfcef4<br>or<br>git diff HEAD~2 f28a263731d3bd492a839037cbca4f12afcfcef4<br>between branchs:<br>git diff master dev<br>public key always asking for password and keyphrase<br>eval <code>ssh-agent -s</code><br>ssh-add ~/.ssh/id_rsa<br>or put this code to .bashrc or .zshrc Working with SSH key passphrases</p>
+<h1 id="Note-ssh-environment-should-not-be-used-as-it"><a href="#Note-ssh-environment-should-not-be-used-as-it" class="headerlink" title="Note: ~/.ssh/environment should not be used, as it"></a>Note: ~/.ssh/environment should not be used, as it</h1><h1 id="already-has-a-different-purpose-in-SSH"><a href="#already-has-a-different-purpose-in-SSH" class="headerlink" title="already has a different purpose in SSH."></a>already has a different purpose in SSH.</h1><p>env=~/.ssh/agent.env</p>
+<h1 id="Note-Don’t-bother-checking-SSH-AGENT-PID-It’s-not-used"><a href="#Note-Don’t-bother-checking-SSH-AGENT-PID-It’s-not-used" class="headerlink" title="Note: Don’t bother checking SSH_AGENT_PID. It’s not used"></a>Note: Don’t bother checking SSH_AGENT_PID. It’s not used</h1><h1 id="by-SSH-itself-and-it-might-even-be-incorrect"><a href="#by-SSH-itself-and-it-might-even-be-incorrect" class="headerlink" title="by SSH itself, and it might even be incorrect"></a>by SSH itself, and it might even be incorrect</h1><h1 id="for-example-when-using-agent-forwarding-over-SSH"><a href="#for-example-when-using-agent-forwarding-over-SSH" class="headerlink" title="(for example, when using agent-forwarding over SSH)."></a>(for example, when using agent-forwarding over SSH).</h1><p>agent_is_running() {<br>    if [ “$SSH_AUTH_SOCK” ]; then</p>
+<pre><code>    # ssh-add returns:
+    #   0 = agent running, has keys
+    #   1 = agent running, no keys
+    #   2 = agent not running
+    ssh-add -l &gt;/dev/null 2&gt;&amp;1 || [ $? -eq 1 ]
+else
+    false
+fi
+</code></pre><p>}</p>
+<p>agent_has_keys() {<br>    ssh-add -l &gt;/dev/null 2&gt;&amp;1<br>}</p>
+<p>agent_load_env() {<br>    . “$env” &gt;/dev/null<br>}</p>
+<p>agent_start() {<br>    (umask 077; ssh-agent &gt;”$env”)<br>    . “$env” &gt;/dev/null<br>}</p>
+<p>if ! agent_is_running; then<br>    agent_load_env<br>fi</p>
+<h1 id="if-your-keys-are-not-stored-in-ssh-id-rsa-pub-or-ssh-id-dsa-pub-you’ll-need"><a href="#if-your-keys-are-not-stored-in-ssh-id-rsa-pub-or-ssh-id-dsa-pub-you’ll-need" class="headerlink" title="if your keys are not stored in ~/.ssh/id_rsa.pub or ~/.ssh/id_dsa.pub, you’ll need"></a>if your keys are not stored in ~/.ssh/id_rsa.pub or ~/.ssh/id_dsa.pub, you’ll need</h1><h1 id="to-paste-the-proper-path-after-ssh-add"><a href="#to-paste-the-proper-path-after-ssh-add" class="headerlink" title="to paste the proper path after ssh-add"></a>to paste the proper path after ssh-add</h1><p>if ! agent_is_running; then<br>    agent_start<br>    ssh-add<br>elif ! agent_has_keys; then<br>    ssh-add<br>fi</p>
+<p>unset env<br>deleting-a-git-commit<br>deleting-a-git-commit<br>way one:<br>git rebase –onto <branch name>~<first commit number to remove> <branch name>~<first commit to be kept> <branch name> <!--  --> e.g:</branch></first></branch></first></branch></p>
+<p>git rebase –onto repair~3 repair~1 repair<br>git rebase -i HEAD~5<br>way two:<br>git checkout b3d92c5 Checkout the last usable commit.<br>git checkout -b repair Create a new branch to work on.<br>git cherry-pick 77b9b82 Run through commit 3.<br>git cherry-pick 2c6a45b Run through commit 1.<br>git checkout master Checkout master.<br>git reset –hard b3d92c5 Reset master to last usable commit.<br>git merge repair Merge our new branch onto master.<br>git push –hard origin master Push master to the remote repo.<br>Force Git to overwrite local files on pull<br>git fetch –all<br>git reset –hard origin/master</p>
+<p>git show HEAD~4:src/main.c              see a revision of a file<br>zip modified-files.zip $(git ls-files –modified)</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Note-ssh-environment-should-not-be-used-as-it"><span class="toc-number">1.</span> <span class="toc-text">Note: ~/.ssh/environment should not be used, as it</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#already-has-a-different-purpose-in-SSH"><span class="toc-number">2.</span> <span class="toc-text">already has a different purpose in SSH.</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Note-Don’t-bother-checking-SSH-AGENT-PID-It’s-not-used"><span class="toc-number">3.</span> <span class="toc-text">Note: Don’t bother checking SSH_AGENT_PID. It’s not used</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#by-SSH-itself-and-it-might-even-be-incorrect"><span class="toc-number">4.</span> <span class="toc-text">by SSH itself, and it might even be incorrect</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#for-example-when-using-agent-forwarding-over-SSH"><span class="toc-number">5.</span> <span class="toc-text">(for example, when using agent-forwarding over SSH).</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#if-your-keys-are-not-stored-in-ssh-id-rsa-pub-or-ssh-id-dsa-pub-you’ll-need"><span class="toc-number">6.</span> <span class="toc-text">if your keys are not stored in ~/.ssh/id_rsa.pub or ~/.ssh/id_dsa.pub, you’ll need</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#to-paste-the-proper-path-after-ssh-add"><span class="toc-number">7.</span> <span class="toc-text">to paste the proper path after ssh-add</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/git/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/git/&text=git"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/git/&title=git"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/git/&is_video=false&description=git"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=git&body=Check out this article: http://yoursite.com/git/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/git/&title=git"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/git/&title=git"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/git/&title=git"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/git/&title=git"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/git/&name=git&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 John Doe
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
