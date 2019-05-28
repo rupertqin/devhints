@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Open a databaserequire &amp;apos;rubygems&amp;apos; require &amp;apos;sequel&amp;apos;  DB = Sequel.sqlite(&amp;apos;my_blog.db&amp;apos;) DB = Sequel.connect(&amp;apos;postgres://user:password@localhost/my_db&amp;apos;) DB = Sequel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sequel">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/sequel/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Open a databaserequire &amp;apos;rubygems&amp;apos; require &amp;apos;sequel&amp;apos;  DB = Sequel.sqlite(&amp;apos;my_blog.db&amp;apos;) DB = Sequel.connect(&amp;apos;postgres://user:password@localhost/my_db&amp;apos;) DB = Sequel">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:23:51.428Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sequel">
+<meta name="twitter:description" content="Open a databaserequire &amp;apos;rubygems&amp;apos; require &amp;apos;sequel&amp;apos;  DB = Sequel.sqlite(&amp;apos;my_blog.db&amp;apos;) DB = Sequel.connect(&amp;apos;postgres://user:password@localhost/my_db&amp;apos;) DB = Sequel">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Sequel</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../sequelize/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../semver/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/sequel/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/sequel/&text=Sequel"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/sequel/&title=Sequel"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/sequel/&is_video=false&description=Sequel"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Sequel&body=Check out this article: https://rupertqin.github.io/devhints/sequel/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/sequel/&title=Sequel"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/sequel/&title=Sequel"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/sequel/&title=Sequel"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/sequel/&title=Sequel"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/sequel/&name=Sequel&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Open-a-database"><span class="toc-number">1.</span> <span class="toc-text">Open a database</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Open-an-SQLite-memory-database"><span class="toc-number">2.</span> <span class="toc-text">Open an SQLite memory database</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Logging-SQL-statements"><span class="toc-number">3.</span> <span class="toc-text">Logging SQL statements</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-raw-SQL"><span class="toc-number">4.</span> <span class="toc-text">Using raw SQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-dataset"><span class="toc-number">5.</span> <span class="toc-text">Create a dataset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Most-dataset-methods-are-chainable"><span class="toc-number">6.</span> <span class="toc-text">Most dataset methods are chainable</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Insert-rows"><span class="toc-number">7.</span> <span class="toc-text">Insert rows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Retrieve-rows"><span class="toc-number">8.</span> <span class="toc-text">Retrieve rows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Update-Delete-rows"><span class="toc-number">9.</span> <span class="toc-text">Update/Delete rows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Datasets-are-Enumerable"><span class="toc-number">10.</span> <span class="toc-text">Datasets are Enumerable</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filtering-see-also-doc-dataset-filtering-rdoc"><span class="toc-number">11.</span> <span class="toc-text">Filtering (see also doc/dataset_filtering.rdoc)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Equality"><span class="toc-number">11.1.</span> <span class="toc-text">Equality</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Inequality"><span class="toc-number">11.2.</span> <span class="toc-text">Inequality</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Inclusion"><span class="toc-number">11.3.</span> <span class="toc-text">Inclusion</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Subselects-as-scalar-values"><span class="toc-number">11.4.</span> <span class="toc-text">Subselects as scalar values</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LIKE-Regexp"><span class="toc-number">11.5.</span> <span class="toc-text">LIKE/Regexp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AND-OR-NOT"><span class="toc-number">11.6.</span> <span class="toc-text">AND/OR/NOT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Mathematical-operators"><span class="toc-number">11.7.</span> <span class="toc-text">Mathematical operators</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ordering"><span class="toc-number">12.</span> <span class="toc-text">Ordering</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Limit-Offset"><span class="toc-number">13.</span> <span class="toc-text">Limit/Offset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Joins"><span class="toc-number">14.</span> <span class="toc-text">Joins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aggregate-functions-methods"><span class="toc-number">15.</span> <span class="toc-text">Aggregate functions methods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL-Functions-Literals"><span class="toc-number">16.</span> <span class="toc-text">SQL Functions / Literals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Schema-Manipulation"><span class="toc-number">17.</span> <span class="toc-text">Schema Manipulation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aliasing"><span class="toc-number">18.</span> <span class="toc-text">Aliasing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Transactions"><span class="toc-number">19.</span> <span class="toc-text">Transactions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Miscellaneous"><span class="toc-number">20.</span> <span class="toc-text">Miscellaneous:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Documents"><span class="toc-number">21.</span> <span class="toc-text">Documents</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Alter-table"><span class="toc-number">22.</span> <span class="toc-text">Alter table</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Model-associations"><span class="toc-number">23.</span> <span class="toc-text">Model associations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Validations"><span class="toc-number">24.</span> <span class="toc-text">Validations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Model-stuff"><span class="toc-number">25.</span> <span class="toc-text">Model stuff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Callbacks"><span class="toc-number">26.</span> <span class="toc-text">Callbacks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Schema"><span class="toc-number">27.</span> <span class="toc-text">Schema</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unrestrict-primary-key"><span class="toc-number">28.</span> <span class="toc-text">Unrestrict primary key</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Sequel
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.428Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Ruby-libraries/">Ruby libraries</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Open-a-database"><a href="#Open-a-database" class="headerlink" title="Open a database"></a>Open a database</h3><pre><code>require &apos;rubygems&apos;
+require &apos;sequel&apos;
+
+DB = Sequel.sqlite(&apos;my_blog.db&apos;)
+DB = Sequel.connect(&apos;postgres://user:password@localhost/my_db&apos;)
+DB = Sequel.postgres(&apos;my_db&apos;, :user =&gt; &apos;user&apos;, :password =&gt; &apos;password&apos;, :host =&gt; &apos;localhost&apos;)
+DB = Sequel.ado(&apos;mydb&apos;)
+</code></pre><h3 id="Open-an-SQLite-memory-database"><a href="#Open-an-SQLite-memory-database" class="headerlink" title="Open an SQLite memory database"></a>Open an SQLite memory database</h3><p>Without a filename argument, the sqlite adapter will setup a new sqlite database in memory.</p>
+<pre><code>DB = Sequel.sqlite
+</code></pre><h3 id="Logging-SQL-statements"><a href="#Logging-SQL-statements" class="headerlink" title="Logging SQL statements"></a>Logging SQL statements</h3><pre><code>require &apos;logger&apos;
+DB = Sequel.sqlite &apos;&apos;, :loggers =&gt; [Logger.new($stdout)]
+# or
+DB.loggers &lt;&lt; Logger.new(...)
+</code></pre><h3 id="Using-raw-SQL"><a href="#Using-raw-SQL" class="headerlink" title="Using raw SQL"></a>Using raw SQL</h3><pre><code>DB.run &quot;CREATE TABLE users (name VARCHAR(255) NOT NULL, age INT(3) NOT NULL)&quot;
+dataset = DB[&quot;SELECT age FROM users WHERE name = ?&quot;, name]
+dataset.map(:age)
+DB.fetch(&quot;SELECT name FROM users&quot;) do |row|
+  p row[:name]
+end
+</code></pre><h3 id="Create-a-dataset"><a href="#Create-a-dataset" class="headerlink" title="Create a dataset"></a>Create a dataset</h3><pre><code>dataset = DB[:items]
+dataset = DB.from(:items)
+</code></pre><h3 id="Most-dataset-methods-are-chainable"><a href="#Most-dataset-methods-are-chainable" class="headerlink" title="Most dataset methods are chainable"></a>Most dataset methods are chainable</h3><pre><code>dataset = DB[:managers].where(:salary =&gt; 5000..10000).order(:name, :department)
+</code></pre><h3 id="Insert-rows"><a href="#Insert-rows" class="headerlink" title="Insert rows"></a>Insert rows</h3><pre><code>dataset.insert(:name =&gt; &apos;Sharon&apos;, :grade =&gt; 50)
+</code></pre><h3 id="Retrieve-rows"><a href="#Retrieve-rows" class="headerlink" title="Retrieve rows"></a>Retrieve rows</h3><pre><code>dataset.each{|r| p r}
+dataset.all # =&gt; [{...}, {...}, ...]
+dataset.first # =&gt; {...}
+</code></pre><h3 id="Update-Delete-rows"><a href="#Update-Delete-rows" class="headerlink" title="Update/Delete rows"></a>Update/Delete rows</h3><pre><code>dataset.filter(~:active).delete
+dataset.filter(&apos;price &lt; ?&apos;, 100).update(:active =&gt; true)
+</code></pre><h3 id="Datasets-are-Enumerable"><a href="#Datasets-are-Enumerable" class="headerlink" title="Datasets are Enumerable"></a>Datasets are Enumerable</h3><pre><code>dataset.map{|r| r[:name]}
+dataset.map(:name) # same as above
+
+dataset.inject(0){|sum, r| sum + r[:value]}
+dataset.sum(:value) # same as above
+</code></pre><h3 id="Filtering-see-also-doc-dataset-filtering-rdoc"><a href="#Filtering-see-also-doc-dataset-filtering-rdoc" class="headerlink" title="Filtering (see also doc/dataset_filtering.rdoc)"></a>Filtering (see also doc/dataset_filtering.rdoc)</h3><h4 id="Equality"><a href="#Equality" class="headerlink" title="Equality"></a>Equality</h4><pre><code>dataset.filter(:name =&gt; &apos;abc&apos;)
+dataset.filter(&apos;name = ?&apos;, &apos;abc&apos;)
+</code></pre><h4 id="Inequality"><a href="#Inequality" class="headerlink" title="Inequality"></a>Inequality</h4><pre><code>dataset.filter{value &gt; 100}
+dataset.exclude{value &lt;= 100}
+</code></pre><h4 id="Inclusion"><a href="#Inclusion" class="headerlink" title="Inclusion"></a>Inclusion</h4><pre><code>dataset.filter(:value =&gt; 50..100)
+dataset.where{(value &gt;= 50) &amp; (value &lt;= 100)}
+
+dataset.where(&apos;value IN ?&apos;, [50,75,100])
+dataset.where(:value=&gt;[50,75,100])
+
+dataset.where(:id=&gt;other_dataset.select(:other_id))
+</code></pre><h4 id="Subselects-as-scalar-values"><a href="#Subselects-as-scalar-values" class="headerlink" title="Subselects as scalar values"></a>Subselects as scalar values</h4><pre><code>dataset.where(&apos;price &gt; (SELECT avg(price) + 100 FROM table)&apos;)
+dataset.filter{price &gt; dataset.select(avg(price) + 100)}
+</code></pre><h4 id="LIKE-Regexp"><a href="#LIKE-Regexp" class="headerlink" title="LIKE/Regexp"></a>LIKE/Regexp</h4><pre><code>DB[:items].filter(:name.like(&apos;AL%&apos;))
+DB[:items].filter(:name =&gt; /^AL/)
+</code></pre><h4 id="AND-OR-NOT"><a href="#AND-OR-NOT" class="headerlink" title="AND/OR/NOT"></a>AND/OR/NOT</h4><pre><code>DB[:items].filter{(x &gt; 5) &amp; (y &gt; 10)}.sql 
+# SELECT * FROM items WHERE ((x &gt; 5) AND (y &gt; 10))
+
+DB[:items].filter({:x =&gt; 1, :y =&gt; 2}.sql_or &amp; ~{:z =&gt; 3}).sql 
+# SELECT * FROM items WHERE (((x = 1) OR (y = 2)) AND (z != 3))
+</code></pre><h4 id="Mathematical-operators"><a href="#Mathematical-operators" class="headerlink" title="Mathematical operators"></a>Mathematical operators</h4><pre><code>DB[:items].filter((:x + :y) &gt; :z).sql 
+# SELECT * FROM items WHERE ((x + y) &gt; z)
+
+DB[:items].filter{price - 100 &lt; avg(price)}.sql 
+# SELECT * FROM items WHERE ((price - 100) &lt; avg(price))
+</code></pre><h3 id="Ordering"><a href="#Ordering" class="headerlink" title="Ordering"></a>Ordering</h3><pre><code>dataset.order(:kind)
+dataset.reverse_order(:kind)
+dataset.order(:kind.desc, :name)
+</code></pre><h3 id="Limit-Offset"><a href="#Limit-Offset" class="headerlink" title="Limit/Offset"></a>Limit/Offset</h3><pre><code>dataset.limit(30) # LIMIT 30
+dataset.limit(30, 10) # LIMIT 30 OFFSET 10
+</code></pre><h3 id="Joins"><a href="#Joins" class="headerlink" title="Joins"></a>Joins</h3><pre><code>DB[:items].left_outer_join(:categories, :id =&gt; :category_id).sql 
+# SELECT * FROM items LEFT OUTER JOIN categories ON categories.id = items.category_id
+
+DB[:items].join(:categories, :id =&gt; :category_id).join(:groups, :id =&gt; :items__group_id) 
+# SELECT * FROM items INNER JOIN categories ON categories.id = items.category_id INNER JOIN groups ON groups.id = items.group_id
+</code></pre><h3 id="Aggregate-functions-methods"><a href="#Aggregate-functions-methods" class="headerlink" title="Aggregate functions methods"></a>Aggregate functions methods</h3><pre><code>dataset.count #=&gt; record count
+dataset.max(:price)
+dataset.min(:price)
+dataset.avg(:price)
+dataset.sum(:stock)
+
+dataset.group_and_count(:category)
+dataset.group(:category).select(:category, :AVG.sql_function(:price))
+</code></pre><h3 id="SQL-Functions-Literals"><a href="#SQL-Functions-Literals" class="headerlink" title="SQL Functions / Literals"></a>SQL Functions / Literals</h3><pre><code>dataset.update(:updated_at =&gt; :NOW.sql_function)
+dataset.update(:updated_at =&gt; &apos;NOW()&apos;.lit)
+
+dataset.update(:updated_at =&gt; &quot;DateValue(&apos;1/1/2001&apos;)&quot;.lit)
+dataset.update(:updated_at =&gt; :DateValue.sql_function(&apos;1/1/2001&apos;))
+</code></pre><h3 id="Schema-Manipulation"><a href="#Schema-Manipulation" class="headerlink" title="Schema Manipulation"></a>Schema Manipulation</h3><pre><code>DB.create_table :items do
+  primary_key :id
+  String :name, :unique =&gt; true, :null =&gt; false
+  TrueClass :active, :default =&gt; true
+  foreign_key :category_id, :categories
+  DateTime :created_at
+
+  index :created_at
+end
+
+DB.drop_table :items
+
+DB.create_table :test do
+  String :zipcode
+  enum :system, :elements =&gt; [&apos;mac&apos;, &apos;linux&apos;, &apos;windows&apos;]
+end
+</code></pre><h3 id="Aliasing"><a href="#Aliasing" class="headerlink" title="Aliasing"></a>Aliasing</h3><pre><code>DB[:items].select(:name.as(:item_name))
+DB[:items].select(:name___item_name)
+DB[:items___items_table].select(:items_table__name___item_name)
+# SELECT items_table.name AS item_name FROM items AS items_table
+</code></pre><h3 id="Transactions"><a href="#Transactions" class="headerlink" title="Transactions"></a>Transactions</h3><pre><code>DB.transaction do
+  dataset.insert(:first_name =&gt; &apos;Inigo&apos;, :last_name =&gt; &apos;Montoya&apos;)
+  dataset.insert(:first_name =&gt; &apos;Farm&apos;, :last_name =&gt; &apos;Boy&apos;)
+end # Either both are inserted or neither are inserted
+</code></pre><p>Database#transaction is re-entrant:</p>
+<pre><code>DB.transaction do # BEGIN issued only here
+  DB.transaction
+    dataset &lt;&lt; {:first_name =&gt; &apos;Inigo&apos;, :last_name =&gt; &apos;Montoya&apos;}
+  end
+end # COMMIT issued only here
+</code></pre><p>Transactions are aborted if an error is raised:</p>
+<pre><code>DB.transaction do
+  raise &quot;some error occurred&quot;
+end # ROLLBACK issued and the error is re-raised
+</code></pre><p>Transactions can also be aborted by raising Sequel::Rollback:</p>
+<pre><code>DB.transaction do
+  raise(Sequel::Rollback) if something_bad_happened
+end # ROLLBACK issued and no error raised
+</code></pre><p>Savepoints can be used if the database supports it:</p>
+<pre><code>DB.transaction do
+  dataset &lt;&lt; {:first_name =&gt; &apos;Farm&apos;, :last_name =&gt; &apos;Boy&apos;} # Inserted
+  DB.transaction(:savepoint=&gt;true) # This savepoint is rolled back
+    dataset &lt;&lt; {:first_name =&gt; &apos;Inigo&apos;, :last_name =&gt; &apos;Montoya&apos;} # Not inserted
+    raise(Sequel::Rollback) if something_bad_happened
+  end
+  dataset &lt;&lt; {:first_name =&gt; &apos;Prince&apos;, :last_name =&gt; &apos;Humperdink&apos;} # Inserted
+end
+</code></pre><h3 id="Miscellaneous"><a href="#Miscellaneous" class="headerlink" title="Miscellaneous:"></a>Miscellaneous:</h3><pre><code>dataset.sql # &quot;SELECT * FROM items&quot;
+dataset.delete_sql # &quot;DELETE FROM items&quot;
+dataset.where(:name =&gt; &apos;sequel&apos;).exists # &quot;EXISTS ( SELECT * FROM items WHERE name = &apos;sequel&apos; )&quot;
+dataset.columns #=&gt; array of columns in the result set, does a SELECT
+DB.schema(:items) =&gt; [[:id, {:type=&gt;:integer, ...}], [:name, {:type=&gt;:string, ...}], ...]
+</code></pre><hr>
+<h3 id="Documents"><a href="#Documents" class="headerlink" title="Documents"></a>Documents</h3><pre><code>http://sequel.rubyforge.org/rdoc/files/doc/association_basics_rdoc.html
+http://sequel.rubyforge.org/rdoc/classes/Sequel/Schema/Generator.html
+http://sequel.rubyforge.org/rdoc/files/doc/validations_rdoc.html
+http://sequel.rubyforge.org/rdoc/classes/Sequel/Model.html
+</code></pre><h3 id="Alter-table"><a href="#Alter-table" class="headerlink" title="Alter table"></a>Alter table</h3><pre><code>database.alter_table :deals do
+  add_column :name, String
+  drop_column :column_name
+  rename_column :from, :to
+
+  add_constraint :valid_name, :name.like(&apos;A%&apos;)
+  drop_constraint :constraint
+
+  add_full_text_index :body
+  add_spacial_index [columns]
+
+  add_index :price
+  drop_index :index
+
+  add_foreign_key :artist_id, :table
+  add_primary_key :id
+  add_unique_constraint [columns]
+  set_column_allow_null :foo, false
+  set_column_default :title, &apos;&apos;
+
+  set_column_type :price, &apos;char(10)&apos;
+end
+</code></pre><h3 id="Model-associations"><a href="#Model-associations" class="headerlink" title="Model associations"></a>Model associations</h3><pre><code>class Deal &lt; Sequel::Model
+
+  # Us (left) &lt;=&gt; Them (right)
+  many_to_many  :images,
+    left_id:    :deal_id,
+    right_id:   :image_id,
+    join_table: :image_links
+
+  one_to_many   :files,
+    key:        :deal_id,
+    class:      :DataFile,
+
+  many_to_one   :parent, class: self
+  one_to_many   :children, key: :parent_id, class: self
+
+  one_to_many :gold_albums, class: :Album do |ds|
+    ds.filter { copies_sold &gt; 50000 }
+  end
+</code></pre><p>Provided by many_to_many</p>
+<pre><code>Deal[1].images
+Deal[1].add_image
+Deal[1].remove_image
+Deal[1].remove_all_images
+</code></pre><h3 id="Validations"><a href="#Validations" class="headerlink" title="Validations"></a>Validations</h3><pre><code>  def validate
+    super
+    errors.add(:name, &apos;cannot be empty&apos;) if !name || name.empty?
+
+    validates_presence [:title, :site]
+    validates_unique :name
+    validates_format /\Ahttps?:\/\//, :website, :message=&gt;&apos;is not a valid URL&apos;
+    validates_includes %w(a b c), :type
+    validates_integer :rating
+    validates_numeric :number
+    validates_type String, [:title, :description]
+
+    validates_integer :rating  if new?
+
+    # options: :message =&gt;, :allow_nil =&gt;, :allow_blank =&gt;,
+    #          :allow_missing =&gt;,
+
+    validates_exact_length 17, :isbn
+    validates_min_length 3, :name
+    validates_max_length 100, :name
+    validates_length_range 3..100, :name
+
+    # Setter override
+    def filename=(name)
+      @values[:filename] = name
+    end
+  end
+end
+
+deal.errors
+</code></pre><h3 id="Model-stuff"><a href="#Model-stuff" class="headerlink" title="Model stuff"></a>Model stuff</h3><pre><code>deal = Deal[1]
+deal.changed_columns
+deal.destroy  # Calls hooks
+deal.delete   # No hooks
+deal.exists?
+deal.new?
+deal.hash  # Only uniques
+deal.keys  #=&gt; [:id, :name]
+deal.modified!
+deal.modified?
+
+deal.lock!
+</code></pre><h3 id="Callbacks"><a href="#Callbacks" class="headerlink" title="Callbacks"></a>Callbacks</h3><pre><code>before_create
+after_create
+
+before_validation
+after_validation
+before_save
+before_update
+UPDATE QUERY
+after_update
+after_save
+
+before_destroy
+DELETE QUERY
+after_destroy
+</code></pre><h3 id="Schema"><a href="#Schema" class="headerlink" title="Schema"></a>Schema</h3><pre><code>class Deal &lt; Sequel::Model
+  set_schema do
+    primary_key :id
+    primary_key [:id, :title]
+    String :name, primary_key: true
+
+    String  :title
+    Numeric :price
+    DateTime :expires
+
+    unique :whatever
+    check(:price) { num &gt; 0 }
+
+    foreign_key :artist_id
+    String :artist_name, key: :id
+
+    index :title
+    index [:artist_id, :name]
+    full_text_index :title
+
+    # String, Integer, Fixnum, Bignum, Float, Numeric, BigDecimal,
+    # Date, DateTime, Time, File, TrueClass, FalseClass
+  end
+end
+</code></pre><h3 id="Unrestrict-primary-key"><a href="#Unrestrict-primary-key" class="headerlink" title="Unrestrict primary key"></a>Unrestrict primary key</h3><pre><code>Category.create id: &apos;travel&apos;   # error
+Category.unrestrict_primary_key
+Category.create id: &apos;travel&apos;   # ok
+</code></pre>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Open-a-database"><span class="toc-number">1.</span> <span class="toc-text">Open a database</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Open-an-SQLite-memory-database"><span class="toc-number">2.</span> <span class="toc-text">Open an SQLite memory database</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Logging-SQL-statements"><span class="toc-number">3.</span> <span class="toc-text">Logging SQL statements</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-raw-SQL"><span class="toc-number">4.</span> <span class="toc-text">Using raw SQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-dataset"><span class="toc-number">5.</span> <span class="toc-text">Create a dataset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Most-dataset-methods-are-chainable"><span class="toc-number">6.</span> <span class="toc-text">Most dataset methods are chainable</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Insert-rows"><span class="toc-number">7.</span> <span class="toc-text">Insert rows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Retrieve-rows"><span class="toc-number">8.</span> <span class="toc-text">Retrieve rows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Update-Delete-rows"><span class="toc-number">9.</span> <span class="toc-text">Update/Delete rows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Datasets-are-Enumerable"><span class="toc-number">10.</span> <span class="toc-text">Datasets are Enumerable</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filtering-see-also-doc-dataset-filtering-rdoc"><span class="toc-number">11.</span> <span class="toc-text">Filtering (see also doc/dataset_filtering.rdoc)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Equality"><span class="toc-number">11.1.</span> <span class="toc-text">Equality</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Inequality"><span class="toc-number">11.2.</span> <span class="toc-text">Inequality</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Inclusion"><span class="toc-number">11.3.</span> <span class="toc-text">Inclusion</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Subselects-as-scalar-values"><span class="toc-number">11.4.</span> <span class="toc-text">Subselects as scalar values</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LIKE-Regexp"><span class="toc-number">11.5.</span> <span class="toc-text">LIKE/Regexp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AND-OR-NOT"><span class="toc-number">11.6.</span> <span class="toc-text">AND/OR/NOT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Mathematical-operators"><span class="toc-number">11.7.</span> <span class="toc-text">Mathematical operators</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ordering"><span class="toc-number">12.</span> <span class="toc-text">Ordering</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Limit-Offset"><span class="toc-number">13.</span> <span class="toc-text">Limit/Offset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Joins"><span class="toc-number">14.</span> <span class="toc-text">Joins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aggregate-functions-methods"><span class="toc-number">15.</span> <span class="toc-text">Aggregate functions methods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL-Functions-Literals"><span class="toc-number">16.</span> <span class="toc-text">SQL Functions / Literals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Schema-Manipulation"><span class="toc-number">17.</span> <span class="toc-text">Schema Manipulation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aliasing"><span class="toc-number">18.</span> <span class="toc-text">Aliasing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Transactions"><span class="toc-number">19.</span> <span class="toc-text">Transactions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Miscellaneous"><span class="toc-number">20.</span> <span class="toc-text">Miscellaneous:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Documents"><span class="toc-number">21.</span> <span class="toc-text">Documents</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Alter-table"><span class="toc-number">22.</span> <span class="toc-text">Alter table</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Model-associations"><span class="toc-number">23.</span> <span class="toc-text">Model associations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Validations"><span class="toc-number">24.</span> <span class="toc-text">Validations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Model-stuff"><span class="toc-number">25.</span> <span class="toc-text">Model stuff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Callbacks"><span class="toc-number">26.</span> <span class="toc-text">Callbacks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Schema"><span class="toc-number">27.</span> <span class="toc-text">Schema</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unrestrict-primary-key"><span class="toc-number">28.</span> <span class="toc-text">Unrestrict primary key</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/sequel/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/sequel/&text=Sequel"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/sequel/&title=Sequel"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/sequel/&is_video=false&description=Sequel"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Sequel&body=Check out this article: https://rupertqin.github.io/devhints/sequel/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/sequel/&title=Sequel"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/sequel/&title=Sequel"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/sequel/&title=Sequel"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/sequel/&title=Sequel"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/sequel/&name=Sequel&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Usage// Use it like so: _.str.trim(&amp;quot;hey&amp;quot;); _s.trim(&amp;quot;hey&amp;quot;);  // Unless you do: _.mixin(_.string.exports());  // So you can: _.trim(&amp;quot;hey&amp;quot;); _(&amp;quot;hey&amp;quot;).trim(); Trimm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Underscore-string">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/underscore-string/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Usage// Use it like so: _.str.trim(&amp;quot;hey&amp;quot;); _s.trim(&amp;quot;hey&amp;quot;);  // Unless you do: _.mixin(_.string.exports());  // So you can: _.trim(&amp;quot;hey&amp;quot;); _(&amp;quot;hey&amp;quot;).trim(); Trimm">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:23:51.459Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Underscore-string">
+<meta name="twitter:description" content="Usage// Use it like so: _.str.trim(&amp;quot;hey&amp;quot;); _s.trim(&amp;quot;hey&amp;quot;);  // Unless you do: _.mixin(_.string.exports());  // So you can: _.trim(&amp;quot;hey&amp;quot;); _(&amp;quot;hey&amp;quot;).trim(); Trimm">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Underscore-string</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../unicode/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../umdjs/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/underscore-string/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/underscore-string/&text=Underscore-string"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/underscore-string/&title=Underscore-string"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/underscore-string/&is_video=false&description=Underscore-string"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Underscore-string&body=Check out this article: https://rupertqin.github.io/devhints/underscore-string/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/underscore-string/&title=Underscore-string"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/underscore-string/&title=Underscore-string"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/underscore-string/&title=Underscore-string"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/underscore-string/&title=Underscore-string"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/underscore-string/&name=Underscore-string&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage"><span class="toc-number">1.</span> <span class="toc-text">Usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Trimming"><span class="toc-number">2.</span> <span class="toc-text">Trimming</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">3.</span> <span class="toc-text">Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Caps"><span class="toc-number">4.</span> <span class="toc-text">Caps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Checks"><span class="toc-number">5.</span> <span class="toc-text">Checks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML"><span class="toc-number">6.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Quote"><span class="toc-number">7.</span> <span class="toc-text">Quote</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Splits"><span class="toc-number">8.</span> <span class="toc-text">Splits</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sprintf"><span class="toc-number">9.</span> <span class="toc-text">Sprintf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pad"><span class="toc-number">10.</span> <span class="toc-text">Pad</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-number">11.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Underscore-string
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.459Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/JavaScript-libraries/">JavaScript libraries</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><pre><code>// Use it like so:
+_.str.trim(&quot;hey&quot;);
+_s.trim(&quot;hey&quot;);
+
+// Unless you do:
+_.mixin(_.string.exports());
+
+// So you can:
+_.trim(&quot;hey&quot;);
+_(&quot;hey&quot;).trim();
+</code></pre><h3 id="Trimming"><a href="#Trimming" class="headerlink" title="Trimming"></a>Trimming</h3><pre><code>_.truncate(&quot;Hello world&quot;, 4) // =&gt; &quot;Hell...&quot;
+_.prune(&quot;Hello world&quot;, 5)    // =&gt; &quot;Hello...&quot;
+
+_.trim(&quot; foo &quot;)              // =&gt; &quot;foo&quot;
+_.trim(&quot;-foo-&quot;, &apos;-&apos;)         // =&gt; &quot;foo&quot;
+_.ltrim
+_.rtrim
+</code></pre><h3 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h3><pre><code>_.numberFormat(1000, 2)  // =&gt; &quot;1,000.00&quot;
+</code></pre><h3 id="Caps"><a href="#Caps" class="headerlink" title="Caps"></a>Caps</h3><pre><code>_.capitalize(&quot;foo bar&quot;)       // =&gt; &quot;Foo Bar&quot;
+_.humanize(&quot;hey-there foo&quot;)   // =&gt; &quot;Hey there foo&quot;
+_.titleize(&apos;My name is hi&apos;)   // =&gt; &quot;My Name Is Hi&quot;
+
+_.dasherize(&apos;MozTransform&apos;)   // =&gt; &quot;-moz-transform&quot;
+_.underscored(&apos;MozTransform&apos;) // =&gt; &quot;moz_transform&quot;
+_.classify(&apos;-moz-transform&apos;)  // =&gt; &quot;MozTransform&quot;
+_.camelize(&apos;moz_transform&apos;)   // =&gt; &quot;MozTransform&quot;
+
+_.slugify(&quot;hey there&quot;)        // =&gt; &quot;hey-there&quot;
+
+_.swapCase(&quot;hELLO&quot;)           // =&gt; &quot;Hello&quot;
+</code></pre><h3 id="Checks"><a href="#Checks" class="headerlink" title="Checks"></a>Checks</h3><pre><code>_.startsWith(&apos;image.gif&apos;, &apos;image&apos;) // =&gt; true
+_.endsWith(&apos;image.gif&apos;, &apos;.gif&apos;)    // =&gt; true
+_.isBlank(&quot; &quot;)                     // =&gt; true (also for &quot;\n&quot;, &quot;&quot;)
+</code></pre><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><pre><code>_.escapeHTML(&quot;&lt;div&gt;&quot;)
+_.unescapeHTML(&quot;&amp;lt;div&amp;gt;&quot;)
+_.stripTags(&quot;&lt;div&gt;hi&lt;/div&gt;&quot;)
+</code></pre><h3 id="Quote"><a href="#Quote" class="headerlink" title="Quote"></a>Quote</h3><pre><code>_.quote(&quot;hi&quot;, &apos;&quot;&apos;) // =&gt; &apos;&quot;hi&quot;&apos;
+_.unquote(&apos;&quot;hi&quot;&apos;)  // =&gt; &quot;hi&quot;
+</code></pre><h3 id="Splits"><a href="#Splits" class="headerlink" title="Splits"></a>Splits</h3><pre><code>_.lines(&quot;hi\nthere&quot;)     // =&gt; [&quot;hi&quot;,&quot;there&quot;]
+_.words(&quot;hi  there you&quot;) // =&gt; [&quot;hi&quot;,&quot;there&quot;,&quot;you&quot;]
+</code></pre><h3 id="Sprintf"><a href="#Sprintf" class="headerlink" title="Sprintf"></a>Sprintf</h3><pre><code>_.sprintf(&quot;%.1f&quot;, 1.17)
+</code></pre><h3 id="Pad"><a href="#Pad" class="headerlink" title="Pad"></a>Pad</h3><pre><code>_.pad(&quot;1&quot;, 8)               // =&gt; &quot;       1&quot;
+_.pad(&quot;1&quot;, 8, &quot;0&quot;)          // =&gt; &quot;00000001&quot;
+_.pad(&quot;1&quot;, 8, &quot; &quot;, &quot;right&quot;) // =&gt; &quot;1       &quot;
+_.pad(&quot;1&quot;, 8, &quot; &quot;, &quot;both&quot;)  // =&gt; &quot;    1   &quot;
+
+_.lpad(..)  // same as _.pad(.., &apos;left&apos;)
+_.rpad(..)  // same as _.pad(.., &apos;right&apos;)
+_.lrpad(..) // same as _.pad(.., &apos;both&apos;)
+</code></pre><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul>
+<li><a href="https://github.com/epeli/underscore.string" target="_blank" rel="noopener">https://github.com/epeli/underscore.string</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage"><span class="toc-number">1.</span> <span class="toc-text">Usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Trimming"><span class="toc-number">2.</span> <span class="toc-text">Trimming</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">3.</span> <span class="toc-text">Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Caps"><span class="toc-number">4.</span> <span class="toc-text">Caps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Checks"><span class="toc-number">5.</span> <span class="toc-text">Checks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML"><span class="toc-number">6.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Quote"><span class="toc-number">7.</span> <span class="toc-text">Quote</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Splits"><span class="toc-number">8.</span> <span class="toc-text">Splits</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sprintf"><span class="toc-number">9.</span> <span class="toc-text">Sprintf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pad"><span class="toc-number">10.</span> <span class="toc-text">Pad</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-number">11.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/underscore-string/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/underscore-string/&text=Underscore-string"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/underscore-string/&title=Underscore-string"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/underscore-string/&is_video=false&description=Underscore-string"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Underscore-string&body=Check out this article: https://rupertqin.github.io/devhints/underscore-string/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/underscore-string/&title=Underscore-string"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/underscore-string/&title=Underscore-string"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/underscore-string/&title=Underscore-string"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/underscore-string/&title=Underscore-string"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/underscore-string/&name=Underscore-string&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

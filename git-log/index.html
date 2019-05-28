@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Revision ranges12345678git log master             # branchgit log origin/master      # branch, remotegit log v1.0.0             # taggit log master developgit log v2.0..master       # reachable from *">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git log">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/git-log/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Revision ranges12345678git log master             # branchgit log origin/master      # branch, remotegit log v1.0.0             # taggit log master developgit log v2.0..master       # reachable from *">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:34:27.739Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git log">
+<meta name="twitter:description" content="Revision ranges12345678git log master             # branchgit log origin/master      # branch, remotegit log v1.0.0             # taggit log master developgit log v2.0..master       # reachable from *">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>git log</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../git-revisions/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../git-log-format/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/git-log/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/git-log/&text=git log"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/git-log/&title=git log"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/git-log/&is_video=false&description=git log"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=git log&body=Check out this article: https://rupertqin.github.io/devhints/git-log/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/git-log/&title=git log"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/git-log/&title=git log"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/git-log/&title=git log"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/git-log/&title=git log"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/git-log/&name=git log&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Revision-ranges"><span class="toc-number">1.</span> <span class="toc-text">Revision ranges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-filters"><span class="toc-number">2.</span> <span class="toc-text">Basic filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Search"><span class="toc-number">3.</span> <span class="toc-text">Search</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Limiting"><span class="toc-number">4.</span> <span class="toc-text">Limiting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Simplification"><span class="toc-number">5.</span> <span class="toc-text">Simplification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ordering"><span class="toc-number">6.</span> <span class="toc-text">Ordering</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Formatting"><span class="toc-number">7.</span> <span class="toc-text">Formatting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-formats"><span class="toc-number">8.</span> <span class="toc-text">Custom formats</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number"></span> <span class="toc-text">Also see</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        git log
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.287Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Git/">Git</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Revision-ranges"><a href="#Revision-ranges" class="headerlink" title="Revision ranges"></a>Revision ranges</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> master             <span class="comment"># branch</span></span><br><span class="line">git <span class="built_in">log</span> origin/master      <span class="comment"># branch, remote</span></span><br><span class="line">git <span class="built_in">log</span> v1.0.0             <span class="comment"># tag</span></span><br><span class="line"></span><br><span class="line">git <span class="built_in">log</span> master develop</span><br><span class="line"></span><br><span class="line">git <span class="built_in">log</span> v2.0..master       <span class="comment"># reachable from *master* but not *v2.0*</span></span><br><span class="line">git <span class="built_in">log</span> v2.0...master      <span class="comment"># reachable from *master* and *v2.0*, but not both</span></span><br></pre></td></tr></table></figure>
+<p>See <a href="./git-revisions">gitrevisions</a>.</p>
+<h3 id="Basic-filters"><a href="#Basic-filters" class="headerlink" title="Basic filters"></a>Basic filters</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-n, --max-count=2</span><br><span class="line">    --skip=2</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--since=<span class="string">"1 week ago"</span></span><br><span class="line">--until=<span class="string">"yesterday"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--author=<span class="string">"Rico"</span></span><br><span class="line">--committer=<span class="string">"Rico"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--grep=<span class="string">"Merge pull request"</span>   <span class="comment"># in commit messages</span></span><br><span class="line">-S<span class="string">"console.log"</span>               <span class="comment"># in code</span></span><br><span class="line">-G<span class="string">"foo.*"</span>                     <span class="comment"># in code (regex)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--invert-grep</span><br><span class="line">--all-match                   <span class="comment"># AND in multi --grep</span></span><br></pre></td></tr></table></figure>
+<h3 id="Limiting"><a href="#Limiting" class="headerlink" title="Limiting"></a>Limiting</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--merges</span><br><span class="line">--no-merges</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--first-parent          <span class="comment"># no stuff from merged branches</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--branches=<span class="string">"feature/*"</span></span><br><span class="line">--tags=<span class="string">"v*"</span></span><br><span class="line">--remotes=<span class="string">"origin"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Simplification"><a href="#Simplification" class="headerlink" title="Simplification"></a>Simplification</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> -- app/file.rb          <span class="comment"># only file</span></span><br><span class="line">    --simplify-by-decoration    <span class="comment"># tags and branches</span></span><br></pre></td></tr></table></figure>
+<h3 id="Ordering"><a href="#Ordering" class="headerlink" title="Ordering"></a>Ordering</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">--date-order</span><br><span class="line">--author-date-order</span><br><span class="line">--topo-order              <span class="comment"># "smart" ordering</span></span><br><span class="line">--reverse</span><br></pre></td></tr></table></figure>
+<h3 id="Formatting"><a href="#Formatting" class="headerlink" title="Formatting"></a>Formatting</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--abbrev-commit</span><br><span class="line">--oneline</span><br><span class="line">--graph</span><br></pre></td></tr></table></figure>
+<h3 id="Custom-formats"><a href="#Custom-formats" class="headerlink" title="Custom formats"></a>Custom formats</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--pretty=<span class="string">"format:%H"</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="./git-log-format">Git log format cheatsheet</a></p>
+<h2 id="Also-see"><a href="#Also-see" class="headerlink" title="Also see"></a>Also see</h2><ul>
+<li><a href="./git-log-format">Git log format cheatsheet</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Revision-ranges"><span class="toc-number">1.</span> <span class="toc-text">Revision ranges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-filters"><span class="toc-number">2.</span> <span class="toc-text">Basic filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Search"><span class="toc-number">3.</span> <span class="toc-text">Search</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Limiting"><span class="toc-number">4.</span> <span class="toc-text">Limiting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Simplification"><span class="toc-number">5.</span> <span class="toc-text">Simplification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ordering"><span class="toc-number">6.</span> <span class="toc-text">Ordering</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Formatting"><span class="toc-number">7.</span> <span class="toc-text">Formatting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-formats"><span class="toc-number">8.</span> <span class="toc-text">Custom formats</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number"></span> <span class="toc-text">Also see</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/git-log/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/git-log/&text=git log"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/git-log/&title=git log"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/git-log/&is_video=false&description=git log"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=git log&body=Check out this article: https://rupertqin.github.io/devhints/git-log/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/git-log/&title=git log"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/git-log/&title=git log"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/git-log/&title=git log"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/git-log/&title=git log"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/git-log/&name=git log&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

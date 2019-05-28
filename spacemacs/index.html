@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="ShortcutsLayers   Shortcut Description     SPC f File   SPC p Project   SPC t Toggle   SPC b Buffer   — —   SPC m Major mode   , Same as SPC m   — —   SPC g Git   SPC l Layout   SPC a Apps   SPC h Hel">
+<meta name="keywords" content="WIP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spacemacs">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/spacemacs/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="ShortcutsLayers   Shortcut Description     SPC f File   SPC p Project   SPC t Toggle   SPC b Buffer   — —   SPC m Major mode   , Same as SPC m   — —   SPC g Git   SPC l Layout   SPC a Apps   SPC h Hel">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-02-14T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spacemacs">
+<meta name="twitter:description" content="ShortcutsLayers   Shortcut Description     SPC f File   SPC p Project   SPC t Toggle   SPC b Buffer   — —   SPC m Major mode   , Same as SPC m   — —   SPC g Git   SPC l Layout   SPC a Apps   SPC h Hel">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Spacemacs</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../spreadsheet/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../social-images/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/spacemacs/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/spacemacs/&text=Spacemacs"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/spacemacs/&title=Spacemacs"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/spacemacs/&is_video=false&description=Spacemacs"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Spacemacs&body=Check out this article: https://rupertqin.github.io/devhints/spacemacs/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/spacemacs/&title=Spacemacs"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/spacemacs/&title=Spacemacs"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/spacemacs/&title=Spacemacs"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/spacemacs/&title=Spacemacs"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/spacemacs/&name=Spacemacs&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Shortcuts"><span class="toc-number">1.</span> <span class="toc-text">Shortcuts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Layers"><span class="toc-number">1.1.</span> <span class="toc-text">Layers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#More"><span class="toc-number">1.2.</span> <span class="toc-text">More</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-h-Help"><span class="toc-number">1.3.</span> <span class="toc-text">SPC h - Help</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-f-File"><span class="toc-number">1.4.</span> <span class="toc-text">SPC f - File</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-b-Buffer"><span class="toc-number">1.5.</span> <span class="toc-text">SPC b - Buffer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-f-e-Config"><span class="toc-number">1.6.</span> <span class="toc-text">SPC f e - Config</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-w-Window"><span class="toc-number">1.7.</span> <span class="toc-text">SPC w - Window</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-p-Project"><span class="toc-number">1.8.</span> <span class="toc-text">SPC p - Project</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-l-w-Workspaces"><span class="toc-number">1.9.</span> <span class="toc-text">SPC l w - Workspaces</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-t-Toggle"><span class="toc-number">1.10.</span> <span class="toc-text">SPC t - Toggle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-j-Jump"><span class="toc-number">1.11.</span> <span class="toc-text">SPC j - Jump</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Major-modes"><span class="toc-number">2.</span> <span class="toc-text">Major modes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown"><span class="toc-number">2.1.</span> <span class="toc-text">Markdown</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other-layers"><span class="toc-number">3.</span> <span class="toc-text">Other layers</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#version-control"><span class="toc-number">3.1.</span> <span class="toc-text">version-control</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Emacs-standard"><span class="toc-number">4.</span> <span class="toc-text">Emacs standard</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#File"><span class="toc-number">4.1.</span> <span class="toc-text">File</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">5.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Spacemacs
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.437Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Apps/">Apps</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="../tags/WIP/">WIP</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Shortcuts"><a href="#Shortcuts" class="headerlink" title="Shortcuts"></a>Shortcuts</h2><h3 id="Layers"><a href="#Layers" class="headerlink" title="Layers"></a>Layers</h3><table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SPC</code> <code>f</code></td>
+<td>File</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>p</code></td>
+<td>Project</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>t</code></td>
+<td>Toggle</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>b</code></td>
+<td>Buffer</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>m</code></td>
+<td>Major mode</td>
+</tr>
+<tr>
+<td><code>,</code></td>
+<td>Same as <code>SPC</code> <code>m</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>g</code></td>
+<td>Git</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>l</code></td>
+<td>Layout</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>a</code></td>
+<td>Apps</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>h</code></td>
+<td>Help</td>
+</tr>
+</tbody>
+</table>
+<h3 id="More"><a href="#More" class="headerlink" title="More"></a>More</h3><table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M-x</strong></td>
+<td><code>SPC</code> <code>SPC</code></td>
+</tr>
+<tr>
+<td>Terminal</td>
+<td><code>SPC</code> <code>&#39;</code></td>
+</tr>
+<tr>
+<td>Search</td>
+<td><code>SPC</code> <code>/</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="SPC-h-Help"><a href="#SPC-h-Help" class="headerlink" title="SPC h - Help"></a><code>SPC</code> <code>h</code> - Help</h3><table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Spacemacs help</strong></td>
+<td><code>SPC</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Layers</td>
+<td><code>l</code></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td><code>r</code></td>
+</tr>
+<tr>
+<td>FAQ</td>
+<td><code>f</code></td>
+</tr>
+<tr>
+<td>Vimtutor</td>
+<td><code>T</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="SPC-f-File"><a href="#SPC-f-File" class="headerlink" title="SPC f - File"></a><code>SPC</code> <code>f</code> - File</h3><table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Save</strong></td>
+<td><code>s</code></td>
+</tr>
+<tr>
+<td>Save all</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>Copy</td>
+<td><code>c</code></td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>D</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Show filename</td>
+<td><code>y</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="SPC-b-Buffer"><a href="#SPC-b-Buffer" class="headerlink" title="SPC b - Buffer"></a><code>SPC</code> <code>b</code> - Buffer</h3><table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Next buffer (<code>:bnext</code>)</td>
+<td><code>n</code></td>
+</tr>
+<tr>
+<td>Previous buffer (<code>:bprev</code>)</td>
+<td><code>p</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="SPC-f-e-Config"><a href="#SPC-f-e-Config" class="headerlink" title="SPC f e - Config"></a><code>SPC</code> <code>f</code> <code>e</code> - Config</h3><table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Edit config</strong></td>
+<td><code>d</code></td>
+</tr>
+<tr>
+<td>Edit config and template</td>
+<td><code>D</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Reload config</td>
+<td><code>R</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="SPC-w-Window"><a href="#SPC-w-Window" class="headerlink" title="SPC w - Window"></a><code>SPC</code> <code>w</code> - Window</h3><table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Help</td>
+<td><code>.</code></td>
+</tr>
+<tr>
+<td></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Select</td>
+<td><code>h</code> / <code>j</code> / <code>k</code> / <code>l</code></td>
+</tr>
+<tr>
+<td>Move</td>
+<td><code>H</code> / <code>J</code> / <code>K</code> / <code>L</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Split</td>
+<td><code>s</code></td>
+</tr>
+<tr>
+<td>Split &amp; follow</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Split vert</td>
+<td><code>v</code></td>
+</tr>
+<tr>
+<td>Split vert &amp; follow</td>
+<td><code>V</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="SPC-p-Project"><a href="#SPC-p-Project" class="headerlink" title="SPC p - Project"></a><code>SPC</code> <code>p</code> - Project</h3><table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Switch project</strong></td>
+<td><code>l</code></td>
+</tr>
+<tr>
+<td>Switch project</td>
+<td><code>p</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Open files &amp; recent</strong></td>
+<td><code>h</code></td>
+</tr>
+<tr>
+<td>Open files</td>
+<td><code>f</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Show tree</strong></td>
+<td><code>t</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Open terminal</td>
+<td><code>&#39;</code></td>
+</tr>
+<tr>
+<td>Open terminal in root</td>
+<td><code>$</code> <code>t</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="SPC-l-w-Workspaces"><a href="#SPC-l-w-Workspaces" class="headerlink" title="SPC l w - Workspaces"></a><code>SPC</code> <code>l</code> <code>w</code> - Workspaces</h3><table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Help</td>
+<td><code>?</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Switch previous layout</td>
+<td><code>TAB</code></td>
+</tr>
+<tr>
+<td><strong>Switch to nth workspace</strong></td>
+<td><code>0</code> … <code>9</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Rename</td>
+<td><code>R</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="SPC-t-Toggle"><a href="#SPC-t-Toggle" class="headerlink" title="SPC t - Toggle"></a><code>SPC</code> <code>t</code> - Toggle</h3><table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Line numbers</td>
+<td><code>n</code></td>
+</tr>
+</tbody>
+</table>
+<p>{: .-shortcuts</p>
+<h3 id="SPC-j-Jump"><a href="#SPC-j-Jump" class="headerlink" title="SPC j - Jump"></a><code>SPC</code> <code>j</code> - Jump</h3><table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Character</td>
+<td><code>j</code></td>
+</tr>
+<tr>
+<td>Line</td>
+<td><code>l</code></td>
+</tr>
+<tr>
+<td>Word</td>
+<td><code>w</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Major-modes"><a href="#Major-modes" class="headerlink" title="Major modes"></a>Major modes</h2><h3 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h3><table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>,</code> <code>-</code></td>
+<td>Insert horizontal rule</td>
+</tr>
+<tr>
+<td><code>,</code> <code>h</code> <code>1</code></td>
+<td>Insert H1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Other-layers"><a href="#Other-layers" class="headerlink" title="Other layers"></a>Other layers</h2><h3 id="version-control"><a href="#version-control" class="headerlink" title="version-control"></a>version-control</h3><table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SPC</code> <code>g</code> <code>s</code></td>
+<td><strong>Status</strong></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>g</code> <code>m</code></td>
+<td><strong>Open dispatch menu</strong></td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>g</code> <code>m</code> <code>s</code></td>
+<td>Stage</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>g</code> <code>m</code> <code>P</code> <code>p</code></td>
+<td>Push</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>g</code> <code>m</code> <code>c</code></td>
+<td>Commit</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>g</code> <code>t</code></td>
+<td>Open time machine</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>g</code> <code>l</code> <code>l</code></td>
+<td>Open in GitHub</td>
+</tr>
+<tr>
+<td><code>SPC</code> <code>g</code> <code>l</code> <code>L</code></td>
+<td>Show GitHub URL</td>
+</tr>
+</tbody>
+</table>
+<p>Version control is provided by Magit.</p>
+<h2 id="Emacs-standard"><a href="#Emacs-standard" class="headerlink" title="Emacs standard"></a>Emacs standard</h2><h3 id="File"><a href="#File" class="headerlink" title="File"></a>File</h3><table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Emacs</th>
+<th>Spacemacs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Save</td>
+<td><code>C-x</code> <code>C-s</code></td>
+<td><code>SPC</code> <code>f</code> <code>s</code></td>
+</tr>
+<tr>
+<td>Open</td>
+<td><code>C-x</code> <code>C-f</code></td>
+<td><code>SPC</code> <code>f</code> <code>f</code></td>
+</tr>
+<tr>
+<td>Close</td>
+<td><code>C-x</code> <code>C-k</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Split horizontal</td>
+<td><code>C-x</code> <code>2</code></td>
+<td><code>SPC</code> <code>w</code> <code>h</code></td>
+</tr>
+<tr>
+<td>Split vertical</td>
+<td><code>C-x</code> <code>3</code></td>
+<td><code>SPC</code> <code>w</code> <code>v</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Confirm</td>
+<td><code>C-c</code> <code>C-c</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Abort</td>
+<td><code>C-c</code> <code>C-k</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org" target="_blank" rel="noopener">Spacemacs documentation</a> <em>(github.com)</em></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Shortcuts"><span class="toc-number">1.</span> <span class="toc-text">Shortcuts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Layers"><span class="toc-number">1.1.</span> <span class="toc-text">Layers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#More"><span class="toc-number">1.2.</span> <span class="toc-text">More</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-h-Help"><span class="toc-number">1.3.</span> <span class="toc-text">SPC h - Help</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-f-File"><span class="toc-number">1.4.</span> <span class="toc-text">SPC f - File</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-b-Buffer"><span class="toc-number">1.5.</span> <span class="toc-text">SPC b - Buffer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-f-e-Config"><span class="toc-number">1.6.</span> <span class="toc-text">SPC f e - Config</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-w-Window"><span class="toc-number">1.7.</span> <span class="toc-text">SPC w - Window</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-p-Project"><span class="toc-number">1.8.</span> <span class="toc-text">SPC p - Project</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-l-w-Workspaces"><span class="toc-number">1.9.</span> <span class="toc-text">SPC l w - Workspaces</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-t-Toggle"><span class="toc-number">1.10.</span> <span class="toc-text">SPC t - Toggle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPC-j-Jump"><span class="toc-number">1.11.</span> <span class="toc-text">SPC j - Jump</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Major-modes"><span class="toc-number">2.</span> <span class="toc-text">Major modes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown"><span class="toc-number">2.1.</span> <span class="toc-text">Markdown</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other-layers"><span class="toc-number">3.</span> <span class="toc-text">Other layers</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#version-control"><span class="toc-number">3.1.</span> <span class="toc-text">version-control</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Emacs-standard"><span class="toc-number">4.</span> <span class="toc-text">Emacs standard</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#File"><span class="toc-number">4.1.</span> <span class="toc-text">File</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">5.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/spacemacs/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/spacemacs/&text=Spacemacs"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/spacemacs/&title=Spacemacs"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/spacemacs/&is_video=false&description=Spacemacs"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Spacemacs&body=Check out this article: https://rupertqin.github.io/devhints/spacemacs/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/spacemacs/&title=Spacemacs"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/spacemacs/&title=Spacemacs"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/spacemacs/&title=Spacemacs"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/spacemacs/&title=Spacemacs"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/spacemacs/&name=Spacemacs&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

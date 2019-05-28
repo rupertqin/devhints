@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Getting startedCSS syntax1234567.box &amp;#123;  color: blue;  .button &amp;#123;    color: red;  &amp;#125;&amp;#125; Stylus is a CSS pre-processor. See: stylus-lang.com Indent syntax12345.box  color: blue  .button">
+<meta name="keywords" content="Featurable">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stylus">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/stylus/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Getting startedCSS syntax1234567.box &amp;#123;  color: blue;  .button &amp;#123;    color: red;  &amp;#125;&amp;#125; Stylus is a CSS pre-processor. See: stylus-lang.com Indent syntax12345.box  color: blue  .button">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-09-19T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Stylus">
+<meta name="twitter:description" content="Getting startedCSS syntax1234567.box &amp;#123;  color: blue;  .button &amp;#123;    color: red;  &amp;#125;&amp;#125; Stylus is a CSS pre-processor. See: stylus-lang.com Indent syntax12345.box  color: blue  .button">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Stylus</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../sublime-text/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../stencil/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/stylus/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/stylus/&text=Stylus"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/stylus/&title=Stylus"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/stylus/&is_video=false&description=Stylus"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Stylus&body=Check out this article: https://rupertqin.github.io/devhints/stylus/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/stylus/&title=Stylus"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/stylus/&title=Stylus"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/stylus/&title=Stylus"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/stylus/&title=Stylus"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/stylus/&name=Stylus&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-syntax"><span class="toc-number">1.1.</span> <span class="toc-text">CSS syntax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Indent-syntax"><span class="toc-number">1.2.</span> <span class="toc-text">Indent syntax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mixins"><span class="toc-number">1.3.</span> <span class="toc-text">Mixins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Variables"><span class="toc-number">1.4.</span> <span class="toc-text">Variables</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mixins-1"><span class="toc-number">2.</span> <span class="toc-text">Mixins</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Without-arguments"><span class="toc-number">2.1.</span> <span class="toc-text">Without arguments</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#With-arguments"><span class="toc-number">2.2.</span> <span class="toc-text">With arguments</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Argument-defaults"><span class="toc-number">2.3.</span> <span class="toc-text">Argument defaults</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Block-mixins"><span class="toc-number">2.4.</span> <span class="toc-text">Block mixins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rest-params"><span class="toc-number">2.5.</span> <span class="toc-text">Rest params</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functions"><span class="toc-number">3.</span> <span class="toc-text">Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Functions-1"><span class="toc-number">3.1.</span> <span class="toc-text">Functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Argument-defaults-1"><span class="toc-number">3.2.</span> <span class="toc-text">Argument defaults</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Named-parameters"><span class="toc-number">3.3.</span> <span class="toc-text">Named parameters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Multiple-return-values"><span class="toc-number">3.4.</span> <span class="toc-text">Multiple return values</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Values"><span class="toc-number">4.</span> <span class="toc-text">Values</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditional-assignment"><span class="toc-number">4.1.</span> <span class="toc-text">Conditional assignment</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Property-lookup"><span class="toc-number">4.2.</span> <span class="toc-text">Property lookup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interpolation"><span class="toc-number">4.3.</span> <span class="toc-text">Interpolation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Color-operators"><span class="toc-number">4.4.</span> <span class="toc-text">Color operators</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Casting"><span class="toc-number">4.5.</span> <span class="toc-text">Casting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lookup"><span class="toc-number">4.6.</span> <span class="toc-text">Lookup</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Advanced-features"><span class="toc-number">5.</span> <span class="toc-text">Advanced features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditional"><span class="toc-number">5.1.</span> <span class="toc-text">Conditional</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#For-loops"><span class="toc-number">5.2.</span> <span class="toc-text">For loops</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Definition-check"><span class="toc-number">5.3.</span> <span class="toc-text">Definition check</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#False-values"><span class="toc-number">5.4.</span> <span class="toc-text">False values</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-check"><span class="toc-number">5.5.</span> <span class="toc-text">Type check</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Built-in-functions"><span class="toc-number">6.</span> <span class="toc-text">Built-in functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Color-functions"><span class="toc-number">6.1.</span> <span class="toc-text">Color functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Image-size"><span class="toc-number">6.2.</span> <span class="toc-text">Image size</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Caching"><span class="toc-number">6.3.</span> <span class="toc-text">Caching</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-Property"><span class="toc-number">6.4.</span> <span class="toc-text">Add Property</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sprintf"><span class="toc-number">6.5.</span> <span class="toc-text">sprintf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Embed-URL"><span class="toc-number">6.6.</span> <span class="toc-text">Embed URL</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Stylus
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.441Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/CSS/">CSS</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="../tags/Featurable/">Featurable</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><h3 id="CSS-syntax"><a href="#CSS-syntax" class="headerlink" title="CSS syntax"></a>CSS syntax</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line"></span><br><span class="line">  <span class="selector-class">.button</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Stylus is a CSS pre-processor.</p>
+<p>See: <a href="http://stylus-lang.com/" target="_blank" rel="noopener">stylus-lang.com</a></p>
+<h3 id="Indent-syntax"><a href="#Indent-syntax" class="headerlink" title="Indent syntax"></a>Indent syntax</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.box</span><br><span class="line">  <span class="attribute">color</span>: blue</span><br><span class="line"></span><br><span class="line">  .button</span><br><span class="line">    <span class="attribute">color</span>: red</span><br></pre></td></tr></table></figure>
+<p>Also works! The colon is optional, as well. This is typically the syntax used with Stylus documents.</p>
+<h3 id="Mixins"><a href="#Mixins" class="headerlink" title="Mixins"></a>Mixins</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">caps-type</span><span class="params">()</span></span></span><br><span class="line">  <span class="attribute">text-transform</span>: uppercase</span><br><span class="line">  <span class="attribute">letter-spacing</span>: <span class="number">0.05em</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">h5</span><br><span class="line">  caps-type()</span><br></pre></td></tr></table></figure>
+<p>See <a href="#mixins-1">Mixins</a> below.</p>
+<h3 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">royal-blue = <span class="number">#36a</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div</span><br><span class="line">  <span class="attribute">color</span>: royal-blue</span><br></pre></td></tr></table></figure>
+<h2 id="Mixins-1"><a href="#Mixins-1" class="headerlink" title="Mixins"></a>Mixins</h2><h3 id="Without-arguments"><a href="#Without-arguments" class="headerlink" title="Without arguments"></a>Without arguments</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">red-border</span><span class="params">()</span></span></span><br><span class="line">  <span class="attribute">border</span>: solid <span class="number">2px</span> red</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div</span><br><span class="line">  red-<span class="attribute">border</span>()</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/mixins.html" target="_blank" rel="noopener">Mixins</a></p>
+<h3 id="With-arguments"><a href="#With-arguments" class="headerlink" title="With arguments"></a>With arguments</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">border-radius</span><span class="params">(n)</span></span></span><br><span class="line">  -webkit-<span class="attribute">border-radius</span>: n</span><br><span class="line">  <span class="attribute">border-radius</span>: n</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">2px</span></span><br><span class="line">  <span class="attribute">border-radius</span>(<span class="number">2px</span>)</span><br></pre></td></tr></table></figure>
+<p>Mixins can be applied in two different ways.</p>
+<h3 id="Argument-defaults"><a href="#Argument-defaults" class="headerlink" title="Argument defaults"></a>Argument defaults</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">border-radius</span><span class="params">(n = <span class="number">2px</span>)</span></span></span><br><span class="line">  -webkit-<span class="attribute">border-radius</span>: n</span><br></pre></td></tr></table></figure>
+<h3 id="Block-mixins"><a href="#Block-mixins" class="headerlink" title="Block mixins"></a>Block mixins</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">mobile</span><span class="params">()</span></span></span><br><span class="line">  @media (<span class="attribute">max-width</span>: <span class="number">480px</span>)</span><br><span class="line">    &#123;block&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+mobile()</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10px</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/mixins.html#block-mixins" target="_blank" rel="noopener">Block mixins</a></p>
+<h3 id="Rest-params"><a href="#Rest-params" class="headerlink" title="Rest params"></a>Rest params</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">shadow</span><span class="params">(offset-x, args...)</span></span></span><br><span class="line">  <span class="attribute">box-shadow</span>: offset-x args</span><br><span class="line">  <span class="attribute">margin-top</span>: offset-x</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#login</span><br><span class="line">  shadow: <span class="number">1px</span> <span class="number">2px</span> <span class="number">5px</span> <span class="number">#eee</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/vargs.html" target="_blank" rel="noopener">Rest params</a></p>
+<h2 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h2><h3 id="Functions-1"><a href="#Functions-1" class="headerlink" title="Functions"></a>Functions</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">add</span><span class="params">(a, b)</span></span></span><br><span class="line">  <span class="selector-tag">a</span> + b</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">  <span class="attribute">padding</span>: add(<span class="number">10px</span>, <span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/functions.html" target="_blank" rel="noopener">Functions</a></p>
+<h3 id="Argument-defaults-1"><a href="#Argument-defaults-1" class="headerlink" title="Argument defaults"></a>Argument defaults</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">add</span><span class="params">(a, b = <span class="number">2</span>)</span></span></span><br><span class="line">  <span class="selector-tag">a</span> + b</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/functions.html#argument-defaults" target="_blank" rel="noopener">Argument defaults</a></p>
+<h3 id="Named-parameters"><a href="#Named-parameters" class="headerlink" title="Named parameters"></a>Named parameters</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">shadow</span><span class="params">(x, y)</span></span></span><br><span class="line">  x y (y * 1.5) #000</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.button</span><br><span class="line">  <span class="attribute">box-shadow</span>: shadow(x: <span class="number">2</span>, y: <span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/functions.html#named-parameters" target="_blank" rel="noopener">Named parameters</a></p>
+<h3 id="Multiple-return-values"><a href="#Multiple-return-values" class="headerlink" title="Multiple return values"></a>Multiple return values</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">sizes</span><span class="params">()</span></span></span><br><span class="line">  <span class="number">8px</span> <span class="number">16px</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">sizes</span><span class="params">()</span></span>[<span class="number">0</span>]  <span class="comment">// → 8px</span></span><br><span class="line"><span class="function"><span class="title">sizes</span><span class="params">()</span></span>[<span class="number">1</span>]  <span class="comment">// → 16px</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/functions.html#multiple-return-values" target="_blank" rel="noopener">Multiple return values</a></p>
+<h2 id="Values"><a href="#Values" class="headerlink" title="Values"></a>Values</h2><h3 id="Conditional-assignment"><a href="#Conditional-assignment" class="headerlink" title="Conditional assignment"></a>Conditional assignment</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">royal-blue = <span class="number">#36a</span></span><br><span class="line">royal-blue ?= #89f</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div</span><br><span class="line">  <span class="attribute">color</span>: royal-blue  // <span class="number">#36a</span></span><br></pre></td></tr></table></figure>
+<p><code>?=</code> will only set a variable if it’s previously unset.</p>
+<p>See: <a href="http://stylus-lang.com/docs/operators.html#conditional-assignment--" target="_blank" rel="noopener">Conditional assignment</a></p>
+<h3 id="Property-lookup"><a href="#Property-lookup" class="headerlink" title="Property lookup"></a>Property lookup</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.logo</span><br><span class="line">  <span class="attribute">width</span>: w = <span class="number">150</span></span><br><span class="line">  <span class="attribute">margin-left</span>: -(w / <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/variables.html#property-lookup" target="_blank" rel="noopener">Property lookup</a></p>
+<h3 id="Interpolation"><a href="#Interpolation" class="headerlink" title="Interpolation"></a>Interpolation</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-&#123;prefix&#125;-<span class="attribute">border-radius</span>: <span class="number">2px</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/interpolation.html" target="_blank" rel="noopener">Interpolation</a></p>
+<h3 id="Color-operators"><a href="#Color-operators" class="headerlink" title="Color operators"></a>Color operators</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">#888</span> + <span class="number">50%</span>    <span class="comment">// → #c3c3c3 (lighten)</span></span><br><span class="line"><span class="number">#888</span> - <span class="number">50%</span>    <span class="comment">// → #444 (darken)</span></span><br><span class="line"><span class="number">#f00</span> + <span class="number">50deg</span>  <span class="comment">// → #ffd500 (hue)</span></span><br></pre></td></tr></table></figure>
+<h3 id="Casting"><a href="#Casting" class="headerlink" title="Casting"></a>Casting</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="number">5px</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">foo: (n)em</span><br><span class="line">foo: (n * 5)%</span><br></pre></td></tr></table></figure>
+<h3 id="Lookup"><a href="#Lookup" class="headerlink" title="Lookup"></a>Lookup</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">light-blue = <span class="number">#3bd</span></span><br><span class="line">name = <span class="string">'blue'</span></span><br><span class="line"><span class="function"><span class="title">lookup</span><span class="params">(<span class="string">'light-'</span> + name)</span></span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/bifs.html#lookupname" target="_blank" rel="noopener">lookup</a></p>
+<h2 id="Advanced-features"><a href="#Advanced-features" class="headerlink" title="Advanced features"></a>Advanced features</h2><h3 id="Conditional"><a href="#Conditional" class="headerlink" title="Conditional"></a>Conditional</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="attribute">color</span> == blue</span><br><span class="line">  <span class="attribute">display</span>: block</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> true and true</span><br><span class="line">  <span class="attribute">display</span>: inline</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> <span class="string">'hey'</span> is not <span class="string">'bye'</span></span><br><span class="line">  <span class="attribute">display</span>: flex</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  <span class="attribute">display</span>: none</span><br></pre></td></tr></table></figure>
+<p>Aliases:</p>
+<p>| <code>==</code> | <code>is</code> |<br>| <code>!=</code> | <code>is not</code> |<br>| <code>!=</code> | <code>isnt</code> |</p>
+<p>See: <a href="http://stylus-lang.com/docs/functions.html#conditionals" target="_blank" rel="noopener">Conditionals</a></p>
+<h3 id="For-loops"><a href="#For-loops" class="headerlink" title="For loops"></a>For loops</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">font-size</span>-<span class="number">1</span> = <span class="number">10px</span></span><br><span class="line"><span class="attribute">font-size</span>-<span class="number">2</span> = <span class="number">20px</span></span><br><span class="line"><span class="attribute">font-size</span>-<span class="number">3</span> = <span class="number">30px</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="selector-tag">i</span> <span class="keyword">in</span> <span class="number">1</span>..<span class="number">3</span></span><br><span class="line">  .text-&#123;i&#125;</span><br><span class="line">    <span class="attribute">font-size</span>: lookup(<span class="string">'font-size-'</span> + i)</span><br></pre></td></tr></table></figure>
+<h3 id="Definition-check"><a href="#Definition-check" class="headerlink" title="Definition check"></a>Definition check</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ohnoes is defined</span><br><span class="line">  <span class="attribute">color</span>: blue</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/operators.html#variable-definition-is-defined" target="_blank" rel="noopener">is defined</a></p>
+<h3 id="False-values"><a href="#False-values" class="headerlink" title="False values"></a>False values</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br><span class="line">null</span><br><span class="line">false</span><br><span class="line"><span class="string">''</span></span><br></pre></td></tr></table></figure>
+<h3 id="Type-check"><a href="#Type-check" class="headerlink" title="Type check"></a>Type check</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> val is <span class="selector-tag">a</span> <span class="string">'string'</span></span><br><span class="line"><span class="keyword">if</span> val is <span class="selector-tag">a</span> <span class="string">'ident'</span></span><br><span class="line"><span class="keyword">if</span> <span class="number">#fff</span> is <span class="selector-tag">a</span> <span class="string">'rgba'</span>    <span class="comment">// → true</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/operators.html#instance-check-is-a" target="_blank" rel="noopener">Instance check</a></p>
+<h2 id="Built-in-functions"><a href="#Built-in-functions" class="headerlink" title="Built-in functions"></a>Built-in functions</h2><h3 id="Color-functions"><a href="#Color-functions" class="headerlink" title="Color functions"></a>Color functions</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">alpha</span><span class="params">(<span class="number">#fff</span>)</span></span>   <span class="comment">//→ 1</span></span><br><span class="line"><span class="function"><span class="title">alpha</span><span class="params">(rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>)</span></span>)   <span class="comment">//→ 0.2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">dark</span><span class="params">(black)</span></span>  <span class="comment">//→ true</span></span><br><span class="line"><span class="function"><span class="title">light</span><span class="params">(black)</span></span> <span class="comment">//→ false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">hue</span><span class="params">(<span class="number">#0a0</span>)</span></span>         <span class="comment">//→ 50deg</span></span><br><span class="line"><span class="function"><span class="title">saturation</span><span class="params">(<span class="number">#f00</span>)</span></span>  <span class="comment">//→ 100%</span></span><br><span class="line"><span class="function"><span class="title">lightness</span><span class="params">(<span class="number">#f00</span>)</span></span>   <span class="comment">//→ 50%</span></span><br><span class="line"><span class="function"><span class="title">luminosity</span><span class="params">(<span class="number">#f00</span>)</span></span>  <span class="comment">//→ 0.2126</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">hue</span><span class="params">(<span class="number">#0a0</span>, <span class="number">0deg</span>)</span></span></span><br><span class="line"><span class="function"><span class="title">saturation</span><span class="params">(<span class="number">#f00</span>, <span class="number">50%</span>)</span></span></span><br><span class="line"><span class="function"><span class="title">lightness</span><span class="params">(<span class="number">#f00</span>)</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">lighten</span><span class="params">(color, <span class="number">10%</span>)</span></span></span><br><span class="line"><span class="function"><span class="title">darken</span><span class="params">(color, <span class="number">10%</span>)</span></span></span><br><span class="line"><span class="function"><span class="title">saturate</span><span class="params">(color, <span class="number">10%</span>)</span></span></span><br><span class="line"><span class="function"><span class="title">desaturate</span><span class="params">(color, <span class="number">10%</span>)</span></span></span><br><span class="line"><span class="function"><span class="title">invert</span><span class="params">(color)</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">tint</span><span class="params">(color, <span class="number">50%</span>)</span></span>  <span class="comment">// mix with white</span></span><br><span class="line"><span class="function"><span class="title">shade</span><span class="params">(color, <span class="number">50%</span>)</span></span> <span class="comment">// mix with black</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">unquote</span><span class="params">(string)</span></span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/bifs.html" target="_blank" rel="noopener">Built-in functions</a></p>
+<h3 id="Image-size"><a href="#Image-size" class="headerlink" title="Image size"></a>Image size</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">width</span>:  image-size(<span class="string">'tux.png'</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="attribute">height</span>: image-size(<span class="string">'tux.png'</span>)[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<p>Returns the width and height of a given image.</p>
+<p>See: <a href="http://stylus-lang.com/docs/bifs.html#image-sizepath" target="_blank" rel="noopener">image-size</a></p>
+<h3 id="Caching"><a href="#Caching" class="headerlink" title="Caching"></a>Caching</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">size</span><span class="params">(<span class="variable">$width</span>)</span></span></span><br><span class="line">  +cache(<span class="string">'w'</span> + <span class="variable">$width</span>)</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">$width</span></span><br><span class="line"><span class="selector-class">.a</span> &#123; size: <span class="number">10px</span> &#125;</span><br><span class="line"><span class="selector-class">.b</span> &#123; size: <span class="number">10px</span> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// yields: .a, b &#123; width: 10px &#125;</span></span><br></pre></td></tr></table></figure>
+<p>Applies its contents to the given selector on the first call, but would @extend the first call’s selector at the second call with the same params.</p>
+<p>See: <a href="http://stylus-lang.com/docs/bifs.html#cachekeys" target="_blank" rel="noopener">cache</a></p>
+<h3 id="Add-Property"><a href="#Add-Property" class="headerlink" title="Add Property"></a>Add Property</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">gradient</span><span class="params">(color)</span></span></span><br><span class="line">  add-property(<span class="string">'background-image'</span>, linear-gradient(<span class="attribute">top</span>, color, darken(color, <span class="number">20%</span>)))</span><br><span class="line">  <span class="attribute">color</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">  <span class="attribute">background</span>: gradient(red)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/bifs.html#add-propertyname-expr" target="_blank" rel="noopener">add-property</a></p>
+<h3 id="sprintf"><a href="#sprintf" class="headerlink" title="sprintf"></a>sprintf</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">'-webkit-gradient(%s, %s, %s)' % (linear (0 0) (0 100%))</span><br><span class="line"><span class="comment">// → -webkit-gradient(linear, 0 0, 0 100%)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">s</span><span class="params">(<span class="string">"rgba(0, 0, 0, %s)"</span>, <span class="number">0.3</span>)</span></span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/bifs.html#sfmt-" target="_blank" rel="noopener">s</a></p>
+<h3 id="Embed-URL"><a href="#Embed-URL" class="headerlink" title="Embed URL"></a>Embed URL</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background: embedurl(&apos;logo.png&apos;)</span><br><span class="line">// → background: url(&quot;data:image/png;base64,…&quot;)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://stylus-lang.com/docs/bifs.html#embedurlpath-encoding" target="_blank" rel="noopener">embedurl</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-syntax"><span class="toc-number">1.1.</span> <span class="toc-text">CSS syntax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Indent-syntax"><span class="toc-number">1.2.</span> <span class="toc-text">Indent syntax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mixins"><span class="toc-number">1.3.</span> <span class="toc-text">Mixins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Variables"><span class="toc-number">1.4.</span> <span class="toc-text">Variables</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mixins-1"><span class="toc-number">2.</span> <span class="toc-text">Mixins</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Without-arguments"><span class="toc-number">2.1.</span> <span class="toc-text">Without arguments</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#With-arguments"><span class="toc-number">2.2.</span> <span class="toc-text">With arguments</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Argument-defaults"><span class="toc-number">2.3.</span> <span class="toc-text">Argument defaults</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Block-mixins"><span class="toc-number">2.4.</span> <span class="toc-text">Block mixins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rest-params"><span class="toc-number">2.5.</span> <span class="toc-text">Rest params</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functions"><span class="toc-number">3.</span> <span class="toc-text">Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Functions-1"><span class="toc-number">3.1.</span> <span class="toc-text">Functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Argument-defaults-1"><span class="toc-number">3.2.</span> <span class="toc-text">Argument defaults</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Named-parameters"><span class="toc-number">3.3.</span> <span class="toc-text">Named parameters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Multiple-return-values"><span class="toc-number">3.4.</span> <span class="toc-text">Multiple return values</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Values"><span class="toc-number">4.</span> <span class="toc-text">Values</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditional-assignment"><span class="toc-number">4.1.</span> <span class="toc-text">Conditional assignment</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Property-lookup"><span class="toc-number">4.2.</span> <span class="toc-text">Property lookup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interpolation"><span class="toc-number">4.3.</span> <span class="toc-text">Interpolation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Color-operators"><span class="toc-number">4.4.</span> <span class="toc-text">Color operators</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Casting"><span class="toc-number">4.5.</span> <span class="toc-text">Casting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lookup"><span class="toc-number">4.6.</span> <span class="toc-text">Lookup</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Advanced-features"><span class="toc-number">5.</span> <span class="toc-text">Advanced features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditional"><span class="toc-number">5.1.</span> <span class="toc-text">Conditional</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#For-loops"><span class="toc-number">5.2.</span> <span class="toc-text">For loops</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Definition-check"><span class="toc-number">5.3.</span> <span class="toc-text">Definition check</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#False-values"><span class="toc-number">5.4.</span> <span class="toc-text">False values</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-check"><span class="toc-number">5.5.</span> <span class="toc-text">Type check</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Built-in-functions"><span class="toc-number">6.</span> <span class="toc-text">Built-in functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Color-functions"><span class="toc-number">6.1.</span> <span class="toc-text">Color functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Image-size"><span class="toc-number">6.2.</span> <span class="toc-text">Image size</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Caching"><span class="toc-number">6.3.</span> <span class="toc-text">Caching</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-Property"><span class="toc-number">6.4.</span> <span class="toc-text">Add Property</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sprintf"><span class="toc-number">6.5.</span> <span class="toc-text">sprintf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Embed-URL"><span class="toc-number">6.6.</span> <span class="toc-text">Embed URL</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/stylus/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/stylus/&text=Stylus"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/stylus/&title=Stylus"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/stylus/&is_video=false&description=Stylus"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Stylus&body=Check out this article: https://rupertqin.github.io/devhints/stylus/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/stylus/&title=Stylus"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/stylus/&title=Stylus"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/stylus/&title=Stylus"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/stylus/&title=Stylus"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/stylus/&name=Stylus&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

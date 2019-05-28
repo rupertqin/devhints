@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Example usages| git log master...develop  | inspect differences in branches         || git rebase -i HEAD~3      | rebase last 3 commits                   || git reset --hard HEAD@{2} | undo last oper">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git revisions">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/git-revisions/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Example usages| git log master...develop  | inspect differences in branches         || git rebase -i HEAD~3      | rebase last 3 commits                   || git reset --hard HEAD@{2} | undo last oper">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-10-10T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git revisions">
+<meta name="twitter:description" content="Example usages| git log master...develop  | inspect differences in branches         || git rebase -i HEAD~3      | rebase last 3 commits                   || git reset --hard HEAD@{2} | undo last oper">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Git revisions</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../git-tricks/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../git-log/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/git-revisions/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/git-revisions/&text=Git revisions"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/git-revisions/&title=Git revisions"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/git-revisions/&is_video=false&description=Git revisions"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git revisions&body=Check out this article: https://rupertqin.github.io/devhints/git-revisions/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/git-revisions/&title=Git revisions"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/git-revisions/&title=Git revisions"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/git-revisions/&title=Git revisions"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/git-revisions/&title=Git revisions"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/git-revisions/&name=Git revisions&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-usages"><span class="toc-number">1.</span> <span class="toc-text">Example usages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Common-git-revisions"><span class="toc-number">2.</span> <span class="toc-text">Common git revisions</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number"></span> <span class="toc-text">Reference</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Commits"><span class="toc-number">1.</span> <span class="toc-text">Commits</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-number">2.</span> <span class="toc-text">References</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Searching-back"><span class="toc-number">3.</span> <span class="toc-text">Searching back</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other"><span class="toc-number">4.</span> <span class="toc-text">Other</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ranges"><span class="toc-number"></span> <span class="toc-text">Ranges</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ranges-1"><span class="toc-number">1.</span> <span class="toc-text">Ranges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ranges-illustration"><span class="toc-number">2.</span> <span class="toc-text">Ranges illustration</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References-1"><span class="toc-number"></span> <span class="toc-text">References</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Git revisions
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.288Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Git/">Git</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Example-usages"><a href="#Example-usages" class="headerlink" title="Example usages"></a>Example usages</h3><p>| <em><code>git log</code></em> <code>master...develop</code>  | inspect differences in branches         |<br>| <em><code>git rebase -i</code></em> <code>HEAD~3</code>      | rebase last 3 commits                   |<br>| <em><code>git reset --hard</code></em> <code>HEAD@{2}</code> | undo last operation that changed HEAD   |<br>| <em><code>git checkout</code></em> <code>v2^{}</code>        | checkout the <code>v2</code> tag (not <code>v2</code> branch) |</p>
+<p>The 3rd argument in each of these commands is a <code>gitrevision</code>. These gitrevisions can be passed to many Git commands.</p>
+<h3 id="Common-git-revisions"><a href="#Common-git-revisions" class="headerlink" title="Common git revisions"></a>Common git revisions</h3><table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em><code>git show</code></em> <code>dae68e1</code></td>
+<td>sha1</td>
+</tr>
+<tr>
+<td><em><code>git show</code></em> <code>HEAD</code></td>
+<td>reference</td>
+</tr>
+<tr>
+<td><em><code>git show</code></em> <code>v1.0.0</code></td>
+<td>tag</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><em><code>git show</code></em> <code>master</code></td>
+<td>local branch</td>
+</tr>
+<tr>
+<td><em><code>git show</code></em> <code>origin/master</code></td>
+<td>remote branch</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><em><code>git show</code></em> <code>master~2</code></td>
+<td>2 commits back from master</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><em><code>git show</code></em> <code>master..fix</code></td>
+<td>reachable from <em>fix</em> but not <em>master</em></td>
+</tr>
+<tr>
+<td><em><code>git show</code></em> <code>master...fix</code></td>
+<td>reachable from <em>fix</em> and <em>master</em>, but not both</td>
+</tr>
+</tbody>
+</table>
+<p>These are just the common ones, there’s a lot more below! (These work in many other commands, not just <code>git show</code>.)</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><h3 id="Commits"><a href="#Commits" class="headerlink" title="Commits"></a>Commits</h3><p>| <em><code>git checkout</code></em> <code>dae68e1</code> | sha1 |</p>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em><code>git checkout</code></em> <code>HEAD</code></td>
+<td>reference</td>
+</tr>
+<tr>
+<td><em><code>git checkout</code></em> <code>master</code></td>
+<td>branch</td>
+</tr>
+<tr>
+<td><em><code>git checkout</code></em> <code>v1.0.0</code></td>
+<td>tag</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><em><code>git checkout</code></em> <code>origin/master</code></td>
+<td>aka, <em>refs/remotes/origin/master</em></td>
+</tr>
+<tr>
+<td><em><code>git checkout</code></em> <code>heads/master</code></td>
+<td>aka, <em>refs/heads/master</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Searching-back"><a href="#Searching-back" class="headerlink" title="Searching back"></a>Searching back</h3><table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em><code>git checkout</code></em> <code>master@{yesterday}</code></td>
+<td>also <em>1 day ago</em>, etc</td>
+</tr>
+<tr>
+<td><em><code>git checkout</code></em> <code>master@{2}</code></td>
+<td>2nd prior value</td>
+</tr>
+<tr>
+<td><em><code>git checkout</code></em> <code>master@{push}</code></td>
+<td>where <em>master</em> would push to</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><em><code>git checkout</code></em> <code>master^</code></td>
+<td>parent commit</td>
+</tr>
+<tr>
+<td><em><code>git checkout</code></em> <code>master^2</code></td>
+<td>2nd parent, eg, what it merged</td>
+</tr>
+<tr>
+<td><em><code>git checkout</code></em> <code>master~5</code></td>
+<td>5 parents back</td>
+</tr>
+<tr>
+<td><em><code>git checkout</code></em> <code>master^0</code></td>
+<td>this commit; disambiguates from tags</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><em><code>git checkout</code></em> <code>v0.99.8^{tag}</code></td>
+<td>can be <em>commit</em>, <em>tag</em>, <em>tree</em>, <em>object</em></td>
+</tr>
+<tr>
+<td><em><code>git checkout</code></em> <code>v0.99.8^{}</code></td>
+<td>defaults to <em>{tag}</em></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><em><code>git checkout</code></em> <code>&quot;:/fix bug&quot;</code></td>
+<td>searches commit messages</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h3><p>| <code>HEAD:README</code> | …          |<br>| <code>0:README</code>    | (0 to 3) … |</p>
+<h2 id="Ranges"><a href="#Ranges" class="headerlink" title="Ranges"></a>Ranges</h2><h3 id="Ranges-1"><a href="#Ranges-1" class="headerlink" title="Ranges"></a>Ranges</h3><p>| <em><code>git log</code></em> <code>master</code>       | reachable parents from master                   |<br>| <em><code>git log</code></em> <code>^master</code>      | exclude reachable parents from master           |<br>| <em><code>git log</code></em> <code>master..fix</code>  | reachable from <em>fix</em> but not <em>master</em>           |<br>| <em><code>git log</code></em> <code>master...fix</code> | reachable from <em>fix</em> and <em>master</em>, but not both |<br>| <em><code>git log</code></em> <code>HEAD^@</code>       | parents of <em>HEAD</em>                               |<br>| <em><code>git log</code></em> <code>HEAD^!</code>       | <em>HEAD</em>, then excluding parents’s ancestors      |<br>| <em><code>git log</code></em> <code>HEAD^{:/fix}</code> | search previous <em>HEAD</em>s matching criteria       |</p>
+<h3 id="Ranges-illustration"><a href="#Ranges-illustration" class="headerlink" title="Ranges illustration"></a>Ranges illustration</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A ─┬─ E ── F ── G   master</span><br><span class="line">   │</span><br><span class="line">   └─ B ── C ── D   fix</span><br></pre></td></tr></table></figure>
+<p>| <em><code>git log</code></em> <code>master..fix</code>  | BCD         |<br>| <em><code>git log</code></em> <code>master...fix</code> | BCD and EFG |</p>
+<h2 id="References-1"><a href="#References-1" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html" target="_blank" rel="noopener">Git Tools - Revision Selection</a> <em>(git-scm.com)</em></li>
+<li><a href="https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html" target="_blank" rel="noopener">gitrevisions(7)</a> <em>(kernel.org)</em></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-usages"><span class="toc-number">1.</span> <span class="toc-text">Example usages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Common-git-revisions"><span class="toc-number">2.</span> <span class="toc-text">Common git revisions</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number"></span> <span class="toc-text">Reference</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Commits"><span class="toc-number">1.</span> <span class="toc-text">Commits</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-number">2.</span> <span class="toc-text">References</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Searching-back"><span class="toc-number">3.</span> <span class="toc-text">Searching back</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other"><span class="toc-number">4.</span> <span class="toc-text">Other</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ranges"><span class="toc-number"></span> <span class="toc-text">Ranges</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ranges-1"><span class="toc-number">1.</span> <span class="toc-text">Ranges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ranges-illustration"><span class="toc-number">2.</span> <span class="toc-text">Ranges illustration</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References-1"><span class="toc-number"></span> <span class="toc-text">References</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/git-revisions/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/git-revisions/&text=Git revisions"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/git-revisions/&title=Git revisions"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/git-revisions/&is_video=false&description=Git revisions"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git revisions&body=Check out this article: https://rupertqin.github.io/devhints/git-revisions/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/git-revisions/&title=Git revisions"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/git-revisions/&title=Git revisions"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/git-revisions/&title=Git revisions"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/git-revisions/&title=Git revisions"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/git-revisions/&name=Git revisions&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

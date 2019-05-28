@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Datedistance_of_time_in_words(Time.now, project.end_date) #=&amp;gt; 3 hours distance_of_time_in_words_to_now(project.end_date)    #=&amp;gt; 3 hours  time_ago_in_words 3.minutes.ago #=&amp;gt; &amp;quot;3 minutes&amp;qu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Helpers">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/rails-helpers/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Datedistance_of_time_in_words(Time.now, project.end_date) #=&amp;gt; 3 hours distance_of_time_in_words_to_now(project.end_date)    #=&amp;gt; 3 hours  time_ago_in_words 3.minutes.ago #=&amp;gt; &amp;quot;3 minutes&amp;qu">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:23:51.396Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Helpers">
+<meta name="twitter:description" content="Datedistance_of_time_in_words(Time.now, project.end_date) #=&amp;gt; 3 hours distance_of_time_in_words_to_now(project.end_date)    #=&amp;gt; 3 hours  time_ago_in_words 3.minutes.ago #=&amp;gt; &amp;quot;3 minutes&amp;qu">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Helpers</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../rails-migrations/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../rails-gems/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/rails-helpers/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/rails-helpers/&text=Helpers"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/rails-helpers/&title=Helpers"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/rails-helpers/&is_video=false&description=Helpers"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Helpers&body=Check out this article: https://rupertqin.github.io/devhints/rails-helpers/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/rails-helpers/&title=Helpers"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/rails-helpers/&title=Helpers"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/rails-helpers/&title=Helpers"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/rails-helpers/&title=Helpers"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/rails-helpers/&name=Helpers&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Date"><span class="toc-number">1.</span> <span class="toc-text">Date</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">2.</span> <span class="toc-text">Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cache"><span class="toc-number">3.</span> <span class="toc-text">Cache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tags"><span class="toc-number">4.</span> <span class="toc-text">Tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Time-select"><span class="toc-number">5.</span> <span class="toc-text">Time select</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Time-tag"><span class="toc-number">6.</span> <span class="toc-text">Time tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Files"><span class="toc-number">7.</span> <span class="toc-text">Files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#i18n"><span class="toc-number">8.</span> <span class="toc-text">i18n</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-number">9.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Helpers
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.395Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Rails/">Rails</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h3><pre><code>distance_of_time_in_words(Time.now, project.end_date) #=&gt; 3 hours
+distance_of_time_in_words_to_now(project.end_date)    #=&gt; 3 hours
+
+time_ago_in_words 3.minutes.ago #=&gt; &quot;3 minutes&quot;
+</code></pre><h3 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h3><pre><code>number_to_currency 20.33
+number_to_currency 20.33, precision: 0
+number_with_precision 3.14159, precision: 2
+number_to_percentage 32       #=&gt; &quot;32%&quot;
+number_with_delimiter 2048    #=&gt; &quot;2,048&quot;
+number_to_human 12000000      #=&gt; &quot;12 million&quot;
+number_to_human_size 12000000 #=&gt; &quot;12 MB&quot;
+number_to_phone &quot;5551234&quot;     #=&gt; &quot;555-1234&quot;
+</code></pre><h3 id="Cache"><a href="#Cache" class="headerlink" title="Cache"></a>Cache</h3><pre><code>&lt;% cache project do %&gt;
+&lt;% cache [project, current_user] do %&gt;
+
+&lt;% cache_if admin?, project do %&gt;
+&lt;% cache_unless admin?, project do %&gt;
+</code></pre><h3 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h3><pre><code>tag(&quot;br&quot;)
+tag(&quot;img&quot;, src: &quot;image.jpg&quot;)
+content_tag(:p, &quot;Hello&quot;)
+</code></pre><h3 id="Time-select"><a href="#Time-select" class="headerlink" title="Time select"></a>Time select</h3><pre><code># Creates a time select tag that, when POSTed, will be stored in the article
+# variable in the sunrise attribute.
+time_select &quot;article&quot;, &quot;start_time&quot;
+
+# All options are optional
+time_select &quot;article&quot;, &quot;start_time&quot;, \
+  include_seconds: true,
+  minute_step: 15,
+  prompt: true,
+  prompt: { hour: &quot;Choose hr&quot;, minute: &quot;Choose min&quot;, second: &quot;Choose sec&quot; },
+  ampm: true
+
+# For dates (all options are optional)
+date_select &quot;article&quot;, &quot;written_on&quot;, \
+  start_year: 1995,
+  use_month_numbers: true,
+  discard_day: true,
+  include_blank: true,
+  order: [:day, :month, :year],
+  default: 3.days.from_now,
+  default: { day: 20 },
+  prompt: { day: &apos;Select day&apos;, month: &apos;Select month&apos;, year: &apos;Select year&apos; }
+</code></pre><h3 id="Time-tag"><a href="#Time-tag" class="headerlink" title="Time tag"></a>Time tag</h3><pre><code>time_tag Date.today 
+#=&gt; &apos;&lt;time datetime=&quot;2010-11-04&quot;&gt;November 04, 2010&lt;%rtime&gt;&apos;
+
+time_tag Time.now
+#=&gt; &apos;&lt;time datetime=&quot;2010-11-04T17:55:45+01:00&quot;&gt;November 04, 2010 17:55&lt;/time&gt;&apos;
+
+time_tag Date.yesterday, &apos;Yesterday&apos;
+#=&gt; &apos;&lt;time datetime=&quot;2010-11-03&quot;&gt;Yesterday&lt;%rtime&gt;&apos;
+
+time_tag Date.today, pubdate: true
+#=&gt; &apos;&lt;time datetime=&quot;2010-11-04&quot; pubdate=&quot;pubdate&quot;&gt;November 04, 2010&lt;/time&gt;&apos;
+
+time_tag Date.today, \
+  format: :short_date # (en.time.formats.short_date)
+</code></pre><h3 id="Files"><a href="#Files" class="headerlink" title="Files"></a>Files</h3><pre><code>= form_for @post, multipart: true do |f|
+  = f.file_field :picture
+</code></pre><h3 id="i18n"><a href="#i18n" class="headerlink" title="i18n"></a>i18n</h3><pre><code>t(&apos;folders&apos;)
+t(&apos;folders.save&apos;)
+
+l(Time.now)
+
+t(&apos;x_files&apos;, count: files.count)
+# files:
+#    one: &apos;one file&apos;
+#    other: &apos;%{count} files&apos;
+</code></pre><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><pre><code>* http://api.rubyonrails.org/classes/ActionView/Helpers.html
+</code></pre>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Date"><span class="toc-number">1.</span> <span class="toc-text">Date</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">2.</span> <span class="toc-text">Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cache"><span class="toc-number">3.</span> <span class="toc-text">Cache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tags"><span class="toc-number">4.</span> <span class="toc-text">Tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Time-select"><span class="toc-number">5.</span> <span class="toc-text">Time select</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Time-tag"><span class="toc-number">6.</span> <span class="toc-text">Time tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Files"><span class="toc-number">7.</span> <span class="toc-text">Files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#i18n"><span class="toc-number">8.</span> <span class="toc-text">i18n</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-number">9.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/rails-helpers/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/rails-helpers/&text=Helpers"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/rails-helpers/&title=Helpers"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/rails-helpers/&is_video=false&description=Helpers"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Helpers&body=Check out this article: https://rupertqin.github.io/devhints/rails-helpers/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/rails-helpers/&title=Helpers"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/rails-helpers/&title=Helpers"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/rails-helpers/&title=Helpers"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/rails-helpers/&title=Helpers"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/rails-helpers/&name=Helpers&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

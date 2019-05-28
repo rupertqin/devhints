@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Multiple resources (resources)resources :books  # PhotosController: # index  =&amp;gt;    GET /photos # new    =&amp;gt;    GET /photos/new # create =&amp;gt;   POST /photos/new # show   =&amp;gt;    GET /photos/:id">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Routes">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/rails-routes/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Multiple resources (resources)resources :books  # PhotosController: # index  =&amp;gt;    GET /photos # new    =&amp;gt;    GET /photos/new # create =&amp;gt;   POST /photos/new # show   =&amp;gt;    GET /photos/:id">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:23:51.402Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Routes">
+<meta name="twitter:description" content="Multiple resources (resources)resources :books  # PhotosController: # index  =&amp;gt;    GET /photos # new    =&amp;gt;    GET /photos/new # create =&amp;gt;   POST /photos/new # show   =&amp;gt;    GET /photos/:id">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Routes</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../rails-tricks/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../rails-plugins/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/rails-routes/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/rails-routes/&text=Routes"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/rails-routes/&title=Routes"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/rails-routes/&is_video=false&description=Routes"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Routes&body=Check out this article: https://rupertqin.github.io/devhints/rails-routes/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/rails-routes/&title=Routes"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/rails-routes/&title=Routes"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/rails-routes/&title=Routes"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/rails-routes/&title=Routes"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/rails-routes/&name=Routes&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Multiple-resources-resources"><span class="toc-number">1.</span> <span class="toc-text">Multiple resources (resources)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-actions"><span class="toc-number">1.1.</span> <span class="toc-text">Custom actions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Options"><span class="toc-number">1.2.</span> <span class="toc-text">Options</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Single-resource-resource"><span class="toc-number">2.</span> <span class="toc-text">Single resource (resource)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Matching-match"><span class="toc-number">3.</span> <span class="toc-text">Matching (match)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-post"><span class="toc-number">3.1.</span> <span class="toc-text">Get/post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redirection"><span class="toc-number">3.2.</span> <span class="toc-text">Redirection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Named"><span class="toc-number">3.3.</span> <span class="toc-text">Named</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Constraints"><span class="toc-number">3.4.</span> <span class="toc-text">Constraints</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-constraints"><span class="toc-number">3.5.</span> <span class="toc-text">Custom constraints</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scopes"><span class="toc-number">3.6.</span> <span class="toc-text">Scopes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rack-middleware"><span class="toc-number">3.7.</span> <span class="toc-text">Rack middleware</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Route-helpers"><span class="toc-number">3.8.</span> <span class="toc-text">Route helpers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Default-help-text"><span class="toc-number">3.9.</span> <span class="toc-text">Default help text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-number">3.10.</span> <span class="toc-text">References</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Routes
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.402Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Rails/">Rails</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Multiple-resources-resources"><a href="#Multiple-resources-resources" class="headerlink" title="Multiple resources (resources)"></a>Multiple resources (<code>resources</code>)</h2><pre><code>resources :books
+
+# PhotosController:
+# index  =&gt;    GET /photos
+# new    =&gt;    GET /photos/new
+# create =&gt;   POST /photos/new
+# show   =&gt;    GET /photos/:id
+# edit   =&gt;    GET /photos/:id/edit
+# update =&gt;    PUT /photos/:id
+# delete =&gt; DELETE /photos/:id
+#
+# Helpers:
+# new_book_path
+# book_path(id)
+# edit_book_path(id)
+</code></pre><h3 id="Custom-actions"><a href="#Custom-actions" class="headerlink" title="Custom actions"></a>Custom actions</h3><pre><code>resources :photos do
+  member { get &apos;preview&apos; }       # /photo/1/preview
+  collection { get &apos;search&apos; }    # /photos/search
+
+  get &apos;preview&apos;, on: :member     # (..same as the first)
+end
+</code></pre><h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><pre><code>resources :photos,
+  path_names: { new: &apos;brand_new&apos; }    # /photos/1/brand_new
+  path: &apos;postings&apos;                    # /postings
+  only: :index
+  only: [:index, :show]
+  except: :show
+  except: [:index, :show]
+
+  shallow: true                       # also generate shallow routes
+  shalow_path: &apos;secret&apos;
+  shallow_prefix: &apos;secret&apos;
+</code></pre><h2 id="Single-resource-resource"><a href="#Single-resource-resource" class="headerlink" title="Single resource (resource)"></a>Single resource (<code>resource</code>)</h2><pre><code>resource :coder
+
+# CodersController:
+# new    =&gt;    GET /coder/new
+# create =&gt;   POST /coder/new
+# show   =&gt;    GET /coder
+# edit   =&gt;    GET /coder/edit
+# update =&gt;    PUT /coder
+# delete =&gt; DELETE /coder
+</code></pre><h2 id="Matching-match"><a href="#Matching-match" class="headerlink" title="Matching (match)"></a>Matching (<code>match</code>)</h2><pre><code>match &apos;photo/:id&apos; =&gt; &apos;photos#show&apos;  # /photo/what-is-it
+match &apos;photo/:id&apos;, id: /[0-9]+/     # /photo/0192
+match &apos;photo/:id&apos; =&gt; &apos;photos#show&apos;, constraints: { id: /[0-9]+/ }
+match &apos;photo/:id&apos;, via: :get
+match &apos;photo/:id&apos;, via: [:get, :post]
+
+match &apos;photo/*path&apos; =&gt; &apos;photos#unknown&apos;    # /photo/what/ever
+
+# params[:format] == &apos;jpg&apos;
+match &apos;photos/:id&apos; =&gt; &apos;photos#show&apos;, :defaults =&gt; { :format =&gt; &apos;jpg&apos; }
+</code></pre><h3 id="Get-post"><a href="#Get-post" class="headerlink" title="Get/post"></a>Get/post</h3><p><code>get</code> is the same as <code>match via: :get</code>.</p>
+<pre><code>get &apos;photo/:id&apos; =&gt; &apos;photos#show&apos;
+# same as match &apos;photo/:id&apos; =&gt; &apos;photos#show&apos;, via: :get
+
+post &apos;photo/:id&apos; =&gt; &apos;photos#update&apos;
+# same as match &apos;photo/:id&apos; =&gt; &apos;photos#show&apos;, via: :post
+</code></pre><h3 id="Redirection"><a href="#Redirection" class="headerlink" title="Redirection"></a>Redirection</h3><pre><code>match &apos;/stories&apos; =&gt; redirect(&apos;/posts&apos;)
+match &apos;/stories/:name&apos; =&gt; redirect(&apos;/posts/%{name}&apos;)
+</code></pre><h3 id="Named"><a href="#Named" class="headerlink" title="Named"></a>Named</h3><pre><code># logout_path
+match &apos;exit&apos; =&gt; &apos;sessions#destroy&apos;, as: :logout
+</code></pre><h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><pre><code>match &apos;/&apos;, constraints: { subdomain: &apos;admin&apos; }
+
+# admin.site.com/admin/photos
+namespace &apos;admin&apos; do
+  constraints subdomain: &apos;admin&apos; do
+    resources :photos
+  end
+end
+</code></pre><h3 id="Custom-constraints"><a href="#Custom-constraints" class="headerlink" title="Custom constraints"></a>Custom constraints</h3><pre><code>class BlacklistConstraint
+  def initialize
+    @ips = Blacklist.retrieve_ips
+  end
+
+  def matches?(request)
+    @ips.include?(request.remote_ip)
+  end
+end
+
+TwitterClone::Application.routes.draw do
+  match &quot;*path&quot; =&gt; &quot;blacklist#index&quot;,
+    :constraints =&gt; BlacklistConstraint.new
+end
+</code></pre><h3 id="Scopes"><a href="#Scopes" class="headerlink" title="Scopes"></a>Scopes</h3><pre><code>scope &apos;admin&apos;, constraints: { subdomain: &apos;admin&apos; } do
+  resources ...
+end
+</code></pre><h3 id="Rack-middleware"><a href="#Rack-middleware" class="headerlink" title="Rack middleware"></a>Rack middleware</h3><pre><code># Yes, Sprockets is middleware
+match &apos;/application.js&apos; =&gt; Sprockets
+</code></pre><h3 id="Route-helpers"><a href="#Route-helpers" class="headerlink" title="Route helpers"></a>Route helpers</h3><pre><code>projects_path   # /projects
+projects_url    # http://site.com/projects
+</code></pre><h3 id="Default-help-text"><a href="#Default-help-text" class="headerlink" title="Default help text"></a>Default help text</h3><pre><code># The priority is based upon order of creation:
+# first created -&gt; highest priority.
+
+# Sample of regular route:
+match &apos;products/:id&apos; =&gt; &apos;catalog#view&apos;
+
+# Keep in mind you can assign values other than :controller and :action
+
+# Sample of named route:
+match &apos;products/:id/purchase&apos; =&gt; &apos;catalog#purchase&apos;, :as =&gt; :purchase
+
+# This route can be invoked with purchase_url(:id =&gt; product.id)
+
+# Sample resource route (maps HTTP verbs to controller actions automatically):
+resources :products
+
+# Sample resource route with options:
+resources :products do
+  member do
+    get &apos;short&apos;
+    post &apos;toggle&apos;
+  end
+
+  collection do
+    get &apos;sold&apos;
+  end
+end
+
+# Sample resource route with sub-resources:
+resources :products do
+  resources :comments, :sales
+  resource :seller
+end
+
+# Sample resource route with more complex sub-resources
+resources :products do
+  resources :comments
+  resources :sales do
+    get &apos;recent&apos;, :on =&gt; :collection
+  end
+end
+
+# Sample resource route within a namespace:
+namespace :admin do
+  # Directs /admin/products/* to Admin::ProductsController
+  # (app/controllers/admin/products_controller.rb)
+  resources :products
+end
+
+# You can have the root of your site routed with &quot;root&quot;
+# just remember to delete public/index.html.
+root :to =&gt; &apos;welcome#index&apos;
+
+# See how all your routes lay out with &quot;rake routes&quot;
+
+# This is a legacy wild controller route that&apos;s not recommended for RESTful applications.
+# Note: This route will make all actions in every controller accessible via GET requests.
+match &apos;:controller(/:action(/:id(.:format)))&apos;
+</code></pre><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul>
+<li><p><a href="http://guides.rubyonrails.org/routing.html" target="_blank" rel="noopener">Guides/Routing</a></p>
+</li>
+<li><p><a href="http://api.rubyonrails.org/classes/ActionDispatch/Routing/Mapper.html" target="_blank" rel="noopener">ActionDispatch::Routing::Mapper</a><br> (See included modules)</p>
+</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Multiple-resources-resources"><span class="toc-number">1.</span> <span class="toc-text">Multiple resources (resources)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-actions"><span class="toc-number">1.1.</span> <span class="toc-text">Custom actions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Options"><span class="toc-number">1.2.</span> <span class="toc-text">Options</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Single-resource-resource"><span class="toc-number">2.</span> <span class="toc-text">Single resource (resource)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Matching-match"><span class="toc-number">3.</span> <span class="toc-text">Matching (match)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-post"><span class="toc-number">3.1.</span> <span class="toc-text">Get/post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redirection"><span class="toc-number">3.2.</span> <span class="toc-text">Redirection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Named"><span class="toc-number">3.3.</span> <span class="toc-text">Named</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Constraints"><span class="toc-number">3.4.</span> <span class="toc-text">Constraints</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-constraints"><span class="toc-number">3.5.</span> <span class="toc-text">Custom constraints</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scopes"><span class="toc-number">3.6.</span> <span class="toc-text">Scopes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rack-middleware"><span class="toc-number">3.7.</span> <span class="toc-text">Rack middleware</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Route-helpers"><span class="toc-number">3.8.</span> <span class="toc-text">Route helpers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Default-help-text"><span class="toc-number">3.9.</span> <span class="toc-text">Default help text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-number">3.10.</span> <span class="toc-text">References</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/rails-routes/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/rails-routes/&text=Routes"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/rails-routes/&title=Routes"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/rails-routes/&is_video=false&description=Routes"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Routes&body=Check out this article: https://rupertqin.github.io/devhints/rails-routes/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/rails-routes/&title=Routes"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/rails-routes/&title=Routes"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/rails-routes/&title=Routes"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/rails-routes/&title=Routes"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/rails-routes/&name=Routes&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

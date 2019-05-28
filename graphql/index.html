@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="IntroQueriesBasic query1&amp;#123; status &amp;#125; ↓1&amp;#123; status: &apos;available&apos; &amp;#125; Nesting1&amp;#123; hero &amp;#123; name height &amp;#125; &amp;#125; ↓123&amp;#123; hero:    &amp;#123; name: &quot;Luke Skywalker&quot;,      height: 1.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GraphQL">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/graphql/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="IntroQueriesBasic query1&amp;#123; status &amp;#125; ↓1&amp;#123; status: &apos;available&apos; &amp;#125; Nesting1&amp;#123; hero &amp;#123; name height &amp;#125; &amp;#125; ↓123&amp;#123; hero:    &amp;#123; name: &quot;Luke Skywalker&quot;,      height: 1.">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-09-22T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GraphQL">
+<meta name="twitter:description" content="IntroQueriesBasic query1&amp;#123; status &amp;#125; ↓1&amp;#123; status: &apos;available&apos; &amp;#125; Nesting1&amp;#123; hero &amp;#123; name height &amp;#125; &amp;#125; ↓123&amp;#123; hero:    &amp;#123; name: &quot;Luke Skywalker&quot;,      height: 1.">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>GraphQL</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../gremlins/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../gpgconf/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/graphql/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/graphql/&text=GraphQL"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/graphql/&title=GraphQL"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/graphql/&is_video=false&description=GraphQL"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=GraphQL&body=Check out this article: https://rupertqin.github.io/devhints/graphql/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/graphql/&title=GraphQL"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/graphql/&title=GraphQL"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/graphql/&title=GraphQL"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/graphql/&title=GraphQL"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/graphql/&name=GraphQL&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Queries"><span class="toc-number">2.</span> <span class="toc-text">Queries</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-query"><span class="toc-number">2.1.</span> <span class="toc-text">Basic query</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#↓"><span class="toc-number">2.1.1.</span> <span class="toc-text">↓</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nesting"><span class="toc-number">2.2.</span> <span class="toc-text">Nesting</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#↓-1"><span class="toc-number">2.2.1.</span> <span class="toc-text">↓</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lists"><span class="toc-number">2.3.</span> <span class="toc-text">Lists</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#↓-2"><span class="toc-number">2.3.1.</span> <span class="toc-text">↓</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lookups"><span class="toc-number">2.4.</span> <span class="toc-text">Lookups</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#↓-3"><span class="toc-number">2.4.1.</span> <span class="toc-text">↓</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aliases"><span class="toc-number">2.5.</span> <span class="toc-text">Aliases</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#↓-4"><span class="toc-number">2.5.1.</span> <span class="toc-text">↓</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Operation-names-and-variables"><span class="toc-number">2.6.</span> <span class="toc-text">Operation names and variables</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Query"><span class="toc-number">2.6.1.</span> <span class="toc-text">Query</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Variables"><span class="toc-number">2.6.2.</span> <span class="toc-text">Variables</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mutations"><span class="toc-number">2.7.</span> <span class="toc-text">Mutations</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Query-1"><span class="toc-number">2.7.1.</span> <span class="toc-text">Query</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Variables-1"><span class="toc-number">2.7.2.</span> <span class="toc-text">Variables</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#↓-5"><span class="toc-number">2.7.3.</span> <span class="toc-text">↓</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Multiple-types"><span class="toc-number">2.8.</span> <span class="toc-text">Multiple types</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Over-HTTP"><span class="toc-number">3.</span> <span class="toc-text">Over HTTP</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#GET"><span class="toc-number">3.0.1.</span> <span class="toc-text">GET</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#POST"><span class="toc-number">3.0.2.</span> <span class="toc-text">POST</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Schema"><span class="toc-number">4.</span> <span class="toc-text">Schema</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-schemas"><span class="toc-number">4.1.</span> <span class="toc-text">Basic schemas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Built-in-types"><span class="toc-number">4.2.</span> <span class="toc-text">Built in types</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Scalar-types"><span class="toc-number">4.2.1.</span> <span class="toc-text">Scalar types</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Type-definitions"><span class="toc-number">4.2.2.</span> <span class="toc-text">Type definitions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Type-modifiers"><span class="toc-number">4.2.3.</span> <span class="toc-text">Type modifiers</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mutations-1"><span class="toc-number">4.3.</span> <span class="toc-text">Mutations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interfaces"><span class="toc-number">4.4.</span> <span class="toc-text">Interfaces</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enums"><span class="toc-number">4.5.</span> <span class="toc-text">Enums</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unions"><span class="toc-number">4.6.</span> <span class="toc-text">Unions</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">5.</span> <span class="toc-text">References</span></a></li>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        GraphQL
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.295Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Databases/">Databases</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><h2 id="Queries"><a href="#Queries" class="headerlink" title="Queries"></a>Queries</h2><h3 id="Basic-query"><a href="#Basic-query" class="headerlink" title="Basic query"></a>Basic query</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; status &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="↓"><a href="#↓" class="headerlink" title="↓"></a>↓</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">status</span>: <span class="string">'available'</span> &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Nesting"><a href="#Nesting" class="headerlink" title="Nesting"></a>Nesting</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; hero &#123; name height &#125; &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="↓-1"><a href="#↓-1" class="headerlink" title="↓"></a>↓</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">hero</span>:</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">"Luke Skywalker"</span>,</span><br><span class="line">      height: <span class="number">1.74</span> &#125; &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; friends &#123; name &#125; &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="↓-2"><a href="#↓-2" class="headerlink" title="↓"></a>↓</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">friends</span>:</span><br><span class="line">    [ &#123; <span class="attr">name</span>: <span class="string">"Luke Skywalker"</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">name</span>: <span class="string">"Han Solo"</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">name</span>: <span class="string">"R2D2"</span> &#125; ] &#125;</span><br></pre></td></tr></table></figure>
+<p>GraphQL queries look the same for both single items or lists of items.</p>
+<h3 id="Lookups"><a href="#Lookups" class="headerlink" title="Lookups"></a>Lookups</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  hero(id: <span class="string">"1000"</span>) &#123; id name &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="↓-3"><a href="#↓-3" class="headerlink" title="↓"></a>↓</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">hero</span>:</span><br><span class="line">    &#123; <span class="attr">id</span>: <span class="string">"1000"</span>,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">"Luke Skywalker"</span> &#125; &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Aliases"><a href="#Aliases" class="headerlink" title="Aliases"></a>Aliases</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  luke: hero(id: <span class="string">"1000"</span>) &#123; name &#125;</span><br><span class="line">  han: hero(id: <span class="string">"1001"</span>) &#123; name &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="↓-4"><a href="#↓-4" class="headerlink" title="↓"></a>↓</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">luke</span>:</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">"Luke Skywalker"</span> &#125;,</span><br><span class="line">    han:</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">"Han Solo"</span> &#125; &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Operation-names-and-variables"><a href="#Operation-names-and-variables" class="headerlink" title="Operation names and variables"></a>Operation names and variables</h3><h4 id="Query"><a href="#Query" class="headerlink" title="Query"></a>Query</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">query FindHero($id: <span class="built_in">String</span>!) &#123;</span><br><span class="line">  hero(id: $id) &#123; name &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Just to make things less ambiguous. Also, to use variables, you need an operation name.</p>
+<h4 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">id</span>: <span class="string">'1000'</span> &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Mutations"><a href="#Mutations" class="headerlink" title="Mutations"></a>Mutations</h3><h4 id="Query-1"><a href="#Query-1" class="headerlink" title="Query"></a>Query</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; createReview($review) &#123; id &#125; &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Variables-1"><a href="#Variables-1" class="headerlink" title="Variables"></a>Variables</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">review</span>: &#123; <span class="attr">stars</span>: <span class="number">5</span> &#125; &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="↓-5"><a href="#↓-5" class="headerlink" title="↓"></a>↓</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">createReview</span>: &#123; <span class="attr">id</span>: <span class="number">5291</span> &#125; &#125;</span><br></pre></td></tr></table></figure>
+<p>Mutations are just fields that do something when queried.</p>
+<h3 id="Multiple-types"><a href="#Multiple-types" class="headerlink" title="Multiple types"></a>Multiple types</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  search(q: <span class="string">"john"</span>) &#123;</span><br><span class="line">    id</span><br><span class="line">    ... on User &#123; name &#125;</span><br><span class="line">    ... on Comment &#123; body author &#123; name &#125; &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Great for searching.</p>
+<h2 id="Over-HTTP"><a href="#Over-HTTP" class="headerlink" title="Over HTTP"></a>Over HTTP</h2><h4 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'http://myapi/graphql?query=&#123; me &#123; name &#125; &#125;'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'http://myapi/graphql'</span>, &#123;</span><br><span class="line">  body: <span class="built_in">JSON</span>.stringify(&#123;</span><br><span class="line">    query: <span class="string">'...'</span>,</span><br><span class="line">    operationName: <span class="string">'...'</span>,</span><br><span class="line">    variables: &#123; ... &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Schema"><a href="#Schema" class="headerlink" title="Schema"></a>Schema</h2><h3 id="Basic-schemas"><a href="#Basic-schemas" class="headerlink" title="Basic schemas"></a>Basic schemas</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">type Query &#123;</span><br><span class="line">  me: User</span><br><span class="line">  users(limit: Int): [User]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type User &#123;</span><br><span class="line">  id: ID!</span><br><span class="line">  name: <span class="built_in">String</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://raw.githubusercontent.com/sogko/graphql-shorthand-notation-cheat-sheet/master/graphql-shorthand-notation-cheat-sheet.png" target="_blank" rel="noopener">sogko/graphql-shorthand-notation-cheat-sheet</a></p>
+<h3 id="Built-in-types"><a href="#Built-in-types" class="headerlink" title="Built in types"></a>Built in types</h3><h4 id="Scalar-types"><a href="#Scalar-types" class="headerlink" title="Scalar types"></a>Scalar types</h4><p>| <code>Int</code> | Integer |<br>| <code>Float</code> | Float |<br>| <code>String</code> | String |<br>| <code>Boolean</code> | Boolean |<br>| <code>ID</code> | ID |</p>
+<h4 id="Type-definitions"><a href="#Type-definitions" class="headerlink" title="Type definitions"></a>Type definitions</h4><p>| <code>scalar</code> | Scalar type |<br>| <code>type</code> | Object type |<br>| <code>interface</code> | Interface type |<br>| <code>union</code> | Union type |<br>| <code>enum</code> | Enumerable type |<br>| <code>input</code> | Input object type |</p>
+<h4 id="Type-modifiers"><a href="#Type-modifiers" class="headerlink" title="Type modifiers"></a>Type modifiers</h4><p>| <code>String</code> | Nullable string |<br>| <code>String!</code> | Required string |<br>| <code>[String]</code> | List of strings |<br>| <code>[String]!</code> | Required list of strings |<br>| <code>[String!]!</code> | Required list of required strings |</p>
+<h3 id="Mutations-1"><a href="#Mutations-1" class="headerlink" title="Mutations"></a>Mutations</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type Mutation &#123;</span><br><span class="line">  users(params: ListUsersInput) [User]!</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Interfaces"><a href="#Interfaces" class="headerlink" title="Interfaces"></a>Interfaces</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">interface Entity &#123;</span><br><span class="line">  id: ID!</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type User implements Entity &#123;</span><br><span class="line">  id: ID!</span><br><span class="line">  name: <span class="built_in">String</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Enums"><a href="#Enums" class="headerlink" title="Enums"></a>Enums</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">enum DIRECTION &#123;</span><br><span class="line">  LEFT</span><br><span class="line">  RIGHT</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type Root &#123;</span><br><span class="line">  direction: DIRECTION!</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Unions"><a href="#Unions" class="headerlink" title="Unions"></a>Unions</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">type Artist &#123; ··· &#125;</span><br><span class="line">type Album &#123; ··· &#125;</span><br><span class="line"></span><br><span class="line">union Result = Artist | Album</span><br><span class="line"></span><br><span class="line">type Query &#123;</span><br><span class="line">  search(q: <span class="built_in">String</span>) [Result]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="http://graphql.org/learn/queries/" target="_blank" rel="noopener">http://graphql.org/learn/queries/</a></li>
+<li><a href="http://graphql.org/learn/serving-over-http/" target="_blank" rel="noopener">http://graphql.org/learn/serving-over-http/</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Queries"><span class="toc-number">2.</span> <span class="toc-text">Queries</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-query"><span class="toc-number">2.1.</span> <span class="toc-text">Basic query</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#↓"><span class="toc-number">2.1.1.</span> <span class="toc-text">↓</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nesting"><span class="toc-number">2.2.</span> <span class="toc-text">Nesting</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#↓-1"><span class="toc-number">2.2.1.</span> <span class="toc-text">↓</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lists"><span class="toc-number">2.3.</span> <span class="toc-text">Lists</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#↓-2"><span class="toc-number">2.3.1.</span> <span class="toc-text">↓</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lookups"><span class="toc-number">2.4.</span> <span class="toc-text">Lookups</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#↓-3"><span class="toc-number">2.4.1.</span> <span class="toc-text">↓</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aliases"><span class="toc-number">2.5.</span> <span class="toc-text">Aliases</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#↓-4"><span class="toc-number">2.5.1.</span> <span class="toc-text">↓</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Operation-names-and-variables"><span class="toc-number">2.6.</span> <span class="toc-text">Operation names and variables</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Query"><span class="toc-number">2.6.1.</span> <span class="toc-text">Query</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Variables"><span class="toc-number">2.6.2.</span> <span class="toc-text">Variables</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mutations"><span class="toc-number">2.7.</span> <span class="toc-text">Mutations</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Query-1"><span class="toc-number">2.7.1.</span> <span class="toc-text">Query</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Variables-1"><span class="toc-number">2.7.2.</span> <span class="toc-text">Variables</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#↓-5"><span class="toc-number">2.7.3.</span> <span class="toc-text">↓</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Multiple-types"><span class="toc-number">2.8.</span> <span class="toc-text">Multiple types</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Over-HTTP"><span class="toc-number">3.</span> <span class="toc-text">Over HTTP</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#GET"><span class="toc-number">3.0.1.</span> <span class="toc-text">GET</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#POST"><span class="toc-number">3.0.2.</span> <span class="toc-text">POST</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Schema"><span class="toc-number">4.</span> <span class="toc-text">Schema</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-schemas"><span class="toc-number">4.1.</span> <span class="toc-text">Basic schemas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Built-in-types"><span class="toc-number">4.2.</span> <span class="toc-text">Built in types</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Scalar-types"><span class="toc-number">4.2.1.</span> <span class="toc-text">Scalar types</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Type-definitions"><span class="toc-number">4.2.2.</span> <span class="toc-text">Type definitions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Type-modifiers"><span class="toc-number">4.2.3.</span> <span class="toc-text">Type modifiers</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mutations-1"><span class="toc-number">4.3.</span> <span class="toc-text">Mutations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interfaces"><span class="toc-number">4.4.</span> <span class="toc-text">Interfaces</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enums"><span class="toc-number">4.5.</span> <span class="toc-text">Enums</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unions"><span class="toc-number">4.6.</span> <span class="toc-text">Unions</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">5.</span> <span class="toc-text">References</span></a></li>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/graphql/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/graphql/&text=GraphQL"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/graphql/&title=GraphQL"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/graphql/&is_video=false&description=GraphQL"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=GraphQL&body=Check out this article: https://rupertqin.github.io/devhints/graphql/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/graphql/&title=GraphQL"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/graphql/&title=GraphQL"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/graphql/&title=GraphQL"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/graphql/&title=GraphQL"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/graphql/&name=GraphQL&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

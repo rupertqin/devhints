@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Vagrantfile123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vagrantfile">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/vagrantfile/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Vagrantfile123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:37:07.778Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vagrantfile">
+<meta name="twitter:description" content="Vagrantfile123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Vagrantfile</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../vainglory/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../vagrant/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/vagrantfile/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/vagrantfile/&text=Vagrantfile"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/vagrantfile/&title=Vagrantfile"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/vagrantfile/&is_video=false&description=Vagrantfile"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vagrantfile&body=Check out this article: https://rupertqin.github.io/devhints/vagrantfile/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/vagrantfile/&title=Vagrantfile"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/vagrantfile/&title=Vagrantfile"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/vagrantfile/&title=Vagrantfile"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/vagrantfile/&title=Vagrantfile"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/vagrantfile/&name=Vagrantfile&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vagrantfile"><span class="toc-number">1.</span> <span class="toc-text">Vagrantfile</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number">2.</span> <span class="toc-text">Also see</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Vagrantfile
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.463Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Devops/">Devops</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Vagrantfile"><a href="#Vagrantfile" class="headerlink" title="Vagrantfile"></a>Vagrantfile</h2><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="string">"2"</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  <span class="comment"># All Vagrant configuration is done here. The most common configuration</span></span><br><span class="line">  <span class="comment"># options are documented and commented below. For a complete reference,</span></span><br><span class="line">  <span class="comment"># please see the online documentation at vagrantup.com.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Every Vagrant virtual environment requires a box to build off of.</span></span><br><span class="line">  config.vm.box = <span class="string">"precise64"</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># The url from where the 'config.vm.box' box will be fetched if it</span></span><br><span class="line">  <span class="comment"># doesn't already exist on the user's system.</span></span><br><span class="line">  <span class="comment"># config.vm.box_url = "http://domain.com/path/to/above.box"</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line">  <span class="comment"># within the machine from a port on the host machine. In the example below,</span></span><br><span class="line">  <span class="comment"># accessing "localhost:8080" will access port 80 on the guest machine.</span></span><br><span class="line">  <span class="comment"># config.vm.network :forwarded_port, guest: 80, host: 8080</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a private network, which allows host-only access to the machine</span></span><br><span class="line">  <span class="comment"># using a specific IP.</span></span><br><span class="line">  <span class="comment"># config.vm.network :private_network, ip: "192.168.33.10"</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a public network, which generally matched to bridged network.</span></span><br><span class="line">  <span class="comment"># Bridged networks make the machine appear as another physical device on</span></span><br><span class="line">  <span class="comment"># your network.</span></span><br><span class="line">  <span class="comment"># config.vm.network :public_network</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># If true, then any SSH connections made will enable agent forwarding.</span></span><br><span class="line">  <span class="comment"># Default value: false</span></span><br><span class="line">  <span class="comment"># config.ssh.forward_agent = true</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Share an additional folder to the guest VM. The first argument is</span></span><br><span class="line">  <span class="comment"># the path on the host to the actual folder. The second argument is</span></span><br><span class="line">  <span class="comment"># the path on the guest to mount the folder. And the optional third</span></span><br><span class="line">  <span class="comment"># argument is a set of non-required options.</span></span><br><span class="line">  <span class="comment"># config.vm.synced_folder "../data", "/vagrant_data"</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Provider-specific configuration so you can fine-tune various</span></span><br><span class="line">  <span class="comment"># backing providers for Vagrant. These expose provider-specific options.</span></span><br><span class="line">  <span class="comment"># Example for VirtualBox:</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># config.vm.provider :virtualbox do |vb|</span></span><br><span class="line">  <span class="comment">#   # Don't boot with headless mode</span></span><br><span class="line">  <span class="comment">#   vb.gui = true</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment">#   # Use VBoxManage to customize the VM. For example to change memory:</span></span><br><span class="line">  <span class="comment">#   vb.customize ["modifyvm", :id, "--memory", "1024"]</span></span><br><span class="line">  <span class="comment"># end</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># View the documentation for the provider you're using for more</span></span><br><span class="line">  <span class="comment"># information on available options.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Enable provisioning with Puppet stand alone.  Puppet manifests</span></span><br><span class="line">  <span class="comment"># are contained in a directory path relative to this Vagrantfile.</span></span><br><span class="line">  <span class="comment"># You will need to create the manifests directory and a manifest in</span></span><br><span class="line">  <span class="comment"># the file precise64.pp in the manifests_path directory.</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># An example Puppet manifest to provision the message of the day:</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># # group &#123; "puppet":</span></span><br><span class="line">  <span class="comment"># #   ensure =&gt; "present",</span></span><br><span class="line">  <span class="comment"># # &#125;</span></span><br><span class="line">  <span class="comment"># #</span></span><br><span class="line">  <span class="comment"># # File &#123; owner =&gt; 0, group =&gt; 0, mode =&gt; 0644 &#125;</span></span><br><span class="line">  <span class="comment"># #</span></span><br><span class="line">  <span class="comment"># # file &#123; '/etc/motd':</span></span><br><span class="line">  <span class="comment"># #   content =&gt; "Welcome to your Vagrant-built virtual machine!</span></span><br><span class="line">  <span class="comment"># #               Managed by Puppet.\n"</span></span><br><span class="line">  <span class="comment"># # &#125;</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># config.vm.provision :puppet do |puppet|</span></span><br><span class="line">  <span class="comment">#   puppet.manifests_path = "manifests"</span></span><br><span class="line">  <span class="comment">#   puppet.manifest_file  = "init.pp"</span></span><br><span class="line">  <span class="comment"># end</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Enable provisioning with chef solo, specifying a cookbooks path, roles</span></span><br><span class="line">  <span class="comment"># path, and data_bags path (all relative to this Vagrantfile), and adding</span></span><br><span class="line">  <span class="comment"># some recipes and/or roles.</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># config.vm.provision :chef_solo do |chef|</span></span><br><span class="line">  <span class="comment">#   chef.cookbooks_path = "../my-recipes/cookbooks"</span></span><br><span class="line">  <span class="comment">#   chef.roles_path = "../my-recipes/roles"</span></span><br><span class="line">  <span class="comment">#   chef.data_bags_path = "../my-recipes/data_bags"</span></span><br><span class="line">  <span class="comment">#   chef.add_recipe "mysql"</span></span><br><span class="line">  <span class="comment">#   chef.add_role "web"</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment">#   # You may also specify custom JSON attributes:</span></span><br><span class="line">  <span class="comment">#   chef.json = &#123; :mysql_password =&gt; "foo" &#125;</span></span><br><span class="line">  <span class="comment"># end</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Enable provisioning with chef server, specifying the chef server URL,</span></span><br><span class="line">  <span class="comment"># and the path to the validation key (relative to this Vagrantfile).</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># The Opscode Platform uses HTTPS. Substitute your organization for</span></span><br><span class="line">  <span class="comment"># ORGNAME in the URL and validation key.</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># If you have your own Chef Server, use the appropriate URL, which may be</span></span><br><span class="line">  <span class="comment"># HTTP instead of HTTPS depending on your configuration. Also change the</span></span><br><span class="line">  <span class="comment"># validation key to validation.pem.</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># config.vm.provision :chef_client do |chef|</span></span><br><span class="line">  <span class="comment">#   chef.chef_server_url = "https://api.opscode.com/organizations/ORGNAME"</span></span><br><span class="line">  <span class="comment">#   chef.validation_key_path = "ORGNAME-validator.pem"</span></span><br><span class="line">  <span class="comment"># end</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># If you're using the Opscode platform, your validator client is</span></span><br><span class="line">  <span class="comment"># ORGNAME-validator, replacing ORGNAME with your organization name.</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># If you have your own Chef Server, the default validation client name is</span></span><br><span class="line">  <span class="comment"># chef-validator, unless you changed the configuration.</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment">#   chef.validation_client_name = "ORGNAME-validator"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="Also-see"><a href="#Also-see" class="headerlink" title="Also see"></a>Also see</h2><ul>
+<li><a href="./vagrant">Vagrant cheatsheet</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vagrantfile"><span class="toc-number">1.</span> <span class="toc-text">Vagrantfile</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number">2.</span> <span class="toc-text">Also see</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/vagrantfile/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/vagrantfile/&text=Vagrantfile"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/vagrantfile/&title=Vagrantfile"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/vagrantfile/&is_video=false&description=Vagrantfile"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vagrantfile&body=Check out this article: https://rupertqin.github.io/devhints/vagrantfile/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/vagrantfile/&title=Vagrantfile"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/vagrantfile/&title=Vagrantfile"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/vagrantfile/&title=Vagrantfile"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/vagrantfile/&title=Vagrantfile"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/vagrantfile/&name=Vagrantfile&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

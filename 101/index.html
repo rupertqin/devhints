@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Usage12const isObject = require(&apos;101/isObject&apos;)isObject(&amp;#123;&amp;#125;) // → true Every function is exposed as a module. See: 101 Type checking123456789isObject(&amp;#123;&amp;#125;)isString(&apos;str&apos;)isRegExp(/reg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="101">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/101/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Usage12const isObject = require(&apos;101/isObject&apos;)isObject(&amp;#123;&amp;#125;) // → true Every function is exposed as a module. See: 101 Type checking123456789isObject(&amp;#123;&amp;#125;)isString(&apos;str&apos;)isRegExp(/reg">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-09-20T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="101">
+<meta name="twitter:description" content="Usage12const isObject = require(&apos;101/isObject&apos;)isObject(&amp;#123;&amp;#125;) // → true Every function is exposed as a module. See: 101 Type checking123456789isObject(&amp;#123;&amp;#125;)isString(&apos;str&apos;)isRegExp(/reg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>101</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../activeadmin/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../git/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/101/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/101/&text=101"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/101/&title=101"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/101/&is_video=false&description=101"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=101&body=Check out this article: https://rupertqin.github.io/devhints/101/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/101/&title=101"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/101/&title=101"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/101/&title=101"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/101/&title=101"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/101/&name=101&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage"><span class="toc-number">1.</span> <span class="toc-text">Usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-checking"><span class="toc-number">2.</span> <span class="toc-text">Type checking</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Objects"><span class="toc-number"></span> <span class="toc-text">Objects</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Example"><span class="toc-number">1.</span> <span class="toc-text">Example</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Update"><span class="toc-number">1.1.</span> <span class="toc-text">Update</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Read"><span class="toc-number">1.2.</span> <span class="toc-text">Read</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Delete"><span class="toc-number">1.3.</span> <span class="toc-text">Delete</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting"><span class="toc-number">2.</span> <span class="toc-text">Getting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setting"><span class="toc-number">3.</span> <span class="toc-text">Setting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deleting"><span class="toc-number">4.</span> <span class="toc-text">Deleting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Keypath-check"><span class="toc-number">5.</span> <span class="toc-text">Keypath check</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-values"><span class="toc-number">6.</span> <span class="toc-text">Get values</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functions"><span class="toc-number"></span> <span class="toc-text">Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Simple-functions"><span class="toc-number">1.</span> <span class="toc-text">Simple functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Composition"><span class="toc-number">2.</span> <span class="toc-text">Composition</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#And-or"><span class="toc-number">3.</span> <span class="toc-text">And/or</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Converge"><span class="toc-number">4.</span> <span class="toc-text">Converge</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Arrays"><span class="toc-number"></span> <span class="toc-text">Arrays</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Finding"><span class="toc-number">1.</span> <span class="toc-text">Finding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Grouping"><span class="toc-number">2.</span> <span class="toc-text">Grouping</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number"></span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Function-composition"><span class="toc-number">1.</span> <span class="toc-text">Function composition</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number"></span> <span class="toc-text">Reference</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        101
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.173Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/JavaScript-libraries/">JavaScript libraries</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> isObject = <span class="built_in">require</span>(<span class="string">'101/isObject'</span>)</span><br><span class="line">isObject(&#123;&#125;) <span class="comment">// → true</span></span><br></pre></td></tr></table></figure>
+<p>Every function is exposed as a module.</p>
+<p>See: <a href="https://github.com/tjmehta/101" target="_blank" rel="noopener">101</a></p>
+<h3 id="Type-checking"><a href="#Type-checking" class="headerlink" title="Type checking"></a>Type checking</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">isObject(&#123;&#125;)</span><br><span class="line">isString(<span class="string">'str'</span>)</span><br><span class="line">isRegExp(<span class="regexp">/regexp/</span>)</span><br><span class="line">isBoolean(<span class="literal">true</span>)</span><br><span class="line">isEmpty(&#123;&#125;)</span><br><span class="line">isfunction(<span class="function"><span class="params">x</span> =&gt;</span> x)</span><br><span class="line">isInteger(<span class="number">10</span>)</span><br><span class="line">isNumber(<span class="number">10.1</span>)</span><br><span class="line">instanceOf(obj, <span class="string">'string'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h2><h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">obj = put(obj, <span class="string">'user.name'</span>, <span class="string">'John'</span>)</span><br><span class="line"><span class="comment">// → &#123; user: &#123; name: 'John' &#125; &#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="Read"><a href="#Read" class="headerlink" title="Read"></a>Read</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pluck(name, <span class="string">'user.name'</span>)</span><br><span class="line"><span class="comment">// → 'John'</span></span><br></pre></td></tr></table></figure>
+<h4 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">obj = del(obj, <span class="string">'user'</span>)</span><br><span class="line"><span class="comment">// → &#123; &#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Getting"><a href="#Getting" class="headerlink" title="Getting"></a>Getting</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pluck(state, <span class="string">'user.profile.name'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pick(state, [<span class="string">'user'</span>, <span class="string">'ui'</span>])</span><br><span class="line">pick(state, /^_/)</span><br></pre></td></tr></table></figure>
+<p><code>pluck</code> returns values, <code>pick</code> returns subsets of objects.</p>
+<p>See:<br><a href="https://github.com/tjmehta/101#pluck" target="_blank" rel="noopener">pluck</a>,<br><a href="https://github.com/tjmehta/101#pick" target="_blank" rel="noopener">pick</a></p>
+<h3 id="Setting"><a href="#Setting" class="headerlink" title="Setting"></a>Setting</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">put(state, <span class="string">'user.profile.name'</span>, <span class="string">'john'</span>)</span><br></pre></td></tr></table></figure>
+<p>See:<br><a href="https://github.com/tjmehta/101#put" target="_blank" rel="noopener">put</a></p>
+<h3 id="Deleting"><a href="#Deleting" class="headerlink" title="Deleting"></a>Deleting</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">del(state, <span class="string">'user.profile'</span>)</span><br><span class="line">omit(state, [<span class="string">'user'</span>, <span class="string">'data'</span>])</span><br></pre></td></tr></table></figure>
+<p><code>omit</code> is like <code>del</code>, but supports multiple keys to be deleted.</p>
+<p>See:<br><a href="https://github.com/tjmehta/101#omit" target="_blank" rel="noopener">omit</a>,<br><a href="https://github.com/tjmehta/101#del" target="_blank" rel="noopener">del</a></p>
+<h3 id="Keypath-check"><a href="#Keypath-check" class="headerlink" title="Keypath check"></a>Keypath check</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hasKeypaths(state, [<span class="string">'user'</span>])</span><br><span class="line">hasKeypaths(state, &#123; <span class="string">'user.profile.name'</span>: <span class="string">'john'</span> &#125;)</span><br></pre></td></tr></table></figure>
+<p>See:<br><a href="https://github.com/tjmehta/101#haskeypaths" target="_blank" rel="noopener">hasKeypaths</a></p>
+<h3 id="Get-values"><a href="#Get-values" class="headerlink" title="Get values"></a>Get values</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">values(state)</span><br></pre></td></tr></table></figure>
+<h2 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h2><h3 id="Simple-functions"><a href="#Simple-functions" class="headerlink" title="Simple functions"></a>Simple functions</h3><p>| <code>and(x, y)</code> | <code>x &amp;&amp; y</code> |<br>| <code>or(x, y)</code> | <code>x || y</code> |<br>| <code>xor(x, y)</code> | <code>!(!x &amp;&amp; !y) &amp;&amp; !(x &amp;&amp; y)</code> |<br>| <code>equals(x, y)</code> | <code>x === y</code> |<br>| <code>exists(x)</code> | <code>!!x</code> |<br>| <code>not(x)</code> | <code>!x</code> |</p>
+<p>Useful for function composition.</p>
+<p>See:<br><a href="https://github.com/tjmehta/101#and" target="_blank" rel="noopener">and</a>,<br><a href="https://github.com/tjmehta/101#equals" target="_blank" rel="noopener">equals</a>,<br><a href="https://github.com/tjmehta/101#exists" target="_blank" rel="noopener">exists</a></p>
+<h3 id="Composition"><a href="#Composition" class="headerlink" title="Composition"></a>Composition</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">compose(f, g)       <span class="comment">// x =&gt; f(g(x))</span></span><br><span class="line">curry(f)            <span class="comment">// x =&gt; y =&gt; f(x, y)</span></span><br><span class="line">flip(f)             <span class="comment">// f(x, y) --&gt; f(y, x)</span></span><br></pre></td></tr></table></figure>
+<p>See:<br><a href="https://github.com/tjmehta/101#compose" target="_blank" rel="noopener">compose</a>,<br><a href="https://github.com/tjmehta/101#curry" target="_blank" rel="noopener">curry</a>,<br><a href="https://github.com/tjmehta/101#flip" target="_blank" rel="noopener">flip</a></p>
+<h3 id="And-or"><a href="#And-or" class="headerlink" title="And/or"></a>And/or</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">passAll(f, g)       <span class="comment">// x =&gt; f(x) &amp;&amp; g(x)</span></span><br><span class="line">passAny(f, g)       <span class="comment">// x =&gt; f(x) || g(x)</span></span><br></pre></td></tr></table></figure>
+<p>See:<br><a href="https://github.com/tjmehta/101#passall" target="_blank" rel="noopener">passAll</a>,<br><a href="https://github.com/tjmehta/101#passany" target="_blank" rel="noopener">passAny</a></p>
+<h3 id="Converge"><a href="#Converge" class="headerlink" title="Converge"></a>Converge</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">converge(and, [pluck(<span class="string">'a'</span>), pluck(<span class="string">'b'</span>)])(x)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// → and(pluck(x, 'a'), pluck(x, 'b'))</span></span><br></pre></td></tr></table></figure>
+<p>See:<br><a href="https://github.com/tjmehta/101#converge" target="_blank" rel="noopener">converge</a></p>
+<h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2><h3 id="Finding"><a href="#Finding" class="headerlink" title="Finding"></a>Finding</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">find(list, x =&gt; x.y === <span class="number">2</span>)</span><br><span class="line">findIndex(list, x =&gt; ...)</span><br><span class="line">includes(list, <span class="string">'item'</span>)</span><br><span class="line">last(list)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find(list, hasProps(<span class="string">'id'</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="Grouping"><a href="#Grouping" class="headerlink" title="Grouping"></a>Grouping</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">groupBy(list, <span class="string">'id'</span>)</span><br><span class="line">indexBy(list, <span class="string">'id'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h3 id="Function-composition"><a href="#Function-composition" class="headerlink" title="Function composition"></a>Function composition</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">isFloat = passAll(isNumber, compose(isInteger, not))</span><br><span class="line"><span class="comment">// n =&gt; isNumber(n) &amp;&amp; not(isInteger(n))</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">doStuff</span> (<span class="params">object, options</span>) </span>&#123; ... &#125;</span><br><span class="line"></span><br><span class="line">doStuffForce = curry(flip(doStuff))(&#123; <span class="attr">force</span>: <span class="literal">true</span> &#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/tjmehta/101" target="_blank" rel="noopener">https://github.com/tjmehta/101</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage"><span class="toc-number">1.</span> <span class="toc-text">Usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-checking"><span class="toc-number">2.</span> <span class="toc-text">Type checking</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Objects"><span class="toc-number"></span> <span class="toc-text">Objects</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Example"><span class="toc-number">1.</span> <span class="toc-text">Example</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Update"><span class="toc-number">1.1.</span> <span class="toc-text">Update</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Read"><span class="toc-number">1.2.</span> <span class="toc-text">Read</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Delete"><span class="toc-number">1.3.</span> <span class="toc-text">Delete</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting"><span class="toc-number">2.</span> <span class="toc-text">Getting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setting"><span class="toc-number">3.</span> <span class="toc-text">Setting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deleting"><span class="toc-number">4.</span> <span class="toc-text">Deleting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Keypath-check"><span class="toc-number">5.</span> <span class="toc-text">Keypath check</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-values"><span class="toc-number">6.</span> <span class="toc-text">Get values</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functions"><span class="toc-number"></span> <span class="toc-text">Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Simple-functions"><span class="toc-number">1.</span> <span class="toc-text">Simple functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Composition"><span class="toc-number">2.</span> <span class="toc-text">Composition</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#And-or"><span class="toc-number">3.</span> <span class="toc-text">And/or</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Converge"><span class="toc-number">4.</span> <span class="toc-text">Converge</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Arrays"><span class="toc-number"></span> <span class="toc-text">Arrays</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Finding"><span class="toc-number">1.</span> <span class="toc-text">Finding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Grouping"><span class="toc-number">2.</span> <span class="toc-text">Grouping</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number"></span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Function-composition"><span class="toc-number">1.</span> <span class="toc-text">Function composition</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number"></span> <span class="toc-text">Reference</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/101/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/101/&text=101"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/101/&title=101"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/101/&is_video=false&description=101"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=101&body=Check out this article: https://rupertqin.github.io/devhints/101/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/101/&title=101"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/101/&title=101"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/101/&title=101"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/101/&title=101"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/101/&name=101&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

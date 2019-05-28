@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="ShortcutsCommand palette   Key Description     ⇧⌘P Show all commands   ⌘P Show files    Sidebars   Key Description     ⌘B Toggle sidebar   —- —-   ⇧⌘E Explorer   ⇧⌘F Search   ⇧⌘D Debug   ⇧⌘X Extension">
+<meta name="keywords" content="⌘P: Show files,⌘B: Toggle sidebar,⌘J: Toggle panel,F5: Debug">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Visual Studio Code">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/vscode/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="ShortcutsCommand palette   Key Description     ⇧⌘P Show all commands   ⌘P Show files    Sidebars   Key Description     ⌘B Toggle sidebar   —- —-   ⇧⌘E Explorer   ⇧⌘F Search   ⇧⌘D Debug   ⇧⌘X Extension">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-02-02T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Visual Studio Code">
+<meta name="twitter:description" content="ShortcutsCommand palette   Key Description     ⇧⌘P Show all commands   ⌘P Show files    Sidebars   Key Description     ⌘B Toggle sidebar   —- —-   ⇧⌘E Explorer   ⇧⌘F Search   ⇧⌘D Debug   ⇧⌘X Extension">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Visual Studio Code</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../vue/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../vows/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/vscode/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/vscode/&text=Visual Studio Code"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/vscode/&title=Visual Studio Code"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/vscode/&is_video=false&description=Visual Studio Code"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Visual Studio Code&body=Check out this article: https://rupertqin.github.io/devhints/vscode/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/vscode/&title=Visual Studio Code"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/vscode/&title=Visual Studio Code"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/vscode/&title=Visual Studio Code"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/vscode/&title=Visual Studio Code"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/vscode/&name=Visual Studio Code&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Shortcuts"><span class="toc-number">1.</span> <span class="toc-text">Shortcuts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Command-palette"><span class="toc-number">1.1.</span> <span class="toc-text">Command palette</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sidebars"><span class="toc-number">1.2.</span> <span class="toc-text">Sidebars</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Search"><span class="toc-number">1.3.</span> <span class="toc-text">Search</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Panel"><span class="toc-number">1.4.</span> <span class="toc-text">Panel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#View"><span class="toc-number">1.5.</span> <span class="toc-text">View</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debug"><span class="toc-number">1.6.</span> <span class="toc-text">Debug</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">2.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Visual Studio Code
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.473Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Apps/">Apps</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Shortcuts"><a href="#Shortcuts" class="headerlink" title="Shortcuts"></a>Shortcuts</h2><h3 id="Command-palette"><a href="#Command-palette" class="headerlink" title="Command palette"></a>Command palette</h3><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>⇧⌘P</code></td>
+<td>Show all commands</td>
+</tr>
+<tr>
+<td><code>⌘P</code></td>
+<td>Show files</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Sidebars"><a href="#Sidebars" class="headerlink" title="Sidebars"></a>Sidebars</h3><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>⌘B</code></td>
+<td>Toggle sidebar</td>
+</tr>
+<tr>
+<td>—-</td>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>⇧⌘E</code></td>
+<td>Explorer</td>
+</tr>
+<tr>
+<td><code>⇧⌘F</code></td>
+<td>Search</td>
+</tr>
+<tr>
+<td><code>⇧⌘D</code></td>
+<td>Debug</td>
+</tr>
+<tr>
+<td><code>⇧⌘X</code></td>
+<td>Extensions</td>
+</tr>
+<tr>
+<td><code>⇧^G</code></td>
+<td>Git (SCM)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h3><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>⌘F</code></td>
+<td>Find</td>
+</tr>
+<tr>
+<td><code>⌥⌘F</code></td>
+<td>Replace</td>
+</tr>
+<tr>
+<td>—-</td>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>⇧⌘F</code></td>
+<td>Find in files</td>
+</tr>
+<tr>
+<td><code>⇧⌘H</code></td>
+<td>Replace in files</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Panel"><a href="#Panel" class="headerlink" title="Panel"></a>Panel</h3><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>⌘J</code></td>
+<td>Toggle panel</td>
+</tr>
+<tr>
+<td>—-</td>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>⇧⌘M</code></td>
+<td>Problems</td>
+</tr>
+<tr>
+<td><code>⇧⌘U</code></td>
+<td>Output</td>
+</tr>
+<tr>
+<td><code>⇧⌘Y</code></td>
+<td>Debug console</td>
+</tr>
+<tr>
+<td><code>^`</code></td>
+<td>Terminal</td>
+</tr>
+</tbody>
+</table>
+<h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>⌘k</code> <code>z</code></td>
+<td>Zen mode</td>
+</tr>
+<tr>
+<td>—-</td>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>⌘k</code> <code>u</code></td>
+<td>Close unmodified</td>
+</tr>
+<tr>
+<td><code>⌘k</code> <code>w</code></td>
+<td>Close all</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F5</code></td>
+<td>Start</td>
+</tr>
+<tr>
+<td><code>⇧F5</code></td>
+<td>Stop</td>
+</tr>
+<tr>
+<td><code>⇧⌘F5</code></td>
+<td>Restart</td>
+</tr>
+<tr>
+<td>—-</td>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>^F5</code></td>
+<td>Start without debugging</td>
+</tr>
+<tr>
+<td>—-</td>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>F9</code></td>
+<td>Toggle breakpoint</td>
+</tr>
+<tr>
+<td>—-</td>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>F10</code></td>
+<td>Step over</td>
+</tr>
+<tr>
+<td><code>F11</code></td>
+<td>Step into</td>
+</tr>
+<tr>
+<td><code>⇧F11</code></td>
+<td>Step out</td>
+</tr>
+<tr>
+<td>—-</td>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>⇧⌘D</code></td>
+<td>Debug sidebar</td>
+</tr>
+<tr>
+<td><code>⇧⌘Y</code></td>
+<td>Debug panel</td>
+</tr>
+</tbody>
+</table>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf" target="_blank" rel="noopener">Keyboard shortcuts (MacOS)</a> <em>(code.visualstudio.com)</em></li>
+<li><a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf" target="_blank" rel="noopener">Keyboard shortcuts (Windows)</a> <em>(code.visualstudio.com)</em></li>
+<li><a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf" target="_blank" rel="noopener">Keyboard shortcuts (Linux)</a> <em>(code.visualstudio.com)</em></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Shortcuts"><span class="toc-number">1.</span> <span class="toc-text">Shortcuts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Command-palette"><span class="toc-number">1.1.</span> <span class="toc-text">Command palette</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sidebars"><span class="toc-number">1.2.</span> <span class="toc-text">Sidebars</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Search"><span class="toc-number">1.3.</span> <span class="toc-text">Search</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Panel"><span class="toc-number">1.4.</span> <span class="toc-text">Panel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#View"><span class="toc-number">1.5.</span> <span class="toc-text">View</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debug"><span class="toc-number">1.6.</span> <span class="toc-text">Debug</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">2.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/vscode/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/vscode/&text=Visual Studio Code"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/vscode/&title=Visual Studio Code"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/vscode/&is_video=false&description=Visual Studio Code"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Visual Studio Code&body=Check out this article: https://rupertqin.github.io/devhints/vscode/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/vscode/&title=Visual Studio Code"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/vscode/&title=Visual Studio Code"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/vscode/&title=Visual Studio Code"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/vscode/&title=Visual Studio Code"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/vscode/&name=Visual Studio Code&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

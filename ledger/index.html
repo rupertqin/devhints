@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Basic usage12$ ledger bal$ ledger reg 12$ ledger reg grocery  # show entries for &apos;grocery&apos;$ ledger bal assets   # check if i&apos;m broke 1234-b 01/01   # --begin-e 01/31   # --end-S date    # --sort-S amo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ledger CLI">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/ledger/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Basic usage12$ ledger bal$ ledger reg 12$ ledger reg grocery  # show entries for &apos;grocery&apos;$ ledger bal assets   # check if i&apos;m broke 1234-b 01/01   # --begin-e 01/31   # --end-S date    # --sort-S amo">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-08-25T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ledger CLI">
+<meta name="twitter:description" content="Basic usage12$ ledger bal$ ledger reg 12$ ledger reg grocery  # show entries for &apos;grocery&apos;$ ledger bal assets   # check if i&apos;m broke 1234-b 01/01   # --begin-e 01/31   # --end-S date    # --sort-S amo">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Ledger CLI</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../less/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../ledger-query/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/ledger/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/ledger/&text=Ledger CLI"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/ledger/&title=Ledger CLI"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/ledger/&is_video=false&description=Ledger CLI"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Ledger CLI&body=Check out this article: https://rupertqin.github.io/devhints/ledger/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/ledger/&title=Ledger CLI"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/ledger/&title=Ledger CLI"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/ledger/&title=Ledger CLI"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/ledger/&title=Ledger CLI"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/ledger/&name=Ledger CLI&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-usage"><span class="toc-number">1.</span> <span class="toc-text">Basic usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Examples"><span class="toc-number">2.</span> <span class="toc-text">Examples</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Format"><span class="toc-number"></span> <span class="toc-text">Format</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-format"><span class="toc-number">1.</span> <span class="toc-text">Basic format</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Secondary-dates"><span class="toc-number">2.</span> <span class="toc-text">Secondary dates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Balance-assertions"><span class="toc-number">3.</span> <span class="toc-text">Balance assertions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Balance-assignment"><span class="toc-number">4.</span> <span class="toc-text">Balance assignment</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Payables"><span class="toc-number">5.</span> <span class="toc-text">Payables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Commodities"><span class="toc-number">6.</span> <span class="toc-text">Commodities</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Commodity-definitions"><span class="toc-number">7.</span> <span class="toc-text">Commodity definitions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Budgeting"><span class="toc-number">8.</span> <span class="toc-text">Budgeting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comments"><span class="toc-number">9.</span> <span class="toc-text">Comments</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Querying"><span class="toc-number"></span> <span class="toc-text">Querying</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Periods"><span class="toc-number">1.</span> <span class="toc-text">Periods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Register"><span class="toc-number">2.</span> <span class="toc-text">Register</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filters"><span class="toc-number">3.</span> <span class="toc-text">Filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Queries"><span class="toc-number">4.</span> <span class="toc-text">Queries</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Display"><span class="toc-number">5.</span> <span class="toc-text">Display</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Effective-dates"><span class="toc-number">6.</span> <span class="toc-text">Effective dates</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number"></span> <span class="toc-text">References</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Ledger CLI
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.333Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Ledger/">Ledger</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ledger bal</span><br><span class="line">$ ledger reg</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ledger reg grocery  <span class="comment"># show entries for 'grocery'</span></span><br><span class="line">$ ledger bal assets   <span class="comment"># check if i'm broke</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-b 01/01   <span class="comment"># --begin</span></span><br><span class="line">-e 01/31   <span class="comment"># --end</span></span><br><span class="line">-S date    <span class="comment"># --sort</span></span><br><span class="line">-S amount</span><br></pre></td></tr></table></figure>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># any/all matches</span></span><br><span class="line">  ledger bal Rent Transportation  <span class="comment"># any</span></span><br><span class="line">  ledger bal Income and Job       <span class="comment"># all</span></span><br><span class="line">  ledger bal Expenses and not (Drinks or Food)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># what did I spend on most? (--sorted)</span></span><br><span class="line">  ledger reg Expenses -S amount</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># how much did I have at this date? (--end)</span></span><br><span class="line">  ledger bal -e 01/15 ^Assets ^Liabilities</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># how much did I spend and earn this month?</span></span><br><span class="line">  ledger bal ^Expenses ^Income --invert</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># how much was spent over the course of 3 days? (totalled)</span></span><br><span class="line">  ledger reg -b 01/25 -e 01/27 --subtotal</span><br><span class="line">  ledger reg -b 01/25 -e 01/27 --subtotal grocery</span><br></pre></td></tr></table></figure>
+<h2 id="Format"><a href="#Format" class="headerlink" title="Format"></a>Format</h2><h3 id="Basic-format"><a href="#Basic-format" class="headerlink" title="Basic format"></a>Basic format</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2013/01/03 * Rent for January</span><br><span class="line">  Expenses:Rent   $600.00</span><br><span class="line">  Assets:Savings</span><br></pre></td></tr></table></figure>
+<p><code>*</code> = cleared, <code>!</code> = pending</p>
+<h3 id="Secondary-dates"><a href="#Secondary-dates" class="headerlink" title="Secondary dates"></a>Secondary dates</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2008/01/01=2008/01/14 Client invoice</span><br></pre></td></tr></table></figure>
+<p>It can mean anything you want, eg, for the estimated date you’ll be paid.</p>
+<h3 id="Balance-assertions"><a href="#Balance-assertions" class="headerlink" title="Balance assertions"></a>Balance assertions</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2008/01/01 * KFC</span><br><span class="line">  Expenses:Food    $20</span><br><span class="line">  Assets:Cash     $-20  = $500</span><br></pre></td></tr></table></figure>
+<p><code>Cash $X = $500</code> ensures Cash is at $500 after the transaction.</p>
+<h3 id="Balance-assignment"><a href="#Balance-assignment" class="headerlink" title="Balance assignment"></a>Balance assignment</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">2008/01/01 * Cash balance</span><br><span class="line">  Assets:Cash              = <span class="variable">$500</span></span><br><span class="line">  Equity:Adjustments</span><br><span class="line"></span><br><span class="line">2008/01/01 * KFC</span><br><span class="line">  Expenses:Food            <span class="variable">$20</span></span><br><span class="line">  Assets:Cash              = <span class="variable">$500</span></span><br></pre></td></tr></table></figure>
+<p><code>ACCOUNT = $500</code> figures out what’s needed to make it $500.</p>
+<h3 id="Payables"><a href="#Payables" class="headerlink" title="Payables"></a>Payables</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2008/04/25 * Rent</span><br><span class="line">  (Assets:Checking)  -<span class="variable">$200</span></span><br><span class="line">  Expenses:Rent</span><br></pre></td></tr></table></figure>
+<h3 id="Commodities"><a href="#Commodities" class="headerlink" title="Commodities"></a>Commodities</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">; cost per item</span><br><span class="line">2010/05/31 * Market</span><br><span class="line">  Assets:Fridge                35 apples @ <span class="variable">$0</span>.42</span><br><span class="line">  Assets:Cash</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">; total cost</span><br><span class="line">2010/05/31 * Market</span><br><span class="line">  Assets:Fridge                35 apples @@ <span class="variable">$14</span>.70</span><br><span class="line">  Assets:Cash</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">; fixed lot prices</span><br><span class="line">2010/05/31 * Gas</span><br><span class="line">  Expenses:Gasoline             11 GAL &#123;=<span class="variable">$2</span>.299&#125;</span><br><span class="line">  Assets:Cash</span><br></pre></td></tr></table></figure>
+<h3 id="Commodity-definitions"><a href="#Commodity-definitions" class="headerlink" title="Commodity definitions"></a>Commodity definitions</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">commodity $</span><br><span class="line">  note American Dollars</span><br><span class="line">  format $1,000.00</span><br><span class="line">  nomarket</span><br><span class="line">  default</span><br></pre></td></tr></table></figure>
+<h3 id="Budgeting"><a href="#Budgeting" class="headerlink" title="Budgeting"></a>Budgeting</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">~ Monthly</span><br><span class="line">  Expenses:Rent  $500</span><br><span class="line">  Expenses:Food  $100</span><br><span class="line">  Expenses        $40 ; everything else</span><br><span class="line">  Assets</span><br><span class="line"></span><br><span class="line">~ Yearly</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ledger bal --budget Expenses</span><br><span class="line">ledger bal --unbudgeted Expenses</span><br></pre></td></tr></table></figure>
+<h3 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h3><pre><code>; line comment
+# also line comment
+% also line comment
+| also line comment
+* also line comment
+</code></pre><h2 id="Querying"><a href="#Querying" class="headerlink" title="Querying"></a>Querying</h2><h3 id="Periods"><a href="#Periods" class="headerlink" title="Periods"></a>Periods</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[interval] [begin] [end]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">interval:</span><br><span class="line">  every day|week|month|quarter|year</span><br><span class="line">  every N days|weeks|...</span><br><span class="line">  daily|weekly|...</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">begin:</span><br><span class="line">  from &lt;spec&gt;</span><br><span class="line">end:</span><br><span class="line">  to &lt;spec&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">spec:</span><br><span class="line">  2004</span><br><span class="line">  2004/10/1</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ledger bal|reg --period <span class="string">"until aug"</span></span><br><span class="line">$ ledger bal|reg --period <span class="string">"last oct"</span></span><br><span class="line">$ ledger bal|reg --period <span class="string">"every week"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Register"><a href="#Register" class="headerlink" title="Register"></a>Register</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ledger reg</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-D, --daily</span><br><span class="line">-W, --weekly</span><br><span class="line">-M, --monthly</span><br><span class="line">    --quarterly</span><br><span class="line">-Y, --yearly</span><br><span class="line">-s, --subtotal</span><br><span class="line">--start-of-week monday</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-S, --sort date</span><br><span class="line">-S, --sort amount</span><br></pre></td></tr></table></figure>
+<h3 id="Filters"><a href="#Filters" class="headerlink" title="Filters"></a>Filters</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">-b, --begin DATE</span><br><span class="line">-e, --end DATE</span><br><span class="line"></span><br><span class="line">-d payee =~ /pioneer/</span><br><span class="line"></span><br><span class="line">-C, --cleared    <span class="comment"># (with *)</span></span><br><span class="line">-U, --uncleared  <span class="comment"># (no *)</span></span><br><span class="line">    --pending    <span class="comment"># (with !)</span></span><br><span class="line"></span><br><span class="line">-R, --real       <span class="comment"># ignore virtual postings (eg: "(Cash)  $-400")</span></span><br><span class="line">-L, --actual     <span class="comment"># no automated postings (eg: "= /^Income/")</span></span><br><span class="line"></span><br><span class="line">-r, --related   <span class="comment"># show the other side</span></span><br><span class="line">                <span class="comment"># "reg -r savings" shows where it comes from)</span></span><br></pre></td></tr></table></figure>
+<h3 id="Queries"><a href="#Queries" class="headerlink" title="Queries"></a>Queries</h3><pre><code>^regex$
+@payee
+%tag
+=note
+#code
+term and term
+term or term
+not term
+\( term \)
+</code></pre><p>Example:</p>
+<pre><code>ledger r ^expenses and @Denny&apos;s
+ledger r food and @Starbucks and not dining
+</code></pre><h3 id="Display"><a href="#Display" class="headerlink" title="Display"></a>Display</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-n, --collapse       <span class="comment"># [register] collapse entries</span></span><br><span class="line">                     <span class="comment"># [balance] no grand total</span></span><br><span class="line">-s, --subtotal       <span class="comment"># [balance] show sub-accounts</span></span><br><span class="line">                     <span class="comment"># [other] show subtotals</span></span><br><span class="line">--flat</span><br></pre></td></tr></table></figure>
+<h3 id="Effective-dates"><a href="#Effective-dates" class="headerlink" title="Effective dates"></a>Effective dates</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2008/01/01=2008/01/14 Client invoice  ;  estimated date you<span class="string">'ll be paid</span></span><br><span class="line"><span class="string">  Assets:Accounts Receivable            $100.00</span></span><br><span class="line"><span class="string">  Income: Client name</span></span><br></pre></td></tr></table></figure>
+<p>Say you’re in business. If you bill a customer, you can enter something like above.<br>Then, when you receive the payment, you change it to:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2008/01/01=2008/01/15 Client invoice ;  actual date money received</span><br><span class="line">  Assets:Accounts Receivable            <span class="variable">$100</span>.00</span><br><span class="line">  Income: Client name</span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="http://ledger-cli.org/3.0/doc/ledger3.html" target="_blank" rel="noopener">http://ledger-cli.org/3.0/doc/ledger3.html</a></li>
+<li><a href="https://gist.github.com/agaviria/3317397" target="_blank" rel="noopener">https://gist.github.com/agaviria/3317397</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-usage"><span class="toc-number">1.</span> <span class="toc-text">Basic usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Examples"><span class="toc-number">2.</span> <span class="toc-text">Examples</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Format"><span class="toc-number"></span> <span class="toc-text">Format</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-format"><span class="toc-number">1.</span> <span class="toc-text">Basic format</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Secondary-dates"><span class="toc-number">2.</span> <span class="toc-text">Secondary dates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Balance-assertions"><span class="toc-number">3.</span> <span class="toc-text">Balance assertions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Balance-assignment"><span class="toc-number">4.</span> <span class="toc-text">Balance assignment</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Payables"><span class="toc-number">5.</span> <span class="toc-text">Payables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Commodities"><span class="toc-number">6.</span> <span class="toc-text">Commodities</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Commodity-definitions"><span class="toc-number">7.</span> <span class="toc-text">Commodity definitions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Budgeting"><span class="toc-number">8.</span> <span class="toc-text">Budgeting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comments"><span class="toc-number">9.</span> <span class="toc-text">Comments</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Querying"><span class="toc-number"></span> <span class="toc-text">Querying</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Periods"><span class="toc-number">1.</span> <span class="toc-text">Periods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Register"><span class="toc-number">2.</span> <span class="toc-text">Register</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filters"><span class="toc-number">3.</span> <span class="toc-text">Filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Queries"><span class="toc-number">4.</span> <span class="toc-text">Queries</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Display"><span class="toc-number">5.</span> <span class="toc-text">Display</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Effective-dates"><span class="toc-number">6.</span> <span class="toc-text">Effective dates</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number"></span> <span class="toc-text">References</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/ledger/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/ledger/&text=Ledger CLI"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/ledger/&title=Ledger CLI"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/ledger/&is_video=false&description=Ledger CLI"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Ledger CLI&body=Check out this article: https://rupertqin.github.io/devhints/ledger/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/ledger/&title=Ledger CLI"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/ledger/&title=Ledger CLI"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/ledger/&title=Ledger CLI"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/ledger/&title=Ledger CLI"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/ledger/&name=Ledger CLI&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

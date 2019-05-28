@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Getting startedInstallationInstallation1gem install ronn Usage1234ronn foo.1.md        # creates foo.1.htmlronn -r foo.1.md     # creates foo.1 (--roff)ronn -r -h foo.1.md  # builds --roff and --htmlr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ronn">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/ronn/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Getting startedInstallationInstallation1gem install ronn Usage1234ronn foo.1.md        # creates foo.1.htmlronn -r foo.1.md     # creates foo.1 (--roff)ronn -r -h foo.1.md  # builds --roff and --htmlr">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-10-14T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ronn">
+<meta name="twitter:description" content="Getting startedInstallationInstallation1gem install ronn Usage1234ronn foo.1.md        # creates foo.1.htmlronn -r foo.1.md     # creates foo.1 (--roff)ronn -r -h foo.1.md  # builds --roff and --htmlr">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Ronn</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../rspec-rails/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../rollup/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/ronn/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/ronn/&text=Ronn"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/ronn/&title=Ronn"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/ronn/&is_video=false&description=Ronn"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Ronn&body=Check out this article: https://rupertqin.github.io/devhints/ronn/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/ronn/&title=Ronn"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/ronn/&title=Ronn"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/ronn/&title=Ronn"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/ronn/&title=Ronn"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/ronn/&name=Ronn&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Installation"><span class="toc-number">1.1.</span> <span class="toc-text">Installation</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Installation-1"><span class="toc-number">1.1.1.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Usage"><span class="toc-number">1.1.2.</span> <span class="toc-text">Usage</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-template"><span class="toc-number">1.2.</span> <span class="toc-text">Basic template</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Formatting-tags"><span class="toc-number">2.</span> <span class="toc-text">Formatting tags</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Inline"><span class="toc-number">2.1.</span> <span class="toc-text">Inline</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Bold"><span class="toc-number">2.1.1.</span> <span class="toc-text">Bold</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Underline"><span class="toc-number">2.1.2.</span> <span class="toc-text">Underline</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linking"><span class="toc-number">2.2.</span> <span class="toc-text">Linking</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Manual-references"><span class="toc-number">2.2.1.</span> <span class="toc-text">Manual references</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Sections"><span class="toc-number">2.2.2.</span> <span class="toc-text">Sections</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#URL-links"><span class="toc-number">2.2.3.</span> <span class="toc-text">URL links</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Frequently-used-sections"><span class="toc-number">3.</span> <span class="toc-text">Frequently-used sections</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Sections-1"><span class="toc-number">3.1.</span> <span class="toc-text">Sections</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other-CLI-options"><span class="toc-number">4.</span> <span class="toc-text">Other CLI options</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Options"><span class="toc-number">4.1.</span> <span class="toc-text">Options</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sections-2"><span class="toc-number">5.</span> <span class="toc-text">Sections</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-with-npm"><span class="toc-number">6.</span> <span class="toc-text">Using with npm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#npm-scripts"><span class="toc-number">6.1.</span> <span class="toc-text">npm scripts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#marked-man"><span class="toc-number">6.2.</span> <span class="toc-text">marked-man</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Differences"><span class="toc-number">6.2.1.</span> <span class="toc-text">Differences</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Ronn
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.415Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Ruby-libraries/">Ruby libraries</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><h4 id="Installation-1"><a href="#Installation-1" class="headerlink" title="Installation"></a>Installation</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install ronn</span><br></pre></td></tr></table></figure>
+<h4 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ronn foo.1.md        <span class="comment"># creates foo.1.html</span></span><br><span class="line">ronn -r foo.1.md     <span class="comment"># creates foo.1 (--roff)</span></span><br><span class="line">ronn -r -h foo.1.md  <span class="comment"># builds --roff and --html</span></span><br><span class="line">ronn -m foo.1.md     <span class="comment"># view as manpage</span></span><br></pre></td></tr></table></figure>
+<p>Ronn is a Ruby gem.</p>
+<h3 id="Basic-template"><a href="#Basic-template" class="headerlink" title="Basic template"></a>Basic template</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">name(1) -- short, single-sentence description</span><br><span class="line">=============================================</span><br><span class="line"></span><br><span class="line"><span class="section">## SYNOPSIS</span></span><br><span class="line"></span><br><span class="line"><span class="code">`name`</span> [<span class="xml"><span class="tag">&lt;<span class="name">optional</span>&gt;</span></span>...] <span class="xml"><span class="tag">&lt;<span class="name">flags</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="section">## DESCRIPTION</span></span><br><span class="line"></span><br><span class="line">A normal paragraph. This can span multiple lines and is terminated with two</span><br><span class="line">or more line endings just like Markdown.</span><br><span class="line"></span><br><span class="line"><span class="section">## OPTIONS</span></span><br><span class="line"></span><br><span class="line"> * <span class="code">`-h`</span>, <span class="code">`--help`</span> :</span><br><span class="line">   Displays the help screen.</span><br><span class="line"></span><br><span class="line"> * <span class="code">`--version`</span> : </span><br><span class="line">   Displays version information.</span><br><span class="line"></span><br><span class="line"><span class="section">## EXAMPLES</span></span><br><span class="line"></span><br><span class="line">Indent examples with 4 spaces.</span><br><span class="line"></span><br><span class="line"><span class="code">    $ ls</span></span><br><span class="line"><span class="code">    $ ls -la</span></span><br><span class="line"></span><br><span class="line"><span class="section">## COPYRIGHT</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**PROJECTNAME**</span> is copyright (c) 2015, Rico Sta. Cruz. Released under the MIT</span><br><span class="line">license.</span><br><span class="line"></span><br><span class="line"><span class="section">## SEE ALSO</span></span><br><span class="line"></span><br><span class="line">ronn-format(7), ronn(1)</span><br></pre></td></tr></table></figure>
+<h2 id="Formatting-tags"><a href="#Formatting-tags" class="headerlink" title="Formatting tags"></a>Formatting tags</h2><h3 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h3><h4 id="Bold"><a href="#Bold" class="headerlink" title="Bold"></a>Bold</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">`code`</span><br><span class="line">**strong**</span><br></pre></td></tr></table></figure>
+<h4 id="Underline"><a href="#Underline" class="headerlink" title="Underline"></a>Underline</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;variable&gt;</span><br><span class="line">_emphasis_</span><br><span class="line">*emphasis*</span><br></pre></td></tr></table></figure>
+<h3 id="Linking"><a href="#Linking" class="headerlink" title="Linking"></a>Linking</h3><h4 id="Manual-references"><a href="#Manual-references" class="headerlink" title="Manual references"></a>Manual references</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sh(1)</span><br><span class="line">markdown(7)</span><br></pre></td></tr></table></figure>
+<h4 id="Sections"><a href="#Sections" class="headerlink" title="Sections"></a>Sections</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[STANDARDS][]</span><br><span class="line">[SEE ALSO][]</span><br><span class="line">[DIFFERENT TEXT][#SEE-ALSO]</span><br></pre></td></tr></table></figure>
+<h4 id="URL-links"><a href="#URL-links" class="headerlink" title="URL links"></a>URL links</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[URL link](http://github.com/rstacruz)</span><br><span class="line">&lt;http://github.com&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Frequently-used-sections"><a href="#Frequently-used-sections" class="headerlink" title="Frequently-used sections"></a>Frequently-used sections</h2><h3 id="Sections-1"><a href="#Sections-1" class="headerlink" title="Sections"></a>Sections</h3><ul>
+<li><code>## SYNOPSIS</code></li>
+<li><code>## DESCRIPTION</code></li>
+<li><code>## OPTIONS</code></li>
+<li><code>## SYNTAX</code></li>
+<li><code>## ENVIRONMENT</code></li>
+<li><code>## RETURN VALUES</code></li>
+<li><code>## STANDARDS</code></li>
+<li><code>## SECURITY CONSIDERATIONS</code></li>
+<li><code>## BUGS</code></li>
+<li><code>## HISTORY</code></li>
+<li><code>## AUTHOR</code></li>
+<li><code>## COPYRIGHT</code></li>
+<li><code>## SEE ALSO</code></li>
+</ul>
+<h2 id="Other-CLI-options"><a href="#Other-CLI-options" class="headerlink" title="Other CLI options"></a>Other CLI options</h2><h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--pipe                       <span class="comment"># write to stdout</span></span><br><span class="line">--server, -S                 <span class="comment"># serve in http://localhost:1207</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--html, -5                   <span class="comment"># default</span></span><br><span class="line">--fragment, -f               <span class="comment"># html without header/title/footer</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">--style=toc,80c              <span class="comment"># toc (table of contents)</span></span><br><span class="line">                             <span class="comment"># 80c (use 80c instead of 100c)</span></span><br><span class="line">                             <span class="comment"># print (include print stylesheet)</span></span><br><span class="line">                             <span class="comment"># dark</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--manual=<span class="string">"MY MANUAL"</span>         <span class="comment"># shown on top-center</span></span><br><span class="line">--organization=<span class="string">"RONN 0.7.0"</span>  <span class="comment"># shown on bottom-left</span></span><br><span class="line">--date=<span class="string">"YYYY-MM-DD"</span>          <span class="comment"># shown on bottom-center</span></span><br></pre></td></tr></table></figure>
+<h2 id="Sections-2"><a href="#Sections-2" class="headerlink" title="Sections"></a>Sections</h2><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1</code></td>
+<td>General commands</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>System calls</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td>C standard lib</td>
+</tr>
+<tr>
+<td><code>4</code></td>
+<td>Special files (/dev) and drivers</td>
+</tr>
+<tr>
+<td><code>5</code></td>
+<td>File formats</td>
+</tr>
+<tr>
+<td><code>6</code></td>
+<td>Games</td>
+</tr>
+<tr>
+<td><code>7</code></td>
+<td>Misc</td>
+</tr>
+<tr>
+<td><code>8</code></td>
+<td>System administration commands and procedures</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="http://www.december.com/unix/ref/mansec.html" target="_blank" rel="noopener">Man page sections</a> (december.com).</p>
+<h2 id="Using-with-npm"><a href="#Using-with-npm" class="headerlink" title="Using with npm"></a>Using with npm</h2><h3 id="npm-scripts"><a href="#npm-scripts" class="headerlink" title="npm scripts"></a>npm scripts</h3><p>Place manual files in <code>man/xxx.1.md</code>, then in package.json:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "prepublish": "npm run build-man",</span><br><span class="line">  "build-man": "if which ronn; then ronn man/*.md --html --roff --style=toc,80c --organization=\"@rstacruz\"; fi"</span><br><span class="line">&#125;,</span><br><span class="line">"directories": &#123;</span><br><span class="line">  "man": "man"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="marked-man"><a href="#marked-man" class="headerlink" title="marked-man"></a>marked-man</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g marked-man</span><br><span class="line">marked-man foo.1.md &gt; foo.1</span><br></pre></td></tr></table></figure>
+<h4 id="Differences"><a href="#Differences" class="headerlink" title="Differences"></a>Differences</h4><ul>
+<li>No definition lists</li>
+<li>Can’t use <code>&lt;br&gt;</code></li>
+</ul>
+<p>See <a href="https://github.com/kapouer/marked-man" target="_blank" rel="noopener">marked-man</a>.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Installation"><span class="toc-number">1.1.</span> <span class="toc-text">Installation</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Installation-1"><span class="toc-number">1.1.1.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Usage"><span class="toc-number">1.1.2.</span> <span class="toc-text">Usage</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-template"><span class="toc-number">1.2.</span> <span class="toc-text">Basic template</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Formatting-tags"><span class="toc-number">2.</span> <span class="toc-text">Formatting tags</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Inline"><span class="toc-number">2.1.</span> <span class="toc-text">Inline</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Bold"><span class="toc-number">2.1.1.</span> <span class="toc-text">Bold</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Underline"><span class="toc-number">2.1.2.</span> <span class="toc-text">Underline</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linking"><span class="toc-number">2.2.</span> <span class="toc-text">Linking</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Manual-references"><span class="toc-number">2.2.1.</span> <span class="toc-text">Manual references</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Sections"><span class="toc-number">2.2.2.</span> <span class="toc-text">Sections</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#URL-links"><span class="toc-number">2.2.3.</span> <span class="toc-text">URL links</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Frequently-used-sections"><span class="toc-number">3.</span> <span class="toc-text">Frequently-used sections</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Sections-1"><span class="toc-number">3.1.</span> <span class="toc-text">Sections</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other-CLI-options"><span class="toc-number">4.</span> <span class="toc-text">Other CLI options</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Options"><span class="toc-number">4.1.</span> <span class="toc-text">Options</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sections-2"><span class="toc-number">5.</span> <span class="toc-text">Sections</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-with-npm"><span class="toc-number">6.</span> <span class="toc-text">Using with npm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#npm-scripts"><span class="toc-number">6.1.</span> <span class="toc-text">npm scripts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#marked-man"><span class="toc-number">6.2.</span> <span class="toc-text">marked-man</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Differences"><span class="toc-number">6.2.1.</span> <span class="toc-text">Differences</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/ronn/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/ronn/&text=Ronn"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/ronn/&title=Ronn"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/ronn/&is_video=false&description=Ronn"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Ronn&body=Check out this article: https://rupertqin.github.io/devhints/ronn/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/ronn/&title=Ronn"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/ronn/&title=Ronn"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/ronn/&title=Ronn"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/ronn/&title=Ronn"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/ronn/&name=Ronn&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="TestingQuick start1npm install --save-dev jest babel-jest 1234/* Add to package.json */&quot;scripts&quot;: &amp;#123;  &quot;test&quot;: &quot;jest&quot;&amp;#125; 12# Run your testsnpm test -- --watch See: Getting started Writing tests1">
+<meta name="keywords" content="Featurable">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jest">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/jest/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="TestingQuick start1npm install --save-dev jest babel-jest 1234/* Add to package.json */&quot;scripts&quot;: &amp;#123;  &quot;test&quot;: &quot;jest&quot;&amp;#125; 12# Run your testsnpm test -- --watch See: Getting started Writing tests1">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-08-31T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jest">
+<meta name="twitter:description" content="TestingQuick start1npm install --save-dev jest babel-jest 1234/* Add to package.json */&quot;scripts&quot;: &amp;#123;  &quot;test&quot;: &quot;jest&quot;&amp;#125; 12# Run your testsnpm test -- --watch See: Getting started Writing tests1">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Jest</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../jquery-cdn/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../jekyll/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/jest/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/jest/&text=Jest"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/jest/&title=Jest"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/jest/&is_video=false&description=Jest"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Jest&body=Check out this article: https://rupertqin.github.io/devhints/jest/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/jest/&title=Jest"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/jest/&title=Jest"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/jest/&title=Jest"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/jest/&title=Jest"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/jest/&name=Jest&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Testing"><span class="toc-number">1.</span> <span class="toc-text">Testing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Quick-start"><span class="toc-number">1.1.</span> <span class="toc-text">Quick start</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Writing-tests"><span class="toc-number">1.2.</span> <span class="toc-text">Writing tests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BDD-syntax"><span class="toc-number">1.3.</span> <span class="toc-text">BDD syntax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup"><span class="toc-number">1.4.</span> <span class="toc-text">Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Focusing-tests"><span class="toc-number">1.5.</span> <span class="toc-text">Focusing tests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Skipping-tests"><span class="toc-number">1.6.</span> <span class="toc-text">Skipping tests</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Expect"><span class="toc-number">2.</span> <span class="toc-text">Expect</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-expectations"><span class="toc-number">2.1.</span> <span class="toc-text">Basic expectations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Snapshots"><span class="toc-number">2.2.</span> <span class="toc-text">Snapshots</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Errors"><span class="toc-number">2.3.</span> <span class="toc-text">Errors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Booleans"><span class="toc-number">2.4.</span> <span class="toc-text">Booleans</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">2.5.</span> <span class="toc-text">Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Objects"><span class="toc-number">2.6.</span> <span class="toc-text">Objects</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Objects-1"><span class="toc-number">2.7.</span> <span class="toc-text">Objects</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Strings"><span class="toc-number">2.8.</span> <span class="toc-text">Strings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Others"><span class="toc-number">2.9.</span> <span class="toc-text">Others</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#More-features"><span class="toc-number">3.</span> <span class="toc-text">More features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Asynchronous-tests"><span class="toc-number">3.1.</span> <span class="toc-text">Asynchronous tests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Snapshots-1"><span class="toc-number">3.2.</span> <span class="toc-text">Snapshots</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React-test-renderer"><span class="toc-number">3.3.</span> <span class="toc-text">React test renderer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Timers"><span class="toc-number">3.4.</span> <span class="toc-text">Timers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mock-functions"><span class="toc-number">4.</span> <span class="toc-text">Mock functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mock-functions-1"><span class="toc-number">4.1.</span> <span class="toc-text">Mock functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assertions"><span class="toc-number">4.2.</span> <span class="toc-text">Assertions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Instances"><span class="toc-number">4.3.</span> <span class="toc-text">Instances</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Calls"><span class="toc-number">4.4.</span> <span class="toc-text">Calls</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Return-values"><span class="toc-number">4.5.</span> <span class="toc-text">Return values</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#or"><span class="toc-number">4.5.1.</span> <span class="toc-text">or:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mock-implementations"><span class="toc-number">4.6.</span> <span class="toc-text">Mock implementations</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">5.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Jest
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.320Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/JavaScript-libraries/">JavaScript libraries</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="../tags/Featurable/">Featurable</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><h3 id="Quick-start"><a href="#Quick-start" class="headerlink" title="Quick start"></a>Quick start</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev jest babel-jest</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Add to package.json */</span></span><br><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">  <span class="string">"test"</span>: <span class="string">"jest"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Run your tests</span></span><br><span class="line">npm <span class="built_in">test</span> -- --watch</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://facebook.github.io/jest/docs/en/getting-started.html" target="_blank" rel="noopener">Getting started</a></p>
+<h3 id="Writing-tests"><a href="#Writing-tests" class="headerlink" title="Writing tests"></a>Writing tests</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">describe(<span class="string">'My work'</span>, () =&gt; &#123;</span><br><span class="line">  test(<span class="string">'works'</span>, () =&gt; &#123;</span><br><span class="line">    expect(<span class="number">2</span>).toEqual(<span class="number">2</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://facebook.github.io/jest/docs/en/api.html#describename-fn" target="_blank" rel="noopener">describe()</a>, <a href="http://facebook.github.io/jest/docs/en/api.html#testname-fn" target="_blank" rel="noopener">test()</a>, <a href="http://facebook.github.io/jest/docs/en/expect.html#content" target="_blank" rel="noopener">expect()</a></p>
+<h3 id="BDD-syntax"><a href="#BDD-syntax" class="headerlink" title="BDD syntax"></a>BDD syntax</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">describe(<span class="string">'My work'</span>, () =&gt; &#123;</span><br><span class="line">  it(<span class="string">'works'</span>, () =&gt; &#123;</span><br><span class="line">    ···</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><code>it</code> is an alias for <code>test</code>.<br>See: <a href="http://facebook.github.io/jest/docs/en/api.html#testname-fn" target="_blank" rel="noopener">test()</a></p>
+<h3 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">beforeEach(<span class="function"><span class="params">()</span> =&gt;</span> &#123; ... &#125;)</span><br><span class="line">afterEach(<span class="function"><span class="params">()</span> =&gt;</span> &#123; ... &#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">beforeAll(<span class="function"><span class="params">()</span> =&gt;</span> &#123; ... &#125;)</span><br><span class="line">afterAll(<span class="function"><span class="params">()</span> =&gt;</span> &#123; ... &#125;)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://facebook.github.io/jest/docs/en/api.html#afterallfn" target="_blank" rel="noopener">afterAll() and more</a></p>
+<h3 id="Focusing-tests"><a href="#Focusing-tests" class="headerlink" title="Focusing tests"></a>Focusing tests</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">describe.only(···)</span><br><span class="line">it.only(···) <span class="comment">// alias: fit()</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://facebook.github.io/jest/docs/en/api.html#testonlyname-fn" target="_blank" rel="noopener">test.only</a></p>
+<h3 id="Skipping-tests"><a href="#Skipping-tests" class="headerlink" title="Skipping tests"></a>Skipping tests</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">describe.skip(···)</span><br><span class="line">it.skip(···) <span class="comment">// alias: xit()</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://facebook.github.io/jest/docs/en/api.html#testskipname-fn" target="_blank" rel="noopener">test.skip</a></p>
+<h2 id="Expect"><a href="#Expect" class="headerlink" title="Expect"></a>Expect</h2><h3 id="Basic-expectations"><a href="#Basic-expectations" class="headerlink" title="Basic expectations"></a>Basic expectations</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">expect(value)</span><br><span class="line">  .not</span><br><span class="line">  .toBe(value)</span><br><span class="line">  .toEqual(value)</span><br><span class="line">  .toBeTruthy()</span><br></pre></td></tr></table></figure>
+<p>Note that <code>toEqual</code> is a deep equality check.<br>See: <a href="http://facebook.github.io/jest/docs/en/expect.html#expectvalue" target="_blank" rel="noopener">expect()</a></p>
+<h3 id="Snapshots"><a href="#Snapshots" class="headerlink" title="Snapshots"></a>Snapshots</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">expect(value)</span><br><span class="line">  .toMatchSnapshot()</span><br></pre></td></tr></table></figure>
+<h3 id="Errors"><a href="#Errors" class="headerlink" title="Errors"></a>Errors</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">expect(value)</span><br><span class="line">  .toThrow(error)</span><br><span class="line">  .toThrowErrorMatchingSnapshot()</span><br></pre></td></tr></table></figure>
+<h3 id="Booleans"><a href="#Booleans" class="headerlink" title="Booleans"></a>Booleans</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">expect(value)</span><br><span class="line">  .toBeFalsy()</span><br><span class="line">  .toBeNull()</span><br><span class="line">  .toBeTruthy()</span><br><span class="line">  .toBeUndefined()</span><br><span class="line">  .toBeDefined()</span><br></pre></td></tr></table></figure>
+<h3 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">expect(value)</span><br><span class="line">  .toBeCloseTo(number, numDigits)</span><br><span class="line">  .toBeGreaterThan(number)</span><br><span class="line">  .toBeGreaterThanOrEqual(number)</span><br><span class="line">  .toBeLessThan(number)</span><br><span class="line">  .toBeLessThanOrEqual(number)</span><br></pre></td></tr></table></figure>
+<h3 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">expect(value)</span><br><span class="line">  .toBeInstanceOf(Class)</span><br><span class="line">  .toMatchObject(object)</span><br><span class="line">  .toHaveProperty(keyPath, value)</span><br></pre></td></tr></table></figure>
+<h3 id="Objects-1"><a href="#Objects-1" class="headerlink" title="Objects"></a>Objects</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">expect(value)</span><br><span class="line">  .toContain(item)</span><br><span class="line">  .toContainEqual(item)</span><br><span class="line">  .toHaveLength(number)</span><br></pre></td></tr></table></figure>
+<h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">expect(value)</span><br><span class="line">  .toMatch(regexpOrString)</span><br></pre></td></tr></table></figure>
+<h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">expect.extend(matchers)</span><br><span class="line">expect.any(<span class="keyword">constructor</span>)</span><br><span class="line">expect.addSnapshotSerializer(serializer)</span><br><span class="line"></span><br><span class="line">expect.assertions(1)</span><br></pre></td></tr></table></figure>
+<h2 id="More-features"><a href="#More-features" class="headerlink" title="More features"></a>More features</h2><h3 id="Asynchronous-tests"><a href="#Asynchronous-tests" class="headerlink" title="Asynchronous tests"></a>Asynchronous tests</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">'works with promises'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    ···</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">'works with async/await'</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> hello = <span class="keyword">await</span> foo()</span><br><span class="line">  ···</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Return promises, or use async/await.<br>See: <a href="http://facebook.github.io/jest/docs/en/tutorial-async.html" target="_blank" rel="noopener">Async tutorial</a></p>
+<h3 id="Snapshots-1"><a href="#Snapshots-1" class="headerlink" title="Snapshots"></a>Snapshots</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">it(<span class="string">'works'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> output = something()</span><br><span class="line">  expect(output).toMatchSnapshot()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>First run creates a snapshot. Subsequent runs match the saved snapshot.<br>See: <a href="http://facebook.github.io/jest/docs/en/snapshot-testing.html" target="_blank" rel="noopener">Snapshot testing</a></p>
+<h3 id="React-test-renderer"><a href="#React-test-renderer" class="headerlink" title="React test renderer"></a>React test renderer</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> renderer <span class="keyword">from</span> <span class="string">'react-test-renderer'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">it(<span class="string">'works'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> tree = renderer.create(</span><br><span class="line">    &lt;Link page=<span class="string">"http://www.facebook.com"</span>&gt;Facebook&lt;<span class="regexp">/Link&gt;</span></span><br><span class="line"><span class="regexp">  ).toJSON()</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  expect(tree).toMatchSnapshot()</span></span><br><span class="line"><span class="regexp">&#125;)</span></span><br></pre></td></tr></table></figure>
+<p>React’s test renderer can be used for Jest snapshots.<br>See: <a href="http://facebook.github.io/jest/docs/en/tutorial-react-native.html#snapshot-test" target="_blank" rel="noopener">Snapshot test</a></p>
+<h3 id="Timers"><a href="#Timers" class="headerlink" title="Timers"></a>Timers</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jest.useFakeTimers()</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">it(<span class="string">'works'</span>, () =&gt; &#123;</span><br><span class="line">  jest.runOnlyPendingTimers()</span><br><span class="line">  jest.runTimersToTime(<span class="number">1000</span>)</span><br><span class="line">  jest.runAllTimers()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://facebook.github.io/jest/docs/en/timer-mocks.html" target="_blank" rel="noopener">Timer Mocks</a></p>
+<h2 id="Mock-functions"><a href="#Mock-functions" class="headerlink" title="Mock functions"></a>Mock functions</h2><h3 id="Mock-functions-1"><a href="#Mock-functions-1" class="headerlink" title="Mock functions"></a>Mock functions</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fn = jest.fn()</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fn = jest.fn(<span class="function"><span class="params">n</span> =&gt;</span> n * n)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://facebook.github.io/jest/docs/en/mock-functions.html#using-a-mock-function" target="_blank" rel="noopener">Mock functions</a></p>
+<h3 id="Assertions"><a href="#Assertions" class="headerlink" title="Assertions"></a>Assertions</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">expect(fn)</span><br><span class="line">  .toHaveBeenCalled()</span><br><span class="line">  .toHaveBeenCalledTimes(number)</span><br><span class="line">  .toHaveBeenCalledWith(arg1, arg2, ...)</span><br><span class="line">  .toHaveBeenLastCalledWith(arg1, arg2, ...)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">expect(fn)</span><br><span class="line">  .toHaveBeenCalledWith(expect.anything())</span><br><span class="line">  .toHaveBeenCalledWith(expect.any(<span class="keyword">constructor</span>))</span><br><span class="line">  .toHaveBeenCalledWith(expect.arrayContaining([ values ]))</span><br><span class="line">  .toHaveBeenCalledWith(expect.objectContaining(&#123; props &#125;))</span><br><span class="line">  .toHaveBeenCalledWith(expect.stringContaining(string))</span><br><span class="line">  .toHaveBeenCalledWith(expect.stringMatching(regexp))</span><br></pre></td></tr></table></figure>
+<h3 id="Instances"><a href="#Instances" class="headerlink" title="Instances"></a>Instances</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Fn = jest.fn()</span><br><span class="line"></span><br><span class="line">a = <span class="keyword">new</span> Fn()</span><br><span class="line">b = <span class="keyword">new</span> Fn()</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Fn.mock.instances</span><br><span class="line"><span class="comment">// → [a, b]</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://facebook.github.io/jest/docs/en/mock-functions.html#mock-property" target="_blank" rel="noopener">.mock property</a></p>
+<h3 id="Calls"><a href="#Calls" class="headerlink" title="Calls"></a>Calls</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fn = jest.fn()</span><br><span class="line">fn(<span class="number">123</span>)</span><br><span class="line">fn(<span class="number">456</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fn.mock.calls.length   <span class="comment">// → 2</span></span><br><span class="line">fn.mock.calls[<span class="number">0</span>][<span class="number">0</span>]    <span class="comment">// → 123</span></span><br><span class="line">fn.mock.calls[<span class="number">1</span>][<span class="number">0</span>]    <span class="comment">// → 456</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://facebook.github.io/jest/docs/en/mock-functions.html#mock-property" target="_blank" rel="noopener">.mock property</a></p>
+<h3 id="Return-values"><a href="#Return-values" class="headerlink" title="Return values"></a>Return values</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fn = jest.fn(<span class="function"><span class="params">()</span> =&gt;</span> <span class="string">'hello'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="or"><a href="#or" class="headerlink" title="or:"></a>or:</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jest.fn().mockReturnValue(<span class="string">'hello'</span>)</span><br><span class="line">jest.fn().mockReturnValueOnce(<span class="string">'hello'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Mock-implementations"><a href="#Mock-implementations" class="headerlink" title="Mock implementations"></a>Mock implementations</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fn = jest.fn()</span><br><span class="line">  .mockImplementationOnce(<span class="function"><span class="params">()</span> =&gt;</span> <span class="number">1</span>)</span><br><span class="line">  .mockImplementationOnce(<span class="function"><span class="params">()</span> =&gt;</span> <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fn()    <span class="comment">// → 1</span></span><br><span class="line">fn()    <span class="comment">// → 2</span></span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="http://facebook.github.io/jest/" target="_blank" rel="noopener">http://facebook.github.io/jest/</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Testing"><span class="toc-number">1.</span> <span class="toc-text">Testing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Quick-start"><span class="toc-number">1.1.</span> <span class="toc-text">Quick start</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Writing-tests"><span class="toc-number">1.2.</span> <span class="toc-text">Writing tests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BDD-syntax"><span class="toc-number">1.3.</span> <span class="toc-text">BDD syntax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup"><span class="toc-number">1.4.</span> <span class="toc-text">Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Focusing-tests"><span class="toc-number">1.5.</span> <span class="toc-text">Focusing tests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Skipping-tests"><span class="toc-number">1.6.</span> <span class="toc-text">Skipping tests</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Expect"><span class="toc-number">2.</span> <span class="toc-text">Expect</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-expectations"><span class="toc-number">2.1.</span> <span class="toc-text">Basic expectations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Snapshots"><span class="toc-number">2.2.</span> <span class="toc-text">Snapshots</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Errors"><span class="toc-number">2.3.</span> <span class="toc-text">Errors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Booleans"><span class="toc-number">2.4.</span> <span class="toc-text">Booleans</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">2.5.</span> <span class="toc-text">Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Objects"><span class="toc-number">2.6.</span> <span class="toc-text">Objects</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Objects-1"><span class="toc-number">2.7.</span> <span class="toc-text">Objects</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Strings"><span class="toc-number">2.8.</span> <span class="toc-text">Strings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Others"><span class="toc-number">2.9.</span> <span class="toc-text">Others</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#More-features"><span class="toc-number">3.</span> <span class="toc-text">More features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Asynchronous-tests"><span class="toc-number">3.1.</span> <span class="toc-text">Asynchronous tests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Snapshots-1"><span class="toc-number">3.2.</span> <span class="toc-text">Snapshots</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React-test-renderer"><span class="toc-number">3.3.</span> <span class="toc-text">React test renderer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Timers"><span class="toc-number">3.4.</span> <span class="toc-text">Timers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mock-functions"><span class="toc-number">4.</span> <span class="toc-text">Mock functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mock-functions-1"><span class="toc-number">4.1.</span> <span class="toc-text">Mock functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assertions"><span class="toc-number">4.2.</span> <span class="toc-text">Assertions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Instances"><span class="toc-number">4.3.</span> <span class="toc-text">Instances</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Calls"><span class="toc-number">4.4.</span> <span class="toc-text">Calls</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Return-values"><span class="toc-number">4.5.</span> <span class="toc-text">Return values</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#or"><span class="toc-number">4.5.1.</span> <span class="toc-text">or:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mock-implementations"><span class="toc-number">4.6.</span> <span class="toc-text">Mock implementations</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">5.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/jest/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/jest/&text=Jest"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/jest/&title=Jest"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/jest/&is_video=false&description=Jest"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Jest&body=Check out this article: https://rupertqin.github.io/devhints/jest/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/jest/&title=Jest"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/jest/&title=Jest"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/jest/&title=Jest"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/jest/&title=Jest"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/jest/&name=Jest&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

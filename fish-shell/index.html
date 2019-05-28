@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Keys   Shortcut Description     Alt ← _/_ Alt → Move word   ^U Delete to beginning   ^W Delete to previous /   ^D Delete next character   Alt D Delete next word   ^C Cancel line   Alt P Page output">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fish shell">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/fish-shell/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Keys   Shortcut Description     Alt ← _/_ Alt → Move word   ^U Delete to beginning   ^W Delete to previous /   ^D Delete next character   Alt D Delete next word   ^C Cancel line   Alt P Page output">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-10-15T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fish shell">
+<meta name="twitter:description" content="Keys   Shortcut Description     Alt ← _/_ Alt → Move word   ^U Delete to beginning   ^W Delete to previous /   ^D Delete next character   Alt D Delete next word   ^C Cancel line   Alt P Page output">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Fish shell</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../flexbox/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../firefox/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/fish-shell/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/fish-shell/&text=Fish shell"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/fish-shell/&title=Fish shell"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/fish-shell/&is_video=false&description=Fish shell"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Fish shell&body=Check out this article: https://rupertqin.github.io/devhints/fish-shell/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/fish-shell/&title=Fish shell"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/fish-shell/&title=Fish shell"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/fish-shell/&title=Fish shell"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/fish-shell/&title=Fish shell"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/fish-shell/&name=Fish shell&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Keys"><span class="toc-number">1.</span> <span class="toc-text">Keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Help"><span class="toc-number">2.</span> <span class="toc-text">Help</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Function"><span class="toc-number"></span> <span class="toc-text">Function</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Writing-functions"><span class="toc-number">1.</span> <span class="toc-text">Writing functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditional"><span class="toc-number">2.</span> <span class="toc-text">Conditional</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Combining-tests"><span class="toc-number">3.</span> <span class="toc-text">Combining tests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Events"><span class="toc-number">4.</span> <span class="toc-text">Events</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Emitting"><span class="toc-number">4.1.</span> <span class="toc-text">Emitting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Listening"><span class="toc-number">4.2.</span> <span class="toc-text">Listening</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Completions"><span class="toc-number"></span> <span class="toc-text">Completions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Creating-completions"><span class="toc-number">1.</span> <span class="toc-text">Creating completions</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#fish-completions-mycommand-fish"><span class="toc-number">1.1.</span> <span class="toc-text">~/.fish/completions/mycommand.fish</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Options"><span class="toc-number">2.</span> <span class="toc-text">Options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Example"><span class="toc-number">2.1.</span> <span class="toc-text">Example</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditions"><span class="toc-number">3.</span> <span class="toc-text">Conditions</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Example-1"><span class="toc-number">3.1.</span> <span class="toc-text">Example</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Examples"><span class="toc-number">4.</span> <span class="toc-text">Examples</span></a></li></ol>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Fish shell
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.278Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/CLI/">CLI</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Keys"><a href="#Keys" class="headerlink" title="Keys"></a>Keys</h3><table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Alt ←</code> _/_ <code>Alt →</code></td>
+<td>Move word</td>
+</tr>
+<tr>
+<td><code>^U</code></td>
+<td>Delete to beginning</td>
+</tr>
+<tr>
+<td><code>^W</code></td>
+<td>Delete to previous <code>/</code></td>
+</tr>
+<tr>
+<td><code>^D</code></td>
+<td>Delete next character</td>
+</tr>
+<tr>
+<td><code>Alt D</code></td>
+<td>Delete next word</td>
+</tr>
+<tr>
+<td><code>^C</code></td>
+<td>Cancel line</td>
+</tr>
+<tr>
+<td><code>Alt P</code></td>
+<td>Page output</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>Alt ↑</code> _/_ <code>Alt ↓</code></td>
+<td>Previous _/_ next arguments</td>
+</tr>
+<tr>
+<td><code>Alt E</code> _/_ <code>Alt V</code></td>
+<td>Open in external editor</td>
+</tr>
+<tr>
+<td><code>^L</code></td>
+<td>Repaint screen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Help"><a href="#Help" class="headerlink" title="Help"></a>Help</h3><p>| <code>Alt H</code> | Help on word (man)                     |<br>| <code>Alt W</code> | Help on word (short descriptions)      |<br>| <code>Alt L</code> | List directory on cursor               |</p>
+<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><h3 id="Writing-functions"><a href="#Writing-functions" class="headerlink" title="Writing functions"></a>Writing functions</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function my_function --description &quot;My description&quot;</span><br><span class="line">  ···</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h3 id="Conditional"><a href="#Conditional" class="headerlink" title="Conditional"></a>Conditional</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if test -f foo.txt</span><br><span class="line">  ···</span><br><span class="line">else if test -f bar.txt</span><br><span class="line">  ···</span><br><span class="line">else</span><br><span class="line">  ···</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h3 id="Combining-tests"><a href="#Combining-tests" class="headerlink" title="Combining tests"></a>Combining tests</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if test -f foo.txt &amp;&amp; test -f bar.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if test -f foo.txt -a -f bar.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if test \( -f foo.txt \) -a -f \( bar.txt \)</span><br></pre></td></tr></table></figure>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><h4 id="Emitting"><a href="#Emitting" class="headerlink" title="Emitting"></a>Emitting</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">emit my_event</span><br></pre></td></tr></table></figure>
+<h4 id="Listening"><a href="#Listening" class="headerlink" title="Listening"></a>Listening</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function myhook --on-event my_event</span><br><span class="line">  ···</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>This lets you hook onto events, such as <code>fish_prompt</code>.</p>
+<h2 id="Completions"><a href="#Completions" class="headerlink" title="Completions"></a>Completions</h2><h3 id="Creating-completions"><a href="#Creating-completions" class="headerlink" title="Creating completions"></a>Creating completions</h3><h4 id="fish-completions-mycommand-fish"><a href="#fish-completions-mycommand-fish" class="headerlink" title="~/.fish/completions/mycommand.fish"></a>~/.fish/completions/mycommand.fish</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">complete -c mycommand ...</span><br><span class="line">complete -c mycommand ...</span><br><span class="line">complete -c mycommand ...</span><br></pre></td></tr></table></figure>
+<h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">complete \</span><br><span class="line">  -c                         # command</span><br><span class="line">  -s                         # short option</span><br><span class="line">  -l                         # long option</span><br><span class="line">  -r, --require-parameter</span><br><span class="line">  -f, --no-files</span><br><span class="line">  -x                         # exclusive (-r -f)</span><br><span class="line">  -n &apos;__fish_use_subcommand&apos; # condition</span><br><span class="line">  --description &quot;..&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  complete -c $cmd \</span><br><span class="line">-n &apos;__fish_use_subcommand&apos; \</span><br><span class="line">-x -a hello \</span><br><span class="line">--description &apos;lol&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="Conditions"><a href="#Conditions" class="headerlink" title="Conditions"></a>Conditions</h3><table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-n __fish_complete_directories STRING DESCRIPTION</code></td>
+<td>performs path completion on STRING, allowing only directories, and giving them the description DESCRIPTION.</td>
+</tr>
+<tr>
+<td><code>-n __fish_complete_path STRING DESCRIPTION</code></td>
+<td>performs path completion on STRING, giving them the description DESCRIPTION.</td>
+</tr>
+<tr>
+<td><code>-n __fish_complete_groups</code></td>
+<td>prints a list of all user groups with the groups members as description.</td>
+</tr>
+<tr>
+<td><code>-n __fish_complete_pids</code></td>
+<td>prints a list of all processes IDs with the command name as description.</td>
+</tr>
+<tr>
+<td><code>-n __fish_complete_suffix SUFFIX</code></td>
+<td>performs file completion allowing only files ending in SUFFIX. The mimetype database is used to find a suitable description.</td>
+</tr>
+<tr>
+<td><code>-n __fish_complete_users</code></td>
+<td>prints a list of all users with their full name as description.</td>
+</tr>
+<tr>
+<td><code>-n __fish_print_filesystems</code></td>
+<td>prints a list of all known file systems. Currently, this is a static list, and not dependent on what file systems the host operating system actually understands.</td>
+</tr>
+<tr>
+<td><code>-n __fish_print_hostnames</code></td>
+<td>prints a list of all known hostnames. This functions searches the fstab for nfs servers, ssh for known hosts and checks the /etc/hosts file.</td>
+</tr>
+<tr>
+<td><code>-n __fish_print_interfaces</code></td>
+<td>prints a list of all known network interfaces.</td>
+</tr>
+<tr>
+<td><code>-n __fish_print_packages</code></td>
+<td>prints a list of all installed packages. This function currently handles Debian, rpm and Gentoo packages.</td>
+</tr>
+<tr>
+<td><code>-n __fish_use_subcommand</code></td>
+</tr>
+<tr>
+<td><code>-n __fish_seen_subcommand_from init</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">complete -c ruby -s X -x -a &apos;(__fish_complete_directories (commandline -ct))&apos; --description &apos;Directory&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>Start each example with <code>complete -c cmdname</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-x</span><br><span class="line">  # no filename completion</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-s d -x -a &quot;read skip&quot;</span><br><span class="line">  # -d &#123;read|skip&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-s d -x</span><br><span class="line">  # -d &lt;something&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-s f -r</span><br><span class="line">  # -f FILE</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-s f -l force</span><br><span class="line">  # -f, --force</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-a &quot;(cat /etc/passwd | cut -d : -f 1)&quot;</span><br><span class="line">  # first argument as filename</span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Keys"><span class="toc-number">1.</span> <span class="toc-text">Keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Help"><span class="toc-number">2.</span> <span class="toc-text">Help</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Function"><span class="toc-number"></span> <span class="toc-text">Function</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Writing-functions"><span class="toc-number">1.</span> <span class="toc-text">Writing functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditional"><span class="toc-number">2.</span> <span class="toc-text">Conditional</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Combining-tests"><span class="toc-number">3.</span> <span class="toc-text">Combining tests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Events"><span class="toc-number">4.</span> <span class="toc-text">Events</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Emitting"><span class="toc-number">4.1.</span> <span class="toc-text">Emitting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Listening"><span class="toc-number">4.2.</span> <span class="toc-text">Listening</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Completions"><span class="toc-number"></span> <span class="toc-text">Completions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Creating-completions"><span class="toc-number">1.</span> <span class="toc-text">Creating completions</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#fish-completions-mycommand-fish"><span class="toc-number">1.1.</span> <span class="toc-text">~/.fish/completions/mycommand.fish</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Options"><span class="toc-number">2.</span> <span class="toc-text">Options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Example"><span class="toc-number">2.1.</span> <span class="toc-text">Example</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditions"><span class="toc-number">3.</span> <span class="toc-text">Conditions</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Example-1"><span class="toc-number">3.1.</span> <span class="toc-text">Example</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Examples"><span class="toc-number">4.</span> <span class="toc-text">Examples</span></a></li></ol>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/fish-shell/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/fish-shell/&text=Fish shell"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/fish-shell/&title=Fish shell"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/fish-shell/&is_video=false&description=Fish shell"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Fish shell&body=Check out this article: https://rupertqin.github.io/devhints/fish-shell/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/fish-shell/&title=Fish shell"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/fish-shell/&title=Fish shell"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/fish-shell/&title=Fish shell"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/fish-shell/&title=Fish shell"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/fish-shell/&name=Fish shell&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

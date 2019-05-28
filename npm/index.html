@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Package management   Command Description     npm i Alias for npm install   npm install Install everything in package.json   — —   npm install lodash Install a package   npm install --save-dev lodash I">
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/npm/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Package management   Command Description     npm i Alias for npm install   npm install Install everything in package.json   — —   npm install lodash Install a package   npm install --save-dev lodash I">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-10-26T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="npm">
+<meta name="twitter:description" content="Package management   Command Description     npm i Alias for npm install   npm install Install everything in package.json   — —   npm install lodash Install a package   npm install --save-dev lodash I">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>npm</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../osx/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../nopt/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/npm/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/npm/&text=npm"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/npm/&title=npm"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/npm/&is_video=false&description=npm"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=npm&body=Check out this article: https://rupertqin.github.io/devhints/npm/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/npm/&title=npm"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/npm/&title=npm"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/npm/&title=npm"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/npm/&title=npm"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/npm/&name=npm&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Package-management"><span class="toc-number">1.</span> <span class="toc-text">Package management</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-names"><span class="toc-number">2.</span> <span class="toc-text">Install names</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Updating"><span class="toc-number">3.</span> <span class="toc-text">Updating</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Misc-features"><span class="toc-number">4.</span> <span class="toc-text">Misc features</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        npm
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.359Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/JavaScript/">JavaScript</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Package-management"><a href="#Package-management" class="headerlink" title="Package management"></a>Package management</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>npm i</code></td>
+<td>Alias for <code>npm install</code></td>
+</tr>
+<tr>
+<td><code>npm install</code></td>
+<td>Install everything in package.json</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>npm install lodash</code></td>
+<td>Install a package</td>
+</tr>
+<tr>
+<td><code>npm install --save-dev lodash</code></td>
+<td>Install as devDependency</td>
+</tr>
+<tr>
+<td><code>npm install --save-exact lodash</code></td>
+<td>Install with exact</td>
+</tr>
+</tbody>
+</table>
+<p><code>--save</code> is the default as of npm@5. Previously, using <code>npm install</code> without <code>--save</code> doesn’t update package.json.</p>
+<h3 id="Install-names"><a href="#Install-names" class="headerlink" title="Install names"></a>Install names</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>npm i sax</code></td>
+<td>NPM package</td>
+</tr>
+<tr>
+<td><code>npm i sax@latest</code></td>
+<td>Specify tag <code>latest</code></td>
+</tr>
+<tr>
+<td><code>npm i sax@3.0.0</code></td>
+<td>Specify version <code>3.0.0</code></td>
+</tr>
+<tr>
+<td><code>npm i sax@&quot;&gt;=1 &lt;2.0&quot;</code></td>
+<td>Specify version range</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>npm i @org/sax</code></td>
+<td>Scoped NPM package</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>npm i user/repo</code></td>
+<td>GitHub</td>
+</tr>
+<tr>
+<td><code>npm i user/repo#master</code></td>
+<td>GitHub</td>
+</tr>
+<tr>
+<td><code>npm i github:user/repo</code></td>
+<td>GitHub</td>
+</tr>
+<tr>
+<td><code>npm i gitlab:user/repo</code></td>
+<td>GitLab</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>npm i /path/to/repo</code></td>
+<td>Absolute path</td>
+</tr>
+<tr>
+<td><code>npm i ./archive.tgz</code></td>
+<td>Tarball</td>
+</tr>
+<tr>
+<td><code>npm i https://site.com/archive.tgz</code></td>
+<td>Tarball via HTTP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Updating"><a href="#Updating" class="headerlink" title="Updating"></a>Updating</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>npm update</code></td>
+<td>Update production packages</td>
+</tr>
+<tr>
+<td><code>npm update --dev</code></td>
+<td>Update dev packages</td>
+</tr>
+<tr>
+<td><code>npm update -g</code></td>
+<td>Update global packages</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>npm update lodash</code></td>
+<td>Update a package</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Misc-features"><a href="#Misc-features" class="headerlink" title="Misc features"></a>Misc features</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Add someone as an owner</span></span><br><span class="line">npm owner add USERNAME PACKAGENAME</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># list packages</span></span><br><span class="line">npm ls</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Adds warning to those that install a package of old versions</span></span><br><span class="line">npm deprecate PACKAGE@<span class="string">"&lt; 0.2.0"</span> <span class="string">"critical bug fixed in v0.2.0"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># update all packages, or selected packages</span></span><br><span class="line">npm update [-g] PACKAGE</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Check for outdated packages</span></span><br><span class="line">npm outdated [PACKAGE]</span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Package-management"><span class="toc-number">1.</span> <span class="toc-text">Package management</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-names"><span class="toc-number">2.</span> <span class="toc-text">Install names</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Updating"><span class="toc-number">3.</span> <span class="toc-text">Updating</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Misc-features"><span class="toc-number">4.</span> <span class="toc-text">Misc features</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/npm/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/npm/&text=npm"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/npm/&title=npm"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/npm/&is_video=false&description=npm"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=npm&body=Check out this article: https://rupertqin.github.io/devhints/npm/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/npm/&title=npm"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/npm/&title=npm"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/npm/&title=npm"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/npm/&title=npm"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/npm/&name=npm&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

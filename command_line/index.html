@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="List (ls)ls [options] [paths] Format   Switch Description     -1 One entry per line   -l Long view   -o Long view (without groups)   -C Multicolumn (sorted horizontally)   -x Multicolumn (sorted verti">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Command line stuff">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/command_line/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="List (ls)ls [options] [paths] Format   Switch Description     -1 One entry per line   -l Long view   -o Long view (without groups)   -C Multicolumn (sorted horizontally)   -x Multicolumn (sorted verti">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:37:07.836Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Command line stuff">
+<meta name="twitter:description" content="List (ls)ls [options] [paths] Format   Switch Description     -1 One entry per line   -l Long view   -o Long view (without groups)   -C Multicolumn (sorted horizontally)   -x Multicolumn (sorted verti">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Command line stuff</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../commander-js/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../co/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/command_line/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/command_line/&text=Command line stuff"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/command_line/&title=Command line stuff"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/command_line/&is_video=false&description=Command line stuff"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Command line stuff&body=Check out this article: https://rupertqin.github.io/devhints/command_line/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/command_line/&title=Command line stuff"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/command_line/&title=Command line stuff"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/command_line/&title=Command line stuff"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/command_line/&title=Command line stuff"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/command_line/&name=Command line stuff&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#List-ls"><span class="toc-number">1.</span> <span class="toc-text">List (ls)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Format"><span class="toc-number">1.1.</span> <span class="toc-text">Format</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Options"><span class="toc-number">1.2.</span> <span class="toc-text">Options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sorting"><span class="toc-number">1.3.</span> <span class="toc-text">Sorting</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tail"><span class="toc-number">2.</span> <span class="toc-text">Tail</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Modes"><span class="toc-number">2.1.</span> <span class="toc-text">Modes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Options-1"><span class="toc-number">2.2.</span> <span class="toc-text">Options</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sudo"><span class="toc-number">3.</span> <span class="toc-text">Sudo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Listing"><span class="toc-number">3.1.</span> <span class="toc-text">Listing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Options-2"><span class="toc-number">3.2.</span> <span class="toc-text">Options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#File-descriptors"><span class="toc-number">3.3.</span> <span class="toc-text">File descriptors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prompt"><span class="toc-number">3.4.</span> <span class="toc-text">Prompt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interactive"><span class="toc-number">3.5.</span> <span class="toc-text">Interactive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Timestamp"><span class="toc-number">3.6.</span> <span class="toc-text">Timestamp</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wc-Word-count"><span class="toc-number">4.</span> <span class="toc-text">wc (Word count)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Search-and-replace-in-all-files"><span class="toc-number">5.</span> <span class="toc-text">Search-and-replace in all files</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Grep"><span class="toc-number">6.</span> <span class="toc-text">Grep</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Options-3"><span class="toc-number">6.1.</span> <span class="toc-text">Options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Synonyms"><span class="toc-number">6.2.</span> <span class="toc-text">Synonyms</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Command line stuff
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.232Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="List-ls"><a href="#List-ls" class="headerlink" title="List (ls)"></a>List (ls)</h2><pre><code>ls [options] [paths]
+</code></pre><h3 id="Format"><a href="#Format" class="headerlink" title="Format"></a>Format</h3><table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-1</code></td>
+<td>One entry per line</td>
+</tr>
+<tr>
+<td><code>-l</code></td>
+<td>Long view</td>
+</tr>
+<tr>
+<td><code>-o</code></td>
+<td>Long view (without groups)</td>
+</tr>
+<tr>
+<td><code>-C</code></td>
+<td>Multicolumn (sorted horizontally)</td>
+</tr>
+<tr>
+<td><code>-x</code></td>
+<td>Multicolumn (sorted vertically)</td>
+</tr>
+<tr>
+<td>—</td>
+</tr>
+<tr>
+<td><code>-F</code></td>
+<td>Add / after directories</td>
+</tr>
+<tr>
+<td><code>-G</code></td>
+<td>Color</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><p>| <code>-R</code> | Recurse |<br>| <code>-a</code> | Include hidden (dotfiles) |<br>| <code>-A</code> | Include hidden (but not . and ..) |</p>
+<h3 id="Sorting"><a href="#Sorting" class="headerlink" title="Sorting"></a>Sorting</h3><table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r</code></td>
+<td>reverse order</td>
+</tr>
+<tr>
+<td><code>-S</code></td>
+<td>sort by size</td>
+</tr>
+<tr>
+<td><code>-t</code></td>
+<td>sort by time modified</td>
+</tr>
+<tr>
+<td><code>-u</code></td>
+<td>sort by time accessed</td>
+</tr>
+<tr>
+<td><code>-U</code></td>
+<td>sort by time created</td>
+</tr>
+<tr>
+<td><code>-c</code></td>
+<td>sort by time status was changed</td>
+</tr>
+<tr>
+<td>—</td>
+</tr>
+<tr>
+<td><code>-h</code></td>
+<td>Human-readable size (3k)</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h2 id="Tail"><a href="#Tail" class="headerlink" title="Tail"></a>Tail</h2><pre><code>tail [-F | -f | -r] [-bN | -cN | -nN] [file ...]
+</code></pre><h3 id="Modes"><a href="#Modes" class="headerlink" title="Modes"></a>Modes</h3><p>| <code>-f</code> | follow |<br>| <code>-F</code> | follow by filename (accounts for log rotation) |<br>| <code>-r</code> | Reverse order |</p>
+<h3 id="Options-1"><a href="#Options-1" class="headerlink" title="Options"></a>Options</h3><p>| <code>-bN</code> | N*512 bytes |<br>| <code>-cN</code> | N bytes |<br>| <code>-nN</code> | N lines |<br>| <code>+N</code>  | Start from line N |</p>
+<p><br></p>
+<h2 id="Sudo"><a href="#Sudo" class="headerlink" title="Sudo"></a>Sudo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo [options] &lt;command&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="Listing"><a href="#Listing" class="headerlink" title="Listing"></a>Listing</h3><p>| <code>-l</code> | List allowed commands |</p>
+<h3 id="Options-2"><a href="#Options-2" class="headerlink" title="Options"></a>Options</h3><p>| <code>-A</code> | Use $SUDO_ASKPASS |<br>| <code>-b</code> | Run in background |<br>| <code>-E</code> | Preserve environment |<br>| <code>-H</code> | use target’s $HOME |<br>| <code>-n</code> | Don’t prompt for password |<br>| <code>-P</code> | Preserve group vector |<br>| <code>-S</code> | Read password from stdin |</p>
+<h3 id="File-descriptors"><a href="#File-descriptors" class="headerlink" title="File descriptors"></a>File descriptors</h3><p>| <code>-C fd</code> | Close all open file descriptors |</p>
+<h3 id="Prompt"><a href="#Prompt" class="headerlink" title="Prompt"></a>Prompt</h3><p>| <code>-p prompt</code> | Custom prompt (-p “%p password:”) |</p>
+<h3 id="Interactive"><a href="#Interactive" class="headerlink" title="Interactive"></a>Interactive</h3><table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-i [cmd]</code></td>
+<td>Interactive shell without variables</td>
+</tr>
+<tr>
+<td><code>-s [cmd]</code></td>
+<td>Interactive shell</td>
+</tr>
+<tr>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>-u user</code></td>
+<td>run as this user</td>
+</tr>
+<tr>
+<td><code>-g group</code></td>
+<td>run as this group</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Timestamp"><a href="#Timestamp" class="headerlink" title="Timestamp"></a>Timestamp</h3><p>| <code>-v</code> | revalidate timestamp for 5 mins |<br>| <code>-k</code> | invalidate timestamp |<br>| <code>-K</code> | just like -k |</p>
+<p><br></p>
+<h2 id="wc-Word-count"><a href="#wc-Word-count" class="headerlink" title="wc (Word count)"></a>wc (Word count)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">... | wc [options]</span><br></pre></td></tr></table></figure>
+<p>| <code>-c</code> | Bytes |<br>| <code>-l</code> | Lines |<br>| <code>-m</code> | Characters (incl multi-byte) |<br>| <code>-w</code> | Words |</p>
+<p><br></p>
+<h2 id="Search-and-replace-in-all-files"><a href="#Search-and-replace-in-all-files" class="headerlink" title="Search-and-replace in all files"></a>Search-and-replace in all files</h2><pre><code>perl -p -i -e &apos;s/hello/HELLO/g&apos; **/*
+</code></pre><p><br></p>
+<h2 id="Grep"><a href="#Grep" class="headerlink" title="Grep"></a>Grep</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [options] [pattern] [file ...]</span><br></pre></td></tr></table></figure>
+<h3 id="Options-3"><a href="#Options-3" class="headerlink" title="Options"></a>Options</h3><table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-A num</code></td>
+<td>Print <code>num</code> lines of training context</td>
+</tr>
+<tr>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>-G</code></td>
+<td>–basic-regexp (default)</td>
+</tr>
+<tr>
+<td><code>-E</code></td>
+<td>–extended-regexp</td>
+</tr>
+<tr>
+<td><code>-P</code></td>
+<td>–perl-regexp</td>
+</tr>
+<tr>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>-f file</code></td>
+<td>–file (Get patterns for file)</td>
+</tr>
+<tr>
+<td><code>-F</code></td>
+<td>–fixed-strings</td>
+</tr>
+<tr>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>-h</code></td>
+<td>–no-filename</td>
+</tr>
+<tr>
+<td><code>-H</code></td>
+<td>–with-filename</td>
+</tr>
+<tr>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>-l</code></td>
+<td>–files-with-matches (just print filenames)</td>
+</tr>
+<tr>
+<td><code>-L</code></td>
+<td>–files-without-match</td>
+</tr>
+<tr>
+<td>—-</td>
+</tr>
+<tr>
+<td><code>-r, -R</code></td>
+<td>–recursive</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>–invert-match</td>
+</tr>
+<tr>
+<td><code>-i</code></td>
+<td>–ignore-case</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Synonyms"><a href="#Synonyms" class="headerlink" title="Synonyms"></a>Synonyms</h3><pre><code>egrep  =&gt;  grep -E
+fgrep  =&gt;  grep -F
+</code></pre>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#List-ls"><span class="toc-number">1.</span> <span class="toc-text">List (ls)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Format"><span class="toc-number">1.1.</span> <span class="toc-text">Format</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Options"><span class="toc-number">1.2.</span> <span class="toc-text">Options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sorting"><span class="toc-number">1.3.</span> <span class="toc-text">Sorting</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tail"><span class="toc-number">2.</span> <span class="toc-text">Tail</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Modes"><span class="toc-number">2.1.</span> <span class="toc-text">Modes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Options-1"><span class="toc-number">2.2.</span> <span class="toc-text">Options</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sudo"><span class="toc-number">3.</span> <span class="toc-text">Sudo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Listing"><span class="toc-number">3.1.</span> <span class="toc-text">Listing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Options-2"><span class="toc-number">3.2.</span> <span class="toc-text">Options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#File-descriptors"><span class="toc-number">3.3.</span> <span class="toc-text">File descriptors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prompt"><span class="toc-number">3.4.</span> <span class="toc-text">Prompt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interactive"><span class="toc-number">3.5.</span> <span class="toc-text">Interactive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Timestamp"><span class="toc-number">3.6.</span> <span class="toc-text">Timestamp</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wc-Word-count"><span class="toc-number">4.</span> <span class="toc-text">wc (Word count)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Search-and-replace-in-all-files"><span class="toc-number">5.</span> <span class="toc-text">Search-and-replace in all files</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Grep"><span class="toc-number">6.</span> <span class="toc-text">Grep</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Options-3"><span class="toc-number">6.1.</span> <span class="toc-text">Options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Synonyms"><span class="toc-number">6.2.</span> <span class="toc-text">Synonyms</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/command_line/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/command_line/&text=Command line stuff"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/command_line/&title=Command line stuff"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/command_line/&is_video=false&description=Command line stuff"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Command line stuff&body=Check out this article: https://rupertqin.github.io/devhints/command_line/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/command_line/&title=Command line stuff"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/command_line/&title=Command line stuff"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/command_line/&title=Command line stuff"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/command_line/&title=Command line stuff"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/command_line/&name=Command line stuff&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

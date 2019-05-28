@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Basic example123456789101112131415# docker-compose.ymlversion: &apos;2&apos;services:  web:    build: .    # build from Dockerfile    context: ./Path    dockerfile: Dockerfile    ports:     - &quot;5000:5000&quot;    vol">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker-compose">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/docker-compose/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Basic example123456789101112131415# docker-compose.ymlversion: &apos;2&apos;services:  web:    build: .    # build from Dockerfile    context: ./Path    dockerfile: Dockerfile    ports:     - &quot;5000:5000&quot;    vol">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-25T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="docker-compose">
+<meta name="twitter:description" content="Basic example123456789101112131415# docker-compose.ymlversion: &apos;2&apos;services:  web:    build: .    # build from Dockerfile    context: ./Path    dockerfile: Dockerfile    ports:     - &quot;5000:5000&quot;    vol">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>docker-compose</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../docker/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../do/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/docker-compose/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/docker-compose/&text=docker-compose"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/docker-compose/&title=docker-compose"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/docker-compose/&is_video=false&description=docker-compose"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=docker-compose&body=Check out this article: https://rupertqin.github.io/devhints/docker-compose/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/docker-compose/&title=docker-compose"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/docker-compose/&title=docker-compose"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/docker-compose/&title=docker-compose"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/docker-compose/&title=docker-compose"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/docker-compose/&name=docker-compose&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-example"><span class="toc-number">1.</span> <span class="toc-text">Basic example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Commands"><span class="toc-number">2.</span> <span class="toc-text">Commands</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number"></span> <span class="toc-text">Reference</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Building"><span class="toc-number">1.</span> <span class="toc-text">Building</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ports"><span class="toc-number">2.</span> <span class="toc-text">Ports</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Commands-1"><span class="toc-number">3.</span> <span class="toc-text">Commands</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Environment-variables"><span class="toc-number">4.</span> <span class="toc-text">Environment variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dependencies"><span class="toc-number">5.</span> <span class="toc-text">Dependencies</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-options"><span class="toc-number">6.</span> <span class="toc-text">Other options</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Advanced-features"><span class="toc-number"></span> <span class="toc-text">Advanced features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Labels"><span class="toc-number">1.</span> <span class="toc-text">Labels</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS-servers"><span class="toc-number">2.</span> <span class="toc-text">DNS servers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Devices"><span class="toc-number">3.</span> <span class="toc-text">Devices</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#External-links"><span class="toc-number">4.</span> <span class="toc-text">External links</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hosts"><span class="toc-number">5.</span> <span class="toc-text">Hosts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Network"><span class="toc-number">6.</span> <span class="toc-text">Network</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#External-network"><span class="toc-number">7.</span> <span class="toc-text">External network</span></a></li></ol>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        docker-compose
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.252Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Devops/">Devops</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Basic-example"><a href="#Basic-example" class="headerlink" title="Basic example"></a>Basic example</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># docker-compose.yml</span></span><br><span class="line"><span class="attr">version:</span> <span class="string">'2'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">  web:</span></span><br><span class="line"><span class="attr">    build:</span> <span class="string">.</span></span><br><span class="line">    <span class="comment"># build from Dockerfile</span></span><br><span class="line"><span class="attr">    context:</span> <span class="string">./Path</span></span><br><span class="line"><span class="attr">    dockerfile:</span> <span class="string">Dockerfile</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="bullet">     -</span> <span class="string">"5000:5000"</span></span><br><span class="line"><span class="attr">    volumes:</span></span><br><span class="line"><span class="bullet">     -</span> <span class="string">.:/code</span></span><br><span class="line"><span class="attr">  redis:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">redis</span></span><br></pre></td></tr></table></figure>
+<h3 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker-compose start</span><br><span class="line">docker-compose stop</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker-compose pause</span><br><span class="line">docker-compose unpause</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker-compose ps</span><br><span class="line">docker-compose up</span><br><span class="line">docker-compose down</span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><h3 id="Building"><a href="#Building" class="headerlink" title="Building"></a>Building</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">web:</span></span><br><span class="line">  <span class="comment"># build from Dockerfile</span></span><br><span class="line"><span class="attr">  build:</span> <span class="string">.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># build from custom Dockerfile</span></span><br><span class="line"><span class="attr">build:</span></span><br><span class="line"><span class="attr">  context:</span> <span class="string">./dir</span></span><br><span class="line"><span class="attr">  dockerfile:</span> <span class="string">Dockerfile.dev</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># build from image</span></span><br><span class="line"><span class="attr">image:</span> <span class="string">ubuntu</span></span><br><span class="line"><span class="attr">image:</span> <span class="attr">ubuntu:14.04</span></span><br><span class="line"><span class="attr">image:</span> <span class="string">tutum/influxdb</span></span><br><span class="line"><span class="attr">image:</span> <span class="attr">example-registry:4000/postgresql</span></span><br><span class="line"><span class="attr">image:</span> <span class="string">a4bc65fd</span></span><br></pre></td></tr></table></figure>
+<h3 id="Ports"><a href="#Ports" class="headerlink" title="Ports"></a>Ports</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ports:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">"3000"</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">"8000:80"</span>  <span class="comment"># guest:host</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># expose ports to linked services (not to host)</span></span><br><span class="line"><span class="attr">expose:</span> <span class="string">["3000"]</span></span><br></pre></td></tr></table></figure>
+<h3 id="Commands-1"><a href="#Commands-1" class="headerlink" title="Commands"></a>Commands</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># command to execute</span></span><br><span class="line"><span class="attr">command:</span> <span class="string">bundle</span> <span class="string">exec</span> <span class="string">thin</span> <span class="bullet">-p</span> <span class="number">3000</span></span><br><span class="line"><span class="attr">command:</span> <span class="string">[bundle,</span> <span class="string">exec,</span> <span class="string">thin,</span> <span class="bullet">-p,</span> <span class="number">3000</span><span class="string">]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># override the entrypoint</span></span><br><span class="line"><span class="attr">entrypoint:</span> <span class="string">/app/start.sh</span></span><br><span class="line"><span class="attr">entrypoint:</span> <span class="string">[php,</span> <span class="bullet">-d,</span> <span class="string">vendor/bin/phpunit]</span></span><br></pre></td></tr></table></figure>
+<h3 id="Environment-variables"><a href="#Environment-variables" class="headerlink" title="Environment variables"></a>Environment variables</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># environment vars</span></span><br><span class="line"><span class="attr">environment:</span></span><br><span class="line"><span class="attr">  RACK_ENV:</span> <span class="string">development</span></span><br><span class="line"><span class="attr">environment:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">RACK_ENV=development</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># environment vars from file</span></span><br><span class="line"><span class="attr">env_file:</span> <span class="string">.env</span></span><br><span class="line"><span class="attr">env_file:</span> <span class="string">[.env,</span> <span class="string">.development.env]</span></span><br></pre></td></tr></table></figure>
+<h3 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># makes the `db` service available as the hostname `database`</span></span><br><span class="line"><span class="comment"># (implies depends_on)</span></span><br><span class="line"><span class="attr">links:</span></span><br><span class="line"><span class="attr">  - db:</span><span class="string">database</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">redis</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># make sure `db` is alive before starting</span></span><br><span class="line"><span class="attr">depends_on:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">db</span></span><br></pre></td></tr></table></figure>
+<h3 id="Other-options"><a href="#Other-options" class="headerlink" title="Other options"></a>Other options</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># make this service extend another</span></span><br><span class="line"><span class="attr">extends:</span></span><br><span class="line"><span class="attr">  file:</span> <span class="string">common.yml</span>  <span class="comment"># optional</span></span><br><span class="line"><span class="attr">  service:</span> <span class="string">webapp</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">volumes:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">/var/lib/mysql</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">./_data:/var/lib/mysql</span></span><br></pre></td></tr></table></figure>
+<h2 id="Advanced-features"><a href="#Advanced-features" class="headerlink" title="Advanced features"></a>Advanced features</h2><h3 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">  web:</span></span><br><span class="line"><span class="attr">    labels:</span></span><br><span class="line">      <span class="string">com.example.description:</span> <span class="string">"Accounting web app"</span></span><br></pre></td></tr></table></figure>
+<h3 id="DNS-servers"><a href="#DNS-servers" class="headerlink" title="DNS servers"></a>DNS servers</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">  web:</span></span><br><span class="line"><span class="attr">    dns:</span> <span class="number">8.8</span><span class="number">.8</span><span class="number">.8</span></span><br><span class="line"><span class="attr">    dns:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="number">8.8</span><span class="number">.8</span><span class="number">.8</span></span><br><span class="line"><span class="bullet">      -</span> <span class="number">8.8</span><span class="number">.4</span><span class="number">.4</span></span><br></pre></td></tr></table></figure>
+<h3 id="Devices"><a href="#Devices" class="headerlink" title="Devices"></a>Devices</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">  web:</span></span><br><span class="line"><span class="attr">    devices:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"/dev/ttyUSB0:/dev/ttyUSB0"</span></span><br></pre></td></tr></table></figure>
+<h3 id="External-links"><a href="#External-links" class="headerlink" title="External links"></a>External links</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">  web:</span></span><br><span class="line"><span class="attr">    external_links:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">redis_1</span></span><br><span class="line"><span class="attr">      - project_db_1:</span><span class="string">mysql</span></span><br></pre></td></tr></table></figure>
+<h3 id="Hosts"><a href="#Hosts" class="headerlink" title="Hosts"></a>Hosts</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">  web:</span></span><br><span class="line"><span class="attr">    extra_hosts:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">"somehost:192.168.1.100"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Network"><a href="#Network" class="headerlink" title="Network"></a>Network</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># creates a custom network called `frontend`</span></span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line"><span class="attr">  frontend:</span></span><br></pre></td></tr></table></figure>
+<h3 id="External-network"><a href="#External-network" class="headerlink" title="External network"></a>External network</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># join a pre-existing network</span></span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line"><span class="attr">  default:</span></span><br><span class="line"><span class="attr">    external:</span></span><br><span class="line"><span class="attr">      name:</span> <span class="string">frontend</span></span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-example"><span class="toc-number">1.</span> <span class="toc-text">Basic example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Commands"><span class="toc-number">2.</span> <span class="toc-text">Commands</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number"></span> <span class="toc-text">Reference</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Building"><span class="toc-number">1.</span> <span class="toc-text">Building</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ports"><span class="toc-number">2.</span> <span class="toc-text">Ports</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Commands-1"><span class="toc-number">3.</span> <span class="toc-text">Commands</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Environment-variables"><span class="toc-number">4.</span> <span class="toc-text">Environment variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dependencies"><span class="toc-number">5.</span> <span class="toc-text">Dependencies</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-options"><span class="toc-number">6.</span> <span class="toc-text">Other options</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Advanced-features"><span class="toc-number"></span> <span class="toc-text">Advanced features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Labels"><span class="toc-number">1.</span> <span class="toc-text">Labels</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS-servers"><span class="toc-number">2.</span> <span class="toc-text">DNS servers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Devices"><span class="toc-number">3.</span> <span class="toc-text">Devices</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#External-links"><span class="toc-number">4.</span> <span class="toc-text">External links</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hosts"><span class="toc-number">5.</span> <span class="toc-text">Hosts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Network"><span class="toc-number">6.</span> <span class="toc-text">Network</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#External-network"><span class="toc-number">7.</span> <span class="toc-text">External network</span></a></li></ol>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/docker-compose/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/docker-compose/&text=docker-compose"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/docker-compose/&title=docker-compose"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/docker-compose/&is_video=false&description=docker-compose"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=docker-compose&body=Check out this article: https://rupertqin.github.io/devhints/docker-compose/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/docker-compose/&title=docker-compose"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/docker-compose/&title=docker-compose"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/docker-compose/&title=docker-compose"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/docker-compose/&title=docker-compose"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/docker-compose/&name=docker-compose&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

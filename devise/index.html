@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Devise is a flexible authenticationgem. InstallationRails 3: Add the following to your Gemfile gem &amp;quot;devise&amp;quot; gem &amp;quot;hpricot&amp;quot; gem &amp;quot;ruby_parser&amp;quot; Install devise in your project">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Devise">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/devise/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Devise is a flexible authenticationgem. InstallationRails 3: Add the following to your Gemfile gem &amp;quot;devise&amp;quot; gem &amp;quot;hpricot&amp;quot; gem &amp;quot;ruby_parser&amp;quot; Install devise in your project">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:23:51.250Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Devise">
+<meta name="twitter:description" content="Devise is a flexible authenticationgem. InstallationRails 3: Add the following to your Gemfile gem &amp;quot;devise&amp;quot; gem &amp;quot;hpricot&amp;quot; gem &amp;quot;ruby_parser&amp;quot; Install devise in your project">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Devise</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../do/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../divshot/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/devise/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/devise/&text=Devise"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/devise/&title=Devise"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/devise/&is_video=false&description=Devise"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Devise&body=Check out this article: https://rupertqin.github.io/devhints/devise/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/devise/&title=Devise"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/devise/&title=Devise"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/devise/&title=Devise"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/devise/&title=Devise"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/devise/&name=Devise&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-number">1.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Helpers"><span class="toc-number">2.</span> <span class="toc-text">Helpers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Controller-stuff"><span class="toc-number">3.</span> <span class="toc-text">Controller stuff</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Model"><span class="toc-number">4.</span> <span class="toc-text">Model</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Model-options"><span class="toc-number">4.1.</span> <span class="toc-text">Model options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Migration-helpers"><span class="toc-number">4.2.</span> <span class="toc-text">Migration helpers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Routing"><span class="toc-number">5.</span> <span class="toc-text">Routing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Authenticated-and-unauthenticated-routes"><span class="toc-number">5.1.</span> <span class="toc-text">Authenticated and unauthenticated routes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#As"><span class="toc-number">5.2.</span> <span class="toc-text">As</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Devise-for-magic"><span class="toc-number">5.3.</span> <span class="toc-text">Devise_for magic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Customizing-devise-for"><span class="toc-number">5.4.</span> <span class="toc-text">Customizing devise_for</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Test-helpers"><span class="toc-number">6.</span> <span class="toc-text">Test helpers</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Devise
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.250Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><a href="https://github.com/plataformatec/devise" target="_blank" rel="noopener">Devise</a> is a flexible authentication<br>gem.</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Rails 3: Add the following to your Gemfile</p>
+<pre><code>gem &quot;devise&quot;
+gem &quot;hpricot&quot;
+gem &quot;ruby_parser&quot;
+</code></pre><p>Install devise in your project</p>
+<pre><code>$ rails generate devise:install
+</code></pre><p>Generate devise for your model</p>
+<pre><code>$ rails generate devise MODEL
+$ rake db:migrate
+</code></pre><p>(Optional) Generate devise views</p>
+<pre><code>$ rails generate devise:views
+</code></pre><h2 id="Helpers"><a href="#Helpers" class="headerlink" title="Helpers"></a>Helpers</h2><pre><code>user_signed_in?
+current_user
+user_session
+destroy_user_session_path (Logout)
+new_user_session_path (Login)
+edit_user_registration_path (Edit registration)
+new_user_registration_path (Register new user)
+</code></pre><h2 id="Controller-stuff"><a href="#Controller-stuff" class="headerlink" title="Controller stuff"></a>Controller stuff</h2><pre><code>before_filter :authenticate_user!
+</code></pre><h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><h3 id="Model-options"><a href="#Model-options" class="headerlink" title="Model options"></a>Model options</h3><pre><code>class User &lt; ActiveRecord::Base
+  devise :database_authenticatable,
+    :registerable,
+    :confirmable,
+    :recoverable,
+    :rememberable,
+    :trackable,
+    :validatable
+end
+</code></pre><h3 id="Migration-helpers"><a href="#Migration-helpers" class="headerlink" title="Migration helpers"></a>Migration helpers</h3><pre><code>create_table :users do |t|
+  t.database_authenticatable
+  t.confirmable
+  t.recoverable
+  t.rememberable
+  t.trackable
+  t.timestamps
+end
+</code></pre><h2 id="Routing"><a href="#Routing" class="headerlink" title="Routing"></a>Routing</h2><h3 id="Authenticated-and-unauthenticated-routes"><a href="#Authenticated-and-unauthenticated-routes" class="headerlink" title="Authenticated and unauthenticated routes"></a>Authenticated and unauthenticated routes</h3><pre><code>unauthenticated do
+   root :to =&gt; &apos;home#index&apos;
+end
+
+authenticated do
+  root :to =&gt; &apos;dashboard#index&apos;
+end
+</code></pre><h3 id="As"><a href="#As" class="headerlink" title="As"></a>As</h3><pre><code>as :user do
+  get &apos;sign_in&apos;, :to =&gt; &apos;devise/sessions#new&apos;
+end
+</code></pre><h3 id="Devise-for-magic"><a href="#Devise-for-magic" class="headerlink" title="Devise_for magic"></a>Devise_for magic</h3><pre><code>devise_for :users
+
+    # Session routes for Authenticatable (default)
+         new_user_session GET  /users/sign_in                    {:controller=&gt;&quot;devise/sessions&quot;, :action=&gt;&quot;new&quot;}
+             user_session POST /users/sign_in                    {:controller=&gt;&quot;devise/sessions&quot;, :action=&gt;&quot;create&quot;}
+     destroy_user_session GET  /users/sign_out                   {:controller=&gt;&quot;devise/sessions&quot;, :action=&gt;&quot;destroy&quot;}
+
+    # Password routes for Recoverable, if User model has :recoverable configured
+        new_user_password GET  /users/password/new(.:format)     {:controller=&gt;&quot;devise/passwords&quot;, :action=&gt;&quot;new&quot;}
+       edit_user_password GET  /users/password/edit(.:format)    {:controller=&gt;&quot;devise/passwords&quot;, :action=&gt;&quot;edit&quot;}
+            user_password PUT  /users/password(.:format)         {:controller=&gt;&quot;devise/passwords&quot;, :action=&gt;&quot;update&quot;}
+                          POST /users/password(.:format)         {:controller=&gt;&quot;devise/passwords&quot;, :action=&gt;&quot;create&quot;}
+
+    # Confirmation routes for Confirmable, if User model has :confirmable configured
+    new_user_confirmation GET  /users/confirmation/new(.:format) {:controller=&gt;&quot;devise/confirmations&quot;, :action=&gt;&quot;new&quot;}
+        user_confirmation GET  /users/confirmation(.:format)     {:controller=&gt;&quot;devise/confirmations&quot;, :action=&gt;&quot;show&quot;}
+                          POST /users/confirmation(.:format)     {:controller=&gt;&quot;devise/confirmations&quot;, :action=&gt;&quot;create&quot;}
+</code></pre><h3 id="Customizing-devise-for"><a href="#Customizing-devise-for" class="headerlink" title="Customizing devise_for"></a>Customizing devise_for</h3><pre><code>devise_for :users,
+  :path =&gt; &quot;usuarios&quot;,
+  :path_names =&gt; {
+    :sign_in =&gt; &apos;login&apos;,
+    :sign_out =&gt; &apos;logout&apos;,
+    :password =&gt; &apos;secret&apos;,
+    :confirmation =&gt; &apos;verification&apos;,
+    :unlock =&gt; &apos;unblock&apos;,
+    :registration =&gt; &apos;register&apos;,
+    :sign_up =&gt; &apos;cmon_let_me_in&apos; }
+</code></pre><h2 id="Test-helpers"><a href="#Test-helpers" class="headerlink" title="Test helpers"></a>Test helpers</h2><pre><code>include Devise::TestHelpers
+https://github.com/plataformatec/devise/blob/1094ba65aac1d37713f2cba71f9edad76b5ca274/lib/devise/test_helpers.rb
+
+sign_in @user
+sign_out @user
+</code></pre>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-number">1.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Helpers"><span class="toc-number">2.</span> <span class="toc-text">Helpers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Controller-stuff"><span class="toc-number">3.</span> <span class="toc-text">Controller stuff</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Model"><span class="toc-number">4.</span> <span class="toc-text">Model</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Model-options"><span class="toc-number">4.1.</span> <span class="toc-text">Model options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Migration-helpers"><span class="toc-number">4.2.</span> <span class="toc-text">Migration helpers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Routing"><span class="toc-number">5.</span> <span class="toc-text">Routing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Authenticated-and-unauthenticated-routes"><span class="toc-number">5.1.</span> <span class="toc-text">Authenticated and unauthenticated routes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#As"><span class="toc-number">5.2.</span> <span class="toc-text">As</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Devise-for-magic"><span class="toc-number">5.3.</span> <span class="toc-text">Devise_for magic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Customizing-devise-for"><span class="toc-number">5.4.</span> <span class="toc-text">Customizing devise_for</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Test-helpers"><span class="toc-number">6.</span> <span class="toc-text">Test helpers</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/devise/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/devise/&text=Devise"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/devise/&title=Devise"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/devise/&is_video=false&description=Devise"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Devise&body=Check out this article: https://rupertqin.github.io/devhints/devise/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/devise/&title=Devise"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/devise/&title=Devise"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/devise/&title=Devise"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/devise/&title=Devise"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/devise/&name=Devise&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

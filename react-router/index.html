@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Basic1234567891011import &amp;#123; default as Router, Route &amp;#125; from &apos;react-router&apos;const routes = (  &amp;lt;Route&amp;gt;    &amp;lt;Route path=&apos;*&apos; handler=&amp;#123;RootView&amp;#125; /&amp;gt;  &amp;lt;/Route&amp;gt;)Router.run(r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React-router">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/react-router/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Basic1234567891011import &amp;#123; default as Router, Route &amp;#125; from &apos;react-router&apos;const routes = (  &amp;lt;Route&amp;gt;    &amp;lt;Route path=&apos;*&apos; handler=&amp;#123;RootView&amp;#125; /&amp;gt;  &amp;lt;/Route&amp;gt;)Router.run(r">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:34:27.497Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React-router">
+<meta name="twitter:description" content="Basic1234567891011import &amp;#123; default as Router, Route &amp;#125; from &apos;react-router&apos;const routes = (  &amp;lt;Route&amp;gt;    &amp;lt;Route path=&apos;*&apos; handler=&amp;#123;RootView&amp;#125; /&amp;gt;  &amp;lt;/Route&amp;gt;)Router.run(r">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>React-router</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../react/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../rdoc/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/react-router/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/react-router/&text=React-router"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/react-router/&title=React-router"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/react-router/&is_video=false&description=React-router"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=React-router&body=Check out this article: https://rupertqin.github.io/devhints/react-router/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/react-router/&title=React-router"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/react-router/&title=React-router"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/react-router/&title=React-router"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/react-router/&title=React-router"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/react-router/&name=React-router&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic"><span class="toc-number">1.</span> <span class="toc-text">Basic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nesting"><span class="toc-number">2.</span> <span class="toc-text">Nesting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#URL-params"><span class="toc-number">3.</span> <span class="toc-text">URL params</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Link"><span class="toc-number">4.</span> <span class="toc-text">Link</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-config"><span class="toc-number">5.</span> <span class="toc-text">Other config</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Router-create"><span class="toc-number">6.</span> <span class="toc-text">Router.create</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Navigation"><span class="toc-number">7.</span> <span class="toc-text">Navigation</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        React-router
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.407Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/React/">React</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="keyword">default</span> <span class="keyword">as</span> Router, Route &#125; <span class="keyword">from</span> <span class="string">'react-router'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> routes = (</span><br><span class="line">  &lt;Route&gt;</span><br><span class="line">    &lt;Route path=<span class="string">'*'</span> handler=&#123;RootView&#125; /&gt;</span><br><span class="line">  &lt;<span class="regexp">/Route&gt;</span></span><br><span class="line"><span class="regexp">)</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">Router.run(routes, Router.HashLocation, (Root) =&gt; &#123;</span></span><br><span class="line"><span class="regexp">  React.render(&lt;Root /</span>&gt;, <span class="built_in">document</span>.getElementById(<span class="string">'all'</span>))</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="Nesting"><a href="#Nesting" class="headerlink" title="Nesting"></a>Nesting</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> routes = (</span><br><span class="line">  &lt;Route handler=&#123;Chrome&#125;&gt;</span><br><span class="line">    &lt;Route path=<span class="string">'about'</span> handler=&#123;About&#125; /&gt;</span><br><span class="line">    &lt;Route path=<span class="string">'inbox'</span> handler=&#123;Inbox&#125; /&gt;</span><br><span class="line">    &lt;Route path=<span class="string">'messages/:id'</span> handler=&#123;Message&#125; /&gt;</span><br><span class="line">  &lt;<span class="regexp">/Route&gt;</span></span><br><span class="line"><span class="regexp">)</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">import &#123; RouteHandler &#125; from 'react-router'</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const Chrome = React.createClass(&#123;</span></span><br><span class="line"><span class="regexp">  render () &#123;</span></span><br><span class="line"><span class="regexp">    return (</span></span><br><span class="line"><span class="regexp">      &lt;div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;h1&gt;App&lt;/</span>h1&gt;</span><br><span class="line">        &lt;RouteHandler /&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;)</span></span><br></pre></td></tr></table></figure>
+<h3 id="URL-params"><a href="#URL-params" class="headerlink" title="URL params"></a>URL params</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Message = React.createClass(&#123;</span><br><span class="line">  componentDidMount: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// from the path `/inbox/messages/:id`</span></span><br><span class="line">    <span class="keyword">var</span> id = <span class="keyword">this</span>.props.params.id</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+<h3 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Link &#125; <span class="keyword">from</span> <span class="string">'react-router'</span></span><br><span class="line"></span><br><span class="line">&lt;!-- make a named route <span class="string">`user`</span> --&gt;</span><br><span class="line">&lt;Link to=<span class="string">'user'</span> params=&#123;&#123;<span class="attr">userId</span>: <span class="number">10</span>&#125;&#125; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;Link to=<span class="string">'login'</span></span><br><span class="line">  activeClassName=<span class="string">'-active'</span></span><br><span class="line">  onClick=<span class="string">'...'</span>&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="Other-config"><a href="#Other-config" class="headerlink" title="Other config"></a>Other config</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;Route path=<span class="string">'/'</span>&gt;</span><br><span class="line">  &lt;DefaultRoute handler=&#123;Home&#125; /&gt;</span><br><span class="line">  &lt;NotFoundRoute handler=&#123;NotFound&#125; /&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;Redirect <span class="keyword">from</span>=<span class="string">'login'</span> to=<span class="string">'sessions/new'</span> /&gt;</span><br><span class="line">  &lt;Redirect <span class="keyword">from</span>=<span class="string">'login'</span> to=<span class="string">'sessions/new'</span> params=&#123;&#123;<span class="attr">from</span>: <span class="string">'home'</span>&#125;&#125; /&gt;</span><br><span class="line">  &lt;Redirect <span class="keyword">from</span>=<span class="string">'profile/:id'</span> to=<span class="string">'about-user'</span> /&gt;</span><br><span class="line"></span><br><span class="line">  &lt;Route name=<span class="string">'about-user'</span> ... /&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="Router-create"><a href="#Router-create" class="headerlink" title="Router.create"></a>Router.create</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> router = Router.create(&#123;</span><br><span class="line">  routes: <span class="xml"><span class="tag">&lt;<span class="name">Route</span>&gt;</span>...<span class="tag">&lt;/<span class="name">Route</span>&gt;</span></span>,</span><br><span class="line">  location: Router.HistoryLocation</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">router.run(<span class="function">(<span class="params">Root</span>) =&gt;</span> &#123; ... &#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="Navigation"><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Navigation &#125; <span class="keyword">from</span> <span class="string">'react-router'</span></span><br><span class="line"></span><br><span class="line">React.createClass(&#123;</span><br><span class="line">  mixins: [ Navigation ], ...</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span></span><br><span class="line">  .transitionTo(<span class="string">'user'</span>, &#123;<span class="attr">id</span>: <span class="number">10</span>&#125;)</span><br><span class="line">  .transitionTo(<span class="string">'/path'</span>)</span><br><span class="line">  .transitionTo(<span class="string">'http://...'</span>)</span><br><span class="line">  .replaceWith(<span class="string">'about'</span>)</span><br><span class="line">  .makePath(<span class="string">'about'</span>) <span class="comment">// return URL</span></span><br><span class="line">  .makeHref(<span class="string">'about'</span>) <span class="comment">// return URL</span></span><br><span class="line">  .goBack()</span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic"><span class="toc-number">1.</span> <span class="toc-text">Basic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nesting"><span class="toc-number">2.</span> <span class="toc-text">Nesting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#URL-params"><span class="toc-number">3.</span> <span class="toc-text">URL params</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Link"><span class="toc-number">4.</span> <span class="toc-text">Link</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-config"><span class="toc-number">5.</span> <span class="toc-text">Other config</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Router-create"><span class="toc-number">6.</span> <span class="toc-text">Router.create</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Navigation"><span class="toc-number">7.</span> <span class="toc-text">Navigation</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/react-router/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/react-router/&text=React-router"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/react-router/&title=React-router"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/react-router/&is_video=false&description=React-router"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=React-router&body=Check out this article: https://rupertqin.github.io/devhints/react-router/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/react-router/&title=React-router"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/react-router/&title=React-router"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/react-router/&title=React-router"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/react-router/&title=React-router"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/react-router/&name=React-router&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

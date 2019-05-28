@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="$x(&apos;//div//p//*&apos;) == $(&apos;div p *&apos;), $x(&apos;//[@id=&quot;item&quot;]&apos;) == $(&apos;#item&apos;), and many other Xpath examples.">
+<meta name="keywords" content="Featured">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Xpath">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/xpath/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="$x(&apos;//div//p//*&apos;) == $(&apos;div p *&apos;), $x(&apos;//[@id=&quot;item&quot;]&apos;) == $(&apos;#item&apos;), and many other Xpath examples.">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:37:07.801Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Xpath">
+<meta name="twitter:description" content="$x(&apos;//div//p//*&apos;) == $(&apos;div p *&apos;), $x(&apos;//[@id=&quot;item&quot;]&apos;) == $(&apos;#item&apos;), and many other Xpath examples.">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Xpath</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../yaml/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../weinre/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/xpath/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/xpath/&text=Xpath"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/xpath/&title=Xpath"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/xpath/&is_video=false&description=Xpath"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Xpath&body=Check out this article: https://rupertqin.github.io/devhints/xpath/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/xpath/&title=Xpath"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/xpath/&title=Xpath"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/xpath/&title=Xpath"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/xpath/&title=Xpath"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/xpath/&name=Xpath&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Testing"><span class="toc-number">1.</span> <span class="toc-text">Testing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Xpath-test-bed"><span class="toc-number">1.1.</span> <span class="toc-text">Xpath test bed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Browser-console"><span class="toc-number">1.2.</span> <span class="toc-text">Browser console</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Selectors"><span class="toc-number">2.</span> <span class="toc-text">Selectors</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Descendant-selectors"><span class="toc-number">2.1.</span> <span class="toc-text">Descendant selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Attribute-selectors"><span class="toc-number">2.2.</span> <span class="toc-text">Attribute selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Order-selectors"><span class="toc-number">2.3.</span> <span class="toc-text">Order selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Siblings"><span class="toc-number">2.4.</span> <span class="toc-text">Siblings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery"><span class="toc-number">2.5.</span> <span class="toc-text">jQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-things"><span class="toc-number">2.6.</span> <span class="toc-text">Other things</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Class-check"><span class="toc-number">2.7.</span> <span class="toc-text">Class check</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Expressions"><span class="toc-number">3.</span> <span class="toc-text">Expressions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Steps-and-axes"><span class="toc-number">3.1.</span> <span class="toc-text">Steps and axes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prefixes"><span class="toc-number">3.2.</span> <span class="toc-text">Prefixes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Axes"><span class="toc-number">3.3.</span> <span class="toc-text">Axes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Steps"><span class="toc-number">3.4.</span> <span class="toc-text">Steps</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Predicates"><span class="toc-number">4.</span> <span class="toc-text">Predicates</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Predicates-1"><span class="toc-number">4.1.</span> <span class="toc-text">Predicates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Operators"><span class="toc-number">4.2.</span> <span class="toc-text">Operators</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-nodes"><span class="toc-number">4.3.</span> <span class="toc-text">Using nodes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Indexing"><span class="toc-number">4.4.</span> <span class="toc-text">Indexing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chaining-order"><span class="toc-number">4.5.</span> <span class="toc-text">Chaining order</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nesting-predicates"><span class="toc-number">4.6.</span> <span class="toc-text">Nesting predicates</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functions"><span class="toc-number">5.</span> <span class="toc-text">Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-functions"><span class="toc-number">5.1.</span> <span class="toc-text">Node functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean-functions"><span class="toc-number">5.2.</span> <span class="toc-text">Boolean functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-functions"><span class="toc-number">5.3.</span> <span class="toc-text">String functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-conversion"><span class="toc-number">5.4.</span> <span class="toc-text">Type conversion</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Axes-1"><span class="toc-number">6.</span> <span class="toc-text">Axes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-axes"><span class="toc-number">6.1.</span> <span class="toc-text">Using axes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Child-axis"><span class="toc-number">6.2.</span> <span class="toc-text">Child axis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Descendant-or-self-axis"><span class="toc-number">6.3.</span> <span class="toc-text">Descendant-or-self axis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-axes"><span class="toc-number">6.4.</span> <span class="toc-text">Other axes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unions"><span class="toc-number">6.5.</span> <span class="toc-text">Unions</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#More-examples"><span class="toc-number">7.</span> <span class="toc-text">More examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Examples"><span class="toc-number">7.1.</span> <span class="toc-text">Examples</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Find-a-parent"><span class="toc-number">7.2.</span> <span class="toc-text">Find a parent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Closest"><span class="toc-number">7.3.</span> <span class="toc-text">Closest</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Attributes"><span class="toc-number">7.4.</span> <span class="toc-text">Attributes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">8.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Xpath
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.482Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/HTML/">HTML</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="../tags/Featured/">Featured</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><h3 id="Xpath-test-bed"><a href="#Xpath-test-bed" class="headerlink" title="Xpath test bed"></a>Xpath test bed</h3><p>Test queries in the Xpath test bed:<br><br><a href="http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm" target="_blank" rel="noopener">Xpath test bed</a> <em>(whitebeam.org)</em></p>
+<h3 id="Browser-console"><a href="#Browser-console" class="headerlink" title="Browser console"></a>Browser console</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$x(<span class="string">'//div'</span>)</span><br></pre></td></tr></table></figure>
+<p>Works in Firefox and Chrome.</p>
+<h2 id="Selectors"><a href="#Selectors" class="headerlink" title="Selectors"></a>Selectors</h2><h3 id="Descendant-selectors"><a href="#Descendant-selectors" class="headerlink" title="Descendant selectors"></a>Descendant selectors</h3><table>
+<thead>
+<tr>
+<th>CSS</th>
+<th>Xpath</th>
+<th>?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>h1</code></td>
+<td><code>//h1</code></td>
+<td><a href="#prefixes">?</a></td>
+</tr>
+<tr>
+<td><code>div p</code></td>
+<td><code>//div//p</code></td>
+<td><a href="#axes">?</a></td>
+</tr>
+<tr>
+<td><code>ul &gt; li</code></td>
+<td><code>//ul/li</code></td>
+<td><a href="#axes">?</a></td>
+</tr>
+<tr>
+<td><code>ul &gt; li &gt; a</code></td>
+<td><code>//ul/li/a</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>div &gt; *</code></td>
+<td><code>//div/*</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—-</td>
+<td>—-</td>
+<td>–</td>
+</tr>
+<tr>
+<td><code>:root</code></td>
+<td><code>/</code></td>
+<td><a href="#prefixes">?</a></td>
+</tr>
+<tr>
+<td><code>:root &gt; body</code></td>
+<td><code>/body</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Attribute-selectors"><a href="#Attribute-selectors" class="headerlink" title="Attribute selectors"></a>Attribute selectors</h3><table>
+<thead>
+<tr>
+<th>CSS</th>
+<th>Xpath</th>
+<th>?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>#id</code></td>
+<td><code>//*[@id=&quot;id&quot;]</code></td>
+<td><a href="#predicates">?</a></td>
+</tr>
+<tr>
+<td><code>.class</code></td>
+<td><code>//*[@class=&quot;class&quot;]</code> <em>…<a href="#class-check">kinda</a></em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>input[type=&quot;submit&quot;]</code></td>
+<td><code>//input[@type=&quot;submit&quot;]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>a#abc[for=&quot;xyz&quot;]</code></td>
+<td><code>//a[@id=&quot;abc&quot;][@for=&quot;xyz&quot;]</code></td>
+<td><a href="#chaining-order">?</a></td>
+</tr>
+<tr>
+<td><code>a[rel]</code></td>
+<td><code>//a[@rel]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—-</td>
+<td>—-</td>
+<td>–</td>
+</tr>
+<tr>
+<td><code>a[href^=&#39;/&#39;]</code></td>
+<td><code>//a[starts-with(@href, &#39;/&#39;)]</code></td>
+<td><a href="#string-functions">?</a></td>
+</tr>
+<tr>
+<td><code>a[href$=&#39;pdf&#39;]</code></td>
+<td><code>//a[ends-with(@href, &#39;.pdf&#39;)]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>a[href*=&#39;://&#39;]</code></td>
+<td><code>//a[contains(@href, &#39;://&#39;)]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>a[rel~=&#39;help&#39;]</code></td>
+<td><code>//a[contains(@rel, &#39;help&#39;)]</code> <em>…<a href="#class-check">kinda</a></em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Order-selectors"><a href="#Order-selectors" class="headerlink" title="Order selectors"></a>Order selectors</h3><table>
+<thead>
+<tr>
+<th>CSS</th>
+<th>Xpath</th>
+<th>?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ul &gt; li:first-child</code></td>
+<td><code>//ul/li[1]</code></td>
+<td><a href="#indexing">?</a></td>
+</tr>
+<tr>
+<td><code>ul &gt; li:nth-child(2)</code></td>
+<td><code>//ul/li[2]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ul &gt; li:last-child</code></td>
+<td><code>//ul/li[last()]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>li#id:first-child</code></td>
+<td><code>//li[@id=&quot;id&quot;][1]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>a:first-child</code></td>
+<td><code>//a[1]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>a:last-child</code></td>
+<td><code>//a[last()]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Siblings"><a href="#Siblings" class="headerlink" title="Siblings"></a>Siblings</h3><table>
+<thead>
+<tr>
+<th>CSS</th>
+<th>Xpath</th>
+<th>?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>h1 ~ ul</code></td>
+<td><code>//h1/following-sibling::ul</code></td>
+<td><a href="#using-axes">?</a></td>
+</tr>
+<tr>
+<td><code>h1 + ul</code></td>
+<td><code>//h1/following-sibling::ul[1]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>h1 ~ #id</code></td>
+<td><code>//h1/following-sibling::[@id=&quot;id&quot;]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><table>
+<thead>
+<tr>
+<th>CSS</th>
+<th>Xpath</th>
+<th>?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$(&#39;ul &gt; li&#39;).parent()</code></td>
+<td><code>//ul/li/..</code></td>
+<td><a href="#other-axes">?</a></td>
+</tr>
+<tr>
+<td><code>$(&#39;li&#39;).closest(&#39;section&#39;)</code></td>
+<td><code>//li/ancestor-or-self::section</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>$(&#39;a&#39;).attr(&#39;href&#39;)</code></td>
+<td><code>//a/@href</code></td>
+<td><a href="#steps">?</a></td>
+</tr>
+<tr>
+<td><code>$(&#39;span&#39;).text()</code></td>
+<td><code>//span/text()</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Other-things"><a href="#Other-things" class="headerlink" title="Other things"></a>Other things</h3><table>
+<thead>
+<tr>
+<th>CSS</th>
+<th>Xpath</th>
+<th>?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>h1:not([id])</code></td>
+<td><code>//h1[not(@id)]</code></td>
+<td><a href="#boolean-functions">?</a></td>
+</tr>
+<tr>
+<td>Text match</td>
+<td><code>//button[text()=&quot;Submit&quot;]</code></td>
+<td><a href="#operators">?</a></td>
+</tr>
+<tr>
+<td>Text match (substring)</td>
+<td><code>//button[contains(text(),&quot;Go&quot;)]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Arithmetic</td>
+<td><code>//product[@price &gt; 2.50]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Has children</td>
+<td><code>//ul[*]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Has children (specific)</td>
+<td><code>//ul[li]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Or logic</td>
+<td><code>//a[@name or @href]</code></td>
+<td><a href="#operators">?</a></td>
+</tr>
+<tr>
+<td>Union (joins results)</td>
+<td>`//a</td>
+<td>//div`</td>
+<td><a href="#unions">?</a></td>
+</tr>
+</tbody>
+</table>
+<style>
+/* ensure tables align */
+table.xp {table-layout: fixed;}
+table.xp tr>:nth-child(1) {width: 35%;}
+table.xp tr>:nth-child(2) {width: auto;}
+table.xp tr>:nth-child(3) {width: 10%; text-align:right;}
+</style>
+
+<h3 id="Class-check"><a href="#Class-check" class="headerlink" title="Class check"></a>Class check</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//div[contains(concat(<span class="string">' '</span>,normalize-space(@class),<span class="string">' '</span>),<span class="string">' foobar '</span>)]</span><br></pre></td></tr></table></figure>
+<p>Xpath doesn’t have the “check if part of space-separated list” operator, so this is the workaround (<a href="http://pivotallabs.com/xpath-css-class-matching/" target="_blank" rel="noopener">source</a>).</p>
+<h2 id="Expressions"><a href="#Expressions" class="headerlink" title="Expressions"></a>Expressions</h2><h3 id="Steps-and-axes"><a href="#Steps-and-axes" class="headerlink" title="Steps and axes"></a>Steps and axes</h3><p>| <code>//</code> | <code>ul</code> | <code>/</code>  | <code>a[@id=&#39;link&#39;]</code> |<br>| Axis | Step | Axis | Step            |</p>
+<h3 id="Prefixes"><a href="#Prefixes" class="headerlink" title="Prefixes"></a>Prefixes</h3><table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Example</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>//</code></td>
+<td><code>//hr[@class=&#39;edge&#39;]</code></td>
+<td>Anywhere</td>
+</tr>
+<tr>
+<td><code>./</code></td>
+<td><code>./a</code></td>
+<td>Relative</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td><code>/html/body/div</code></td>
+<td>Root</td>
+</tr>
+</tbody>
+</table>
+<p>Begin your expression with any of these.</p>
+<h3 id="Axes"><a href="#Axes" class="headerlink" title="Axes"></a>Axes</h3><table>
+<thead>
+<tr>
+<th>Axis</th>
+<th>Example</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td><code>//ul/li/a</code></td>
+<td>Child</td>
+</tr>
+<tr>
+<td><code>//</code></td>
+<td><code>//[@id=&quot;list&quot;]//a</code></td>
+<td>Descendant</td>
+</tr>
+</tbody>
+</table>
+<p>Separate your steps with <code>/</code>. Use two (<code>//</code>) if you don’t want to select direct children.</p>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//div</span><br><span class="line">//div[@name=<span class="string">'box'</span>]</span><br><span class="line">//[@id=<span class="string">'link'</span>]</span><br></pre></td></tr></table></figure>
+<p>A step may have an element name (<code>div</code>) and <a href="#predicate">predicates</a> (<code>[...]</code>). Both are optional.<br>They can also be these other things:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//a/text()     <span class="comment">#=&gt; "Go home"</span></span><br><span class="line">//a/@href      <span class="comment">#=&gt; "index.html"</span></span><br><span class="line">//a/*          <span class="comment">#=&gt; All a's child elements</span></span><br></pre></td></tr></table></figure>
+<h2 id="Predicates"><a href="#Predicates" class="headerlink" title="Predicates"></a>Predicates</h2><h3 id="Predicates-1"><a href="#Predicates-1" class="headerlink" title="Predicates"></a>Predicates</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//div[<span class="literal">true</span>()]</span><br><span class="line">//div[@class=<span class="string">"head"</span>]</span><br><span class="line">//div[@class=<span class="string">"head"</span>][@id=<span class="string">"top"</span>]</span><br></pre></td></tr></table></figure>
+<p>Restricts a nodeset only if some condition is true. They can be chained.</p>
+<h3 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Comparison</span></span><br><span class="line">//a[@id = <span class="string">"xyz"</span>]</span><br><span class="line">//a[@id != <span class="string">"xyz"</span>]</span><br><span class="line">//a[@price &gt; 25]</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Logic (and/or)</span></span><br><span class="line">//div[@id=<span class="string">"head"</span> and position()=2]</span><br><span class="line">//div[(x and y) or not(z)]</span><br></pre></td></tr></table></figure>
+<p>Use comparison and logic operators to make conditionals.</p>
+<h3 id="Using-nodes"><a href="#Using-nodes" class="headerlink" title="Using nodes"></a>Using nodes</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Use them inside functions</span></span><br><span class="line">//ul[count(li) &gt; 2]</span><br><span class="line">//ul[count(li[@class=<span class="string">'hide'</span>]) &gt; 0]</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># This returns `&lt;ul&gt;` that has a `&lt;li&gt;` child</span></span><br><span class="line">//ul[li]</span><br></pre></td></tr></table></figure>
+<p>You can use nodes inside predicates.</p>
+<h3 id="Indexing"><a href="#Indexing" class="headerlink" title="Indexing"></a>Indexing</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//a[1]                  <span class="comment"># first &lt;a&gt;</span></span><br><span class="line">//a[last()]             <span class="comment"># last &lt;a&gt;</span></span><br><span class="line">//ol/li[2]              <span class="comment"># second &lt;li&gt;</span></span><br><span class="line">//ol/li[position()=2]   <span class="comment"># same as above</span></span><br><span class="line">//ol/li[position()&gt;1]   <span class="comment"># :not(:first-child)</span></span><br></pre></td></tr></table></figure>
+<p>Use <code>[]</code> with a number, or <code>last()</code> or <code>position()</code>.</p>
+<h3 id="Chaining-order"><a href="#Chaining-order" class="headerlink" title="Chaining order"></a>Chaining order</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a[1][@href=<span class="string">'/'</span>]</span><br><span class="line">a[@href=<span class="string">'/'</span>][1]</span><br></pre></td></tr></table></figure>
+<p>Order is significant, these two are different.</p>
+<h3 id="Nesting-predicates"><a href="#Nesting-predicates" class="headerlink" title="Nesting predicates"></a>Nesting predicates</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//section[//h1[@id=&apos;hi&apos;]]</span><br></pre></td></tr></table></figure>
+<p>This returns <code>&lt;section&gt;</code> if it has an <code>&lt;h1&gt;</code> descendant with <code>id=&#39;hi&#39;</code>.</p>
+<h2 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h2><h3 id="Node-functions"><a href="#Node-functions" class="headerlink" title="Node functions"></a>Node functions</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name()                     <span class="comment"># //[starts-with(name(), 'h')]</span></span><br><span class="line">text()                     <span class="comment"># //button[text()="Submit"]</span></span><br><span class="line">                           <span class="comment"># //button/text()</span></span><br><span class="line">lang(str)</span><br><span class="line">namespace-uri()</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">count()                    <span class="comment"># //table[count(tr)=1]</span></span><br><span class="line">position()                 <span class="comment"># //ol/li[position()=2]</span></span><br></pre></td></tr></table></figure>
+<h3 id="Boolean-functions"><a href="#Boolean-functions" class="headerlink" title="Boolean functions"></a>Boolean functions</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">not(expr)                  <span class="comment"># button[not(starts-with(text(),"Submit"))]</span></span><br></pre></td></tr></table></figure>
+<h3 id="String-functions"><a href="#String-functions" class="headerlink" title="String functions"></a>String functions</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">contains()                 <span class="comment"># font[contains(@class,"head")]</span></span><br><span class="line">starts-with()              <span class="comment"># font[starts-with(@class,"head")]</span></span><br><span class="line">ends-with()                <span class="comment"># font[ends-with(@class,"head")]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">concat(x,y)</span><br><span class="line">substring(str, start, len)</span><br><span class="line">substring-before(<span class="string">"01/02"</span>, <span class="string">"/"</span>)  <span class="comment">#=&gt; 01</span></span><br><span class="line">substring-after(<span class="string">"01/02"</span>, <span class="string">"/"</span>)   <span class="comment">#=&gt; 02</span></span><br><span class="line">translate()</span><br><span class="line">normalize-space()</span><br><span class="line">string-length()</span><br></pre></td></tr></table></figure>
+<h3 id="Type-conversion"><a href="#Type-conversion" class="headerlink" title="Type conversion"></a>Type conversion</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string()</span><br><span class="line">number()</span><br><span class="line">boolean()</span><br></pre></td></tr></table></figure>
+<h2 id="Axes-1"><a href="#Axes-1" class="headerlink" title="Axes"></a>Axes</h2><h3 id="Using-axes"><a href="#Using-axes" class="headerlink" title="Using axes"></a>Using axes</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//ul/li                       <span class="comment"># ul &gt; li</span></span><br><span class="line">//ul/child::li                <span class="comment"># ul &gt; li (same)</span></span><br><span class="line">//ul/following-sibling::li    <span class="comment"># ul ~ li</span></span><br><span class="line">//ul/descendant-or-self::li   <span class="comment"># ul li</span></span><br><span class="line">//ul/ancestor-or-self::li     <span class="comment"># $('ul').closest('li')</span></span><br></pre></td></tr></table></figure>
+<p>Steps of an expression are separated by <code>/</code>, usually used to pick child nodes. That’s not always true: you can specify a different “axis” with <code>::</code>.</p>
+<p>| <code>//</code> | <code>ul</code> | <code>/child::</code> | <code>li</code> |<br>| Axis | Step | Axis       | Step |</p>
+<h3 id="Child-axis"><a href="#Child-axis" class="headerlink" title="Child axis"></a>Child axis</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># both the same</span></span><br><span class="line">//ul/li/a</span><br><span class="line">//child::ul/child::li/child::a</span><br></pre></td></tr></table></figure>
+<p><code>child::</code> is the default axis. This makes <code>//a/b/c</code> work.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># both the same</span></span><br><span class="line"><span class="comment"># this works because `child::li` is truthy, so the predicate succeeds</span></span><br><span class="line">//ul[li]</span><br><span class="line">//ul[child::li]</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># both the same</span></span><br><span class="line">//ul[count(li) &gt; 2]</span><br><span class="line">//ul[count(child::li) &gt; 2]</span><br></pre></td></tr></table></figure>
+<h3 id="Descendant-or-self-axis"><a href="#Descendant-or-self-axis" class="headerlink" title="Descendant-or-self axis"></a>Descendant-or-self axis</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># both the same</span></span><br><span class="line">//div//h4</span><br><span class="line">//div/descendant-or-self::h4</span><br></pre></td></tr></table></figure>
+<p><code>//</code> is short for the <code>descendant-or-self::</code> axis.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># both the same</span></span><br><span class="line">//ul//[last()]</span><br><span class="line">//ul/descendant-or-self::[last()]</span><br></pre></td></tr></table></figure>
+<h3 id="Other-axes"><a href="#Other-axes" class="headerlink" title="Other axes"></a>Other axes</h3><table>
+<thead>
+<tr>
+<th>Axis</th>
+<th>Abbrev</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ancestor</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ancestor-or-self</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>attribute</code></td>
+<td><code>@</code></td>
+<td><code>@href</code> is short for <code>attribute::href</code></td>
+</tr>
+<tr>
+<td><code>child</code></td>
+<td></td>
+<td><code>div</code> is short for <code>child::div</code></td>
+</tr>
+<tr>
+<td><code>descendant</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>descendant-or-self</code></td>
+<td><code>//</code></td>
+<td><code>//</code> is short for <code>/descendant-or-self::node()/</code></td>
+</tr>
+<tr>
+<td><code>namespace</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>self</code></td>
+<td><code>.</code></td>
+<td><code>.</code> is short for <code>self::node()</code></td>
+</tr>
+<tr>
+<td><code>parent</code></td>
+<td><code>..</code></td>
+<td><code>..</code> is short for <code>parent::node()</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>following</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>following-sibling</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>preceding</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>preceding-sibling</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>There are other axes you can use.</p>
+<h3 id="Unions"><a href="#Unions" class="headerlink" title="Unions"></a>Unions</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//a | //span</span><br></pre></td></tr></table></figure>
+<p>Use <code>|</code> to join two expressions.</p>
+<h2 id="More-examples"><a href="#More-examples" class="headerlink" title="More examples"></a>More examples</h2><h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//*                 <span class="comment"># all elements</span></span><br><span class="line">count(//*)          <span class="comment"># count all elements</span></span><br><span class="line">(//h1)[1]/text()    <span class="comment"># text of the first h1 heading</span></span><br><span class="line">//li[span]          <span class="comment"># find a &lt;li&gt; with an &lt;span&gt; inside it</span></span><br><span class="line">                    <span class="comment"># ...expands to //li[child::span]</span></span><br><span class="line">//ul/li/..          <span class="comment"># use .. to select a parent</span></span><br></pre></td></tr></table></figure>
+<h3 id="Find-a-parent"><a href="#Find-a-parent" class="headerlink" title="Find a parent"></a>Find a parent</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//section[h1[@id=<span class="string">'section-name'</span>]]</span><br></pre></td></tr></table></figure>
+<p>Finds a <code>&lt;section&gt;</code> that directly contains <code>h1#section-name</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//section[//h1[@id=<span class="string">'section-name'</span>]]</span><br></pre></td></tr></table></figure>
+<p>Finds a <code>&lt;section&gt;</code> that contains <code>h1#section-name</code>.<br>(Same as above, but uses descendant-or-self instead of child)</p>
+<h3 id="Closest"><a href="#Closest" class="headerlink" title="Closest"></a>Closest</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./ancestor-or-self::[@class=<span class="string">"box"</span>]</span><br></pre></td></tr></table></figure>
+<p>Works like jQuery’s <code>$().closest(&#39;.box&#39;)</code>.</p>
+<h3 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//item[@price &gt; 2*@discount]</span><br></pre></td></tr></table></figure>
+<p>Finds <code>&lt;item&gt;</code> and check its attributes</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm" target="_blank" rel="noopener">Xpath test bed</a> <em>(whitebeam.org)</em></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Testing"><span class="toc-number">1.</span> <span class="toc-text">Testing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Xpath-test-bed"><span class="toc-number">1.1.</span> <span class="toc-text">Xpath test bed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Browser-console"><span class="toc-number">1.2.</span> <span class="toc-text">Browser console</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Selectors"><span class="toc-number">2.</span> <span class="toc-text">Selectors</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Descendant-selectors"><span class="toc-number">2.1.</span> <span class="toc-text">Descendant selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Attribute-selectors"><span class="toc-number">2.2.</span> <span class="toc-text">Attribute selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Order-selectors"><span class="toc-number">2.3.</span> <span class="toc-text">Order selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Siblings"><span class="toc-number">2.4.</span> <span class="toc-text">Siblings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery"><span class="toc-number">2.5.</span> <span class="toc-text">jQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-things"><span class="toc-number">2.6.</span> <span class="toc-text">Other things</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Class-check"><span class="toc-number">2.7.</span> <span class="toc-text">Class check</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Expressions"><span class="toc-number">3.</span> <span class="toc-text">Expressions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Steps-and-axes"><span class="toc-number">3.1.</span> <span class="toc-text">Steps and axes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prefixes"><span class="toc-number">3.2.</span> <span class="toc-text">Prefixes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Axes"><span class="toc-number">3.3.</span> <span class="toc-text">Axes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Steps"><span class="toc-number">3.4.</span> <span class="toc-text">Steps</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Predicates"><span class="toc-number">4.</span> <span class="toc-text">Predicates</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Predicates-1"><span class="toc-number">4.1.</span> <span class="toc-text">Predicates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Operators"><span class="toc-number">4.2.</span> <span class="toc-text">Operators</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-nodes"><span class="toc-number">4.3.</span> <span class="toc-text">Using nodes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Indexing"><span class="toc-number">4.4.</span> <span class="toc-text">Indexing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chaining-order"><span class="toc-number">4.5.</span> <span class="toc-text">Chaining order</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nesting-predicates"><span class="toc-number">4.6.</span> <span class="toc-text">Nesting predicates</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functions"><span class="toc-number">5.</span> <span class="toc-text">Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-functions"><span class="toc-number">5.1.</span> <span class="toc-text">Node functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean-functions"><span class="toc-number">5.2.</span> <span class="toc-text">Boolean functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-functions"><span class="toc-number">5.3.</span> <span class="toc-text">String functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-conversion"><span class="toc-number">5.4.</span> <span class="toc-text">Type conversion</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Axes-1"><span class="toc-number">6.</span> <span class="toc-text">Axes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-axes"><span class="toc-number">6.1.</span> <span class="toc-text">Using axes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Child-axis"><span class="toc-number">6.2.</span> <span class="toc-text">Child axis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Descendant-or-self-axis"><span class="toc-number">6.3.</span> <span class="toc-text">Descendant-or-self axis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-axes"><span class="toc-number">6.4.</span> <span class="toc-text">Other axes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unions"><span class="toc-number">6.5.</span> <span class="toc-text">Unions</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#More-examples"><span class="toc-number">7.</span> <span class="toc-text">More examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Examples"><span class="toc-number">7.1.</span> <span class="toc-text">Examples</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Find-a-parent"><span class="toc-number">7.2.</span> <span class="toc-text">Find a parent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Closest"><span class="toc-number">7.3.</span> <span class="toc-text">Closest</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Attributes"><span class="toc-number">7.4.</span> <span class="toc-text">Attributes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">8.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/xpath/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/xpath/&text=Xpath"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/xpath/&title=Xpath"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/xpath/&is_video=false&description=Xpath"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Xpath&body=Check out this article: https://rupertqin.github.io/devhints/xpath/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/xpath/&title=Xpath"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/xpath/&title=Xpath"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/xpath/&title=Xpath"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/xpath/&title=Xpath"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/xpath/&name=Xpath&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

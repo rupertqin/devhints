@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Navigatingvisit articles_path Clicking links and buttonsclick &amp;apos;Link Text&amp;apos; click_button click_link Interacting with forms12attach_file &apos;Image&apos;, &apos;/path/to/image.jpg&apos;fill_in &apos;First Name&apos;, with:">
+<meta name="keywords" content="Featurable">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Capybara">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/capybara/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Navigatingvisit articles_path Clicking links and buttonsclick &amp;apos;Link Text&amp;apos; click_button click_link Interacting with forms12attach_file &apos;Image&apos;, &apos;/path/to/image.jpg&apos;fill_in &apos;First Name&apos;, with:">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-08-29T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Capybara">
+<meta name="twitter:description" content="Navigatingvisit articles_path Clicking links and buttonsclick &amp;apos;Link Text&amp;apos; click_button click_link Interacting with forms12attach_file &apos;Image&apos;, &apos;/path/to/image.jpg&apos;fill_in &apos;First Name&apos;, with:">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Capybara</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../cask-index/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../canvas/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/capybara/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/capybara/&text=Capybara"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/capybara/&title=Capybara"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/capybara/&is_video=false&description=Capybara"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Capybara&body=Check out this article: https://rupertqin.github.io/devhints/capybara/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/capybara/&title=Capybara"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/capybara/&title=Capybara"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/capybara/&title=Capybara"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/capybara/&title=Capybara"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/capybara/&name=Capybara&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Navigating"><span class="toc-number">1.</span> <span class="toc-text">Navigating</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Clicking-links-and-buttons"><span class="toc-number">2.</span> <span class="toc-text">Clicking links and buttons</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interacting-with-forms"><span class="toc-number">3.</span> <span class="toc-text">Interacting with forms</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Limiting"><span class="toc-number">4.</span> <span class="toc-text">Limiting</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Querying"><span class="toc-number"></span> <span class="toc-text">Querying</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Predicates"><span class="toc-number">1.</span> <span class="toc-text">Predicates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Selectors"><span class="toc-number">2.</span> <span class="toc-text">Selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RSpec-assertions"><span class="toc-number">3.</span> <span class="toc-text">RSpec assertions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#About-negatives"><span class="toc-number">4.</span> <span class="toc-text">About negatives</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RSpec"><span class="toc-number"></span> <span class="toc-text">RSpec</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Matchers"><span class="toc-number">1.</span> <span class="toc-text">Matchers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Common-options"><span class="toc-number">2.</span> <span class="toc-text">Common options</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other-features"><span class="toc-number"></span> <span class="toc-text">Other features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Finding"><span class="toc-number">1.</span> <span class="toc-text">Finding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scoping"><span class="toc-number">2.</span> <span class="toc-text">Scoping</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scripting"><span class="toc-number">3.</span> <span class="toc-text">Scripting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debugging"><span class="toc-number">4.</span> <span class="toc-text">Debugging</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Page"><span class="toc-number">5.</span> <span class="toc-text">Page</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AJAX"><span class="toc-number">6.</span> <span class="toc-text">AJAX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Misc"><span class="toc-number">7.</span> <span class="toc-text">Misc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Page-object"><span class="toc-number">8.</span> <span class="toc-text">Page object</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Poltergeist"><span class="toc-number">9.</span> <span class="toc-text">Poltergeist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Blacklist"><span class="toc-number">10.</span> <span class="toc-text">Blacklist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debugging-1"><span class="toc-number">11.</span> <span class="toc-text">Debugging</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Selenium"><span class="toc-number"></span> <span class="toc-text">Selenium</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Accepting-confirm-and-alert"><span class="toc-number">1.</span> <span class="toc-text">Accepting confirm() and alert()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Updating-session"><span class="toc-number">2.</span> <span class="toc-text">Updating session</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#See-also"><span class="toc-number"></span> <span class="toc-text">See also</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Capybara
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.225Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Ruby-libraries/">Ruby libraries</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="../tags/Featurable/">Featurable</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Navigating"><a href="#Navigating" class="headerlink" title="Navigating"></a>Navigating</h3><pre><code>visit articles_path
+</code></pre><h3 id="Clicking-links-and-buttons"><a href="#Clicking-links-and-buttons" class="headerlink" title="Clicking links and buttons"></a>Clicking links and buttons</h3><pre><code>click &apos;Link Text&apos;
+click_button
+click_link
+</code></pre><h3 id="Interacting-with-forms"><a href="#Interacting-with-forms" class="headerlink" title="Interacting with forms"></a>Interacting with forms</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">attach_file <span class="string">'Image'</span>, <span class="string">'/path/to/image.jpg'</span></span><br><span class="line">fill_in <span class="string">'First Name'</span>, <span class="symbol">with:</span> <span class="string">'John'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">check <span class="string">'A checkbox'</span></span><br><span class="line">uncheck <span class="string">'A checkbox'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choose <span class="string">'A radio button'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select <span class="string">'Option'</span>, <span class="symbol">from:</span> <span class="string">'Select box'</span></span><br><span class="line">unselect</span><br></pre></td></tr></table></figure>
+<h3 id="Limiting"><a href="#Limiting" class="headerlink" title="Limiting"></a>Limiting</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">within <span class="string">'.classname'</span> <span class="keyword">do</span></span><br><span class="line">  click <span class="string">'...'</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">within_fieldset <span class="symbol">:id</span> <span class="keyword">do</span></span><br><span class="line">  ...</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="Querying"><a href="#Querying" class="headerlink" title="Querying"></a>Querying</h2><h3 id="Predicates"><a href="#Predicates" class="headerlink" title="Predicates"></a>Predicates</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">page.has_css?(<span class="string">'.button'</span>)</span><br><span class="line">expect(page).to have_css(<span class="string">'.button'</span>)</span><br><span class="line">page.should have_css(<span class="string">'.button'</span>)</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Positive</th>
+<th>Negative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>has_content?</code></td>
+<td><code>has_no_content?</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>has_css?</code> <em>(selector)</em></td>
+<td><code>has_no_css?</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>has_xpath?</code> <em>(path)</em></td>
+<td><code>has_no_xpath?</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>has_link?</code> <em>(selector)</em></td>
+<td><code>has_no_link?</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>has_button?</code> <em>(selector)</em></td>
+<td><code>has_no_button?</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>has_field?</code> <em>(selector)</em></td>
+<td><code>has_no_field?</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>has_checked_field?</code> <em>(selector)</em></td>
+<td><code>has_unchecked_field?</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>has_table?</code> <em>(selector)</em></td>
+<td><code>has_no_table?</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>has_select?</code> <em>(selector)</em></td>
+<td><code>has_no_select?</code></td>
+</tr>
+</tbody>
+</table>
+<p>In Rspec, these also map to matchers like <code>page.should have_content</code>.</p>
+<h3 id="Selectors"><a href="#Selectors" class="headerlink" title="Selectors"></a>Selectors</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect(page).to have_button(<span class="string">'Save'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect(page).to have_button(<span class="string">'#submit'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect(page).to have_button(<span class="string">'//[@id="submit"]'</span>)</span><br></pre></td></tr></table></figure>
+<p>The <code>selector</code> arguments can be text, CSS selector, or XPath expression.</p>
+<h3 id="RSpec-assertions"><a href="#RSpec-assertions" class="headerlink" title="RSpec assertions"></a>RSpec assertions</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">page.has_button?(<span class="string">'Save'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect(page).to have_no_button(<span class="string">'Save'</span>)</span><br></pre></td></tr></table></figure>
+<p>In RSpec, you can use <code>page.should</code> assertions.</p>
+<h3 id="About-negatives"><a href="#About-negatives" class="headerlink" title="About negatives"></a>About negatives</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect(page).to have_no_button(<span class="string">'Save'</span>)   <span class="comment"># OK</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect(page).not_to have_button(<span class="string">'Save'</span>)  <span class="comment"># Bad</span></span><br></pre></td></tr></table></figure>
+<p>Use <code>should have_no_*</code> versions with RSpec matchers because<br><code>should_not have_*</code> doesn’t wait for a timeout from the driver.</p>
+<h2 id="RSpec"><a href="#RSpec" class="headerlink" title="RSpec"></a>RSpec</h2><h3 id="Matchers"><a href="#Matchers" class="headerlink" title="Matchers"></a>Matchers</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect(page).to \</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">have_selector <span class="string">'.blank-state'</span></span><br><span class="line">have_selector <span class="string">'h1#hola'</span>, <span class="symbol">text:</span> <span class="string">'Welcome'</span></span><br><span class="line">have_button <span class="string">'Save'</span></span><br><span class="line">have_checked_field <span class="string">'#field'</span></span><br><span class="line">have_unchecked_field</span><br><span class="line">have_css <span class="string">'.class'</span></span><br><span class="line">have_field <span class="string">'#field'</span></span><br><span class="line">have_table <span class="string">'#table'</span></span><br><span class="line">have_xpath <span class="string">'//div'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">have_link <span class="string">'Logout'</span>, <span class="symbol">href:</span> logout_path</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">have_select <span class="string">'Language'</span>,</span><br><span class="line">  <span class="symbol">selected:</span> <span class="string">'German'</span></span><br><span class="line">  <span class="symbol">options:</span> [<span class="string">'Engish'</span>, <span class="string">'German'</span>]</span><br><span class="line">  <span class="symbol">with_options:</span> [<span class="string">'Engish'</span>, <span class="string">'German'</span>] <span class="comment"># partial match</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">have_text <span class="string">'Hello'</span>,</span><br><span class="line">  <span class="symbol">type:</span> <span class="symbol">:visible</span> <span class="comment"># or :all</span></span><br><span class="line">  <span class="comment"># alias: have_content</span></span><br></pre></td></tr></table></figure>
+<h3 id="Common-options"><a href="#Common-options" class="headerlink" title="Common options"></a>Common options</h3><p>All matchers have these options:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">text:</span> <span class="string">'welcome'</span></span><br><span class="line"><span class="symbol">text:</span> /Hello/</span><br><span class="line"><span class="symbol">visible:</span> <span class="literal">true</span></span><br><span class="line"><span class="symbol">count:</span> <span class="number">4</span></span><br><span class="line"><span class="symbol">between:</span> <span class="number">2</span>..<span class="number">5</span></span><br><span class="line"><span class="symbol">minimum:</span> <span class="number">2</span></span><br><span class="line"><span class="symbol">maximum:</span> <span class="number">5</span></span><br><span class="line"><span class="symbol">wait:</span> <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<h2 id="Other-features"><a href="#Other-features" class="headerlink" title="Other features"></a>Other features</h2><h3 id="Finding"><a href="#Finding" class="headerlink" title="Finding"></a>Finding</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">find(selector)</span><br><span class="line">find_button(selector)</span><br><span class="line">find_by_id(id)</span><br><span class="line">find_field(selector)</span><br><span class="line">find_link(selector)</span><br><span class="line">locate</span><br></pre></td></tr></table></figure>
+<h3 id="Scoping"><a href="#Scoping" class="headerlink" title="Scoping"></a>Scoping</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">within <span class="string">'#delivery'</span> <span class="keyword">do</span></span><br><span class="line">  fill_in <span class="string">'Street'</span>, <span class="symbol">with:</span> <span class="string">'Hello'</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">within <span class="symbol">:xpath</span>, <span class="string">'//article'</span></span><br><span class="line">within_fieldset</span><br><span class="line">within_table</span><br><span class="line">within_frame</span><br><span class="line">scope_to</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find(<span class="string">'#x'</span>).fill_in(<span class="string">'Street'</span>, <span class="symbol">with:</span> <span class="string">'Hello'</span>)</span><br><span class="line"><span class="comment"># same as within</span></span><br></pre></td></tr></table></figure>
+<h3 id="Scripting"><a href="#Scripting" class="headerlink" title="Scripting"></a>Scripting</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">execute_script(<span class="string">'$("input").trigger('</span>change<span class="string">')'</span>)</span><br><span class="line">evaluate_script(<span class="string">'window.ga'</span>)</span><br></pre></td></tr></table></figure>
+<p>Executes JavaScript.</p>
+<h3 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">save_and_open_page</span><br></pre></td></tr></table></figure>
+<p>Opens the webpage in your browser.</p>
+<h3 id="Page"><a href="#Page" class="headerlink" title="Page"></a>Page</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">page</span><br><span class="line">  .all(<span class="string">'h3'</span>)</span><br><span class="line">  .body</span><br><span class="line">  .html</span><br><span class="line">  .source</span><br><span class="line">  .current_host</span><br><span class="line">  .current_path</span><br><span class="line">  .current_url</span><br></pre></td></tr></table></figure>
+<h3 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">using_wait_time <span class="number">10</span> <span class="keyword">do</span></span><br><span class="line">  ...</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h3><pre><code>drag
+field_labeled
+</code></pre><h3 id="Page-object"><a href="#Page-object" class="headerlink" title="Page object"></a>Page object</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">page.status_code == <span class="number">200</span></span><br><span class="line">page.response_headers</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://www.rubydoc.info/github/jnicklas/capybara/master/Capybara/Session" target="_blank" rel="noopener">http://www.rubydoc.info/github/jnicklas/capybara/master/Capybara/Session</a></p>
+<h3 id="Poltergeist"><a href="#Poltergeist" class="headerlink" title="Poltergeist"></a>Poltergeist</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Capybara.register_driver <span class="symbol">:poltergeist</span> <span class="keyword">do</span> <span class="params">|app|</span></span><br><span class="line">  Capybara::Poltergeist::Driver.new(app, <span class="symbol">:inspector</span> =&gt; <span class="literal">true</span>)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">Capybara.javascript_driver = <span class="symbol">:poltergeist</span></span><br></pre></td></tr></table></figure>
+<p>Use <a href="https://github.com/teampoltergeist/poltergeist" target="_blank" rel="noopener">poltergeist</a> to integrate PhantomJS.</p>
+<h3 id="Blacklist"><a href="#Blacklist" class="headerlink" title="Blacklist"></a>Blacklist</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">config.before <span class="symbol">:each</span>, <span class="symbol">:js</span> <span class="keyword">do</span></span><br><span class="line">  page.driver.browser.url_blacklist = [</span><br><span class="line">    <span class="string">'fonts.googleapis.com'</span>,</span><br><span class="line">    <span class="string">'use.typekit.net'</span>,</span><br><span class="line">    <span class="string">'f.vimeocdn.com'</span>,</span><br><span class="line">    <span class="string">'player.vimeo.com'</span>,</span><br><span class="line">    <span class="string">'www.googletagmanager.com'</span></span><br><span class="line">  ].flat_map &#123; <span class="params">|domain|</span> [ <span class="string">"http://<span class="subst">#&#123;domain&#125;</span>"</span>, <span class="string">"https://<span class="subst">#&#123;domain&#125;</span>"</span> ] &#125;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="Debugging-1"><a href="#Debugging-1" class="headerlink" title="Debugging"></a>Debugging</h3><p>Enable <code>inspector: true</code> and then:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">page.driver.debug</span><br></pre></td></tr></table></figure>
+<p>To pause execution for a while:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">page.driver.pause</span><br></pre></td></tr></table></figure>
+<h2 id="Selenium"><a href="#Selenium" class="headerlink" title="Selenium"></a>Selenium</h2><h3 id="Accepting-confirm-and-alert"><a href="#Accepting-confirm-and-alert" class="headerlink" title="Accepting confirm() and alert()"></a>Accepting confirm() and alert()</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">accept_alert &#123; ... &#125;</span><br><span class="line">dismiss_confirm &#123; ... &#125;</span><br><span class="line">accept_prompt(<span class="symbol">with:</span> <span class="string">'hi'</span>) &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<p>Alternatively:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">page.driver.browser.switch_to.alert.accept</span><br></pre></td></tr></table></figure>
+<h3 id="Updating-session"><a href="#Updating-session" class="headerlink" title="Updating session"></a>Updating session</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">page.set_rack_session(<span class="symbol">foo:</span> <span class="string">'bar'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="See-also"><a href="#See-also" class="headerlink" title="See also"></a>See also</h2><ul>
+<li><a href="http://rubydoc.info/github/jnicklas/capybara/Capybara/RSpecMatchers" target="_blank" rel="noopener">http://rubydoc.info/github/jnicklas/capybara/Capybara/RSpecMatchers</a></li>
+<li><a href="http://www.rubydoc.info/github/jnicklas/capybara/master/Capybara/Node/Matchers" target="_blank" rel="noopener">http://www.rubydoc.info/github/jnicklas/capybara/master/Capybara/Node/Matchers</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Navigating"><span class="toc-number">1.</span> <span class="toc-text">Navigating</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Clicking-links-and-buttons"><span class="toc-number">2.</span> <span class="toc-text">Clicking links and buttons</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interacting-with-forms"><span class="toc-number">3.</span> <span class="toc-text">Interacting with forms</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Limiting"><span class="toc-number">4.</span> <span class="toc-text">Limiting</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Querying"><span class="toc-number"></span> <span class="toc-text">Querying</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Predicates"><span class="toc-number">1.</span> <span class="toc-text">Predicates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Selectors"><span class="toc-number">2.</span> <span class="toc-text">Selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RSpec-assertions"><span class="toc-number">3.</span> <span class="toc-text">RSpec assertions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#About-negatives"><span class="toc-number">4.</span> <span class="toc-text">About negatives</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RSpec"><span class="toc-number"></span> <span class="toc-text">RSpec</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Matchers"><span class="toc-number">1.</span> <span class="toc-text">Matchers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Common-options"><span class="toc-number">2.</span> <span class="toc-text">Common options</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other-features"><span class="toc-number"></span> <span class="toc-text">Other features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Finding"><span class="toc-number">1.</span> <span class="toc-text">Finding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scoping"><span class="toc-number">2.</span> <span class="toc-text">Scoping</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scripting"><span class="toc-number">3.</span> <span class="toc-text">Scripting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debugging"><span class="toc-number">4.</span> <span class="toc-text">Debugging</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Page"><span class="toc-number">5.</span> <span class="toc-text">Page</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AJAX"><span class="toc-number">6.</span> <span class="toc-text">AJAX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Misc"><span class="toc-number">7.</span> <span class="toc-text">Misc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Page-object"><span class="toc-number">8.</span> <span class="toc-text">Page object</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Poltergeist"><span class="toc-number">9.</span> <span class="toc-text">Poltergeist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Blacklist"><span class="toc-number">10.</span> <span class="toc-text">Blacklist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debugging-1"><span class="toc-number">11.</span> <span class="toc-text">Debugging</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Selenium"><span class="toc-number"></span> <span class="toc-text">Selenium</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Accepting-confirm-and-alert"><span class="toc-number">1.</span> <span class="toc-text">Accepting confirm() and alert()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Updating-session"><span class="toc-number">2.</span> <span class="toc-text">Updating session</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#See-also"><span class="toc-number"></span> <span class="toc-text">See also</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/capybara/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/capybara/&text=Capybara"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/capybara/&title=Capybara"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/capybara/&is_video=false&description=Capybara"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Capybara&body=Check out this article: https://rupertqin.github.io/devhints/capybara/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/capybara/&title=Capybara"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/capybara/&title=Capybara"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/capybara/&title=Capybara"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/capybara/&title=Capybara"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/capybara/&name=Capybara&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

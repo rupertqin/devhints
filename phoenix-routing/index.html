@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Showing routes12mix phx.routes        # 1.3+mix phoenix.routes    # 1.2 and below See: Mix.Tasks.Phoenix.Routes (hexdocs.pm) Single routes1get &quot;/&quot;, PageController, :index Also: put post patch options">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Phoenix: Routing">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/phoenix-routing/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Showing routes12mix phx.routes        # 1.3+mix phoenix.routes    # 1.2 and below See: Mix.Tasks.Phoenix.Routes (hexdocs.pm) Single routes1get &quot;/&quot;, PageController, :index Also: put post patch options">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:37:07.999Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Phoenix: Routing">
+<meta name="twitter:description" content="Showing routes12mix phx.routes        # 1.3+mix phoenix.routes    # 1.2 and below See: Mix.Tasks.Phoenix.Routes (hexdocs.pm) Single routes1get &quot;/&quot;, PageController, :index Also: put post patch options">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Phoenix: Routing</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../phoenix/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../phoenix-migrations/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/phoenix-routing/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/phoenix-routing/&text=Phoenix: Routing"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/phoenix-routing/&title=Phoenix: Routing"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/phoenix-routing/&is_video=false&description=Phoenix: Routing"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Phoenix: Routing&body=Check out this article: https://rupertqin.github.io/devhints/phoenix-routing/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/phoenix-routing/&title=Phoenix: Routing"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/phoenix-routing/&title=Phoenix: Routing"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/phoenix-routing/&title=Phoenix: Routing"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/phoenix-routing/&title=Phoenix: Routing"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/phoenix-routing/&name=Phoenix: Routing&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Showing-routes"><span class="toc-number">1.</span> <span class="toc-text">Showing routes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Single-routes"><span class="toc-number">2.</span> <span class="toc-text">Single routes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Resources"><span class="toc-number">3.</span> <span class="toc-text">Resources</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Path-helpers"><span class="toc-number">4.</span> <span class="toc-text">Path helpers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nested-resources"><span class="toc-number">5.</span> <span class="toc-text">Nested resources</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scoped-routes"><span class="toc-number">6.</span> <span class="toc-text">Scoped routes</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Phoenix: Routing
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.372Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Elixir/">Elixir</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Showing-routes"><a href="#Showing-routes" class="headerlink" title="Showing routes"></a>Showing routes</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mix phx.routes        <span class="comment"># 1.3+</span></span><br><span class="line">mix phoenix.routes    <span class="comment"># 1.2 and below</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://hexdocs.pm/phoenix/Mix.Tasks.Phoenix.Routes.html" target="_blank" rel="noopener">Mix.Tasks.Phoenix.Routes</a> <em>(hexdocs.pm)</em></p>
+<h3 id="Single-routes"><a href="#Single-routes" class="headerlink" title="Single routes"></a>Single routes</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get <span class="string">"/"</span>, PageController, <span class="symbol">:index</span></span><br></pre></td></tr></table></figure>
+<p>Also: <code>put</code> <code>post</code> <code>patch</code> <code>options</code> <code>delete</code> <code>head</code></p>
+<h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resources <span class="string">"/users"</span>, UserController</span><br><span class="line">resources <span class="string">"/users"</span>, UserController, <span class="symbol">only:</span> [<span class="symbol">:index</span>, <span class="symbol">:show</span>]</span><br><span class="line">resources <span class="string">"/users"</span>, UserController, <span class="symbol">except:</span> [<span class="symbol">:delete</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">resources <span class="string">"/users"</span>, UserController,</span><br><span class="line">  <span class="symbol">as:</span> <span class="symbol">:person</span>    <span class="comment"># helper name (person_path)</span></span><br><span class="line">  <span class="symbol">name:</span> <span class="symbol">:person</span>  <span class="comment"># ...?</span></span><br><span class="line">  <span class="symbol">param:</span> <span class="symbol">:id</span>     <span class="comment"># name of parameter for this resource</span></span><br></pre></td></tr></table></figure>
+<p>Generates these routes:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Helper</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/users</code></td>
+<td><code>user_path(:index)</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/users/new</code></td>
+<td><code>user_path(:new)</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/users/:id</code></td>
+<td><code>user_path(:show, user)</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/users/:id/edit</code></td>
+<td><code>user_path(:edit, user)</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/users</code></td>
+<td><code>user_path(:create, user)</code></td>
+</tr>
+<tr>
+<td>PATCH/PUT</td>
+<td><code>/users/:id</code></td>
+<td><code>user_path(:update, user)</code></td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/users/:id</code></td>
+<td><code>user_path(:delete, user)</code></td>
+</tr>
+</tbody>
+</table>
+<p>See: <a href="https://hexdocs.pm/phoenix/Phoenix.Router.html#resources/4" target="_blank" rel="noopener">resources/4</a> <em>(hexdocs.pm)</em></p>
+<h3 id="Path-helpers"><a href="#Path-helpers" class="headerlink" title="Path helpers"></a>Path helpers</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">user_path(conn, <span class="symbol">:index</span>)                 <span class="comment"># → /users</span></span><br><span class="line">user_path(conn, <span class="symbol">:show</span>, <span class="number">17</span>)              <span class="comment"># → /users/17</span></span><br><span class="line">user_path(conn, <span class="symbol">:show</span>, %User&#123;<span class="symbol">id:</span> <span class="number">17</span>&#125;)   <span class="comment"># → /users/17</span></span><br><span class="line">user_path(conn, <span class="symbol">:show</span>, <span class="number">17</span>, <span class="symbol">admin:</span> <span class="keyword">true</span>) <span class="comment"># → /users/17?admin=true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user_url(conn, <span class="symbol">:index</span>) <span class="comment"># → "http://localhost:4000/users"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MyApp.Router.Helpers.user_path(MyApp.Endpoint, <span class="symbol">:index</span>)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://hexdocs.pm/phoenix/Phoenix.Router.html#module-helpers" target="_blank" rel="noopener">Helpers</a> <em>(hexdocs.pm)</em></p>
+<h3 id="Nested-resources"><a href="#Nested-resources" class="headerlink" title="Nested resources"></a>Nested resources</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resources <span class="string">"/users"</span>, UserController <span class="keyword">do</span></span><br><span class="line">  resources <span class="string">"/posts"</span>, PostController</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">user_post_path(<span class="symbol">:index</span>, <span class="number">17</span>)     <span class="comment"># → /users/17/posts</span></span><br><span class="line">user_post_path(<span class="symbol">:show</span>, <span class="number">17</span>, <span class="number">12</span>)  <span class="comment"># → /users/17/posts/12</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://hexdocs.pm/phoenix/Phoenix.Router.html#module-scopes-and-resources" target="_blank" rel="noopener">Scopes and resources</a> <em>(hexdocs.pm)</em></p>
+<h3 id="Scoped-routes"><a href="#Scoped-routes" class="headerlink" title="Scoped routes"></a>Scoped routes</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">scope <span class="string">"/admin"</span> <span class="keyword">do</span></span><br><span class="line">  pipe_through <span class="symbol">:browser</span></span><br><span class="line">  resources <span class="string">"/reviews"</span>, MyApp.Admin.ReviewController</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment"># reviews_path() -&gt; /admin/reviews</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scope <span class="string">"/admin"</span>, <span class="symbol">as:</span> <span class="symbol">:admin</span> <span class="symbol">do:</span> ... <span class="keyword">end</span></span><br><span class="line"><span class="comment"># admin_reviews_path() -&gt; /admin/reviews</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://hexdocs.pm/phoenix/Phoenix.Router.html#scope/2" target="_blank" rel="noopener">scope/2</a> <em>(hexdocs.pm)</em></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Showing-routes"><span class="toc-number">1.</span> <span class="toc-text">Showing routes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Single-routes"><span class="toc-number">2.</span> <span class="toc-text">Single routes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Resources"><span class="toc-number">3.</span> <span class="toc-text">Resources</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Path-helpers"><span class="toc-number">4.</span> <span class="toc-text">Path helpers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nested-resources"><span class="toc-number">5.</span> <span class="toc-text">Nested resources</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scoped-routes"><span class="toc-number">6.</span> <span class="toc-text">Scoped routes</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/phoenix-routing/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/phoenix-routing/&text=Phoenix: Routing"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/phoenix-routing/&title=Phoenix: Routing"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/phoenix-routing/&is_video=false&description=Phoenix: Routing"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Phoenix: Routing&body=Check out this article: https://rupertqin.github.io/devhints/phoenix-routing/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/phoenix-routing/&title=Phoenix: Routing"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/phoenix-routing/&title=Phoenix: Routing"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/phoenix-routing/&title=Phoenix: Routing"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/phoenix-routing/&title=Phoenix: Routing"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/phoenix-routing/&name=Phoenix: Routing&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

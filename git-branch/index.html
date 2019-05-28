@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Working with branchesCreating12git checkout -b $branchnamegit push origin $branchname --set-upstream Creates a new branch locally then pushes it. Getting from remote12git fetch origingit checkout --tr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git branches">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/git-branch/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Working with branchesCreating12git checkout -b $branchnamegit push origin $branchname --set-upstream Creates a new branch locally then pushes it. Getting from remote12git fetch origingit checkout --tr">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-09-19T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git branches">
+<meta name="twitter:description" content="Working with branchesCreating12git checkout -b $branchnamegit push origin $branchname --set-upstream Creates a new branch locally then pushes it. Getting from remote12git fetch origingit checkout --tr">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Git branches</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../gh-pages/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../freenode/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/git-branch/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/git-branch/&text=Git branches"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/git-branch/&title=Git branches"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/git-branch/&is_video=false&description=Git branches"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git branches&body=Check out this article: https://rupertqin.github.io/devhints/git-branch/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/git-branch/&title=Git branches"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/git-branch/&title=Git branches"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/git-branch/&title=Git branches"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/git-branch/&title=Git branches"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/git-branch/&name=Git branches&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Working-with-branches"><span class="toc-number">1.</span> <span class="toc-text">Working with branches</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Creating"><span class="toc-number">1.1.</span> <span class="toc-text">Creating</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting-from-remote"><span class="toc-number">1.2.</span> <span class="toc-text">Getting from remote</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Delete-local-remote-tracking-branches"><span class="toc-number">1.3.</span> <span class="toc-text">Delete local remote-tracking branches</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List-existing-branches"><span class="toc-number">1.4.</span> <span class="toc-text">List existing branches</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List-merged-branches"><span class="toc-number">1.5.</span> <span class="toc-text">List merged branches</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Delete-branch-forcefully"><span class="toc-number">1.6.</span> <span class="toc-text">Delete branch forcefully</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Delete-remote-branch"><span class="toc-number">1.7.</span> <span class="toc-text">Delete remote branch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-current-sha1"><span class="toc-number">1.8.</span> <span class="toc-text">Get current sha1</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Git branches
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.285Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Git/">Git</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Working-with-branches"><a href="#Working-with-branches" class="headerlink" title="Working with branches"></a>Working with branches</h2><h3 id="Creating"><a href="#Creating" class="headerlink" title="Creating"></a>Creating</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b <span class="variable">$branchname</span></span><br><span class="line">git push origin <span class="variable">$branchname</span> --<span class="built_in">set</span>-upstream</span><br></pre></td></tr></table></figure>
+<p>Creates a new branch locally then pushes it.</p>
+<h3 id="Getting-from-remote"><a href="#Getting-from-remote" class="headerlink" title="Getting from remote"></a>Getting from remote</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin</span><br><span class="line">git checkout --track origin/<span class="variable">$branchname</span></span><br></pre></td></tr></table></figure>
+<p>Gets a branch in a remote.</p>
+<h3 id="Delete-local-remote-tracking-branches"><a href="#Delete-local-remote-tracking-branches" class="headerlink" title="Delete local remote-tracking branches"></a>Delete local remote-tracking branches</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote prune origin</span><br></pre></td></tr></table></figure>
+<p>Deletes <code>origin/*</code> branches in your local copy. Doesn’t affect the remote.</p>
+<h3 id="List-existing-branches"><a href="#List-existing-branches" class="headerlink" title="List existing branches"></a>List existing branches</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch --list</span><br></pre></td></tr></table></figure>
+<p>Existing branches are listed. Current branch will be highlighted with an asterisk.</p>
+<h3 id="List-merged-branches"><a href="#List-merged-branches" class="headerlink" title="List merged branches"></a>List merged branches</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a --merged</span><br></pre></td></tr></table></figure>
+<p>List outdated branches that have been merged into the current one.</p>
+<h3 id="Delete-branch-forcefully"><a href="#Delete-branch-forcefully" class="headerlink" title="Delete branch forcefully"></a>Delete branch forcefully</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -D <span class="variable">$branchname</span></span><br></pre></td></tr></table></figure>
+<p>Delete a branch irrespective of its merged status.</p>
+<h3 id="Delete-remote-branch"><a href="#Delete-remote-branch" class="headerlink" title="Delete remote branch"></a>Delete remote branch</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :<span class="variable">$branchname</span></span><br></pre></td></tr></table></figure>
+<p>Works for tags, too!</p>
+<h3 id="Get-current-sha1"><a href="#Get-current-sha1" class="headerlink" title="Get current sha1"></a>Get current sha1</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show-ref HEAD -s</span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Working-with-branches"><span class="toc-number">1.</span> <span class="toc-text">Working with branches</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Creating"><span class="toc-number">1.1.</span> <span class="toc-text">Creating</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting-from-remote"><span class="toc-number">1.2.</span> <span class="toc-text">Getting from remote</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Delete-local-remote-tracking-branches"><span class="toc-number">1.3.</span> <span class="toc-text">Delete local remote-tracking branches</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List-existing-branches"><span class="toc-number">1.4.</span> <span class="toc-text">List existing branches</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List-merged-branches"><span class="toc-number">1.5.</span> <span class="toc-text">List merged branches</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Delete-branch-forcefully"><span class="toc-number">1.6.</span> <span class="toc-text">Delete branch forcefully</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Delete-remote-branch"><span class="toc-number">1.7.</span> <span class="toc-text">Delete remote branch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-current-sha1"><span class="toc-number">1.8.</span> <span class="toc-text">Get current sha1</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/git-branch/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/git-branch/&text=Git branches"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/git-branch/&title=Git branches"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/git-branch/&is_video=false&description=Git branches"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git branches&body=Check out this article: https://rupertqin.github.io/devhints/git-branch/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/git-branch/&title=Git branches"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/git-branch/&title=Git branches"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/git-branch/&title=Git branches"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/git-branch/&title=Git branches"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/git-branch/&name=Git branches&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

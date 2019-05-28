@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="RefsHEAD^       # 1 commit before head HEAD^^      # 2 commits before head HEAD~5      # 5 commits before head Branches# create a new branch   git checkout -b $branchname   git push origin $branchname">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git tricks">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/git-tricks/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="RefsHEAD^       # 1 commit before head HEAD^^      # 2 commits before head HEAD~5      # 5 commits before head Branches# create a new branch   git checkout -b $branchname   git push origin $branchname">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:23:51.289Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git tricks">
+<meta name="twitter:description" content="RefsHEAD^       # 1 commit before head HEAD^^      # 2 commits before head HEAD~5      # 5 commits before head Branches# create a new branch   git checkout -b $branchname   git push origin $branchname">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Git tricks</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../gmail/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../git-revisions/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/git-tricks/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/git-tricks/&text=Git tricks"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/git-tricks/&title=Git tricks"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/git-tricks/&is_video=false&description=Git tricks"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git tricks&body=Check out this article: https://rupertqin.github.io/devhints/git-tricks/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/git-tricks/&title=Git tricks"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/git-tricks/&title=Git tricks"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/git-tricks/&title=Git tricks"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/git-tricks/&title=Git tricks"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/git-tricks/&name=Git tricks&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Refs"><span class="toc-number">1.</span> <span class="toc-text">Refs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Branches"><span class="toc-number">2.</span> <span class="toc-text">Branches</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Collaboration"><span class="toc-number">3.</span> <span class="toc-text">Collaboration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Submodules"><span class="toc-number">4.</span> <span class="toc-text">Submodules</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Diff"><span class="toc-number">5.</span> <span class="toc-text">Diff</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Diff-with-stats"><span class="toc-number">5.1.</span> <span class="toc-text">Diff with stats</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Just-filenames"><span class="toc-number">5.2.</span> <span class="toc-text">Just filenames</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Log-options"><span class="toc-number">6.</span> <span class="toc-text">Log options</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Misc"><span class="toc-number">7.</span> <span class="toc-text">Misc</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Cherry-pick"><span class="toc-number">7.1.</span> <span class="toc-text">Cherry pick</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Misc-1"><span class="toc-number">7.2.</span> <span class="toc-text">Misc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Short-log"><span class="toc-number">8.</span> <span class="toc-text">Short log</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bisect"><span class="toc-number">9.</span> <span class="toc-text">Bisect</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Manual-bisection"><span class="toc-number">9.1.</span> <span class="toc-text">Manual bisection</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Searching"><span class="toc-number">10.</span> <span class="toc-text">Searching</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GPG-Signing"><span class="toc-number">11.</span> <span class="toc-text">GPG Signing</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Git tricks
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.289Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Git/">Git</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Refs"><a href="#Refs" class="headerlink" title="Refs"></a>Refs</h2><pre><code>HEAD^       # 1 commit before head
+HEAD^^      # 2 commits before head
+HEAD~5      # 5 commits before head
+</code></pre><h2 id="Branches"><a href="#Branches" class="headerlink" title="Branches"></a>Branches</h2><pre><code># create a new branch
+  git checkout -b $branchname
+  git push origin $branchname --set-upstream
+
+# get a remote branch
+  git fetch origin
+  git checkout --track origin/$branchname
+
+# delete local remote-tracking branches (lol)
+  git remote prune origin
+
+# list merged branches
+  git branch -a --merged
+
+# delete remote branch
+  git push origin :$branchname
+
+# go back to previous branch
+  git checkout -
+</code></pre><h2 id="Collaboration"><a href="#Collaboration" class="headerlink" title="Collaboration"></a>Collaboration</h2><pre><code># Rebase your changes on top of the remote master
+  git pull --rebase upstream master
+
+# Squash multiple commits into one for a cleaner git log
+# (on the following screen change the word pick to either &apos;f&apos; or &apos;s&apos;)
+  git rebase -i $commit_ref
+</code></pre><h2 id="Submodules"><a href="#Submodules" class="headerlink" title="Submodules"></a>Submodules</h2><pre><code># Import .gitmodules
+  git submodule init
+
+# Clone missing submodules, and checkout commits
+  git submodule update --init --recursive
+
+# Update remote URLs in .gitmodules
+# (Use when you changed remotes in submodules)
+  git submodule sync
+</code></pre><h2 id="Diff"><a href="#Diff" class="headerlink" title="Diff"></a>Diff</h2><h3 id="Diff-with-stats"><a href="#Diff-with-stats" class="headerlink" title="Diff with stats"></a>Diff with stats</h3><pre><code>git diff --stat
+app/a.txt    | 2 +-
+app/b.txt    | 8 ++----
+2 files changed, 10 insertions(+), 84 deletions(-)
+</code></pre><h3 id="Just-filenames"><a href="#Just-filenames" class="headerlink" title="Just filenames"></a>Just filenames</h3><pre><code>git diff --summary
+</code></pre><h2 id="Log-options"><a href="#Log-options" class="headerlink" title="Log options"></a>Log options</h2><pre><code>--oneline
+  e11e9f9 Commit message here
+
+--decorate
+  shows &quot;(origin/master)&quot;
+
+--graph
+  shows graph lines
+
+--date=relative
+  &quot;2 hours ago&quot;
+</code></pre><h2 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h2><h3 id="Cherry-pick"><a href="#Cherry-pick" class="headerlink" title="Cherry pick"></a>Cherry pick</h3><pre><code>git rebase 76acada^
+</code></pre><h3 id="Misc-1"><a href="#Misc-1" class="headerlink" title="Misc"></a>Misc</h3><pre><code># get current sha1 (?)
+  git show-ref HEAD -s
+
+# show single commit info
+  git log -1 f5a960b5
+
+# Go back up to root directory
+  cd &quot;$(git rev-parse --show-top-level)&quot;
+</code></pre><h2 id="Short-log"><a href="#Short-log" class="headerlink" title="Short log"></a>Short log</h2><pre><code>$ git shortlog
+$ git shortlog HEAD~20..    # last 20 commits
+
+James Dean (1):
+    Commit here
+    Commit there
+
+Frank Sinatra (5):
+    Another commit
+    This other commit
+</code></pre><h2 id="Bisect"><a href="#Bisect" class="headerlink" title="Bisect"></a>Bisect</h2><pre><code>git bisect start HEAD HEAD~6
+git bisect run npm test
+git checkout refs/bisect/bad   # this is where it screwed up
+git bisect reset
+</code></pre><h3 id="Manual-bisection"><a href="#Manual-bisection" class="headerlink" title="Manual bisection"></a>Manual bisection</h3><pre><code>git bisect start
+git bisect good   # current version is good
+
+git checkout HEAD~8
+npm test          # see if it&apos;s good
+git bisect bad    # current version is bad
+
+git bisect reset  # abort
+</code></pre><h2 id="Searching"><a href="#Searching" class="headerlink" title="Searching"></a>Searching</h2><pre><code>git log --grep=&quot;fixes things&quot;  # search in commit messages
+git log -S&quot;window.alert&quot;       # search in code
+git log -G&quot;foo.*&quot;              # search in code (regex)
+</code></pre><h2 id="GPG-Signing"><a href="#GPG-Signing" class="headerlink" title="GPG Signing"></a>GPG Signing</h2><pre><code>git config set user.signingkey &lt;GPG KEY ID&gt;       # Sets GPG key to use for signing
+
+git commit -m &quot;Implement feature Y&quot; --gpg-sign    # Or -S, GPG signs commit
+
+git config set commit.gpgsign true                # Sign commits by default
+git commit -m &quot;Implement feature Y&quot; --no-gpg-sign # Do not sign
+</code></pre>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Refs"><span class="toc-number">1.</span> <span class="toc-text">Refs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Branches"><span class="toc-number">2.</span> <span class="toc-text">Branches</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Collaboration"><span class="toc-number">3.</span> <span class="toc-text">Collaboration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Submodules"><span class="toc-number">4.</span> <span class="toc-text">Submodules</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Diff"><span class="toc-number">5.</span> <span class="toc-text">Diff</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Diff-with-stats"><span class="toc-number">5.1.</span> <span class="toc-text">Diff with stats</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Just-filenames"><span class="toc-number">5.2.</span> <span class="toc-text">Just filenames</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Log-options"><span class="toc-number">6.</span> <span class="toc-text">Log options</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Misc"><span class="toc-number">7.</span> <span class="toc-text">Misc</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Cherry-pick"><span class="toc-number">7.1.</span> <span class="toc-text">Cherry pick</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Misc-1"><span class="toc-number">7.2.</span> <span class="toc-text">Misc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Short-log"><span class="toc-number">8.</span> <span class="toc-text">Short log</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bisect"><span class="toc-number">9.</span> <span class="toc-text">Bisect</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Manual-bisection"><span class="toc-number">9.1.</span> <span class="toc-text">Manual bisection</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Searching"><span class="toc-number">10.</span> <span class="toc-text">Searching</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GPG-Signing"><span class="toc-number">11.</span> <span class="toc-text">GPG Signing</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/git-tricks/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/git-tricks/&text=Git tricks"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/git-tricks/&title=Git tricks"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/git-tricks/&is_video=false&description=Git tricks"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git tricks&body=Check out this article: https://rupertqin.github.io/devhints/git-tricks/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/git-tricks/&title=Git tricks"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/git-tricks/&title=Git tricks"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/git-tricks/&title=Git tricks"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/git-tricks/&title=Git tricks"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/git-tricks/&name=Git tricks&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

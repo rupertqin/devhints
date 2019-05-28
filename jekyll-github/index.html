@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Jekyll jekyll-avatar jekyll-coffeescript jekyll-default-layout jekyll-feed jekyll-gist jekyll-github-metadata jekyll-mentions jekyll-optional-front-matter jekyll-paginate jekyll-readme-index jekyll-re">
+<meta name="keywords" content="WIP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jekyll for GitHub pages">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/jekyll-github/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Jekyll jekyll-avatar jekyll-coffeescript jekyll-default-layout jekyll-feed jekyll-gist jekyll-github-metadata jekyll-mentions jekyll-optional-front-matter jekyll-paginate jekyll-readme-index jekyll-re">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-08-25T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jekyll for GitHub pages">
+<meta name="twitter:description" content="Jekyll jekyll-avatar jekyll-coffeescript jekyll-default-layout jekyll-feed jekyll-gist jekyll-github-metadata jekyll-mentions jekyll-optional-front-matter jekyll-paginate jekyll-readme-index jekyll-re">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Jekyll for GitHub pages</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../jasmine/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../jade/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/jekyll-github/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/jekyll-github/&text=Jekyll for GitHub pages"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/jekyll-github/&title=Jekyll for GitHub pages"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/jekyll-github/&is_video=false&description=Jekyll for GitHub pages"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Jekyll for GitHub pages&body=Check out this article: https://rupertqin.github.io/devhints/jekyll-github/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/jekyll-github/&title=Jekyll for GitHub pages"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/jekyll-github/&title=Jekyll for GitHub pages"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/jekyll-github/&title=Jekyll for GitHub pages"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/jekyll-github/&title=Jekyll for GitHub pages"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/jekyll-github/&name=Jekyll for GitHub pages&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Jekyll"><span class="toc-number">1.</span> <span class="toc-text">Jekyll</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub-Metadata"><span class="toc-number">2.</span> <span class="toc-text">GitHub Metadata</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration"><span class="toc-number">2.1.</span> <span class="toc-text">Configuration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Listing-repos"><span class="toc-number">2.2.</span> <span class="toc-text">Listing repos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Link-to-repo"><span class="toc-number">2.3.</span> <span class="toc-text">Link to repo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gists"><span class="toc-number">3.</span> <span class="toc-text">Gists</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration-1"><span class="toc-number">3.1.</span> <span class="toc-text">Configuration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage"><span class="toc-number">3.2.</span> <span class="toc-text">Usage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mentions"><span class="toc-number">4.</span> <span class="toc-text">Mentions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration-2"><span class="toc-number">4.1.</span> <span class="toc-text">Configuration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage-1"><span class="toc-number">4.2.</span> <span class="toc-text">Usage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redirects"><span class="toc-number">5.</span> <span class="toc-text">Redirects</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration-3"><span class="toc-number">5.1.</span> <span class="toc-text">Configuration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage-2"><span class="toc-number">5.2.</span> <span class="toc-text">Usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redirecting"><span class="toc-number">5.3.</span> <span class="toc-text">Redirecting</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Jekyll for GitHub pages
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.318Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Jekyll/">Jekyll</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="../tags/WIP/">WIP</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Jekyll"><a href="#Jekyll" class="headerlink" title="Jekyll"></a>Jekyll</h2><ul>
+<li>jekyll-avatar</li>
+<li>jekyll-coffeescript</li>
+<li>jekyll-default-layout</li>
+<li>jekyll-feed</li>
+<li>jekyll-gist</li>
+<li>jekyll-github-metadata</li>
+<li>jekyll-mentions</li>
+<li>jekyll-optional-front-matter</li>
+<li>jekyll-paginate</li>
+<li>jekyll-readme-index</li>
+<li>jekyll-redirect-from</li>
+<li>jekyll-relative-links</li>
+<li>jekyll-sass-converter</li>
+<li>jekyll-seo-tag</li>
+<li>jekyll-sitemap</li>
+</ul>
+<p>As of github-pages v156. For an updated list, see: <a href="https://pages.github.com/versions/" target="_blank" rel="noopener">Dependency versions</a> <em>(pages.github.com)</em></p>
+<h2 id="GitHub-Metadata"><a href="#GitHub-Metadata" class="headerlink" title="GitHub Metadata"></a>GitHub Metadata</h2><h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">jekyll-github-metadata</span></span><br><span class="line"></span><br><span class="line"><span class="attr">repository:</span> <span class="string">username/project</span></span><br></pre></td></tr></table></figure>
+<p>Put this in your <code>_config.yml</code>.<br>See: <a href="https://help.github.com/articles/repository-metadata-on-github-pages/" target="_blank" rel="noopener">Repository metadata on GitHub pages</a></p>
+<h3 id="Listing-repos"><a href="#Listing-repos" class="headerlink" title="Listing repos"></a>Listing repos</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for repository in site.github.public_repositories %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">'&#123;&#123; repository.html_url &#125;&#125;'</span>&gt;</span></span><br><span class="line">    &#123;&#123; repository.name &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Link-to-repo"><a href="#Link-to-repo" class="headerlink" title="Link to repo"></a>Link to repo</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">'&#123;&#123; site.github.repository_url &#125;&#125;'</span>&gt;</span></span><br><span class="line">  &#123;&#123; site.github.project_title &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Gists"><a href="#Gists" class="headerlink" title="Gists"></a>Gists</h2><h3 id="Configuration-1"><a href="#Configuration-1" class="headerlink" title="Configuration"></a>Configuration</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">jekyll-gist</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://github.com/jekyll/jekyll-gist" target="_blank" rel="noopener">jekyll-gist</a></p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% gist parkr/c08ee0f2726fd0e3909d %&#125;</span><br></pre></td></tr></table></figure>
+<p>This places a Gist in your page.</p>
+<h2 id="Mentions"><a href="#Mentions" class="headerlink" title="Mentions"></a>Mentions</h2><h3 id="Configuration-2"><a href="#Configuration-2" class="headerlink" title="Configuration"></a>Configuration</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">jekyll-mentions</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://github.com/jekyll/jekyll-mentions" target="_blank" rel="noopener">jekyll-mentions</a></p>
+<h3 id="Usage-1"><a href="#Usage-1" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hey @rstacruz, what <span class="keyword">do</span> you think <span class="keyword">of</span> <span class="keyword">this</span>?</span><br></pre></td></tr></table></figure>
+<p>Just mention anyone in any page. Their names will be turned into links.</p>
+<h2 id="Redirects"><a href="#Redirects" class="headerlink" title="Redirects"></a>Redirects</h2><h3 id="Configuration-3"><a href="#Configuration-3" class="headerlink" title="Configuration"></a>Configuration</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">jekyll-redirect-from</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://rubygems.org/gems/jekyll-redirect-from" target="_blank" rel="noopener">jekyll-redirect-from</a></p>
+<h3 id="Usage-2"><a href="#Usage-2" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">redirect_from:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">/foo</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<p>Place on any page.</p>
+<h3 id="Redirecting"><a href="#Redirecting" class="headerlink" title="Redirecting"></a>Redirecting</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">redirect_to:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">/foo</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<p>Place on any page.<br>See: <a href="https://github.com/jekyll/jekyll-redirect-from#redirect-to" target="_blank" rel="noopener">redirect to</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Jekyll"><span class="toc-number">1.</span> <span class="toc-text">Jekyll</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub-Metadata"><span class="toc-number">2.</span> <span class="toc-text">GitHub Metadata</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration"><span class="toc-number">2.1.</span> <span class="toc-text">Configuration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Listing-repos"><span class="toc-number">2.2.</span> <span class="toc-text">Listing repos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Link-to-repo"><span class="toc-number">2.3.</span> <span class="toc-text">Link to repo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gists"><span class="toc-number">3.</span> <span class="toc-text">Gists</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration-1"><span class="toc-number">3.1.</span> <span class="toc-text">Configuration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage"><span class="toc-number">3.2.</span> <span class="toc-text">Usage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mentions"><span class="toc-number">4.</span> <span class="toc-text">Mentions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration-2"><span class="toc-number">4.1.</span> <span class="toc-text">Configuration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage-1"><span class="toc-number">4.2.</span> <span class="toc-text">Usage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redirects"><span class="toc-number">5.</span> <span class="toc-text">Redirects</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration-3"><span class="toc-number">5.1.</span> <span class="toc-text">Configuration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage-2"><span class="toc-number">5.2.</span> <span class="toc-text">Usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redirecting"><span class="toc-number">5.3.</span> <span class="toc-text">Redirecting</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/jekyll-github/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/jekyll-github/&text=Jekyll for GitHub pages"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/jekyll-github/&title=Jekyll for GitHub pages"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/jekyll-github/&is_video=false&description=Jekyll for GitHub pages"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Jekyll for GitHub pages&body=Check out this article: https://rupertqin.github.io/devhints/jekyll-github/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/jekyll-github/&title=Jekyll for GitHub pages"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/jekyll-github/&title=Jekyll for GitHub pages"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/jekyll-github/&title=Jekyll for GitHub pages"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/jekyll-github/&title=Jekyll for GitHub pages"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/jekyll-github/&name=Jekyll for GitHub pages&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

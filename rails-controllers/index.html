@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Common stuffredirect_to root_url redirect_to root_url, notice: &amp;quot;Good.&amp;quot; Special hashessession[:user_id] = nil  flash[:notice] = &amp;quot;Hello&amp;quot;    # Gets flushed on next request flash.keep">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Controllers">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/rails-controllers/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Common stuffredirect_to root_url redirect_to root_url, notice: &amp;quot;Good.&amp;quot; Special hashessession[:user_id] = nil  flash[:notice] = &amp;quot;Hello&amp;quot;    # Gets flushed on next request flash.keep">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:23:51.391Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Controllers">
+<meta name="twitter:description" content="Common stuffredirect_to root_url redirect_to root_url, notice: &amp;quot;Good.&amp;quot; Special hashessession[:user_id] = nil  flash[:notice] = &amp;quot;Hello&amp;quot;    # Gets flushed on next request flash.keep">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Controllers</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../rails-features/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../ractive/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/rails-controllers/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/rails-controllers/&text=Controllers"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/rails-controllers/&title=Controllers"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/rails-controllers/&is_video=false&description=Controllers"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Controllers&body=Check out this article: https://rupertqin.github.io/devhints/rails-controllers/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/rails-controllers/&title=Controllers"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/rails-controllers/&title=Controllers"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/rails-controllers/&title=Controllers"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/rails-controllers/&title=Controllers"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/rails-controllers/&name=Controllers&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Common-stuff"><span class="toc-number">1.</span> <span class="toc-text">Common stuff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Special-hashes"><span class="toc-number">2.</span> <span class="toc-text">Special hashes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#respond-to"><span class="toc-number">3.</span> <span class="toc-text">respond_to</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#default-url-options"><span class="toc-number">4.</span> <span class="toc-text">default_url_options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filters"><span class="toc-number">5.</span> <span class="toc-text">Filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP-basic-authentication"><span class="toc-number">6.</span> <span class="toc-text">HTTP basic authentication</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Request-response"><span class="toc-number">7.</span> <span class="toc-text">Request/response</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#response"><span class="toc-number">8.</span> <span class="toc-text">response</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Streaming"><span class="toc-number">9.</span> <span class="toc-text">Streaming</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-number">10.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Controllers
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.391Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Rails/">Rails</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Common-stuff"><a href="#Common-stuff" class="headerlink" title="Common stuff"></a>Common stuff</h3><pre><code>redirect_to root_url
+redirect_to root_url, notice: &quot;Good.&quot;
+</code></pre><h3 id="Special-hashes"><a href="#Special-hashes" class="headerlink" title="Special hashes"></a>Special hashes</h3><pre><code>session[:user_id] = nil
+
+flash[:notice] = &quot;Hello&quot;    # Gets flushed on next request
+flash.keep                  # Persist flash values
+flash.now[:error] = &quot;Boo&quot;   # Available on the same request
+
+cookies[:hello] = &quot;Hi&quot;
+
+params[:page]
+
+# params is a combination of:
+query_parameters
+path_parameters
+request_parameters
+</code></pre><h3 id="respond-to"><a href="#respond-to" class="headerlink" title="respond_to"></a>respond_to</h3><pre><code>respond_to do |format|
+  format.html
+  format.xml  { render xml: @users }
+  format.json { render json: @users }
+  format.js    # Will be executed by the browser
+end
+</code></pre><h3 id="default-url-options"><a href="#default-url-options" class="headerlink" title="default_url_options"></a>default_url_options</h3><pre><code># The options parameter is the hash passed in to &apos;url_for&apos;
+def default_url_options(options)
+  {:locale =&gt; I18n.locale}
+end
+</code></pre><h3 id="Filters"><a href="#Filters" class="headerlink" title="Filters"></a>Filters</h3><pre><code># Filter with callbacks
+before_filter :authenticate
+before_filter :authenticate, except: [:login]
+before_filter :authenticate, only: [:login]
+def authenticate
+  redirect_to login_url unless controller.logged_in?
+end
+
+# Filter with inline
+before_filter do |controller|
+  redirect_to login_url unless controller.logged_in?
+end
+
+# Filter with external classes
+before_filter LoginFilter
+class LoginFilter
+  def self.filter(controller) ...; end
+end
+
+# Filter exceptions
+skip_before_filter :require_login, only: [:new, :create]
+
+# Before/after filters
+around_filter :wrap_in_transaction
+def wrap_in_transaction(&amp;blk)
+  ActiveRecord::Base.transaction { yield }
+end
+</code></pre><h3 id="HTTP-basic-authentication"><a href="#HTTP-basic-authentication" class="headerlink" title="HTTP basic authentication"></a>HTTP basic authentication</h3><pre><code>before_filter :authenticate
+
+# Basic authentication:
+def authenticate
+  authenticate_or_request_with_http_basic { |u, p|
+    u == &quot;root&quot; &amp;&amp; p == &quot;alpine&quot;
+  }
+end
+
+# ...or digest (hashed) authentication:
+# uses the ha1 hash (username:realm:password)
+def authenticate_by_digest
+  realm = &quot;Secret3000&quot;
+  users = {
+    &quot;rsc&quot; =&gt; Digest::MD5.hexdigest(&quot;rsc:#{realm}:passwordhere&quot;)
+  }
+
+  authenticate_or_request_with_http_digest(realm) { |user|
+    users[user]
+  }
+end
+
+# For integration tests
+def test_access
+  auth = ActionController::HttpAuthentication::Basic.encode_credentials(user, pass)
+  get &quot;/notes/1.xml&quot;, nil, &apos;HTTP_AUTHORIZATION&apos; =&gt; auth
+end
+
+# Token auth
+is_logged_in = authenticate_with_http_token do |token, options|
+  token == our_secret_token
+end
+
+request_http_token_authentication  unless is_logged_in
+</code></pre><h3 id="Request-response"><a href="#Request-response" class="headerlink" title="Request/response"></a>Request/response</h3><pre><code>request.host            #=&gt; &quot;www.example.com&quot;
+request.domain          #=&gt; &quot;www.example.com&quot;
+request.domain(n=2)     #=&gt; &quot;example.com&quot;
+request.port            #=&gt; 80
+request.protocol        #=&gt; &quot;http://&quot;
+request.query_string    #=&gt; &quot;q=duck+tales&quot;
+request.url             #=&gt; &quot;http://www.example.com/search?q=duck+tales&quot;
+request.fullpath        #=&gt; &quot;/search?q=duck+tales&quot;
+
+request.headers         # Returns a hash
+
+request.format          #=&gt; &quot;text/html&quot;
+request.remote_ip       #=&gt; &quot;203.167.220.220&quot;
+request.local?          #=&gt; true (if localhost/127.0.0.1)
+
+request.xhr?
+
+request.method          #=&gt; &quot;POST&quot;
+request.method_symbol   #=&gt; :post
+request.get?
+request.post?
+request.put?
+request.delete?
+request.head?
+</code></pre><h3 id="response"><a href="#response" class="headerlink" title="response"></a>response</h3><pre><code>response.body
+response.status         #=&gt; 404
+response.location       # Redirect location
+response.content_type
+response.charset
+response.headers
+
+response.headers[&quot;Content-Type&quot;] = &quot;application/pdf&quot;
+</code></pre><h3 id="Streaming"><a href="#Streaming" class="headerlink" title="Streaming"></a>Streaming</h3><pre><code>send_data pdfdata, filename: &quot;foo.pdf&quot;, type: &quot;application/pdf&quot;
+send_file Rails.root.join(&apos;public&apos;,&apos;filename.txt&apos;) [filename: &apos;..&apos;, type: &apos;..&apos;]
+</code></pre><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul>
+<li><a href="http://guides.rubyonrails.org/action_controller_overview.html" target="_blank" rel="noopener">Guide</a></li>
+<li><a href="http://api.rubyonrails.org/classes/ActionController/HttpAuthentication/Basic.html" target="_blank" rel="noopener">HttpAuthentication::Basic</a></li>
+<li><a href="http://api.rubyonrails.org/classes/ActionController/HttpAuthentication/Token.html" target="_blank" rel="noopener">HttpAuthentication::Token</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Common-stuff"><span class="toc-number">1.</span> <span class="toc-text">Common stuff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Special-hashes"><span class="toc-number">2.</span> <span class="toc-text">Special hashes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#respond-to"><span class="toc-number">3.</span> <span class="toc-text">respond_to</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#default-url-options"><span class="toc-number">4.</span> <span class="toc-text">default_url_options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filters"><span class="toc-number">5.</span> <span class="toc-text">Filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP-basic-authentication"><span class="toc-number">6.</span> <span class="toc-text">HTTP basic authentication</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Request-response"><span class="toc-number">7.</span> <span class="toc-text">Request/response</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#response"><span class="toc-number">8.</span> <span class="toc-text">response</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Streaming"><span class="toc-number">9.</span> <span class="toc-text">Streaming</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-number">10.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/rails-controllers/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/rails-controllers/&text=Controllers"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/rails-controllers/&title=Controllers"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/rails-controllers/&is_video=false&description=Controllers"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Controllers&body=Check out this article: https://rupertqin.github.io/devhints/rails-controllers/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/rails-controllers/&title=Controllers"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/rails-controllers/&title=Controllers"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/rails-controllers/&title=Controllers"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/rails-controllers/&title=Controllers"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/rails-controllers/&name=Controllers&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

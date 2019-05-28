@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Getting startedMounting1import &amp;#123;shallow, mount&amp;#125; from &apos;enzyme&apos; 1wrap = shallow(&amp;lt;MyComponent /&amp;gt;) 1wrap = mount(&amp;lt;MyComponent /&amp;gt;) Shallow wrapping doesn’t descend down to sub-compone">
+<meta name="keywords" content="shallow(),mount(),wrap.setProps(),wrap.find().simulate(&#39;click&#39;),wrap.contains(&lt;div&#x2F;&gt;)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Enzyme">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/enzyme/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Getting startedMounting1import &amp;#123;shallow, mount&amp;#125; from &apos;enzyme&apos; 1wrap = shallow(&amp;lt;MyComponent /&amp;gt;) 1wrap = mount(&amp;lt;MyComponent /&amp;gt;) Shallow wrapping doesn’t descend down to sub-compone">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-26T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Enzyme">
+<meta name="twitter:description" content="Getting startedMounting1import &amp;#123;shallow, mount&amp;#125; from &apos;enzyme&apos; 1wrap = shallow(&amp;lt;MyComponent /&amp;gt;) 1wrap = mount(&amp;lt;MyComponent /&amp;gt;) Shallow wrapping doesn’t descend down to sub-compone">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Enzyme</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../enzyme@2/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../emmet/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/enzyme/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/enzyme/&text=Enzyme"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/enzyme/&title=Enzyme"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/enzyme/&is_video=false&description=Enzyme"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Enzyme&body=Check out this article: https://rupertqin.github.io/devhints/enzyme/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/enzyme/&title=Enzyme"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/enzyme/&title=Enzyme"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/enzyme/&title=Enzyme"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/enzyme/&title=Enzyme"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/enzyme/&name=Enzyme&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mounting"><span class="toc-number">1.1.</span> <span class="toc-text">Mounting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debugging"><span class="toc-number">1.2.</span> <span class="toc-text">Debugging</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">2.</span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-example"><span class="toc-number">2.1.</span> <span class="toc-text">Basic example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Props-and-state"><span class="toc-number">2.2.</span> <span class="toc-text">Props and state</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Setting"><span class="toc-number">2.2.1.</span> <span class="toc-text">Setting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Asserting"><span class="toc-number">2.2.2.</span> <span class="toc-text">Asserting</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Matching-elements"><span class="toc-number">2.3.</span> <span class="toc-text">Matching elements</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Snapshots"><span class="toc-number">2.4.</span> <span class="toc-text">Snapshots</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Traversions"><span class="toc-number">2.5.</span> <span class="toc-text">Traversions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Simulating-events"><span class="toc-number">2.6.</span> <span class="toc-text">Simulating events</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#With-event-object-props"><span class="toc-number">2.6.1.</span> <span class="toc-text">With event object props</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installing"><span class="toc-number">3.</span> <span class="toc-text">Installing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Initial-setup"><span class="toc-number">3.1.</span> <span class="toc-text">Initial setup</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#test-setup-js"><span class="toc-number">3.1.1.</span> <span class="toc-text">test/setup.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#package-json"><span class="toc-number">3.1.2.</span> <span class="toc-text">package.json</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jest-snapshots"><span class="toc-number">3.2.</span> <span class="toc-text">Jest snapshots</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#package-json-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">package.json</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Test"><span class="toc-number">3.2.2.</span> <span class="toc-text">Test</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ReactWrapper"><span class="toc-number">4.</span> <span class="toc-text">ReactWrapper</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Traversing"><span class="toc-number">4.1.</span> <span class="toc-text">Traversing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Actions"><span class="toc-number">4.2.</span> <span class="toc-text">Actions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React-components"><span class="toc-number">4.3.</span> <span class="toc-text">React components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mount"><span class="toc-number">4.4.</span> <span class="toc-text">Mount</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tests"><span class="toc-number">4.5.</span> <span class="toc-text">Tests</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">5.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Enzyme
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.259Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/React/">React</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="../tags/Featured/">Featured</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><h3 id="Mounting"><a href="#Mounting" class="headerlink" title="Mounting"></a>Mounting</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;shallow, mount&#125; <span class="keyword">from</span> <span class="string">'enzyme'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrap = shallow(<span class="xml"><span class="tag">&lt;<span class="name">MyComponent</span> /&gt;</span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrap = mount(<span class="xml"><span class="tag">&lt;<span class="name">MyComponent</span> /&gt;</span>)</span></span><br></pre></td></tr></table></figure>
+<p>Shallow wrapping doesn’t descend down to sub-components.<br>A full mount also mounts sub-components.</p>
+<p>See: <a href="http://airbnb.io/enzyme/docs/api/shallow.html" target="_blank" rel="noopener">Shallow rendering</a>,<br><a href="http://airbnb.io/enzyme/docs/api/mount.html" target="_blank" rel="noopener">Full rendering</a></p>
+<h3 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(wrap.debug())</span><br></pre></td></tr></table></figure>
+<p>Shows HTML for debugging purposes.</p>
+<p>See: <a href="http://airbnb.io/enzyme/docs/api/ReactWrapper/debug.html" target="_blank" rel="noopener">debug()</a></p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h3 id="Basic-example"><a href="#Basic-example" class="headerlink" title="Basic example"></a>Basic example</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; shallow &#125; <span class="keyword">from</span> <span class="string">'enzyme'</span></span><br><span class="line"><span class="keyword">import</span> MyComponent <span class="keyword">from</span> <span class="string">'../MyComponent'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">it(<span class="string">'works'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> wrap = shallow(</span><br><span class="line">    &lt;MyComponent name=<span class="string">'Groot'</span> /&gt;</span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line">  expect(wrap.text()).toEqual(<span class="string">'I am Groot'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="Props-and-state"><a href="#Props-and-state" class="headerlink" title="Props and state"></a>Props and state</h3><h4 id="Setting"><a href="#Setting" class="headerlink" title="Setting"></a>Setting</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wrap.setProps(&#123; <span class="attr">name</span>: <span class="string">'Moe'</span> &#125;)</span><br><span class="line">wrap.setState(&#123; <span class="attr">show</span>: <span class="literal">true</span> &#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="Asserting"><a href="#Asserting" class="headerlink" title="Asserting"></a>Asserting</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">expect(wrap.props(<span class="string">'name'</span>)).toEqual(<span class="string">'Moe'</span>)</span><br><span class="line">expect(wrap.state(<span class="string">'show'</span>)).toEqual(<span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">expect(<span class="string">'name'</span> <span class="keyword">in</span> wrap.props()).toEqual(<span class="literal">true</span>)</span><br><span class="line">expect(<span class="string">'show'</span> <span class="keyword">in</span> wrap.state()).toEqual(<span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Matching-elements"><a href="#Matching-elements" class="headerlink" title="Matching elements"></a>Matching elements</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">expect(</span><br><span class="line">  wrap.containsMatchingElement(</span><br><span class="line">    &lt;span&gt;I am groot&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">  )</span></span><br><span class="line"><span class="regexp">).toBeTruthy()</span></span><br></pre></td></tr></table></figure>
+<p><code>containsMatchingElement()</code> is probably the most useful assertion in Jest.</p>
+<h3 id="Snapshots"><a href="#Snapshots" class="headerlink" title="Snapshots"></a>Snapshots</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect(wrap).toMatchSnapshot()</span><br></pre></td></tr></table></figure>
+<p>Be sure you’ve set up enzyme-to-json for snapshots (see <a href="#installing">Installing</a> below).</p>
+<h3 id="Traversions"><a href="#Traversions" class="headerlink" title="Traversions"></a>Traversions</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">expect(</span><br><span class="line">  wrap.find(<span class="string">'button'</span>).text()</span><br><span class="line">).toEqual(<span class="string">'Submit'</span>)</span><br></pre></td></tr></table></figure>
+<p>Use <code>.find()</code> to traverse down to nodes. It will return wrapper objects, too.</p>
+<h3 id="Simulating-events"><a href="#Simulating-events" class="headerlink" title="Simulating events"></a>Simulating events</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrap.find(<span class="string">'input'</span>).simulate(<span class="string">'click'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="With-event-object-props"><a href="#With-event-object-props" class="headerlink" title="With event object props"></a>With event object props</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wrap.find(<span class="string">'input'</span>).simulate(<span class="string">'change'</span>, &#123;</span><br><span class="line">  target: &#123; <span class="attr">value</span>: <span class="string">'hello'</span> &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Installing"><a href="#Installing" class="headerlink" title="Installing"></a>Installing</h2><h3 id="Initial-setup"><a href="#Initial-setup" class="headerlink" title="Initial setup"></a>Initial setup</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev enzyme \</span><br><span class="line">  enzyme-adapter-react-16 \</span><br><span class="line">  react-test-renderer</span><br></pre></td></tr></table></figure>
+<h4 id="test-setup-js"><a href="#test-setup-js" class="headerlink" title="test/setup.js"></a>test/setup.js</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Enzyme <span class="keyword">from</span> <span class="string">'enzyme'</span></span><br><span class="line"><span class="keyword">import</span> Adapter <span class="keyword">from</span> <span class="string">'enzyme-adapter-react-16'</span></span><br><span class="line"></span><br><span class="line">Enzyme.configure(&#123; <span class="attr">adapter</span>: <span class="keyword">new</span> Adapter() &#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"jest"</span>: &#123;</span><br><span class="line">  <span class="string">"setupFiles"</span>: [</span><br><span class="line">    <span class="string">"test/setup.js"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This configures Enzyme for React v16, and Jest to automatically configure Enzyme for you. There are other adapters in Enzyme’s installation instructions.</p>
+<p>See: <a href="http://airbnb.io/enzyme/#installation" target="_blank" rel="noopener">Installation</a></p>
+<h3 id="Jest-snapshots"><a href="#Jest-snapshots" class="headerlink" title="Jest snapshots"></a>Jest snapshots</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev enzyme-to-json</span><br></pre></td></tr></table></figure>
+<h4 id="package-json-1"><a href="#package-json-1" class="headerlink" title="package.json"></a>package.json</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"jest"</span>: &#123;</span><br><span class="line">  <span class="string">"snapshotSerializers"</span>: [</span><br><span class="line">    <span class="string">"enzyme-to-json/serializer"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">it(<span class="string">'works'</span>, () =&gt; &#123;</span><br><span class="line">  wrap = mount(<span class="xml"><span class="tag">&lt;<span class="name">MyComponent</span> /&gt;</span>)</span></span><br><span class="line"><span class="xml">  expect(wrap).toMatchSnapshot()</span></span><br><span class="line"><span class="xml">&#125;)</span></span><br></pre></td></tr></table></figure>
+<p>Optional, but recommended: This allows you to use Enzyme wrappers with Jest snapshots.</p>
+<p>See: <a href="https://www.npmjs.com/package/enzyme-to-json" target="_blank" rel="noopener">enzyme-to-json</a></p>
+<h2 id="ReactWrapper"><a href="#ReactWrapper" class="headerlink" title="ReactWrapper"></a>ReactWrapper</h2><h3 id="Traversing"><a href="#Traversing" class="headerlink" title="Traversing"></a>Traversing</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">wrap.find(<span class="string">'button'</span>)   <span class="comment">// → ReactWrapper</span></span><br><span class="line">wrap.filter(<span class="string">'button'</span>) <span class="comment">// → ReactWrapper</span></span><br><span class="line">wrap.not(<span class="string">'span'</span>)      <span class="comment">// → ReactWrapper (inverse of filter())</span></span><br><span class="line">wrap.children()       <span class="comment">// → ReactWrapper</span></span><br><span class="line">wrap.parent()         <span class="comment">// → ReactWrapper</span></span><br><span class="line">wrap.closest(<span class="string">'div'</span>)   <span class="comment">// → ReactWrapper</span></span><br><span class="line">wrap.childAt(<span class="number">0</span>)       <span class="comment">// → ReactWrapper</span></span><br><span class="line">wrap.at(<span class="number">0</span>)            <span class="comment">// → ReactWrapper</span></span><br><span class="line">wrap.first()          <span class="comment">// → ReactWrapper</span></span><br><span class="line">wrap.last()           <span class="comment">// → ReactWrapper</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wrap.get(<span class="number">0</span>)           <span class="comment">// → ReactElement</span></span><br><span class="line">wrap.getNode()        <span class="comment">// → ReactElement</span></span><br><span class="line">wrap.getNodes()       <span class="comment">// → Array&lt;ReactElement&gt;</span></span><br><span class="line">wrap.getDOMNode()     <span class="comment">// → DOMComponent</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://airbnb.io/enzyme/docs/api/mount.html" target="_blank" rel="noopener">Full rendering API</a></p>
+<h3 id="Actions"><a href="#Actions" class="headerlink" title="Actions"></a>Actions</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrap.simulate(<span class="string">'click'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="React-components"><a href="#React-components" class="headerlink" title="React components"></a>React components</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wrap.setState(&#123; ··· &#125;)</span><br><span class="line">wrap.setProps(&#123; ··· &#125;)</span><br><span class="line">wrap.setContext(&#123; ··· &#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wrap.state()         <span class="comment">// get full state</span></span><br><span class="line">wrap.props()         <span class="comment">// get full props</span></span><br><span class="line">wrap.context()       <span class="comment">// get full context</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wrap.state(<span class="string">'key'</span>)    <span class="comment">// → any</span></span><br><span class="line">wrap.prop(<span class="string">'key'</span>)    <span class="comment">// → any</span></span><br><span class="line">wrap.context(<span class="string">'key'</span>)  <span class="comment">// → any</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrap.instance()      <span class="comment">// → ReactComponent</span></span><br></pre></td></tr></table></figure>
+<h3 id="Mount"><a href="#Mount" class="headerlink" title="Mount"></a>Mount</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wrap.mount()</span><br><span class="line">wrap.unmount()</span><br><span class="line">wrap.update()      <span class="comment">// calls forceUpdate()</span></span><br></pre></td></tr></table></figure>
+<h3 id="Tests"><a href="#Tests" class="headerlink" title="Tests"></a>Tests</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">wrap.debug()               <span class="comment">// → string</span></span><br><span class="line">wrap.html()                <span class="comment">// → string</span></span><br><span class="line">wrap.text()                <span class="comment">// → string</span></span><br><span class="line">wrap.type()                <span class="comment">// → string | function</span></span><br><span class="line">wrap.name()                <span class="comment">// → string</span></span><br><span class="line">wrap.is(<span class="string">'.classname'</span>)      <span class="comment">// → boolean</span></span><br><span class="line">wrap.hasClass(<span class="string">'class'</span>)     <span class="comment">// → boolean</span></span><br><span class="line">wrap.exists()              <span class="comment">// → boolean</span></span><br><span class="line">wrap.contains(<span class="xml"><span class="tag">&lt;<span class="name">div</span> /&gt;</span>)     // → boolean</span></span><br><span class="line"><span class="xml">wrap.contains([ <span class="tag">&lt;<span class="name">div</span> /&gt;</span> ]) // → boolean</span></span><br><span class="line"><span class="xml">wrap.some('.child')        // → boolean</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">wrap.someWhere(n =&gt; n.hasClass('foo'))</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">wrap.containsMatchingElement(<span class="tag">&lt;<span class="name">div</span> /&gt;</span>)         // → boolean</span></span><br><span class="line"><span class="xml">wrap.containsAllMatchingElements([ <span class="tag">&lt;<span class="name">div</span> /&gt;</span> ]) // → boolean</span></span><br><span class="line"><span class="xml">wrap.containsAnyMatchingElements([ <span class="tag">&lt;<span class="name">div</span> /&gt;</span> ]) // → boolean</span></span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://airbnb.io/enzyme" target="_blank" rel="noopener">Enzyme website</a> <em>(airbnb.io)</em></li>
+<li><a href="./enzyme@2">Enzyme v2 cheatsheet</a> <em>(devhints.io)</em> (old version)</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mounting"><span class="toc-number">1.1.</span> <span class="toc-text">Mounting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debugging"><span class="toc-number">1.2.</span> <span class="toc-text">Debugging</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">2.</span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-example"><span class="toc-number">2.1.</span> <span class="toc-text">Basic example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Props-and-state"><span class="toc-number">2.2.</span> <span class="toc-text">Props and state</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Setting"><span class="toc-number">2.2.1.</span> <span class="toc-text">Setting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Asserting"><span class="toc-number">2.2.2.</span> <span class="toc-text">Asserting</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Matching-elements"><span class="toc-number">2.3.</span> <span class="toc-text">Matching elements</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Snapshots"><span class="toc-number">2.4.</span> <span class="toc-text">Snapshots</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Traversions"><span class="toc-number">2.5.</span> <span class="toc-text">Traversions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Simulating-events"><span class="toc-number">2.6.</span> <span class="toc-text">Simulating events</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#With-event-object-props"><span class="toc-number">2.6.1.</span> <span class="toc-text">With event object props</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installing"><span class="toc-number">3.</span> <span class="toc-text">Installing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Initial-setup"><span class="toc-number">3.1.</span> <span class="toc-text">Initial setup</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#test-setup-js"><span class="toc-number">3.1.1.</span> <span class="toc-text">test/setup.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#package-json"><span class="toc-number">3.1.2.</span> <span class="toc-text">package.json</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jest-snapshots"><span class="toc-number">3.2.</span> <span class="toc-text">Jest snapshots</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#package-json-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">package.json</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Test"><span class="toc-number">3.2.2.</span> <span class="toc-text">Test</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ReactWrapper"><span class="toc-number">4.</span> <span class="toc-text">ReactWrapper</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Traversing"><span class="toc-number">4.1.</span> <span class="toc-text">Traversing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Actions"><span class="toc-number">4.2.</span> <span class="toc-text">Actions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React-components"><span class="toc-number">4.3.</span> <span class="toc-text">React components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mount"><span class="toc-number">4.4.</span> <span class="toc-text">Mount</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tests"><span class="toc-number">4.5.</span> <span class="toc-text">Tests</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">5.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/enzyme/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/enzyme/&text=Enzyme"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/enzyme/&title=Enzyme"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/enzyme/&is_video=false&description=Enzyme"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Enzyme&body=Check out this article: https://rupertqin.github.io/devhints/enzyme/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/enzyme/&title=Enzyme"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/enzyme/&title=Enzyme"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/enzyme/&title=Enzyme"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/enzyme/&title=Enzyme"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/enzyme/&name=Enzyme&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

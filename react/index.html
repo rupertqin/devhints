@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Components ----------  ### Components  undefined  undefined  undefined  Use the [React.js jsfiddle](http://jsfiddle.net/reactjs/69z2wepo/) to start hacking. (or the unofficial [jsbin](http://jsbin.c">
+<meta name="keywords" content="React.Component,render(),componentDidMount(),props&#x2F;state,dangerouslySetInnerHTML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React.js">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/react/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Components ----------  ### Components  undefined  undefined  undefined  Use the [React.js jsfiddle](http://jsfiddle.net/reactjs/69z2wepo/) to start hacking. (or the unofficial [jsbin](http://jsbin.c">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-03T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React.js">
+<meta name="twitter:description" content="Components ----------  ### Components  undefined  undefined  undefined  Use the [React.js jsfiddle](http://jsfiddle.net/reactjs/69z2wepo/) to start hacking. (or the unofficial [jsbin](http://jsbin.c">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>React.js</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../redux/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../react-router/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/react/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/react/&text=React.js"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/react/&title=React.js"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/react/&is_video=false&description=React.js"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=React.js&body=Check out this article: https://rupertqin.github.io/devhints/react/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/react/&title=React.js"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/react/&title=React.js"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/react/&title=React.js"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/react/&title=React.js"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/react/&name=React.js&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        React.js
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.408Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/React/">React</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="../tags/Featured/">Featured</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    
+
+Components
+----------
+
+### Components
+
+undefined
+
+undefined
+
+undefined
+
+Use the [React.js jsfiddle](http://jsfiddle.net/reactjs/69z2wepo/) to start hacking. (or the unofficial [jsbin](http://jsbin.com/yafixat/edit?js,output))
+
+### Import multiple exports
+
+undefined
+
+undefined
+
+### Properties
+
+undefined
+
+undefined
+
+Use `this.props` to access properties passed to the component.
+
+See: [Properties](https://reactjs.org/docs/tutorial.html#using-props)
+
+### States
+
+undefined
+
+undefined
+
+undefined
+
+Use states (`this.state`) to manage dynamic data.
+
+With [Babel](https://babeljs.io/) you can use [proposal-class-fields](https://github.com/tc39/proposal-class-fields) and get rid of constructor
+
+undefined
+
+See: [States](https://reactjs.org/docs/tutorial.html#reactive-state)
+
+
+### Nesting
+
+undefined
+
+As of React v16.2.0, fragments can be used to return multiple children without adding extra wrapping nodes to the DOM.
+
+undefined
+
+Nest components to separate concerns.
+
+See: [Composing Components](https://reactjs.org/docs/components-and-props.html#composing-components)
+
+### Children
+
+undefined
+
+undefined
+
+Children are passed as the `children` property.
+
+Defaults
+--------
+
+### Setting default props
+
+undefined
+
+See: [defaultProps](https://reactjs.org/docs/react-component.html#defaultprops)
+
+### Setting default state
+
+undefined
+
+Set the default state in the `constructor()`.
+
+And without constructor using [Babel](https://babeljs.io/) with [proposal-class-fields](https://github.com/tc39/proposal-class-fields).
+
+undefined
+
+See: [Setting the default state](https://reactjs.org/docs/react-without-es6.html#setting-the-initial-state)
+
+Other components
+----------------
+
+### Functional components
+
+undefined
+
+Functional components have no state. Also, their `props` are passed as the first parameter to a function.
+
+See: [Function and Class Components](https://reactjs.org/docs/components-and-props.html#functional-and-class-components)
+
+### Pure components
+
+undefined
+
+Performance-optimized version of `React.Component`. Doesn't rerender if props/state hasn't changed.
+
+See: [Pure components](https://reactjs.org/docs/react-api.html#react.purecomponent)
+
+### Component API
+
+undefined
+
+undefined
+
+undefined
+
+These methods and properties are available for `Component` instances.
+
+See: [Component API](http://facebook.github.io/react/docs/component-api.html)
+
+Lifecycle
+---------
+
+### Mounting
+
+| Method | Description |
+| --- | --- |
+| `constructor` _(props)_ | Before rendering [#](https://reactjs.org/docs/react-component.html#constructor) |
+| `componentWillMount()` | _Don't use this_ [#](https://reactjs.org/docs/react-component.html#componentwillmount) |
+| `render()` | Render  [#](https://reactjs.org/docs/react-component.html#render) |
+| `componentDidMount()` | After rendering (DOM available) [#](https://reactjs.org/docs/react-component.html#componentdidmount) |
+| --- | --- |
+| `componentWillUnmount()` | Before DOM removal [#](https://reactjs.org/docs/react-component.html#componentwillunmount) |
+| --- | --- |
+| `componentDidCatch()` | Catch errors (16+) [#](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html) |
+
+Set initial the state on `constructor()`.
+Add DOM event handlers, timers (etc) on `componentDidMount()`, then remove them on `componentWillUnmount()`.
+
+### Updating
+
+| Method | Description |
+| --- | --- |
+| `componentDidUpdate` *(prevProps, prevState, snapshot)* | Use `setState()` here, but remember to compare props |
+| `shouldComponentUpdate` *(newProps, newState)* | Skips `render()` if returns false |
+| `render()` | Render |
+| `componentDidUpdate` *(prevProps, prevState)* | Operate on the DOM here |
+
+Called when parents change properties and `.setState()`. These are not called for initial renders.
+
+See: [Component specs](http://facebook.github.io/react/docs/component-specs.html#updating-componentwillreceiveprops)
+
+DOM nodes
+---------
+
+### References
+
+undefined
+
+Allows access to DOM nodes.
+
+See: [Refs and the DOM](https://reactjs.org/docs/refs-and-the-dom.html)
+
+### DOM Events
+
+undefined
+
+Pass functions to attributes like `onChange`.
+
+See: [Events](https://reactjs.org/docs/events.html)
+
+## Other features
+
+### Transferring props
+
+undefined
+
+undefined
+
+Propagates `src="..."` down to the sub-component.
+
+See [Transferring props](http://facebook.github.io/react/docs/transferring-props.html)
+
+### Top-level API
+
+undefined
+
+undefined
+
+undefined
+
+There are more, but these are most common.
+
+See: [React top-level API](https://reactjs.org/docs/react-api.html)
+
+JSX patterns
+------------
+
+### Style shorthand
+
+undefined
+
+undefined
+
+See: [Inline styles](https://reactjs.org/tips/inline-styles.html)
+
+### Inner HTML
+
+undefined
+
+See: [Dangerously set innerHTML](https://reactjs.org/tips/dangerously-set-inner-html.html)
+
+### Lists
+
+undefined
+
+Always supply a `key` property.
+
+### Conditionals
+
+undefined
+
+### Short-circuit evaluation
+
+undefined
+
+New features
+------------
+
+### Returning multiple elements
+
+You can return multiple elements as arrays or fragments.
+
+#### Arrays
+
+undefined
+
+#### Fragments
+undefined
+
+See: [Fragments and strings](https://reactjs.org/blog/2017/09/26/react-v16.0.html#new-render-return-types-fragments-and-strings)
+
+### Returning strings
+
+undefined
+
+You can return just a string.
+
+See: [Fragments and strings](https://reactjs.org/blog/2017/09/26/react-v16.0.html#new-render-return-types-fragments-and-strings)
+
+### Errors
+
+undefined
+
+Catch errors via `componentDidCatch`. (React 16+)
+
+See: [Error handling in React 16](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html)
+
+### Portals
+
+undefined
+
+This renders `this.props.children` into any location in the DOM.
+
+See: [Portals](https://reactjs.org/docs/portals.html)
+
+### Hydration
+
+undefined
+
+Use `ReactDOM.hydrate` instead of using `ReactDOM.render` if you're rendering over the output of [ReactDOMServer](https://reactjs.org/docs/react-dom-server.html).
+
+See: [Hydrate](https://reactjs.org/docs/react-dom.html#hydrate)
+
+Property validation
+-------------------
+
+### PropTypes
+
+undefined
+
+See: [Typechecking with PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
+
+| `any`                     | Anything                             |
+
+#### Basic
+
+| `string`                  |                                      |
+| `number`                  |                                      |
+| `func`                    | Function                             |
+| `bool`                    | True or false                        |
+
+#### Enum
+
+| `oneOf`_(any)_            | Enum types                           |
+| `oneOfType`_(type array)_ | Union                                |
+
+#### Array
+
+| `array`                   |                                      |
+| `arrayOf`_(...)_          |                                      |
+
+#### Object
+
+| `object`                  |                                      |
+| `objectOf`_(...)_         | Object with values of a certain type |
+| `instanceOf`_(...)_       | Instance of a class                  |
+| `shape`_(...)_            |                                      |
+
+#### Elements
+
+| `element`                 | React element                        |
+| `node`                    | DOM node                             |
+
+#### Required
+
+| `(···).isRequired`        | Required                             |
+
+### Basic types
+
+undefined
+
+### Required types
+
+undefined
+
+### Elements
+
+undefined
+
+### Enumerables (oneOf)
+
+undefined
+
+### Arrays and objects
+
+undefined
+
+undefined
+
+Use `.array[Of]`, `.object[Of]`, `.instanceOf`, `.shape`.
+
+### Custom validation
+
+undefined
+
+Also see
+--------
+
+* [React website](https://reactjs.org) _(reactjs.org)_
+* [React cheatsheet](https://reactcheatsheet.com/) _(reactcheatsheet.com)_
+* [Awesome React](https://github.com/enaqx/awesome-react) _(github.com)_
+* [React v0.14 cheatsheet](react@0.14) _Legacy version_
+
+
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/react/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/react/&text=React.js"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/react/&title=React.js"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/react/&is_video=false&description=React.js"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=React.js&body=Check out this article: https://rupertqin.github.io/devhints/react/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/react/&title=React.js"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/react/&title=React.js"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/react/&title=React.js"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/react/&title=React.js"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/react/&name=React.js&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

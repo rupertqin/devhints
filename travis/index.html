@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Node123language: node_jsnode_js:- &apos;4&apos;  Provides: 0.10, 0.8, 0.6, 0.11 (latest dev) Defaults install to npm install Defaults test to npm test  Ruby12345678language: rubyrvm:- 2.0.0- 1.9.3- 1.8.7- rbx-1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Travis.yml">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/travis/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Node123language: node_jsnode_js:- &apos;4&apos;  Provides: 0.10, 0.8, 0.6, 0.11 (latest dev) Defaults install to npm install Defaults test to npm test  Ruby12345678language: rubyrvm:- 2.0.0- 1.9.3- 1.8.7- rbx-1">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:23:51.454Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Travis.yml">
+<meta name="twitter:description" content="Node123language: node_jsnode_js:- &apos;4&apos;  Provides: 0.10, 0.8, 0.6, 0.11 (latest dev) Defaults install to npm install Defaults test to npm test  Ruby12345678language: rubyrvm:- 2.0.0- 1.9.3- 1.8.7- rbx-1">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Travis.yml</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../typescript/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../travis-gh-pages/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/travis/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/travis/&text=Travis.yml"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/travis/&title=Travis.yml"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/travis/&is_video=false&description=Travis.yml"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Travis.yml&body=Check out this article: https://rupertqin.github.io/devhints/travis/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/travis/&title=Travis.yml"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/travis/&title=Travis.yml"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/travis/&title=Travis.yml"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/travis/&title=Travis.yml"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/travis/&name=Travis.yml&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node"><span class="toc-number">1.</span> <span class="toc-text">Node</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ruby"><span class="toc-number">2.</span> <span class="toc-text">Ruby</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-lifecycle"><span class="toc-number">3.</span> <span class="toc-text">Build lifecycle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Branches"><span class="toc-number">4.</span> <span class="toc-text">Branches</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Environment-vars"><span class="toc-number">5.</span> <span class="toc-text">Environment vars</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-test-command"><span class="toc-number">6.</span> <span class="toc-text">Custom test command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Branches-1"><span class="toc-number">7.</span> <span class="toc-text">Branches</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Apt-packages"><span class="toc-number">8.</span> <span class="toc-text">Apt packages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Etc"><span class="toc-number">9.</span> <span class="toc-text">Etc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Notifications"><span class="toc-number">10.</span> <span class="toc-text">Notifications</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-number">11.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Travis.yml
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.454Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Devops/">Devops</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br><span class="line"><span class="attr">node_js:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'4'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Provides: 0.10, 0.8, 0.6, 0.11 (latest dev)</li>
+<li>Defaults install to <code>npm install</code></li>
+<li>Defaults test to <code>npm test</code></li>
+</ul>
+<h3 id="Ruby"><a href="#Ruby" class="headerlink" title="Ruby"></a>Ruby</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">ruby</span></span><br><span class="line"><span class="attr">rvm:</span></span><br><span class="line"><span class="bullet">-</span> <span class="number">2.0</span><span class="number">.0</span></span><br><span class="line"><span class="bullet">-</span> <span class="number">1.9</span><span class="number">.3</span></span><br><span class="line"><span class="bullet">-</span> <span class="number">1.8</span><span class="number">.7</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">rbx-19mode</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">jruby-19mode</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">jruby-18mode</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Defaults install to <code>bundle install</code></li>
+<li>Defaults test to <code>rake</code></li>
+</ul>
+<h3 id="Build-lifecycle"><a href="#Build-lifecycle" class="headerlink" title="Build lifecycle"></a>Build lifecycle</h3><ul>
+<li><code>before_install</code></li>
+<li><code>install</code></li>
+<li><code>before_script</code></li>
+<li><code>script</code></li>
+<li><code>after_success</code> or <code>after_failure</code></li>
+<li><code>after_script</code></li>
+<li>OPTIONAL <code>before_deploy</code></li>
+<li>OPTIONAL <code>deploy</code></li>
+<li>OPTIONAL <code>after_deploy</code></li>
+</ul>
+<h3 id="Branches"><a href="#Branches" class="headerlink" title="Branches"></a>Branches</h3><pre><code>branches:
+  except: [&quot;..&quot;]
+  only: [&quot;master&quot;]
+</code></pre><h3 id="Environment-vars"><a href="#Environment-vars" class="headerlink" title="Environment vars"></a>Environment vars</h3><pre><code>env:
+  - &quot;rack=master&quot;
+  - &quot;rack=1.3.4&quot;
+</code></pre><h3 id="Custom-test-command"><a href="#Custom-test-command" class="headerlink" title="Custom test command"></a>Custom test command</h3><pre><code>script: make test
+before_script: make pretest
+after_script:  make clean
+
+before_script:
+  - make pretest1
+  - make pretest2
+</code></pre><h3 id="Branches-1"><a href="#Branches-1" class="headerlink" title="Branches"></a>Branches</h3><pre><code>branches:
+  except:
+    - legacy
+
+  only:
+    - gh-pages
+    - /^deploy/
+</code></pre><h3 id="Apt-packages"><a href="#Apt-packages" class="headerlink" title="Apt packages"></a>Apt packages</h3><pre><code>before_install:
+- sudo apt-get update -q
+- sudo apt-get install gcc-4.8 -y
+</code></pre><p><a href="https://docs.travis-ci.com/user/installing-dependencies/" target="_blank" rel="noopener">https://docs.travis-ci.com/user/installing-dependencies/</a></p>
+<h3 id="Etc"><a href="#Etc" class="headerlink" title="Etc"></a>Etc</h3><pre><code>gemfile:
+ - gemfiles/Gemfile.rails-2.3.x
+ - gemfiles/Gemfile.rails-3.0.x
+</code></pre><h3 id="Notifications"><a href="#Notifications" class="headerlink" title="Notifications"></a>Notifications</h3><pre><code>notifications:
+  email:
+   - dropbox+travis@ricostacruz.com
+
+  email:
+    recipients:
+     - dropbox+travis@ricostacruz.com
+    on_success: &lt;always|never|change&gt;  # default: change
+    on_failure: &lt;always|never|change&gt;  # default: always
+
+  irc: &quot;chat.freenode.net#travis&quot;
+</code></pre><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul>
+<li><a href="http://about.travis-ci.org/docs/user/build-configuration/" target="_blank" rel="noopener">http://about.travis-ci.org/docs/user/build-configuration/</a></li>
+<li><a href="http://about.travis-ci.org/docs/user/languages/javascript-with-nodejs/" target="_blank" rel="noopener">http://about.travis-ci.org/docs/user/languages/javascript-with-nodejs/</a></li>
+<li><a href="http://about.travis-ci.org/docs/user/languages/ruby/" target="_blank" rel="noopener">http://about.travis-ci.org/docs/user/languages/ruby/</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node"><span class="toc-number">1.</span> <span class="toc-text">Node</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ruby"><span class="toc-number">2.</span> <span class="toc-text">Ruby</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-lifecycle"><span class="toc-number">3.</span> <span class="toc-text">Build lifecycle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Branches"><span class="toc-number">4.</span> <span class="toc-text">Branches</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Environment-vars"><span class="toc-number">5.</span> <span class="toc-text">Environment vars</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-test-command"><span class="toc-number">6.</span> <span class="toc-text">Custom test command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Branches-1"><span class="toc-number">7.</span> <span class="toc-text">Branches</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Apt-packages"><span class="toc-number">8.</span> <span class="toc-text">Apt packages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Etc"><span class="toc-number">9.</span> <span class="toc-text">Etc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Notifications"><span class="toc-number">10.</span> <span class="toc-text">Notifications</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-number">11.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/travis/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/travis/&text=Travis.yml"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/travis/&title=Travis.yml"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/travis/&is_video=false&description=Travis.yml"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Travis.yml&body=Check out this article: https://rupertqin.github.io/devhints/travis/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/travis/&title=Travis.yml"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/travis/&title=Travis.yml"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/travis/&title=Travis.yml"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/travis/&title=Travis.yml"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/travis/&name=Travis.yml&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

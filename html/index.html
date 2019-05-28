@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Head stuff&amp;lt;link rel=&amp;quot;shortcut icon&amp;quot; type=&amp;quot;image/x-icon&amp;quot; href=&amp;quot;/favicon.ico&amp;quot;&amp;gt; &amp;lt;link rel=&amp;quot;shortcut icon&amp;quot; type=&amp;quot;image/png&amp;quot; href=&amp;quot;/favicon.p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/html/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Head stuff&amp;lt;link rel=&amp;quot;shortcut icon&amp;quot; type=&amp;quot;image/x-icon&amp;quot; href=&amp;quot;/favicon.ico&amp;quot;&amp;gt; &amp;lt;link rel=&amp;quot;shortcut icon&amp;quot; type=&amp;quot;image/png&amp;quot; href=&amp;quot;/favicon.p">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:34:27.775Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML">
+<meta name="twitter:description" content="Head stuff&amp;lt;link rel=&amp;quot;shortcut icon&amp;quot; type=&amp;quot;image/x-icon&amp;quot; href=&amp;quot;/favicon.ico&amp;quot;&amp;gt; &amp;lt;link rel=&amp;quot;shortcut icon&amp;quot; type=&amp;quot;image/png&amp;quot; href=&amp;quot;/favicon.p">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>HTML</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../http-status/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../html-share/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/html/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/html/&text=HTML"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/html/&title=HTML"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/html/&is_video=false&description=HTML"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=HTML&body=Check out this article: https://rupertqin.github.io/devhints/html/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/html/&title=HTML"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/html/&title=HTML"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/html/&title=HTML"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/html/&title=HTML"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/html/&name=HTML&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Head-stuff"><span class="toc-number">1.</span> <span class="toc-text">Head stuff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#iPhone-viewport"><span class="toc-number">2.</span> <span class="toc-text">iPhone viewport</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Default-OpenGraph-meta-tags"><span class="toc-number">3.</span> <span class="toc-text">Default OpenGraph meta tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Webfonts"><span class="toc-number">4.</span> <span class="toc-text">Webfonts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Google-Analytics"><span class="toc-number">5.</span> <span class="toc-text">Google Analytics</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FB-Twitter"><span class="toc-number">6.</span> <span class="toc-text">FB/Twitter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5-Shiv-for-IE8"><span class="toc-number">7.</span> <span class="toc-text">HTML5 Shiv for IE8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#H5BP-HTML-tag-IE8-and-IE9-only"><span class="toc-number">8.</span> <span class="toc-text">H5BP HTML tag (IE8 and IE9 only)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Touch-icons"><span class="toc-number">9.</span> <span class="toc-text">Touch icons</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Icons"><span class="toc-number">10.</span> <span class="toc-text">Icons</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#H5BP-HTML-tag"><span class="toc-number">11.</span> <span class="toc-text">H5BP HTML tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Google-jQuery"><span class="toc-number">12.</span> <span class="toc-text">Google jQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unsupported-message"><span class="toc-number">13.</span> <span class="toc-text">Unsupported message</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-Compatibility-inspector"><span class="toc-number">14.</span> <span class="toc-text">HTML Compatibility inspector</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        HTML
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.309Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/HTML/">HTML</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Head-stuff"><a href="#Head-stuff" class="headerlink" title="Head stuff"></a>Head stuff</h3><pre><code>&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;/favicon.ico&quot;&gt;
+&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;/favicon.png&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+</code></pre><h3 id="iPhone-viewport"><a href="#iPhone-viewport" class="headerlink" title="iPhone viewport"></a>iPhone viewport</h3><pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, maximum-scale=1.0&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;/&gt; &lt;!-- full example --&gt;
+</code></pre><h3 id="Default-OpenGraph-meta-tags"><a href="#Default-OpenGraph-meta-tags" class="headerlink" title="Default OpenGraph meta tags"></a>Default OpenGraph meta tags</h3><pre><code>&lt;meta content=&quot;...&quot; name=&quot;description&quot;&gt;
+&lt;meta content=&quot;...&quot; property=&quot;og:description&quot;&gt;
+&lt;meta content=&quot;http://.../preview.jpg&quot; property=&quot;og:image&quot;&gt;
+&lt;meta content=&quot;Hello There&quot; property=&quot;og:title&quot;&gt;
+&lt;meta content=&quot;Hello There&quot; property=&quot;og:site_name&quot;&gt;
+&lt;meta content=&quot;hellothere&quot; property=&quot;fb:admins&quot;&gt;
+&lt;meta content=&quot;website&quot; property=&quot;og:type&quot;&gt;
+</code></pre><h3 id="Webfonts"><a href="#Webfonts" class="headerlink" title="Webfonts"></a>Webfonts</h3><pre><code>&lt;script&gt;WebFontConfig={    },function(a,b){var c=a.createElement(b);c.src=&quot;//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js&quot;,c.async=1;var d=a.getElementsByTagName(b)[0];d.parentNode.insertBefore(c,d)}(document,&quot;script&quot;)&lt;/script&gt;
+
+// {typekit{id:&quot;...&quot;}}
+// {google:{families:[&apos;Exo:400&apos;]}}
+</code></pre><h3 id="Google-Analytics"><a href="#Google-Analytics" class="headerlink" title="Google Analytics"></a>Google Analytics</h3><pre><code>&lt;script&gt;location.hostname.match(/helloworld\.com/)&amp;&amp;(_gaq=[[&quot;_setAccount&quot;,&quot;UA-XXXXX-1&quot;],[&quot;_trackPageview&quot;]],function(a,b){var c=a.createElement(b),d=a.getElementsByTagName(b)[0];c.async=1,c.src=(&quot;https:&quot;==location.protocol?&quot;//ssl&quot;:&quot;//www&quot;)+&quot;.google-analytics.com/ga.js&quot;,d.parentNode.insertBefore(c,d)}(document,&quot;script&quot;))&lt;/script&gt;
+</code></pre><h3 id="FB-Twitter"><a href="#FB-Twitter" class="headerlink" title="FB/Twitter"></a>FB/Twitter</h3><pre><code>&lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;&lt;script&gt;fbAsyncInit=function(){FB.init({&quot;appId&quot;:&quot;___APPIDGOESHERE___&quot;,&quot;status&quot;:true,&quot;cookie&quot;:true,&quot;xfbml&quot;:true})};!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.async=1;js.src=&apos;//connect.facebook.net/en_US/all.js&apos;;fjs.parentNode.insertBefore(js,fjs);}}(document,&apos;script&apos;,&apos;facebook-jssdk&apos;);&lt;/script&gt;
+
+&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.async=1;js.src=&quot;//platform.twitter.com/widgets.js&quot;;fjs.parentNode.insertBefore(js,fjs);}}(document,&quot;script&quot;,&quot;twitter-wjs&quot;);&lt;/script&gt;
+</code></pre><h3 id="HTML5-Shiv-for-IE8"><a href="#HTML5-Shiv-for-IE8" class="headerlink" title="HTML5 Shiv for IE8"></a>HTML5 Shiv for IE8</h3><pre><code>&lt;!--[if lte IE 8]&gt;&lt;script src=&apos;//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js&apos;&gt;&lt;/script&gt;&lt;![endif]--&gt;
+</code></pre><h3 id="H5BP-HTML-tag-IE8-and-IE9-only"><a href="#H5BP-HTML-tag-IE8-and-IE9-only" class="headerlink" title="H5BP HTML tag (IE8 and IE9 only)"></a>H5BP HTML tag (IE8 and IE9 only)</h3><pre><code>&lt;!--[if lte IE 8]&gt;&lt;html class=&quot;ie8&quot;&gt;&lt;![endif]--&gt;&lt;!--[if IE 9]&gt;&lt;html class=&quot;ie9&quot;&gt;&lt;![endif]--&gt;&lt;!--[if gt IE 9]&gt;&lt;!--&gt;
+&lt;html&gt;&lt;!--&lt;![endif]--&gt;
+</code></pre><h3 id="Touch-icons"><a href="#Touch-icons" class="headerlink" title="Touch icons"></a>Touch icons</h3><ul>
+<li>apple-touch-icon-precomposed.png</li>
+<li>apple-touch-icon-57x57-precomposed.png</li>
+<li>apple-touch-icon-72x72-precomposed.png</li>
+<li>apple-touch-icon-114x114-precomposed.png</li>
+<li>apple-touch-icon-144x144-precomposed.png</li>
+</ul>
+<h3 id="Icons"><a href="#Icons" class="headerlink" title="Icons"></a>Icons</h3><pre><code>&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;favicon.png&quot;&gt;
+&lt;link href=&quot;apple-touch-icon-precomposed.png&quot; rel=&quot;apple-touch-icon&quot;&gt;
+&lt;link href=&quot;apple-touch-icon-57x57-precomposed.png&quot; size=&quot;57x57&quot; rel=&quot;apple-touch-icon&quot;&gt;
+&lt;link href=&quot;apple-touch-icon-72x72-precomposed.png&quot; size=&quot;72x72&quot; rel=&quot;apple-touch-icon&quot;&gt;
+&lt;link href=&quot;apple-touch-icon-114x114-precomposed.png&quot; size=&quot;114x114&quot; rel=&quot;apple-touch-icon&quot;&gt;
+&lt;link href=&quot;apple-touch-icon-144x144-precomposed.png&quot; size=&quot;144x144&quot; rel=&quot;apple-touch-icon&quot;&gt;
+</code></pre><p>Only do this if you’re not placing the site in the root!</p>
+<h3 id="H5BP-HTML-tag"><a href="#H5BP-HTML-tag" class="headerlink" title="H5BP HTML tag"></a>H5BP HTML tag</h3><pre><code>&lt;!--[if lt IE 7 ]&gt; &lt;html class=&quot;ie6&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 7 ]&gt;    &lt;html class=&quot;ie7&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 8 ]&gt;    &lt;html class=&quot;ie8&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 9 ]&gt;    &lt;html class=&quot;ie9&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt; &lt;html class=&quot;&quot;&gt; &lt;!--&lt;![endif]--&gt;
+</code></pre><h3 id="Google-jQuery"><a href="#Google-jQuery" class="headerlink" title="Google jQuery"></a>Google jQuery</h3><pre><code>&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+</code></pre><h3 id="Unsupported-message"><a href="#Unsupported-message" class="headerlink" title="Unsupported message"></a>Unsupported message</h3><pre><code>&lt;!--[if lt IE 8]&gt;
+&lt;div class=&quot;unsupported-browser&quot;&gt;
+  &lt;strong&gt;
+    You are using an outdated browser.
+  &lt;/strong&gt;
+  &lt;span&gt;
+    Please &lt;a class=&quot;upgrade-browser&quot;
+    href=&quot;http://browsehappy.com/&quot;&gt;
+    upgrade your browser&lt;/a&gt; or &lt;a  class=&quot;chrome-frame&quot;
+    href=&quot;http://www.google.com/chromeframe/?redirect=true&quot;&gt;activate Google 
+    Chrome Frame&lt;/a&gt; to improve your experience.
+  &lt;/span&gt;
+&lt;/div&gt;
+&lt;![endif]--&gt;
+</code></pre><h3 id="HTML-Compatibility-inspector"><a href="#HTML-Compatibility-inspector" class="headerlink" title="HTML Compatibility inspector"></a>HTML Compatibility inspector</h3><pre><code>&lt;script src=&quot;http://ie.microsoft.com/testdrive/HTML5/CompatInspector/inspector.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>More info here: <a href="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/" target="_blank" rel="noopener">microsoft.com</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Head-stuff"><span class="toc-number">1.</span> <span class="toc-text">Head stuff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#iPhone-viewport"><span class="toc-number">2.</span> <span class="toc-text">iPhone viewport</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Default-OpenGraph-meta-tags"><span class="toc-number">3.</span> <span class="toc-text">Default OpenGraph meta tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Webfonts"><span class="toc-number">4.</span> <span class="toc-text">Webfonts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Google-Analytics"><span class="toc-number">5.</span> <span class="toc-text">Google Analytics</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FB-Twitter"><span class="toc-number">6.</span> <span class="toc-text">FB/Twitter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5-Shiv-for-IE8"><span class="toc-number">7.</span> <span class="toc-text">HTML5 Shiv for IE8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#H5BP-HTML-tag-IE8-and-IE9-only"><span class="toc-number">8.</span> <span class="toc-text">H5BP HTML tag (IE8 and IE9 only)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Touch-icons"><span class="toc-number">9.</span> <span class="toc-text">Touch icons</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Icons"><span class="toc-number">10.</span> <span class="toc-text">Icons</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#H5BP-HTML-tag"><span class="toc-number">11.</span> <span class="toc-text">H5BP HTML tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Google-jQuery"><span class="toc-number">12.</span> <span class="toc-text">Google jQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unsupported-message"><span class="toc-number">13.</span> <span class="toc-text">Unsupported message</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-Compatibility-inspector"><span class="toc-number">14.</span> <span class="toc-text">HTML Compatibility inspector</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/html/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/html/&text=HTML"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/html/&title=HTML"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/html/&is_video=false&description=HTML"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=HTML&body=Check out this article: https://rupertqin.github.io/devhints/html/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/html/&title=HTML"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/html/&title=HTML"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/html/&title=HTML"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/html/&title=HTML"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/html/&name=HTML&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

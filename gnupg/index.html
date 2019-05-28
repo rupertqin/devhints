@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="BasicsExporting keys1gpg -o key.gpg --export &amp;lt;KEY ID&amp;gt; Export key in ASCII: 1gpg -o key.asc --armor --export &amp;lt;KEY ID&amp;gt; Note: Omitting the -o|--output option will print the key to stdout. Imp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GnuPG">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/gnupg/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="BasicsExporting keys1gpg -o key.gpg --export &amp;lt;KEY ID&amp;gt; Export key in ASCII: 1gpg -o key.asc --armor --export &amp;lt;KEY ID&amp;gt; Note: Omitting the -o|--output option will print the key to stdout. Imp">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-10-17T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GnuPG">
+<meta name="twitter:description" content="BasicsExporting keys1gpg -o key.gpg --export &amp;lt;KEY ID&amp;gt; Export key in ASCII: 1gpg -o key.asc --armor --export &amp;lt;KEY ID&amp;gt; Note: Omitting the -o|--output option will print the key to stdout. Imp">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>GnuPG</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../go/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../gmail/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/gnupg/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/gnupg/&text=GnuPG"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/gnupg/&title=GnuPG"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/gnupg/&is_video=false&description=GnuPG"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=GnuPG&body=Check out this article: https://rupertqin.github.io/devhints/gnupg/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/gnupg/&title=GnuPG"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/gnupg/&title=GnuPG"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/gnupg/&title=GnuPG"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/gnupg/&title=GnuPG"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/gnupg/&name=GnuPG&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basics"><span class="toc-number">1.</span> <span class="toc-text">Basics</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Exporting-keys"><span class="toc-number">1.1.</span> <span class="toc-text">Exporting keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Importing-keys"><span class="toc-number">1.2.</span> <span class="toc-text">Importing keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Managing-your-keyring"><span class="toc-number">1.3.</span> <span class="toc-text">Managing your keyring</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-a-keyserver"><span class="toc-number">1.4.</span> <span class="toc-text">Using a keyserver</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Trusting-a-key"><span class="toc-number">1.5.</span> <span class="toc-text">Trusting a key</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Encrypting"><span class="toc-number">2.</span> <span class="toc-text">Encrypting</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Public-key-encryption"><span class="toc-number">2.1.</span> <span class="toc-text">Public key encryption</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Symmetric-encryption"><span class="toc-number">2.2.</span> <span class="toc-text">Symmetric encryption</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Decrypting"><span class="toc-number">3.</span> <span class="toc-text">Decrypting</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Decrypting-a-file"><span class="toc-number">3.1.</span> <span class="toc-text">Decrypting a file</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Signing-amp-Verifying"><span class="toc-number">4.</span> <span class="toc-text">Signing &amp; Verifying</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Signing"><span class="toc-number">4.1.</span> <span class="toc-text">Signing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Verifying-a-signature"><span class="toc-number">4.2.</span> <span class="toc-text">Verifying a signature</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Viewing-content-of-signed-file"><span class="toc-number">4.3.</span> <span class="toc-text">Viewing content of signed file</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Miscellaneous"><span class="toc-number">5.</span> <span class="toc-text">Miscellaneous</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Components"><span class="toc-number">5.1.</span> <span class="toc-text">Components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Parsing-keyring-data"><span class="toc-number">5.2.</span> <span class="toc-text">Parsing keyring data</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        GnuPG
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.290Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/CLI/">CLI</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><h3 id="Exporting-keys"><a href="#Exporting-keys" class="headerlink" title="Exporting keys"></a>Exporting keys</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg -o key.gpg --<span class="built_in">export</span> &lt;KEY ID&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>Export key in ASCII:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg -o key.asc --armor --<span class="built_in">export</span> &lt;KEY ID&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong> Omitting the <code>-o|--output</code> option will print the key to <code>stdout</code>.</p>
+<h3 id="Importing-keys"><a href="#Importing-keys" class="headerlink" title="Importing keys"></a>Importing keys</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gpg --import key.gpg</span><br><span class="line">gpg --import key.asc</span><br></pre></td></tr></table></figure>
+<p>Only merge updates for keys already in key-ring:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --import key.asc --merge-options merge-only</span><br></pre></td></tr></table></figure>
+<h3 id="Managing-your-keyring"><a href="#Managing-your-keyring" class="headerlink" title="Managing your keyring"></a>Managing your keyring</h3><p>Generate a new key:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gpg --gen-key</span><br><span class="line"><span class="comment"># or, generate a new key with dialogs for all options</span></span><br><span class="line">gpg --full-gen-key</span><br></pre></td></tr></table></figure>
+<p>List public keys:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gpg -k</span><br><span class="line">gpg --list-keys</span><br></pre></td></tr></table></figure>
+<p>List secret keys:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gpg -K</span><br><span class="line">gpg --list-secret-keys</span><br></pre></td></tr></table></figure>
+<h3 id="Using-a-keyserver"><a href="#Using-a-keyserver" class="headerlink" title="Using a keyserver"></a>Using a keyserver</h3><p>Import keys from keyserver:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --receive-keys &lt;KEY IDS&gt;</span><br></pre></td></tr></table></figure>
+<p>Upload keys to keyserver:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --send-keys &lt;KEY IDS&gt;</span><br></pre></td></tr></table></figure>
+<p>Request updates from keyserver for keys already in your keyring:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --refresh-keys</span><br></pre></td></tr></table></figure>
+<p>Search keys from keyserver:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --search-keys <span class="string">"&lt;SEARCH STRING&gt;"</span></span><br></pre></td></tr></table></figure>
+<p>Override keyserver from <code>~/.gnupg/gpg.conf</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --keyserver &lt;URL&gt; ...</span><br></pre></td></tr></table></figure>
+<h3 id="Trusting-a-key"><a href="#Trusting-a-key" class="headerlink" title="Trusting a key"></a>Trusting a key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gpg --edit-key &lt;KEY ID&gt;</span><br><span class="line"><span class="comment"># In the interactive prompt:</span></span><br><span class="line">gpg&gt; sign</span><br><span class="line">gpg&gt; save</span><br></pre></td></tr></table></figure>
+<p><strong>NOTE:</strong> You can use the owner’s email or name (or part thereof) instead of the key ID for <code>--edit-key</code></p>
+<h2 id="Encrypting"><a href="#Encrypting" class="headerlink" title="Encrypting"></a>Encrypting</h2><h3 id="Public-key-encryption"><a href="#Public-key-encryption" class="headerlink" title="Public key encryption"></a>Public key encryption</h3><p>This will produce an encrypted file, <code>secret.txt.gpg</code>, that can only be decrypted by the recipient:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg -e -o secret.txt.gpg -r &lt;RECIPIENT&gt; secret.txt</span><br></pre></td></tr></table></figure>
+<p>For <code>&lt;RECIPIENT&gt;</code> you can use their key ID, their email, or their name (or part thereof).</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gpg -e -r &lt;KEY ID&gt; ...</span><br><span class="line">gpg -e -r <span class="string">"Bez"</span> ...</span><br><span class="line">gpg -e -r <span class="string">"bezalelhermoso@gmail.com"</span> ...</span><br></pre></td></tr></table></figure>
+<p>Specifying multiple recipients</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg -e -r &lt;RECIPIENT&gt; -r &lt;ANOTHER RECIPIENT&gt; ... secret.txt</span><br></pre></td></tr></table></figure>
+<p><strong>NOTE</strong>: Omitting <code>-o|--output</code> will produce an encrypted file named <code>&lt;ORIGINAL FILENAME&gt;.gpg</code> by default.</p>
+<h3 id="Symmetric-encryption"><a href="#Symmetric-encryption" class="headerlink" title="Symmetric encryption"></a>Symmetric encryption</h3><p>Encrypt file using a shared key. You will be prompted for a passphrase.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gpg --symmetric secret.txt</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">gpg -c secret.txt</span><br></pre></td></tr></table></figure>
+<h2 id="Decrypting"><a href="#Decrypting" class="headerlink" title="Decrypting"></a>Decrypting</h2><h3 id="Decrypting-a-file"><a href="#Decrypting-a-file" class="headerlink" title="Decrypting a file"></a>Decrypting a file</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg -d -o secret.txt secret.txt.gpg</span><br></pre></td></tr></table></figure>
+<p>If the file is encrypted via symmetric encryption, you will be prompted for the passphrase.</p>
+<p><strong>NOTE</strong>: Omitting <code>-o|--output</code> will print the unencrypted contents to <code>stdout</code></p>
+<h2 id="Signing-amp-Verifying"><a href="#Signing-amp-Verifying" class="headerlink" title="Signing &amp; Verifying"></a>Signing &amp; Verifying</h2><h3 id="Signing"><a href="#Signing" class="headerlink" title="Signing"></a>Signing</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg -o signed-file.txt.gpg -s file.txt</span><br></pre></td></tr></table></figure>
+<p>This can be used during encryption to also sign encrypted files:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gpg -s -o secret.txt.gpg \</span><br><span class="line">  -r &lt;RECIPIENT&gt; secret.txt</span><br></pre></td></tr></table></figure>
+<h3 id="Verifying-a-signature"><a href="#Verifying-a-signature" class="headerlink" title="Verifying a signature"></a>Verifying a signature</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --verify file.txt.gpg</span><br></pre></td></tr></table></figure>
+<h3 id="Viewing-content-of-signed-file"><a href="#Viewing-content-of-signed-file" class="headerlink" title="Viewing content of signed file"></a>Viewing content of signed file</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg -d signed-file.txt.gpg</span><br></pre></td></tr></table></figure>
+<h2 id="Miscellaneous"><a href="#Miscellaneous" class="headerlink" title="Miscellaneous"></a>Miscellaneous</h2><h3 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h3><p>List all components:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpgconf --list-components</span><br></pre></td></tr></table></figure>
+<p>Kill a component:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpgconf --<span class="built_in">kill</span> &lt;COMPONENT&gt; <span class="comment"># i.e. gpgconf --kill dirmngr</span></span><br></pre></td></tr></table></figure>
+<p>Kill all components:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpgconf --<span class="built_in">kill</span> all</span><br></pre></td></tr></table></figure></p>
+<h3 id="Parsing-keyring-data"><a href="#Parsing-keyring-data" class="headerlink" title="Parsing keyring data"></a>Parsing keyring data</h3><p>Use <code>--with-colons</code> to produce an output that can easily be parsed i.e. with <code>awk</code>, <code>grep</code>. Fields are colon-separated.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg -k --with-colons</span><br></pre></td></tr></table></figure>
+<p>Field Quick Reference:</p>
+<p>| Field # | Description |<br>| 1       | Record type |<br>| 2       | Validity |<br>| 3       | Key length in bits |<br>| 4       | Public key algorithm |<br>| 5       | Key ID |<br>| 6       | Creation date |<br>| 7       | Expiry date |<br>| 8       | Certificate S/N, UID hash, trust signature info |<br>| 9       | Ownertrust |<br>| 10      | User ID |<br>| 11      | Signature class |<br>| 12      | Key capabilities |<br>| 13      | Issuer fingerprint |<br>| 14      | Flag field |<br>| 15      | S/N of token |<br>| 16      | Hash algorithm |<br>| 17      | Curve name |<br>| 18      | Compliance flags |<br>| 19      | Last update timestamp |<br>| 20      | Origin |</p>
+<p>See <a href="https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob_plain;f=doc/DETAILS" target="_blank" rel="noopener">GnuPG Details</a> for more details.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basics"><span class="toc-number">1.</span> <span class="toc-text">Basics</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Exporting-keys"><span class="toc-number">1.1.</span> <span class="toc-text">Exporting keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Importing-keys"><span class="toc-number">1.2.</span> <span class="toc-text">Importing keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Managing-your-keyring"><span class="toc-number">1.3.</span> <span class="toc-text">Managing your keyring</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-a-keyserver"><span class="toc-number">1.4.</span> <span class="toc-text">Using a keyserver</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Trusting-a-key"><span class="toc-number">1.5.</span> <span class="toc-text">Trusting a key</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Encrypting"><span class="toc-number">2.</span> <span class="toc-text">Encrypting</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Public-key-encryption"><span class="toc-number">2.1.</span> <span class="toc-text">Public key encryption</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Symmetric-encryption"><span class="toc-number">2.2.</span> <span class="toc-text">Symmetric encryption</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Decrypting"><span class="toc-number">3.</span> <span class="toc-text">Decrypting</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Decrypting-a-file"><span class="toc-number">3.1.</span> <span class="toc-text">Decrypting a file</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Signing-amp-Verifying"><span class="toc-number">4.</span> <span class="toc-text">Signing &amp; Verifying</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Signing"><span class="toc-number">4.1.</span> <span class="toc-text">Signing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Verifying-a-signature"><span class="toc-number">4.2.</span> <span class="toc-text">Verifying a signature</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Viewing-content-of-signed-file"><span class="toc-number">4.3.</span> <span class="toc-text">Viewing content of signed file</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Miscellaneous"><span class="toc-number">5.</span> <span class="toc-text">Miscellaneous</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Components"><span class="toc-number">5.1.</span> <span class="toc-text">Components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Parsing-keyring-data"><span class="toc-number">5.2.</span> <span class="toc-text">Parsing keyring data</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/gnupg/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/gnupg/&text=GnuPG"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/gnupg/&title=GnuPG"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/gnupg/&is_video=false&description=GnuPG"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=GnuPG&body=Check out this article: https://rupertqin.github.io/devhints/gnupg/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/gnupg/&title=GnuPG"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/gnupg/&title=GnuPG"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/gnupg/&title=GnuPG"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/gnupg/&title=GnuPG"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/gnupg/&name=GnuPG&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

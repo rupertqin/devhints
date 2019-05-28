@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Container1.grid-container &amp;#123; 1234/* Display properties */display: grid;display: inline-grid;display: subgrid; 1234567/* Columns and rows */grid-template-columns: 1rem 2rem 1rem; /* Measurement uni">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS Grid">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/css-grid/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Container1.grid-container &amp;#123; 1234/* Display properties */display: grid;display: inline-grid;display: subgrid; 1234567/* Columns and rows */grid-template-columns: 1rem 2rem 1rem; /* Measurement uni">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-05T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS Grid">
+<meta name="twitter:description" content="Container1.grid-container &amp;#123; 1234/* Display properties */display: grid;display: inline-grid;display: subgrid; 1234567/* Columns and rows */grid-template-columns: 1rem 2rem 1rem; /* Measurement uni">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>CSS Grid</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../css-font/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../css-flexbox/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/css-grid/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/css-grid/&text=CSS Grid"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/css-grid/&title=CSS Grid"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/css-grid/&is_video=false&description=CSS Grid"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=CSS Grid&body=Check out this article: https://rupertqin.github.io/devhints/css-grid/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/css-grid/&title=CSS Grid"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/css-grid/&title=CSS Grid"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/css-grid/&title=CSS Grid"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/css-grid/&title=CSS Grid"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/css-grid/&name=CSS Grid&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Container"><span class="toc-number">1.</span> <span class="toc-text">Container</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Child"><span class="toc-number">2.</span> <span class="toc-text">Child</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number"></span> <span class="toc-text">References</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        CSS Grid
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.241Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/CSS/">CSS</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Container"><a href="#Container" class="headerlink" title="Container"></a>Container</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.grid-container</span> &#123;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Display properties */</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">grid</span>;</span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">inline-grid</span>;</span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">subgrid</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Columns and rows */</span></span><br><span class="line"><span class="selector-tag">grid-template-columns</span>: 1<span class="selector-tag">rem</span> 2<span class="selector-tag">rem</span> 1<span class="selector-tag">rem</span>; <span class="comment">/* Measurement units */</span></span><br><span class="line"><span class="selector-tag">grid-template-columns</span>: 25% 50% 25%; <span class="comment">/* Percentage units */</span></span><br><span class="line"><span class="selector-tag">grid-template-columns</span>: 1<span class="selector-tag">rem</span> <span class="selector-tag">auto</span> 1<span class="selector-tag">rem</span> 2<span class="selector-tag">fr</span>; <span class="comment">/* Fill remaining widths with auto or fr units */</span></span><br><span class="line"><span class="selector-tag">grid-template-columns</span>: <span class="selector-tag">repeat</span>(12, 1<span class="selector-tag">fr</span>); <span class="comment">/* Repeat columns without needing to write them */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">grid-template-rows</span>: 1<span class="selector-tag">rem</span> 10% <span class="selector-tag">auto</span> <span class="selector-tag">repeat</span>(5, 10<span class="selector-tag">px</span>); <span class="comment">/* Mix any group, same rules work for rows */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Automatic columns and rows */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">grid-auto-columns</span>: 10<span class="selector-tag">px</span>; <span class="comment">/* No matter how many columns of content end up in the grid, each column will be this same width */</span></span><br><span class="line"><span class="selector-tag">grid-auto-rows</span>: 1<span class="selector-tag">rem</span>; <span class="comment">/* No matter how many rows of content end up in the grid, each row will be this same height */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Areas */</span></span><br><span class="line"><span class="selector-tag">grid-tamplate-areas</span>:</span><br><span class="line">  "<span class="selector-tag">header</span> <span class="selector-tag">header</span>"</span><br><span class="line">  "<span class="selector-tag">main</span> <span class="selector-tag">aside</span>"</span><br><span class="line">  "<span class="selector-tag">footer</span> <span class="selector-tag">footer</span>"; <span class="comment">/* Grid-style */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">grid-template-areas</span>: "<span class="selector-tag">header</span> <span class="selector-tag">header</span>" "<span class="selector-tag">main</span> <span class="selector-tag">aside</span>" "<span class="selector-tag">footer</span> <span class="selector-tag">footer</span>"; <span class="comment">/* Inline-style */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Template shorthand */</span></span><br><span class="line"><span class="selector-tag">grid-template</span>:</span><br><span class="line">  "<span class="selector-tag">header</span> <span class="selector-tag">header</span>" <span class="selector-tag">auto</span></span><br><span class="line">  "<span class="selector-tag">main</span> <span class="selector-tag">aside</span>" 100<span class="selector-tag">vh</span></span><br><span class="line">  "<span class="selector-tag">footer</span> <span class="selector-tag">footer</span>" 10<span class="selector-tag">rem</span></span><br><span class="line">  / 80% 20%;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* The above is the same as below long-hand */</span></span><br><span class="line"><span class="selector-tag">grid-template-columns</span>: 80% 20%;</span><br><span class="line"><span class="selector-tag">grid-template-rows</span>: <span class="selector-tag">auto</span> 100<span class="selector-tag">vh</span> 10<span class="selector-tag">rem</span>;</span><br><span class="line"><span class="selector-tag">grid-tamplate-areas</span>:</span><br><span class="line">  "<span class="selector-tag">header</span> <span class="selector-tag">header</span>"</span><br><span class="line">  "<span class="selector-tag">main</span> <span class="selector-tag">aside</span>"</span><br><span class="line">  "<span class="selector-tag">footer</span> <span class="selector-tag">footer</span>";</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Gaps */</span></span><br><span class="line"><span class="selector-tag">grid-row-gap</span>: 1<span class="selector-tag">rem</span>;</span><br><span class="line"><span class="selector-tag">grid-column-gap</span>: 0<span class="selector-class">.5rem</span>; <span class="comment">/* Define values separately */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">grid-gap</span>: 1<span class="selector-tag">rem</span> 0<span class="selector-class">.5rem</span>; <span class="comment">/* Short-hand for row / column */</span></span><br><span class="line"><span class="selector-tag">grid-gap</span>: 1<span class="selector-tag">rem</span>; <span class="comment">/* Gap in both dimensions */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Item justification (horizontal or column alignment) */</span></span><br><span class="line"><span class="selector-tag">justify-items</span>: <span class="selector-tag">start</span>; <span class="comment">/* Align items to the left */</span></span><br><span class="line"><span class="selector-tag">justify-items</span>: <span class="selector-tag">center</span>; <span class="comment">/* Align items centered within its column */</span></span><br><span class="line"><span class="selector-tag">justify-items</span>: <span class="selector-tag">end</span>; <span class="comment">/* Align items to the right */</span></span><br><span class="line"><span class="selector-tag">justify-items</span>: <span class="selector-tag">stretch</span>; <span class="comment">/* (default) Fills available area (horizontally) */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Item alignment (vertical or row alignment) */</span></span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">start</span>; <span class="comment">/* Align items to the top */</span></span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">center</span>; <span class="comment">/* Align items centered within its row */</span></span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">end</span>; <span class="comment">/* Align items to the bottom */</span></span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">stretch</span>; <span class="comment">/* (default) Fills available area (vertically) */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Place item shorthand */</span></span><br><span class="line"><span class="selector-tag">place-items</span>: <span class="selector-tag">start</span> <span class="selector-tag">stretch</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* The above is the same as below long-hand */</span></span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">start</span>;</span><br><span class="line"><span class="selector-tag">justify-items</span>: <span class="selector-tag">stretch</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Content justification (horizontal or column alignment) */</span></span><br><span class="line"><span class="selector-tag">justify-content</span>: <span class="selector-tag">start</span>; <span class="comment">/* Align content to the left */</span></span><br><span class="line"><span class="selector-tag">justify-content</span>: <span class="selector-tag">center</span>; <span class="comment">/* Align content centered horizontally within the grid */</span></span><br><span class="line"><span class="selector-tag">justify-content</span>: <span class="selector-tag">end</span>; <span class="comment">/* Align content to the right */</span></span><br><span class="line"><span class="selector-tag">justify-content</span>: <span class="selector-tag">stretch</span>; <span class="comment">/* (default) Fills available area (horizontally) */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">justify-content</span>: <span class="selector-tag">space-around</span>; <span class="comment">/* Chooses a space for both sides of the columns like a left and right margin */</span></span><br><span class="line"><span class="selector-tag">justify-content</span>: <span class="selector-tag">space-between</span>; <span class="comment">/* Chooses a space to go between columns, no margins on outside of content */</span></span><br><span class="line"><span class="selector-tag">justify-content</span>: <span class="selector-tag">space-evenly</span>; <span class="comment">/* Chooses a space that goes between all columns and edges consistently */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Content alignment (horizontal or column alignment) */</span></span><br><span class="line"><span class="selector-tag">align-content</span>: <span class="selector-tag">start</span>; <span class="comment">/* Align content to the top */</span></span><br><span class="line"><span class="selector-tag">align-content</span>: <span class="selector-tag">center</span>; <span class="comment">/* Align content centered vertically within the grid */</span></span><br><span class="line"><span class="selector-tag">align-content</span>: <span class="selector-tag">end</span>; <span class="comment">/* Align content to the bottom */</span></span><br><span class="line"><span class="selector-tag">align-content</span>: <span class="selector-tag">stretch</span>; <span class="comment">/* (default) Fills available area (vertically) */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">align-content</span>: <span class="selector-tag">space-around</span>; <span class="comment">/* Chooses a space for the top and bottom of the rows like a top and bottom margin */</span></span><br><span class="line"><span class="selector-tag">align-content</span>: <span class="selector-tag">space-between</span>; <span class="comment">/* Chooses a space to go between rows, no margins on outside of content */</span></span><br><span class="line"><span class="selector-tag">align-content</span>: <span class="selector-tag">space-evenly</span>; <span class="comment">/* Chooses a space that goes between all rows and edges consistently */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Place item shorthand */</span></span><br><span class="line"><span class="selector-tag">place-content</span>: <span class="selector-tag">center</span> <span class="selector-tag">start</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* The above is the same as below long-hand */</span></span><br><span class="line"><span class="selector-tag">align-content</span>: <span class="selector-tag">center</span>;</span><br><span class="line"><span class="selector-tag">justify-content</span>: <span class="selector-tag">start</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Automatic grid positioning */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">grid-auto-flow</span>: <span class="selector-tag">row</span>; <span class="comment">/* Left-to-right rows, then top-to-bottom*/</span></span><br><span class="line"><span class="selector-tag">grid-auto-flow</span>: <span class="selector-tag">column</span>; <span class="comment">/* Top-to-bottom columns, then left-to-right */</span></span><br><span class="line"><span class="selector-tag">grid-auto-flow</span>: <span class="selector-tag">dense</span>; <span class="comment">/* Responds with best-guess on left-to-right, top-to-bottom order with advanced layouts */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* There is one final shorthand for all container properties in one */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Explicit grid columns, rows, and areas */</span></span><br><span class="line"><span class="selector-tag">grid</span>:</span><br><span class="line">  "<span class="selector-tag">header</span> <span class="selector-tag">header</span>" <span class="selector-tag">auto</span></span><br><span class="line">  "<span class="selector-tag">main</span> <span class="selector-tag">aside</span>" 100<span class="selector-tag">vh</span></span><br><span class="line">  "<span class="selector-tag">footer</span> <span class="selector-tag">footer</span>" 10<span class="selector-tag">rem</span></span><br><span class="line">  / 80% 20%; /* You can include a template as the only value, which is equivalent to below */</span><br><span class="line"><span class="selector-tag">grid-template</span>:</span><br><span class="line">  "<span class="selector-tag">header</span> <span class="selector-tag">header</span>" <span class="selector-tag">auto</span></span><br><span class="line">  "<span class="selector-tag">main</span> <span class="selector-tag">aside</span>" 100<span class="selector-tag">vh</span></span><br><span class="line">  "<span class="selector-tag">footer</span> <span class="selector-tag">footer</span>" 10<span class="selector-tag">rem</span></span><br><span class="line">  / 80% 20%; /* Which is again equivalent to below */</span><br><span class="line"><span class="selector-tag">grid-template-columns</span>: 80% 20%;</span><br><span class="line"><span class="selector-tag">grid-template-rows</span>: <span class="selector-tag">auto</span> 100<span class="selector-tag">vh</span> 10<span class="selector-tag">rem</span>;</span><br><span class="line"><span class="selector-tag">grid-tamplate-areas</span>:</span><br><span class="line">  "<span class="selector-tag">header</span> <span class="selector-tag">header</span>"</span><br><span class="line">  "<span class="selector-tag">main</span> <span class="selector-tag">aside</span>"</span><br><span class="line">  "<span class="selector-tag">footer</span> <span class="selector-tag">footer</span>";</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Automatic grid flows */</span></span><br><span class="line">grid: 1rem / auto-flow dense 1fr; /* You can include rows, a flow, and automatic columns, which is equivalent to below */</span><br><span class="line"><span class="selector-tag">grid-template-rows</span>: 1<span class="selector-tag">rem</span>;</span><br><span class="line"><span class="selector-tag">grid-auto-flow</span>: <span class="selector-tag">dense</span>;</span><br><span class="line"><span class="selector-tag">grid-auto-columns</span>: 1<span class="selector-tag">fr</span>;</span><br><span class="line"></span><br><span class="line">grid: auto-flow dense 1rem / repeat(10, 10%); /* Conversely, you can do the same thing with automatic rows, and defined columns */</span><br><span class="line"><span class="selector-tag">grid-auto-flow</span>: <span class="selector-tag">dense</span>;</span><br><span class="line"><span class="selector-tag">grid-auto-rows</span>: 1<span class="selector-tag">rem</span>;</span><br><span class="line"><span class="selector-tag">grid-template-columns</span>: <span class="selector-tag">repeat</span>(10, 10%);</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Child"><a href="#Child" class="headerlink" title="Child"></a>Child</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.grid-child</span> &#123;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Column position */</span></span><br><span class="line"><span class="selector-tag">grid-column-start</span>: 1;</span><br><span class="line"><span class="selector-tag">grid-column-end</span>: 2;</span><br><span class="line"></span><br><span class="line">grid-column: 1 / 2; /* Short hand */</span><br><span class="line">grid-column: 1 / span 2; /* Span 2 columns without explicitly defining an endpoint */</span><br><span class="line"><span class="selector-tag">grid-column</span>: 1; <span class="comment">/* Start in and occupy a single column */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Row position */</span></span><br><span class="line"><span class="selector-tag">grid-row-start</span>: 2;</span><br><span class="line"><span class="selector-tag">grid-row-end</span>: 4;</span><br><span class="line"></span><br><span class="line">grid-row: 2 / 4; /* Short hand */</span><br><span class="line">grid-row: 2 / span 3;/* Span 3 rows without explicitly defining an endpoint */</span><br><span class="line"><span class="selector-tag">grid-row</span>: 1; <span class="comment">/* Start in and occupy a single row */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Area positioning */</span></span><br><span class="line"><span class="selector-tag">grid-area</span>: <span class="selector-tag">header</span>; <span class="comment">/* You can use a named grid area from the container */</span></span><br><span class="line"></span><br><span class="line">grid-area: 2 / 1 / 4 / 2; /* Or you can use positioning. This is equivalent to... */</span><br><span class="line"><span class="selector-tag">grid-row-start</span>: 2;</span><br><span class="line"><span class="selector-tag">grid-column-start</span>: 1;</span><br><span class="line"><span class="selector-tag">grid-row-end</span>: 4;</span><br><span class="line"><span class="selector-tag">grid-column-end</span>: 2;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Self justification (horizontal or column alignment) */</span></span><br><span class="line"><span class="selector-tag">justify-self</span>: <span class="selector-tag">start</span>; <span class="comment">/* Align item to the left */</span></span><br><span class="line"><span class="selector-tag">justify-self</span>: <span class="selector-tag">center</span>; <span class="comment">/* Align item centered within its column */</span></span><br><span class="line"><span class="selector-tag">justify-self</span>: <span class="selector-tag">end</span>; <span class="comment">/* Align item to the right */</span></span><br><span class="line"><span class="selector-tag">justify-self</span>: <span class="selector-tag">stretch</span>; <span class="comment">/* (default) Fills available area (horizontally) */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Self alignment (vertical or row alignment) */</span></span><br><span class="line"><span class="selector-tag">align-self</span>: <span class="selector-tag">start</span>; <span class="comment">/* Align item to the top */</span></span><br><span class="line"><span class="selector-tag">align-self</span>: <span class="selector-tag">center</span>; <span class="comment">/* Align item centered within its row */</span></span><br><span class="line"><span class="selector-tag">align-self</span>: <span class="selector-tag">end</span>; <span class="comment">/* Align item to the bottom */</span></span><br><span class="line"><span class="selector-tag">align-self</span>: <span class="selector-tag">stretch</span>; <span class="comment">/* (default) Fills available area (vertically) */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Placement shorthand */</span></span><br><span class="line"><span class="selector-tag">place-self</span>: <span class="selector-tag">start</span> <span class="selector-tag">stretch</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* The above is the same as below long-hand */</span></span><br><span class="line"><span class="selector-tag">align-self</span>: <span class="selector-tag">start</span>;</span><br><span class="line"><span class="selector-tag">justify-self</span>: <span class="selector-tag">stretch</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="http://grid.malven.co/" target="_blank" rel="noopener">GRID: A simple visual cheatsheet</a></li>
+<li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank" rel="noopener">CSS Tricks: A Complete Guide to Grid</a></li>
+<li><a href="https://caniuse.com/#feat=css-grid" target="_blank" rel="noopener">Browser support</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Container"><span class="toc-number">1.</span> <span class="toc-text">Container</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Child"><span class="toc-number">2.</span> <span class="toc-text">Child</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number"></span> <span class="toc-text">References</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/css-grid/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/css-grid/&text=CSS Grid"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/css-grid/&title=CSS Grid"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/css-grid/&is_video=false&description=CSS Grid"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=CSS Grid&body=Check out this article: https://rupertqin.github.io/devhints/css-grid/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/css-grid/&title=CSS Grid"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/css-grid/&title=CSS Grid"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/css-grid/&title=CSS Grid"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/css-grid/&title=CSS Grid"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/css-grid/&name=CSS Grid&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="expect(x).to.be.equal(y) 〉 assert.equal(x, y) 〉 .to.be.true 〉 jQuery, assertions, TDD and BDD, and other Chai examples.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chai.js">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/chai/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="expect(x).to.be.equal(y) 〉 assert.equal(x, y) 〉 .to.be.true 〉 jQuery, assertions, TDD and BDD, and other Chai examples.">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-08-29T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chai.js">
+<meta name="twitter:description" content="expect(x).to.be.equal(y) 〉 assert.equal(x, y) 〉 .to.be.true 〉 jQuery, assertions, TDD and BDD, and other Chai examples.">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Chai.js</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../chef/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../cask-index/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/chai/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/chai/&text=Chai.js"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/chai/&title=Chai.js"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/chai/&is_video=false&description=Chai.js"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Chai.js&body=Check out this article: https://rupertqin.github.io/devhints/chai/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/chai/&title=Chai.js"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/chai/&title=Chai.js"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/chai/&title=Chai.js"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/chai/&title=Chai.js"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/chai/&name=Chai.js&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Assert"><span class="toc-number">1.</span> <span class="toc-text">Assert</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BDD-syntax"><span class="toc-number">2.</span> <span class="toc-text">BDD syntax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Should-chains"><span class="toc-number">3.</span> <span class="toc-text">Should: chains</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Should-not"><span class="toc-number">4.</span> <span class="toc-text">Should not</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Chai-with-jQuery"><span class="toc-number"></span> <span class="toc-text">Chai with jQuery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-chai-jquery"><span class="toc-number">1.</span> <span class="toc-text">Using chai-jquery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Continued"><span class="toc-number">2.</span> <span class="toc-text">Continued</span></a></li></ol>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Chai.js
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.227Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/JavaScript-libraries/">JavaScript libraries</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Assert"><a href="#Assert" class="headerlink" title="Assert"></a>Assert</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; assert &#125; = <span class="built_in">require</span>(<span class="string">'chai'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">assert(val)</span><br><span class="line">assert.fail(actual, expected)</span><br><span class="line">assert.ok(val)                        <span class="comment">// is truthy</span></span><br><span class="line">assert.equal(actual, expected)        <span class="comment">// compare with ==</span></span><br><span class="line">assert.strictEqual(actual, expected)  <span class="comment">// compare with ===</span></span><br><span class="line">assert.deepEqual(actual, expected)    <span class="comment">// deep equal check</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">assert.isTrue(val)</span><br><span class="line">assert.isFalse(val)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">assert.isNull(val)</span><br><span class="line">assert.isNotNull(val)</span><br><span class="line">assert.isUndefined(val)</span><br><span class="line">assert.isDefined(val)</span><br><span class="line">assert.isFunction(val)</span><br><span class="line">assert.isObject(val)</span><br><span class="line">assert.isArray(val)</span><br><span class="line">assert.isString(val)</span><br><span class="line">assert.isNumber(val)</span><br><span class="line">assert.isBoolean(val)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">assert.typeOf(<span class="regexp">/tea/</span>, <span class="string">'regexp'</span>) <span class="comment">// Object.prototype.toString()</span></span><br><span class="line">assert.instanceOf(chai, Tea)</span><br><span class="line">assert.include([ a,b,c ], a)</span><br><span class="line">assert.match(val, /regexp/)</span><br><span class="line">assert.property(obj, <span class="string">'tea'</span>) <span class="comment">// 'tea' in object</span></span><br><span class="line">assert.deepProperty(obj, <span class="string">'tea.green'</span>)</span><br><span class="line">assert.propertyVal(person, <span class="string">'name'</span>, <span class="string">'John'</span>)</span><br><span class="line">assert.deepPropertyVal(post, <span class="string">'author.name'</span>, <span class="string">'John'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">assert.lengthOf(object, <span class="number">3</span>)</span><br><span class="line">assert.throws(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; ... &#125;)</span><br><span class="line">assert.throws(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; ... &#125;, /reference error/)</span><br><span class="line">assert.doesNotThrow</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">assert.operator(<span class="number">1</span>, <span class="string">'&lt;'</span>, <span class="number">2</span>)</span><br><span class="line">assert.closeTo(actual, expected)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://chaijs.com/api/assert/" target="_blank" rel="noopener">Assert API</a> <em>(chaijs.com)</em></p>
+<h3 id="BDD-syntax"><a href="#BDD-syntax" class="headerlink" title="BDD syntax"></a>BDD syntax</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; expect &#125; = <span class="built_in">require</span>(<span class="string">'chai'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">expect(object)</span><br><span class="line">  .to.equal(expected)</span><br><span class="line">  .to.eql(expected)        <span class="comment">// deep equality</span></span><br><span class="line">  .to.deep.equal(expected) <span class="comment">// same as .eql</span></span><br><span class="line">  .to.be.a(<span class="string">'string'</span>)</span><br><span class="line">  .to.include(val)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.be.ok(val)</span><br><span class="line">.be.true</span><br><span class="line">.be.false</span><br><span class="line">.to.exist</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.to.be.null</span><br><span class="line">.to.be.undefined</span><br><span class="line">.to.be.empty</span><br><span class="line">.to.be.arguments</span><br><span class="line">.to.be.function</span><br><span class="line">.to.be.instanceOf</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.to.be.gt(<span class="number">5</span>)  <span class="comment">// aka: .above .greaterThan</span></span><br><span class="line">.to.be.gte(<span class="number">5</span>) <span class="comment">// aka: .at.least</span></span><br><span class="line">.to.be.lt(<span class="number">5</span>)  <span class="comment">// aka: .below</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.to.respondTo(<span class="string">'bar'</span>)</span><br><span class="line">.to.satisfy(<span class="function">(<span class="params">n</span>) =&gt;</span> n &gt; <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.to.have.members([<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">.to.have.keys([<span class="string">'foo'</span>])</span><br><span class="line">.to.have.key(<span class="string">'foo'</span>)</span><br><span class="line">.to.have.lengthOf(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">expect(<span class="function"><span class="params">()</span> =&gt;</span> &#123; ··· &#125;)</span><br><span class="line">  .to.throw(<span class="regexp">/not a function/</span>)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://chaijs.com/api/bdd/" target="_blank" rel="noopener">BDD</a> <em>(chaijs.com)</em></p>
+<h3 id="Should-chains"><a href="#Should-chains" class="headerlink" title="Should: chains"></a>Should: chains</h3><pre><code>.to .be .been .is .that .and .have .with .at .of .same
+</code></pre><p>These don’t do anything and can be chained.</p>
+<h3 id="Should-not"><a href="#Should-not" class="headerlink" title="Should not"></a>Should not</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect(object).not.equal(<span class="string">'x'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="Chai-with-jQuery"><a href="#Chai-with-jQuery" class="headerlink" title="Chai with jQuery"></a>Chai with jQuery</h2><h3 id="Using-chai-jquery"><a href="#Using-chai-jquery" class="headerlink" title="Using chai-jquery"></a>Using chai-jquery</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">global.jQuery = ···</span><br><span class="line">chai.use(<span class="built_in">require</span>(<span class="string">'chai-jquery'</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">expect($body)</span><br><span class="line">  .have.attr(<span class="string">'foo'</span>)</span><br><span class="line">  .have.prop(<span class="string">'disabled'</span>)</span><br><span class="line">  .have.css(<span class="string">'background'</span>)</span><br><span class="line">  .have.css(<span class="string">'background-color'</span>, <span class="string">'#ffffff'</span>)</span><br><span class="line">  .have.data(<span class="string">'foo'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.have.class(<span class="string">'active'</span>)</span><br><span class="line">.have.id(<span class="string">'id'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.have.html(<span class="string">'&lt;em&gt;hi&lt;/em&gt;'</span>)</span><br><span class="line">.have.text(<span class="string">'hello'</span>)</span><br><span class="line">.have.value(<span class="string">'2013'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Continued"><a href="#Continued" class="headerlink" title="Continued"></a>Continued</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect($body)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.be.visible</span><br><span class="line">.be.hidden</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.be.checked</span><br><span class="line">.be.selected</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.be.enabled</span><br><span class="line">.be.disabled</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.be.empty</span><br><span class="line">.to.exist</span><br><span class="line">.to.contain(<span class="string">'text'</span>)</span><br><span class="line">.to.have(<span class="string">'.selector'</span>)</span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Assert"><span class="toc-number">1.</span> <span class="toc-text">Assert</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BDD-syntax"><span class="toc-number">2.</span> <span class="toc-text">BDD syntax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Should-chains"><span class="toc-number">3.</span> <span class="toc-text">Should: chains</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Should-not"><span class="toc-number">4.</span> <span class="toc-text">Should not</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Chai-with-jQuery"><span class="toc-number"></span> <span class="toc-text">Chai with jQuery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-chai-jquery"><span class="toc-number">1.</span> <span class="toc-text">Using chai-jquery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Continued"><span class="toc-number">2.</span> <span class="toc-text">Continued</span></a></li></ol>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/chai/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/chai/&text=Chai.js"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/chai/&title=Chai.js"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/chai/&is_video=false&description=Chai.js"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Chai.js&body=Check out this article: https://rupertqin.github.io/devhints/chai/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/chai/&title=Chai.js"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/chai/&title=Chai.js"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/chai/&title=Chai.js"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/chai/&title=Chai.js"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/chai/&name=Chai.js&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="ParsleyInstalling via NPM1npm install --save parsleyjs parsleyjs is the Parsley form validator. (‘parsley’ is a different package) Enablingvia HTML12&amp;lt;form data-parsley-validate&amp;gt;&amp;lt;!-- ✗ not pre">
+<meta name="keywords" content="data-parsley-validate,$(&#39;#form&#39;).parsley(),errorClass,successClass,classHandler,errorsContainer,errorsWrapper,errorTemplate">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Parsley.js">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/parsley/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="ParsleyInstalling via NPM1npm install --save parsleyjs parsleyjs is the Parsley form validator. (‘parsley’ is a different package) Enablingvia HTML12&amp;lt;form data-parsley-validate&amp;gt;&amp;lt;!-- ✗ not pre">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-10-18T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Parsley.js">
+<meta name="twitter:description" content="ParsleyInstalling via NPM1npm install --save parsleyjs parsleyjs is the Parsley form validator. (‘parsley’ is a different package) Enablingvia HTML12&amp;lt;form data-parsley-validate&amp;gt;&amp;lt;!-- ✗ not pre">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Parsley.js</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../pass/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../pacman/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/parsley/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/parsley/&text=Parsley.js"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/parsley/&title=Parsley.js"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/parsley/&is_video=false&description=Parsley.js"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Parsley.js&body=Check out this article: https://rupertqin.github.io/devhints/parsley/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/parsley/&title=Parsley.js"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/parsley/&title=Parsley.js"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/parsley/&title=Parsley.js"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/parsley/&title=Parsley.js"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/parsley/&name=Parsley.js&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Parsley"><span class="toc-number">1.</span> <span class="toc-text">Parsley</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Installing-via-NPM"><span class="toc-number">1.1.</span> <span class="toc-text">Installing via NPM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enabling"><span class="toc-number">1.2.</span> <span class="toc-text">Enabling</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#via-HTML"><span class="toc-number">1.2.1.</span> <span class="toc-text">via HTML</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#via-JavaScript"><span class="toc-number">1.2.2.</span> <span class="toc-text">via JavaScript</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API"><span class="toc-number">1.3.</span> <span class="toc-text">API</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Form"><span class="toc-number">1.3.1.</span> <span class="toc-text">Form</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Input"><span class="toc-number">1.3.2.</span> <span class="toc-text">Input</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Validators"><span class="toc-number">1.4.</span> <span class="toc-text">Validators</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Required"><span class="toc-number">1.4.1.</span> <span class="toc-text">Required</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Types"><span class="toc-number">1.4.2.</span> <span class="toc-text">Types</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Length"><span class="toc-number">1.4.3.</span> <span class="toc-text">Length</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Numeric"><span class="toc-number">1.4.4.</span> <span class="toc-text">Numeric</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Range"><span class="toc-number">1.4.5.</span> <span class="toc-text">Range</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Checkboxes"><span class="toc-number">1.4.6.</span> <span class="toc-text">Checkboxes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Confirmation"><span class="toc-number">1.4.7.</span> <span class="toc-text">Confirmation</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Options"><span class="toc-number">2.</span> <span class="toc-text">Options</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Form-options"><span class="toc-number">2.1.</span> <span class="toc-text">Form options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Field-options"><span class="toc-number">2.2.</span> <span class="toc-text">Field options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UI-Options"><span class="toc-number">2.3.</span> <span class="toc-text">UI Options</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">3.</span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-container"><span class="toc-number">3.1.</span> <span class="toc-text">Custom container</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-markup"><span class="toc-number">3.2.</span> <span class="toc-text">Custom markup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-fields"><span class="toc-number">3.3.</span> <span class="toc-text">Custom fields</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-validator"><span class="toc-number">3.4.</span> <span class="toc-text">Custom validator</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML"><span class="toc-number">3.4.1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JavaScript"><span class="toc-number">3.4.2.</span> <span class="toc-text">JavaScript</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number">4.</span> <span class="toc-text">Also see</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Parsley.js
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.364Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/JavaScript-libraries/">JavaScript libraries</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Parsley"><a href="#Parsley" class="headerlink" title="Parsley"></a>Parsley</h2><h3 id="Installing-via-NPM"><a href="#Installing-via-NPM" class="headerlink" title="Installing via NPM"></a>Installing via NPM</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save parsleyjs</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.npmjs.com/package/parsleyjs" target="_blank" rel="noopener">parsleyjs</a> is the Parsley form validator. (‘parsley’ is a different package)</p>
+<h3 id="Enabling"><a href="#Enabling" class="headerlink" title="Enabling"></a>Enabling</h3><h4 id="via-HTML"><a href="#via-HTML" class="headerlink" title="via HTML"></a>via HTML</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">data-parsley-validate</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- ✗ not preferred --&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="via-JavaScript"><a href="#via-JavaScript" class="headerlink" title="via JavaScript"></a>via JavaScript</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#form'</span>).parsley(<span class="comment">/* options */</span>)</span><br></pre></td></tr></table></figure>
+<p>It’s preferable to explicitly call <code>$.fn.parsley()</code>.</p>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><h4 id="Form"><a href="#Form" class="headerlink" title="Form"></a>Form</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#myform'</span>).parsley()</span><br><span class="line">  .isValid()  <span class="comment">// → true | null</span></span><br><span class="line">  .validate()</span><br><span class="line">  .reset()</span><br><span class="line">  .destroy()</span><br></pre></td></tr></table></figure>
+<h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#myform input'</span>).parsley()</span><br><span class="line">  .isValid()</span><br><span class="line">  .validate() <span class="comment">// returns errors</span></span><br></pre></td></tr></table></figure>
+<h3 id="Validators"><a href="#Validators" class="headerlink" title="Validators"></a>Validators</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">...</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="Required"><a href="#Required" class="headerlink" title="Required"></a>Required</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">required</span><br></pre></td></tr></table></figure>
+<h4 id="Types"><a href="#Types" class="headerlink" title="Types"></a>Types</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type='email'</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type='url'</span><br><span class="line">data-parsley-type='url'</span><br></pre></td></tr></table></figure>
+<h4 id="Length"><a href="#Length" class="headerlink" title="Length"></a>Length</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">maxlength='6'</span><br><span class="line">data-parsley-maxlength='6'</span><br><span class="line">minlength='10'</span><br><span class="line">data-parsley-minlength='10'</span><br></pre></td></tr></table></figure>
+<h4 id="Numeric"><a href="#Numeric" class="headerlink" title="Numeric"></a>Numeric</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pattern='\d+'</span><br><span class="line">data-parsley-pattern='\d+'</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">type='number'</span><br><span class="line">data-parsley-type='number'</span><br><span class="line">data-parsley-type='integer'</span><br><span class="line">data-parsley-type='digits'</span><br><span class="line">data-parsley-type='alphanum'</span><br></pre></td></tr></table></figure>
+<h4 id="Range"><a href="#Range" class="headerlink" title="Range"></a>Range</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type='range'</span><br><span class="line">data-parsley=range='[6, 10]'</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">max='10'</span><br><span class="line">data-parsley-max='10'</span><br><span class="line">min='6'</span><br><span class="line">data-parsley-min='6'</span><br></pre></td></tr></table></figure>
+<h4 id="Checkboxes"><a href="#Checkboxes" class="headerlink" title="Checkboxes"></a>Checkboxes</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data-parsley-mincheck='1'</span><br><span class="line">data-parsley-maxcheck='3'</span><br><span class="line">data-parsley-check='[1, 3]'</span><br></pre></td></tr></table></figure>
+<h4 id="Confirmation"><a href="#Confirmation" class="headerlink" title="Confirmation"></a>Confirmation</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data-parsley-equalto='#confirm'</span><br></pre></td></tr></table></figure>
+<h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><h3 id="Form-options"><a href="#Form-options" class="headerlink" title="Form options"></a>Form options</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Supported &amp; excluded inputs by default</span></span><br><span class="line">  inputs: <span class="string">'input, textarea, select'</span></span><br><span class="line">  excluded: <span class="string">'input[type=button], input[type=submit], input[type=reset], input[type=hidden]'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Stop validating field on highest priority failing constraint</span></span><br><span class="line">  priorityEnabled: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://parsleyjs.org/doc/annotated-source/defaults.html" target="_blank" rel="noopener">Options</a></p>
+<h3 id="Field-options"><a href="#Field-options" class="headerlink" title="Field options"></a>Field options</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// identifier used to group together inputs</span></span><br><span class="line"><span class="comment">// (e.g. radio buttons…)</span></span><br><span class="line">  multiple: <span class="literal">null</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// identifier (or array of identifiers) used to</span></span><br><span class="line"><span class="comment">// validate only a select group of inputs</span></span><br><span class="line">  group: <span class="literal">null</span></span><br></pre></td></tr></table></figure>
+<p>These options are only available for fields.</p>
+<h3 id="UI-Options"><a href="#UI-Options" class="headerlink" title="UI Options"></a>UI Options</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Enable/disable error messages</span></span><br><span class="line">  uiEnabled: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Key events threshold before validation</span></span><br><span class="line">  validationThreshold: <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Focused field on form validation error. ‘first’|’last’|’none’</span></span><br><span class="line">  focus: <span class="string">'first'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// $.Event() that will trigger validation. eg: keyup, change…</span></span><br><span class="line">  trigger: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Class that would be added on every failing validation</span></span><br><span class="line"><span class="comment">// Parsley field</span></span><br><span class="line">  errorClass: <span class="string">'parsley-error'</span></span><br><span class="line">  successClass: <span class="string">'parsley-success'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Return the $element that will receive these above</span></span><br><span class="line"><span class="comment">// success or error classes. Could also be (and given</span></span><br><span class="line"><span class="comment">// directly from DOM) a valid selector like '#div'</span></span><br><span class="line">  classHandler: <span class="function"><span class="keyword">function</span> (<span class="params">ParsleyField</span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Return the $element where errors will be appended.</span></span><br><span class="line"><span class="comment">// Could also be (and given directly from DOM) a valid</span></span><br><span class="line"><span class="comment">// selector like '#div'</span></span><br><span class="line">  errorsContainer: <span class="function"><span class="keyword">function</span> (<span class="params">ParsleyField</span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ul elem that would receive errors’ list</span></span><br><span class="line">  errorsWrapper: <span class="string">'&lt;ul class="parsley-errors-list"&gt;&lt;/ul&gt;'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// li elem that would receive error message</span></span><br><span class="line">  errorTemplate: <span class="string">'&lt;li&gt;&lt;/li&gt;'</span></span><br></pre></td></tr></table></figure>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h3 id="Custom-container"><a href="#Custom-container" class="headerlink" title="Custom container"></a>Custom container</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'[data-parsley]'</span>).parsley(&#123;</span><br><span class="line">  errorsContainer (field) &#123;</span><br><span class="line">    <span class="keyword">return</span> field.$element.closest(<span class="string">'.block, .control'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Appends the error to the closest <code>.block</code> or <code>.control</code>.</p>
+<h3 id="Custom-markup"><a href="#Custom-markup" class="headerlink" title="Custom markup"></a>Custom markup</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'[data-parsley]'</span>).parsley(&#123;</span><br><span class="line">  errorClass: <span class="string">'-error'</span>,</span><br><span class="line">  successClass: <span class="string">'-success'</span>,</span><br><span class="line"></span><br><span class="line">  errorsWrapper: <span class="string">'&lt;ul class="parsley-error-list"&gt;&lt;/ul&gt;'</span>,</span><br><span class="line">  errorTemplate: <span class="string">'&lt;li class="parsley-error"&gt;&lt;/li&gt;'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Uses custom markup.</p>
+<h3 id="Custom-fields"><a href="#Custom-fields" class="headerlink" title="Custom fields"></a>Custom fields</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'[data-parsley]'</span>).parsley(&#123;</span><br><span class="line">  classHandler (field) &#123;</span><br><span class="line">    <span class="keyword">const</span> $parent = field.$element.closest(<span class="string">'.input-group'</span>)</span><br><span class="line">    <span class="keyword">if</span> ($parent.length) <span class="keyword">return</span> $parent</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> field.$element</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Applies the <code>errorClass</code> and <code>successClass</code> to the closest <code>.input-group</code>, if available.</p>
+<h3 id="Custom-validator"><a href="#Custom-validator" class="headerlink" title="Custom validator"></a>Custom validator</h3><h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">'text'</span> <span class="attr">data-parsley-multiple-of</span>=<span class="string">'3'</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.Parsley</span><br><span class="line">  .addValidator(<span class="string">'multipleOf'</span>, &#123;</span><br><span class="line">    <span class="comment">// string | number | integer | date | regexp | boolean</span></span><br><span class="line">    requirementType: <span class="string">'integer'</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// validateString | validateDate | validateMultiple</span></span><br><span class="line">    validateNumber (value, requirement) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span> === value % requirement</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    messages: &#123;</span><br><span class="line">      en: <span class="string">'This value should be a multiple of %s'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://parsleyjs.org/doc/index.html#custom" target="_blank" rel="noopener">Custom validators</a></p>
+<h2 id="Also-see"><a href="#Also-see" class="headerlink" title="Also see"></a>Also see</h2><ul>
+<li><a href="http://parsleyjs.org/doc/" target="_blank" rel="noopener">Parsley documentation</a> <em>(parsleyjs.org)</em></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Parsley"><span class="toc-number">1.</span> <span class="toc-text">Parsley</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Installing-via-NPM"><span class="toc-number">1.1.</span> <span class="toc-text">Installing via NPM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enabling"><span class="toc-number">1.2.</span> <span class="toc-text">Enabling</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#via-HTML"><span class="toc-number">1.2.1.</span> <span class="toc-text">via HTML</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#via-JavaScript"><span class="toc-number">1.2.2.</span> <span class="toc-text">via JavaScript</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API"><span class="toc-number">1.3.</span> <span class="toc-text">API</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Form"><span class="toc-number">1.3.1.</span> <span class="toc-text">Form</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Input"><span class="toc-number">1.3.2.</span> <span class="toc-text">Input</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Validators"><span class="toc-number">1.4.</span> <span class="toc-text">Validators</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Required"><span class="toc-number">1.4.1.</span> <span class="toc-text">Required</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Types"><span class="toc-number">1.4.2.</span> <span class="toc-text">Types</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Length"><span class="toc-number">1.4.3.</span> <span class="toc-text">Length</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Numeric"><span class="toc-number">1.4.4.</span> <span class="toc-text">Numeric</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Range"><span class="toc-number">1.4.5.</span> <span class="toc-text">Range</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Checkboxes"><span class="toc-number">1.4.6.</span> <span class="toc-text">Checkboxes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Confirmation"><span class="toc-number">1.4.7.</span> <span class="toc-text">Confirmation</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Options"><span class="toc-number">2.</span> <span class="toc-text">Options</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Form-options"><span class="toc-number">2.1.</span> <span class="toc-text">Form options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Field-options"><span class="toc-number">2.2.</span> <span class="toc-text">Field options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UI-Options"><span class="toc-number">2.3.</span> <span class="toc-text">UI Options</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">3.</span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-container"><span class="toc-number">3.1.</span> <span class="toc-text">Custom container</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-markup"><span class="toc-number">3.2.</span> <span class="toc-text">Custom markup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-fields"><span class="toc-number">3.3.</span> <span class="toc-text">Custom fields</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-validator"><span class="toc-number">3.4.</span> <span class="toc-text">Custom validator</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML"><span class="toc-number">3.4.1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JavaScript"><span class="toc-number">3.4.2.</span> <span class="toc-text">JavaScript</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number">4.</span> <span class="toc-text">Also see</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/parsley/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/parsley/&text=Parsley.js"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/parsley/&title=Parsley.js"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/parsley/&is_video=false&description=Parsley.js"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Parsley.js&body=Check out this article: https://rupertqin.github.io/devhints/parsley/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/parsley/&title=Parsley.js"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/parsley/&title=Parsley.js"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/parsley/&title=Parsley.js"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/parsley/&title=Parsley.js"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/parsley/&name=Parsley.js&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

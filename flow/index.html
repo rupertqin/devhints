@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Getting startedSimple example123456/* @flow */function square (n: number) &amp;#123;  return n * n&amp;#125;const four = square(2) Most of what you need to do is to simply add annotations to function argument">
+<meta name="keywords" content="Featurable">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flow">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/flow/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Getting startedSimple example123456/* @flow */function square (n: number) &amp;#123;  return n * n&amp;#125;const four = square(2) Most of what you need to do is to simply add annotations to function argument">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-09-19T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Flow">
+<meta name="twitter:description" content="Getting startedSimple example123456/* @flow */function square (n: number) &amp;#123;  return n * n&amp;#125;const four = square(2) Most of what you need to do is to simply add annotations to function argument">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Flow</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../flowtype/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../flashlight/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/flow/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/flow/&text=Flow"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/flow/&title=Flow"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/flow/&is_video=false&description=Flow"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Flow&body=Check out this article: https://rupertqin.github.io/devhints/flow/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/flow/&title=Flow"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/flow/&title=Flow"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/flow/&title=Flow"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/flow/&title=Flow"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/flow/&name=Flow&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Simple-example"><span class="toc-number">1.1.</span> <span class="toc-text">Simple example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-inference"><span class="toc-number">1.2.</span> <span class="toc-text">Type inference</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-aliases"><span class="toc-number">1.3.</span> <span class="toc-text">Type aliases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Variables"><span class="toc-number">1.4.</span> <span class="toc-text">Variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Importing-and-exporting"><span class="toc-number">1.5.</span> <span class="toc-text">Importing and exporting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Union-types"><span class="toc-number">1.6.</span> <span class="toc-text">Union types</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Optionals"><span class="toc-number">2.</span> <span class="toc-text">Optionals</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Maybe-types"><span class="toc-number">2.1.</span> <span class="toc-text">Maybe types</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Optional-properties"><span class="toc-number">2.2.</span> <span class="toc-text">Optional properties</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Objects"><span class="toc-number">3.</span> <span class="toc-text">Objects</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Extra-object-fields"><span class="toc-number">3.1.</span> <span class="toc-text">Extra object fields</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exact-object-types"><span class="toc-number">3.2.</span> <span class="toc-text">Exact object types</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dynamic-keys"><span class="toc-number">3.3.</span> <span class="toc-text">Dynamic keys</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Advanced-features"><span class="toc-number">4.</span> <span class="toc-text">Advanced features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Primitives"><span class="toc-number">4.1.</span> <span class="toc-text">Primitives</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enums"><span class="toc-number">4.2.</span> <span class="toc-text">Enums</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-aliases-1"><span class="toc-number">4.3.</span> <span class="toc-text">Type aliases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generic-classes"><span class="toc-number">4.4.</span> <span class="toc-text">Generic classes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interfaces"><span class="toc-number">4.5.</span> <span class="toc-text">Interfaces</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Functions"><span class="toc-number">4.6.</span> <span class="toc-text">Functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Imports"><span class="toc-number">4.7.</span> <span class="toc-text">Imports</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comment-syntax"><span class="toc-number">4.8.</span> <span class="toc-text">Comment syntax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React"><span class="toc-number">4.9.</span> <span class="toc-text">React</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">5.</span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Examples-1"><span class="toc-number">5.1.</span> <span class="toc-text">Examples</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Function-signature"><span class="toc-number">5.2.</span> <span class="toc-text">Function signature</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">6.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Flow
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.280Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/JavaScript-libraries/">JavaScript libraries</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="../tags/Featurable/">Featurable</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><h3 id="Simple-example"><a href="#Simple-example" class="headerlink" title="Simple example"></a>Simple example</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* @flow */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">square</span> (<span class="params">n: number</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> n * n</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> four = square(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>Most of what you need to do is to simply add annotations to function arguments!</p>
+<p>See: <a href="https://flow.org/en/docs/" target="_blank" rel="noopener">flow.org docs</a></p>
+<h3 id="Type-inference"><a href="#Type-inference" class="headerlink" title="Type inference"></a>Type inference</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">square</span> (<span class="params">n: number</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> result = n * n</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>result</code> is inferred to be a number because <code>number * number</code> will result in a number. There’s no need to give it annotations.</p>
+<h3 id="Type-aliases"><a href="#Type-aliases" class="headerlink" title="Type aliases"></a>Type aliases</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">type Person = &#123;</span><br><span class="line">  name: string,</span><br><span class="line">  age: number,</span><br><span class="line">  isAdmin: boolean,</span><br><span class="line">  likes: <span class="built_in">Array</span>&lt;string&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params">user: Person</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'hello'</span>, user.name)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">greet(&#123; <span class="attr">name</span>: <span class="string">'Miles Davis'</span>, ··· &#125;)</span><br></pre></td></tr></table></figure>
+<p>This is the typical way to define the shape of complex objects.</p>
+<h3 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> count: number = <span class="number">200</span></span><br></pre></td></tr></table></figure>
+<p>You typically don’t need to do this, function args are often enough.</p>
+<p>See: <a href="https://flow.org/en/docs/types/variables/" target="_blank" rel="noopener">Variable types</a></p>
+<h3 id="Importing-and-exporting"><a href="#Importing-and-exporting" class="headerlink" title="Importing and exporting"></a>Importing and exporting</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> type &#123; Person &#125; <span class="keyword">from</span> <span class="string">'./types'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> type Person = &#123;</span><br><span class="line">  ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://flow.org/en/docs/types/modules" target="_blank" rel="noopener">Module types</a></p>
+<h3 id="Union-types"><a href="#Union-types" class="headerlink" title="Union types"></a>Union types</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type Action = number | string</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type Direction = <span class="string">'left'</span> | <span class="string">'right'</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://flow.org/en/docs/types/unions/" target="_blank" rel="noopener">Unions</a></p>
+<h2 id="Optionals"><a href="#Optionals" class="headerlink" title="Optionals"></a>Optionals</h2><h3 id="Maybe-types"><a href="#Maybe-types" class="headerlink" title="Maybe types"></a>Maybe types</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type Album = &#123;</span><br><span class="line">  name: ?string</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a: Album = &#123; &#125;                 <span class="comment">// ✗ Error</span></span><br><span class="line"><span class="keyword">const</span> a: Album = &#123; <span class="attr">name</span>: <span class="string">'Blue'</span> &#125;    <span class="comment">// ✓ OK</span></span><br><span class="line"><span class="keyword">const</span> a: Album = &#123; <span class="attr">name</span>: <span class="literal">null</span> &#125;      <span class="comment">// ✓ OK</span></span><br><span class="line"><span class="keyword">const</span> a: Album = &#123; <span class="attr">name</span>: <span class="literal">undefined</span> &#125; <span class="comment">// ✓ OK</span></span><br></pre></td></tr></table></figure>
+<p>This makes <code>name</code> either a string or null.</p>
+<p>See: <a href="https://flow.org/en/docs/types/primitives/#toc-maybe-types" target="_blank" rel="noopener">Maybe types</a></p>
+<h3 id="Optional-properties"><a href="#Optional-properties" class="headerlink" title="Optional properties"></a>Optional properties</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type Album = &#123;</span><br><span class="line">  name?: string</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a: Album = &#123; &#125; <span class="comment">// ✓ OK</span></span><br><span class="line">a.name = <span class="string">'Blue'</span>      <span class="comment">// ✓ OK</span></span><br><span class="line">a.name = <span class="literal">null</span>        <span class="comment">// ✗ Error</span></span><br><span class="line">a.name = <span class="literal">undefined</span>   <span class="comment">// ✓ OK</span></span><br></pre></td></tr></table></figure>
+<p>This makes an <code>Album</code> valid even if <code>name</code> is not part of the keys. This is different from “maybe” types.</p>
+<p>See: <a href="https://flow.org/en/docs/types/primitives/#toc-optional-object-properties" target="_blank" rel="noopener">Optional properties</a></p>
+<h2 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h2><h3 id="Extra-object-fields"><a href="#Extra-object-fields" class="headerlink" title="Extra object fields"></a>Extra object fields</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">type Artist = &#123;</span><br><span class="line">  name: string,</span><br><span class="line">  label: string</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a: Artist = &#123;</span><br><span class="line">  name: <span class="string">'Miguel Migs'</span>,</span><br><span class="line">  label: <span class="string">'Naked Music'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a.genre = <span class="string">'House'</span> <span class="comment">// ✓ OK</span></span><br></pre></td></tr></table></figure>
+<p>You can add more fields to an object.</p>
+<p>See: <a href="https://flow.org/en/docs/lang/width-subtyping/" target="_blank" rel="noopener">Width subtyping</a></p>
+<h3 id="Exact-object-types"><a href="#Exact-object-types" class="headerlink" title="Exact object types"></a>Exact object types</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">type Artist = &#123;|</span><br><span class="line">  name: string,</span><br><span class="line">  label: string</span><br><span class="line">|&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a: Artist = &#123; ··· &#125;</span><br><span class="line">a.genre = <span class="string">'House'</span> <span class="comment">// ✗ Error</span></span><br></pre></td></tr></table></figure>
+<p>Exact object types prevent extra properties from being added to an object.</p>
+<p>See: <a href="https://flow.org/en/docs/types/objects/#toc-exact-object-types" target="_blank" rel="noopener">Exact object types</a></p>
+<h3 id="Dynamic-keys"><a href="#Dynamic-keys" class="headerlink" title="Dynamic keys"></a>Dynamic keys</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type Items = &#123;</span><br><span class="line">  [key: string]: Item</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://flow.org/docs/objects.html#objects-as-maps" target="_blank" rel="noopener">Dynamic object keys</a></p>
+<h2 id="Advanced-features"><a href="#Advanced-features" class="headerlink" title="Advanced features"></a>Advanced features</h2><h3 id="Primitives"><a href="#Primitives" class="headerlink" title="Primitives"></a>Primitives</h3><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>any</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mixed</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>number</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td>undefined</td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td>null (but not undefined)</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>{a: Number}</code></td>
+<td>Object with a shape</td>
+</tr>
+<tr>
+<td><code>[any, number]</code></td>
+<td>Tuples (fixed-length arrays)</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>Array&lt;T&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Class&lt;T&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Function</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Object</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>?number</code></td>
+<td>Maybe (number, void, null)</td>
+</tr>
+<tr>
+<td>`a</td>
+<td>b`</td>
+<td>Union types</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Enums"><a href="#Enums" class="headerlink" title="Enums"></a>Enums</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">type Suit = <span class="string">"Diamonds"</span> | <span class="string">"Clubs"</span> | <span class="string">"Hearts"</span> | <span class="string">"Spades"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> countries = &#123;</span><br><span class="line">  US: <span class="string">"United States"</span>,</span><br><span class="line">  IT: <span class="string">"Italy"</span>,</span><br><span class="line">  FR: <span class="string">"France"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type Country = $Keys&lt;<span class="keyword">typeof</span> countries&gt;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://flow.org/docs/utility-types.html#keyst" target="_blank" rel="noopener">Enums</a></p>
+<h3 id="Type-aliases-1"><a href="#Type-aliases-1" class="headerlink" title="Type aliases"></a>Type aliases</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">type Tree = &#123;</span><br><span class="line">  foo: string,</span><br><span class="line">  bar: number,</span><br><span class="line">  qux: <span class="function">(<span class="params">foo: string, bar: number</span>) =&gt;</span> boolean</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type Generic&lt;T&gt; = &#123;</span><br><span class="line">  foo: T</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://flow.org/docs/quick-reference.html#type-aliases" target="_blank" rel="noopener">Type aliases</a></p>
+<h3 id="Generic-classes"><a href="#Generic-classes" class="headerlink" title="Generic classes"></a>Generic classes</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">GenericClass</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">  x: T</span><br><span class="line">  <span class="keyword">constructor</span> (x: T) &#123; ... &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> n: GenericClass&lt;number&gt; = <span class="keyword">new</span> GenericClass(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://flow.org/docs/quick-reference.html#generics" target="_blank" rel="noopener">Generic classes</a></p>
+<h3 id="Interfaces"><a href="#Interfaces" class="headerlink" title="Interfaces"></a>Interfaces</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">interface Jsonable &#123;</span><br><span class="line">  toJSON(): string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">  toJSON() &#123; <span class="keyword">return</span> <span class="string">'&#123;&#125;'</span> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">(<span class="keyword">new</span> Foo: Jsonable)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://flow.org/docs/quick-reference.html#interfaces" target="_blank" rel="noopener">Interfaces</a></p>
+<h3 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> callback: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">void</span> = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">filter</span>&lt;<span class="title">T</span>&gt; (<span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">  list: Array&lt;T&gt;,</span></span></span><br><span class="line"><span class="function"><span class="params">  callback: (item: T</span>) =&gt; <span class="title">boolean</span></span></span><br><span class="line"><span class="function">): <span class="title">Array</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">  ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://flow.org/docs/functions.html" target="_blank" rel="noopener">Functions</a></p>
+<h3 id="Imports"><a href="#Imports" class="headerlink" title="Imports"></a>Imports</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> type &#123; Person &#125; <span class="keyword">from</span> <span class="string">'../person'</span></span><br><span class="line"><span class="keyword">import</span> <span class="keyword">typeof</span> Config <span class="keyword">from</span> <span class="string">'../config'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> type Person = &#123; <span class="attr">id</span>: string &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Comment-syntax"><a href="#Comment-syntax" class="headerlink" title="Comment syntax"></a>Comment syntax</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*::</span></span><br><span class="line"><span class="comment">  export type Foo = &#123; ... &#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">n <span class="regexp">/*: number */</span></span>) </span>&#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">type Props = &#123;</span><br><span class="line">  bar: number,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type State = &#123;</span><br><span class="line">  open: boolean,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span>&lt;<span class="title">Props</span>, <span class="title">State</span>&gt; </span>&#123;</span><br><span class="line">  <span class="comment">// Component code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h3 id="Examples-1"><a href="#Examples-1" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myNumbers: <span class="built_in">Array</span>&lt;number&gt; = [<span class="number">42</span>]</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>): <span class="title">any</span> </span>&#123; <span class="keyword">return</span> <span class="number">42</span> &#125;</span><br><span class="line"><span class="keyword">var</span> b: boolean = <span class="literal">false</span></span><br><span class="line"><span class="keyword">var</span> b: ?boolean = <span class="literal">false</span>  <span class="comment">/* maybe */</span></span><br><span class="line"><span class="keyword">var</span> b: string | boolean = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a: Class&lt;MyClass&gt; = MyClass</span><br><span class="line"><span class="keyword">var</span> b: MyClass = <span class="keyword">new</span> a()</span><br></pre></td></tr></table></figure>
+<h3 id="Function-signature"><a href="#Function-signature" class="headerlink" title="Function signature"></a>Function signature</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">type Callback = <span class="function">(<span class="params">?<span class="built_in">Error</span>, string</span>) =&gt;</span> any</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetch</span> (<span class="params">callback: Callback</span>) </span>&#123;</span><br><span class="line">  ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://www.saltycrane.com/flow-type-cheat-sheet/latest/" target="_blank" rel="noopener">Flow website</a> <em>(flow.org)</em></li>
+<li><a href="https://flow.org/en/docs/getting-started/" target="_blank" rel="noopener">Getting started with Flow</a> <em>(flow.org)</em></li>
+<li><a href="https://www.saltycrane.com/flow-type-cheat-sheet/latest/" target="_blank" rel="noopener">Flow type cheatsheet</a> <em>(saltycrane.com)</em></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Simple-example"><span class="toc-number">1.1.</span> <span class="toc-text">Simple example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-inference"><span class="toc-number">1.2.</span> <span class="toc-text">Type inference</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-aliases"><span class="toc-number">1.3.</span> <span class="toc-text">Type aliases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Variables"><span class="toc-number">1.4.</span> <span class="toc-text">Variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Importing-and-exporting"><span class="toc-number">1.5.</span> <span class="toc-text">Importing and exporting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Union-types"><span class="toc-number">1.6.</span> <span class="toc-text">Union types</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Optionals"><span class="toc-number">2.</span> <span class="toc-text">Optionals</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Maybe-types"><span class="toc-number">2.1.</span> <span class="toc-text">Maybe types</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Optional-properties"><span class="toc-number">2.2.</span> <span class="toc-text">Optional properties</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Objects"><span class="toc-number">3.</span> <span class="toc-text">Objects</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Extra-object-fields"><span class="toc-number">3.1.</span> <span class="toc-text">Extra object fields</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exact-object-types"><span class="toc-number">3.2.</span> <span class="toc-text">Exact object types</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dynamic-keys"><span class="toc-number">3.3.</span> <span class="toc-text">Dynamic keys</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Advanced-features"><span class="toc-number">4.</span> <span class="toc-text">Advanced features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Primitives"><span class="toc-number">4.1.</span> <span class="toc-text">Primitives</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enums"><span class="toc-number">4.2.</span> <span class="toc-text">Enums</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-aliases-1"><span class="toc-number">4.3.</span> <span class="toc-text">Type aliases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generic-classes"><span class="toc-number">4.4.</span> <span class="toc-text">Generic classes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interfaces"><span class="toc-number">4.5.</span> <span class="toc-text">Interfaces</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Functions"><span class="toc-number">4.6.</span> <span class="toc-text">Functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Imports"><span class="toc-number">4.7.</span> <span class="toc-text">Imports</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comment-syntax"><span class="toc-number">4.8.</span> <span class="toc-text">Comment syntax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React"><span class="toc-number">4.9.</span> <span class="toc-text">React</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">5.</span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Examples-1"><span class="toc-number">5.1.</span> <span class="toc-text">Examples</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Function-signature"><span class="toc-number">5.2.</span> <span class="toc-text">Function signature</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">6.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/flow/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/flow/&text=Flow"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/flow/&title=Flow"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/flow/&is_video=false&description=Flow"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Flow&body=Check out this article: https://rupertqin.github.io/devhints/flow/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/flow/&title=Flow"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/flow/&title=Flow"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/flow/&title=Flow"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/flow/&title=Flow"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/flow/&name=Flow&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

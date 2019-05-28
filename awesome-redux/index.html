@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="redux-actionsCreate action creators in flux standard action format. 12increment = createAction(&apos;INCREMENT&apos;, amount =&amp;gt; amount)increment = createAction(&apos;INCREMENT&apos;)  // same 1increment(42) === &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Awesome Redux">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/awesome-redux/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="redux-actionsCreate action creators in flux standard action format. 12increment = createAction(&apos;INCREMENT&apos;, amount =&amp;gt; amount)increment = createAction(&apos;INCREMENT&apos;)  // same 1increment(42) === &amp;#123;">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-08-29T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Awesome Redux">
+<meta name="twitter:description" content="redux-actionsCreate action creators in flux standard action format. 12increment = createAction(&apos;INCREMENT&apos;, amount =&amp;gt; amount)increment = createAction(&apos;INCREMENT&apos;)  // same 1increment(42) === &amp;#123;">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Awesome Redux</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../awscli/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../atom/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/awesome-redux/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/awesome-redux/&text=Awesome Redux"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/awesome-redux/&title=Awesome Redux"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/awesome-redux/&is_video=false&description=Awesome Redux"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Awesome Redux&body=Check out this article: https://rupertqin.github.io/devhints/awesome-redux/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/awesome-redux/&title=Awesome Redux"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/awesome-redux/&title=Awesome Redux"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/awesome-redux/&title=Awesome Redux"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/awesome-redux/&title=Awesome Redux"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/awesome-redux/&name=Awesome Redux&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-actions"><span class="toc-number">1.</span> <span class="toc-text">redux-actions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flux-standard-action"><span class="toc-number">2.</span> <span class="toc-text">flux-standard-action</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-multi"><span class="toc-number">3.</span> <span class="toc-text">redux-multi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reduce-reducers"><span class="toc-number">4.</span> <span class="toc-text">reduce-reducers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-logger"><span class="toc-number">5.</span> <span class="toc-text">redux-logger</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Async"><span class="toc-number"></span> <span class="toc-text">Async</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-promise"><span class="toc-number">1.</span> <span class="toc-text">redux-promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-promises"><span class="toc-number">2.</span> <span class="toc-text">redux-promises</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-effects"><span class="toc-number">3.</span> <span class="toc-text">redux-effects</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-thunk"><span class="toc-number">4.</span> <span class="toc-text">redux-thunk</span></a></li></ol>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Awesome Redux
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.187Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/React/">React</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="redux-actions"><a href="#redux-actions" class="headerlink" title="redux-actions"></a>redux-actions</h3><p>Create action creators in flux standard action format.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">increment = createAction(<span class="string">'INCREMENT'</span>, amount =&gt; amount)</span><br><span class="line">increment = createAction(<span class="string">'INCREMENT'</span>)  <span class="comment">// same</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">increment(<span class="number">42</span>) === &#123; <span class="attr">type</span>: <span class="string">'INCREMENT'</span>, <span class="attr">payload</span>: <span class="number">42</span> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Errors are handled for you:</span></span><br><span class="line">err = <span class="keyword">new</span> <span class="built_in">Error</span>()</span><br><span class="line">increment(err) === &#123; <span class="attr">type</span>: <span class="string">'INCREMENT'</span>, <span class="attr">payload</span>: err, <span class="attr">error</span>: <span class="literal">true</span> &#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.npmjs.com/package/redux-actions" target="_blank" rel="noopener">redux-actions</a></p>
+<h3 id="flux-standard-action"><a href="#flux-standard-action" class="headerlink" title="flux-standard-action"></a>flux-standard-action</h3><p>A standard for flux action objects. An action may have an <code>error</code>, <code>payload</code> and <code>meta</code> and nothing else.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">type</span>: <span class="string">'ADD_TODO'</span>, <span class="attr">payload</span>: &#123; <span class="attr">text</span>: <span class="string">'Work it'</span> &#125; &#125;</span><br><span class="line">&#123; <span class="attr">type</span>: <span class="string">'ADD_TODO'</span>, <span class="attr">payload</span>: <span class="keyword">new</span> <span class="built_in">Error</span>(), <span class="attr">error</span>: <span class="literal">true</span> &#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/acdlite/flux-standard-action" target="_blank" rel="noopener">flux-standard-action</a></p>
+<h3 id="redux-multi"><a href="#redux-multi" class="headerlink" title="redux-multi"></a>redux-multi</h3><p>Dispatch multiple actions in one action creator.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">store.dispatch([</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">'INCREMENT'</span>, <span class="attr">payload</span>: <span class="number">2</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">'INCREMENT'</span>, <span class="attr">payload</span>: <span class="number">3</span> &#125;</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/ashaffer/redux-multi" target="_blank" rel="noopener">redux-multi</a></p>
+<h3 id="reduce-reducers"><a href="#reduce-reducers" class="headerlink" title="reduce-reducers"></a>reduce-reducers</h3><p>Combines reducers (like <em>combineReducers()</em>), but without namespacing magic.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">re = reduceReducers(</span><br><span class="line">  (state, action) =&gt; state + action.number,</span><br><span class="line">  (state, action) =&gt; state + action.number</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">re(<span class="number">10</span>, &#123; <span class="attr">number</span>: <span class="number">2</span> &#125;)  <span class="comment">//=&gt; 14</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://www.npmjs.com/package/reduce-reducers" target="_blank" rel="noopener">reduce-reducers</a></p>
+<h3 id="redux-logger"><a href="#redux-logger" class="headerlink" title="redux-logger"></a>redux-logger</h3><p>Logs actions to your console.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Nothing to see here</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/evgenyrodionov/redux-logger" target="_blank" rel="noopener">redux-logger</a></p>
+<h2 id="Async"><a href="#Async" class="headerlink" title="Async"></a>Async</h2><h3 id="redux-promise"><a href="#redux-promise" class="headerlink" title="redux-promise"></a>redux-promise</h3><p>Pass promises to actions. Dispatches a flux-standard-action.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">increment = createAction(<span class="string">'INCREMENT'</span>)  <span class="comment">// redux-actions</span></span><br><span class="line">increment(<span class="built_in">Promise</span>.resolve(<span class="number">42</span>))</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/acdlite/redux-promise" target="_blank" rel="noopener">redux-promise</a></p>
+<h3 id="redux-promises"><a href="#redux-promises" class="headerlink" title="redux-promises"></a>redux-promises</h3><p>Sorta like that, too. Works by letting you pass <em>thunks</em> (functions) to <code>dispatch()</code>. Also has ‘idle checking’.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fetchData = <span class="function">(<span class="params">url</span>) =&gt;</span> (dispatch) =&gt; &#123;</span><br><span class="line">  dispatch(&#123; <span class="attr">type</span>: <span class="string">'FETCH_REQUEST'</span> &#125;)</span><br><span class="line">  fetch(url)</span><br><span class="line">    .then(<span class="function">(<span class="params">data</span>) =&gt;</span> dispatch(&#123; <span class="attr">type</span>: <span class="string">'FETCH_DONE'</span>, data &#125;)</span><br><span class="line">    .catch(<span class="function">(<span class="params">error</span>) =&gt;</span> dispatch(&#123; <span class="attr">type</span>: <span class="string">'FETCH_ERROR'</span>, error &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">store.dispatch(fetchData(<span class="string">'/posts'</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// That's actually shorthand for:</span></span><br><span class="line">fetchData(<span class="string">'/posts'</span>)(store.dispatch)</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.npmjs.com/package/redux-promises" target="_blank" rel="noopener">redux-promises</a></p>
+<h3 id="redux-effects"><a href="#redux-effects" class="headerlink" title="redux-effects"></a>redux-effects</h3><p>Pass side effects declaratively to keep your actions pure.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  type: <span class="string">'EFFECT_COMPOSE'</span>,</span><br><span class="line">  payload: &#123;</span><br><span class="line">    type: <span class="string">'FETCH'</span></span><br><span class="line">    payload: &#123;<span class="attr">url</span>: <span class="string">'/some/thing'</span>, <span class="attr">method</span>: <span class="string">'GET'</span>&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  meta: &#123;</span><br><span class="line">    steps: [ [success, failure] ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.npmjs.com/package/redux-effects" target="_blank" rel="noopener">redux-effects</a></p>
+<h3 id="redux-thunk"><a href="#redux-thunk" class="headerlink" title="redux-thunk"></a>redux-thunk</h3><p>Pass “thunks” to as actions. Extremely similar to redux-promises, but has support for getState.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fetchData = <span class="function">(<span class="params">url</span>) =&gt;</span> (dispatch, getState) =&gt; &#123;</span><br><span class="line">  dispatch(&#123; <span class="attr">type</span>: <span class="string">'FETCH_REQUEST'</span> &#125;)</span><br><span class="line">  fetch(url)</span><br><span class="line">    .then(<span class="function">(<span class="params">data</span>) =&gt;</span> dispatch(&#123; <span class="attr">type</span>: <span class="string">'FETCH_DONE'</span>, data &#125;)</span><br><span class="line">    .catch(<span class="function">(<span class="params">error</span>) =&gt;</span> dispatch(&#123; <span class="attr">type</span>: <span class="string">'FETCH_ERROR'</span>, error &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">store.dispatch(fetchData(<span class="string">'/posts'</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// That's actually shorthand for:</span></span><br><span class="line">fetchData(<span class="string">'/posts'</span>)(store.dispatch, store.getState)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Optional: since fetchData returns a promise, it can be chained</span></span><br><span class="line"><span class="comment">// for server-side rendering</span></span><br><span class="line">store.dispatch(fetchPosts()).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  ReactDOMServer.renderToString(<span class="xml"><span class="tag">&lt;<span class="name">MyApp</span> <span class="attr">store</span>=<span class="string">&#123;store&#125;</span> /&gt;</span>)</span></span><br><span class="line"><span class="xml">&#125;)</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://www.npmjs.com/package/redux-thunk" target="_blank" rel="noopener">redux-thunk</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-actions"><span class="toc-number">1.</span> <span class="toc-text">redux-actions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flux-standard-action"><span class="toc-number">2.</span> <span class="toc-text">flux-standard-action</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-multi"><span class="toc-number">3.</span> <span class="toc-text">redux-multi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reduce-reducers"><span class="toc-number">4.</span> <span class="toc-text">reduce-reducers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-logger"><span class="toc-number">5.</span> <span class="toc-text">redux-logger</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Async"><span class="toc-number"></span> <span class="toc-text">Async</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-promise"><span class="toc-number">1.</span> <span class="toc-text">redux-promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-promises"><span class="toc-number">2.</span> <span class="toc-text">redux-promises</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-effects"><span class="toc-number">3.</span> <span class="toc-text">redux-effects</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redux-thunk"><span class="toc-number">4.</span> <span class="toc-text">redux-thunk</span></a></li></ol>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/awesome-redux/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/awesome-redux/&text=Awesome Redux"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/awesome-redux/&title=Awesome Redux"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/awesome-redux/&is_video=false&description=Awesome Redux"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Awesome Redux&body=Check out this article: https://rupertqin.github.io/devhints/awesome-redux/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/awesome-redux/&title=Awesome Redux"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/awesome-redux/&title=Awesome Redux"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/awesome-redux/&title=Awesome Redux"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/awesome-redux/&title=Awesome Redux"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/awesome-redux/&name=Awesome Redux&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

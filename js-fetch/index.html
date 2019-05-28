@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Fetch123456fetch(&apos;/data.json&apos;)  .then(response =&amp;gt; response.json())  .then(data =&amp;gt; &amp;#123;    console.log(data)  &amp;#125;)  .catch(err =&amp;gt; ...) Response123456789101112131415fetch(&apos;/data.json&apos;).the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="fetch()">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/js-fetch/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Fetch123456fetch(&apos;/data.json&apos;)  .then(response =&amp;gt; response.json())  .then(data =&amp;gt; &amp;#123;    console.log(data)  &amp;#125;)  .catch(err =&amp;gt; ...) Response123456789101112131415fetch(&apos;/data.json&apos;).the">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:37:07.951Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="fetch()">
+<meta name="twitter:description" content="Fetch123456fetch(&apos;/data.json&apos;)  .then(response =&amp;gt; response.json())  .then(data =&amp;gt; &amp;#123;    console.log(data)  &amp;#125;)  .catch(err =&amp;gt; ...) Response123456789101112131415fetch(&apos;/data.json&apos;).the">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>fetch()</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../js-lazy/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../js-date/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/js-fetch/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/js-fetch/&text=fetch()"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/js-fetch/&title=fetch()"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/js-fetch/&is_video=false&description=fetch()"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=fetch()&body=Check out this article: https://rupertqin.github.io/devhints/js-fetch/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/js-fetch/&title=fetch()"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/js-fetch/&title=fetch()"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/js-fetch/&title=fetch()"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/js-fetch/&title=fetch()"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/js-fetch/&name=fetch()&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Fetch"><span class="toc-number">1.</span> <span class="toc-text">Fetch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Response"><span class="toc-number">2.</span> <span class="toc-text">Response</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Request-options"><span class="toc-number">3.</span> <span class="toc-text">Request options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Catching-errors"><span class="toc-number">4.</span> <span class="toc-text">Catching errors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-with-node-js"><span class="toc-number">5.</span> <span class="toc-text">Using with node.js</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number"></span> <span class="toc-text">References</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        fetch()
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.323Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/JavaScript/">JavaScript</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Fetch"><a href="#Fetch" class="headerlink" title="Fetch"></a>Fetch</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'/data.json'</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</span><br><span class="line">  .then(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> ...)</span><br></pre></td></tr></table></figure>
+<h3 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'/data.json'</span>)</span><br><span class="line">.then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  res.text()       <span class="comment">// response body (=&gt; Promise)</span></span><br><span class="line">  res.json()       <span class="comment">// parse via JSON (=&gt; Promise)</span></span><br><span class="line">  res.status       <span class="comment">//=&gt; 200</span></span><br><span class="line">  res.statusText   <span class="comment">//=&gt; 'OK'</span></span><br><span class="line">  res.redirected   <span class="comment">//=&gt; false</span></span><br><span class="line">  res.ok           <span class="comment">//=&gt; true</span></span><br><span class="line">  res.url          <span class="comment">//=&gt; 'http://site.com/data.json'</span></span><br><span class="line">  res.type         <span class="comment">//=&gt; 'basic'</span></span><br><span class="line">                   <span class="comment">//   ('cors' 'default' 'error'</span></span><br><span class="line">                   <span class="comment">//    'opaque' 'opaqueredirect')</span></span><br><span class="line"></span><br><span class="line">  res.headers.get(<span class="string">'Content-Type'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="Request-options"><a href="#Request-options" class="headerlink" title="Request options"></a>Request options</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'/data.json'</span>, &#123;</span><br><span class="line">  method: <span class="string">'post'</span>,</span><br><span class="line">  body: <span class="keyword">new</span> FormData(form), <span class="comment">// post body</span></span><br><span class="line">  body: <span class="built_in">JSON</span>.stringify(...),</span><br><span class="line"></span><br><span class="line">  headers: &#123;</span><br><span class="line">    <span class="string">'Accept'</span>: <span class="string">'application/json'</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  credentials: <span class="string">'same-origin'</span>, <span class="comment">// send cookies</span></span><br><span class="line">  credentials: <span class="string">'include'</span>,     <span class="comment">// send cookies, even in CORS</span></span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="Catching-errors"><a href="#Catching-errors" class="headerlink" title="Catching errors"></a>Catching errors</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'/data.json'</span>)</span><br><span class="line">  .then(checkStatus)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkStatus</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (res.status &gt;= <span class="number">200</span> &amp;&amp; res.status &lt; <span class="number">300</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> err = <span class="keyword">new</span> <span class="built_in">Error</span>(res.statusText)</span><br><span class="line">    err.response = res</span><br><span class="line">    <span class="keyword">throw</span> err</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Non-2xx responses are still successful requests. Use another function to turn them to errors.</p>
+<h3 id="Using-with-node-js"><a href="#Using-with-node-js" class="headerlink" title="Using with node.js"></a>Using with node.js</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fetch = <span class="built_in">require</span>(<span class="string">'isomorphic-fetch'</span>)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://npmjs.com/package/isomorphic-fetch" target="_blank" rel="noopener">isomorphic-fetch</a> <em>(npmjs.com)</em></p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://fetch.spec.whatwg.org/" target="_blank" rel="noopener">https://fetch.spec.whatwg.org/</a></li>
+<li><a href="https://www.npmjs.com/package/whatwg-fetch" target="_blank" rel="noopener">https://www.npmjs.com/package/whatwg-fetch</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Fetch"><span class="toc-number">1.</span> <span class="toc-text">Fetch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Response"><span class="toc-number">2.</span> <span class="toc-text">Response</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Request-options"><span class="toc-number">3.</span> <span class="toc-text">Request options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Catching-errors"><span class="toc-number">4.</span> <span class="toc-text">Catching errors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-with-node-js"><span class="toc-number">5.</span> <span class="toc-text">Using with node.js</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number"></span> <span class="toc-text">References</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/js-fetch/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/js-fetch/&text=fetch()"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/js-fetch/&title=fetch()"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/js-fetch/&is_video=false&description=fetch()"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=fetch()&body=Check out this article: https://rupertqin.github.io/devhints/js-fetch/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/js-fetch/&title=fetch()"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/js-fetch/&title=fetch()"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/js-fetch/&title=fetch()"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/js-fetch/&title=fetch()"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/js-fetch/&name=fetch()&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

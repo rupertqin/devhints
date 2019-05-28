@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Input1234&amp;lt;input ...  disabled  required  checked 1autofocus 1234autocomplete=&apos;off&apos;        &amp;lt;!-- autocomplete --&amp;gt;autocompletetype=&apos;cc-exp&apos;autocapitalize=&apos;off&apos;      &amp;lt;!-- for mobiles --&amp;gt;pat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Input tag">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/html-input/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Input1234&amp;lt;input ...  disabled  required  checked 1autofocus 1234autocomplete=&apos;off&apos;        &amp;lt;!-- autocomplete --&amp;gt;autocompletetype=&apos;cc-exp&apos;autocapitalize=&apos;off&apos;      &amp;lt;!-- for mobiles --&amp;gt;pat">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-10-28T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Input tag">
+<meta name="twitter:description" content="Input1234&amp;lt;input ...  disabled  required  checked 1autofocus 1234autocomplete=&apos;off&apos;        &amp;lt;!-- autocomplete --&amp;gt;autocompletetype=&apos;cc-exp&apos;autocapitalize=&apos;off&apos;      &amp;lt;!-- for mobiles --&amp;gt;pat">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Input tag</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../html-meta/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../html-email/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/html-input/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/html-input/&text=Input tag"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/html-input/&title=Input tag"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/html-input/&is_video=false&description=Input tag"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Input tag&body=Check out this article: https://rupertqin.github.io/devhints/html-input/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/html-input/&title=Input tag"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/html-input/&title=Input tag"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/html-input/&title=Input tag"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/html-input/&title=Input tag"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/html-input/&name=Input tag&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Input"><span class="toc-number">1.</span> <span class="toc-text">Input</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Input-types"><span class="toc-number">2.</span> <span class="toc-text">Input types</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Text"><span class="toc-number">2.1.</span> <span class="toc-text">Text</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Time"><span class="toc-number">2.2.</span> <span class="toc-text">Time</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Time-not-widely-supported"><span class="toc-number">2.3.</span> <span class="toc-text">Time (not widely supported)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Etc"><span class="toc-number">2.4.</span> <span class="toc-text">Etc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Buttons"><span class="toc-number">2.5.</span> <span class="toc-text">Buttons</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Numeric"><span class="toc-number">2.6.</span> <span class="toc-text">Numeric</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number"></span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Dates"><span class="toc-number">1.</span> <span class="toc-text">Dates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Datetime"><span class="toc-number">2.</span> <span class="toc-text">Datetime</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">3.</span> <span class="toc-text">Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Text-1"><span class="toc-number">4.</span> <span class="toc-text">Text</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number"></span> <span class="toc-text">Also see</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Input tag
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.306Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/HTML/">HTML</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">...</span></span></span><br><span class="line"><span class="tag">  <span class="attr">disabled</span></span></span><br><span class="line"><span class="tag">  <span class="attr">required</span></span></span><br><span class="line"><span class="tag">  <span class="attr">checked</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">autofocus</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">autocomplete='off'        <span class="comment">&lt;!-- autocomplete --&gt;</span></span><br><span class="line">autocompletetype='cc-exp'</span><br><span class="line">autocapitalize='off'      <span class="comment">&lt;!-- for mobiles --&gt;</span></span><br><span class="line">pattern='\d*'             <span class="comment">&lt;!-- force numeric input in iOS --&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Input-types"><a href="#Input-types" class="headerlink" title="Input types"></a>Input types</h3><h4 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h4><ul>
+<li>email</li>
+<li>hidden</li>
+<li><strong>password</strong></li>
+<li>tel</li>
+<li><strong>text</strong></li>
+<li>search</li>
+</ul>
+<h4 id="Time"><a href="#Time" class="headerlink" title="Time"></a>Time</h4><ul>
+<li>date</li>
+<li>time</li>
+</ul>
+<h4 id="Time-not-widely-supported"><a href="#Time-not-widely-supported" class="headerlink" title="Time (not widely supported)"></a>Time (not widely supported)</h4><ul>
+<li>month</li>
+<li>week</li>
+<li>datetime</li>
+<li>datetime-local</li>
+</ul>
+<h4 id="Etc"><a href="#Etc" class="headerlink" title="Etc"></a>Etc</h4><ul>
+<li><strong>file</strong></li>
+<li><strong>radio</strong></li>
+<li><strong>checkbox</strong></li>
+</ul>
+<h4 id="Buttons"><a href="#Buttons" class="headerlink" title="Buttons"></a>Buttons</h4><ul>
+<li>button</li>
+<li>reset</li>
+<li>submit</li>
+<li>image</li>
+</ul>
+<h4 id="Numeric"><a href="#Numeric" class="headerlink" title="Numeric"></a>Numeric</h4><ul>
+<li>number</li>
+<li>range</li>
+</ul>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h3 id="Dates"><a href="#Dates" class="headerlink" title="Dates"></a>Dates</h3><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type=&#39;date&#39;</code></td>
+<td><input type="date"></td>
+</tr>
+<tr>
+<td><code>type=&#39;time&#39;</code></td>
+<td><input type="time"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Datetime"><a href="#Datetime" class="headerlink" title="Datetime"></a>Datetime</h3><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type=&#39;datetime&#39;</code></td>
+<td><input type="datetime"></td>
+</tr>
+<tr>
+<td><code>type=&#39;datetime-local&#39;</code></td>
+<td><input type="datetime-local"></td>
+</tr>
+</tbody>
+</table>
+<p><code>datetime</code> and <code>datetime-local</code> fields are not widely supported.</p>
+<h3 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h3><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type=&#39;number&#39;</code></td>
+<td><input type="number"></td>
+</tr>
+<tr>
+<td><code>type=&#39;range&#39;</code></td>
+<td><input type="range"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Text-1"><a href="#Text-1" class="headerlink" title="Text"></a>Text</h3><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type=&#39;text&#39;</code></td>
+<td><input type="text"></td>
+</tr>
+<tr>
+<td><code>type=&#39;password&#39;</code></td>
+<td><input type="password"></td>
+</tr>
+<tr>
+<td><code>type=&#39;search&#39;</code></td>
+<td><input type="search"></td>
+</tr>
+<tr>
+<td><code>type=&#39;tel&#39;</code></td>
+<td><input type="tel"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Also-see"><a href="#Also-see" class="headerlink" title="Also see"></a>Also see</h2><ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Input"><span class="toc-number">1.</span> <span class="toc-text">Input</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Input-types"><span class="toc-number">2.</span> <span class="toc-text">Input types</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Text"><span class="toc-number">2.1.</span> <span class="toc-text">Text</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Time"><span class="toc-number">2.2.</span> <span class="toc-text">Time</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Time-not-widely-supported"><span class="toc-number">2.3.</span> <span class="toc-text">Time (not widely supported)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Etc"><span class="toc-number">2.4.</span> <span class="toc-text">Etc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Buttons"><span class="toc-number">2.5.</span> <span class="toc-text">Buttons</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Numeric"><span class="toc-number">2.6.</span> <span class="toc-text">Numeric</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number"></span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Dates"><span class="toc-number">1.</span> <span class="toc-text">Dates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Datetime"><span class="toc-number">2.</span> <span class="toc-text">Datetime</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">3.</span> <span class="toc-text">Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Text-1"><span class="toc-number">4.</span> <span class="toc-text">Text</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number"></span> <span class="toc-text">Also see</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/html-input/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/html-input/&text=Input tag"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/html-input/&title=Input tag"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/html-input/&is_video=false&description=Input tag"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Input tag&body=Check out this article: https://rupertqin.github.io/devhints/html-input/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/html-input/&title=Input tag"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/html-input/&title=Input tag"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/html-input/&title=Input tag"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/html-input/&title=Input tag"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/html-input/&name=Input tag&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

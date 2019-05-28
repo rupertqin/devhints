@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Test cases12345678defmodule MyTest do  use ExUnit.Case  use ExUnit.Case, async: true  # for async  test &quot;the truth&quot; do    assert 1 + 1 == 2  endend Capture IO123456789import ExUnit.CaptureIOtest &quot;capt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ExUnit">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/exunit/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Test cases12345678defmodule MyTest do  use ExUnit.Case  use ExUnit.Case, async: true  # for async  test &quot;the truth&quot; do    assert 1 + 1 == 2  endend Capture IO123456789import ExUnit.CaptureIOtest &quot;capt">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-08-25T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ExUnit">
+<meta name="twitter:description" content="Test cases12345678defmodule MyTest do  use ExUnit.Case  use ExUnit.Case, async: true  # for async  test &quot;the truth&quot; do    assert 1 + 1 == 2  endend Capture IO123456789import ExUnit.CaptureIOtest &quot;capt">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>ExUnit</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../factory_bot/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../expectjs/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/exunit/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/exunit/&text=ExUnit"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/exunit/&title=ExUnit"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/exunit/&is_video=false&description=ExUnit"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=ExUnit&body=Check out this article: https://rupertqin.github.io/devhints/exunit/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/exunit/&title=ExUnit"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/exunit/&title=ExUnit"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/exunit/&title=ExUnit"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/exunit/&title=ExUnit"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/exunit/&name=ExUnit&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Test-cases"><span class="toc-number">1.</span> <span class="toc-text">Test cases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Capture-IO"><span class="toc-number">2.</span> <span class="toc-text">Capture IO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Capture-logs"><span class="toc-number">3.</span> <span class="toc-text">Capture logs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Async"><span class="toc-number">4.</span> <span class="toc-text">Async</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assertions"><span class="toc-number">5.</span> <span class="toc-text">Assertions</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Setup"><span class="toc-number"></span> <span class="toc-text">Setup</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Pattern-matching"><span class="toc-number">1.</span> <span class="toc-text">Pattern matching</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup-1"><span class="toc-number">2.</span> <span class="toc-text">Setup</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number"></span> <span class="toc-text">Also see</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        ExUnit
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.267Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Elixir/">Elixir</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Test-cases"><a href="#Test-cases" class="headerlink" title="Test cases"></a>Test cases</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">defmodule</span> <span class="title">MyTest</span></span> <span class="keyword">do</span></span><br><span class="line">  <span class="keyword">use</span> ExUnit.Case</span><br><span class="line">  <span class="keyword">use</span> ExUnit.Case, <span class="symbol">async:</span> <span class="keyword">true</span>  <span class="comment"># for async</span></span><br><span class="line"></span><br><span class="line">  test <span class="string">"the truth"</span> <span class="keyword">do</span></span><br><span class="line">    assert <span class="number">1</span> + <span class="number">1</span> == <span class="number">2</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="Capture-IO"><a href="#Capture-IO" class="headerlink" title="Capture IO"></a>Capture IO</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ExUnit.CaptureIO</span><br><span class="line"></span><br><span class="line">test <span class="string">"capture io"</span> <span class="keyword">do</span></span><br><span class="line">  result = capture_io(<span class="keyword">fn</span> -&gt;</span><br><span class="line">    IO.puts <span class="string">"sup"</span></span><br><span class="line">  <span class="keyword">end</span>)</span><br><span class="line"></span><br><span class="line">  assert result == <span class="string">"sup\n"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="Capture-logs"><a href="#Capture-logs" class="headerlink" title="Capture logs"></a>Capture logs</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">config <span class="symbol">:ex_unit</span>, <span class="symbol">capture_logs:</span> <span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="Async"><a href="#Async" class="headerlink" title="Async"></a>Async</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">defmodule</span> <span class="title">AssertionTest</span></span> <span class="keyword">do</span></span><br><span class="line">  <span class="comment"># run concurrently with other test cases</span></span><br><span class="line">  <span class="keyword">use</span> ExUnit.Case, <span class="symbol">async:</span> <span class="keyword">true</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="Assertions"><a href="#Assertions" class="headerlink" title="Assertions"></a>Assertions</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">assert x == y</span><br><span class="line">refute x == y</span><br><span class="line"></span><br><span class="line">assert_raise ArithmeticError, <span class="keyword">fn</span> -&gt;</span><br><span class="line">  <span class="number">1</span> + <span class="string">"test"</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">assert_raise ArithmeticError, <span class="string">"message"</span>, <span class="keyword">fn</span> -&gt; ...</span><br><span class="line">assert_raise ArithmeticError, ~r/message/, <span class="keyword">fn</span> -&gt; ...</span><br><span class="line"></span><br><span class="line">flunk <span class="string">"This should've been an error"</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://devdocs.io/elixir/ex_unit/exunit.assertions" target="_blank" rel="noopener">Assertions</a></p>
+<h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h2><h3 id="Pattern-matching"><a href="#Pattern-matching" class="headerlink" title="Pattern matching"></a>Pattern matching</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setup <span class="keyword">do</span></span><br><span class="line">  &#123;<span class="symbol">:ok</span>, <span class="symbol">name:</span> <span class="string">"John"</span>&#125;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">test <span class="string">"it works"</span>, %&#123;<span class="symbol">name:</span> name&#125; <span class="keyword">do</span></span><br><span class="line">  assert name == <span class="string">"John"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="Setup-1"><a href="#Setup-1" class="headerlink" title="Setup"></a>Setup</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">defp</span> <span class="title">my_hook</span></span>(_context) <span class="keyword">do</span></span><br><span class="line">  <span class="comment"># Invoked in every block in "a block"</span></span><br><span class="line">  &#123;<span class="symbol">:ok</span>, <span class="symbol">name:</span> <span class="string">"John"</span>, <span class="symbol">age:</span> <span class="number">54</span>&#125;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">describe <span class="string">"a block"</span> <span class="keyword">do</span></span><br><span class="line">  setup [<span class="symbol">:my_hook</span>]</span><br><span class="line">  </span><br><span class="line">  test <span class="string">"John's age"</span>, context <span class="keyword">do</span></span><br><span class="line">    assert context[<span class="symbol">:name</span>] == <span class="string">"John"</span></span><br><span class="line">    assert context[<span class="symbol">:age</span>] == <span class="number">54</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="Also-see"><a href="#Also-see" class="headerlink" title="Also see"></a>Also see</h2><ul>
+<li><a href="http://devdocs.io/elixir/ex_unit/exunit#configure/1" target="_blank" rel="noopener">ExUnit Docs</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Test-cases"><span class="toc-number">1.</span> <span class="toc-text">Test cases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Capture-IO"><span class="toc-number">2.</span> <span class="toc-text">Capture IO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Capture-logs"><span class="toc-number">3.</span> <span class="toc-text">Capture logs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Async"><span class="toc-number">4.</span> <span class="toc-text">Async</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assertions"><span class="toc-number">5.</span> <span class="toc-text">Assertions</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Setup"><span class="toc-number"></span> <span class="toc-text">Setup</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Pattern-matching"><span class="toc-number">1.</span> <span class="toc-text">Pattern matching</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup-1"><span class="toc-number">2.</span> <span class="toc-text">Setup</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number"></span> <span class="toc-text">Also see</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/exunit/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/exunit/&text=ExUnit"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/exunit/&title=ExUnit"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/exunit/&is_video=false&description=ExUnit"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=ExUnit&body=Check out this article: https://rupertqin.github.io/devhints/exunit/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/exunit/&title=ExUnit"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/exunit/&title=ExUnit"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/exunit/&title=ExUnit"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/exunit/&title=ExUnit"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/exunit/&name=ExUnit&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

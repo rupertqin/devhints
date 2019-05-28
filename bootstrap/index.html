@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content=".container .row .col-md-6, @screen-sm-min, .form-control, grids, .modal-content, tooltips, and other Bootstrap CSS examples.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bootstrap">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/bootstrap/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content=".container .row .col-md-6, @screen-sm-min, .form-control, grids, .modal-content, tooltips, and other Bootstrap CSS examples.">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:34:27.643Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bootstrap">
+<meta name="twitter:description" content=".container .row .col-md-6, @screen-sm-min, .form-control, grids, .modal-content, tooltips, and other Bootstrap CSS examples.">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Bootstrap</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../brew/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../bookshelf/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/bootstrap/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/bootstrap/&text=Bootstrap"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/bootstrap/&title=Bootstrap"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/bootstrap/&is_video=false&description=Bootstrap"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Bootstrap&body=Check out this article: https://rupertqin.github.io/devhints/bootstrap/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/bootstrap/&title=Bootstrap"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/bootstrap/&title=Bootstrap"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/bootstrap/&title=Bootstrap"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/bootstrap/&title=Bootstrap"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/bootstrap/&name=Bootstrap&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Screen-sizes"><span class="toc-number">1.</span> <span class="toc-text">Screen sizes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Columns"><span class="toc-number">2.</span> <span class="toc-text">Columns</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Utilities"><span class="toc-number">3.</span> <span class="toc-text">Utilities</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modal"><span class="toc-number">4.</span> <span class="toc-text">Modal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modal-via-ajax-Rails"><span class="toc-number">5.</span> <span class="toc-text">Modal via ajax (Rails)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tooltip"><span class="toc-number">6.</span> <span class="toc-text">Tooltip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Input-groups"><span class="toc-number">7.</span> <span class="toc-text">Input groups</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Bootstrap
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.201Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/CSS/">CSS</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Screen-sizes"><a href="#Screen-sizes" class="headerlink" title="Screen sizes"></a>Screen sizes</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">         768          992                1200</span><br><span class="line">&apos;     &apos;     &apos;     &apos;     &apos;     &apos;     &apos;     &apos;     &apos;</span><br><span class="line">&lt;---------^------------^------------------^---------&gt;</span><br><span class="line">     xs         sm              md             lg</span><br><span class="line">   (phone)   (tablet)        (laptop)       (desktop)</span><br></pre></td></tr></table></figure>
+<p>Min:</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> (min-width: @screen-sm-min) // &gt;= 768px (small tablet)</span><br><span class="line">@<span class="keyword">media</span> (min-width: @screen-md-min) // &gt;= 992px (medium laptop)</span><br><span class="line">@<span class="keyword">media</span> (min-width: @screen-lg-min) // &gt;= 1200px (large desktop)</span><br></pre></td></tr></table></figure>
+<p>Max:</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> (max-width: @screen-xs-max) &#123; <span class="comment">// &lt; 768px (xsmall phone)</span></span><br><span class="line">@<span class="keyword">media</span> (max-width: @screen-sm-max) &#123; <span class="comment">// &lt; 992px (small tablet)</span></span><br><span class="line">@<span class="keyword">media</span> (max-width: @screen-md-max) &#123; <span class="comment">// &lt; 1200px (medium laptop)</span></span><br></pre></td></tr></table></figure>
+<h3 id="Columns"><a href="#Columns" class="headerlink" title="Columns"></a>Columns</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span></span><br><span class="line"><span class="selector-class">.container-fluid</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.col-xs-1</span></span><br><span class="line"><span class="selector-class">.col-sm-1</span></span><br><span class="line"><span class="selector-class">.col-md-1</span></span><br><span class="line"><span class="selector-class">.col-lg-1</span></span><br><span class="line"><span class="selector-class">.col-md-offset-1</span></span><br></pre></td></tr></table></figure>
+<p>Mixins:</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">include</span> make-xs-column(<span class="number">12</span>);</span><br><span class="line">@<span class="keyword">include</span> make-sm-column(<span class="number">6</span>);</span><br><span class="line">@<span class="keyword">include</span> make-md-column(<span class="number">3</span>);</span><br><span class="line">@<span class="keyword">include</span> make-lg-column(<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">include</span> make-sm-column-offset(<span class="number">1</span>);</span><br><span class="line">@<span class="keyword">include</span> make-sm-column-push(<span class="number">1</span>);</span><br><span class="line">@<span class="keyword">include</span> make-sm-column-pull(<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="Utilities"><a href="#Utilities" class="headerlink" title="Utilities"></a>Utilities</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.pull-left</span></span><br><span class="line"><span class="selector-class">.pull-right</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.hidden-</span>&#123;xs,sm,md,lg&#125;</span><br><span class="line"><span class="selector-class">.visible-</span>&#123;xs,sm,md,lg&#125;</span><br><span class="line"><span class="selector-class">.visible-</span>&#123;xs,sm,md,lg,print&#125;-&#123;block,inline,inline-block&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.center-block</span>  <span class="comment">/* margin: auto */</span></span><br><span class="line"><span class="selector-class">.clearfix</span></span><br><span class="line"><span class="selector-class">.text-</span>&#123;center,<span class="attribute">left</span>,<span class="attribute">right</span>,justify,nowrap&#125;</span><br><span class="line"><span class="selector-class">.text-</span>&#123;lowercase,uppercase,capitalize&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.show</span></span><br><span class="line"><span class="selector-class">.hidden</span></span><br></pre></td></tr></table></figure>
+<h3 id="Modal"><a href="#Modal" class="headerlink" title="Modal"></a>Modal</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">data-toggle</span>=<span class="string">'modal'</span> <span class="attr">data-target</span>=<span class="string">'#new'</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#new.modal.fade(role='dialog')</span><br><span class="line">  .modal-dialog // .modal-lg, .modal-sm</span><br><span class="line">    .modal-content</span><br><span class="line">      .modal-header</span><br><span class="line"><span class="tag">        %<span class="selector-tag">h4</span><span class="selector-class">.modal-title</span></span> hello</span><br><span class="line"><span class="tag">        %<span class="selector-tag">button</span><span class="selector-class">.close</span>&#123;type: 'button', data: &#123; dismiss: 'modal' &#125;</span>&#125;</span><br><span class="line"><span class="tag">          %<span class="selector-tag">span</span>&#123;'aria-hidden' =&gt; true&#125;</span>!= "&amp;times;"</span><br><span class="line"><span class="tag">          %<span class="selector-tag">span</span><span class="selector-class">.sr-only</span></span> Close</span><br><span class="line">      .modal-body</span><br><span class="line">        ...</span><br><span class="line">      .modal-footer</span><br><span class="line">        ...</span><br></pre></td></tr></table></figure>
+<h3 id="Modal-via-ajax-Rails"><a href="#Modal-via-ajax-Rails" class="headerlink" title="Modal via ajax (Rails)"></a>Modal via ajax (Rails)</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">%<span class="selector-tag">button</span><span class="selector-class">.btn</span>&#123;data: &#123; |</span></span><br><span class="line"><span class="tag">  toggle: 'modal', |</span></span><br><span class="line"><span class="tag">  target: '#chooseTheme', |</span></span><br><span class="line"><span class="tag">  remote: '/path/to/remote'&#125;</span></span><br><span class="line">  Change Theme</span><br></pre></td></tr></table></figure>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.modal.fade#chooseTheme</span><br><span class="line">  .modal-dialog.modal-xl</span><br><span class="line">    .modal-content</span><br><span class="line">      .modal-header</span><br><span class="line"><span class="tag">        %<span class="selector-tag">h4</span><span class="selector-class">.modal-title</span></span> Choose a theme</span><br><span class="line"></span><br><span class="line">      .modal-body</span><br><span class="line">        .spinner-panel.-lg</span><br><span class="line"><span class="tag">          %<span class="selector-tag">i</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Tooltip"><a href="#Tooltip" class="headerlink" title="Tooltip"></a>Tooltip</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-toggle</span>=<span class="string">'tooltip'</span></span></span><br><span class="line"><span class="tag">  <span class="attr">title</span>=<span class="string">'tooltip'</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-placement</span>=<span class="string">'left|top|bottom|right'</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'[data-toogle~="tooltip"]'</span>).tooltip()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="Input-groups"><a href="#Input-groups" class="headerlink" title="Input groups"></a>Input groups</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.input-group</span><br><span class="line">    input.form-control(type='text')</span><br><span class="line">    .input-group-addon years</span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Screen-sizes"><span class="toc-number">1.</span> <span class="toc-text">Screen sizes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Columns"><span class="toc-number">2.</span> <span class="toc-text">Columns</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Utilities"><span class="toc-number">3.</span> <span class="toc-text">Utilities</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modal"><span class="toc-number">4.</span> <span class="toc-text">Modal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modal-via-ajax-Rails"><span class="toc-number">5.</span> <span class="toc-text">Modal via ajax (Rails)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tooltip"><span class="toc-number">6.</span> <span class="toc-text">Tooltip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Input-groups"><span class="toc-number">7.</span> <span class="toc-text">Input groups</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/bootstrap/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/bootstrap/&text=Bootstrap"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/bootstrap/&title=Bootstrap"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/bootstrap/&is_video=false&description=Bootstrap"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Bootstrap&body=Check out this article: https://rupertqin.github.io/devhints/bootstrap/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/bootstrap/&title=Bootstrap"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/bootstrap/&title=Bootstrap"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/bootstrap/&title=Bootstrap"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/bootstrap/&title=Bootstrap"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/bootstrap/&name=Bootstrap&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

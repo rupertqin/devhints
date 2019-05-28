@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Getting startedInstall divshot-cli12$ npm install -g divshot-cli$ divshot login Create divshot.json1234&amp;#123;  &quot;name&quot;: &quot;yourapp&quot;,  &quot;root&quot;: &quot;./app&quot;&amp;#125; Push your app1$ divshot push ConfigurationSee c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Divshot">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/divshot/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Getting startedInstall divshot-cli12$ npm install -g divshot-cli$ divshot login Create divshot.json1234&amp;#123;  &quot;name&quot;: &quot;yourapp&quot;,  &quot;root&quot;: &quot;./app&quot;&amp;#125; Push your app1$ divshot push ConfigurationSee c">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:23:51.251Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Divshot">
+<meta name="twitter:description" content="Getting startedInstall divshot-cli12$ npm install -g divshot-cli$ divshot login Create divshot.json1234&amp;#123;  &quot;name&quot;: &quot;yourapp&quot;,  &quot;root&quot;: &quot;./app&quot;&amp;#125; Push your app1$ divshot push ConfigurationSee c">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Divshot</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../devise/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../deku@1/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/divshot/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/divshot/&text=Divshot"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/divshot/&title=Divshot"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/divshot/&is_video=false&description=Divshot"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Divshot&body=Check out this article: https://rupertqin.github.io/devhints/divshot/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/divshot/&title=Divshot"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/divshot/&title=Divshot"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/divshot/&title=Divshot"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/divshot/&title=Divshot"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/divshot/&name=Divshot&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-divshot-cli"><span class="toc-number">1.1.</span> <span class="toc-text">Install divshot-cli</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-divshot-json"><span class="toc-number">1.2.</span> <span class="toc-text">Create divshot.json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Push-your-app"><span class="toc-number">1.3.</span> <span class="toc-text">Push your app</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuration"><span class="toc-number">2.</span> <span class="toc-text">Configuration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CLI"><span class="toc-number">3.</span> <span class="toc-text">CLI</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Config"><span class="toc-number">3.1.</span> <span class="toc-text">Config</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Environment-vars"><span class="toc-number">3.2.</span> <span class="toc-text">Environment vars</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#App-management"><span class="toc-number">3.3.</span> <span class="toc-text">App management</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Custom-domains"><span class="toc-number">4.</span> <span class="toc-text">Custom domains</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Divshot
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.250Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><h3 id="Install-divshot-cli"><a href="#Install-divshot-cli" class="headerlink" title="Install divshot-cli"></a>Install divshot-cli</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g divshot-cli</span><br><span class="line">$ divshot login</span><br></pre></td></tr></table></figure>
+<h3 id="Create-divshot-json"><a href="#Create-divshot-json" class="headerlink" title="Create divshot.json"></a>Create divshot.json</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"yourapp"</span>,</span><br><span class="line">  <span class="attr">"root"</span>: <span class="string">"./app"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Push-your-app"><a href="#Push-your-app" class="headerlink" title="Push your app"></a>Push your app</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ divshot push</span><br></pre></td></tr></table></figure>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>See <a href="https://docs.divshot.com/guides/configuration" target="_blank" rel="noopener">configuration reference</a> and <a href="https://docs.divshot.com/guides/routing" target="_blank" rel="noopener">routing guide</a>.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"yourapp"</span>,</span><br><span class="line">  <span class="attr">"root"</span>: <span class="string">"./app"</span>,</span><br><span class="line">  <span class="attr">"clean_urls"</span>: <span class="literal">true</span>,</span><br><span class="line">  "clean_urls": ["/app/**", "/!components/**"],,</span><br><span class="line">  "error_page": "error.html",</span><br><span class="line">  "exclude": [ "Gruntfile.js" ],</span><br><span class="line">  "cache_control": &#123;&#125;,</span><br><span class="line">  "routes": &#123;</span><br><span class="line">    "/*.html": "index.html",</span><br><span class="line">    "/app/**/*.html": "app.html",</span><br><span class="line">    "**": "index.html"</span><br><span class="line">  &#125;,</span><br><span class="line">  "redirects": &#123;</span><br><span class="line">    "/old/:segment/path": "/new/path/:segment",</span><br><span class="line">    "/some/old/path": &#123;</span><br><span class="line">      "status": 302,</span><br><span class="line">      "url": "/some/new/path"</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  "headers": &#123;</span><br><span class="line">    "/cors-stuff/**": &#123;</span><br><span class="line">      "Access-Control-Allow-Origin": "*"</span><br><span class="line">    &#125;,</span><br><span class="line">    "/scripts/**": &#123;</span><br><span class="line">      "content-type": "text/javascript"</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">divshot s   <span class="comment"># server</span></span><br><span class="line"></span><br><span class="line">divshot push [staging|production|development]</span><br><span class="line">divshot pull [staging|production|development]</span><br><span class="line">divshot purge   <span class="comment"># cleans cache</span></span><br><span class="line">divshot files</span><br><span class="line"></span><br><span class="line">divshot promote development production</span><br><span class="line"></span><br><span class="line">divshot open [&lt;env&gt;]</span><br></pre></td></tr></table></figure>
+<h3 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h3><p>Edits <code>divshot.json</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">divshot config:add name your-app-name</span><br><span class="line">divshot config:remove name</span><br></pre></td></tr></table></figure>
+<h3 id="Environment-vars"><a href="#Environment-vars" class="headerlink" title="Environment vars"></a>Environment vars</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">divshot env:add &lt;env&gt; KEY=value</span><br><span class="line">divshot env:remove &lt;env&gt; KEY</span><br><span class="line">divshot env:pull &lt;env&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="App-management"><a href="#App-management" class="headerlink" title="App management"></a>App management</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">divshot create &lt;appname&gt;</span><br><span class="line">divshot rename &lt;newname&gt;</span><br><span class="line">divshot status</span><br><span class="line">divshot destroy</span><br></pre></td></tr></table></figure>
+<p>divshot apps<br>divshot account<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### Password protect</span><br><span class="line"></span><br><span class="line">```sh</span><br><span class="line">divshot protect &lt;env&gt; &lt;username:password&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Custom-domains"><a href="#Custom-domains" class="headerlink" title="Custom domains"></a>Custom domains</h2><p>See <a href="http://docs.divshot.com/guides/domains" target="_blank" rel="noopener">custom domains guide</a>.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">divshot domains:add foo.bar.com</span><br></pre></td></tr></table></figure>
+<p>In your DNS create a <code>CNAME</code>: (no apex domains are supported)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www.    CNAME    yourname.divshot.io</span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-divshot-cli"><span class="toc-number">1.1.</span> <span class="toc-text">Install divshot-cli</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-divshot-json"><span class="toc-number">1.2.</span> <span class="toc-text">Create divshot.json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Push-your-app"><span class="toc-number">1.3.</span> <span class="toc-text">Push your app</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuration"><span class="toc-number">2.</span> <span class="toc-text">Configuration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CLI"><span class="toc-number">3.</span> <span class="toc-text">CLI</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Config"><span class="toc-number">3.1.</span> <span class="toc-text">Config</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Environment-vars"><span class="toc-number">3.2.</span> <span class="toc-text">Environment vars</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#App-management"><span class="toc-number">3.3.</span> <span class="toc-text">App management</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Custom-domains"><span class="toc-number">4.</span> <span class="toc-text">Custom domains</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/divshot/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/divshot/&text=Divshot"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/divshot/&title=Divshot"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/divshot/&is_video=false&description=Divshot"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Divshot&body=Check out this article: https://rupertqin.github.io/devhints/divshot/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/divshot/&title=Divshot"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/divshot/&title=Divshot"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/divshot/&title=Divshot"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/divshot/&title=Divshot"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/divshot/&name=Divshot&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

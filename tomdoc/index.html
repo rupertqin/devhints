@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Tomdoc1234567891011121314# Public: Duplicate some text an arbitrary number of times.## text  - The String to be duplicated.# count - The Integer number of times to duplicate the text.## Examples##   m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tomdoc">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/tomdoc/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Tomdoc1234567891011121314# Public: Duplicate some text an arbitrary number of times.## text  - The String to be duplicated.# count - The Integer number of times to duplicate the text.## Examples##   m">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:37:07.776Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tomdoc">
+<meta name="twitter:description" content="Tomdoc1234567891011121314# Public: Duplicate some text an arbitrary number of times.## text  - The String to be duplicated.# count - The Integer number of times to duplicate the text.## Examples##   m">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Tomdoc</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../travis-gh-pages/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../tig/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/tomdoc/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/tomdoc/&text=Tomdoc"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/tomdoc/&title=Tomdoc"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/tomdoc/&is_video=false&description=Tomdoc"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Tomdoc&body=Check out this article: https://rupertqin.github.io/devhints/tomdoc/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/tomdoc/&title=Tomdoc"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/tomdoc/&title=Tomdoc"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/tomdoc/&title=Tomdoc"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/tomdoc/&title=Tomdoc"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/tomdoc/&name=Tomdoc&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Tomdoc"><span class="toc-number">1.</span> <span class="toc-text">Tomdoc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tags"><span class="toc-number">2.</span> <span class="toc-text">Tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Options"><span class="toc-number">3.</span> <span class="toc-text">Options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Yields"><span class="toc-number">4.</span> <span class="toc-text">Yields</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Signatures"><span class="toc-number">5.</span> <span class="toc-text">Signatures</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Tomdoc
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.452Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Markup/">Markup</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Tomdoc"><a href="#Tomdoc" class="headerlink" title="Tomdoc"></a>Tomdoc</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Public: Duplicate some text an arbitrary number of times.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># text  - The String to be duplicated.</span></span><br><span class="line"><span class="comment"># count - The Integer number of times to duplicate the text.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Examples</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#   multiplex('Tom', 4)</span></span><br><span class="line"><span class="comment">#   # =&gt; 'TomTomTomTom'</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Returns the duplicated String.</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">multiplex</span><span class="params">(text, count)</span></span></span><br><span class="line">  text * count</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>See <a href="http://tomdoc.org/" target="_blank" rel="noopener">tomdoc.org</a>.</p>
+<h3 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h3><ul>
+<li><code>Deprecated</code></li>
+<li><code>Internal</code></li>
+<li><code>Public</code></li>
+</ul>
+<h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># options - The Hash options used to refine the selection (default: &#123;&#125;):</span></span><br><span class="line"><span class="comment">#           :color  - The String color to restrict by (optional).</span></span><br><span class="line"><span class="comment">#           :weight - The Float weight to restrict by. The weight should</span></span><br><span class="line"><span class="comment">#                     be specified in grams (optional).</span></span><br></pre></td></tr></table></figure>
+<h3 id="Yields"><a href="#Yields" class="headerlink" title="Yields"></a>Yields</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Yields the Integer index of the iteration.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Returns the duplicated String.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Returns nothing.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Raises Errno::ENOENT if the file can't be found.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Returns something else and this is a wrapped</span></span><br><span class="line"><span class="comment">#   multi-line comment.</span></span><br></pre></td></tr></table></figure>
+<h3 id="Signatures"><a href="#Signatures" class="headerlink" title="Signatures"></a>Signatures</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Signature</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#   find_by_&lt;field&gt;[_and_&lt;field&gt;...](args)</span></span><br><span class="line"><span class="comment">#</span></span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Tomdoc"><span class="toc-number">1.</span> <span class="toc-text">Tomdoc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tags"><span class="toc-number">2.</span> <span class="toc-text">Tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Options"><span class="toc-number">3.</span> <span class="toc-text">Options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Yields"><span class="toc-number">4.</span> <span class="toc-text">Yields</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Signatures"><span class="toc-number">5.</span> <span class="toc-text">Signatures</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/tomdoc/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/tomdoc/&text=Tomdoc"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/tomdoc/&title=Tomdoc"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/tomdoc/&is_video=false&description=Tomdoc"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Tomdoc&body=Check out this article: https://rupertqin.github.io/devhints/tomdoc/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/tomdoc/&title=Tomdoc"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/tomdoc/&title=Tomdoc"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/tomdoc/&title=Tomdoc"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/tomdoc/&title=Tomdoc"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/tomdoc/&name=Tomdoc&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

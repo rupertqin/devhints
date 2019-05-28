@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Getting startedMounting1import &amp;#123;shallow, mount&amp;#125; from &apos;enzyme&apos; 1wrap = shallow(&amp;lt;MyComponent /&amp;gt;) 1wrap = mount(&amp;lt;MyComponent /&amp;gt;) Shallow wrapping doesn’t descend down to sub-compone">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Enzyme v2">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/enzyme@2/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Getting startedMounting1import &amp;#123;shallow, mount&amp;#125; from &apos;enzyme&apos; 1wrap = shallow(&amp;lt;MyComponent /&amp;gt;) 1wrap = mount(&amp;lt;MyComponent /&amp;gt;) Shallow wrapping doesn’t descend down to sub-compone">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-09-13T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Enzyme v2">
+<meta name="twitter:description" content="Getting startedMounting1import &amp;#123;shallow, mount&amp;#125; from &apos;enzyme&apos; 1wrap = shallow(&amp;lt;MyComponent /&amp;gt;) 1wrap = mount(&amp;lt;MyComponent /&amp;gt;) Shallow wrapping doesn’t descend down to sub-compone">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Enzyme v2</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../es2015/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../enzyme/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/enzyme@2/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/enzyme@2/&text=Enzyme v2"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/enzyme@2/&title=Enzyme v2"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/enzyme@2/&is_video=false&description=Enzyme v2"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Enzyme v2&body=Check out this article: https://rupertqin.github.io/devhints/enzyme@2/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/enzyme@2/&title=Enzyme v2"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/enzyme@2/&title=Enzyme v2"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/enzyme@2/&title=Enzyme v2"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/enzyme@2/&title=Enzyme v2"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/enzyme@2/&name=Enzyme v2&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mounting"><span class="toc-number">1.1.</span> <span class="toc-text">Mounting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jest"><span class="toc-number">1.2.</span> <span class="toc-text">Jest</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debugging"><span class="toc-number">1.3.</span> <span class="toc-text">Debugging</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ReactWrapper"><span class="toc-number">2.</span> <span class="toc-text">ReactWrapper</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Traversing"><span class="toc-number">2.1.</span> <span class="toc-text">Traversing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Actions"><span class="toc-number">2.2.</span> <span class="toc-text">Actions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React-components"><span class="toc-number">2.3.</span> <span class="toc-text">React components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mount"><span class="toc-number">2.4.</span> <span class="toc-text">Mount</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tests"><span class="toc-number">2.5.</span> <span class="toc-text">Tests</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">3.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Enzyme v2
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.260Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/React/">React</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><h3 id="Mounting"><a href="#Mounting" class="headerlink" title="Mounting"></a>Mounting</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;shallow, mount&#125; <span class="keyword">from</span> <span class="string">'enzyme'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrap = shallow(<span class="xml"><span class="tag">&lt;<span class="name">MyComponent</span> /&gt;</span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrap = mount(<span class="xml"><span class="tag">&lt;<span class="name">MyComponent</span> /&gt;</span>)</span></span><br></pre></td></tr></table></figure>
+<p>Shallow wrapping doesn’t descend down to sub-components.<br>A full mount also mounts sub-components.<br>See: <a href="http://airbnb.io/enzyme/docs/api/shallow.html" target="_blank" rel="noopener">Shallow rendering</a>,<br><a href="http://airbnb.io/enzyme/docs/api/mount.html" target="_blank" rel="noopener">Full rendering</a></p>
+<h3 id="Jest"><a href="#Jest" class="headerlink" title="Jest"></a>Jest</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> toJson <span class="keyword">from</span> <span class="string">'enzyme-to-json'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">it(<span class="string">'works'</span>, () =&gt; &#123;</span><br><span class="line">  wrap = mount(<span class="xml"><span class="tag">&lt;<span class="name">MyComponent</span> /&gt;</span>)</span></span><br><span class="line"><span class="xml">  expect(toJson(wrap)).toMatchSnapshot()</span></span><br><span class="line"><span class="xml">&#125;)</span></span><br></pre></td></tr></table></figure>
+<p>Converts an Enzyme wrapper to a format compatible with Jest snapshots. See: <a href="https://www.npmjs.com/package/enzyme-to-json" target="_blank" rel="noopener">enzyme-to-json</a></p>
+<h3 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(wrap.debug())</span><br></pre></td></tr></table></figure>
+<p>Shows HTML for debugging purposes. See: <a href="http://airbnb.io/enzyme/docs/api/ReactWrapper/debug.html" target="_blank" rel="noopener">debug()</a></p>
+<h2 id="ReactWrapper"><a href="#ReactWrapper" class="headerlink" title="ReactWrapper"></a>ReactWrapper</h2><h3 id="Traversing"><a href="#Traversing" class="headerlink" title="Traversing"></a>Traversing</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">wrap.find(<span class="string">'button'</span>)   <span class="comment">// =&gt; ReactWrapper</span></span><br><span class="line">wrap.filter(<span class="string">'button'</span>) <span class="comment">// =&gt; ReactWrapper</span></span><br><span class="line">wrap.not(<span class="string">'span'</span>)      <span class="comment">// =&gt; ReactWrapper (inverse of filter())</span></span><br><span class="line">wrap.children()       <span class="comment">// =&gt; ReactWrapper</span></span><br><span class="line">wrap.parent()         <span class="comment">// =&gt; ReactWrapper</span></span><br><span class="line">wrap.closest(<span class="string">'div'</span>)   <span class="comment">// =&gt; ReactWrapper</span></span><br><span class="line">wrap.childAt(<span class="number">0</span>)       <span class="comment">// =&gt; ReactWrapper</span></span><br><span class="line">wrap.at(<span class="number">0</span>)            <span class="comment">// =&gt; ReactWrapper</span></span><br><span class="line">wrap.first()          <span class="comment">// =&gt; ReactWrapper</span></span><br><span class="line">wrap.last()           <span class="comment">// =&gt; ReactWrapper</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wrap.get(<span class="number">0</span>)           <span class="comment">// =&gt; ReactElement</span></span><br><span class="line">wrap.getNode()        <span class="comment">// =&gt; ReactElement</span></span><br><span class="line">wrap.getNodes()       <span class="comment">// =&gt; Array&lt;ReactElement&gt;</span></span><br><span class="line">wrap.getDOMNode()     <span class="comment">// =&gt; DOMComponent</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://airbnb.io/enzyme/docs/api/mount.html" target="_blank" rel="noopener">Full rendering API</a></p>
+<h3 id="Actions"><a href="#Actions" class="headerlink" title="Actions"></a>Actions</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrap.simulate(<span class="string">'click'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="React-components"><a href="#React-components" class="headerlink" title="React components"></a>React components</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wrap.setState(&#123; ... &#125;)</span><br><span class="line">wrap.setProps(&#123; ... &#125;)</span><br><span class="line">wrap.setContext(&#123; ... &#125;)</span><br><span class="line"></span><br><span class="line">wrap.state()            <span class="comment">// =&gt; Any (get state)</span></span><br><span class="line">wrap.props()            <span class="comment">// =&gt; object (get props)</span></span><br><span class="line">wrap.context()          <span class="comment">// =&gt; Any (get context)</span></span><br><span class="line"></span><br><span class="line">wrap.instance()         <span class="comment">// =&gt; ReactComponent</span></span><br></pre></td></tr></table></figure>
+<h3 id="Mount"><a href="#Mount" class="headerlink" title="Mount"></a>Mount</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wrap.mount()</span><br><span class="line">wrap.unmount()</span><br><span class="line">wrap.update()      <span class="comment">// calls forceUpdate()</span></span><br></pre></td></tr></table></figure>
+<h3 id="Tests"><a href="#Tests" class="headerlink" title="Tests"></a>Tests</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">wrap.debug()               <span class="comment">// =&gt; string</span></span><br><span class="line">wrap.html()                <span class="comment">// =&gt; string</span></span><br><span class="line">wrap.text()                <span class="comment">// =&gt; string</span></span><br><span class="line">wrap.type()                <span class="comment">// =&gt; string | function</span></span><br><span class="line">wrap.name()                <span class="comment">// =&gt; string</span></span><br><span class="line">wrap.is(<span class="string">'.classname'</span>)      <span class="comment">// =&gt; boolean</span></span><br><span class="line">wrap.hasClass(<span class="string">'class'</span>)     <span class="comment">// =&gt; boolean</span></span><br><span class="line">wrap.exists()              <span class="comment">// =&gt; boolean</span></span><br><span class="line">wrap.contains(<span class="xml"><span class="tag">&lt;<span class="name">div</span> /&gt;</span>)     // =&gt; boolean</span></span><br><span class="line"><span class="xml">wrap.contains([ <span class="tag">&lt;<span class="name">div</span> /&gt;</span> ]) // =&gt; boolean</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">wrap.containsMatchingElement(<span class="tag">&lt;<span class="name">div</span> /&gt;</span>)         // =&gt; boolean</span></span><br><span class="line"><span class="xml">wrap.containsAllMatchingElements([ <span class="tag">&lt;<span class="name">div</span> /&gt;</span> ]) // =&gt; boolean</span></span><br><span class="line"><span class="xml">wrap.containsAnyMatchingElements([ <span class="tag">&lt;<span class="name">div</span> /&gt;</span> ]) // =&gt; boolean</span></span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://airbnb.io/enzyme" target="_blank" rel="noopener">https://airbnb.io/enzyme</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mounting"><span class="toc-number">1.1.</span> <span class="toc-text">Mounting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jest"><span class="toc-number">1.2.</span> <span class="toc-text">Jest</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debugging"><span class="toc-number">1.3.</span> <span class="toc-text">Debugging</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ReactWrapper"><span class="toc-number">2.</span> <span class="toc-text">ReactWrapper</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Traversing"><span class="toc-number">2.1.</span> <span class="toc-text">Traversing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Actions"><span class="toc-number">2.2.</span> <span class="toc-text">Actions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React-components"><span class="toc-number">2.3.</span> <span class="toc-text">React components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mount"><span class="toc-number">2.4.</span> <span class="toc-text">Mount</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tests"><span class="toc-number">2.5.</span> <span class="toc-text">Tests</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">3.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/enzyme@2/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/enzyme@2/&text=Enzyme v2"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/enzyme@2/&title=Enzyme v2"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/enzyme@2/&is_video=false&description=Enzyme v2"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Enzyme v2&body=Check out this article: https://rupertqin.github.io/devhints/enzyme@2/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/enzyme@2/&title=Enzyme v2"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/enzyme@2/&title=Enzyme v2"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/enzyme@2/&title=Enzyme v2"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/enzyme@2/&title=Enzyme v2"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/enzyme@2/&name=Enzyme v2&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

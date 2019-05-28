@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Getting startedConnect1234require(&apos;knex&apos;)(&amp;#123;  client: &apos;pg&apos;,  connection: &apos;postgres://user:pass@localhost:5432/dbname&apos;&amp;#125;) See: Connect Create table123456knex.schema.createTable(&apos;user&apos;, (table)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Knex">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/knex/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Getting startedConnect1234require(&apos;knex&apos;)(&amp;#123;  client: &apos;pg&apos;,  connection: &apos;postgres://user:pass@localhost:5432/dbname&apos;&amp;#125;) See: Connect Create table123456knex.schema.createTable(&apos;user&apos;, (table)">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-09-22T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Knex">
+<meta name="twitter:description" content="Getting startedConnect1234require(&apos;knex&apos;)(&amp;#123;  client: &apos;pg&apos;,  connection: &apos;postgres://user:pass@localhost:5432/dbname&apos;&amp;#125;) See: Connect Create table123456knex.schema.createTable(&apos;user&apos;, (table)">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Knex</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../jshint/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../jscoverage/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/knex/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/knex/&text=Knex"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/knex/&title=Knex"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/knex/&is_video=false&description=Knex"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Knex&body=Check out this article: https://rupertqin.github.io/devhints/knex/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/knex/&title=Knex"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/knex/&title=Knex"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/knex/&title=Knex"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/knex/&title=Knex"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/knex/&name=Knex&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect"><span class="toc-number">1.1.</span> <span class="toc-text">Connect</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-table"><span class="toc-number">1.2.</span> <span class="toc-text">Create table</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Select"><span class="toc-number">1.3.</span> <span class="toc-text">Select</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Insert"><span class="toc-number">1.4.</span> <span class="toc-text">Insert</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Update"><span class="toc-number">1.5.</span> <span class="toc-text">Update</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Migrations"><span class="toc-number">1.6.</span> <span class="toc-text">Migrations</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Connect-1"><span class="toc-number">2.</span> <span class="toc-text">Connect</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Libraries"><span class="toc-number">2.1.</span> <span class="toc-text">Libraries</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect-via-host"><span class="toc-number">2.2.</span> <span class="toc-text">Connect via host</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect-via-URL"><span class="toc-number">2.3.</span> <span class="toc-text">Connect via URL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect-via-Sqlite"><span class="toc-number">2.4.</span> <span class="toc-text">Connect via Sqlite</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Select-1"><span class="toc-number">3.</span> <span class="toc-text">Select</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Where"><span class="toc-number">3.1.</span> <span class="toc-text">Where</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Where-1"><span class="toc-number">3.1.1.</span> <span class="toc-text">Where</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Where-conditions"><span class="toc-number">3.1.2.</span> <span class="toc-text">Where conditions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Where-grouping"><span class="toc-number">3.1.3.</span> <span class="toc-text">Where grouping</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Join"><span class="toc-number">3.2.</span> <span class="toc-text">Join</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Basic-join"><span class="toc-number">3.2.1.</span> <span class="toc-text">Basic join</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Strings"><span class="toc-number">3.2.2.</span> <span class="toc-text">Strings</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Directions"><span class="toc-number">3.2.3.</span> <span class="toc-text">Directions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Raw"><span class="toc-number">3.2.4.</span> <span class="toc-text">Raw</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Grouping"><span class="toc-number">3.2.5.</span> <span class="toc-text">Grouping</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Others"><span class="toc-number">3.3.</span> <span class="toc-text">Others</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Group"><span class="toc-number">3.3.1.</span> <span class="toc-text">Group</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Order"><span class="toc-number">3.3.2.</span> <span class="toc-text">Order</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Offset-limit"><span class="toc-number">3.3.3.</span> <span class="toc-text">Offset/limit</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Having"><span class="toc-number">3.3.4.</span> <span class="toc-text">Having</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Union"><span class="toc-number">3.3.5.</span> <span class="toc-text">Union</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Etc"><span class="toc-number">3.4.</span> <span class="toc-text">Etc</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Booleans"><span class="toc-number">3.4.1.</span> <span class="toc-text">Booleans</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Numbers"><span class="toc-number">3.4.2.</span> <span class="toc-text">Numbers</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Schema"><span class="toc-number">4.</span> <span class="toc-text">Schema</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-table-1"><span class="toc-number">4.1.</span> <span class="toc-text">Create table</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Columns"><span class="toc-number">4.1.1.</span> <span class="toc-text">Columns</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Constraints"><span class="toc-number">4.1.2.</span> <span class="toc-text">Constraints</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Indices"><span class="toc-number">4.1.3.</span> <span class="toc-text">Indices</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Variations"><span class="toc-number">4.1.4.</span> <span class="toc-text">Variations</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Alter-table"><span class="toc-number">4.2.</span> <span class="toc-text">Alter table</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Create"><span class="toc-number">4.2.1.</span> <span class="toc-text">Create</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Alter"><span class="toc-number">4.2.2.</span> <span class="toc-text">Alter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Drop"><span class="toc-number">4.2.3.</span> <span class="toc-text">Drop</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-methods"><span class="toc-number">4.3.</span> <span class="toc-text">Other methods</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Modifying"><span class="toc-number">5.</span> <span class="toc-text">Modifying</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Insert-1"><span class="toc-number">5.1.</span> <span class="toc-text">Insert</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Insert-one"><span class="toc-number">5.1.1.</span> <span class="toc-text">Insert one</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Insert-many"><span class="toc-number">5.1.2.</span> <span class="toc-text">Insert many</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Update-1"><span class="toc-number">5.2.</span> <span class="toc-text">Update</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Delete"><span class="toc-number">5.3.</span> <span class="toc-text">Delete</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Migrations-1"><span class="toc-number">6.</span> <span class="toc-text">Migrations</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Setting-up"><span class="toc-number">6.1.</span> <span class="toc-text">Setting up</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-knexfile-js"><span class="toc-number">6.1.1.</span> <span class="toc-text">Create knexfile.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-a-migration"><span class="toc-number">6.1.2.</span> <span class="toc-text">Create a migration</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Run-migrations"><span class="toc-number">6.1.3.</span> <span class="toc-text">Run migrations</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Rollback"><span class="toc-number">6.1.4.</span> <span class="toc-text">Rollback</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Knex
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.328Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Databases/">Databases</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><h3 id="Connect"><a href="#Connect" class="headerlink" title="Connect"></a>Connect</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">'knex'</span>)(&#123;</span><br><span class="line">  client: <span class="string">'pg'</span>,</span><br><span class="line">  connection: <span class="string">'postgres://user:pass@localhost:5432/dbname'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="#connect-1">Connect</a></p>
+<h3 id="Create-table"><a href="#Create-table" class="headerlink" title="Create table"></a>Create table</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">knex.schema.createTable(<span class="string">'user'</span>, (table) =&gt; &#123;</span><br><span class="line">  table.increments(<span class="string">'id'</span>)</span><br><span class="line">  table.string(<span class="string">'name'</span>)</span><br><span class="line">  table.integer(<span class="string">'age'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">.then(<span class="function"><span class="params">()</span> =&gt;</span> ···)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="#schema">Schema</a></p>
+<h3 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">knex(<span class="string">'users'</span>)</span><br><span class="line">  .where(&#123; <span class="attr">email</span>: <span class="string">'hi@example.com'</span> &#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">rows</span> =&gt;</span> ···)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="#select-1">Select</a></p>
+<h3 id="Insert"><a href="#Insert" class="headerlink" title="Insert"></a>Insert</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">knex(<span class="string">'users'</span>)</span><br><span class="line">  .insert(&#123; <span class="attr">email</span>: <span class="string">'hi@example.com'</span> &#125;)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="#insert-1">Insert</a></p>
+<h3 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">knex(<span class="string">'users'</span>)</span><br><span class="line">  .where(&#123; <span class="attr">id</span>: <span class="number">135</span> &#125;)</span><br><span class="line">  .update(&#123; <span class="attr">email</span>: <span class="string">'hi@example.com'</span> &#125;)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="#update-1">Update</a></p>
+<h3 id="Migrations"><a href="#Migrations" class="headerlink" title="Migrations"></a>Migrations</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">knex init</span><br><span class="line">knex migrate:make migration_name</span><br><span class="line">knex migrate:latest</span><br><span class="line">knex migrate:rollback</span><br></pre></td></tr></table></figure>
+<p>See: <a href="#migrations-1">Migrations</a></p>
+<h2 id="Connect-1"><a href="#Connect-1" class="headerlink" title="Connect"></a>Connect</h2><h3 id="Libraries"><a href="#Libraries" class="headerlink" title="Libraries"></a>Libraries</h3><p>| <code>pg</code> | PostgreSQL |<br>| <code>mysql</code> | MySQL or MariaDB |<br>| <code>sqlite3</code> | Sqlite3 |<br>| <code>mssql</code> | MSSQL |</p>
+<p>Install any of these packages along with <code>knex</code>.</p>
+<p>See: <a href="http://knexjs.org/#Installation-node" target="_blank" rel="noopener">Node.js installation</a></p>
+<h3 id="Connect-via-host"><a href="#Connect-via-host" class="headerlink" title="Connect via host"></a>Connect via host</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> knex = <span class="built_in">require</span>(<span class="string">'knex'</span>)(&#123;</span><br><span class="line">  client: <span class="string">'mysql'</span>,</span><br><span class="line">  connection: &#123;</span><br><span class="line">    host: <span class="string">'127.0.0.1'</span>,</span><br><span class="line">    user: <span class="string">'your_database_user'</span>,</span><br><span class="line">    password: <span class="string">'your_database_password'</span>,</span><br><span class="line">    database: <span class="string">'myapp_test'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  pool: &#123; <span class="attr">min</span>: <span class="number">0</span>, <span class="attr">max</span>: <span class="number">7</span> &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://knexjs.org/#Installation-client" target="_blank" rel="noopener">Initializing the library</a></p>
+<h3 id="Connect-via-URL"><a href="#Connect-via-URL" class="headerlink" title="Connect via URL"></a>Connect via URL</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pg = <span class="built_in">require</span>(<span class="string">'knex'</span>)(&#123;</span><br><span class="line">  client: <span class="string">'pg'</span>,</span><br><span class="line">  connection: process.env.DATABASE_URL,</span><br><span class="line">  searchPath: <span class="string">'knex,public'</span>,</span><br><span class="line">  pool: &#123; <span class="attr">min</span>: <span class="number">0</span>, <span class="attr">max</span>: <span class="number">7</span> &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="Connect-via-Sqlite"><a href="#Connect-via-Sqlite" class="headerlink" title="Connect via Sqlite"></a>Connect via Sqlite</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> knex = <span class="built_in">require</span>(<span class="string">'knex'</span>)(&#123;</span><br><span class="line">  client: <span class="string">'sqlite3'</span>,</span><br><span class="line">  connection: &#123; <span class="attr">filename</span>: <span class="string">'./mydb.sqlite'</span> &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Select-1"><a href="#Select-1" class="headerlink" title="Select"></a>Select</h2><h3 id="Where"><a href="#Where" class="headerlink" title="Where"></a>Where</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">knex</span><br><span class="line">  .from(<span class="string">'books'</span>)</span><br><span class="line">  .select(<span class="string">'title'</span>, <span class="string">'author'</span>, <span class="string">'year'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Where-1"><a href="#Where-1" class="headerlink" title="Where"></a>Where</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.where(<span class="string">'title'</span>, <span class="string">'Hello'</span>)</span><br><span class="line">.where(&#123; <span class="attr">title</span>: <span class="string">'Hello'</span> &#125;)</span><br><span class="line">.whereIn(<span class="string">'id'</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">.whereNot(···)</span><br></pre></td></tr></table></figure>
+<h4 id="Where-conditions"><a href="#Where-conditions" class="headerlink" title="Where conditions"></a>Where conditions</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.whereNull(<span class="string">'updated_at'</span>)</span><br><span class="line">.whereNotNull(···)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.whereExists(<span class="string">'updated_at'</span>)</span><br><span class="line">.whereNotExists(···)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.whereBetween(<span class="string">'votes'</span>, [<span class="number">1</span>, <span class="number">100</span>])</span><br><span class="line">.whereNotBetween(···)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.whereRaw(<span class="string">'id = ?'</span>, [<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<h4 id="Where-grouping"><a href="#Where-grouping" class="headerlink" title="Where grouping"></a>Where grouping</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.where(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span></span><br><span class="line">    .where(<span class="string">'id'</span>, <span class="number">1</span>)</span><br><span class="line">    .orWhere(<span class="string">'id'</span>, <span class="string">'&gt;'</span>, <span class="number">10</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://knexjs.org/#Builder-wheres" target="_blank" rel="noopener">Where clauses</a></p>
+<h3 id="Join"><a href="#Join" class="headerlink" title="Join"></a>Join</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">knex(<span class="string">'users'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Basic-join"><a href="#Basic-join" class="headerlink" title="Basic join"></a>Basic join</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.join(<span class="string">'contacts'</span>, <span class="string">'users.id'</span>, <span class="string">'='</span>, <span class="string">'contacts.id'</span>)</span><br><span class="line">.join(<span class="string">'contacts'</span>, &#123;<span class="string">'users.id'</span>: <span class="string">'contacts.id'</span>&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.join(<span class="string">'accounts'</span>, <span class="string">'accounts.type'</span>, <span class="string">'='</span>, knex.raw(<span class="string">'?'</span>, [<span class="string">'admin'</span>]))</span><br></pre></td></tr></table></figure>
+<h4 id="Directions"><a href="#Directions" class="headerlink" title="Directions"></a>Directions</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.leftJoin(···)</span><br><span class="line">.leftOuterJoin(···)</span><br><span class="line">.rightJoin(···)</span><br><span class="line">.rightOuterJoin(···)</span><br><span class="line">.outerJoin(···)</span><br><span class="line">.fullOuterJoin(···)</span><br><span class="line">.crossJoin(···)</span><br></pre></td></tr></table></figure>
+<h4 id="Raw"><a href="#Raw" class="headerlink" title="Raw"></a>Raw</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.joinRaw(<span class="string">'natural full join table1'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Grouping"><a href="#Grouping" class="headerlink" title="Grouping"></a>Grouping</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">.join(<span class="string">'accounts'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span></span><br><span class="line">    .on(<span class="string">'accounts.id'</span>, <span class="string">'='</span>, <span class="string">'users.account_id'</span>)</span><br><span class="line">    .orOn(<span class="string">'accounts.owner_id'</span>, <span class="string">'='</span>, <span class="string">'users.id'</span>)</span><br><span class="line"></span><br><span class="line">    .onIn(<span class="string">'accounts.id'</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>])</span><br><span class="line">    .onNotIn(···)</span><br><span class="line"></span><br><span class="line">    .onNull(<span class="string">'accounts.email'</span>)</span><br><span class="line">    .onNotNull(···)</span><br><span class="line"></span><br><span class="line">    .onExists(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.select(···)</span><br><span class="line">    &#125;)</span><br><span class="line">    .onNotExists(···)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://knexjs.org/#Builder-join" target="_blank" rel="noopener">Join methods</a></p>
+<h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">knex(<span class="string">'users'</span>)</span><br><span class="line">  .distinct()</span><br></pre></td></tr></table></figure>
+<h4 id="Group"><a href="#Group" class="headerlink" title="Group"></a>Group</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.groupBy(<span class="string">'count'</span>)</span><br><span class="line">.groupByRaw(<span class="string">'year WITH ROLLUP'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Order"><a href="#Order" class="headerlink" title="Order"></a>Order</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.orderBy(<span class="string">'name'</span>, <span class="string">'desc'</span>)</span><br><span class="line">.orderByRaw(<span class="string">'name DESC'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Offset-limit"><a href="#Offset-limit" class="headerlink" title="Offset/limit"></a>Offset/limit</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.offset(<span class="number">10</span>)</span><br><span class="line">.limit(<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Having"><a href="#Having" class="headerlink" title="Having"></a>Having</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.having(<span class="string">'count'</span>, <span class="string">'&gt;'</span>, <span class="number">100</span>)</span><br><span class="line">.havingIn(<span class="string">'count'</span>, [<span class="number">1</span>, <span class="number">100</span>])</span><br></pre></td></tr></table></figure>
+<h4 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.union(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.select(···)</span><br><span class="line">&#125;)</span><br><span class="line">.unionAll(···)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://knexjs.org/#Builder" target="_blank" rel="noopener">Query builder</a></p>
+<h3 id="Etc"><a href="#Etc" class="headerlink" title="Etc"></a>Etc</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">knex(<span class="string">'users'</span>)</span><br><span class="line">  .pluck(<span class="string">'id'</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">ids</span> =&gt;</span> &#123; ··· &#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">knex(<span class="string">'users'</span>)</span><br><span class="line">  .first()</span><br><span class="line">  .then(<span class="function"><span class="params">user</span> =&gt;</span> &#123; ··· &#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="Booleans"><a href="#Booleans" class="headerlink" title="Booleans"></a>Booleans</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.count(<span class="string">'active'</span>)</span><br><span class="line">.count(<span class="string">'active as is_active'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.min(<span class="string">'age'</span>)</span><br><span class="line">.max(<span class="string">'age'</span>)</span><br><span class="line">.sum(<span class="string">'age'</span>)</span><br><span class="line">.sumDistinct(<span class="string">'age'</span>)</span><br><span class="line">.avg(<span class="string">'age'</span>)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://knexjs.org/#Builder" target="_blank" rel="noopener">Query builder</a></p>
+<h2 id="Schema"><a href="#Schema" class="headerlink" title="Schema"></a>Schema</h2><h3 id="Create-table-1"><a href="#Create-table-1" class="headerlink" title="Create table"></a>Create table</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">knex.schema.createTable(<span class="string">'accounts'</span>, table =&gt; &#123;</span><br></pre></td></tr></table></figure>
+<h4 id="Columns"><a href="#Columns" class="headerlink" title="Columns"></a>Columns</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">table.increments(<span class="string">'id'</span>)</span><br><span class="line">table.string(<span class="string">'account_name'</span>)</span><br><span class="line">table.integer(<span class="string">'age'</span>)</span><br><span class="line">table.float(<span class="string">'age'</span>)</span><br><span class="line">table.decimal(<span class="string">'balance'</span>, <span class="number">8</span>, <span class="number">2</span>)</span><br><span class="line">table.boolean(<span class="string">'is_admin'</span>)</span><br><span class="line">table.date(<span class="string">'birthday'</span>)</span><br><span class="line">table.time(<span class="string">'created_at'</span>)</span><br><span class="line">table.timestamp(<span class="string">'created_at'</span>).defaultTo(knex.fn.now())</span><br><span class="line">table.json(<span class="string">'profile'</span>)</span><br><span class="line">table.jsonb(<span class="string">'profile'</span>)</span><br><span class="line">table.uuid(<span class="string">'id'</span>).primary()</span><br></pre></td></tr></table></figure>
+<h4 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">table.unique(<span class="string">'email'</span>)</span><br><span class="line">table.unique([<span class="string">'email'</span>, <span class="string">'company_id'</span>])</span><br><span class="line">table.dropUnique(···)</span><br></pre></td></tr></table></figure>
+<h4 id="Indices"><a href="#Indices" class="headerlink" title="Indices"></a>Indices</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">table.foreign(<span class="string">'company_id'</span>)</span><br><span class="line">  .references(<span class="string">'companies.id'</span>)</span><br><span class="line">table.dropForeign(···)</span><br></pre></td></tr></table></figure>
+<h4 id="Variations"><a href="#Variations" class="headerlink" title="Variations"></a>Variations</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">table.integer(<span class="string">'user_id'</span>)</span><br><span class="line">  .unsigned()</span><br><span class="line">  .references(<span class="string">'users.id'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#125;)</span><br><span class="line">.then(<span class="function"><span class="params">()</span> =&gt;</span> ···)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://knexjs.org/#Schema" target="_blank" rel="noopener">Schema builder</a></p>
+<h3 id="Alter-table"><a href="#Alter-table" class="headerlink" title="Alter table"></a>Alter table</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">knex.schema.table(<span class="string">'accounts'</span>, table =&gt; &#123;</span><br></pre></td></tr></table></figure>
+<h4 id="Create"><a href="#Create" class="headerlink" title="Create"></a>Create</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">table.string(<span class="string">'first_name'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Alter"><a href="#Alter" class="headerlink" title="Alter"></a>Alter</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">table.string(<span class="string">'first_name'</span>).alter()</span><br><span class="line">table.renameColumn(<span class="string">'admin'</span>, <span class="string">'is_admin'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Drop"><a href="#Drop" class="headerlink" title="Drop"></a>Drop</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">table.dropColumn(<span class="string">'admin'</span>)</span><br><span class="line">table.dropTimestamps(<span class="string">'created_at'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://knexjs.org/#Schema" target="_blank" rel="noopener">Schema builder</a></p>
+<h3 id="Other-methods"><a href="#Other-methods" class="headerlink" title="Other methods"></a>Other methods</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">knex.schema</span><br><span class="line">  .renameTable(<span class="string">'persons'</span>, <span class="string">'people'</span>)</span><br><span class="line">  .dropTable(<span class="string">'persons'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.hasTable(<span class="string">'users'</span>).then(<span class="function"><span class="params">exists</span> =&gt;</span> ···)</span><br><span class="line">.hasColumn(<span class="string">'users'</span>, <span class="string">'id'</span>).then(<span class="function"><span class="params">exists</span> =&gt;</span> ···)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://knexjs.org/#Schema" target="_blank" rel="noopener">Schema builder</a></p>
+<h2 id="Modifying"><a href="#Modifying" class="headerlink" title="Modifying"></a>Modifying</h2><h3 id="Insert-1"><a href="#Insert-1" class="headerlink" title="Insert"></a>Insert</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">knex(<span class="string">'users'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Insert-one"><a href="#Insert-one" class="headerlink" title="Insert one"></a>Insert one</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.insert(&#123; <span class="attr">name</span>: <span class="string">'John'</span> &#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="Insert-many"><a href="#Insert-many" class="headerlink" title="Insert many"></a>Insert many</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.insert([</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">'Starsky'</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">'Hutch'</span> &#125;</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://knexjs.org/#Builder-insert" target="_blank" rel="noopener">Insert</a></p>
+<h3 id="Update-1"><a href="#Update-1" class="headerlink" title="Update"></a>Update</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">knex(<span class="string">'users'</span>)</span><br><span class="line">  .where(&#123; <span class="attr">id</span>: <span class="number">2</span> &#125;)</span><br><span class="line">  .update(&#123; <span class="attr">name</span>: <span class="string">'Homer'</span> &#125;)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://knexjs.org/#Builder-update" target="_blank" rel="noopener">Update</a></p>
+<h3 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">knex(<span class="string">'users'</span>)</span><br><span class="line">  .where(&#123; <span class="attr">id</span>: <span class="number">2</span> &#125;)</span><br><span class="line">  .del()</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://knexjs.org/#Builder-del" target="_blank" rel="noopener">Delete</a></p>
+<h2 id="Migrations-1"><a href="#Migrations-1" class="headerlink" title="Migrations"></a>Migrations</h2><h3 id="Setting-up"><a href="#Setting-up" class="headerlink" title="Setting up"></a>Setting up</h3><h4 id="Create-knexfile-js"><a href="#Create-knexfile-js" class="headerlink" title="Create knexfile.js"></a>Create knexfile.js</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./node_modules/.bin/knex init</span><br></pre></td></tr></table></figure>
+<h4 id="Create-a-migration"><a href="#Create-a-migration" class="headerlink" title="Create a migration"></a>Create a migration</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">knex migrate:make migration_name</span><br><span class="line">knex migrate:make migration_name --env production</span><br></pre></td></tr></table></figure>
+<h4 id="Run-migrations"><a href="#Run-migrations" class="headerlink" title="Run migrations"></a>Run migrations</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">knex migrate:latest</span><br><span class="line">knex migrate:latest --env production</span><br></pre></td></tr></table></figure>
+<h4 id="Rollback"><a href="#Rollback" class="headerlink" title="Rollback"></a>Rollback</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">knex migrate:rollback</span><br><span class="line">knex migrate:rollback --env production</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://knexjs.org/#Migrations" target="_blank" rel="noopener">Migrations</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect"><span class="toc-number">1.1.</span> <span class="toc-text">Connect</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-table"><span class="toc-number">1.2.</span> <span class="toc-text">Create table</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Select"><span class="toc-number">1.3.</span> <span class="toc-text">Select</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Insert"><span class="toc-number">1.4.</span> <span class="toc-text">Insert</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Update"><span class="toc-number">1.5.</span> <span class="toc-text">Update</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Migrations"><span class="toc-number">1.6.</span> <span class="toc-text">Migrations</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Connect-1"><span class="toc-number">2.</span> <span class="toc-text">Connect</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Libraries"><span class="toc-number">2.1.</span> <span class="toc-text">Libraries</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect-via-host"><span class="toc-number">2.2.</span> <span class="toc-text">Connect via host</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect-via-URL"><span class="toc-number">2.3.</span> <span class="toc-text">Connect via URL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect-via-Sqlite"><span class="toc-number">2.4.</span> <span class="toc-text">Connect via Sqlite</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Select-1"><span class="toc-number">3.</span> <span class="toc-text">Select</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Where"><span class="toc-number">3.1.</span> <span class="toc-text">Where</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Where-1"><span class="toc-number">3.1.1.</span> <span class="toc-text">Where</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Where-conditions"><span class="toc-number">3.1.2.</span> <span class="toc-text">Where conditions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Where-grouping"><span class="toc-number">3.1.3.</span> <span class="toc-text">Where grouping</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Join"><span class="toc-number">3.2.</span> <span class="toc-text">Join</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Basic-join"><span class="toc-number">3.2.1.</span> <span class="toc-text">Basic join</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Strings"><span class="toc-number">3.2.2.</span> <span class="toc-text">Strings</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Directions"><span class="toc-number">3.2.3.</span> <span class="toc-text">Directions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Raw"><span class="toc-number">3.2.4.</span> <span class="toc-text">Raw</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Grouping"><span class="toc-number">3.2.5.</span> <span class="toc-text">Grouping</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Others"><span class="toc-number">3.3.</span> <span class="toc-text">Others</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Group"><span class="toc-number">3.3.1.</span> <span class="toc-text">Group</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Order"><span class="toc-number">3.3.2.</span> <span class="toc-text">Order</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Offset-limit"><span class="toc-number">3.3.3.</span> <span class="toc-text">Offset/limit</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Having"><span class="toc-number">3.3.4.</span> <span class="toc-text">Having</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Union"><span class="toc-number">3.3.5.</span> <span class="toc-text">Union</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Etc"><span class="toc-number">3.4.</span> <span class="toc-text">Etc</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Booleans"><span class="toc-number">3.4.1.</span> <span class="toc-text">Booleans</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Numbers"><span class="toc-number">3.4.2.</span> <span class="toc-text">Numbers</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Schema"><span class="toc-number">4.</span> <span class="toc-text">Schema</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-table-1"><span class="toc-number">4.1.</span> <span class="toc-text">Create table</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Columns"><span class="toc-number">4.1.1.</span> <span class="toc-text">Columns</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Constraints"><span class="toc-number">4.1.2.</span> <span class="toc-text">Constraints</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Indices"><span class="toc-number">4.1.3.</span> <span class="toc-text">Indices</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Variations"><span class="toc-number">4.1.4.</span> <span class="toc-text">Variations</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Alter-table"><span class="toc-number">4.2.</span> <span class="toc-text">Alter table</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Create"><span class="toc-number">4.2.1.</span> <span class="toc-text">Create</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Alter"><span class="toc-number">4.2.2.</span> <span class="toc-text">Alter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Drop"><span class="toc-number">4.2.3.</span> <span class="toc-text">Drop</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-methods"><span class="toc-number">4.3.</span> <span class="toc-text">Other methods</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Modifying"><span class="toc-number">5.</span> <span class="toc-text">Modifying</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Insert-1"><span class="toc-number">5.1.</span> <span class="toc-text">Insert</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Insert-one"><span class="toc-number">5.1.1.</span> <span class="toc-text">Insert one</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Insert-many"><span class="toc-number">5.1.2.</span> <span class="toc-text">Insert many</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Update-1"><span class="toc-number">5.2.</span> <span class="toc-text">Update</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Delete"><span class="toc-number">5.3.</span> <span class="toc-text">Delete</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Migrations-1"><span class="toc-number">6.</span> <span class="toc-text">Migrations</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Setting-up"><span class="toc-number">6.1.</span> <span class="toc-text">Setting up</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-knexfile-js"><span class="toc-number">6.1.1.</span> <span class="toc-text">Create knexfile.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-a-migration"><span class="toc-number">6.1.2.</span> <span class="toc-text">Create a migration</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Run-migrations"><span class="toc-number">6.1.3.</span> <span class="toc-text">Run migrations</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Rollback"><span class="toc-number">6.1.4.</span> <span class="toc-text">Rollback</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/knex/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/knex/&text=Knex"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/knex/&title=Knex"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/knex/&is_video=false&description=Knex"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Knex&body=Check out this article: https://rupertqin.github.io/devhints/knex/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/knex/&title=Knex"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/knex/&title=Knex"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/knex/&title=Knex"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/knex/&title=Knex"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/knex/&name=Knex&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

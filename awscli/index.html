@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="EC212aws ec2 describe-instancesaws ec2 start-instances --instance-ids i-12345678c S31234aws s3 ls s3://mybucketaws s3 rm s3://mybucket/folder --recursiveaws s3 cp myfolder s3://mybucket/folder --recur">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AWS CLI">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/awscli/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="EC212aws ec2 describe-instancesaws ec2 start-instances --instance-ids i-12345678c S31234aws s3 ls s3://mybucketaws s3 rm s3://mybucket/folder --recursiveaws s3 cp myfolder s3://mybucket/folder --recur">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:34:27.629Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AWS CLI">
+<meta name="twitter:description" content="EC212aws ec2 describe-instancesaws ec2 start-instances --instance-ids i-12345678c S31234aws s3 ls s3://mybucketaws s3 rm s3://mybucket/folder --recursiveaws s3 cp myfolder s3://mybucket/folder --recur">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>AWS CLI</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../badges/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../awesome-redux/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/awscli/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/awscli/&text=AWS CLI"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/awscli/&title=AWS CLI"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/awscli/&is_video=false&description=AWS CLI"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=AWS CLI&body=Check out this article: https://rupertqin.github.io/devhints/awscli/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/awscli/&title=AWS CLI"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/awscli/&title=AWS CLI"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/awscli/&title=AWS CLI"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/awscli/&title=AWS CLI"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/awscli/&name=AWS CLI&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#EC2"><span class="toc-number">1.</span> <span class="toc-text">EC2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#S3"><span class="toc-number">2.</span> <span class="toc-text">S3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ECS"><span class="toc-number">3.</span> <span class="toc-text">ECS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Homebrew"><span class="toc-number">4.</span> <span class="toc-text">Homebrew</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Elastic-Beanstalk"><span class="toc-number"></span> <span class="toc-text">Elastic Beanstalk</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration"><span class="toc-number">1.</span> <span class="toc-text">Configuration</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ebextensions"><span class="toc-number"></span> <span class="toc-text">ebextensions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number"></span> <span class="toc-text">Also see</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        AWS CLI
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.188Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Devops/">Devops</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="EC2"><a href="#EC2" class="headerlink" title="EC2"></a>EC2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aws ec2 describe-instances</span><br><span class="line">aws ec2 start-instances --instance-ids i-12345678c</span><br></pre></td></tr></table></figure>
+<h3 id="S3"><a href="#S3" class="headerlink" title="S3"></a>S3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">aws s3 ls s3://mybucket</span><br><span class="line">aws s3 rm s3://mybucket/folder --recursive</span><br><span class="line">aws s3 cp myfolder s3://mybucket/folder --recursive</span><br><span class="line">aws s3 sync myfolder s3://mybucket/folder --exclude *.tmp</span><br></pre></td></tr></table></figure>
+<h3 id="ECS"><a href="#ECS" class="headerlink" title="ECS"></a>ECS</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">aws ecs create-cluster</span><br><span class="line">  --cluster-name=NAME</span><br><span class="line">  --generate-cli-skeleton</span><br><span class="line"></span><br><span class="line">aws ecs create-service</span><br></pre></td></tr></table></figure>
+<h3 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install awscli</span><br><span class="line">aws configure</span><br></pre></td></tr></table></figure>
+<h2 id="Elastic-Beanstalk"><a href="#Elastic-Beanstalk" class="headerlink" title="Elastic Beanstalk"></a>Elastic Beanstalk</h2><h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><ul>
+<li>.elasticbeanstalk/config.yml - application config</li>
+<li>.elasticbeanstalk/dev-env.env.yml - environment config</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eb config</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html" target="_blank" rel="noopener">http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html</a></p>
+<h2 id="ebextensions"><a href="#ebextensions" class="headerlink" title="ebextensions"></a>ebextensions</h2><ul>
+<li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customize-containers.html" target="_blank" rel="noopener">http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customize-containers.html</a></li>
+<li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customize-containers-ec2.html" target="_blank" rel="noopener">http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customize-containers-ec2.html</a></li>
+</ul>
+<h2 id="Also-see"><a href="#Also-see" class="headerlink" title="Also see"></a>Also see</h2><ul>
+<li><a href="https://aws.amazon.com/cli/" target="_blank" rel="noopener">AWS CLI</a></li>
+<li><a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html" target="_blank" rel="noopener">Documentation</a></li>
+<li><a href="http://docs.aws.amazon.com/cli/latest/reference/#available-services" target="_blank" rel="noopener">All commands</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#EC2"><span class="toc-number">1.</span> <span class="toc-text">EC2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#S3"><span class="toc-number">2.</span> <span class="toc-text">S3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ECS"><span class="toc-number">3.</span> <span class="toc-text">ECS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Homebrew"><span class="toc-number">4.</span> <span class="toc-text">Homebrew</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Elastic-Beanstalk"><span class="toc-number"></span> <span class="toc-text">Elastic Beanstalk</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration"><span class="toc-number">1.</span> <span class="toc-text">Configuration</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ebextensions"><span class="toc-number"></span> <span class="toc-text">ebextensions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number"></span> <span class="toc-text">Also see</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/awscli/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/awscli/&text=AWS CLI"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/awscli/&title=AWS CLI"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/awscli/&is_video=false&description=AWS CLI"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=AWS CLI&body=Check out this article: https://rupertqin.github.io/devhints/awscli/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/awscli/&title=AWS CLI"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/awscli/&title=AWS CLI"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/awscli/&title=AWS CLI"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/awscli/&title=AWS CLI"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/awscli/&name=AWS CLI&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

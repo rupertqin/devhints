@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="This is not a complete list.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lodash">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/lodash/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="This is not a complete list.">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-10-16T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lodash">
+<meta name="twitter:description" content="This is not a complete list.">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Lodash</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../machinist/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../lua/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/lodash/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/lodash/&text=Lodash"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/lodash/&title=Lodash"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/lodash/&is_video=false&description=Lodash"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Lodash&body=Check out this article: https://rupertqin.github.io/devhints/lodash/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/lodash/&title=Lodash"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/lodash/&title=Lodash"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/lodash/&title=Lodash"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/lodash/&title=Lodash"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/lodash/&name=Lodash&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Collections"><span class="toc-number">1.</span> <span class="toc-text">Collections</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Finding"><span class="toc-number">1.1.</span> <span class="toc-text">Finding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Accessing"><span class="toc-number">1.2.</span> <span class="toc-text">Accessing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set-get"><span class="toc-number">1.3.</span> <span class="toc-text">Set/get</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Iteration"><span class="toc-number">1.4.</span> <span class="toc-text">Iteration</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Array"><span class="toc-number">2.</span> <span class="toc-text">Array</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Arrays"><span class="toc-number">2.1.</span> <span class="toc-text">Arrays</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filtering"><span class="toc-number">2.2.</span> <span class="toc-text">Filtering</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Accessing-1"><span class="toc-number">2.3.</span> <span class="toc-text">Accessing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sets"><span class="toc-number">2.4.</span> <span class="toc-text">Sets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Indexes"><span class="toc-number">2.5.</span> <span class="toc-text">Indexes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functions"><span class="toc-number">3.</span> <span class="toc-text">Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Currying"><span class="toc-number">3.1.</span> <span class="toc-text">Currying</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Decorating-functions"><span class="toc-number">4.</span> <span class="toc-text">Decorating functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Throttling"><span class="toc-number">4.1.</span> <span class="toc-text">Throttling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Limiting"><span class="toc-number">4.2.</span> <span class="toc-text">Limiting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Etc"><span class="toc-number">4.3.</span> <span class="toc-text">Etc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Strings"><span class="toc-number">5.</span> <span class="toc-text">Strings</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Capitalization"><span class="toc-number">5.1.</span> <span class="toc-text">Capitalization</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Padding"><span class="toc-number">5.2.</span> <span class="toc-text">Padding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Trim"><span class="toc-number">5.3.</span> <span class="toc-text">Trim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Etc-1"><span class="toc-number">5.4.</span> <span class="toc-text">Etc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Objects"><span class="toc-number">6.</span> <span class="toc-text">Objects</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Keys-and-values"><span class="toc-number">6.1.</span> <span class="toc-text">Keys and values</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chaining"><span class="toc-number">7.</span> <span class="toc-text">Chaining</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Chain-and-value"><span class="toc-number">7.1.</span> <span class="toc-text">Chain and value</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Lodash
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.337Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/JavaScript-libraries/">JavaScript libraries</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h2><h3 id="Finding"><a href="#Finding" class="headerlink" title="Finding"></a>Finding</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">_.filter(list, (n) =&gt; n % <span class="number">2</span>)    <span class="comment">// → Array</span></span><br><span class="line">_.find(list, (n) =&gt; n % <span class="number">2</span>)      <span class="comment">// → item</span></span><br><span class="line">_.findRight(list, ...)          <span class="comment">// → item</span></span><br></pre></td></tr></table></figure>
+<p>Works for both arrays and objects.</p>
+<h3 id="Accessing"><a href="#Accessing" class="headerlink" title="Accessing"></a>Accessing</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.at([ abcd ], <span class="number">0</span>)               <span class="comment">// → [ a ] - same as list[0]</span></span><br><span class="line">_.at([ abcd ], [ <span class="number">0</span>, <span class="number">1</span> ])        <span class="comment">// → [ ab ]</span></span><br></pre></td></tr></table></figure>
+<h3 id="Set-get"><a href="#Set-get" class="headerlink" title="Set/get"></a>Set/get</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">_.set(object, <span class="string">'users[0].name'</span>, value)</span><br><span class="line">_.get(object, <span class="string">'users[0].name'</span>)</span><br><span class="line">_.get(object, [<span class="string">'users'</span>, <span class="number">0</span>, <span class="string">'name'</span>])</span><br></pre></td></tr></table></figure>
+<h3 id="Iteration"><a href="#Iteration" class="headerlink" title="Iteration"></a>Iteration</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">_.forEach(list, (item, i) =&gt; ...)</span><br><span class="line">_.forEachRight(list, ...)</span><br><span class="line"></span><br><span class="line">_.map(list, ...)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.every(users, (u) =&gt; u.active)  <span class="comment">// → true|false (aka _.all)</span></span><br><span class="line">_.any(users, ...)                <span class="comment">// → true|false (aka _.some)</span></span><br></pre></td></tr></table></figure>
+<h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><h3 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">_.chunk([ abcd ], <span class="number">2</span>)           <span class="comment">// → [ [ab], [cd] ]</span></span><br><span class="line">_.compact(list)</span><br><span class="line"></span><br><span class="line">_.fill(<span class="built_in">Array</span>(<span class="number">4</span>), <span class="string">'x'</span>)          <span class="comment">// → [ 'x', 'x', 'x', 'x' ]</span></span><br><span class="line">_.flatten</span><br><span class="line">_.flattenDeep</span><br></pre></td></tr></table></figure>
+<h3 id="Filtering"><a href="#Filtering" class="headerlink" title="Filtering"></a>Filtering</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">_.drop([ abcdef ], <span class="number">2</span>)          <span class="comment">// → [   cdef ]</span></span><br><span class="line">_.dropRight([ abcdef ], <span class="number">2</span>)     <span class="comment">// → [ abcd   ]</span></span><br><span class="line">_.take([ abcdef ], <span class="number">2</span>)          <span class="comment">// → [ ab     ]</span></span><br><span class="line">_.takeRight([ abcdef ], <span class="number">2</span>)     <span class="comment">// → [     de ]</span></span><br><span class="line">_.slice([ abcdef ], <span class="number">2</span>, <span class="number">4</span>)      <span class="comment">// → [   cd   ]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.initial([ abcdef ])          <span class="comment">// → [ abcde  ] - dropRight(list, 1)</span></span><br><span class="line">_.rest([ abcdef ])             <span class="comment">// → [  bcdef ] - takeRight(list, 1)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">_.dropWhile(list, <span class="string">'active'</span>)            <span class="comment">// works like filter</span></span><br><span class="line">_.dropWhile(list, <span class="string">'active'</span>, <span class="literal">true</span>)</span><br><span class="line">_.dropWhile(list, &#123; <span class="attr">active</span>: <span class="literal">true</span> &#125;)</span><br><span class="line">_.dropWhile(list, (n) =&gt; ...)</span><br><span class="line">_.dropRightWhile(list, ...)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_.without([ abcde ], b)        <span class="comment">// → [ acde ]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_.remove(list, (n) =&gt; n % <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Accessing-1"><a href="#Accessing-1" class="headerlink" title="Accessing"></a>Accessing</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.first([ abcdef ])            <span class="comment">// → a</span></span><br><span class="line">_.last([ abcdef ])             <span class="comment">// → f</span></span><br></pre></td></tr></table></figure>
+<h3 id="Sets"><a href="#Sets" class="headerlink" title="Sets"></a>Sets</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">_.uniq()</span><br><span class="line">_.difference([ abc ], [ bc ])       <span class="comment">// → [ a    ]</span></span><br><span class="line">_.intersection([ abc ], [ bcd ])    <span class="comment">// → [  bc  ]</span></span><br><span class="line">_.union([ abc ], [ bcd ])           <span class="comment">// → [ abcd ] (unique)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Array#concat()</span><br></pre></td></tr></table></figure>
+<h3 id="Indexes"><a href="#Indexes" class="headerlink" title="Indexes"></a>Indexes</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.findIndex(list, fn)</span><br><span class="line">_.findLastIndex(list, fn)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.sortedIndex(list, val)</span><br><span class="line">_.sortedLastIndex(list, val)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_.indexOf(list, val)</span><br></pre></td></tr></table></figure>
+<h2 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h2><h3 id="Currying"><a href="#Currying" class="headerlink" title="Currying"></a>Currying</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">greet = <span class="function">(<span class="params">greeting, name</span>) =&gt;</span> <span class="string">`<span class="subst">$&#123;greeting&#125;</span>, <span class="subst">$&#123;name&#125;</span>!`</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fn = _.partial(fn, <span class="string">'hi'</span>)</span><br><span class="line">fn(<span class="string">'joe'</span>)    <span class="comment">// → 'hi, joe!'</span></span><br><span class="line"></span><br><span class="line">fn = _.partial(fn, <span class="string">'joe'</span>)</span><br><span class="line">fn(<span class="string">'yo'</span>)     <span class="comment">// → 'yo, joe!'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.curry(greet)(<span class="string">'hi'</span>)         <span class="comment">// → function(name)</span></span><br><span class="line">_.curryRight(greet)(<span class="string">'joe'</span>)   <span class="comment">// → function(greet)</span></span><br></pre></td></tr></table></figure>
+<h2 id="Decorating-functions"><a href="#Decorating-functions" class="headerlink" title="Decorating functions"></a>Decorating functions</h2><h3 id="Throttling"><a href="#Throttling" class="headerlink" title="Throttling"></a>Throttling</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.throttle(fn)</span><br><span class="line">_.debounce(fn)</span><br></pre></td></tr></table></figure>
+<h3 id="Limiting"><a href="#Limiting" class="headerlink" title="Limiting"></a>Limiting</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">_.before(<span class="number">5</span>, fn)         <span class="comment">// only works 5 times</span></span><br><span class="line">_.after(<span class="number">5</span>, fn)          <span class="comment">// works only after 5 times</span></span><br><span class="line">_.once(fn)              <span class="comment">// like _.before(fn, 1)</span></span><br></pre></td></tr></table></figure>
+<h3 id="Etc"><a href="#Etc" class="headerlink" title="Etc"></a>Etc</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">_.wrap(_.escape, (name) =&gt; <span class="string">`hi <span class="subst">$&#123;name&#125;</span>`</span>)</span><br><span class="line"><span class="comment">// same as doing `name = _.escape(name)`</span></span><br><span class="line"></span><br><span class="line">_.delay(fn, <span class="number">2000</span>)</span><br><span class="line"></span><br><span class="line">_.negate(fn)</span><br><span class="line"></span><br><span class="line">_.memoize(fn)</span><br><span class="line">_.memoize(fn, ...)</span><br></pre></td></tr></table></figure>
+<h2 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h2><h3 id="Capitalization"><a href="#Capitalization" class="headerlink" title="Capitalization"></a>Capitalization</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">_.capitalize(<span class="string">'hello world'</span>)   <span class="comment">// → 'Hello world'</span></span><br><span class="line">_.startCase(<span class="string">'hello_world'</span>)    <span class="comment">// → 'Hello World'</span></span><br><span class="line">_.snakeCase(<span class="string">'hello world'</span>)    <span class="comment">// → 'hello_world'</span></span><br><span class="line">_.kebabCase(<span class="string">'hello world'</span>)    <span class="comment">// → 'hello-world'</span></span><br><span class="line">_.camelCase(<span class="string">'hello world'</span>)    <span class="comment">// → 'helloWorld'</span></span><br></pre></td></tr></table></figure>
+<h3 id="Padding"><a href="#Padding" class="headerlink" title="Padding"></a>Padding</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">_.pad(<span class="string">'abc'</span>, <span class="number">8</span>)           <span class="comment">// → '   abc  '</span></span><br><span class="line">_.padLeft(<span class="string">'abc'</span>, <span class="number">8</span>)       <span class="comment">// → '     abc'</span></span><br><span class="line">_.padLeft(<span class="string">'abc'</span>, <span class="number">8</span>, <span class="string">'-'</span>)  <span class="comment">// → '00000abc'</span></span><br><span class="line">_.padRight(...)</span><br></pre></td></tr></table></figure>
+<h3 id="Trim"><a href="#Trim" class="headerlink" title="Trim"></a>Trim</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">_.trim(<span class="string">'  str  '</span>)         <span class="comment">// → 'str' </span></span><br><span class="line">_.trimLeft(<span class="string">'  str  '</span>)     <span class="comment">// → 'str  '</span></span><br><span class="line">_.trimRight(<span class="string">'  str  '</span>)    <span class="comment">// → '  str'</span></span><br></pre></td></tr></table></figure>
+<h3 id="Etc-1"><a href="#Etc-1" class="headerlink" title="Etc"></a>Etc</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">_.repeat(<span class="string">'-'</span>, <span class="number">2</span>)              <span class="comment">// → '--'</span></span><br><span class="line">_.deburr(<span class="string">'déjà vu'</span>)           <span class="comment">// → 'deja vu'</span></span><br><span class="line">_.trunc(<span class="string">'hello world'</span>, <span class="number">5</span>)     <span class="comment">// → 'hello...'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.startsWith(<span class="string">'abc'</span>, <span class="string">'a'</span>)   <span class="comment">// → true</span></span><br><span class="line">_.endsWith(<span class="string">'abc'</span>, <span class="string">'c'</span>)     <span class="comment">// → true</span></span><br></pre></td></tr></table></figure>
+<h2 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h2><h3 id="Keys-and-values"><a href="#Keys-and-values" class="headerlink" title="Keys and values"></a>Keys and values</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.keys(obj)</span><br><span class="line">_.values(obj)</span><br></pre></td></tr></table></figure>
+<h2 id="Chaining"><a href="#Chaining" class="headerlink" title="Chaining"></a>Chaining</h2><h3 id="Chain-and-value"><a href="#Chain-and-value" class="headerlink" title="Chain and value"></a>Chain and value</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">_([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">  .reduce(<span class="function">(<span class="params">total, n</span>) =&gt;</span> total + n)</span><br><span class="line">  .map(<span class="function">(<span class="params">n</span>) =&gt;</span> n * n)</span><br><span class="line">  .tap(<span class="built_in">console</span>.log)</span><br><span class="line">  .thru(<span class="function">(<span class="params">n</span>) =&gt;</span> n.reverse())</span><br><span class="line">  .value()</span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Collections"><span class="toc-number">1.</span> <span class="toc-text">Collections</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Finding"><span class="toc-number">1.1.</span> <span class="toc-text">Finding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Accessing"><span class="toc-number">1.2.</span> <span class="toc-text">Accessing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set-get"><span class="toc-number">1.3.</span> <span class="toc-text">Set/get</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Iteration"><span class="toc-number">1.4.</span> <span class="toc-text">Iteration</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Array"><span class="toc-number">2.</span> <span class="toc-text">Array</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Arrays"><span class="toc-number">2.1.</span> <span class="toc-text">Arrays</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filtering"><span class="toc-number">2.2.</span> <span class="toc-text">Filtering</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Accessing-1"><span class="toc-number">2.3.</span> <span class="toc-text">Accessing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sets"><span class="toc-number">2.4.</span> <span class="toc-text">Sets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Indexes"><span class="toc-number">2.5.</span> <span class="toc-text">Indexes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functions"><span class="toc-number">3.</span> <span class="toc-text">Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Currying"><span class="toc-number">3.1.</span> <span class="toc-text">Currying</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Decorating-functions"><span class="toc-number">4.</span> <span class="toc-text">Decorating functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Throttling"><span class="toc-number">4.1.</span> <span class="toc-text">Throttling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Limiting"><span class="toc-number">4.2.</span> <span class="toc-text">Limiting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Etc"><span class="toc-number">4.3.</span> <span class="toc-text">Etc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Strings"><span class="toc-number">5.</span> <span class="toc-text">Strings</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Capitalization"><span class="toc-number">5.1.</span> <span class="toc-text">Capitalization</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Padding"><span class="toc-number">5.2.</span> <span class="toc-text">Padding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Trim"><span class="toc-number">5.3.</span> <span class="toc-text">Trim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Etc-1"><span class="toc-number">5.4.</span> <span class="toc-text">Etc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Objects"><span class="toc-number">6.</span> <span class="toc-text">Objects</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Keys-and-values"><span class="toc-number">6.1.</span> <span class="toc-text">Keys and values</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chaining"><span class="toc-number">7.</span> <span class="toc-text">Chaining</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Chain-and-value"><span class="toc-number">7.1.</span> <span class="toc-text">Chain and value</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/lodash/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/lodash/&text=Lodash"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/lodash/&title=Lodash"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/lodash/&is_video=false&description=Lodash"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Lodash&body=Check out this article: https://rupertqin.github.io/devhints/lodash/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/lodash/&title=Lodash"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/lodash/&title=Lodash"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/lodash/&title=Lodash"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/lodash/&title=Lodash"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/lodash/&name=Lodash&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

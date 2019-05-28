@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Variables123:root &amp;#123;  --text-color: #30333a;&amp;#125; 1234body &amp;#123;  background: var(--text-color);  background: color(var(--text-color) shade(30%));&amp;#125; Colors12345678910111213141516171819202122">
+<meta name="keywords" content="Featurable">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cssnext">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/cssnext/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Variables123:root &amp;#123;  --text-color: #30333a;&amp;#125; 1234body &amp;#123;  background: var(--text-color);  background: color(var(--text-color) shade(30%));&amp;#125; Colors12345678910111213141516171819202122">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-08-29T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="cssnext">
+<meta name="twitter:description" content="Variables123:root &amp;#123;  --text-color: #30333a;&amp;#125; 1234body &amp;#123;  background: var(--text-color);  background: color(var(--text-color) shade(30%));&amp;#125; Colors12345678910111213141516171819202122">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>cssnext</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../deis/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../css/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/cssnext/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/cssnext/&text=cssnext"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/cssnext/&title=cssnext"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/cssnext/&is_video=false&description=cssnext"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=cssnext&body=Check out this article: https://rupertqin.github.io/devhints/cssnext/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/cssnext/&title=cssnext"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/cssnext/&title=cssnext"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/cssnext/&title=cssnext"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/cssnext/&title=cssnext"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/cssnext/&name=cssnext&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Variables"><span class="toc-number">1.</span> <span class="toc-text">Variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Colors"><span class="toc-number">2.</span> <span class="toc-text">Colors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mixins"><span class="toc-number">3.</span> <span class="toc-text">Mixins</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Selectors"><span class="toc-number"></span> <span class="toc-text">Selectors</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Nesting"><span class="toc-number">1.</span> <span class="toc-text">Nesting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-selectors"><span class="toc-number">2.</span> <span class="toc-text">Custom selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Future-selectors"><span class="toc-number">3.</span> <span class="toc-text">Future selectors</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Media-queries"><span class="toc-number"></span> <span class="toc-text">Media queries</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-media-queries"><span class="toc-number">1.</span> <span class="toc-text">Custom media queries</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Media-query-ranges"><span class="toc-number">2.</span> <span class="toc-text">Media query ranges</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Properties"><span class="toc-number"></span> <span class="toc-text">Properties</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Property-fallbacks"><span class="toc-number">1.</span> <span class="toc-text">Property fallbacks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Autoprefixing"><span class="toc-number">2.</span> <span class="toc-text">Autoprefixing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reset"><span class="toc-number">3.</span> <span class="toc-text">Reset</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number"></span> <span class="toc-text">References</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        cssnext
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.244Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/CSS/">CSS</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="../tags/Featurable/">Featurable</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:root &#123;</span><br><span class="line">  --text-<span class="attribute">color</span>: <span class="number">#30333a</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: var(--text-color);</span><br><span class="line">  <span class="attribute">background</span>: color(var(--text-color) shade(<span class="number">30%</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Colors"><a href="#Colors" class="headerlink" title="Colors"></a>Colors</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="comment">/* Adjustments */</span></span><br><span class="line">  <span class="attribute">color</span>: color(red alpha(-<span class="number">10%</span>));</span><br><span class="line">  <span class="attribute">color</span>: color(red tint(-<span class="number">10%</span>));    <span class="comment">/* lighten */</span></span><br><span class="line">  <span class="attribute">color</span>: color(red shade(-<span class="number">10%</span>));   <span class="comment">/* darken */</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">/* Absolute */</span></span><br><span class="line">  <span class="attribute">color</span>: color(red alpha(<span class="number">50%</span>));</span><br><span class="line">  <span class="attribute">color</span>: color(red hue(<span class="number">225</span>));</span><br><span class="line">  <span class="attribute">color</span>: color(red saturation(<span class="number">100%</span>));</span><br><span class="line">  <span class="attribute">color</span>: color(red lightness(<span class="number">50%</span>));</span><br><span class="line"></span><br><span class="line">  <span class="attribute">color</span>: gray(<span class="number">33</span>);       <span class="comment">/* rgb(33, 33, 33) */</span></span><br><span class="line">  <span class="attribute">color</span>: gray(<span class="number">33%</span>);      <span class="comment">/* rgb(84, 84, 84) */</span></span><br><span class="line">  <span class="attribute">color</span>: gray(<span class="number">33%</span>, <span class="number">50%</span>); <span class="comment">/* rgba(84, 84, 84, 0.5) */</span></span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0000ff80</span>;      <span class="comment">/* rgba(0, 0, 255, 0.5) */</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">color</span>: hwb(<span class="number">90</span>, <span class="number">0%</span>, <span class="number">0%</span>, <span class="number">0.5</span>);     <span class="comment">/* like hsl() but easier for humans */</span></span><br><span class="line">  <span class="attribute">color</span>: hsl(<span class="number">90deg</span> <span class="number">90%</span> <span class="number">70%</span>);       <span class="comment">/* hsl(180, 90%, 70%) -- supports deg */</span></span><br><span class="line">  <span class="attribute">color</span>: hsl(<span class="number">90deg</span> <span class="number">90%</span> <span class="number">70%</span> / <span class="number">30%</span>); <span class="comment">/* hsla(180, 90%, 70%, 0.3) */</span></span><br><span class="line">  <span class="attribute">color</span>: rgb(<span class="number">30</span> <span class="number">60</span> <span class="number">90</span> / <span class="number">30%</span>);      <span class="comment">/* rgba(30, 60, 90, 0.3) */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Also see <a href="http://colorme.io/" target="_blank" rel="noopener">colorme.io</a>.</p>
+<h3 id="Mixins"><a href="#Mixins" class="headerlink" title="Mixins"></a>Mixins</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">:root &#123;</span><br><span class="line">  --centered: &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.centered</span> &#123;</span><br><span class="line">  @apply --centered;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Selectors"><a href="#Selectors" class="headerlink" title="Selectors"></a>Selectors</h2><h3 id="Nesting"><a href="#Nesting" class="headerlink" title="Nesting"></a>Nesting</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.class-name</span> &#123;</span><br><span class="line">  &amp; <span class="selector-class">.nesting</span> &#123; ··· &#125;      <span class="comment">/* direct nesting starts with &amp; */</span></span><br><span class="line">  @nest span &amp; &#123; ··· &#125;    <span class="comment">/* complex nesting */</span></span><br><span class="line">  @<span class="keyword">media</span> (min-width: 30em) &#123; ··· &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Custom-selectors"><a href="#Custom-selectors" class="headerlink" title="Custom selectors"></a>Custom selectors</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@custom-selector :--button input[type=<span class="string">'submit'</span>], input[type=<span class="string">'button'</span>];</span><br><span class="line">@custom-selector :--enter :hover, :focus;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:--button &#123; ··· &#125;</span><br><span class="line">:--button:--enter &#123; ··· &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Future-selectors"><a href="#Future-selectors" class="headerlink" title="Future selectors"></a>Future selectors</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:any-link &#123; ··· &#125;         /* :link, :visited */</span><br><span class="line">p:matches(.a, .b) &#123; ··· &#125; /* p.a, p.b */</span><br><span class="line">p:not(.a, .b) &#123; ··· &#125;     /* p:not(.a), p:not(.b) */</span><br><span class="line">a::before &#123; ··· &#125;         /* a:before -- for IE compatibility */</span><br><span class="line">[frame=hsides i] &#123; ··· &#125;  /* [frame=hsides] -- but case insensitive */</span><br></pre></td></tr></table></figure>
+<h2 id="Media-queries"><a href="#Media-queries" class="headerlink" title="Media queries"></a>Media queries</h2><h3 id="Custom-media-queries"><a href="#Custom-media-queries" class="headerlink" title="Custom media queries"></a>Custom media queries</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@custom-<span class="keyword">media</span> --viewport-medium (width &lt;= 50rem);</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> (--viewport-medium) &#123; ··· &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Media-query-ranges"><a href="#Media-query-ranges" class="headerlink" title="Media query ranges"></a>Media query ranges</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> (width &gt;= 500px) &#123; ··· &#125;    <span class="comment">/* (min-width: 500px) */</span></span><br></pre></td></tr></table></figure>
+<h2 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h2><h3 id="Property-fallbacks"><a href="#Property-fallbacks" class="headerlink" title="Property fallbacks"></a>Property fallbacks</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* font-feature-settings fallback */</span></span><br><span class="line"><span class="selector-tag">h2</span> &#123; <span class="attribute">font-variant</span>-caps: small-caps; &#125;</span><br><span class="line"><span class="selector-tag">table</span> &#123; <span class="attribute">font-variant</span>-numeric: lining-nums; &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123; <span class="attribute">filter</span>: blur(<span class="number">4px</span>); &#125;          <span class="comment">/* svg filter fallback */</span></span><br><span class="line"><span class="selector-tag">div</span> &#123; <span class="attribute">overflow-wrap</span>: break-word; &#125;  <span class="comment">/* word-wrap fallback */</span></span><br></pre></td></tr></table></figure>
+<h3 id="Autoprefixing"><a href="#Autoprefixing" class="headerlink" title="Autoprefixing"></a>Autoprefixing</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * display: -webkit-box;</span></span><br><span class="line"><span class="comment"> * display: -ms-flexbox;</span></span><br><span class="line"><span class="comment"> * display: flex;</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<h3 id="Reset"><a href="#Reset" class="headerlink" title="Reset"></a>Reset</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  all: initial;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Sets animation, background, margin, padding, and so on.</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li>Based on cssnext 2.9.0.</li>
+<li><a href="http://cssnext.io/features/" target="_blank" rel="noopener">http://cssnext.io/features/</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Variables"><span class="toc-number">1.</span> <span class="toc-text">Variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Colors"><span class="toc-number">2.</span> <span class="toc-text">Colors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mixins"><span class="toc-number">3.</span> <span class="toc-text">Mixins</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Selectors"><span class="toc-number"></span> <span class="toc-text">Selectors</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Nesting"><span class="toc-number">1.</span> <span class="toc-text">Nesting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-selectors"><span class="toc-number">2.</span> <span class="toc-text">Custom selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Future-selectors"><span class="toc-number">3.</span> <span class="toc-text">Future selectors</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Media-queries"><span class="toc-number"></span> <span class="toc-text">Media queries</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-media-queries"><span class="toc-number">1.</span> <span class="toc-text">Custom media queries</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Media-query-ranges"><span class="toc-number">2.</span> <span class="toc-text">Media query ranges</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Properties"><span class="toc-number"></span> <span class="toc-text">Properties</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Property-fallbacks"><span class="toc-number">1.</span> <span class="toc-text">Property fallbacks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Autoprefixing"><span class="toc-number">2.</span> <span class="toc-text">Autoprefixing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reset"><span class="toc-number">3.</span> <span class="toc-text">Reset</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number"></span> <span class="toc-text">References</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/cssnext/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/cssnext/&text=cssnext"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/cssnext/&title=cssnext"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/cssnext/&is_video=false&description=cssnext"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=cssnext&body=Check out this article: https://rupertqin.github.io/devhints/cssnext/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/cssnext/&title=cssnext"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/cssnext/&title=cssnext"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/cssnext/&title=cssnext"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/cssnext/&title=cssnext"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/cssnext/&name=cssnext&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

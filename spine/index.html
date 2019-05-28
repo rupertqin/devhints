@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Modelsclass User extends Spine.Model   @configure &amp;quot;User&amp;quot;, &amp;quot;name&amp;quot;, &amp;quot;address&amp;quot;    fullName: -&amp;gt;     [@first, @last].join &amp;apos; &amp;apos; JavaScript// Subclassing User = Spin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spine">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/spine/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Modelsclass User extends Spine.Model   @configure &amp;quot;User&amp;quot;, &amp;quot;name&amp;quot;, &amp;quot;address&amp;quot;    fullName: -&amp;gt;     [@first, @last].join &amp;apos; &amp;apos; JavaScript// Subclassing User = Spin">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:23:51.438Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spine">
+<meta name="twitter:description" content="Modelsclass User extends Spine.Model   @configure &amp;quot;User&amp;quot;, &amp;quot;name&amp;quot;, &amp;quot;address&amp;quot;    fullName: -&amp;gt;     [@first, @last].join &amp;apos; &amp;apos; JavaScript// Subclassing User = Spin">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Spine</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../sql-join/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../spreadsheet/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/spine/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/spine/&text=Spine"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/spine/&title=Spine"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/spine/&is_video=false&description=Spine"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Spine&body=Check out this article: https://rupertqin.github.io/devhints/spine/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/spine/&title=Spine"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/spine/&title=Spine"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/spine/&title=Spine"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/spine/&title=Spine"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/spine/&name=Spine&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Models"><span class="toc-number">1.</span> <span class="toc-text">Models</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript"><span class="toc-number">1.1.</span> <span class="toc-text">JavaScript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Class-methods"><span class="toc-number">1.2.</span> <span class="toc-text">Class methods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Instance-methods"><span class="toc-number">1.3.</span> <span class="toc-text">Instance methods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mixins"><span class="toc-number">1.4.</span> <span class="toc-text">Mixins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Events"><span class="toc-number">1.5.</span> <span class="toc-text">Events</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ajax"><span class="toc-number">2.</span> <span class="toc-text">Ajax</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Using"><span class="toc-number">2.1.</span> <span class="toc-text">Using</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Host"><span class="toc-number">2.2.</span> <span class="toc-text">Host</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ajax-mapping"><span class="toc-number">2.3.</span> <span class="toc-text">Ajax mapping</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Associations"><span class="toc-number">2.4.</span> <span class="toc-text">Associations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See"><span class="toc-number">2.5.</span> <span class="toc-text">See</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Spine
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.438Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/JavaScript-libraries/">JavaScript libraries</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h2><pre><code>class User extends Spine.Model
+  @configure &quot;User&quot;, &quot;name&quot;, &quot;address&quot;
+
+  fullName: -&gt;
+    [@first, @last].join &apos; &apos;
+</code></pre><h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><pre><code>// Subclassing
+User = Spine.Model.sub()
+</code></pre><h3 id="Class-methods"><a href="#Class-methods" class="headerlink" title="Class methods"></a>Class methods</h3><pre><code>.configure &apos;modelname&apos;, attributes...
+
+# Inheritance
+.include(Module)
+.extend(Module)
+
+.create(name: &quot;John&quot;)
+
+.count()
+
+# Events
+.on &apos;refresh change&apos;, (user) -&gt; ...
+.trigger &apos;event&apos;
+
+.change (user) -&gt; ...  # same as on(&apos;change&apos;)
+.fetch (user) -&gt; ...   # same as on(&apos;fetch&apos;)
+
+# JSON
+.toJSON()         # all records
+.fromJSON(json)   # from json string
+.fromForm(el)
+
+# Data
+.records     # Hash of instances
+.attributes  # array of attributes (from .configure)
+
+# Convenience
+.toString()  #=&gt; &quot;User&quot;
+
+# Find by ID
+.exists(1)
+.find(1)     # throws error
+
+# Find by something
+.select (u) u.name == &apos;bob&apos;
+.findByAttribute &apos;name&apos;, &apos;bob&apos;
+.findAllByAttribute &apos;name&apos;, &apos;bob&apos;
+
+.all()
+.slice(6, 13)  # cloned copies of instances
+
+# Iterating
+.each (user) -&gt;
+
+# Ends
+.first()
+.last()
+
+# Deleting
+.deleteAll()
+.destroyAll()
+.destroyAll({ ..options.. })
+.destroy(2)
+</code></pre><h3 id="Instance-methods"><a href="#Instance-methods" class="headerlink" title="Instance methods"></a>Instance methods</h3><pre><code>user = new User();
+
+user
+.isNew()
+.exists()
+
+# Validation
+.isValid()
+.validate()    # validate = (-&gt; &quot;Name required&quot; unless @name)
+
+.attributes()  # hash of attr values
+.eql(other)    # equality check
+
+# Update
+.load(attrs)
+.reload()
+.fromForm(form)
+.updateAttribute(&quot;name&quot;, &quot;john&quot;)
+.updateAttributes(name: &quot;John&quot;)
+
+# Event
+.on &apos;event&apos;, -&gt; ...
+.trigger &apos;event&apos;
+
+# Retrieve
+.toJSON()
+
+# Persistence
+.save()
+
+.destroy()
+.dup()         # clone as unsaved
+</code></pre><h3 id="Mixins"><a href="#Mixins" class="headerlink" title="Mixins"></a>Mixins</h3><pre><code>class User extends Spine.Model
+  @include MyModule
+  @extend MyModule
+</code></pre><h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><pre><code>.on &apos;create&apos;
+.on &apos;update&apos;
+.on &apos;destroy&apos;
+
+.on &apos;save&apos;    # create / update
+.on &apos;change&apos;  # create / update / destroy
+
+.on &apos;refresh&apos;
+.on &apos;error&apos;    # validation error
+</code></pre><h2 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h2><pre><code>class User extends Spine.Model
+  @extend Spine.Model.Ajax
+
+  @url: &apos;/users&apos;
+  @url: -&gt; &apos;/users&apos;
+  scope: &apos;2013&apos;
+</code></pre><h3 id="Using"><a href="#Using" class="headerlink" title="Using"></a>Using</h3><pre><code>User.fetch()
+user = new User()
+
+user.url()            #=&gt; &quot;/users&quot;
+user.url(&apos;bands&apos;)     #=&gt; &quot;/users/bands&quot;
+
+user.scope = &apos;admin&apos;
+user.url()            #=&gt; &quot;/admin/users&quot;
+</code></pre><h3 id="Host"><a href="#Host" class="headerlink" title="Host"></a>Host</h3><pre><code>Spine.Model.host = &apos;http://endpoint&apos;
+</code></pre><h3 id="Ajax-mapping"><a href="#Ajax-mapping" class="headerlink" title="Ajax mapping"></a>Ajax mapping</h3><pre><code>read    → GET    /collection
+create  → POST   /collection (201 created)
+update  → PUT    /collection/id
+destroy → DELETE /collection/id
+</code></pre><h3 id="Associations"><a href="#Associations" class="headerlink" title="Associations"></a>Associations</h3><pre><code>class Photo extends Spine.Model
+  @belongsTo &apos;album&apos;, &apos;Album&apos;          # window[&apos;Album&apos;]
+  @belongsTo &apos;album&apos;, &apos;models/album&apos;   # via require.js
+
+class Album
+  @hasMany &apos;photos&apos;, &apos;models/photo&apos;
+
+album.photos().all()
+album.photos().create(name: &quot;Vacation&quot;)
+album.photos().find(id)
+
+photo = Photo.create(album: album)
+photo.album()
+photo.album_id
+</code></pre><h3 id="See"><a href="#See" class="headerlink" title="See"></a>See</h3><ul>
+<li><a href="http://spinejs.com/api/index" target="_blank" rel="noopener">http://spinejs.com/api/index</a></li>
+<li><a href="http://spinejs.com/api/models" target="_blank" rel="noopener">http://spinejs.com/api/models</a></li>
+<li><a href="http://spinejs.com/docs/ajax" target="_blank" rel="noopener">http://spinejs.com/docs/ajax</a><ul>
+<li><a href="http://spinejs.com/docs/relations" target="_blank" rel="noopener">http://spinejs.com/docs/relations</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Models"><span class="toc-number">1.</span> <span class="toc-text">Models</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript"><span class="toc-number">1.1.</span> <span class="toc-text">JavaScript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Class-methods"><span class="toc-number">1.2.</span> <span class="toc-text">Class methods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Instance-methods"><span class="toc-number">1.3.</span> <span class="toc-text">Instance methods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mixins"><span class="toc-number">1.4.</span> <span class="toc-text">Mixins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Events"><span class="toc-number">1.5.</span> <span class="toc-text">Events</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ajax"><span class="toc-number">2.</span> <span class="toc-text">Ajax</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Using"><span class="toc-number">2.1.</span> <span class="toc-text">Using</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Host"><span class="toc-number">2.2.</span> <span class="toc-text">Host</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ajax-mapping"><span class="toc-number">2.3.</span> <span class="toc-text">Ajax mapping</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Associations"><span class="toc-number">2.4.</span> <span class="toc-text">Associations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See"><span class="toc-number">2.5.</span> <span class="toc-text">See</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/spine/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/spine/&text=Spine"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/spine/&title=Spine"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/spine/&is_video=false&description=Spine"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Spine&body=Check out this article: https://rupertqin.github.io/devhints/spine/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/spine/&title=Spine"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/spine/&title=Spine"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/spine/&title=Spine"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/spine/&title=Spine"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/spine/&name=Spine&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

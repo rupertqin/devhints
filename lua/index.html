@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Comments-- comment --[[ Multiline      comment ]] Invoking functionsprint() print(&amp;quot;Hi&amp;quot;)  -- You can omit parentheses if the argument is one string or table literal print &amp;quot;Hello World&amp;qu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lua">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/lua/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Comments-- comment --[[ Multiline      comment ]] Invoking functionsprint() print(&amp;quot;Hi&amp;quot;)  -- You can omit parentheses if the argument is one string or table literal print &amp;quot;Hello World&amp;qu">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:23:51.338Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lua">
+<meta name="twitter:description" content="Comments-- comment --[[ Multiline      comment ]] Invoking functionsprint() print(&amp;quot;Hi&amp;quot;)  -- You can omit parentheses if the argument is one string or table literal print &amp;quot;Hello World&amp;qu">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Lua</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../lodash/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../linux/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/lua/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/lua/&text=Lua"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/lua/&title=Lua"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/lua/&is_video=false&description=Lua"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Lua&body=Check out this article: https://rupertqin.github.io/devhints/lua/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/lua/&title=Lua"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/lua/&title=Lua"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/lua/&title=Lua"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/lua/&title=Lua"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/lua/&name=Lua&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Comments"><span class="toc-number">1.</span> <span class="toc-text">Comments</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Invoking-functions"><span class="toc-number">2.</span> <span class="toc-text">Invoking functions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tables-arrays"><span class="toc-number">3.</span> <span class="toc-text">Tables / arrays</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Loops"><span class="toc-number">4.</span> <span class="toc-text">Loops</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conditionals"><span class="toc-number">5.</span> <span class="toc-text">Conditionals</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Variables"><span class="toc-number">6.</span> <span class="toc-text">Variables</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functions"><span class="toc-number">7.</span> <span class="toc-text">Functions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lookups"><span class="toc-number">8.</span> <span class="toc-text">Lookups</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Metatables"><span class="toc-number">9.</span> <span class="toc-text">Metatables</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Classes"><span class="toc-number">10.</span> <span class="toc-text">Classes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Constants"><span class="toc-number">11.</span> <span class="toc-text">Constants</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Operators-and-their-metatable-names"><span class="toc-number">12.</span> <span class="toc-text">Operators (and their metatable names)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API-Global-functions-ref"><span class="toc-number">13.</span> <span class="toc-text">API: Global functions  (ref)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API-Strings"><span class="toc-number">14.</span> <span class="toc-text">API: Strings</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API-Tables"><span class="toc-number">15.</span> <span class="toc-text">API: Tables</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API-Math-ref"><span class="toc-number">16.</span> <span class="toc-text">API: Math (ref)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API-Misc"><span class="toc-number">17.</span> <span class="toc-text">API: Misc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number">18.</span> <span class="toc-text">Reference</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Lua
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.337Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><pre><code>-- comment
+--[[ Multiline
+     comment ]]
+</code></pre><h2 id="Invoking-functions"><a href="#Invoking-functions" class="headerlink" title="Invoking functions"></a>Invoking functions</h2><pre><code>print()
+print(&quot;Hi&quot;)
+
+-- You can omit parentheses if the argument is one string or table literal
+print &quot;Hello World&quot;     &lt;--&gt;     print(&quot;Hello World&quot;)
+dofile &apos;a.lua&apos;          &lt;--&gt;     dofile (&apos;a.lua&apos;)
+print [[a multi-line    &lt;--&gt;     print([[a multi-line
+ message]]                        message]])
+f{x=10, y=20}           &lt;--&gt;     f({x=10, y=20})
+type{}                  &lt;--&gt;     type({})
+</code></pre><h2 id="Tables-arrays"><a href="#Tables-arrays" class="headerlink" title="Tables / arrays"></a>Tables / arrays</h2><pre><code>t = {}
+t = { a = 1, b = 2 }
+t.a = function() ... end
+
+t = { [&quot;hello&quot;] = 200 }
+t.hello
+
+-- Remember, arrays are also tables
+array = { &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot; }
+print(array[2])       -- &quot;b&quot; (one-indexed)
+print(#array)         -- 4 (length)
+</code></pre><h2 id="Loops"><a href="#Loops" class="headerlink" title="Loops"></a>Loops</h2><pre><code>while condition do
+end
+
+for i = 1,5 do
+end
+
+for i = start,finish,delta do
+end
+
+for k,v in pairs(tab) do
+end
+
+repeat
+until condition
+
+-- Breaking out:
+while x do
+  if condition then break end
+end
+</code></pre><h2 id="Conditionals"><a href="#Conditionals" class="headerlink" title="Conditionals"></a>Conditionals</h2><pre><code>if condition then
+  print(&quot;yes&quot;)
+elsif condition then
+  print(&quot;maybe&quot;)
+else
+  print(&quot;no&quot;)
+end
+</code></pre><h2 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h2><pre><code>local x = 2
+two, four = 2, 4
+</code></pre><h2 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h2><pre><code>function myFunction()
+  return 1
+end
+
+function myFunctionWithArgs(a, b)
+  -- ...
+end
+
+myFunction()
+
+anonymousFunctions(function()
+  -- ...
+end)
+
+-- Not exported in the module
+local function myPrivateFunction()
+end
+
+-- Splats
+function doAction(action, ...)
+  print(&quot;Doing &apos;&quot;..action..&quot;&apos; to&quot;, ...)
+  --&gt; print(&quot;Doing &apos;write&apos; to&quot;, &quot;Shirley&quot;, &quot;Abed&quot;)
+end
+
+doAction(&apos;write&apos;, &quot;Shirley&quot;, &quot;Abed&quot;)
+</code></pre><h2 id="Lookups"><a href="#Lookups" class="headerlink" title="Lookups"></a>Lookups</h2><pre><code>mytable = { x = 2, y = function() .. end }
+
+-- The same:
+mytable.x
+mytable[&apos;x&apos;]
+
+-- Syntactic sugar, these are equivalent:
+mytable.y(mytable)
+mytable:y()
+
+mytable.y(mytable, a, b)
+mytable:y(a, b)
+
+function X:y(z) .. end
+function X.y(self, z) .. end
+</code></pre><h2 id="Metatables"><a href="#Metatables" class="headerlink" title="Metatables"></a>Metatables</h2><pre><code>mt = {}
+
+-- A metatable is simply a table with functions in it.
+mt.__tostring = function() return &quot;lol&quot; end
+mt.__add      = function(b) ... end       -- a + b
+mt.__mul      = function(b) ... end       -- a * b
+mt.__index    = function(k) ... end       -- Lookups (a[k] or a.k)
+mt.__newindex = function(k, v) ... end    -- Setters (a[k] = v)
+
+-- Metatables allow you to override behavior of another table.
+mytable = {}
+setmetatable(mytable, mt)
+
+print(myobject)
+</code></pre><h2 id="Classes"><a href="#Classes" class="headerlink" title="Classes"></a>Classes</h2><pre><code>Account = {}
+
+function Account:new(balance)
+  local t = setmetatable({}, { __index = Account })
+
+  -- Your constructor stuff
+  t.balance = (balance or 0)
+  return t
+end
+
+function Account:withdraw(amount)
+  print(&quot;Withdrawing &quot;..amount..&quot;...&quot;)
+  self.balance = self.balance - amount
+  self:report()
+end
+
+function Account:report()
+  print(&quot;Your current balance is: &quot;..self.balance)
+end
+
+a = Account:new(9000)
+a:withdraw(200)    -- method call
+</code></pre><h2 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h2><pre><code>nil
+false
+true
+</code></pre><h2 id="Operators-and-their-metatable-names"><a href="#Operators-and-their-metatable-names" class="headerlink" title="Operators (and their metatable names)"></a>Operators (and their metatable names)</h2><pre><code>-- Relational (binary)
+-- __eq  __lt  __gt  __le  __ge
+   ==    &lt;     &gt;     &lt;=    &gt;=
+~=   -- Not equal, just like !=
+
+-- Arithmetic (binary)
+-- __add  __sub  __muv  __div  __mod  __pow
+   +      -      *      /      %      ^
+
+-- Arithmetic (unary)
+-- __unm (unary minus)
+   -
+
+-- Logic (and/or)
+nil and 10     --&gt; 10
+false and nil  --&gt; false
+10 and 20      --&gt; 20
+
+
+-- Length
+-- __len(array)
+#array
+
+
+-- Indexing
+-- __index(table, key)
+t[key]
+t.key
+
+-- __newindex(table, key, value)
+t[key]=value
+
+-- String concat
+-- __concat(left, right)
+&quot;hello, &quot;..name
+
+-- Call
+-- __call(func, ...)
+</code></pre><h2 id="API-Global-functions-ref"><a href="#API-Global-functions-ref" class="headerlink" title="API: Global functions  (ref)"></a>API: Global functions  <a href="http://lua.gts-stolberg.de/en/Basis.php" target="_blank" rel="noopener">(ref)</a></h2><pre><code>dofile(&quot;hello.lua&quot;)
+loadfile(&quot;hello.lua&quot;)
+
+assert(x)    -- x or (raise an error)
+assert(x, &quot;failed&quot;)
+
+type(var)   -- &quot;nil&quot; | &quot;number&quot; | &quot;string&quot; | &quot;boolean&quot; | &quot;table&quot; | &quot;function&quot; | &quot;thread&quot; | &quot;userdata&quot;
+
+-- Does /not/ invoke meta methods (__index and __newindex)
+rawset(t, index, value)    -- Like t[index] = value
+rawget(t, index)           -- Like t[index]
+
+_G  -- Global context
+setfenv(1, {})  -- 1: current function, 2: caller, and so on -- {}: the new _G
+
+pairs(t)     -- iterable list of {key, value}
+ipairs(t)    -- iterable list of {index, value}
+
+tonumber(&quot;34&quot;)
+tonumber(&quot;8f&quot;, 16)
+</code></pre><h2 id="API-Strings"><a href="#API-Strings" class="headerlink" title="API: Strings"></a>API: Strings</h2><pre><code>&apos;string&apos;..&apos;concatenation&apos;
+
+s = &quot;Hello&quot;
+s:upper()
+s:lower()
+s:len()    -- Just like #s
+
+s:find()
+s:gfind()
+
+s:match()
+s:gmatch()
+
+s:sub()
+s:gsub()
+
+s:rep()
+s:char()
+s:dump()
+s:reverse()
+s:byte()
+s:format()
+</code></pre><h2 id="API-Tables"><a href="#API-Tables" class="headerlink" title="API: Tables"></a>API: Tables</h2><pre><code>table.foreach(t, function(row) ... end)
+table.setn
+table.insert(t, 21)          -- append (--&gt; t[#t+1] = 21)
+table.insert(t, 4, 99)
+table.getn
+table.concat
+table.sort
+table.remove(t, 4)
+</code></pre><h2 id="API-Math-ref"><a href="#API-Math-ref" class="headerlink" title="API: Math (ref)"></a>API: Math <a href="http://lua-users.org/wiki/MathLibraryTutorial" target="_blank" rel="noopener">(ref)</a></h2><pre><code>math.abs     math.acos    math.asin       math.atan    math.atan2
+math.ceil    math.cos     math.cosh       math.deg     math.exp
+math.floor   math.fmod    math.frexp      math.ldexp   math.log
+math.log10   math.max     math.min        math.modf    math.pow
+math.rad     math.random  math.randomseed math.sin     math.sinh
+math.sqrt    math.tan     math.tanh
+
+math.sqrt(144)
+math
+</code></pre><h2 id="API-Misc"><a href="#API-Misc" class="headerlink" title="API: Misc"></a>API: Misc</h2><pre><code>io.output(io.open(&quot;file.txt&quot;, &quot;w&quot;))
+io.write(x)
+io.close()
+
+for line in io.lines(&quot;file.txt&quot;)
+
+file = assert(io.open(&quot;file.txt&quot;, &quot;r&quot;))
+file:read()
+file:lines()
+file:close()
+</code></pre><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>  <a href="http://www.lua.org/pil/13.html" target="_blank" rel="noopener">http://www.lua.org/pil/13.html</a><br>  <a href="http://lua-users.org/wiki/ObjectOrientedProgramming" target="_blank" rel="noopener">http://lua-users.org/wiki/ObjectOrientedProgramming</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Comments"><span class="toc-number">1.</span> <span class="toc-text">Comments</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Invoking-functions"><span class="toc-number">2.</span> <span class="toc-text">Invoking functions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tables-arrays"><span class="toc-number">3.</span> <span class="toc-text">Tables / arrays</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Loops"><span class="toc-number">4.</span> <span class="toc-text">Loops</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conditionals"><span class="toc-number">5.</span> <span class="toc-text">Conditionals</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Variables"><span class="toc-number">6.</span> <span class="toc-text">Variables</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functions"><span class="toc-number">7.</span> <span class="toc-text">Functions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lookups"><span class="toc-number">8.</span> <span class="toc-text">Lookups</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Metatables"><span class="toc-number">9.</span> <span class="toc-text">Metatables</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Classes"><span class="toc-number">10.</span> <span class="toc-text">Classes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Constants"><span class="toc-number">11.</span> <span class="toc-text">Constants</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Operators-and-their-metatable-names"><span class="toc-number">12.</span> <span class="toc-text">Operators (and their metatable names)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API-Global-functions-ref"><span class="toc-number">13.</span> <span class="toc-text">API: Global functions  (ref)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API-Strings"><span class="toc-number">14.</span> <span class="toc-text">API: Strings</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API-Tables"><span class="toc-number">15.</span> <span class="toc-text">API: Tables</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API-Math-ref"><span class="toc-number">16.</span> <span class="toc-text">API: Math (ref)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API-Misc"><span class="toc-number">17.</span> <span class="toc-text">API: Misc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number">18.</span> <span class="toc-text">Reference</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/lua/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/lua/&text=Lua"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/lua/&title=Lua"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/lua/&is_video=false&description=Lua"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Lua&body=Check out this article: https://rupertqin.github.io/devhints/lua/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/lua/&title=Lua"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/lua/&title=Lua"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/lua/&title=Lua"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/lua/&title=Lua"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/lua/&name=Lua&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Listslist = [] list[i:j]  # returns list subset list[-1]   # returns last element list[:-1]  # returns all but the last element  list[i] = val list[i:j] = otherlist  # replace ith to jth element with">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/python/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Listslist = [] list[i:j]  # returns list subset list[-1]   # returns last element list[:-1]  # returns all but the last element  list[i] = val list[i:j] = otherlist  # replace ith to jth element with">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:23:51.386Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python">
+<meta name="twitter:description" content="Listslist = [] list[i:j]  # returns list subset list[-1]   # returns last element list[:-1]  # returns all but the last element  list[i] = val list[i:j] = otherlist  # replace ith to jth element with">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Python</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../qunit/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../qjs/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/python/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/python/&text=Python"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/python/&title=Python"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/python/&is_video=false&description=Python"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python&body=Check out this article: https://rupertqin.github.io/devhints/python/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/python/&title=Python"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/python/&title=Python"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/python/&title=Python"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/python/&title=Python"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/python/&name=Python&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Lists"><span class="toc-number">1.</span> <span class="toc-text">Lists</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dict"><span class="toc-number">2.</span> <span class="toc-text">Dict</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Iteration"><span class="toc-number">3.</span> <span class="toc-text">Iteration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String"><span class="toc-number">4.</span> <span class="toc-text">String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Casting"><span class="toc-number">5.</span> <span class="toc-text">Casting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comprehensions"><span class="toc-number">6.</span> <span class="toc-text">Comprehensions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Regex"><span class="toc-number">7.</span> <span class="toc-text">Regex</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Python
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.386Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Python/">Python</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h3><pre><code>list = []
+list[i:j]  # returns list subset
+list[-1]   # returns last element
+list[:-1]  # returns all but the last element
+
+list[i] = val
+list[i:j] = otherlist  # replace ith to jth element with otherlist
+del list[i:j]
+
+list.append(item)
+list.extend(another_list)
+list.insert(index, item)
+list.pop()        # returns and removes last element from the list
+list.pop(i)       # returns and removes i-th element from the list
+list.remove(i)    # removes the first item from the list whose value is i
+list1 + list2     # combine two list    
+set(list)         # remove duplicate elements from a list
+
+list.reverse()    # reverses the elements of the list in-place
+list.count(item)
+sum(list)
+
+zip(list1, list2)  # returns list of tuples with n-th element of both list1 and list2
+list.sort()        # sorts in-place, returns None
+sorted(list)       # returns sorted copy of list
+&quot;,&quot;.join(list)     # returns a string with list elements seperated by comma
+</code></pre><h3 id="Dict"><a href="#Dict" class="headerlink" title="Dict"></a>Dict</h3><pre><code>dict.keys()
+dict.values()
+&quot;key&quot; in dict    # let&apos;s say this returns False, then...
+dict[&quot;key&quot;]      # ...this raises KeyError
+dict.get(&quot;key&quot;)  # ...this returns None
+dict.setdefault(&quot;key&quot;, 1)
+</code></pre><h3 id="Iteration"><a href="#Iteration" class="headerlink" title="Iteration"></a>Iteration</h3><pre><code>for item in [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]:
+for i in range(4):        # 0 to 3
+for i in range(4, 8):     # 4 to 7
+for i in range(1, 9, 2):  # 1, 3, 5, 7
+for key, val in dict.items():
+for index, item in enumerate(list):
+</code></pre><h3 id="String"><a href="#String" class="headerlink" title="String"></a><a href="https://docs.python.org/2/library/stdtypes.html#string-methods" target="_blank" rel="noopener">String</a></h3><pre><code>str[0:4]
+len(str)
+
+string.replace(&quot;-&quot;, &quot; &quot;)
+&quot;,&quot;.join(list)
+&quot;hi {0}&quot;.format(&apos;j&apos;)
+str.find(&quot;,&quot;)
+str.index(&quot;,&quot;)   # same, but raises IndexError
+str.count(&quot;,&quot;)
+str.split(&quot;,&quot;)
+
+str.lower()
+str.upper()
+str.title()
+
+str.lstrip()
+str.rstrip()
+str.strip()
+
+str.islower()
+</code></pre><h3 id="Casting"><a href="#Casting" class="headerlink" title="Casting"></a>Casting</h3><pre><code>int(str)
+float(str)
+str(int)
+str(float)
+&apos;string&apos;.encode()
+</code></pre><h3 id="Comprehensions"><a href="#Comprehensions" class="headerlink" title="Comprehensions"></a>Comprehensions</h3><pre><code>[fn(i) for i in list]            # .map
+map(fn, list)                    # .map, returns iterator
+
+filter(fn, list)                 # .filter, returns iterator
+[fn(i) for i in list if i &gt; 0]   # .filter.map
+</code></pre><h3 id="Regex"><a href="#Regex" class="headerlink" title="Regex"></a>Regex</h3><pre><code>import re
+
+re.match(r&apos;^[aeiou]&apos;, str)
+re.sub(r&apos;^[aeiou]&apos;, &apos;?&apos;, str)
+re.sub(r&apos;(xyz)&apos;, r&apos;\1&apos;, str)
+
+expr = re.compile(r&apos;^...$&apos;)
+expr.match(...)
+expr.sub(...)
+</code></pre>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Lists"><span class="toc-number">1.</span> <span class="toc-text">Lists</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dict"><span class="toc-number">2.</span> <span class="toc-text">Dict</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Iteration"><span class="toc-number">3.</span> <span class="toc-text">Iteration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String"><span class="toc-number">4.</span> <span class="toc-text">String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Casting"><span class="toc-number">5.</span> <span class="toc-text">Casting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comprehensions"><span class="toc-number">6.</span> <span class="toc-text">Comprehensions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Regex"><span class="toc-number">7.</span> <span class="toc-text">Regex</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/python/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/python/&text=Python"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/python/&title=Python"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/python/&is_video=false&description=Python"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python&body=Check out this article: https://rupertqin.github.io/devhints/python/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/python/&title=Python"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/python/&title=Python"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/python/&title=Python"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/python/&title=Python"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/python/&name=Python&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="1234567t(&apos;my.messages.hello&apos;)# same as &apos;my.messages.hello&apos;t(:hello, scope: &apos;my.messages&apos;)t(:hello, scope: [:my, :messages])t(&apos;my.messages.hello&apos;, default: &quot;Hello&quot;) 1234en:  my:    messages:      hello">
+<meta property="og:type" content="article">
+<meta property="og:title" content="i18n">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/rails-i18n/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="1234567t(&apos;my.messages.hello&apos;)# same as &apos;my.messages.hello&apos;t(:hello, scope: &apos;my.messages&apos;)t(:hello, scope: [:my, :messages])t(&apos;my.messages.hello&apos;, default: &quot;Hello&quot;) 1234en:  my:    messages:      hello">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:37:07.745Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="i18n">
+<meta name="twitter:description" content="1234567t(&apos;my.messages.hello&apos;)# same as &apos;my.messages.hello&apos;t(:hello, scope: &apos;my.messages&apos;)t(:hello, scope: [:my, :messages])t(&apos;my.messages.hello&apos;, default: &quot;Hello&quot;) 1234en:  my:    messages:      hello">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>i18n</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../rails-models/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../rails-migrations/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/rails-i18n/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/rails-i18n/&text=i18n"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/rails-i18n/&title=i18n"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/rails-i18n/&is_video=false&description=i18n"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=i18n&body=Check out this article: https://rupertqin.github.io/devhints/rails-i18n/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/rails-i18n/&title=i18n"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/rails-i18n/&title=i18n"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/rails-i18n/&title=i18n"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/rails-i18n/&title=i18n"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/rails-i18n/&name=i18n&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Interpolation"><span class="toc-number">1.</span> <span class="toc-text">Interpolation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lazy-lookup"><span class="toc-number">2.</span> <span class="toc-text">Lazy lookup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Plural"><span class="toc-number">3.</span> <span class="toc-text">Plural</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Localizing"><span class="toc-number"></span> <span class="toc-text">Localizing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Time"><span class="toc-number">1.</span> <span class="toc-text">Time</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Date"><span class="toc-number">2.</span> <span class="toc-text">Date</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ActiveRecord"><span class="toc-number"></span> <span class="toc-text">ActiveRecord</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Model-names"><span class="toc-number">1.</span> <span class="toc-text">Model names</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Attributes"><span class="toc-number">2.</span> <span class="toc-text">Attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Error-messages"><span class="toc-number">3.</span> <span class="toc-text">Error messages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Form-labels"><span class="toc-number">4.</span> <span class="toc-text">Form labels</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Submit-buttons"><span class="toc-number">5.</span> <span class="toc-text">Submit buttons</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Numbers"><span class="toc-number"></span> <span class="toc-text">Numbers</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Delimited"><span class="toc-number">1.</span> <span class="toc-text">Delimited</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Currencies"><span class="toc-number">2.</span> <span class="toc-text">Currencies</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Percentage"><span class="toc-number">3.</span> <span class="toc-text">Percentage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Programmatic-access"><span class="toc-number"></span> <span class="toc-text">Programmatic access</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number"></span> <span class="toc-text">Reference</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        i18n
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.397Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Rails/">Rails</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">t(<span class="string">'my.messages.hello'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># same as 'my.messages.hello'</span></span><br><span class="line">t(<span class="symbol">:hello</span>, <span class="symbol">scope:</span> <span class="string">'my.messages'</span>)</span><br><span class="line">t(<span class="symbol">:hello</span>, <span class="symbol">scope:</span> [<span class="symbol">:my</span>, <span class="symbol">:messages</span>])</span><br><span class="line"></span><br><span class="line">t(<span class="string">'my.messages.hello'</span>, <span class="symbol">default:</span> <span class="string">"Hello"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">en:</span></span><br><span class="line"><span class="attr">  my:</span></span><br><span class="line"><span class="attr">    messages:</span></span><br><span class="line"><span class="attr">      hello:</span> <span class="string">"Hello"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Interpolation"><a href="#Interpolation" class="headerlink" title="Interpolation"></a>Interpolation</h3><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t(<span class="string">'hello'</span>, <span class="symbol">name:</span> <span class="string">"John"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">hello:</span> <span class="string">"Hello <span class="template-variable">%&#123;name&#125;</span>"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Lazy-lookup"><a href="#Lazy-lookup" class="headerlink" title="Lazy lookup"></a>Lazy lookup</h3><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># from the 'books/index' view</span></span><br><span class="line">t(<span class="string">'.title'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">en:</span></span><br><span class="line"><span class="attr">  books:</span></span><br><span class="line"><span class="attr">    index:</span></span><br><span class="line"><span class="attr">      title:</span> <span class="string">"Título"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Plural"><a href="#Plural" class="headerlink" title="Plural"></a>Plural</h3><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">t(<span class="symbol">:inbox</span>, <span class="symbol">count:</span> <span class="number">1</span>)  <span class="comment">#=&gt; 'one message'</span></span><br><span class="line">t(<span class="symbol">:inbox</span>, <span class="symbol">count:</span> <span class="number">2</span>)  <span class="comment">#=&gt; '2 messages'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">inbox:</span></span><br><span class="line"><span class="attr">  one:</span> <span class="string">'one message'</span><span class="string">,</span></span><br><span class="line"><span class="attr">  other:</span> <span class="string">'<span class="template-variable">%&#123;count&#125;</span> messages'</span></span><br></pre></td></tr></table></figure>
+<h2 id="Localizing"><a href="#Localizing" class="headerlink" title="Localizing"></a>Localizing</h2><h3 id="Time"><a href="#Time" class="headerlink" title="Time"></a>Time</h3><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">l(Time.now)</span><br><span class="line">l(Time.now, <span class="symbol">format:</span> <span class="symbol">:short</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">en:</span></span><br><span class="line"><span class="attr">  time:</span></span><br><span class="line"><span class="attr">    formats:</span></span><br><span class="line"><span class="attr">      default:</span> <span class="string">"%a, %d %b %Y %H:%M:%S %z"</span></span><br><span class="line"><span class="attr">      long:</span> <span class="string">"%B %d, %Y %H:%M"</span></span><br><span class="line"><span class="attr">      short:</span> <span class="string">"%d %b %H:%M"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h3><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">l(Date.today)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">en:</span></span><br><span class="line"><span class="attr">  date:</span></span><br><span class="line"><span class="attr">    formats:</span></span><br><span class="line"><span class="attr">      default:</span> <span class="string">"%Y-%m-%d"</span> <span class="comment"># 2015-06-25</span></span><br><span class="line"><span class="attr">      long:</span> <span class="string">"%B %d, %Y"</span>   <span class="comment"># June 25, 2015</span></span><br><span class="line"><span class="attr">      short:</span> <span class="string">"%b %d"</span>      <span class="comment"># Jun 25</span></span><br></pre></td></tr></table></figure>
+<h2 id="ActiveRecord"><a href="#ActiveRecord" class="headerlink" title="ActiveRecord"></a>ActiveRecord</h2><h3 id="Model-names"><a href="#Model-names" class="headerlink" title="Model names"></a>Model names</h3><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User.model_name.human            <span class="comment">#=&gt; "User"</span></span><br><span class="line">Child.model_name.human(<span class="symbol">count:</span> <span class="number">2</span>) <span class="comment">#=&gt; "Children"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">en:</span></span><br><span class="line"><span class="attr">  activerecord:</span></span><br><span class="line"><span class="attr">    models:</span></span><br><span class="line"><span class="attr">      user:</span> <span class="string">"User"</span></span><br><span class="line"><span class="attr">      child:</span></span><br><span class="line"><span class="attr">        one:</span> <span class="string">"Child"</span></span><br><span class="line"><span class="attr">        other:</span> <span class="string">"Children"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h3><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.human_attribute_for <span class="symbol">:name</span>   <span class="comment">#=&gt; "Name"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">en:</span></span><br><span class="line"><span class="attr">  activerecord:</span></span><br><span class="line"><span class="attr">    attributes:</span></span><br><span class="line"><span class="attr">      user:</span></span><br><span class="line">        <span class="comment"># activerecord.attributes.&lt;model&gt;.&lt;field&gt;</span></span><br><span class="line"><span class="attr">        name:</span> <span class="string">"Name"</span></span><br><span class="line"><span class="attr">        email:</span> <span class="string">"Email"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Error-messages"><a href="#Error-messages" class="headerlink" title="Error messages"></a>Error messages</h3><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">error_messages_for(...)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">activerecord:</span></span><br><span class="line"><span class="attr">  errors:</span></span><br><span class="line"><span class="attr">    models:</span></span><br><span class="line"><span class="attr">      venue:</span></span><br><span class="line"><span class="attr">        attributes:</span></span><br><span class="line"><span class="attr">          name:</span></span><br><span class="line"><span class="attr">            blank:</span> <span class="string">"Please enter a name."</span></span><br></pre></td></tr></table></figure>
+<p>Possible scopes (in order):</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">activerecord.errors.models.[model_name].attributes.[attribute_name].[error]</span></span><br><span class="line"><span class="string">activerecord.errors.models.[model_name].[error]</span></span><br><span class="line"><span class="string">activerecord.errors.messages.[error]</span></span><br><span class="line"><span class="string">errors.attributes.[attribute_name].[error]</span></span><br><span class="line"><span class="string">errors.messages.[error]</span></span><br></pre></td></tr></table></figure>
+<p>Where <code>[error]</code> can be:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">validates</span></span><br><span class="line">  <span class="string">confirmation</span> <span class="bullet">-</span> <span class="string">:confirmation</span></span><br><span class="line">  <span class="string">acceptance</span>   <span class="bullet">-</span> <span class="string">:accepted</span></span><br><span class="line">  <span class="string">presence</span>     <span class="bullet">-</span> <span class="string">:blank</span></span><br><span class="line">  <span class="string">length</span>       <span class="bullet">-</span> <span class="string">:too_short</span> <span class="string">(%&#123;count&#125;)</span></span><br><span class="line">  <span class="string">length</span>       <span class="bullet">-</span> <span class="string">:too_long</span> <span class="string">(%&#123;count&#125;)</span></span><br><span class="line">  <span class="string">length</span>       <span class="bullet">-</span> <span class="string">:wrong_length</span> <span class="string">(%&#123;count&#125;)</span></span><br><span class="line">  <span class="string">uniqueness</span>   <span class="bullet">-</span> <span class="string">:taken</span></span><br><span class="line">  <span class="string">format</span>       <span class="bullet">-</span> <span class="string">:invalid</span></span><br><span class="line">  <span class="string">numericality</span> <span class="bullet">-</span> <span class="string">:not_a_number</span></span><br></pre></td></tr></table></figure>
+<h3 id="Form-labels"><a href="#Form-labels" class="headerlink" title="Form labels"></a>Form labels</h3><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">form_for @post <span class="keyword">do</span></span><br><span class="line">  f.label <span class="symbol">:body</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">helpers:</span></span><br><span class="line">  <span class="comment"># helpers.label.&lt;model&gt;.&lt;field&gt;</span></span><br><span class="line"><span class="attr">  label:</span></span><br><span class="line"><span class="attr">    post:</span></span><br><span class="line"><span class="attr">      body:</span> <span class="string">"Your body text"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Submit-buttons"><a href="#Submit-buttons" class="headerlink" title="Submit buttons"></a>Submit buttons</h3><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">form_for @post <span class="keyword">do</span></span><br><span class="line">  f.submit</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">helpers:</span></span><br><span class="line"><span class="attr">  submit:</span></span><br><span class="line">    <span class="comment"># helpers.submit.&lt;action&gt;</span></span><br><span class="line"><span class="attr">    create:</span> <span class="string">"Create a <span class="template-variable">%&#123;model&#125;</span>"</span></span><br><span class="line"><span class="attr">    update:</span> <span class="string">"Confirm changes to <span class="template-variable">%&#123;model&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># helpers.submit.&lt;model&gt;.&lt;action&gt;</span></span><br><span class="line"><span class="attr">    article:</span></span><br><span class="line"><span class="attr">      create:</span> <span class="string">"Publish article"</span></span><br><span class="line"><span class="attr">      update:</span> <span class="string">"Update article"</span></span><br></pre></td></tr></table></figure>
+<h2 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h2><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">number_to_delimited(<span class="number">2000</span>)             <span class="comment">#=&gt; "2,000"</span></span><br><span class="line">number_to_currency(<span class="number">12.3</span>)              <span class="comment">#=&gt; "$12.30"</span></span><br><span class="line">number_to_percentage(<span class="number">0</span>.<span class="number">3</span>)             <span class="comment">#=&gt; "30%"</span></span><br><span class="line">number_to_rounded(<span class="number">3.14</span>, <span class="symbol">precision:</span> <span class="number">0</span>) <span class="comment">#=&gt; "3"</span></span><br><span class="line">number_to_human(<span class="number">12_000</span>)               <span class="comment">#=&gt; "12 Thousand"</span></span><br><span class="line">number_to_human_size(<span class="number">12345</span>)           <span class="comment">#=&gt; "12.3 kb"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Delimited"><a href="#Delimited" class="headerlink" title="Delimited"></a>Delimited</h3><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">number_to_delimited(n)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">number:</span></span><br><span class="line"><span class="attr">  format:</span></span><br><span class="line"><span class="attr">    separator:</span> <span class="string">'.'</span></span><br><span class="line"><span class="attr">    delimiter:</span> <span class="string">','</span></span><br><span class="line"><span class="attr">    precision:</span> <span class="number">3</span></span><br><span class="line"><span class="attr">    significant:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    strip_insignificant_zeroes:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h3 id="Currencies"><a href="#Currencies" class="headerlink" title="Currencies"></a>Currencies</h3><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">number_to_currency(n)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">number:</span></span><br><span class="line"><span class="attr">  currency:</span></span><br><span class="line"><span class="attr">    format:</span></span><br><span class="line"><span class="attr">      format:</span> <span class="string">"%u%n"</span> <span class="comment"># %u = unit, %n = number</span></span><br><span class="line"><span class="attr">      unit:</span> <span class="string">"$"</span></span><br><span class="line"><span class="attr">      separator:</span> <span class="string">'.'</span></span><br><span class="line"><span class="attr">      delimiter:</span> <span class="string">','</span></span><br><span class="line"><span class="attr">      precision:</span> <span class="number">3</span></span><br><span class="line">      <span class="comment"># (see number.format)</span></span><br></pre></td></tr></table></figure>
+<h3 id="Percentage"><a href="#Percentage" class="headerlink" title="Percentage"></a>Percentage</h3><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">number_to_percentage(n)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">number:</span></span><br><span class="line"><span class="attr">  percentage:</span></span><br><span class="line"><span class="attr">    format:</span></span><br><span class="line"><span class="attr">      format:</span> <span class="string">"%n%"</span></span><br><span class="line">      <span class="comment"># (see number.format)</span></span><br></pre></td></tr></table></figure>
+<h2 id="Programmatic-access"><a href="#Programmatic-access" class="headerlink" title="Programmatic access"></a>Programmatic access</h2><figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">I18n.backend.store_translations <span class="symbol">:en</span>, <span class="symbol">ok:</span> <span class="string">"Ok"</span></span><br><span class="line">I18n.locale = <span class="symbol">:en</span></span><br><span class="line">I18n.default_locale = <span class="symbol">:en</span></span><br><span class="line"></span><br><span class="line">I18n.available_locales</span><br><span class="line"></span><br><span class="line">I18n.translate <span class="symbol">:ok</span>   <span class="comment"># aka, I18n.t</span></span><br><span class="line">I18n.localize date   <span class="comment"># aka, I18n.l</span></span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="http://guides.rubyonrails.org/i18n.html" target="_blank" rel="noopener">http://guides.rubyonrails.org/i18n.html</a></li>
+<li><a href="http://rails-i18n.org/wiki" target="_blank" rel="noopener">http://rails-i18n.org/wiki</a></li>
+<li><a href="https://github.com/svenfuchs/i18n" target="_blank" rel="noopener">https://github.com/svenfuchs/i18n</a></li>
+<li><a href="https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/en.yml" target="_blank" rel="noopener">https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/en.yml</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Interpolation"><span class="toc-number">1.</span> <span class="toc-text">Interpolation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lazy-lookup"><span class="toc-number">2.</span> <span class="toc-text">Lazy lookup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Plural"><span class="toc-number">3.</span> <span class="toc-text">Plural</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Localizing"><span class="toc-number"></span> <span class="toc-text">Localizing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Time"><span class="toc-number">1.</span> <span class="toc-text">Time</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Date"><span class="toc-number">2.</span> <span class="toc-text">Date</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ActiveRecord"><span class="toc-number"></span> <span class="toc-text">ActiveRecord</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Model-names"><span class="toc-number">1.</span> <span class="toc-text">Model names</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Attributes"><span class="toc-number">2.</span> <span class="toc-text">Attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Error-messages"><span class="toc-number">3.</span> <span class="toc-text">Error messages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Form-labels"><span class="toc-number">4.</span> <span class="toc-text">Form labels</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Submit-buttons"><span class="toc-number">5.</span> <span class="toc-text">Submit buttons</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Numbers"><span class="toc-number"></span> <span class="toc-text">Numbers</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Delimited"><span class="toc-number">1.</span> <span class="toc-text">Delimited</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Currencies"><span class="toc-number">2.</span> <span class="toc-text">Currencies</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Percentage"><span class="toc-number">3.</span> <span class="toc-text">Percentage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Programmatic-access"><span class="toc-number"></span> <span class="toc-text">Programmatic access</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number"></span> <span class="toc-text">Reference</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/rails-i18n/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/rails-i18n/&text=i18n"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/rails-i18n/&title=i18n"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/rails-i18n/&is_video=false&description=i18n"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=i18n&body=Check out this article: https://rupertqin.github.io/devhints/rails-i18n/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/rails-i18n/&title=i18n"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/rails-i18n/&title=i18n"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/rails-i18n/&title=i18n"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/rails-i18n/&title=i18n"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/rails-i18n/&name=i18n&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

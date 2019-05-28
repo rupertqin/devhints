@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="RequestRequest12345678910conn.host          # → &quot;example.com&quot;conn.method        # → &quot;GET&quot;conn.path_info     # → [&quot;posts&quot;, &quot;1&quot;]conn.request_path  # → &quot;/posts/1&quot;conn.query_string  # → &quot;utm_source=twitte">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Phoenix: Plug.Conn">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/phoenix-conn/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="RequestRequest12345678910conn.host          # → &quot;example.com&quot;conn.method        # → &quot;GET&quot;conn.path_info     # → [&quot;posts&quot;, &quot;1&quot;]conn.request_path  # → &quot;/posts/1&quot;conn.query_string  # → &quot;utm_source=twitte">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-08-28T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Phoenix: Plug.Conn">
+<meta name="twitter:description" content="RequestRequest12345678910conn.host          # → &quot;example.com&quot;conn.method        # → &quot;GET&quot;conn.path_info     # → [&quot;posts&quot;, &quot;1&quot;]conn.request_path  # → &quot;/posts/1&quot;conn.query_string  # → &quot;utm_source=twitte">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Phoenix: Plug.Conn</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../phoenix-ecto/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../ph-food-delivery/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/phoenix-conn/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/phoenix-conn/&text=Phoenix: Plug.Conn"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/phoenix-conn/&title=Phoenix: Plug.Conn"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/phoenix-conn/&is_video=false&description=Phoenix: Plug.Conn"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Phoenix: Plug.Conn&body=Check out this article: https://rupertqin.github.io/devhints/phoenix-conn/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/phoenix-conn/&title=Phoenix: Plug.Conn"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/phoenix-conn/&title=Phoenix: Plug.Conn"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/phoenix-conn/&title=Phoenix: Plug.Conn"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/phoenix-conn/&title=Phoenix: Plug.Conn"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/phoenix-conn/&name=Phoenix: Plug.Conn&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Request"><span class="toc-number">1.</span> <span class="toc-text">Request</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Request-1"><span class="toc-number">1.1.</span> <span class="toc-text">Request</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Updating-conn"><span class="toc-number">1.2.</span> <span class="toc-text">Updating conn</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Response"><span class="toc-number">2.</span> <span class="toc-text">Response</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Response-1"><span class="toc-number">2.1.</span> <span class="toc-text">Response</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sending-responses"><span class="toc-number">2.2.</span> <span class="toc-text">Sending responses</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Phoenix-views"><span class="toc-number">2.3.</span> <span class="toc-text">Phoenix views</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Accepts"><span class="toc-number">2.4.</span> <span class="toc-text">Accepts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assigns"><span class="toc-number">2.5.</span> <span class="toc-text">Assigns</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Session"><span class="toc-number">2.6.</span> <span class="toc-text">Session</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Phoenix: Plug.Conn
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.368Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Elixir/">Elixir</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Request"><a href="#Request" class="headerlink" title="Request"></a>Request</h2><h3 id="Request-1"><a href="#Request-1" class="headerlink" title="Request"></a>Request</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">conn.host          <span class="comment"># → "example.com"</span></span><br><span class="line">conn.method        <span class="comment"># → "GET"</span></span><br><span class="line">conn.path_info     <span class="comment"># → ["posts", "1"]</span></span><br><span class="line">conn.request_path  <span class="comment"># → "/posts/1"</span></span><br><span class="line">conn.query_string  <span class="comment"># → "utm_source=twitter"</span></span><br><span class="line">conn.port          <span class="comment"># → 80</span></span><br><span class="line">conn.scheme        <span class="comment"># → :http</span></span><br><span class="line">conn.peer          <span class="comment"># → &#123; &#123;127, 0, 0, 1&#125;, 12345 &#125;</span></span><br><span class="line">conn.remote_ip     <span class="comment"># → &#123; 151, 236, 219, 228 &#125;</span></span><br><span class="line">conn.req_headers   <span class="comment"># → [&#123;"content-type", "text/plain"&#125;]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conn |&gt; get_req_header(<span class="string">"content-type"</span>)</span><br><span class="line"><span class="comment"># → ["text/plain"]</span></span><br></pre></td></tr></table></figure>
+<h3 id="Updating-conn"><a href="#Updating-conn" class="headerlink" title="Updating conn"></a>Updating conn</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conn</span><br><span class="line">|&gt; put_req_header(<span class="string">"accept"</span>, <span class="string">"application/json"</span>)</span><br></pre></td></tr></table></figure>
+<p>Usually only useful for tests.</p>
+<h2 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h2><h3 id="Response-1"><a href="#Response-1" class="headerlink" title="Response"></a>Response</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">conn.resp_body     <span class="comment"># → "..."</span></span><br><span class="line">conn.resp_charset  <span class="comment"># → "utf-8"</span></span><br><span class="line">conn.resp_cookies  <span class="comment"># → ...</span></span><br><span class="line">conn.resp_headers  <span class="comment"># → ...</span></span><br><span class="line">conn.status        <span class="comment"># → ...</span></span><br></pre></td></tr></table></figure>
+<h3 id="Sending-responses"><a href="#Sending-responses" class="headerlink" title="Sending responses"></a>Sending responses</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Plug.Conn</span></span><br><span class="line">conn</span><br><span class="line">|&gt; html(<span class="string">"&lt;html&gt;&lt;head&gt;..."</span>)</span><br><span class="line">|&gt; json(%&#123; <span class="symbol">message:</span> <span class="string">"Hello"</span> &#125;)</span><br><span class="line">|&gt; text(<span class="string">"Hello"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">|&gt; redirect(<span class="symbol">to:</span> <span class="string">"/foo"</span>)</span><br><span class="line">|&gt; redirect(<span class="symbol">external:</span> <span class="string">"http://www.google.com/"</span>)</span><br><span class="line">|&gt; halt()</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|&gt; put_resp_content_type(<span class="string">"text/plain"</span>)</span><br><span class="line">|&gt; put_resp_cookie(<span class="string">"abc"</span>, <span class="string">"def"</span>)</span><br><span class="line">|&gt; put_resp_header(<span class="string">"X-Delivered-By"</span>, <span class="string">"myapp"</span>)</span><br><span class="line">|&gt; put_status(<span class="number">202</span>)</span><br><span class="line">|&gt; put_status(<span class="symbol">:not_found</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|&gt; put_private(<span class="symbol">:plug_foo</span>, <span class="string">"..."</span>)  <span class="comment"># reserved for libraries</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|&gt; send_resp(<span class="number">201</span>, <span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Phoenix-views"><a href="#Phoenix-views" class="headerlink" title="Phoenix views"></a>Phoenix views</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Phoenix.Controller</span></span><br><span class="line">conn</span><br><span class="line">|&gt; render(<span class="string">"index.html"</span>)</span><br><span class="line">|&gt; render(<span class="string">"index.html"</span>, <span class="symbol">hello:</span> <span class="string">"world"</span>)</span><br><span class="line">|&gt; render(MyApp.ErrorView, <span class="string">"404.html"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">|&gt; put_layout(<span class="symbol">:foo</span>)</span><br><span class="line">|&gt; put_layout(<span class="keyword">false</span>)</span><br><span class="line">|&gt; put_view(ErrorView)</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">|&gt; put_secure_browser_headers()</span><br><span class="line"><span class="comment"># prevent clickjacking, nosniff, and xss protection</span></span><br><span class="line"><span class="comment"># x-frame-options, x-content-type-options, x-xss-protection</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">|&gt; put_new_view(ErrorView)  <span class="comment"># if not set yet</span></span><br><span class="line">|&gt; put_new_layout(<span class="symbol">:foo</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">Other features</span><br><span class="line">--------------</span><br><span class="line"></span><br><span class="line"><span class="comment">### Other fields</span></span><br><span class="line"></span><br><span class="line">```elixir</span><br><span class="line">conn.assigns          <span class="comment"># storage of crap</span></span><br><span class="line">conn.owner            <span class="comment"># process</span></span><br><span class="line">conn.halted           <span class="comment"># if pipeline was halted</span></span><br><span class="line">conn.secret_key_base  <span class="comment"># ...</span></span><br><span class="line">conn.state            <span class="comment"># :unset, :set, :file, :sent, :chunked</span></span><br></pre></td></tr></table></figure>
+<h3 id="Accepts"><a href="#Accepts" class="headerlink" title="Accepts"></a>Accepts</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plug :accepts, [<span class="string">"html"</span>, <span class="string">"json"</span>]</span><br><span class="line">conn |&gt; accepts([<span class="string">"html"</span>, <span class="string">"json"</span>])</span><br><span class="line">get_format(conn)  # → "html"</span><br><span class="line">conn.accepts</span><br></pre></td></tr></table></figure>
+<h3 id="Assigns"><a href="#Assigns" class="headerlink" title="Assigns"></a>Assigns</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conn.assigns[<span class="symbol">:hello</span>]</span><br><span class="line">conn |&gt; assign(<span class="symbol">:user_id</span>, <span class="number">100</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conn = async_assign(conn, <span class="symbol">:location</span>, <span class="keyword">fn</span> -&gt; geoip_lookup() <span class="keyword">end</span>)</span><br><span class="line">await_assign(conn, <span class="symbol">:location</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">conn = fetch_session(conn)   <span class="comment"># or plug :fetch_session</span></span><br><span class="line"></span><br><span class="line">conn = put_session(conn, <span class="symbol">:message</span>, <span class="string">"new stuff we just set in the session"</span>)</span><br><span class="line">get_session(conn, <span class="symbol">:message</span>)</span><br><span class="line">conn = clear_session(conn)</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conn</span><br><span class="line">|&gt; put_flash(<span class="symbol">:info</span>, <span class="string">"Success"</span>)</span><br><span class="line">|&gt; put_flash(<span class="symbol">:error</span>, <span class="string">"Oh no"</span>)</span><br></pre></td></tr></table></figure>
+<p>Also available: <code>flash</code> <code>cookie</code> <code>params</code></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Request"><span class="toc-number">1.</span> <span class="toc-text">Request</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Request-1"><span class="toc-number">1.1.</span> <span class="toc-text">Request</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Updating-conn"><span class="toc-number">1.2.</span> <span class="toc-text">Updating conn</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Response"><span class="toc-number">2.</span> <span class="toc-text">Response</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Response-1"><span class="toc-number">2.1.</span> <span class="toc-text">Response</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sending-responses"><span class="toc-number">2.2.</span> <span class="toc-text">Sending responses</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Phoenix-views"><span class="toc-number">2.3.</span> <span class="toc-text">Phoenix views</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Accepts"><span class="toc-number">2.4.</span> <span class="toc-text">Accepts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assigns"><span class="toc-number">2.5.</span> <span class="toc-text">Assigns</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Session"><span class="toc-number">2.6.</span> <span class="toc-text">Session</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/phoenix-conn/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/phoenix-conn/&text=Phoenix: Plug.Conn"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/phoenix-conn/&title=Phoenix: Plug.Conn"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/phoenix-conn/&is_video=false&description=Phoenix: Plug.Conn"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Phoenix: Plug.Conn&body=Check out this article: https://rupertqin.github.io/devhints/phoenix-conn/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/phoenix-conn/&title=Phoenix: Plug.Conn"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/phoenix-conn/&title=Phoenix: Plug.Conn"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/phoenix-conn/&title=Phoenix: Plug.Conn"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/phoenix-conn/&title=Phoenix: Plug.Conn"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/phoenix-conn/&name=Phoenix: Plug.Conn&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

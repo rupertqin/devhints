@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="cd1&amp;gt; cd Array 123&amp;gt; ls  Array.methods: [] try_convert  Array#methods: &amp;amp; * + abbrev assoc at ... 1&amp;gt; show-source Code1&amp;gt; show-method Array#select Docs12345&amp;gt; ri Array&amp;gt; ri Array#each&amp;g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pry">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/pry/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="cd1&amp;gt; cd Array 123&amp;gt; ls  Array.methods: [] try_convert  Array#methods: &amp;amp; * + abbrev assoc at ... 1&amp;gt; show-source Code1&amp;gt; show-method Array#select Docs12345&amp;gt; ri Array&amp;gt; ri Array#each&amp;g">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:23:51.384Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pry">
+<meta name="twitter:description" content="cd1&amp;gt; cd Array 123&amp;gt; ls  Array.methods: [] try_convert  Array#methods: &amp;amp; * + abbrev assoc at ... 1&amp;gt; show-source Code1&amp;gt; show-method Array#select Docs12345&amp;gt; ri Array&amp;gt; ri Array#each&amp;g">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Pry</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../psdrb/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../promise/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/pry/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/pry/&text=Pry"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/pry/&title=Pry"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/pry/&is_video=false&description=Pry"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Pry&body=Check out this article: https://rupertqin.github.io/devhints/pry/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/pry/&title=Pry"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/pry/&title=Pry"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/pry/&title=Pry"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/pry/&title=Pry"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/pry/&name=Pry&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#cd"><span class="toc-number">1.</span> <span class="toc-text">cd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code"><span class="toc-number">2.</span> <span class="toc-text">Code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docs"><span class="toc-number">3.</span> <span class="toc-text">Docs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Finding"><span class="toc-number">4.</span> <span class="toc-text">Finding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Editing"><span class="toc-number">5.</span> <span class="toc-text">Editing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gems"><span class="toc-number">6.</span> <span class="toc-text">Gems</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Misc-commands"><span class="toc-number">7.</span> <span class="toc-text">Misc commands</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Rails"><span class="toc-number"></span> <span class="toc-text">Rails</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Rails-console"><span class="toc-number">1.</span> <span class="toc-text">Rails console</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rails-1"><span class="toc-number">2.</span> <span class="toc-text">Rails</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ls"><span class="toc-number">3.</span> <span class="toc-text">ls</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell-integration"><span class="toc-number"></span> <span class="toc-text">Shell integration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hirb"><span class="toc-number"></span> <span class="toc-text">hirb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pry-rescue"><span class="toc-number"></span> <span class="toc-text">pry-rescue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pry-remote"><span class="toc-number"></span> <span class="toc-text">pry-remote</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number"></span> <span class="toc-text">Reference</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Pry
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.384Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Ruby-libraries/">Ruby libraries</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; cd Array</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; ls</span><br><span class="line">  Array.methods: [] try_convert</span><br><span class="line">  Array#methods: &amp; * + abbrev assoc at ...</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; show-source</span><br></pre></td></tr></table></figure>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; show-method Array#select</span><br></pre></td></tr></table></figure>
+<h3 id="Docs"><a href="#Docs" class="headerlink" title="Docs"></a>Docs</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; ri Array</span><br><span class="line">&gt; ri Array#each</span><br><span class="line"></span><br><span class="line">&gt; cd Gem</span><br><span class="line">&gt; show-doc try_activate</span><br></pre></td></tr></table></figure>
+<h3 id="Finding"><a href="#Finding" class="headerlink" title="Finding"></a>Finding</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; find-method each</span><br><span class="line">  Array#each</span><br><span class="line">  Array#each_index</span><br><span class="line">  Enumerable#each_slice</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+<h3 id="Editing"><a href="#Editing" class="headerlink" title="Editing"></a>Editing</h3><pre><code>&gt; edit Pry#repl
+</code></pre><h3 id="Gems"><a href="#Gems" class="headerlink" title="Gems"></a>Gems</h3><pre><code>&gt; gem-cd foo      # Switch to gem&apos;s dir
+&gt; gem-install foo
+&gt; gem-list
+</code></pre><h3 id="Misc-commands"><a href="#Misc-commands" class="headerlink" title="Misc commands"></a>Misc commands</h3><pre><code>&gt; hist          # History
+&gt; wtf?          # Trace of recent exception
+</code></pre><h2 id="Rails"><a href="#Rails" class="headerlink" title="Rails"></a>Rails</h2><h3 id="Rails-console"><a href="#Rails-console" class="headerlink" title="Rails console"></a>Rails console</h3><p>Also consider <a href="https://rubygems.org/gems/pry-rails" target="_blank" rel="noopener">pry-rails</a>.</p>
+<pre><code>$ pry -r ./config/environment
+</code></pre><h3 id="Rails-1"><a href="#Rails-1" class="headerlink" title="Rails"></a>Rails</h3><pre><code>&gt; show-models
+&gt; show-routes
+&gt; show-middleware
+</code></pre><h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><pre><code>&gt; ls         # All
+
+&gt; ls -m      # Methods
+&gt; ls -M      # Instance methods
+
+&gt; ls -g      # Globals
+&gt; ls -l      # Local vars
+&gt; ls -c      # Constants
+
+&gt; ls -i      # Instance vars
+
+&gt; ls -G xx   # Grey by regex
+</code></pre><h2 id="Shell-integration"><a href="#Shell-integration" class="headerlink" title="Shell integration"></a>Shell integration</h2><p>shell-mode adds dir to the prompt.</p>
+<pre><code>pry(main)&gt; shell-mode
+pry(main):/home/x $
+</code></pre><p>Commands with <code>.</code> are shell commands.</p>
+<pre><code>pry(main)&gt; .cat hello.txt
+</code></pre><h2 id="hirb"><a href="#hirb" class="headerlink" title="hirb"></a>hirb</h2><p>Add the <a href="https://rubygems.org/gems/hirb" target="_blank" rel="noopener">hirb</a> gem.</p>
+<pre><code>&gt; table User.all
+&gt; view User.all
+&gt; view User.all, fields: %w[id name email]
+</code></pre><h2 id="pry-rescue"><a href="#pry-rescue" class="headerlink" title="pry-rescue"></a>pry-rescue</h2><p>Add the <a href="https://github.com/ConradIrwin/pry-rescue" target="_blank" rel="noopener">pry-rescue</a> gem.</p>
+<figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Pry::<span class="keyword">rescue</span> &#123;</span><br><span class="line">  <span class="comment"># raise exceptions here</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Or run:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundle exec rescue rspec</span><br></pre></td></tr></table></figure>
+<p>Additional commands:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pry(main)&gt; cd-cause</span><br><span class="line">pry(main)&gt; try-again</span><br></pre></td></tr></table></figure>
+<h2 id="pry-remote"><a href="#pry-remote" class="headerlink" title="pry-remote"></a>pry-remote</h2><p>Add the <a href="https://github.com/Mon-Ouie/pry-remote" target="_blank" rel="noopener">pry-remote</a> gem.</p>
+<figure class="highlight rb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># In your code:</span></span><br><span class="line">binding.remote_pry</span><br><span class="line"></span><br><span class="line"><span class="comment"># In the shell:</span></span><br><span class="line">bundle exec pry-remote</span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/pry/pry" target="_blank" rel="noopener">Pry</a></li>
+<li><a href="https://github.com/cldwalker/hirb" target="_blank" rel="noopener">Hirb</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#cd"><span class="toc-number">1.</span> <span class="toc-text">cd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code"><span class="toc-number">2.</span> <span class="toc-text">Code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docs"><span class="toc-number">3.</span> <span class="toc-text">Docs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Finding"><span class="toc-number">4.</span> <span class="toc-text">Finding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Editing"><span class="toc-number">5.</span> <span class="toc-text">Editing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gems"><span class="toc-number">6.</span> <span class="toc-text">Gems</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Misc-commands"><span class="toc-number">7.</span> <span class="toc-text">Misc commands</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Rails"><span class="toc-number"></span> <span class="toc-text">Rails</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Rails-console"><span class="toc-number">1.</span> <span class="toc-text">Rails console</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rails-1"><span class="toc-number">2.</span> <span class="toc-text">Rails</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ls"><span class="toc-number">3.</span> <span class="toc-text">ls</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell-integration"><span class="toc-number"></span> <span class="toc-text">Shell integration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hirb"><span class="toc-number"></span> <span class="toc-text">hirb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pry-rescue"><span class="toc-number"></span> <span class="toc-text">pry-rescue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pry-remote"><span class="toc-number"></span> <span class="toc-text">pry-remote</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number"></span> <span class="toc-text">Reference</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/pry/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/pry/&text=Pry"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/pry/&title=Pry"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/pry/&is_video=false&description=Pry"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Pry&body=Check out this article: https://rupertqin.github.io/devhints/pry/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/pry/&title=Pry"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/pry/&title=Pry"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/pry/&title=Pry"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/pry/&title=Pry"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/pry/&name=Pry&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

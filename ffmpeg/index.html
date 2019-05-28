@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Common switches123-codecs          # list codecs-c:v             # video codec (-vcodec) - &apos;copy&apos; to copy stream-c:a             # audio codec (-acodec) 1-fs SIZE         # limit file size (bytes) Bit">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ffmpeg">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/ffmpeg/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Common switches123-codecs          # list codecs-c:v             # video codec (-vcodec) - &apos;copy&apos; to copy stream-c:a             # audio codec (-acodec) 1-fs SIZE         # limit file size (bytes) Bit">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:34:27.717Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ffmpeg">
+<meta name="twitter:description" content="Common switches123-codecs          # list codecs-c:v             # video codec (-vcodec) - &apos;copy&apos; to copy stream-c:a             # audio codec (-acodec) 1-fs SIZE         # limit file size (bytes) Bit">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>ffmpeg</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../figlet/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../fetch/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/ffmpeg/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/ffmpeg/&text=ffmpeg"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/ffmpeg/&title=ffmpeg"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/ffmpeg/&is_video=false&description=ffmpeg"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=ffmpeg&body=Check out this article: https://rupertqin.github.io/devhints/ffmpeg/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/ffmpeg/&title=ffmpeg"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/ffmpeg/&title=ffmpeg"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/ffmpeg/&title=ffmpeg"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/ffmpeg/&title=ffmpeg"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/ffmpeg/&name=ffmpeg&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Common-switches"><span class="toc-number">1.</span> <span class="toc-text">Common switches</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bitrate"><span class="toc-number">2.</span> <span class="toc-text">Bitrate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Video"><span class="toc-number">3.</span> <span class="toc-text">Video</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Audio"><span class="toc-number">4.</span> <span class="toc-text">Audio</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Example"><span class="toc-number"></span> <span class="toc-text">Example</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ringtone-conversion-using-ffmpeg"><span class="toc-number">1.</span> <span class="toc-text">Ringtone conversion using ffmpeg</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#To-web"><span class="toc-number">2.</span> <span class="toc-text">To web</span></a></li></ol>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        ffmpeg
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.271Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/CLI/">CLI</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Common-switches"><a href="#Common-switches" class="headerlink" title="Common switches"></a>Common switches</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-codecs          <span class="comment"># list codecs</span></span><br><span class="line">-c:v             <span class="comment"># video codec (-vcodec) - 'copy' to copy stream</span></span><br><span class="line">-c:a             <span class="comment"># audio codec (-acodec)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-fs SIZE         <span class="comment"># limit file size (bytes)</span></span><br></pre></td></tr></table></figure>
+<h3 id="Bitrate"><a href="#Bitrate" class="headerlink" title="Bitrate"></a>Bitrate</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-b:v 1M          <span class="comment"># video bitrate (1M = 1Mbit/s)</span></span><br><span class="line">-b:a 1M          <span class="comment"># audio bitrate</span></span><br></pre></td></tr></table></figure>
+<h3 id="Video"><a href="#Video" class="headerlink" title="Video"></a>Video</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-aspect RATIO    <span class="comment"># aspect ratio (4:3, 16:9, or 1.25)</span></span><br><span class="line">-r RATE          <span class="comment"># frame rate per sec</span></span><br><span class="line">-s WIDTHxHEIGHT  <span class="comment"># frame size</span></span><br><span class="line">-vn              <span class="comment"># no video</span></span><br></pre></td></tr></table></figure>
+<h3 id="Audio"><a href="#Audio" class="headerlink" title="Audio"></a>Audio</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-aq QUALITY      <span class="comment"># audio quality (codec-specific)</span></span><br><span class="line">-ar 44100        <span class="comment"># audio sample rate (hz)</span></span><br><span class="line">-ac 1            <span class="comment"># audio channels (1=mono, 2=stereo)</span></span><br><span class="line">-an              <span class="comment"># no audio</span></span><br><span class="line">-vol N           <span class="comment"># volume (256=normal)</span></span><br></pre></td></tr></table></figure>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><h3 id="Ringtone-conversion-using-ffmpeg"><a href="#Ringtone-conversion-using-ffmpeg" class="headerlink" title="Ringtone conversion using ffmpeg"></a>Ringtone conversion using ffmpeg</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i foo.mp3 -ac 1 -ab 128000 -f mp4 -acodec libfaac -y target.m4r</span><br></pre></td></tr></table></figure>
+<h3 id="To-web"><a href="#To-web" class="headerlink" title="To web"></a>To web</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># no audio</span></span><br><span class="line">ffmpeg -i input.mov -vcodec h264   -an -strict -2 output.mp4</span><br><span class="line">ffmpeg -i input.mov -vcodec libvpx -an output.webm</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mov -vcodec h264 -acodec aac -strict -2 output.mp4</span><br><span class="line">ffmpeg -i input.mov -vcodec libvpx -acodec libvorbis output.webm</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">width</span>=<span class="string">"320"</span> <span class="attr">height</span>=<span class="string">"240"</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"movie.mp4"</span> <span class="attr">type</span>=<span class="string">'video/mp4'</span>&gt;</span><span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"movie.webm"</span> <span class="attr">type</span>=<span class="string">'video/ogg'</span>&gt;</span><span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Common-switches"><span class="toc-number">1.</span> <span class="toc-text">Common switches</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bitrate"><span class="toc-number">2.</span> <span class="toc-text">Bitrate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Video"><span class="toc-number">3.</span> <span class="toc-text">Video</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Audio"><span class="toc-number">4.</span> <span class="toc-text">Audio</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Example"><span class="toc-number"></span> <span class="toc-text">Example</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ringtone-conversion-using-ffmpeg"><span class="toc-number">1.</span> <span class="toc-text">Ringtone conversion using ffmpeg</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#To-web"><span class="toc-number">2.</span> <span class="toc-text">To web</span></a></li></ol>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/ffmpeg/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/ffmpeg/&text=ffmpeg"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/ffmpeg/&title=ffmpeg"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/ffmpeg/&is_video=false&description=ffmpeg"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=ffmpeg&body=Check out this article: https://rupertqin.github.io/devhints/ffmpeg/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/ffmpeg/&title=ffmpeg"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/ffmpeg/&title=ffmpeg"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/ffmpeg/&title=ffmpeg"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/ffmpeg/&title=ffmpeg"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/ffmpeg/&name=ffmpeg&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

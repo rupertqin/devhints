@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Fork mode   Command Description     pm2 start app.js --name my-api Start and name a process    Cluster mode   Command Description     pm2 start app.js -i 0 Will start maximum processes with LB dependi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pm2">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/pm2/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Fork mode   Command Description     pm2 start app.js --name my-api Start and name a process    Cluster mode   Command Description     pm2 start app.js -i 0 Will start maximum processes with LB dependi">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-03-14T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="pm2">
+<meta name="twitter:description" content="Fork mode   Command Description     pm2 start app.js --name my-api Start and name a process    Cluster mode   Command Description     pm2 start app.js -i 0 Will start maximum processes with LB dependi">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>pm2</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../polyfill.io/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../plantuml/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/pm2/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/pm2/&text=pm2"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/pm2/&title=pm2"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/pm2/&is_video=false&description=pm2"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=pm2&body=Check out this article: https://rupertqin.github.io/devhints/pm2/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/pm2/&title=pm2"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/pm2/&title=pm2"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/pm2/&title=pm2"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/pm2/&title=pm2"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/pm2/&name=pm2&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Fork-mode"><span class="toc-number">1.</span> <span class="toc-text">Fork mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cluster-mode"><span class="toc-number">2.</span> <span class="toc-text">Cluster mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Listing"><span class="toc-number">3.</span> <span class="toc-text">Listing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Logs"><span class="toc-number">4.</span> <span class="toc-text">Logs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Actions"><span class="toc-number">5.</span> <span class="toc-text">Actions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Misc"><span class="toc-number">6.</span> <span class="toc-text">Misc</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        pm2
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.377Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/CLI/">CLI</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Fork-mode"><a href="#Fork-mode" class="headerlink" title="Fork mode"></a>Fork mode</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pm2 start app.js --name my-api</code></td>
+<td>Start and name a process</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Cluster-mode"><a href="#Cluster-mode" class="headerlink" title="Cluster mode"></a>Cluster mode</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pm2 start app.js -i 0</code></td>
+<td>Will start maximum processes with LB depending on available CPUs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Listing"><a href="#Listing" class="headerlink" title="Listing"></a>Listing</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pm2 list</code></td>
+<td>Display all processes status</td>
+</tr>
+<tr>
+<td><code>pm2 jlist</code></td>
+<td>Print process list in raw JSON</td>
+</tr>
+<tr>
+<td><code>pm2 prettylist</code></td>
+<td>Print process list in beautified JSON</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>pm2 describe 0</code></td>
+<td>Display all information about a specific process</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>pm2 monit</code></td>
+<td>Monitor all processes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Logs"><a href="#Logs" class="headerlink" title="Logs"></a>Logs</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pm2 logs [--raw]</code></td>
+<td>Display all processes logs in streaming</td>
+</tr>
+<tr>
+<td><code>pm2 flush</code></td>
+<td>Empty all log files</td>
+</tr>
+<tr>
+<td><code>pm2 reloadLogs</code></td>
+<td>Reload all logs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Actions"><a href="#Actions" class="headerlink" title="Actions"></a>Actions</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pm2 stop all</code></td>
+<td>Stop all processes</td>
+</tr>
+<tr>
+<td><code>pm2 restart all</code></td>
+<td>Restart all processes</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>pm2 reload all</code></td>
+<td>Will 0s downtime reload (for NETWORKED apps)</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>pm2 stop 0</code></td>
+<td>Stop specific process id</td>
+</tr>
+<tr>
+<td><code>pm2 restart 0</code></td>
+<td>Restart specific process id</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>pm2 delete 0</code></td>
+<td>Will remove process from pm2 list</td>
+</tr>
+<tr>
+<td><code>pm2 delete all</code></td>
+<td>Will remove all processes from pm2 list</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pm2 reset &lt;process&gt;</code></td>
+<td>Reset meta data (restarted time…)</td>
+</tr>
+<tr>
+<td><code>pm2 updatePM2</code></td>
+<td>Update in memory pm2</td>
+</tr>
+<tr>
+<td><code>pm2 ping</code></td>
+<td>Ensure pm2 daemon has been launched</td>
+</tr>
+<tr>
+<td><code>pm2 sendSignal SIGUSR2 my-app</code></td>
+<td>Send system signal to script</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>pm2 start app.js --no-daemon</code></td>
+<td>Run pm2 daemon in the foreground if it doesn’t exist already</td>
+</tr>
+<tr>
+<td><code>pm2 start app.js --no-vizion</code></td>
+<td>Skip vizion features (versioning control)</td>
+</tr>
+<tr>
+<td><code>pm2 start app.js --no-autorestart</code></td>
+<td>Do not automatically restart app</td>
+</tr>
+</tbody>
+</table>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Fork-mode"><span class="toc-number">1.</span> <span class="toc-text">Fork mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cluster-mode"><span class="toc-number">2.</span> <span class="toc-text">Cluster mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Listing"><span class="toc-number">3.</span> <span class="toc-text">Listing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Logs"><span class="toc-number">4.</span> <span class="toc-text">Logs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Actions"><span class="toc-number">5.</span> <span class="toc-text">Actions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Misc"><span class="toc-number">6.</span> <span class="toc-text">Misc</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/pm2/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/pm2/&text=pm2"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/pm2/&title=pm2"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/pm2/&is_video=false&description=pm2"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=pm2&body=Check out this article: https://rupertqin.github.io/devhints/pm2/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/pm2/&title=pm2"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/pm2/&title=pm2"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/pm2/&title=pm2"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/pm2/&title=pm2"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/pm2/&name=pm2&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

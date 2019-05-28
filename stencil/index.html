@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Quick-start guideGetting startedJavaScript123456789101112131415import &amp;#123; Component, Prop, State &amp;#125; from &apos;@stencil/core&apos;@Component(&amp;#123;  tag: &apos;my-component&apos;,  styleUrl: &apos;my-component.scss&apos;&amp;#1">
+<meta name="keywords" content="@Component,@Prop(),@State(),render(),componentWillLoad(),componentWillUpdate(),Templating,Lifecycle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stencil">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/stencil/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Quick-start guideGetting startedJavaScript123456789101112131415import &amp;#123; Component, Prop, State &amp;#125; from &apos;@stencil/core&apos;@Component(&amp;#123;  tag: &apos;my-component&apos;,  styleUrl: &apos;my-component.scss&apos;&amp;#1">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-10-10T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Stencil">
+<meta name="twitter:description" content="Quick-start guideGetting startedJavaScript123456789101112131415import &amp;#123; Component, Prop, State &amp;#125; from &apos;@stencil/core&apos;@Component(&amp;#123;  tag: &apos;my-component&apos;,  styleUrl: &apos;my-component.scss&apos;&amp;#1">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Stencil</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../stylus/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../sql-join/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/stencil/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/stencil/&text=Stencil"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/stencil/&title=Stencil"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/stencil/&is_video=false&description=Stencil"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Stencil&body=Check out this article: https://rupertqin.github.io/devhints/stencil/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/stencil/&title=Stencil"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/stencil/&title=Stencil"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/stencil/&title=Stencil"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/stencil/&title=Stencil"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/stencil/&name=Stencil&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-start-guide"><span class="toc-number">1.</span> <span class="toc-text">Quick-start guide</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#JavaScript"><span class="toc-number">1.1.1.</span> <span class="toc-text">JavaScript</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML"><span class="toc-number">1.1.2.</span> <span class="toc-text">HTML</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM-events"><span class="toc-number">1.2.</span> <span class="toc-text">DOM events</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Multiple-children"><span class="toc-number">1.3.</span> <span class="toc-text">Multiple children</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#State"><span class="toc-number">2.</span> <span class="toc-text">State</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Managing-state"><span class="toc-number">2.1.</span> <span class="toc-text">Managing state</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Updating-arrays-and-objects"><span class="toc-number">2.2.</span> <span class="toc-text">Updating arrays and objects</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#✗-Bad"><span class="toc-number">2.2.1.</span> <span class="toc-text">✗ Bad</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#✓-OK"><span class="toc-number">2.2.2.</span> <span class="toc-text">✓ OK</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Slots"><span class="toc-number">3.</span> <span class="toc-text">Slots</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-slot"><span class="toc-number">3.1.</span> <span class="toc-text">Using slot</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Component"><span class="toc-number">3.1.1.</span> <span class="toc-text">Component</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Multiple-slots"><span class="toc-number">3.2.</span> <span class="toc-text">Multiple slots</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Component-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">Component</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lifecycle"><span class="toc-number">4.</span> <span class="toc-text">Lifecycle</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Lifecycle-hooks"><span class="toc-number">4.1.</span> <span class="toc-text">Lifecycle hooks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Example"><span class="toc-number">4.2.</span> <span class="toc-text">Example</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">5.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Stencil
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.440Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/JavaScript-libraries/">JavaScript libraries</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Quick-start-guide"><a href="#Quick-start-guide" class="headerlink" title="Quick-start guide"></a>Quick-start guide</h2><h3 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h3><h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Component, Prop, State &#125; <span class="keyword">from</span> <span class="string">'@stencil/core'</span></span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">  tag: <span class="string">'my-component'</span>,</span><br><span class="line">  styleUrl: <span class="string">'my-component.scss'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> </span>&#123;</span><br><span class="line">  @Prop() name: string</span><br><span class="line">  @State() isVisible: boolean = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> &lt;p&gt;I am &#123;this.name&#125;!&lt;/p&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">my-component</span> <span class="attr">name</span>=<span class="string">'Groot'</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>That’s the same example in the <a href="https://github.com/ionic-team/stencil" target="_blank" rel="noopener">Readme</a>, that’s as simple as you can get! Just use <code>&lt;my-component&gt;</code> like you would use any other HTML tag.</p>
+<h3 id="DOM-events"><a href="#DOM-events" class="headerlink" title="DOM events"></a>DOM events</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> </span>&#123;</span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;input</span><br><span class="line">        onChange=&#123;(event: UIEvent) =&gt; <span class="keyword">this</span>.inputChanged(event)&#125;</span><br><span class="line">      /&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  inputChanged (event) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'input changed:'</span>, event.target.value)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Stencil uses DOM events.</p>
+<p>See: <a href="https://stenciljs.com/docs/templating/#handling-user-input" target="_blank" rel="noopener">Handling user input</a></p>
+<h3 id="Multiple-children"><a href="#Multiple-children" class="headerlink" title="Multiple children"></a>Multiple children</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">render () &#123;</span><br><span class="line">  <span class="keyword">return</span> [</span><br><span class="line">    &lt;h1&gt;Hello there&lt;<span class="regexp">/h1&gt;,</span></span><br><span class="line"><span class="regexp">    &lt;p&gt;This component returns multiple nodes&lt;/</span>p&gt;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>render()</code> can return an array of elements.</p>
+<p>See: <a href="https://stenciljs.com/docs/templating#complex-template-content" target="_blank" rel="noopener">Complex template content</a></p>
+<h2 id="State"><a href="#State" class="headerlink" title="State"></a>State</h2><h3 id="Managing-state"><a href="#Managing-state" class="headerlink" title="Managing state"></a>Managing state</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> </span>&#123;</span><br><span class="line">  @State() isVisible: boolean</span><br><span class="line"></span><br><span class="line">  show () &#123;</span><br><span class="line">    <span class="keyword">this</span>.isVisible = <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Just do assignments. You can’t do mutations though, see next section.</p>
+<p>See: <a href="https://stenciljs.com/docs/decorators#managing-component-state" target="_blank" rel="noopener">Managing component state</a></p>
+<h3 id="Updating-arrays-and-objects"><a href="#Updating-arrays-and-objects" class="headerlink" title="Updating arrays and objects"></a>Updating arrays and objects</h3><h4 id="✗-Bad"><a href="#✗-Bad" class="headerlink" title="✗ Bad"></a>✗ Bad</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.names.push(<span class="string">'Larry'</span>)  <span class="comment">// ⚠️</span></span><br><span class="line"><span class="keyword">this</span>.options.show = <span class="literal">true</span>  <span class="comment">// ⚠️</span></span><br></pre></td></tr></table></figure>
+<h4 id="✓-OK"><a href="#✓-OK" class="headerlink" title="✓ OK"></a>✓ OK</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.names = [ ...this.names, <span class="string">'Larry'</span> ]</span><br><span class="line"><span class="keyword">this</span>.options = &#123; ...this.options, <span class="attr">show</span>: <span class="literal">true</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>Mutable operations such as <code>push()</code> won’t work. You’ll need to assign a new copy.</p>
+<p>See: <a href="https://stenciljs.com/docs/handling-arrays" target="_blank" rel="noopener">Updating arrays</a></p>
+<h2 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h2><h3 id="Using-slot"><a href="#Using-slot" class="headerlink" title="Using slot"></a>Using slot</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">my-component</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>Hello, friends<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">slot</span> /&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>You can pass JSX/HTML as child elements. Use the <code>slot</code> tag to use them inside your component.</p>
+<p>See: <a href="https://stenciljs.com/docs/templating#slots" target="_blank" rel="noopener">Slots</a></p>
+<h3 id="Multiple-slots"><a href="#Multiple-slots" class="headerlink" title="Multiple slots"></a>Multiple slots</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">my-component</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">slot</span>=<span class="string">'my-header'</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">slot</span>=<span class="string">'my-footer'</span>&gt;</span>Thanks<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="Component-1"><a href="#Component-1" class="headerlink" title="Component"></a>Component</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">render () &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line">    &lt;header&gt;&lt;slot name='my-header' /&gt;&lt;/header&gt;</span><br><span class="line">    &lt;footer&gt;&lt;slot name='my-footer' /&gt;&lt;/footer&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://stenciljs.com/docs/templating#slots" target="_blank" rel="noopener">Slots</a></p>
+<h2 id="Lifecycle"><a href="#Lifecycle" class="headerlink" title="Lifecycle"></a>Lifecycle</h2><h3 id="Lifecycle-hooks"><a href="#Lifecycle-hooks" class="headerlink" title="Lifecycle hooks"></a>Lifecycle hooks</h3><table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>componentWillLoad()</code></td>
+<td>Before rendering</td>
+</tr>
+<tr>
+<td><code>componentDidLoad()</code></td>
+<td>After rendering</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>componentWillUpdate()</code></td>
+<td>Before updating</td>
+</tr>
+<tr>
+<td><code>componentDidUpdate()</code></td>
+<td>After updating</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>componentDidUnload()</code></td>
+<td>After unmounting</td>
+</tr>
+</tbody>
+</table>
+<p>See: <a href="https://stenciljs.com/docs/component-lifecycle" target="_blank" rel="noopener">Component lifecycle</a></p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> </span>&#123;</span><br><span class="line">  componentWillUpdate () &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'updating'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://stenciljs.com/docs/" target="_blank" rel="noopener">Stencil docs</a> <em>(stenciljs.com)</em></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-start-guide"><span class="toc-number">1.</span> <span class="toc-text">Quick-start guide</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#JavaScript"><span class="toc-number">1.1.1.</span> <span class="toc-text">JavaScript</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML"><span class="toc-number">1.1.2.</span> <span class="toc-text">HTML</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM-events"><span class="toc-number">1.2.</span> <span class="toc-text">DOM events</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Multiple-children"><span class="toc-number">1.3.</span> <span class="toc-text">Multiple children</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#State"><span class="toc-number">2.</span> <span class="toc-text">State</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Managing-state"><span class="toc-number">2.1.</span> <span class="toc-text">Managing state</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Updating-arrays-and-objects"><span class="toc-number">2.2.</span> <span class="toc-text">Updating arrays and objects</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#✗-Bad"><span class="toc-number">2.2.1.</span> <span class="toc-text">✗ Bad</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#✓-OK"><span class="toc-number">2.2.2.</span> <span class="toc-text">✓ OK</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Slots"><span class="toc-number">3.</span> <span class="toc-text">Slots</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-slot"><span class="toc-number">3.1.</span> <span class="toc-text">Using slot</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Component"><span class="toc-number">3.1.1.</span> <span class="toc-text">Component</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Multiple-slots"><span class="toc-number">3.2.</span> <span class="toc-text">Multiple slots</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Component-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">Component</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lifecycle"><span class="toc-number">4.</span> <span class="toc-text">Lifecycle</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Lifecycle-hooks"><span class="toc-number">4.1.</span> <span class="toc-text">Lifecycle hooks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Example"><span class="toc-number">4.2.</span> <span class="toc-text">Example</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">5.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/stencil/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/stencil/&text=Stencil"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/stencil/&title=Stencil"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/stencil/&is_video=false&description=Stencil"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Stencil&body=Check out this article: https://rupertqin.github.io/devhints/stencil/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/stencil/&title=Stencil"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/stencil/&title=Stencil"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/stencil/&title=Stencil"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/stencil/&title=Stencil"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/stencil/&name=Stencil&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

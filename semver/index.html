@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="SemverGiven a version number MAJOR.MINOR.PATCH: | MAJOR | incompatible API changes                 || MINOR | add functionality (backwards-compatible) || PATCH | bug fixes (backwards-compatible)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Semver">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/semver/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="SemverGiven a version number MAJOR.MINOR.PATCH: | MAJOR | incompatible API changes                 || MINOR | add functionality (backwards-compatible) || PATCH | bug fixes (backwards-compatible)">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-22T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Semver">
+<meta name="twitter:description" content="SemverGiven a version number MAJOR.MINOR.PATCH: | MAJOR | incompatible API changes                 || MINOR | add functionality (backwards-compatible) || PATCH | bug fixes (backwards-compatible)">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Semver</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../sequel/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../sed/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/semver/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/semver/&text=Semver"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/semver/&title=Semver"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/semver/&is_video=false&description=Semver"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Semver&body=Check out this article: https://rupertqin.github.io/devhints/semver/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/semver/&title=Semver"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/semver/&title=Semver"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/semver/&title=Semver"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/semver/&title=Semver"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/semver/&name=Semver&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Semver"><span class="toc-number">1.</span> <span class="toc-text">Semver</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Simple-ranges"><span class="toc-number">2.</span> <span class="toc-text">Simple ranges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ranges"><span class="toc-number">3.</span> <span class="toc-text">Ranges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hyphenated-ranges"><span class="toc-number">4.</span> <span class="toc-text">Hyphenated ranges</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Partial-right"><span class="toc-number">4.1.</span> <span class="toc-text">Partial right</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Partial-left"><span class="toc-number">4.2.</span> <span class="toc-text">Partial left</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Combining-ranges"><span class="toc-number">5.</span> <span class="toc-text">Combining ranges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pre-releases"><span class="toc-number">6.</span> <span class="toc-text">Pre-releases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Explanation"><span class="toc-number">7.</span> <span class="toc-text">Explanation</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number"></span> <span class="toc-text">References</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Semver
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.427Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Semver"><a href="#Semver" class="headerlink" title="Semver"></a>Semver</h3><p>Given a version number <code>MAJOR.MINOR.PATCH</code>:</p>
+<p>| <code>MAJOR</code> | incompatible API changes                 |<br>| <code>MINOR</code> | add functionality (backwards-compatible) |<br>| <code>PATCH</code> | bug fixes (backwards-compatible)         |</p>
+<h3 id="Simple-ranges"><a href="#Simple-ranges" class="headerlink" title="Simple ranges"></a>Simple ranges</h3><pre><code>  1.2.3
+ =1.2.3
+ &gt;1.2.3
+ &lt;1.2.3
+&gt;=1.2.3
+</code></pre><p>Note that suffixed versions (<code>1.2.3-rc1</code>) are not matched.</p>
+<h3 id="Ranges"><a href="#Ranges" class="headerlink" title="Ranges"></a>Ranges</h3><table>
+<thead>
+<tr>
+<th>Range</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~1.2.3</code></td>
+<td>is <code>&gt;=1.2.3 &lt;1.3.0</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>^1.2.3</code></td>
+<td>is <code>&gt;=1.2.3 &lt;2.0.0</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>^0.2.3</code></td>
+<td>is <code>&gt;=0.2.3 &lt;0.3.0</code></td>
+<td>(0.x.x is special)</td>
+</tr>
+<tr>
+<td><code>^0.0.1</code></td>
+<td>is  <code>=0.0.1</code></td>
+<td>(0.0.x is special)</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>^1.2</code></td>
+<td>is <code>&gt;=1.2.0 &lt;2.0.0</code></td>
+<td>(like ^1.2.0)</td>
+</tr>
+<tr>
+<td><code>~1.2</code></td>
+<td>is <code>&gt;=1.2.0 &lt;1.3.0</code></td>
+<td>(like ~1.2.0)</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>^1</code></td>
+<td>is <code>&gt;=1.0.0 &lt;2.0.0</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~1</code></td>
+<td>same</td>
+<td></td>
+</tr>
+<tr>
+<td><code>1.x</code></td>
+<td>same</td>
+<td></td>
+</tr>
+<tr>
+<td><code>1.*</code></td>
+<td>same</td>
+<td></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>same</td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>any version</td>
+<td></td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>same</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Hyphenated-ranges"><a href="#Hyphenated-ranges" class="headerlink" title="Hyphenated ranges"></a>Hyphenated ranges</h3><table>
+<thead>
+<tr>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1.2.3 - 2.3.0</code></td>
+<td>is <code>&gt;=1.2.3 &lt;=2.3.4</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="Partial-right"><a href="#Partial-right" class="headerlink" title="Partial right"></a>Partial right</h4><table>
+<thead>
+<tr>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1.2.3 - 2.3</code></td>
+<td>is <code>&gt;=1.2.3 &lt;2.4.0</code></td>
+</tr>
+<tr>
+<td><code>1.2.3 - 2</code></td>
+<td>is <code>&gt;=1.2.3 &lt;3.0.0</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="Partial-left"><a href="#Partial-left" class="headerlink" title="Partial left"></a>Partial left</h4><table>
+<thead>
+<tr>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1.2 - 2.3.0</code></td>
+<td>is <code>1.2.0 - 2.3.0</code></td>
+</tr>
+</tbody>
+</table>
+<p>When the right is partial (eg, <code>2.3</code>), missing pieces are assumed to be <code>x</code> (eg, <code>2.3.x</code>).</p>
+<p>When the left is partial (eg, <code>1.2</code>), missing pieces are assumed to be <code>0</code> (eg, <code>1.2.0</code>).</p>
+<h3 id="Combining-ranges"><a href="#Combining-ranges" class="headerlink" title="Combining ranges"></a>Combining ranges</h3><table>
+<thead>
+<tr>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;=0.14 &lt;16</code></td>
+<td>And (space-separated)</td>
+</tr>
+<tr>
+<td>`0.14.x</td>
+<td></td>
+<td>15.x.x`</td>
+<td>Or (pipe-separated)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Pre-releases"><a href="#Pre-releases" class="headerlink" title="Pre-releases"></a>Pre-releases</h3><pre><code>1.2.3-prerelease+build
+</code></pre><h3 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h3><p>| <code>^</code> | means “compatible with” |<br>| <code>~</code> | means “reasonably close to” |<br>| <code>0.x.x</code> | is for “initial development” |<br>| <code>1.x.x</code> | means public API is defined |</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="http://semver.org/" target="_blank" rel="noopener">http://semver.org/</a></li>
+<li><a href="https://docs.npmjs.com/misc/semver" target="_blank" rel="noopener">https://docs.npmjs.com/misc/semver</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Semver"><span class="toc-number">1.</span> <span class="toc-text">Semver</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Simple-ranges"><span class="toc-number">2.</span> <span class="toc-text">Simple ranges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ranges"><span class="toc-number">3.</span> <span class="toc-text">Ranges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hyphenated-ranges"><span class="toc-number">4.</span> <span class="toc-text">Hyphenated ranges</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Partial-right"><span class="toc-number">4.1.</span> <span class="toc-text">Partial right</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Partial-left"><span class="toc-number">4.2.</span> <span class="toc-text">Partial left</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Combining-ranges"><span class="toc-number">5.</span> <span class="toc-text">Combining ranges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pre-releases"><span class="toc-number">6.</span> <span class="toc-text">Pre-releases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Explanation"><span class="toc-number">7.</span> <span class="toc-text">Explanation</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number"></span> <span class="toc-text">References</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/semver/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/semver/&text=Semver"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/semver/&title=Semver"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/semver/&is_video=false&description=Semver"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Semver&body=Check out this article: https://rupertqin.github.io/devhints/semver/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/semver/&title=Semver"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/semver/&title=Semver"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/semver/&title=Semver"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/semver/&title=Semver"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/semver/&name=Semver&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

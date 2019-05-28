@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Var assignment123uglify = $(uglify)        # lazy assignmentcompressor := $(uglify)   # immediate assignmentprefix ?= /usr/local      # safe assignment = expressions are only evaluated when they’re be">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Makefile">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/makefile/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Var assignment123uglify = $(uglify)        # lazy assignmentcompressor := $(uglify)   # immediate assignmentprefix ?= /usr/local      # safe assignment = expressions are only evaluated when they’re be">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:34:27.835Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Makefile">
+<meta name="twitter:description" content="Var assignment123uglify = $(uglify)        # lazy assignmentcompressor := $(uglify)   # immediate assignmentprefix ?= /usr/local      # safe assignment = expressions are only evaluated when they’re be">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Makefile</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../man/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../make-assets/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/makefile/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/makefile/&text=Makefile"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/makefile/&title=Makefile"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/makefile/&is_video=false&description=Makefile"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Makefile&body=Check out this article: https://rupertqin.github.io/devhints/makefile/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/makefile/&title=Makefile"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/makefile/&title=Makefile"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/makefile/&title=Makefile"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/makefile/&title=Makefile"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/makefile/&name=Makefile&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Var-assignment"><span class="toc-number">1.</span> <span class="toc-text">Var assignment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Magic-variables"><span class="toc-number">2.</span> <span class="toc-text">Magic variables</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Command-prefixes"><span class="toc-number">3.</span> <span class="toc-text">Command prefixes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Find-files"><span class="toc-number">4.</span> <span class="toc-text">Find files</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Substitutions"><span class="toc-number">5.</span> <span class="toc-text">Substitutions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#More-functions"><span class="toc-number">6.</span> <span class="toc-text">More functions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Building-files"><span class="toc-number">7.</span> <span class="toc-text">Building files</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Includes"><span class="toc-number">8.</span> <span class="toc-text">Includes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Options"><span class="toc-number">9.</span> <span class="toc-text">Options</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conditionals"><span class="toc-number">10.</span> <span class="toc-text">Conditionals</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recursive"><span class="toc-number">11.</span> <span class="toc-text">Recursive</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Further-reading"><span class="toc-number">12.</span> <span class="toc-text">Further reading</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Makefile
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.341Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/CLI/">CLI</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Var-assignment"><a href="#Var-assignment" class="headerlink" title="Var assignment"></a>Var assignment</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">uglify = <span class="variable">$(uglify)</span>        <span class="comment"># lazy assignment</span></span><br><span class="line">compressor := <span class="variable">$(uglify)</span>   <span class="comment"># immediate assignment</span></span><br><span class="line">prefix ?= /usr/local      <span class="comment"># safe assignment</span></span><br></pre></td></tr></table></figure>
+<p><code>=</code> expressions are only evaluated when they’re being used.</p>
+<h2 id="Magic-variables"><a href="#Magic-variables" class="headerlink" title="Magic variables"></a>Magic variables</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">out.o: src.c src.h</span></span><br><span class="line">  <span class="variable">$@</span>   <span class="comment"># "out.o" (target)</span></span><br><span class="line">  <span class="variable">$&lt;</span>   <span class="comment"># "src.c" (first prerequisite)</span></span><br><span class="line">  <span class="variable">$^</span>   <span class="comment"># "src.c src.h" (all prerequisites)</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line">  <span class="variable">$*</span>   <span class="comment"># the 'stem' with which an implicit rule matches ("foo" in "foo.c")</span></span><br><span class="line"></span><br><span class="line"><span class="section">also:</span></span><br><span class="line">  <span class="variable">$+</span>   <span class="comment"># prerequisites (all, with duplication)</span></span><br><span class="line">  <span class="variable">$?</span>   <span class="comment"># prerequisites (new ones)</span></span><br><span class="line">  $|   <span class="comment"># prerequisites (order-only?)</span></span><br><span class="line"></span><br><span class="line">  $(@D) <span class="comment"># target directory</span></span><br></pre></td></tr></table></figure>
+<h2 id="Command-prefixes"><a href="#Command-prefixes" class="headerlink" title="Command prefixes"></a>Command prefixes</h2><table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-</code></td>
+<td>Ignore errors</td>
+</tr>
+<tr>
+<td><code>@</code></td>
+<td>Don’t print command</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>Run even if Make is in ‘don’t execute’ mode</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">build:</span></span><br><span class="line">    @echo <span class="string">"compiling"</span></span><br><span class="line">    -gcc <span class="variable">$&lt;</span> <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">-include</span> .depend</span><br></pre></td></tr></table></figure>
+<h2 id="Find-files"><a href="#Find-files" class="headerlink" title="Find files"></a>Find files</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">js_files  := <span class="variable">$(<span class="built_in">wildcard</span> test/*.js)</span></span><br><span class="line">all_files := <span class="variable">$(<span class="built_in">shell</span> find images -name "*")</span></span><br></pre></td></tr></table></figure>
+<h2 id="Substitutions"><a href="#Substitutions" class="headerlink" title="Substitutions"></a>Substitutions</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">file     = $(SOURCE:.cpp=.o)   <span class="comment"># foo.cpp =&gt; foo.o</span></span><br><span class="line">outputs  = $(files:src/%.coffee=lib/%.js)</span><br><span class="line"></span><br><span class="line">outputs  = <span class="variable">$(<span class="built_in">patsubst</span> %.c, %.o, $(<span class="built_in">wildcard</span> *.c)</span>)</span><br><span class="line">assets   = <span class="variable">$(<span class="built_in">patsubst</span> images/%, assets/%, $(<span class="built_in">wildcard</span> images/*)</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="More-functions"><a href="#More-functions" class="headerlink" title="More functions"></a>More functions</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$(<span class="built_in">strip</span> <span class="variable">$(string_var)</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$(<span class="built_in">filter</span> %.less, <span class="variable">$(files)</span>)</span></span><br><span class="line"><span class="variable">$(<span class="built_in">filter</span>-out %.less, <span class="variable">$(files)</span>)</span></span><br></pre></td></tr></table></figure>
+<h2 id="Building-files"><a href="#Building-files" class="headerlink" title="Building files"></a>Building files</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line">  ffmpeg -i <span class="variable">$&lt;</span> &gt; <span class="variable">$@</span>   <span class="comment"># Input and output</span></span><br><span class="line">  foo <span class="variable">$^</span></span><br></pre></td></tr></table></figure>
+<h2 id="Includes"><a href="#Includes" class="headerlink" title="Includes"></a>Includes</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">-include</span> foo.make</span><br></pre></td></tr></table></figure>
+<h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">make</span><br><span class="line">  -e, --environment-overrides</span><br><span class="line">  -B, --always-make</span><br><span class="line">  -s, --silent</span><br><span class="line"></span><br><span class="line">  -j, --<span class="built_in">jobs</span>=N   <span class="comment"># parallel processing</span></span><br></pre></td></tr></table></figure>
+<h2 id="Conditionals"><a href="#Conditionals" class="headerlink" title="Conditionals"></a>Conditionals</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">foo: <span class="variable">$(objects)</span></span></span><br><span class="line"><span class="keyword">ifeq</span> (<span class="variable">$(CC)</span>,gcc)</span><br><span class="line">        <span class="variable">$(CC)</span> -o foo <span class="variable">$(objects)</span> <span class="variable">$(libs_for_gcc)</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">        <span class="variable">$(CC)</span> -o foo <span class="variable">$(objects)</span> <span class="variable">$(normal_libs)</span></span><br><span class="line"><span class="keyword">endif</span></span><br></pre></td></tr></table></figure>
+<h2 id="Recursive"><a href="#Recursive" class="headerlink" title="Recursive"></a>Recursive</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">deploy:</span></span><br><span class="line">  <span class="variable">$(MAKE)</span> deploy2</span><br></pre></td></tr></table></figure>
+<h2 id="Further-reading"><a href="#Further-reading" class="headerlink" title="Further reading"></a>Further reading</h2><ul>
+<li><a href="https://gist.github.com/isaacs/62a2d1825d04437c6f08" target="_blank" rel="noopener">isaacs’s Makefile</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Var-assignment"><span class="toc-number">1.</span> <span class="toc-text">Var assignment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Magic-variables"><span class="toc-number">2.</span> <span class="toc-text">Magic variables</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Command-prefixes"><span class="toc-number">3.</span> <span class="toc-text">Command prefixes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Find-files"><span class="toc-number">4.</span> <span class="toc-text">Find files</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Substitutions"><span class="toc-number">5.</span> <span class="toc-text">Substitutions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#More-functions"><span class="toc-number">6.</span> <span class="toc-text">More functions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Building-files"><span class="toc-number">7.</span> <span class="toc-text">Building files</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Includes"><span class="toc-number">8.</span> <span class="toc-text">Includes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Options"><span class="toc-number">9.</span> <span class="toc-text">Options</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conditionals"><span class="toc-number">10.</span> <span class="toc-text">Conditionals</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recursive"><span class="toc-number">11.</span> <span class="toc-text">Recursive</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Further-reading"><span class="toc-number">12.</span> <span class="toc-text">Further reading</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/makefile/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/makefile/&text=Makefile"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/makefile/&title=Makefile"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/makefile/&is_video=false&description=Makefile"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Makefile&body=Check out this article: https://rupertqin.github.io/devhints/makefile/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/makefile/&title=Makefile"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/makefile/&title=Makefile"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/makefile/&title=Makefile"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/makefile/&title=Makefile"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/makefile/&name=Makefile&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Installation12# Install the gemsgem install jekyll bundler 123# Create a new site at `./myblog`jekyll new myblogcd myblog 123456# Optional: if you&apos;re targeting github-pages,# use this Gemfile instead.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jekyll">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/jekyll/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Installation12# Install the gemsgem install jekyll bundler 123# Create a new site at `./myblog`jekyll new myblogcd myblog 123456# Optional: if you&apos;re targeting github-pages,# use this Gemfile instead.">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-08-31T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jekyll">
+<meta name="twitter:description" content="Installation12# Install the gemsgem install jekyll bundler 123# Create a new site at `./myblog`jekyll new myblogcd myblog 123456# Optional: if you&apos;re targeting github-pages,# use this Gemfile instead.">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Jekyll</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../jest/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../jasmine/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/jekyll/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/jekyll/&text=Jekyll"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/jekyll/&title=Jekyll"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/jekyll/&is_video=false&description=Jekyll"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Jekyll&body=Check out this article: https://rupertqin.github.io/devhints/jekyll/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/jekyll/&title=Jekyll"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/jekyll/&title=Jekyll"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/jekyll/&title=Jekyll"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/jekyll/&title=Jekyll"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/jekyll/&name=Jekyll&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Installation"><span class="toc-number">1.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Directories"><span class="toc-number">2.</span> <span class="toc-text">Directories</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Front-matter"><span class="toc-number"></span> <span class="toc-text">Front-matter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-frontmatter"><span class="toc-number">1.</span> <span class="toc-text">Basic frontmatter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-frontmatter-stuff"><span class="toc-number">2.</span> <span class="toc-text">Other frontmatter stuff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration"><span class="toc-number">3.</span> <span class="toc-text">Configuration</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markup"><span class="toc-number"></span> <span class="toc-text">Markup</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Page-variables"><span class="toc-number">1.</span> <span class="toc-text">Page variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filters"><span class="toc-number">2.</span> <span class="toc-text">Filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loops"><span class="toc-number">3.</span> <span class="toc-text">Loops</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dates"><span class="toc-number">4.</span> <span class="toc-text">Dates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditionals"><span class="toc-number">5.</span> <span class="toc-text">Conditionals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Case"><span class="toc-number">6.</span> <span class="toc-text">Case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Includes-partials"><span class="toc-number">7.</span> <span class="toc-text">Includes (partials)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comments"><span class="toc-number">8.</span> <span class="toc-text">Comments</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Variables"><span class="toc-number"></span> <span class="toc-text">Variables</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Top-level-variables"><span class="toc-number">1.</span> <span class="toc-text">Top-level variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Installation"><span class="toc-number">2.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Directories"><span class="toc-number">3.</span> <span class="toc-text">Directories</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Front-matter"><span class="toc-number"></span> <span class="toc-text">Front-matter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-frontmatter"><span class="toc-number">1.</span> <span class="toc-text">Basic frontmatter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-frontmatter-stuff"><span class="toc-number">2.</span> <span class="toc-text">Other frontmatter stuff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration"><span class="toc-number">3.</span> <span class="toc-text">Configuration</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markup"><span class="toc-number"></span> <span class="toc-text">Markup</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Page-variables"><span class="toc-number">1.</span> <span class="toc-text">Page variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filters"><span class="toc-number">2.</span> <span class="toc-text">Filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loops"><span class="toc-number">3.</span> <span class="toc-text">Loops</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dates"><span class="toc-number">4.</span> <span class="toc-text">Dates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditionals"><span class="toc-number">5.</span> <span class="toc-text">Conditionals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Case"><span class="toc-number">6.</span> <span class="toc-text">Case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Includes-partials"><span class="toc-number">7.</span> <span class="toc-text">Includes (partials)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comments"><span class="toc-number">8.</span> <span class="toc-text">Comments</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Variables"><span class="toc-number"></span> <span class="toc-text">Variables</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Top-level-variables"><span class="toc-number">1.</span> <span class="toc-text">Top-level variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Site"><span class="toc-number">2.</span> <span class="toc-text">Site</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Page"><span class="toc-number">3.</span> <span class="toc-text">Page</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Filters-1"><span class="toc-number"></span> <span class="toc-text">Filters</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Dates-1"><span class="toc-number">1.</span> <span class="toc-text">Dates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Preprocessors"><span class="toc-number">2.</span> <span class="toc-text">Preprocessors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Array-filters"><span class="toc-number">3.</span> <span class="toc-text">Array filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-filters"><span class="toc-number">4.</span> <span class="toc-text">String filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-filters-Jekyll-only"><span class="toc-number">5.</span> <span class="toc-text">String filters (Jekyll-only)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">6.</span> <span class="toc-text">Numbers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Paginator"><span class="toc-number"></span> <span class="toc-text">Paginator</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Paginator-setup"><span class="toc-number">1.</span> <span class="toc-text">Paginator setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers-1"><span class="toc-number">2.</span> <span class="toc-text">Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Iterating-through-posts"><span class="toc-number">3.</span> <span class="toc-text">Iterating through posts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Previous-button"><span class="toc-number">4.</span> <span class="toc-text">Previous button</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blogging"><span class="toc-number"></span> <span class="toc-text">Blogging</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Paths"><span class="toc-number">1.</span> <span class="toc-text">Paths</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Image-paths"><span class="toc-number">2.</span> <span class="toc-text">Image paths</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Drafts"><span class="toc-number">3.</span> <span class="toc-text">Drafts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Defining-excerpts"><span class="toc-number">4.</span> <span class="toc-text">Defining excerpts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Displaying-excerpts"><span class="toc-number">5.</span> <span class="toc-text">Displaying excerpts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Excerpt-separator"><span class="toc-number">6.</span> <span class="toc-text">Excerpt separator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Permalinks"><span class="toc-number">7.</span> <span class="toc-text">Permalinks</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#More-features"><span class="toc-number"></span> <span class="toc-text">More features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Data"><span class="toc-number">1.</span> <span class="toc-text">Data</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Collections"><span class="toc-number">2.</span> <span class="toc-text">Collections</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code-highlighter"><span class="toc-number">3.</span> <span class="toc-text">Code highlighter</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Integration"><span class="toc-number"></span> <span class="toc-text">Integration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Bundler"><span class="toc-number">1.</span> <span class="toc-text">Bundler</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compass"><span class="toc-number">2.</span> <span class="toc-text">Compass</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number"></span> <span class="toc-text">Also see</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Site"><span class="toc-number">1.</span> <span class="toc-text">Site</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Page"><span class="toc-number">2.</span> <span class="toc-text">Page</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Filters-1"><span class="toc-number"></span> <span class="toc-text">Filters</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Dates-1"><span class="toc-number">1.</span> <span class="toc-text">Dates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Preprocessors"><span class="toc-number">2.</span> <span class="toc-text">Preprocessors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Array-filters"><span class="toc-number">3.</span> <span class="toc-text">Array filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-filters"><span class="toc-number">4.</span> <span class="toc-text">String filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-filters-Jekyll-only"><span class="toc-number">5.</span> <span class="toc-text">String filters (Jekyll-only)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">6.</span> <span class="toc-text">Numbers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Paginator"><span class="toc-number"></span> <span class="toc-text">Paginator</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Paginator-setup"><span class="toc-number">1.</span> <span class="toc-text">Paginator setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers-1"><span class="toc-number">2.</span> <span class="toc-text">Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Iterating-through-posts"><span class="toc-number">3.</span> <span class="toc-text">Iterating through posts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Previous-button"><span class="toc-number">4.</span> <span class="toc-text">Previous button</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blogging"><span class="toc-number"></span> <span class="toc-text">Blogging</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Paths"><span class="toc-number">1.</span> <span class="toc-text">Paths</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Image-paths"><span class="toc-number">2.</span> <span class="toc-text">Image paths</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Drafts"><span class="toc-number">3.</span> <span class="toc-text">Drafts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Defining-excerpts"><span class="toc-number">4.</span> <span class="toc-text">Defining excerpts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Displaying-excerpts"><span class="toc-number">5.</span> <span class="toc-text">Displaying excerpts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Excerpt-separator"><span class="toc-number">6.</span> <span class="toc-text">Excerpt separator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Permalinks"><span class="toc-number">7.</span> <span class="toc-text">Permalinks</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#More-features"><span class="toc-number"></span> <span class="toc-text">More features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Data"><span class="toc-number">1.</span> <span class="toc-text">Data</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Collections"><span class="toc-number">2.</span> <span class="toc-text">Collections</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code-highlighter"><span class="toc-number">3.</span> <span class="toc-text">Code highlighter</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Integration"><span class="toc-number"></span> <span class="toc-text">Integration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Bundler"><span class="toc-number">1.</span> <span class="toc-text">Bundler</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compass"><span class="toc-number">2.</span> <span class="toc-text">Compass</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number"></span> <span class="toc-text">Also see</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Jekyll
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.319Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Jekyll/">Jekyll</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Install the gems</span></span><br><span class="line">gem install jekyll bundler</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create a new site at `./myblog`</span></span><br><span class="line">jekyll new myblog</span><br><span class="line"><span class="built_in">cd</span> myblog</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Optional: if you're targeting github-pages,</span></span><br><span class="line"><span class="comment"># use this Gemfile instead.</span></span><br><span class="line">cat &gt; Gemfile &lt;&lt;-END</span><br><span class="line"><span class="built_in">source</span> <span class="string">'https://rubygems.org'</span></span><br><span class="line">gem <span class="string">'github-pages'</span>, group: :jekyll_plugins</span><br><span class="line">END</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundle <span class="built_in">exec</span> jekyll serve</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://jekyllrb.com/docs/quickstart/" target="_blank" rel="noopener">Jekyll quickstart</a><br><br>See: <a href="https://github.com/github/pages-gem" target="_blank" rel="noopener">github/pages-gem</a></p>
+<h3 id="Directories"><a href="#Directories" class="headerlink" title="Directories"></a>Directories</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">./</span><br><span class="line">├── _config.yml</span><br><span class="line">│</span><br><span class="line">├── _data/</span><br><span class="line">│   └── ...</span><br><span class="line">│</span><br><span class="line">├── _drafts/</span><br><span class="line">│   └── ...</span><br><span class="line">│</span><br><span class="line">├── _posts/</span><br><span class="line">│   └── 2014-01-01-hello.md</span><br><span class="line">│</span><br><span class="line">├── _layouts/</span><br><span class="line">│   ├── default.html</span><br><span class="line">│   └── post.html</span><br><span class="line">│</span><br><span class="line">├── _includes/             - partials</span><br><span class="line">│   ├── header.html</span><br><span class="line">│   └── footer.html</span><br><span class="line">│</span><br><span class="line">└── _site/</span><br><span class="line">    └── ...</span><br></pre></td></tr></table></figure>
+<h2 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h2><h3 id="Basic-frontmatter"><a href="#Basic-frontmatter" class="headerlink" title="Basic frontmatter"></a>Basic frontmatter</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello</span><br><span class="line">---</span><br><span class="line">Hello! this is my post.</span><br></pre></td></tr></table></figure>
+<p>Attach metadata to a page by adding them on top of the page, delimited by <code>---</code>.<br>See: <a href="http://jekyllrb.com/docs/frontmatter/" target="_blank" rel="noopener">Front-matter</a></p>
+<h3 id="Other-frontmatter-stuff"><a href="#Other-frontmatter-stuff" class="headerlink" title="Other frontmatter stuff"></a>Other frontmatter stuff</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">'/hello'</span></span><br><span class="line"><span class="attr">published:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">category:</span> <span class="string">apple</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">['html',</span> <span class="string">'css'</span><span class="string">]</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">['html',</span> <span class="string">'css'</span><span class="string">]</span></span><br></pre></td></tr></table></figure>
+<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><p>In <code>_config.yml</code>:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">source:</span> <span class="string">.</span></span><br><span class="line"><span class="attr">destination:</span> <span class="string">_site</span></span><br><span class="line"><span class="attr">exclude:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Gemfile</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Gemfile.lock</span></span><br><span class="line"><span class="attr">include:</span> <span class="string">['.htaccess']</span></span><br></pre></td></tr></table></figure>
+<p>All config keys are optional.<br>See: <a href="http://jekyllrb.com/docs/configuration/" target="_blank" rel="noopener">Configuration</a></p>
+<h2 id="Markup"><a href="#Markup" class="headerlink" title="Markup"></a>Markup</h2><h3 id="Page-variables"><a href="#Page-variables" class="headerlink" title="Page variables"></a>Page variables</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line">  &#123;&#123; page.title &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Filters"><a href="#Filters" class="headerlink" title="Filters"></a>Filters</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  &#123;&#123; page.description | truncate_words: 20 &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Loops"><a href="#Loops" class="headerlink" title="Loops"></a>Loops</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for post in site.posts %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;&#123; post.url &#125;&#125;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123; post.title &#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; post.date | date_to_string &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Dates"><a href="#Dates" class="headerlink" title="Dates"></a>Dates</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; page.date | date: "%b %d, %Y" &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Conditionals"><a href="#Conditionals" class="headerlink" title="Conditionals"></a>Conditionals</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if page.image.feature %&#125;</span><br><span class="line">  ...</span><br><span class="line">&#123;% elsif xyz %&#125;</span><br><span class="line">  ...</span><br><span class="line">&#123;% else %&#125;</span><br><span class="line">  ...</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if page.category == 'React' %&#125;</span><br><span class="line">&#123;% if page.category == 'React' or page.featured %&#125;</span><br><span class="line">&#123;% if page.tags contains 'Featured' %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Case"><a href="#Case" class="headerlink" title="Case"></a>Case</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% case shipping.title %&#125;</span><br><span class="line">  &#123;% when 'international' %&#125;</span><br><span class="line">     Arriving in 2-3 weeks</span><br><span class="line">  &#123;% when 'Domestic' %&#125;</span><br><span class="line">     Arriving in 2-3 days</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">     Thank you for your order!</span><br><span class="line">&#123;% endcase %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Includes-partials"><a href="#Includes-partials" class="headerlink" title="Includes (partials)"></a>Includes (partials)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include header.html %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Including local vars --&gt;</span></span><br><span class="line">&#123;% include header.html page=page %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% comment %&#125;</span><br><span class="line">  This is a comment!</span><br><span class="line">&#123;% endcomment %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h2><h3 id="Top-level-variables"><a href="#Top-level-variables" class="headerlink" title="Top-level variables"></a>Top-level variables</h3><p>| <code>[object Object]</code> | Data from <code>config.yml</code> |<br>| <code></code> | From frontmatter, and page-specific info |<br>| <code><h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Install the gems</span></span><br><span class="line">gem install jekyll bundler</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create a new site at `./myblog`</span></span><br><span class="line">jekyll new myblog</span><br><span class="line"><span class="built_in">cd</span> myblog</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Optional: if you're targeting github-pages,</span></span><br><span class="line"><span class="comment"># use this Gemfile instead.</span></span><br><span class="line">cat &gt; Gemfile &lt;&lt;-END</span><br><span class="line"><span class="built_in">source</span> <span class="string">'https://rubygems.org'</span></span><br><span class="line">gem <span class="string">'github-pages'</span>, group: :jekyll_plugins</span><br><span class="line">END</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundle <span class="built_in">exec</span> jekyll serve</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://jekyllrb.com/docs/quickstart/" target="_blank" rel="noopener">Jekyll quickstart</a><br><br>See: <a href="https://github.com/github/pages-gem" target="_blank" rel="noopener">github/pages-gem</a></p>
+<h3 id="Directories"><a href="#Directories" class="headerlink" title="Directories"></a>Directories</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">./</span><br><span class="line">├── _config.yml</span><br><span class="line">│</span><br><span class="line">├── _data/</span><br><span class="line">│   └── ...</span><br><span class="line">│</span><br><span class="line">├── _drafts/</span><br><span class="line">│   └── ...</span><br><span class="line">│</span><br><span class="line">├── _posts/</span><br><span class="line">│   └── 2014-01-01-hello.md</span><br><span class="line">│</span><br><span class="line">├── _layouts/</span><br><span class="line">│   ├── default.html</span><br><span class="line">│   └── post.html</span><br><span class="line">│</span><br><span class="line">├── _includes/             - partials</span><br><span class="line">│   ├── header.html</span><br><span class="line">│   └── footer.html</span><br><span class="line">│</span><br><span class="line">└── _site/</span><br><span class="line">    └── ...</span><br></pre></td></tr></table></figure>
+<h2 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h2><h3 id="Basic-frontmatter"><a href="#Basic-frontmatter" class="headerlink" title="Basic frontmatter"></a>Basic frontmatter</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello</span><br><span class="line">---</span><br><span class="line">Hello! this is my post.</span><br></pre></td></tr></table></figure>
+<p>Attach metadata to a page by adding them on top of the page, delimited by <code>---</code>.<br>See: <a href="http://jekyllrb.com/docs/frontmatter/" target="_blank" rel="noopener">Front-matter</a></p>
+<h3 id="Other-frontmatter-stuff"><a href="#Other-frontmatter-stuff" class="headerlink" title="Other frontmatter stuff"></a>Other frontmatter stuff</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">'/hello'</span></span><br><span class="line"><span class="attr">published:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">category:</span> <span class="string">apple</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">['html',</span> <span class="string">'css'</span><span class="string">]</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">['html',</span> <span class="string">'css'</span><span class="string">]</span></span><br></pre></td></tr></table></figure>
+<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><p>In <code>_config.yml</code>:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">source:</span> <span class="string">.</span></span><br><span class="line"><span class="attr">destination:</span> <span class="string">_site</span></span><br><span class="line"><span class="attr">exclude:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Gemfile</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Gemfile.lock</span></span><br><span class="line"><span class="attr">include:</span> <span class="string">['.htaccess']</span></span><br></pre></td></tr></table></figure>
+<p>All config keys are optional.<br>See: <a href="http://jekyllrb.com/docs/configuration/" target="_blank" rel="noopener">Configuration</a></p>
+<h2 id="Markup"><a href="#Markup" class="headerlink" title="Markup"></a>Markup</h2><h3 id="Page-variables"><a href="#Page-variables" class="headerlink" title="Page variables"></a>Page variables</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line">  &#123;&#123; page.title &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Filters"><a href="#Filters" class="headerlink" title="Filters"></a>Filters</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  &#123;&#123; page.description | truncate_words: 20 &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Loops"><a href="#Loops" class="headerlink" title="Loops"></a>Loops</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for post in site.posts %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;&#123; post.url &#125;&#125;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123; post.title &#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; post.date | date_to_string &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Dates"><a href="#Dates" class="headerlink" title="Dates"></a>Dates</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; page.date | date: "%b %d, %Y" &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Conditionals"><a href="#Conditionals" class="headerlink" title="Conditionals"></a>Conditionals</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if page.image.feature %&#125;</span><br><span class="line">  ...</span><br><span class="line">&#123;% elsif xyz %&#125;</span><br><span class="line">  ...</span><br><span class="line">&#123;% else %&#125;</span><br><span class="line">  ...</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if page.category == 'React' %&#125;</span><br><span class="line">&#123;% if page.category == 'React' or page.featured %&#125;</span><br><span class="line">&#123;% if page.tags contains 'Featured' %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Case"><a href="#Case" class="headerlink" title="Case"></a>Case</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% case shipping.title %&#125;</span><br><span class="line">  &#123;% when 'international' %&#125;</span><br><span class="line">     Arriving in 2-3 weeks</span><br><span class="line">  &#123;% when 'Domestic' %&#125;</span><br><span class="line">     Arriving in 2-3 days</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">     Thank you for your order!</span><br><span class="line">&#123;% endcase %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Includes-partials"><a href="#Includes-partials" class="headerlink" title="Includes (partials)"></a>Includes (partials)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include header.html %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Including local vars --&gt;</span></span><br><span class="line">&#123;% include header.html page=page %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% comment %&#125;</span><br><span class="line">  This is a comment!</span><br><span class="line">&#123;% endcomment %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h2><h3 id="Top-level-variables"><a href="#Top-level-variables" class="headerlink" title="Top-level variables"></a>Top-level variables</h3><p>| <code>{{ site }}</code> | Data from <code>config.yml</code> |<br>| <code>{{ page }}</code> | From frontmatter, and page-specific info |<br>| <code>{{ content }}</code> | HTML content (use in layouts) |<br>| <code>{{ paginator }}</code> | Paginator |</p>
+<p>See: <a href="http://jekyllrb.com/docs/variables/" target="_blank" rel="noopener">Variables</a></p>
+<h3 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; site.time &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>| <code>site.time</code> | Current time |<br>| <code>site.pages</code> | List of pages |<br>| <code>site.posts</code> | List of blog posts |<br>| <code>site.related_posts</code> | List of posts related to current |<br>| <code>site.categories.CATEGORY</code> | List |<br>| <code>site.tags.TAG</code> | List |<br>| <code>site.static_files</code> | List |</p>
+<h3 id="Page"><a href="#Page" class="headerlink" title="Page"></a>Page</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; page.content &#125;&#125;  - un-rendered content</span><br><span class="line">&#123;&#123; page.title &#125;&#125;</span><br><span class="line">&#123;&#123; page.excerpt &#125;&#125;  - un-rendered excerpt</span><br><span class="line">&#123;&#123; page.url &#125;&#125;</span><br><span class="line">&#123;&#123; page.date &#125;&#125;</span><br><span class="line">&#123;&#123; page.id &#125;&#125;       - unique id for RSS feeds</span><br><span class="line">&#123;&#123; page.categories &#125;&#125;</span><br><span class="line">&#123;&#123; page.tags &#125;&#125;</span><br><span class="line">&#123;&#123; page.path &#125;&#125;</span><br><span class="line">&#123;&#123; page.dir &#125;&#125;</span><br><span class="line">&#123;&#123; page.excerpt | remove: '<span class="tag">&lt;<span class="name">p</span>&gt;</span>' | remove: '<span class="tag">&lt;/<span class="name">p</span>&gt;</span>' &#125;&#125;</span><br><span class="line">&#123;&#123; page.excerpt | strip_html &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- blog pagination: --&gt;</span></span><br><span class="line">&#123;&#123; page.next &#125;&#125;</span><br><span class="line">&#123;&#123; page.previous &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Filters-1"><a href="#Filters-1" class="headerlink" title="Filters"></a>Filters</h2><h3 id="Dates-1"><a href="#Dates-1" class="headerlink" title="Dates"></a>Dates</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; site.time <span class="params">| date: "%Y %m %d" &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<p>| <code>date_to_xmlschema</code> | → <code>2008-11-07T13:07:54-08:00</code> |<br>| <code>date_to_rfc822</code> | → <code>Mon, 07 Nov 2008 13:07:54 -0800</code> |<br>| <code>date_to_string</code> | → <code>07 Nov 2008</code> |<br>| <code>date_to_long_string</code> | → <code>07 November 2008</code> |<br>| <code>date:</code> <em>‘%Y %m %d’</em> | → <code>2017 Nov  7</code> |</p>
+<h3 id="Preprocessors"><a href="#Preprocessors" class="headerlink" title="Preprocessors"></a>Preprocessors</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; page.description <span class="params">| markdownify &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>textilize</code></td>
+<td>Textile</td>
+</tr>
+<tr>
+<td><code>markdownify</code></td>
+<td>Markdown</td>
+</tr>
+<tr>
+<td><code>jsonify</code></td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><code>sassify</code></td>
+<td>Sass</td>
+</tr>
+<tr>
+<td><code>scssify</code></td>
+<td>SCSS</td>
+</tr>
+<tr>
+<td><code>smartify</code></td>
+<td>Smartypants</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Array-filters"><a href="#Array-filters" class="headerlink" title="Array filters"></a>Array filters</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; site.pages <span class="params">| where: "year", "2014" &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>where:</code> <em>“year”, “2014”</em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>where_exp:</code> <em>“item”, “item.year &gt;= 2014”</em></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>group_by:</code> <em>“genre”</em></td>
+<td>→ <code>{name, items}</code></td>
+</tr>
+<tr>
+<td><code>group_by_exp:</code> <em>“item”, “item.genre”</em></td>
+<td>→ <code>{name, items}</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sort:</code> <em>‘author’</em></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>uniq</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>first</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>last</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>join:</code> <em>‘,’</em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>array_to_sentence_string</code></td>
+<td>→ <code>&quot;X, Y and Z&quot;</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>map:</code> <em>‘post’</em></td>
+<td>Works like ‘pluck’</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>push:</code> <em>‘xxx’</em></td>
+<td>Adds an item</td>
+</tr>
+</tbody>
+</table>
+<h3 id="String-filters"><a href="#String-filters" class="headerlink" title="String filters"></a>String filters</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; page.title <span class="params">| default: "xxx" &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default:</code> <em>‘xxx’</em></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>upcase</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>downcase</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>remove:</code> <em>‘p’</em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>replace:</code> <em>‘super’, ‘mega’</em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>remove_first:</code> <em>‘p’</em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>replace_first:</code> <em>‘super’, ‘mega’</em></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>truncate:</code> _5_</td>
+<td></td>
+</tr>
+<tr>
+<td><code>truncatewords:</code> _20_</td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>prepend:</code> <em>‘Mr. ‘</em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>append:</code> <em>‘Jr.’</em></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>camelize</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>capitalize</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>strip_html</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>strip_newlines</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>newlines_to_br</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>split:</code> <em>‘,’</em></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>escape</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>escape_once</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>slice:</code> <em>-3, 3</em></td>
+</tr>
+</tbody>
+</table>
+<p>See: <a href="http://docs.shopify.com/themes/liquid-documentation/filters" target="_blank" rel="noopener">String filters</a></p>
+<h3 id="String-filters-Jekyll-only"><a href="#String-filters-Jekyll-only" class="headerlink" title="String filters (Jekyll-only)"></a>String filters (Jekyll-only)</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; page.excerpt <span class="params">| number_of_words &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>number_of_words</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>slugify</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>xml_escape</code></td>
+<td>→ <code>CDATA</code></td>
+</tr>
+<tr>
+<td><code>cgi_escape</code></td>
+<td>→ <code>foo%2Cbar</code></td>
+</tr>
+<tr>
+<td><code>uri_escape</code></td>
+<td>→ <code>foo,%20bar</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; site.posts.size | minus: 2 &#125;&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>minus:</code> _2_</td>
+<td></td>
+</tr>
+<tr>
+<td><code>plus:</code> _2_</td>
+<td></td>
+</tr>
+<tr>
+<td><code>times:</code> _2_</td>
+<td></td>
+</tr>
+<tr>
+<td><code>divided_by:</code> _2_</td>
+<td></td>
+</tr>
+<tr>
+<td><code>modulo:</code> _2_</td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>ceil</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>floor</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>round</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Paginator"><a href="#Paginator" class="headerlink" title="Paginator"></a>Paginator</h2><h3 id="Paginator-setup"><a href="#Paginator-setup" class="headerlink" title="Paginator setup"></a>Paginator setup</h3><p>Add this to <code>_config.yml</code>:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">paginate:</span> <span class="number">5</span></span><br><span class="line"><span class="attr">paginate_path:</span> <span class="string">"blog/:num"</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://jekyllrb.com/docs/pagination/" target="_blank" rel="noopener">Paginator</a></p>
+<h3 id="Numbers-1"><a href="#Numbers-1" class="headerlink" title="Numbers"></a>Numbers</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; paginator.page &#125;&#125;         - page number</span><br><span class="line">&#123;&#123; paginator.total_posts &#125;&#125;</span><br><span class="line">&#123;&#123; paginator.total_pages &#125;&#125;</span><br><span class="line">&#123;&#123; paginator.per_page &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Iterating-through-posts"><a href="#Iterating-through-posts" class="headerlink" title="Iterating through posts"></a>Iterating through posts</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for post in paginator.posts %&#125; ... &#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Previous-button"><a href="#Previous-button" class="headerlink" title="Previous button"></a>Previous button</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if paginator.total_pages &gt; 1 %&#125;</span><br><span class="line">  &#123;% if paginator.previous_page %&#125;</span><br><span class="line">    &lt;a href=&quot;&#123;&#123; paginator.previous_page_path &#125;&#125;&quot;&gt;Previous&lt;/a&gt;</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; paginator.next_page &#125;&#125;     - page number</span><br><span class="line">&#123;&#123; paginator.next_page_path &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Blogging"><a href="#Blogging" class="headerlink" title="Blogging"></a>Blogging</h2><h3 id="Paths"><a href="#Paths" class="headerlink" title="Paths"></a>Paths</h3><pre><code>_posts/YEAR-MONTH-DAY-title.md
+</code></pre><p>See: <a href="http://jekyllrb.com/docs/posts/" target="_blank" rel="noopener">Blogging</a></p>
+<h3 id="Image-paths"><a href="#Image-paths" class="headerlink" title="Image paths"></a>Image paths</h3><pre><code>![My helpful screenshot]({{ site.url }}/assets/screenshot.jpg)
+</code></pre><p>See: <a href="http://jekyllrb.com/docs/posts/#including-images-and-resources" target="_blank" rel="noopener">Image paths</a></p>
+<h3 id="Drafts"><a href="#Drafts" class="headerlink" title="Drafts"></a>Drafts</h3><pre><code>vi _drafts/a-draft-post.md
+jekyll build --drafts
+</code></pre><p>Posts in <code>_drafts</code> only show up in development, but not production.<br>See: <a href="http://jekyllrb.com/docs/drafts/" target="_blank" rel="noopener">Drafts</a></p>
+<h3 id="Defining-excerpts"><a href="#Defining-excerpts" class="headerlink" title="Defining excerpts"></a>Defining excerpts</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: My blog post</span><br><span class="line">excerpt: This post is about cats</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">Hello, let&apos;s talk about cats. (···)</span><br></pre></td></tr></table></figure>
+<p>Put a key <code>excerpt</code> in the frontmatter.<br>See: <a href="http://jekyllrb.com/docs/posts/#post-excerpts" target="_blank" rel="noopener">Excerpts</a></p>
+<h3 id="Displaying-excerpts"><a href="#Displaying-excerpts" class="headerlink" title="Displaying excerpts"></a>Displaying excerpts</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; post.excerpt &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; post.excerpt | remove: '<span class="tag">&lt;<span class="name">p</span>&gt;</span>' | remove: '<span class="tag">&lt;/<span class="name">p</span>&gt;</span>' &#125;&#125;</span><br><span class="line">&#123;&#123; post.excerpt | strip_html &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Excerpt-separator"><a href="#Excerpt-separator" class="headerlink" title="Excerpt separator"></a>Excerpt separator</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">excerpt_separator: <span class="comment">&lt;!--more--&gt;</span></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">Excerpt here</span><br><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br><span class="line">More post body here</span><br></pre></td></tr></table></figure>
+<p>Alternatively, you can put excerpts inline in your post by defining <code>excerpt_separator</code>.</p>
+<h3 id="Permalinks"><a href="#Permalinks" class="headerlink" title="Permalinks"></a>Permalinks</h3><pre><code># _config.yml
+permalink: date   # /:categories/:year/:month/:day/:title.html
+permalink: pretty # /:categories/:year/:month/:day/:title/
+permalink: none   # /:categories/:title.html
+permalink: &quot;/:title&quot;
+</code></pre><p>See: <a href="http://jekyllrb.com/docs/permalinks/" target="_blank" rel="noopener">Permalinks</a></p>
+<h2 id="More-features"><a href="#More-features" class="headerlink" title="More features"></a>More features</h2><h3 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_data/members.yml</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for member in site.data.members %&#125;</span><br><span class="line">  ...</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://jekyllrb.com/docs/datafiles/" target="_blank" rel="noopener">Data</a></p>
+<h3 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.yml</span></span><br><span class="line"><span class="attr">collections:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">authors</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _/authors/a-n-roquelaire.md</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">A.</span> <span class="string">N.</span> <span class="string">Roquelaire</span></span><br><span class="line"><span class="attr">real_name:</span> <span class="string">Anne</span> <span class="string">Rice</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for author in site.authors %&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://jekyllrb.com/docs/collections/" target="_blank" rel="noopener">Collections</a></p>
+<h3 id="Code-highlighter"><a href="#Code-highlighter" class="headerlink" title="Code highlighter"></a>Code highlighter</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% highlight ruby linenos %&#125;</span><br><span class="line">def show</span><br><span class="line">  ...</span><br><span class="line">end</span><br><span class="line">&#123;% endhighlight %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Integration"><a href="#Integration" class="headerlink" title="Integration"></a>Integration</h2><h3 id="Bundler"><a href="#Bundler" class="headerlink" title="Bundler"></a>Bundler</h3><p>In <code>_plugins/bundler.rb</code>:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">require</span> <span class="string">"bunder/setup"</span></span><br><span class="line">Bundler.<span class="keyword">require</span> <span class="symbol">:default</span></span><br></pre></td></tr></table></figure>
+<h3 id="Compass"><a href="#Compass" class="headerlink" title="Compass"></a>Compass</h3><ul>
+<li><a href="https://gist.github.com/parkr/2874934" target="_blank" rel="noopener">Compass</a></li>
+<li><a href="https://github.com/matthodan/jekyll-asset-pipeline" target="_blank" rel="noopener">Asset pipeline</a></li>
+</ul>
+<h2 id="Also-see"><a href="#Also-see" class="headerlink" title="Also see"></a>Also see</h2><ul>
+<li><a href="http://jekyllrb.com/docs/home/" target="_blank" rel="noopener">Jekyll docs</a> <em>jekyllrb.com</em></li>
+<li><a href="https://learn.cloudcannon.com/jekyll-cheat-sheet/" target="_blank" rel="noopener">CloudCannon Jekyll cheatsheet</a> <em>cloudcannon.com</em></li>
+<li><a href="http://jekyllrb.com/docs/templates/" target="_blank" rel="noopener">Jekyll: templates</a> <em>jekyllrb.com</em></li>
+<li><a href="http://docs.shopify.com/themes/liquid-basics/output" target="_blank" rel="noopener">Liquid: output</a> <em>shopify.com</em></li>
+<li><a href="http://docs.shopify.com/themes/liquid-basics/logic" target="_blank" rel="noopener">Liquid: logic</a> <em>shopify.com</em></li>
+<li><a href="http://docs.shopify.com/themes/liquid-documentation/filters" target="_blank" rel="noopener">Liquid: filters</a> <em>shopify.com</em></li>
+<li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers" target="_blank" rel="noopener">Liquid for designers</a> <em>github.com/Shopify</em></li>
+</ul>
+</code> | HTML content (use in layouts) |<br>| <code></code> | Paginator |</p>
+<p>See: <a href="http://jekyllrb.com/docs/variables/" target="_blank" rel="noopener">Variables</a></p>
+<h3 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; site.time &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>| <code>site.time</code> | Current time |<br>| <code>site.pages</code> | List of pages |<br>| <code>site.posts</code> | List of blog posts |<br>| <code>site.related_posts</code> | List of posts related to current |<br>| <code>site.categories.CATEGORY</code> | List |<br>| <code>site.tags.TAG</code> | List |<br>| <code>site.static_files</code> | List |</p>
+<h3 id="Page"><a href="#Page" class="headerlink" title="Page"></a>Page</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; page.content &#125;&#125;  - un-rendered content</span><br><span class="line">&#123;&#123; page.title &#125;&#125;</span><br><span class="line">&#123;&#123; page.excerpt &#125;&#125;  - un-rendered excerpt</span><br><span class="line">&#123;&#123; page.url &#125;&#125;</span><br><span class="line">&#123;&#123; page.date &#125;&#125;</span><br><span class="line">&#123;&#123; page.id &#125;&#125;       - unique id for RSS feeds</span><br><span class="line">&#123;&#123; page.categories &#125;&#125;</span><br><span class="line">&#123;&#123; page.tags &#125;&#125;</span><br><span class="line">&#123;&#123; page.path &#125;&#125;</span><br><span class="line">&#123;&#123; page.dir &#125;&#125;</span><br><span class="line">&#123;&#123; page.excerpt | remove: '<span class="tag">&lt;<span class="name">p</span>&gt;</span>' | remove: '<span class="tag">&lt;/<span class="name">p</span>&gt;</span>' &#125;&#125;</span><br><span class="line">&#123;&#123; page.excerpt | strip_html &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- blog pagination: --&gt;</span></span><br><span class="line">&#123;&#123; page.next &#125;&#125;</span><br><span class="line">&#123;&#123; page.previous &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Filters-1"><a href="#Filters-1" class="headerlink" title="Filters"></a>Filters</h2><h3 id="Dates-1"><a href="#Dates-1" class="headerlink" title="Dates"></a>Dates</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; site.time <span class="params">| date: "%Y %m %d" &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<p>| <code>date_to_xmlschema</code> | → <code>2008-11-07T13:07:54-08:00</code> |<br>| <code>date_to_rfc822</code> | → <code>Mon, 07 Nov 2008 13:07:54 -0800</code> |<br>| <code>date_to_string</code> | → <code>07 Nov 2008</code> |<br>| <code>date_to_long_string</code> | → <code>07 November 2008</code> |<br>| <code>date:</code> <em>‘%Y %m %d’</em> | → <code>2017 Nov  7</code> |</p>
+<h3 id="Preprocessors"><a href="#Preprocessors" class="headerlink" title="Preprocessors"></a>Preprocessors</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; page.description <span class="params">| markdownify &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>textilize</code></td>
+<td>Textile</td>
+</tr>
+<tr>
+<td><code>markdownify</code></td>
+<td>Markdown</td>
+</tr>
+<tr>
+<td><code>jsonify</code></td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><code>sassify</code></td>
+<td>Sass</td>
+</tr>
+<tr>
+<td><code>scssify</code></td>
+<td>SCSS</td>
+</tr>
+<tr>
+<td><code>smartify</code></td>
+<td>Smartypants</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Array-filters"><a href="#Array-filters" class="headerlink" title="Array filters"></a>Array filters</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; site.pages <span class="params">| where: "year", "2014" &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>where:</code> <em>“year”, “2014”</em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>where_exp:</code> <em>“item”, “item.year &gt;= 2014”</em></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>group_by:</code> <em>“genre”</em></td>
+<td>→ <code>{name, items}</code></td>
+</tr>
+<tr>
+<td><code>group_by_exp:</code> <em>“item”, “item.genre”</em></td>
+<td>→ <code>{name, items}</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sort:</code> <em>‘author’</em></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>uniq</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>first</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>last</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>join:</code> <em>‘,’</em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>array_to_sentence_string</code></td>
+<td>→ <code>&quot;X, Y and Z&quot;</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>map:</code> <em>‘post’</em></td>
+<td>Works like ‘pluck’</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>push:</code> <em>‘xxx’</em></td>
+<td>Adds an item</td>
+</tr>
+</tbody>
+</table>
+<h3 id="String-filters"><a href="#String-filters" class="headerlink" title="String filters"></a>String filters</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; page.title <span class="params">| default: "xxx" &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default:</code> <em>‘xxx’</em></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>upcase</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>downcase</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>remove:</code> <em>‘p’</em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>replace:</code> <em>‘super’, ‘mega’</em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>remove_first:</code> <em>‘p’</em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>replace_first:</code> <em>‘super’, ‘mega’</em></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>truncate:</code> _5_</td>
+<td></td>
+</tr>
+<tr>
+<td><code>truncatewords:</code> _20_</td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>prepend:</code> <em>‘Mr. ‘</em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>append:</code> <em>‘Jr.’</em></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>camelize</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>capitalize</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>strip_html</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>strip_newlines</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>newlines_to_br</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>split:</code> <em>‘,’</em></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>escape</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>escape_once</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>slice:</code> <em>-3, 3</em></td>
+</tr>
+</tbody>
+</table>
+<p>See: <a href="http://docs.shopify.com/themes/liquid-documentation/filters" target="_blank" rel="noopener">String filters</a></p>
+<h3 id="String-filters-Jekyll-only"><a href="#String-filters-Jekyll-only" class="headerlink" title="String filters (Jekyll-only)"></a>String filters (Jekyll-only)</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; page.excerpt <span class="params">| number_of_words &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>number_of_words</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>slugify</code></td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>xml_escape</code></td>
+<td>→ <code>CDATA</code></td>
+</tr>
+<tr>
+<td><code>cgi_escape</code></td>
+<td>→ <code>foo%2Cbar</code></td>
+</tr>
+<tr>
+<td><code>uri_escape</code></td>
+<td>→ <code>foo,%20bar</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; site.posts.size | minus: 2 &#125;&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>minus:</code> _2_</td>
+<td></td>
+</tr>
+<tr>
+<td><code>plus:</code> _2_</td>
+<td></td>
+</tr>
+<tr>
+<td><code>times:</code> _2_</td>
+<td></td>
+</tr>
+<tr>
+<td><code>divided_by:</code> _2_</td>
+<td></td>
+</tr>
+<tr>
+<td><code>modulo:</code> _2_</td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>ceil</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>floor</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>round</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Paginator"><a href="#Paginator" class="headerlink" title="Paginator"></a>Paginator</h2><h3 id="Paginator-setup"><a href="#Paginator-setup" class="headerlink" title="Paginator setup"></a>Paginator setup</h3><p>Add this to <code>_config.yml</code>:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">paginate:</span> <span class="number">5</span></span><br><span class="line"><span class="attr">paginate_path:</span> <span class="string">"blog/:num"</span></span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://jekyllrb.com/docs/pagination/" target="_blank" rel="noopener">Paginator</a></p>
+<h3 id="Numbers-1"><a href="#Numbers-1" class="headerlink" title="Numbers"></a>Numbers</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; paginator.page &#125;&#125;         - page number</span><br><span class="line">&#123;&#123; paginator.total_posts &#125;&#125;</span><br><span class="line">&#123;&#123; paginator.total_pages &#125;&#125;</span><br><span class="line">&#123;&#123; paginator.per_page &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Iterating-through-posts"><a href="#Iterating-through-posts" class="headerlink" title="Iterating through posts"></a>Iterating through posts</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for post in paginator.posts %&#125; ... &#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Previous-button"><a href="#Previous-button" class="headerlink" title="Previous button"></a>Previous button</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if paginator.total_pages &gt; 1 %&#125;</span><br><span class="line">  &#123;% if paginator.previous_page %&#125;</span><br><span class="line">    &lt;a href=&quot;&#123;&#123; paginator.previous_page_path &#125;&#125;&quot;&gt;Previous&lt;/a&gt;</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; paginator.next_page &#125;&#125;     - page number</span><br><span class="line">&#123;&#123; paginator.next_page_path &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Blogging"><a href="#Blogging" class="headerlink" title="Blogging"></a>Blogging</h2><h3 id="Paths"><a href="#Paths" class="headerlink" title="Paths"></a>Paths</h3><pre><code>_posts/YEAR-MONTH-DAY-title.md
+</code></pre><p>See: <a href="http://jekyllrb.com/docs/posts/" target="_blank" rel="noopener">Blogging</a></p>
+<h3 id="Image-paths"><a href="#Image-paths" class="headerlink" title="Image paths"></a>Image paths</h3><pre><code>![My helpful screenshot]({{ site.url }}/assets/screenshot.jpg)
+</code></pre><p>See: <a href="http://jekyllrb.com/docs/posts/#including-images-and-resources" target="_blank" rel="noopener">Image paths</a></p>
+<h3 id="Drafts"><a href="#Drafts" class="headerlink" title="Drafts"></a>Drafts</h3><pre><code>vi _drafts/a-draft-post.md
+jekyll build --drafts
+</code></pre><p>Posts in <code>_drafts</code> only show up in development, but not production.<br>See: <a href="http://jekyllrb.com/docs/drafts/" target="_blank" rel="noopener">Drafts</a></p>
+<h3 id="Defining-excerpts"><a href="#Defining-excerpts" class="headerlink" title="Defining excerpts"></a>Defining excerpts</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: My blog post</span><br><span class="line">excerpt: This post is about cats</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">Hello, let&apos;s talk about cats. (···)</span><br></pre></td></tr></table></figure>
+<p>Put a key <code>excerpt</code> in the frontmatter.<br>See: <a href="http://jekyllrb.com/docs/posts/#post-excerpts" target="_blank" rel="noopener">Excerpts</a></p>
+<h3 id="Displaying-excerpts"><a href="#Displaying-excerpts" class="headerlink" title="Displaying excerpts"></a>Displaying excerpts</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; post.excerpt &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; post.excerpt | remove: '<span class="tag">&lt;<span class="name">p</span>&gt;</span>' | remove: '<span class="tag">&lt;/<span class="name">p</span>&gt;</span>' &#125;&#125;</span><br><span class="line">&#123;&#123; post.excerpt | strip_html &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Excerpt-separator"><a href="#Excerpt-separator" class="headerlink" title="Excerpt separator"></a>Excerpt separator</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">excerpt_separator: <span class="comment">&lt;!--more--&gt;</span></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">Excerpt here</span><br><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br><span class="line">More post body here</span><br></pre></td></tr></table></figure>
+<p>Alternatively, you can put excerpts inline in your post by defining <code>excerpt_separator</code>.</p>
+<h3 id="Permalinks"><a href="#Permalinks" class="headerlink" title="Permalinks"></a>Permalinks</h3><pre><code># _config.yml
+permalink: date   # /:categories/:year/:month/:day/:title.html
+permalink: pretty # /:categories/:year/:month/:day/:title/
+permalink: none   # /:categories/:title.html
+permalink: &quot;/:title&quot;
+</code></pre><p>See: <a href="http://jekyllrb.com/docs/permalinks/" target="_blank" rel="noopener">Permalinks</a></p>
+<h2 id="More-features"><a href="#More-features" class="headerlink" title="More features"></a>More features</h2><h3 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_data/members.yml</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for member in site.data.members %&#125;</span><br><span class="line">  ...</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://jekyllrb.com/docs/datafiles/" target="_blank" rel="noopener">Data</a></p>
+<h3 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.yml</span></span><br><span class="line"><span class="attr">collections:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">authors</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _/authors/a-n-roquelaire.md</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">A.</span> <span class="string">N.</span> <span class="string">Roquelaire</span></span><br><span class="line"><span class="attr">real_name:</span> <span class="string">Anne</span> <span class="string">Rice</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for author in site.authors %&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="http://jekyllrb.com/docs/collections/" target="_blank" rel="noopener">Collections</a></p>
+<h3 id="Code-highlighter"><a href="#Code-highlighter" class="headerlink" title="Code highlighter"></a>Code highlighter</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% highlight ruby linenos %&#125;</span><br><span class="line">def show</span><br><span class="line">  ...</span><br><span class="line">end</span><br><span class="line">&#123;% endhighlight %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Integration"><a href="#Integration" class="headerlink" title="Integration"></a>Integration</h2><h3 id="Bundler"><a href="#Bundler" class="headerlink" title="Bundler"></a>Bundler</h3><p>In <code>_plugins/bundler.rb</code>:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">require</span> <span class="string">"bunder/setup"</span></span><br><span class="line">Bundler.<span class="keyword">require</span> <span class="symbol">:default</span></span><br></pre></td></tr></table></figure>
+<h3 id="Compass"><a href="#Compass" class="headerlink" title="Compass"></a>Compass</h3><ul>
+<li><a href="https://gist.github.com/parkr/2874934" target="_blank" rel="noopener">Compass</a></li>
+<li><a href="https://github.com/matthodan/jekyll-asset-pipeline" target="_blank" rel="noopener">Asset pipeline</a></li>
+</ul>
+<h2 id="Also-see"><a href="#Also-see" class="headerlink" title="Also see"></a>Also see</h2><ul>
+<li><a href="http://jekyllrb.com/docs/home/" target="_blank" rel="noopener">Jekyll docs</a> <em>jekyllrb.com</em></li>
+<li><a href="https://learn.cloudcannon.com/jekyll-cheat-sheet/" target="_blank" rel="noopener">CloudCannon Jekyll cheatsheet</a> <em>cloudcannon.com</em></li>
+<li><a href="http://jekyllrb.com/docs/templates/" target="_blank" rel="noopener">Jekyll: templates</a> <em>jekyllrb.com</em></li>
+<li><a href="http://docs.shopify.com/themes/liquid-basics/output" target="_blank" rel="noopener">Liquid: output</a> <em>shopify.com</em></li>
+<li><a href="http://docs.shopify.com/themes/liquid-basics/logic" target="_blank" rel="noopener">Liquid: logic</a> <em>shopify.com</em></li>
+<li><a href="http://docs.shopify.com/themes/liquid-documentation/filters" target="_blank" rel="noopener">Liquid: filters</a> <em>shopify.com</em></li>
+<li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers" target="_blank" rel="noopener">Liquid for designers</a> <em>github.com/Shopify</em></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Installation"><span class="toc-number">1.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Directories"><span class="toc-number">2.</span> <span class="toc-text">Directories</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Front-matter"><span class="toc-number"></span> <span class="toc-text">Front-matter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-frontmatter"><span class="toc-number">1.</span> <span class="toc-text">Basic frontmatter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-frontmatter-stuff"><span class="toc-number">2.</span> <span class="toc-text">Other frontmatter stuff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration"><span class="toc-number">3.</span> <span class="toc-text">Configuration</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markup"><span class="toc-number"></span> <span class="toc-text">Markup</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Page-variables"><span class="toc-number">1.</span> <span class="toc-text">Page variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filters"><span class="toc-number">2.</span> <span class="toc-text">Filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loops"><span class="toc-number">3.</span> <span class="toc-text">Loops</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dates"><span class="toc-number">4.</span> <span class="toc-text">Dates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditionals"><span class="toc-number">5.</span> <span class="toc-text">Conditionals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Case"><span class="toc-number">6.</span> <span class="toc-text">Case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Includes-partials"><span class="toc-number">7.</span> <span class="toc-text">Includes (partials)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comments"><span class="toc-number">8.</span> <span class="toc-text">Comments</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Variables"><span class="toc-number"></span> <span class="toc-text">Variables</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Top-level-variables"><span class="toc-number">1.</span> <span class="toc-text">Top-level variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Installation"><span class="toc-number">2.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Directories"><span class="toc-number">3.</span> <span class="toc-text">Directories</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Front-matter"><span class="toc-number"></span> <span class="toc-text">Front-matter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-frontmatter"><span class="toc-number">1.</span> <span class="toc-text">Basic frontmatter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-frontmatter-stuff"><span class="toc-number">2.</span> <span class="toc-text">Other frontmatter stuff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration"><span class="toc-number">3.</span> <span class="toc-text">Configuration</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markup"><span class="toc-number"></span> <span class="toc-text">Markup</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Page-variables"><span class="toc-number">1.</span> <span class="toc-text">Page variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filters"><span class="toc-number">2.</span> <span class="toc-text">Filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loops"><span class="toc-number">3.</span> <span class="toc-text">Loops</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dates"><span class="toc-number">4.</span> <span class="toc-text">Dates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditionals"><span class="toc-number">5.</span> <span class="toc-text">Conditionals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Case"><span class="toc-number">6.</span> <span class="toc-text">Case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Includes-partials"><span class="toc-number">7.</span> <span class="toc-text">Includes (partials)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comments"><span class="toc-number">8.</span> <span class="toc-text">Comments</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Variables"><span class="toc-number"></span> <span class="toc-text">Variables</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Top-level-variables"><span class="toc-number">1.</span> <span class="toc-text">Top-level variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Site"><span class="toc-number">2.</span> <span class="toc-text">Site</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Page"><span class="toc-number">3.</span> <span class="toc-text">Page</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Filters-1"><span class="toc-number"></span> <span class="toc-text">Filters</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Dates-1"><span class="toc-number">1.</span> <span class="toc-text">Dates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Preprocessors"><span class="toc-number">2.</span> <span class="toc-text">Preprocessors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Array-filters"><span class="toc-number">3.</span> <span class="toc-text">Array filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-filters"><span class="toc-number">4.</span> <span class="toc-text">String filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-filters-Jekyll-only"><span class="toc-number">5.</span> <span class="toc-text">String filters (Jekyll-only)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">6.</span> <span class="toc-text">Numbers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Paginator"><span class="toc-number"></span> <span class="toc-text">Paginator</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Paginator-setup"><span class="toc-number">1.</span> <span class="toc-text">Paginator setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers-1"><span class="toc-number">2.</span> <span class="toc-text">Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Iterating-through-posts"><span class="toc-number">3.</span> <span class="toc-text">Iterating through posts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Previous-button"><span class="toc-number">4.</span> <span class="toc-text">Previous button</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blogging"><span class="toc-number"></span> <span class="toc-text">Blogging</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Paths"><span class="toc-number">1.</span> <span class="toc-text">Paths</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Image-paths"><span class="toc-number">2.</span> <span class="toc-text">Image paths</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Drafts"><span class="toc-number">3.</span> <span class="toc-text">Drafts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Defining-excerpts"><span class="toc-number">4.</span> <span class="toc-text">Defining excerpts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Displaying-excerpts"><span class="toc-number">5.</span> <span class="toc-text">Displaying excerpts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Excerpt-separator"><span class="toc-number">6.</span> <span class="toc-text">Excerpt separator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Permalinks"><span class="toc-number">7.</span> <span class="toc-text">Permalinks</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#More-features"><span class="toc-number"></span> <span class="toc-text">More features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Data"><span class="toc-number">1.</span> <span class="toc-text">Data</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Collections"><span class="toc-number">2.</span> <span class="toc-text">Collections</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code-highlighter"><span class="toc-number">3.</span> <span class="toc-text">Code highlighter</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Integration"><span class="toc-number"></span> <span class="toc-text">Integration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Bundler"><span class="toc-number">1.</span> <span class="toc-text">Bundler</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compass"><span class="toc-number">2.</span> <span class="toc-text">Compass</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number"></span> <span class="toc-text">Also see</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Site"><span class="toc-number">1.</span> <span class="toc-text">Site</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Page"><span class="toc-number">2.</span> <span class="toc-text">Page</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Filters-1"><span class="toc-number"></span> <span class="toc-text">Filters</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Dates-1"><span class="toc-number">1.</span> <span class="toc-text">Dates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Preprocessors"><span class="toc-number">2.</span> <span class="toc-text">Preprocessors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Array-filters"><span class="toc-number">3.</span> <span class="toc-text">Array filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-filters"><span class="toc-number">4.</span> <span class="toc-text">String filters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-filters-Jekyll-only"><span class="toc-number">5.</span> <span class="toc-text">String filters (Jekyll-only)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">6.</span> <span class="toc-text">Numbers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Paginator"><span class="toc-number"></span> <span class="toc-text">Paginator</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Paginator-setup"><span class="toc-number">1.</span> <span class="toc-text">Paginator setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers-1"><span class="toc-number">2.</span> <span class="toc-text">Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Iterating-through-posts"><span class="toc-number">3.</span> <span class="toc-text">Iterating through posts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Previous-button"><span class="toc-number">4.</span> <span class="toc-text">Previous button</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blogging"><span class="toc-number"></span> <span class="toc-text">Blogging</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Paths"><span class="toc-number">1.</span> <span class="toc-text">Paths</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Image-paths"><span class="toc-number">2.</span> <span class="toc-text">Image paths</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Drafts"><span class="toc-number">3.</span> <span class="toc-text">Drafts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Defining-excerpts"><span class="toc-number">4.</span> <span class="toc-text">Defining excerpts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Displaying-excerpts"><span class="toc-number">5.</span> <span class="toc-text">Displaying excerpts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Excerpt-separator"><span class="toc-number">6.</span> <span class="toc-text">Excerpt separator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Permalinks"><span class="toc-number">7.</span> <span class="toc-text">Permalinks</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#More-features"><span class="toc-number"></span> <span class="toc-text">More features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Data"><span class="toc-number">1.</span> <span class="toc-text">Data</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Collections"><span class="toc-number">2.</span> <span class="toc-text">Collections</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code-highlighter"><span class="toc-number">3.</span> <span class="toc-text">Code highlighter</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Integration"><span class="toc-number"></span> <span class="toc-text">Integration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Bundler"><span class="toc-number">1.</span> <span class="toc-text">Bundler</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compass"><span class="toc-number">2.</span> <span class="toc-text">Compass</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number"></span> <span class="toc-text">Also see</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/jekyll/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/jekyll/&text=Jekyll"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/jekyll/&title=Jekyll"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/jekyll/&is_video=false&description=Jekyll"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Jekyll&body=Check out this article: https://rupertqin.github.io/devhints/jekyll/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/jekyll/&title=Jekyll"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/jekyll/&title=Jekyll"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/jekyll/&title=Jekyll"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/jekyll/&title=Jekyll"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/jekyll/&name=Jekyll&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

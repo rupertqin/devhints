@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Getting startedHello worldhello.go123456789101112package mainimport &quot;fmt&quot;func main() &amp;#123;  message := greetMe(&quot;world&quot;)  fmt.Println(message)&amp;#125;func greetMe(name string) string &amp;#123;  return &quot;Hel">
+<meta name="keywords" content="Featured">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/go/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Getting startedHello worldhello.go123456789101112package mainimport &quot;fmt&quot;func main() &amp;#123;  message := greetMe(&quot;world&quot;)  fmt.Println(message)&amp;#125;func greetMe(name string) string &amp;#123;  return &quot;Hel">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-09-14T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Go">
+<meta name="twitter:description" content="Getting startedHello worldhello.go123456789101112package mainimport &quot;fmt&quot;func main() &amp;#123;  message := greetMe(&quot;world&quot;)  fmt.Println(message)&amp;#125;func greetMe(name string) string &amp;#123;  return &quot;Hel">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Go</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../goby/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../gnupg/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/go/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/go/&text=Go"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/go/&title=Go"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/go/&is_video=false&description=Go"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Go&body=Check out this article: https://rupertqin.github.io/devhints/go/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/go/&title=Go"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/go/&title=Go"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/go/&title=Go"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/go/&title=Go"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/go/&name=Go&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hello-world"><span class="toc-number">1.1.</span> <span class="toc-text">Hello world</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#hello-go"><span class="toc-number">1.1.1.</span> <span class="toc-text">hello.go</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Variables"><span class="toc-number">1.2.</span> <span class="toc-text">Variables</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Variable-declaration"><span class="toc-number">1.2.1.</span> <span class="toc-text">Variable declaration</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Shortcut-of-above-Infers-type"><span class="toc-number">1.2.2.</span> <span class="toc-text">Shortcut of above (Infers type)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Constants"><span class="toc-number">1.3.</span> <span class="toc-text">Constants</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-types"><span class="toc-number">2.</span> <span class="toc-text">Basic types</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Strings"><span class="toc-number">2.1.</span> <span class="toc-text">Strings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">2.2.</span> <span class="toc-text">Numbers</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Typical-types"><span class="toc-number">2.2.1.</span> <span class="toc-text">Typical types</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Other-types"><span class="toc-number">2.2.2.</span> <span class="toc-text">Other types</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Arrays"><span class="toc-number">2.3.</span> <span class="toc-text">Arrays</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Slices"><span class="toc-number">2.4.</span> <span class="toc-text">Slices</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pointers"><span class="toc-number">2.5.</span> <span class="toc-text">Pointers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-conversions"><span class="toc-number">2.6.</span> <span class="toc-text">Type conversions</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flow-control"><span class="toc-number">3.</span> <span class="toc-text">Flow control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditional"><span class="toc-number">3.1.</span> <span class="toc-text">Conditional</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Statements-in-if"><span class="toc-number">3.2.</span> <span class="toc-text">Statements in if</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Switch"><span class="toc-number">3.3.</span> <span class="toc-text">Switch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#For-loop"><span class="toc-number">3.4.</span> <span class="toc-text">For loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#For-Range-loop"><span class="toc-number">3.5.</span> <span class="toc-text">For-Range loop</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functions"><span class="toc-number">4.</span> <span class="toc-text">Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Lambdas"><span class="toc-number">4.1.</span> <span class="toc-text">Lambdas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Multiple-return-types"><span class="toc-number">4.2.</span> <span class="toc-text">Multiple return types</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Named-return-values"><span class="toc-number">4.3.</span> <span class="toc-text">Named return values</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Packages"><span class="toc-number">5.</span> <span class="toc-text">Packages</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Importing"><span class="toc-number">5.1.</span> <span class="toc-text">Importing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aliases"><span class="toc-number">5.2.</span> <span class="toc-text">Aliases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exporting-names"><span class="toc-number">5.3.</span> <span class="toc-text">Exporting names</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Packages-1"><span class="toc-number">5.4.</span> <span class="toc-text">Packages</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Concurrency"><span class="toc-number">6.</span> <span class="toc-text">Concurrency</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Goroutines"><span class="toc-number">6.1.</span> <span class="toc-text">Goroutines</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Buffered-channels"><span class="toc-number">6.2.</span> <span class="toc-text">Buffered channels</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Closing-channels"><span class="toc-number">6.3.</span> <span class="toc-text">Closing channels</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Closes-a-channel"><span class="toc-number">6.3.1.</span> <span class="toc-text">Closes a channel</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Iterates-across-a-channel-until-its-closed"><span class="toc-number">6.3.2.</span> <span class="toc-text">Iterates across a channel until its closed</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Closed-if-ok-false"><span class="toc-number">6.3.3.</span> <span class="toc-text">Closed if ok == false</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Error-control"><span class="toc-number">7.</span> <span class="toc-text">Error control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Defer"><span class="toc-number">7.1.</span> <span class="toc-text">Defer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deferring-functions"><span class="toc-number">7.2.</span> <span class="toc-text">Deferring functions</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Structs"><span class="toc-number">8.</span> <span class="toc-text">Structs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Defining"><span class="toc-number">8.1.</span> <span class="toc-text">Defining</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Literals"><span class="toc-number">8.2.</span> <span class="toc-text">Literals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pointers-to-structs"><span class="toc-number">8.3.</span> <span class="toc-text">Pointers to structs</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Methods"><span class="toc-number">9.</span> <span class="toc-text">Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Receivers"><span class="toc-number">9.1.</span> <span class="toc-text">Receivers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mutation"><span class="toc-number">9.2.</span> <span class="toc-text">Mutation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">10.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Go
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.291Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/C-like/">C-like</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="../tags/Featured/">Featured</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><h3 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h3><h4 id="hello-go"><a href="#hello-go" class="headerlink" title="hello.go"></a>hello.go</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  message := greetMe(<span class="string">"world"</span>)</span><br><span class="line">  fmt.Println(message)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">greetMe</span><span class="params">(name <span class="keyword">string</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"Hello, "</span> + name + <span class="string">"!"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ go build</span><br></pre></td></tr></table></figure>
+<p>Or try it out in the <a href="https://repl.it/languages/go" target="_blank" rel="noopener">Go repl</a>, or <a href="https://tour.golang.org/welcome/1" target="_blank" rel="noopener">A Tour of Go</a>.</p>
+<h3 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h3><h4 id="Variable-declaration"><a href="#Variable-declaration" class="headerlink" title="Variable declaration"></a>Variable declaration</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> msg <span class="keyword">string</span></span><br><span class="line">msg = <span class="string">"Hello"</span></span><br></pre></td></tr></table></figure>
+<h4 id="Shortcut-of-above-Infers-type"><a href="#Shortcut-of-above-Infers-type" class="headerlink" title="Shortcut of above (Infers type)"></a>Shortcut of above (Infers type)</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msg := <span class="string">"Hello"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Phi = <span class="number">1.618</span></span><br></pre></td></tr></table></figure>
+<p>Constants can be character, string, boolean, or numeric values.</p>
+<p>See: <a href="https://tour.golang.org/basics/15" target="_blank" rel="noopener">Constants</a></p>
+<h2 id="Basic-types"><a href="#Basic-types" class="headerlink" title="Basic types"></a>Basic types</h2><h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str := <span class="string">"Hello"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str := <span class="string">`Multiline</span></span><br><span class="line"><span class="string">string`</span></span><br></pre></td></tr></table></figure>
+<p>Strings are of type <code>string</code>.</p>
+<h3 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h3><h4 id="Typical-types"><a href="#Typical-types" class="headerlink" title="Typical types"></a>Typical types</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num := <span class="number">3</span>          <span class="comment">// int</span></span><br><span class="line">num := <span class="number">3.</span>         <span class="comment">// float64</span></span><br><span class="line">num := <span class="number">3</span> + <span class="number">4i</span>     <span class="comment">// complex128</span></span><br><span class="line">num := <span class="keyword">byte</span>(<span class="string">'a'</span>)  <span class="comment">// byte (alias for uint8)</span></span><br></pre></td></tr></table></figure>
+<h4 id="Other-types"><a href="#Other-types" class="headerlink" title="Other types"></a>Other types</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> u <span class="keyword">uint</span> = <span class="number">7</span>        <span class="comment">// uint (unsigned)</span></span><br><span class="line"><span class="keyword">var</span> p <span class="keyword">float32</span> = <span class="number">22.7</span>  <span class="comment">// 32-bit float</span></span><br></pre></td></tr></table></figure>
+<h3 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// var numbers [5]int</span></span><br><span class="line">numbers := [...]<span class="keyword">int</span>&#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>Arrays have a fixed size.</p>
+<h3 id="Slices"><a href="#Slices" class="headerlink" title="Slices"></a>Slices</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slice := []<span class="keyword">int</span>&#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slice := []<span class="keyword">byte</span>(<span class="string">"Hello"</span>)</span><br></pre></td></tr></table></figure>
+<p>Slices have a dynamic size, unlike arrays.</p>
+<h3 id="Pointers"><a href="#Pointers" class="headerlink" title="Pointers"></a>Pointers</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span> <span class="params">()</span></span> &#123;</span><br><span class="line">  b := *getPointer()</span><br><span class="line">  fmt.Println(<span class="string">"Value is"</span>, b)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">getPointer</span> <span class="params">()</span> <span class="params">(myPointer *<span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">  a := <span class="number">234</span></span><br><span class="line">  <span class="keyword">return</span> &amp;a</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Pointers point to a memory location of a variable. Go is fully garbage-collected.</p>
+<p>See: <a href="https://tour.golang.org/moretypes/1" target="_blank" rel="noopener">Pointers</a></p>
+<h3 id="Type-conversions"><a href="#Type-conversions" class="headerlink" title="Type conversions"></a>Type conversions</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i := <span class="number">2</span></span><br><span class="line">f := <span class="keyword">float64</span>(i)</span><br><span class="line">u := <span class="keyword">uint</span>(i)</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://tour.golang.org/basics/13" target="_blank" rel="noopener">Type conversions</a></p>
+<h2 id="Flow-control"><a href="#Flow-control" class="headerlink" title="Flow control"></a>Flow control</h2><h3 id="Conditional"><a href="#Conditional" class="headerlink" title="Conditional"></a>Conditional</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> day == <span class="string">"sunday"</span> || day == <span class="string">"saturday"</span> &#123;</span><br><span class="line">  rest()</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> day == <span class="string">"monday"</span> &amp;&amp; isTired() &#123;</span><br><span class="line">  groan()</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  work()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://tour.golang.org/flowcontrol/5" target="_blank" rel="noopener">If</a></p>
+<h3 id="Statements-in-if"><a href="#Statements-in-if" class="headerlink" title="Statements in if"></a>Statements in if</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> _, err := getResult(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">  fmt.Println(<span class="string">"Uh oh"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>A condition in an <code>if</code> statement can be preceded with a statement before a <code>;</code>.</p>
+<p>See: <a href="https://tour.golang.org/flowcontrol/6" target="_blank" rel="noopener">If with a short statement</a></p>
+<h3 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> day &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="string">"sunday"</span>:</span><br><span class="line">    <span class="comment">// cases don't "fall through" by default!</span></span><br><span class="line">    <span class="keyword">fallthrough</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">case</span> <span class="string">"saturday"</span>:</span><br><span class="line">    rest()</span><br><span class="line"></span><br><span class="line">  <span class="keyword">default</span>:</span><br><span class="line">    work()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://github.com/golang/go/wiki/Switch" target="_blank" rel="noopener">Switch</a></p>
+<h3 id="For-loop"><a href="#For-loop" class="headerlink" title="For loop"></a>For loop</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">for</span> count := <span class="number">0</span>; count &lt;= <span class="number">10</span>; count++ &#123;</span><br><span class="line">	fmt.Println(<span class="string">"My counter is at"</span>, count)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://tour.golang.org/flowcontrol/1" target="_blank" rel="noopener">For loops</a></p>
+<h3 id="For-Range-loop"><a href="#For-Range-loop" class="headerlink" title="For-Range loop"></a>For-Range loop</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">entry := []<span class="keyword">string</span>&#123;<span class="string">"Jack"</span>,<span class="string">"John"</span>,<span class="string">"Jones"</span>&#125;</span><br><span class="line"><span class="keyword">for</span> i, val := <span class="keyword">range</span> entry &#123;</span><br><span class="line">  fmt.Printf(<span class="string">"At position %d, the character %s is present\n"</span>, i, val)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://gobyexample.com/range" target="_blank" rel="noopener">For-Range loops</a></p>
+<h2 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h2><h3 id="Lambdas"><a href="#Lambdas" class="headerlink" title="Lambdas"></a>Lambdas</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">myfunc := <span class="function"><span class="keyword">func</span><span class="params">()</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">  <span class="keyword">return</span> x &gt; <span class="number">10000</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Functions are first class objects.</p>
+<h3 id="Multiple-return-types"><a href="#Multiple-return-types" class="headerlink" title="Multiple return types"></a>Multiple return types</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a, b := getMessage()</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">getMessage</span><span class="params">()</span> <span class="params">(a <span class="keyword">string</span>, b <span class="keyword">string</span>)</span></span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"Hello"</span>, <span class="string">"World"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Named-return-values"><a href="#Named-return-values" class="headerlink" title="Named return values"></a>Named return values</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">split</span><span class="params">(sum <span class="keyword">int</span>)</span> <span class="params">(x, y <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">  x = sum * <span class="number">4</span> / <span class="number">9</span></span><br><span class="line">  y = sum - x</span><br><span class="line">  <span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>By defining the return value names in the signature, a <code>return</code> (no args) will return variables with those names.</p>
+<p>See: <a href="https://tour.golang.org/basics/7" target="_blank" rel="noopener">Named return values</a></p>
+<h2 id="Packages"><a href="#Packages" class="headerlink" title="Packages"></a>Packages</h2><h3 id="Importing"><a href="#Importing" class="headerlink" title="Importing"></a>Importing</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"math/rand"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">  <span class="string">"fmt"</span>        <span class="comment">// gives fmt.Println</span></span><br><span class="line">  <span class="string">"math/rand"</span>  <span class="comment">// gives rand.Intn</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>Both are the same.</p>
+<p>See: <a href="https://tour.golang.org/basics/1" target="_blank" rel="noopener">Importing</a></p>
+<h3 id="Aliases"><a href="#Aliases" class="headerlink" title="Aliases"></a>Aliases</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> r <span class="string">"math/rand"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r.Intn()</span><br></pre></td></tr></table></figure>
+<h3 id="Exporting-names"><a href="#Exporting-names" class="headerlink" title="Exporting names"></a>Exporting names</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Hello</span> <span class="params">()</span></span> &#123;</span><br><span class="line">  ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Exported names begin with capital letters.</p>
+<p>See: <a href="https://tour.golang.org/basics/3" target="_blank" rel="noopener">Exported names</a></p>
+<h3 id="Packages-1"><a href="#Packages-1" class="headerlink" title="Packages"></a>Packages</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> hello</span><br></pre></td></tr></table></figure>
+<p>Every package file has to start with <code>package</code>.</p>
+<h2 id="Concurrency"><a href="#Concurrency" class="headerlink" title="Concurrency"></a>Concurrency</h2><h3 id="Goroutines"><a href="#Goroutines" class="headerlink" title="Goroutines"></a>Goroutines</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  <span class="comment">// A "channel"</span></span><br><span class="line">  ch := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">string</span>)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Start concurrent routines</span></span><br><span class="line">  <span class="keyword">go</span> push(<span class="string">"Moe"</span>, ch)</span><br><span class="line">  <span class="keyword">go</span> push(<span class="string">"Larry"</span>, ch)</span><br><span class="line">  <span class="keyword">go</span> push(<span class="string">"Curly"</span>, ch)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Read 3 results</span></span><br><span class="line">  <span class="comment">// (Since our goroutines are concurrent,</span></span><br><span class="line">  <span class="comment">// the order isn't guaranteed!)</span></span><br><span class="line">  fmt.Println(&lt;-ch, &lt;-ch, &lt;-ch)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">push</span><span class="params">(name <span class="keyword">string</span>, ch <span class="keyword">chan</span> <span class="keyword">string</span>)</span></span> &#123;</span><br><span class="line">  msg := <span class="string">"Hey, "</span> + name</span><br><span class="line">  ch &lt;- msg</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Channels are concurrency-safe communication objects, used in goroutines.</p>
+<p>See: <a href="https://tour.golang.org/concurrency/1" target="_blank" rel="noopener">Goroutines</a>, <a href="https://tour.golang.org/concurrency/2" target="_blank" rel="noopener">Channels</a></p>
+<h3 id="Buffered-channels"><a href="#Buffered-channels" class="headerlink" title="Buffered channels"></a>Buffered channels</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ch := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>, <span class="number">2</span>)</span><br><span class="line">ch &lt;- <span class="number">1</span></span><br><span class="line">ch &lt;- <span class="number">2</span></span><br><span class="line">ch &lt;- <span class="number">3</span></span><br><span class="line"><span class="comment">// fatal error:</span></span><br><span class="line"><span class="comment">// all goroutines are asleep - deadlock!</span></span><br></pre></td></tr></table></figure>
+<p>Buffered channels limit the amount of messages it can keep.</p>
+<p>See: <a href="https://tour.golang.org/concurrency/3" target="_blank" rel="noopener">Buffered channels</a></p>
+<h3 id="Closing-channels"><a href="#Closing-channels" class="headerlink" title="Closing channels"></a>Closing channels</h3><h4 id="Closes-a-channel"><a href="#Closes-a-channel" class="headerlink" title="Closes a channel"></a>Closes a channel</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ch &lt;- <span class="number">1</span></span><br><span class="line">ch &lt;- <span class="number">2</span></span><br><span class="line">ch &lt;- <span class="number">3</span></span><br><span class="line"><span class="built_in">close</span>(ch)</span><br></pre></td></tr></table></figure>
+<h4 id="Iterates-across-a-channel-until-its-closed"><a href="#Iterates-across-a-channel-until-its-closed" class="headerlink" title="Iterates across a channel until its closed"></a>Iterates across a channel until its closed</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i := <span class="keyword">range</span> ch &#123;</span><br><span class="line">  ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Closed-if-ok-false"><a href="#Closed-if-ok-false" class="headerlink" title="Closed if ok == false"></a>Closed if <code>ok == false</code></h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v, ok := &lt;- ch</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://tour.golang.org/concurrency/4" target="_blank" rel="noopener">Range and close</a></p>
+<h2 id="Error-control"><a href="#Error-control" class="headerlink" title="Error control"></a>Error control</h2><h3 id="Defer"><a href="#Defer" class="headerlink" title="Defer"></a>Defer</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  <span class="keyword">defer</span> fmt.Println(<span class="string">"Done"</span>)</span><br><span class="line">  fmt.Println(<span class="string">"Working..."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Defers running a function until the surrounding function returns.<br>The arguments are evaluated immediately, but the function call is not ran until later.</p>
+<p>See: <a href="https://blog.golang.org/defer-panic-and-recover" target="_blank" rel="noopener">Defer, panic and recover</a></p>
+<h3 id="Deferring-functions"><a href="#Deferring-functions" class="headerlink" title="Deferring functions"></a>Deferring functions</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  <span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">"Done"</span>)</span><br><span class="line">  &#125;()</span><br><span class="line">  fmt.Println(<span class="string">"Working..."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lambdas are better suited for defer blocks.</p>
+<h2 id="Structs"><a href="#Structs" class="headerlink" title="Structs"></a>Structs</h2><h3 id="Defining"><a href="#Defining" class="headerlink" title="Defining"></a>Defining</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Vertex <span class="keyword">struct</span> &#123;</span><br><span class="line">  X <span class="keyword">int</span></span><br><span class="line">  Y <span class="keyword">int</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  v := Vertex&#123;<span class="number">1</span>, <span class="number">2</span>&#125;</span><br><span class="line">  v.X = <span class="number">4</span></span><br><span class="line">  fmt.Println(v.X, v.Y)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>See: <a href="https://tour.golang.org/moretypes/2" target="_blank" rel="noopener">Structs</a></p>
+<h3 id="Literals"><a href="#Literals" class="headerlink" title="Literals"></a>Literals</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v := Vertex&#123;X: <span class="number">1</span>, Y: <span class="number">2</span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Field names can be omitted</span></span><br><span class="line">v := Vertex&#123;<span class="number">1</span>, <span class="number">2</span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Y is implicit</span></span><br><span class="line">v := Vertex&#123;X: <span class="number">1</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>You can also put field names.</p>
+<h3 id="Pointers-to-structs"><a href="#Pointers-to-structs" class="headerlink" title="Pointers to structs"></a>Pointers to structs</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">v := &amp;Vertex&#123;<span class="number">1</span>, <span class="number">2</span>&#125;</span><br><span class="line">v.X = <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>Doing <code>v.X</code> is the same as doing <code>(*v).X</code>, when <code>v</code> is a pointer.</p>
+<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><h3 id="Receivers"><a href="#Receivers" class="headerlink" title="Receivers"></a>Receivers</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Vertex <span class="keyword">struct</span> &#123;</span><br><span class="line">  X, Y <span class="keyword">float64</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(v Vertex)</span> <span class="title">Abs</span><span class="params">()</span> <span class="title">float64</span></span> &#123;</span><br><span class="line">  <span class="keyword">return</span> math.Sqrt(v.X * v.X + v.Y * v.Y)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">v: = Vertex&#123;<span class="number">1</span>, <span class="number">2</span>&#125;</span><br><span class="line">v.Abs()</span><br></pre></td></tr></table></figure>
+<p>There are no classes, but you can define functions with <em>receivers</em>.</p>
+<p>See: <a href="https://tour.golang.org/methods/1" target="_blank" rel="noopener">Methods</a></p>
+<h3 id="Mutation"><a href="#Mutation" class="headerlink" title="Mutation"></a>Mutation</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(v *Vertex)</span> <span class="title">Scale</span><span class="params">(f <span class="keyword">float64</span>)</span></span> &#123;</span><br><span class="line">  v.X = v.X * f</span><br><span class="line">  v.Y = v.Y * f</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">v := Vertex&#123;<span class="number">6</span>, <span class="number">12</span>&#125;</span><br><span class="line">v.Scale(<span class="number">0.5</span>)</span><br><span class="line"><span class="comment">// `v` is updated</span></span><br></pre></td></tr></table></figure>
+<p>By defining your receiver as a pointer (<code>*Vertex</code>), you can do mutations.</p>
+<p>See: <a href="https://tour.golang.org/methods/4" target="_blank" rel="noopener">Pointer receivers</a></p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://tour.golang.org/welcome/1" target="_blank" rel="noopener">A tour of Go</a> <em>(tour.golang.org)</em></li>
+<li><a href="https://github.com/golang/go/wiki/" target="_blank" rel="noopener">Golang wiki</a> <em>(github.com)</em></li>
+<li><a href="https://awesome-go.com/" target="_blank" rel="noopener">Awesome Go</a> <em>(awesome-go.com)</em></li>
+<li><a href="https://gobyexample.com/" target="_blank" rel="noopener">Go by Example</a> <em>(gobyexample.com)</em></li>
+<li><a href="https://golang.org/doc/effective_go.html" target="_blank" rel="noopener">Effective Go</a> <em>(golang.org)</em></li>
+<li><a href="https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw" target="_blank" rel="noopener">JustForFunc Youtube</a> <em>(youtube.com)</em></li>
+<li><a href="https://github.com/golang/go/wiki/CodeReviewComments" target="_blank" rel="noopener">Style Guide</a> <em>(github.com)</em></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.</span> <span class="toc-text">Getting started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hello-world"><span class="toc-number">1.1.</span> <span class="toc-text">Hello world</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#hello-go"><span class="toc-number">1.1.1.</span> <span class="toc-text">hello.go</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Variables"><span class="toc-number">1.2.</span> <span class="toc-text">Variables</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Variable-declaration"><span class="toc-number">1.2.1.</span> <span class="toc-text">Variable declaration</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Shortcut-of-above-Infers-type"><span class="toc-number">1.2.2.</span> <span class="toc-text">Shortcut of above (Infers type)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Constants"><span class="toc-number">1.3.</span> <span class="toc-text">Constants</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-types"><span class="toc-number">2.</span> <span class="toc-text">Basic types</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Strings"><span class="toc-number">2.1.</span> <span class="toc-text">Strings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-number">2.2.</span> <span class="toc-text">Numbers</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Typical-types"><span class="toc-number">2.2.1.</span> <span class="toc-text">Typical types</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Other-types"><span class="toc-number">2.2.2.</span> <span class="toc-text">Other types</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Arrays"><span class="toc-number">2.3.</span> <span class="toc-text">Arrays</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Slices"><span class="toc-number">2.4.</span> <span class="toc-text">Slices</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pointers"><span class="toc-number">2.5.</span> <span class="toc-text">Pointers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-conversions"><span class="toc-number">2.6.</span> <span class="toc-text">Type conversions</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flow-control"><span class="toc-number">3.</span> <span class="toc-text">Flow control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditional"><span class="toc-number">3.1.</span> <span class="toc-text">Conditional</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Statements-in-if"><span class="toc-number">3.2.</span> <span class="toc-text">Statements in if</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Switch"><span class="toc-number">3.3.</span> <span class="toc-text">Switch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#For-loop"><span class="toc-number">3.4.</span> <span class="toc-text">For loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#For-Range-loop"><span class="toc-number">3.5.</span> <span class="toc-text">For-Range loop</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functions"><span class="toc-number">4.</span> <span class="toc-text">Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Lambdas"><span class="toc-number">4.1.</span> <span class="toc-text">Lambdas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Multiple-return-types"><span class="toc-number">4.2.</span> <span class="toc-text">Multiple return types</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Named-return-values"><span class="toc-number">4.3.</span> <span class="toc-text">Named return values</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Packages"><span class="toc-number">5.</span> <span class="toc-text">Packages</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Importing"><span class="toc-number">5.1.</span> <span class="toc-text">Importing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aliases"><span class="toc-number">5.2.</span> <span class="toc-text">Aliases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exporting-names"><span class="toc-number">5.3.</span> <span class="toc-text">Exporting names</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Packages-1"><span class="toc-number">5.4.</span> <span class="toc-text">Packages</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Concurrency"><span class="toc-number">6.</span> <span class="toc-text">Concurrency</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Goroutines"><span class="toc-number">6.1.</span> <span class="toc-text">Goroutines</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Buffered-channels"><span class="toc-number">6.2.</span> <span class="toc-text">Buffered channels</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Closing-channels"><span class="toc-number">6.3.</span> <span class="toc-text">Closing channels</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Closes-a-channel"><span class="toc-number">6.3.1.</span> <span class="toc-text">Closes a channel</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Iterates-across-a-channel-until-its-closed"><span class="toc-number">6.3.2.</span> <span class="toc-text">Iterates across a channel until its closed</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Closed-if-ok-false"><span class="toc-number">6.3.3.</span> <span class="toc-text">Closed if ok == false</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Error-control"><span class="toc-number">7.</span> <span class="toc-text">Error control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Defer"><span class="toc-number">7.1.</span> <span class="toc-text">Defer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deferring-functions"><span class="toc-number">7.2.</span> <span class="toc-text">Deferring functions</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Structs"><span class="toc-number">8.</span> <span class="toc-text">Structs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Defining"><span class="toc-number">8.1.</span> <span class="toc-text">Defining</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Literals"><span class="toc-number">8.2.</span> <span class="toc-text">Literals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pointers-to-structs"><span class="toc-number">8.3.</span> <span class="toc-text">Pointers to structs</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Methods"><span class="toc-number">9.</span> <span class="toc-text">Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Receivers"><span class="toc-number">9.1.</span> <span class="toc-text">Receivers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mutation"><span class="toc-number">9.2.</span> <span class="toc-text">Mutation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">10.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/go/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/go/&text=Go"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/go/&title=Go"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/go/&is_video=false&description=Go"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Go&body=Check out this article: https://rupertqin.github.io/devhints/go/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/go/&title=Go"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/go/&title=Go"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/go/&title=Go"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/go/&title=Go"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/go/&name=Go&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Reporting12hledger bal &amp;#123;query&amp;#125;hledger reg &amp;#123;query&amp;#125; QueryQueries are used on all commands (bal, reg, etc). (docs) 123456789101112131415161718192021Assets           # An account (rege">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hledger">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/hledger/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Reporting12hledger bal &amp;#123;query&amp;#125;hledger reg &amp;#123;query&amp;#125; QueryQueries are used on all commands (bal, reg, etc). (docs) 123456789101112131415161718192021Assets           # An account (rege">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:37:07.918Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hledger">
+<meta name="twitter:description" content="Reporting12hledger bal &amp;#123;query&amp;#125;hledger reg &amp;#123;query&amp;#125; QueryQueries are used on all commands (bal, reg, etc). (docs) 123456789101112131415161718192021Assets           # An account (rege">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Hledger</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../html-email/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../homebrew/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/hledger/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/hledger/&text=Hledger"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/hledger/&title=Hledger"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/hledger/&is_video=false&description=Hledger"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hledger&body=Check out this article: https://rupertqin.github.io/devhints/hledger/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/hledger/&title=Hledger"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/hledger/&title=Hledger"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/hledger/&title=Hledger"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/hledger/&title=Hledger"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/hledger/&name=Hledger&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Reporting"><span class="toc-number">1.</span> <span class="toc-text">Reporting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Query"><span class="toc-number">2.</span> <span class="toc-text">Query</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Filter-by-status-type"><span class="toc-number">2.1.</span> <span class="toc-text">Filter by status/type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Periods"><span class="toc-number">2.2.</span> <span class="toc-text">Periods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Intervals"><span class="toc-number">2.3.</span> <span class="toc-text">Intervals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Smart-dates"><span class="toc-number">2.4.</span> <span class="toc-text">Smart dates</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Display-formats"><span class="toc-number">3.</span> <span class="toc-text">Display formats</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Multi-column-mode"><span class="toc-number">4.</span> <span class="toc-text">Multi-column mode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Accounts"><span class="toc-number">5.</span> <span class="toc-text">Accounts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other-commands"><span class="toc-number">6.</span> <span class="toc-text">Other commands</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">7.</span> <span class="toc-text">Examples</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#See-also"><span class="toc-number">8.</span> <span class="toc-text">See also</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Hledger
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.305Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Ledger/">Ledger</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Reporting"><a href="#Reporting" class="headerlink" title="Reporting"></a>Reporting</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hledger bal &#123;query&#125;</span><br><span class="line">hledger reg &#123;query&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Query"><a href="#Query" class="headerlink" title="Query"></a>Query</h2><p>Queries are used on all commands (<code>bal</code>, <code>reg</code>, etc). <a href="http://hledger.org/manual.html#queries" target="_blank" rel="noopener">(docs)</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Assets           # An account (regex)</span><br><span class="line">acct:Assets      # same</span><br><span class="line">^Assets          # Starting with Assets (eg, not &apos;Expenses:Assets&apos;)</span><br><span class="line"></span><br><span class="line">acctonly:A       # no subaccounts</span><br><span class="line"></span><br><span class="line">amt:2000         # amount (in absolute value)</span><br><span class="line">amt:&lt;200         # amount comparison (in absolute value)</span><br><span class="line">amt:&lt;+200        # amount comparison</span><br><span class="line">                 # also: &lt;=, &gt;, &gt;=</span><br><span class="line"></span><br><span class="line">desc:REGEX      # description</span><br><span class="line">code:REGEX      # transaction code (check number?)</span><br><span class="line">tag:REGEX</span><br><span class="line">cur:&apos;\$&apos;</span><br><span class="line"></span><br><span class="line">real:            # real posts</span><br><span class="line">real:0           # virtual posts</span><br><span class="line"></span><br><span class="line">depth:N          # --depth 2</span><br><span class="line">not:...          # eg, not:status:!</span><br></pre></td></tr></table></figure>
+<h3 id="Filter-by-status-type"><a href="#Filter-by-status-type" class="headerlink" title="Filter by status/type"></a>Filter by status/type</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">real:1           # -R, --real, no virtuals</span><br><span class="line">status:!         #     --pending</span><br><span class="line">status:*         # -C, --cleared</span><br><span class="line">status:          #     --uncleared</span><br></pre></td></tr></table></figure>
+<h3 id="Periods"><a href="#Periods" class="headerlink" title="Periods"></a>Periods</h3><p>For dates and intervals (see above).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">date:2015/01/01</span><br><span class="line">date:2015/01/01-    # -b, --begin</span><br><span class="line">date:-2015/01/01    # -e, --end</span><br><span class="line">date2:PERIODEXPR</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-p, --period=...</span><br><span class="line">  -p &quot;2009/01/01&quot;</span><br><span class="line">  -p &quot;2009/01/01 to 2009/12/31&quot;</span><br><span class="line">  -p &quot;2009/01/01to2009/12/31&quot;      # spaces optional</span><br><span class="line">  -p &quot;1/1 to 12/31&quot;</span><br><span class="line">  -p &quot;to 2009&quot;</span><br><span class="line">  -p &quot;weekly&quot;                      # -W, --weekly</span><br><span class="line">  -p &quot;weekly 2009/01/01 to 2009/12/31&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="Intervals"><a href="#Intervals" class="headerlink" title="Intervals"></a>Intervals</h3><p>Used on all commands (<code>bal</code>, <code>reg</code>, etc). Displays in multi-column mode. In <code>ledger-cli</code>, only <code>reg</code> is supported. Can also specified via <code>-p</code> (period).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-D, --daily</span><br><span class="line">-W, --weekly</span><br><span class="line">-M, --monthly</span><br><span class="line">-Q, --quarterly</span><br><span class="line">-Y, --yearly</span><br></pre></td></tr></table></figure>
+<h3 id="Smart-dates"><a href="#Smart-dates" class="headerlink" title="Smart dates"></a>Smart dates</h3><p>Used for <code>--period</code>, <code>--begin</code> and <code>--end</code> (<code>-p</code> <code>-b</code> <code>-e</code>).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-p 2015/01/01</span><br><span class="line">-p 2015/01</span><br><span class="line">-p 2015</span><br><span class="line">-p january</span><br><span class="line">-p jan</span><br><span class="line">-p 05/25</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-b today</span><br><span class="line">-b yesterday</span><br><span class="line">-e tomorrow</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-p this week</span><br><span class="line">-p last month</span><br><span class="line">-p this year</span><br></pre></td></tr></table></figure>
+<h2 id="Display-formats"><a href="#Display-formats" class="headerlink" title="Display formats"></a>Display formats</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">    --tree          # only in bal</span><br><span class="line">    --flat</span><br><span class="line"></span><br><span class="line">    --depth 2       # collapse those under this depth</span><br><span class="line">    --drop 1        # drop top-level accounts</span><br><span class="line">-B, --cost          # convert to default currency</span><br><span class="line">-E, --empty         # don&apos;t strip out $0 accounts</span><br><span class="line">    --date2         # use date2 when available</span><br></pre></td></tr></table></figure>
+<h2 id="Multi-column-mode"><a href="#Multi-column-mode" class="headerlink" title="Multi-column mode"></a>Multi-column mode</h2><p>When used with intervals (like <code>--weekly</code>):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-T, --row-total</span><br><span class="line">-N, --no-total</span><br></pre></td></tr></table></figure>
+<p>Also: (only in <code>bal</code>)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    --cumulative    # show ending balance per period</span><br><span class="line">-I, --historical    # like --cumulative but only for --begin</span><br><span class="line">-A, --average</span><br></pre></td></tr></table></figure>
+<h2 id="Accounts"><a href="#Accounts" class="headerlink" title="Accounts"></a>Accounts</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hledger accounts [--tree]</span><br></pre></td></tr></table></figure>
+<h2 id="Other-commands"><a href="#Other-commands" class="headerlink" title="Other commands"></a>Other commands</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hledger balancesheet       # bs</span><br><span class="line">hledger incomestatement    # is</span><br><span class="line">hledger cashflow           # cf</span><br><span class="line">hledger print</span><br><span class="line">hledger activity</span><br><span class="line">hledger stats</span><br></pre></td></tr></table></figure>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Current balance</span><br><span class="line">  hledger bal Assets</span><br><span class="line">  hledger balancesheet</span><br><span class="line"></span><br><span class="line">  hledger balancesheet Assets [--cleared --cost --empty -e tomorrow]</span><br><span class="line">  # ...discard future stuff; convert foreign currencies</span><br><span class="line"></span><br><span class="line"># Monthly changes in assets</span><br><span class="line">  hledger bal Assets Liabilities --monthly --tree --historical [--cleared --cost --empty -e tomorrow]</span><br><span class="line"></span><br><span class="line"># Weekly expenses</span><br><span class="line">  hledger bal Expenses --weekly --average --tree -b &apos;last month&apos; [--cleared --cost --empty -e tomorrow]</span><br></pre></td></tr></table></figure>
+<h2 id="See-also"><a href="#See-also" class="headerlink" title="See also"></a>See also</h2><ul>
+<li><a href="http://hledger.org/manual.html" target="_blank" rel="noopener">http://hledger.org/manual.html</a></li>
+<li><a href="http://ledger-cli.org/3.0/doc/ledger3.html" target="_blank" rel="noopener">http://ledger-cli.org/3.0/doc/ledger3.html</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Reporting"><span class="toc-number">1.</span> <span class="toc-text">Reporting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Query"><span class="toc-number">2.</span> <span class="toc-text">Query</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Filter-by-status-type"><span class="toc-number">2.1.</span> <span class="toc-text">Filter by status/type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Periods"><span class="toc-number">2.2.</span> <span class="toc-text">Periods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Intervals"><span class="toc-number">2.3.</span> <span class="toc-text">Intervals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Smart-dates"><span class="toc-number">2.4.</span> <span class="toc-text">Smart dates</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Display-formats"><span class="toc-number">3.</span> <span class="toc-text">Display formats</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Multi-column-mode"><span class="toc-number">4.</span> <span class="toc-text">Multi-column mode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Accounts"><span class="toc-number">5.</span> <span class="toc-text">Accounts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other-commands"><span class="toc-number">6.</span> <span class="toc-text">Other commands</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">7.</span> <span class="toc-text">Examples</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#See-also"><span class="toc-number">8.</span> <span class="toc-text">See also</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/hledger/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/hledger/&text=Hledger"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/hledger/&title=Hledger"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/hledger/&is_video=false&description=Hledger"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hledger&body=Check out this article: https://rupertqin.github.io/devhints/hledger/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/hledger/&title=Hledger"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/hledger/&title=Hledger"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/hledger/&title=Hledger"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/hledger/&title=Hledger"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/hledger/&name=Hledger&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

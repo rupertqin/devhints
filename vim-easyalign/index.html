@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Command modeAlign by delimiters123:EasyAlign :       &quot; preset characters (\=:.,&amp;amp;#|):EasyAlign |:EasyAlign \       &quot; \ means space Align by regexp1:EasyAlign /[:;]+/ Specify which123:EasyAlign |">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vim Easyalign">
+<meta property="og:url" content="https://rupertqin.github.io/devhints/vim-easyalign/index.html">
+<meta property="og:site_name" content="Dev Hints">
+<meta property="og:description" content="Command modeAlign by delimiters123:EasyAlign :       &quot; preset characters (\=:.,&amp;amp;#|):EasyAlign |:EasyAlign \       &quot; \ means space Align by regexp1:EasyAlign /[:;]+/ Specify which123:EasyAlign |">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T15:37:07.785Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vim Easyalign">
+<meta name="twitter:description" content="Command modeAlign by delimiters123:EasyAlign :       &quot; preset characters (\=:.,&amp;amp;#|):EasyAlign |:EasyAlign \       &quot; \ means space Align by regexp1:EasyAlign /[:;]+/ Specify which123:EasyAlign |">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Vim Easyalign</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../vim-help/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../vim-digraphs/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/vim-easyalign/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/vim-easyalign/&text=Vim Easyalign"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/vim-easyalign/&title=Vim Easyalign"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/vim-easyalign/&is_video=false&description=Vim Easyalign"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vim Easyalign&body=Check out this article: https://rupertqin.github.io/devhints/vim-easyalign/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/vim-easyalign/&title=Vim Easyalign"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/vim-easyalign/&title=Vim Easyalign"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/vim-easyalign/&title=Vim Easyalign"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/vim-easyalign/&title=Vim Easyalign"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/vim-easyalign/&name=Vim Easyalign&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Command-mode"><span class="toc-number">1.</span> <span class="toc-text">Command mode</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Align-by-delimiters"><span class="toc-number">1.1.</span> <span class="toc-text">Align by delimiters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Align-by-regexp"><span class="toc-number">1.2.</span> <span class="toc-text">Align by regexp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Specify-which"><span class="toc-number">1.3.</span> <span class="toc-text">Specify which</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-options"><span class="toc-number">1.4.</span> <span class="toc-text">Add options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spaces-are-optional"><span class="toc-number">1.5.</span> <span class="toc-text">Spaces are optional</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">2.</span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#EasyAlign-dr-delimiter-align-right"><span class="toc-number">2.1.</span> <span class="toc-text">:EasyAlign = dr (delimiter_align right)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EasyAlign-for-json-or-yaml"><span class="toc-number">2.2.</span> <span class="toc-text">:EasyAlign : (for json or yaml)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EasyAlign-markdown-tables"><span class="toc-number">2.3.</span> <span class="toc-text">:EasyAlign *| (markdown tables)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Interactive-mode"><span class="toc-number">3.</span> <span class="toc-text">Interactive mode</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Interactive-mode-options"><span class="toc-number">3.1.</span> <span class="toc-text">Interactive mode options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Example"><span class="toc-number">3.2.</span> <span class="toc-text">Example</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number">4.</span> <span class="toc-text">Also see</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Vim Easyalign
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Dev Hints</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-28T15:23:51.466Z" itemprop="datePublished">2019-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="../categories/Vim/">Vim</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Command-mode"><a href="#Command-mode" class="headerlink" title="Command mode"></a>Command mode</h2><h3 id="Align-by-delimiters"><a href="#Align-by-delimiters" class="headerlink" title="Align by delimiters"></a>Align by delimiters</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:EasyAlign :       <span class="comment">" preset characters (\=:.,&amp;#|)</span></span><br><span class="line">:EasyAlign |</span><br><span class="line">:EasyAlign \       <span class="comment">" \ means space</span></span><br></pre></td></tr></table></figure>
+<h3 id="Align-by-regexp"><a href="#Align-by-regexp" class="headerlink" title="Align by regexp"></a>Align by regexp</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:EasyAlign /[:;]+/</span><br></pre></td></tr></table></figure>
+<h3 id="Specify-which"><a href="#Specify-which" class="headerlink" title="Specify which"></a>Specify which</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:EasyAlign |       <span class="comment">" align by 1st `|`</span></span><br><span class="line">:EasyAlign <span class="number">3</span> |     <span class="comment">" align by 3rd `|`</span></span><br><span class="line">:EasyAlign * |     <span class="comment">" align by all `|`s</span></span><br></pre></td></tr></table></figure>
+<h3 id="Add-options"><a href="#Add-options" class="headerlink" title="Add options"></a>Add options</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">:EasyAlign * | l4r1</span><br><span class="line"></span><br><span class="line">  l4     <span class="comment">" lN - left_margin</span></span><br><span class="line">  r1     <span class="comment">" rN - right_margin</span></span><br><span class="line">         <span class="comment">"    spaces to the left/right of `|`</span></span><br><span class="line">  <span class="keyword">ar</span>     <span class="comment">" a[lrc] - align</span></span><br><span class="line">         <span class="comment">"    align left/right/center</span></span><br><span class="line">  <span class="keyword">dr</span>     <span class="comment">" d[lrc] - delimiter_align</span></span><br><span class="line">         <span class="comment">"    alignment of the delimiter itself</span></span><br></pre></td></tr></table></figure>
+<h3 id="Spaces-are-optional"><a href="#Spaces-are-optional" class="headerlink" title="Spaces are optional"></a>Spaces are optional</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:EasyAlign * /[;:]+/ l3</span><br><span class="line">:EasyAlign*/[;:]+/l3</span><br></pre></td></tr></table></figure>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h3 id="EasyAlign-dr-delimiter-align-right"><a href="#EasyAlign-dr-delimiter-align-right" class="headerlink" title=":EasyAlign = dr (delimiter_align right)"></a><code>:EasyAlign = dr</code> (delimiter_align right)</h3><pre><code>apple    = 1
+banana  += apple
+cake   ||= banana
+</code></pre><h3 id="EasyAlign-for-json-or-yaml"><a href="#EasyAlign-for-json-or-yaml" class="headerlink" title=":EasyAlign : (for json or yaml)"></a><code>:EasyAlign :</code> (for json or yaml)</h3><pre><code>url:      jdbc:mysql://localhost/test
+database: test
+</code></pre><h3 id="EasyAlign-markdown-tables"><a href="#EasyAlign-markdown-tables" class="headerlink" title=":EasyAlign *| (markdown tables)"></a><code>:EasyAlign *|</code> (markdown tables)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">| `&lt;Enter&gt;` | right align                   |</span><br><span class="line">| `1`       | on 1st occurrence             |</span><br><span class="line">| `2`       | on 2nd occurrence (and so on) |</span><br></pre></td></tr></table></figure>
+<h2 id="Interactive-mode"><a href="#Interactive-mode" class="headerlink" title="Interactive mode"></a>Interactive mode</h2><p>| <code>{Visual}</code> <code>⏎</code>  | activate for selection          |<br>| <code>ga</code> <code>{motion}</code> | activate for motion/text object |</p>
+<p>Then press options (if available), then a delimiter.</p>
+<h3 id="Interactive-mode-options"><a href="#Interactive-mode-options" class="headerlink" title="Interactive mode options"></a>Interactive mode options</h3><p>| <code>⏎</code>              | Set <code>alignment</code>                                  |<br>| <code>&lt;ctrl-l&gt;</code> <code>4 ⏎</code> | Set <code>left_margin</code> (to the left of the delimiter) |<br>| <code>&lt;ctrl-r&gt;</code> <code>4 ⏎</code> | Set <code>right_margin</code>                               |<br>| <code>↓</code>              | no margin                                        |</p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><ul>
+<li><code>gaip</code> <code>&lt;ctrl-l&gt;</code> <code>8⏎</code> <code>=</code> - puts 8 spaces before the equal sign</li>
+</ul>
+<h2 id="Also-see"><a href="#Also-see" class="headerlink" title="Also see"></a>Also see</h2><ul>
+<li><a href="https://github.com/junegunn/vim-easy-align" target="_blank" rel="noopener">vim-easy-align</a></li>
+<li><a href="https://github.com/junegunn/vim-easy-align#examples" target="_blank" rel="noopener">Examples</a></li>
+<li><a href="https://github.com/junegunn/vim-easy-align#alignment-options" target="_blank" rel="noopener">Alignment options</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Command-mode"><span class="toc-number">1.</span> <span class="toc-text">Command mode</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Align-by-delimiters"><span class="toc-number">1.1.</span> <span class="toc-text">Align by delimiters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Align-by-regexp"><span class="toc-number">1.2.</span> <span class="toc-text">Align by regexp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Specify-which"><span class="toc-number">1.3.</span> <span class="toc-text">Specify which</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-options"><span class="toc-number">1.4.</span> <span class="toc-text">Add options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spaces-are-optional"><span class="toc-number">1.5.</span> <span class="toc-text">Spaces are optional</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">2.</span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#EasyAlign-dr-delimiter-align-right"><span class="toc-number">2.1.</span> <span class="toc-text">:EasyAlign = dr (delimiter_align right)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EasyAlign-for-json-or-yaml"><span class="toc-number">2.2.</span> <span class="toc-text">:EasyAlign : (for json or yaml)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EasyAlign-markdown-tables"><span class="toc-number">2.3.</span> <span class="toc-text">:EasyAlign *| (markdown tables)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Interactive-mode"><span class="toc-number">3.</span> <span class="toc-text">Interactive mode</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Interactive-mode-options"><span class="toc-number">3.1.</span> <span class="toc-text">Interactive mode options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Example"><span class="toc-number">3.2.</span> <span class="toc-text">Example</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Also-see"><span class="toc-number">4.</span> <span class="toc-text">Also see</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://rupertqin.github.io/devhints/vim-easyalign/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://rupertqin.github.io/devhints/vim-easyalign/&text=Vim Easyalign"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://rupertqin.github.io/devhints/vim-easyalign/&title=Vim Easyalign"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://rupertqin.github.io/devhints/vim-easyalign/&is_video=false&description=Vim Easyalign"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vim Easyalign&body=Check out this article: https://rupertqin.github.io/devhints/vim-easyalign/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://rupertqin.github.io/devhints/vim-easyalign/&title=Vim Easyalign"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://rupertqin.github.io/devhints/vim-easyalign/&title=Vim Easyalign"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://rupertqin.github.io/devhints/vim-easyalign/&title=Vim Easyalign"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://rupertqin.github.io/devhints/vim-easyalign/&title=Vim Easyalign"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://rupertqin.github.io/devhints/vim-easyalign/&name=Vim Easyalign&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 QX
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../index.html">Home</a></li>
+         
+          <li><a href="../about/">About</a></li>
+         
+          <li><a href="../archives/">Writing</a></li>
+         
+          <li><a href="../projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
