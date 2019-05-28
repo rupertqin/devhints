@@ -52,6 +52,13 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
+
+
+# https://github.com/wzpan/hexo-generator-search
+search:
+  path: devhints/search.xml
+  field: post
+  content: true
   
 # Category & Tag
 default_category: uncategorized

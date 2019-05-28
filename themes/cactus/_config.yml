@@ -59,11 +59,6 @@ archive:
 post:
   show_updated: false
 
-# https://github.com/wzpan/hexo-generator-search
-search:
-  path: search.xml
-  field: post
-  content: true
 
 ##############################################################################
 # Look and Feel
