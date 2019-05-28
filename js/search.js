@@ -80,14 +80,16 @@ var searchFunc = function(path, searchId, contentId) {
           if (!data.title || data.title.trim() === "") {
             data.title = "Untitled";
           }
+
           var dataTitle = data.title.trim().toLowerCase();
           var dataContent = stripHtml(data.content.trim());
+
           var dataUrl = data.url;
           var indexTitle = -1;
           var indexContent = -1;
           var firstOccur = -1;
           // only match artiles with not empty contents
-          if (dataContent !== "") {
+          if (dataContent !== "" || dataTitle !== "") {
             keywords.forEach(function(keyword) {
               indexTitle = dataTitle.indexOf(keyword);
               indexContent = dataContent.indexOf(keyword);
@@ -132,8 +134,9 @@ var searchFunc = function(path, searchId, contentId) {
               matchContent = matchContent.replace(regS, function(keyword) {
                 return "<em class=\"search-keyword\">"+keyword+"</em>";
               });
-
-              searchResult.str += "<p class=\"search-result\">" + matchContent +"...</p>";
+              if (matchContent) {
+                searchResult.str += "<p class=\"search-result\">" + matchContent +"...</p>";
+              }
             }
             searchResult.str += "</li>";
             resultList.push(searchResult);
