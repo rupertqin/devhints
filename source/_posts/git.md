@@ -1,12 +1,9 @@
 ---
-layout: post
-title:  git
-tags: za, git
+date: 2019-05-28 17:17:54
 ---
 
 git config core.ignorecase false，关闭git忽略大小写配置，即可检测到大小写名称更改
 git diff --name-only 2ef1bdc 34er24er
-
 
 git init                                                  # 初始化本地git仓库（创建新仓库）
 git config --global user.name "xxx"                       # 配置用户名
@@ -37,7 +34,7 @@ git show dfb02                                            # 可只用commitid的
 git show HEAD                                             # 显示HEAD提交日志
 git show HEAD^                                            # 显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本 ^5为上5个版本
 git show v2.0                                             # 显示v2.0的日志及详细内容
-git show dev                                             # 显示 dev 分支最后一次 commit 细节
+git show dev                                              # 显示 dev 分支最后一次 commit 细节
 git show-branch                                           # 图示当前分支历史
 git show-branch --all                                     # 图示所有分支历史
 git show HEAD@{5}
