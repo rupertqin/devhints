@@ -26,6 +26,28 @@
     
     
     <entry>
+      <title>status code</title>
+      <link href="/status%20code/"/>
+      <url>/status%20code/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>nginx</title>
+      <link href="/nginx/"/>
+      <url>/nginx/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>curl</title>
       <link href="/curl/"/>
       <url>/curl/</url>
@@ -275,14 +297,14 @@
     
     
     <entry>
-      <title>Visual Studio Code</title>
-      <link href="/vscode/"/>
-      <url>/vscode/</url>
+      <title>Vows</title>
+      <link href="/vows/"/>
+      <url>/vows/</url>
       
       
       <categories>
           
-          <category> Apps </category>
+          <category> JavaScript libraries </category>
           
       </categories>
       
@@ -292,14 +314,14 @@
     
     
     <entry>
-      <title>Vows</title>
-      <link href="/vows/"/>
-      <url>/vows/</url>
+      <title>Visual Studio Code</title>
+      <link href="/vscode/"/>
+      <url>/vscode/</url>
       
       
       <categories>
           
-          <category> JavaScript libraries </category>
+          <category> Apps </category>
           
       </categories>
       
@@ -349,9 +371,9 @@
     
     
     <entry>
-      <title>Vimscript snippets</title>
-      <link href="/vimscript-snippets/"/>
-      <url>/vimscript-snippets/</url>
+      <title>Vimscript functions</title>
+      <link href="/vimscript-functions/"/>
+      <url>/vimscript-functions/</url>
       
       
       <categories>
@@ -366,9 +388,9 @@
     
     
     <entry>
-      <title>Vimscript functions</title>
-      <link href="/vimscript-functions/"/>
-      <url>/vimscript-functions/</url>
+      <title>Vimscript snippets</title>
+      <link href="/vimscript-snippets/"/>
+      <url>/vimscript-snippets/</url>
       
       
       <categories>
@@ -813,17 +835,6 @@
     
     
     <entry>
-      <title>Spreadsheet functions</title>
-      <link href="/spreadsheet/"/>
-      <url>/spreadsheet/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Spine</title>
       <link href="/spine/"/>
       <url>/spine/</url>
@@ -834,6 +845,17 @@
           <category> JavaScript libraries </category>
           
       </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spreadsheet functions</title>
+      <link href="/spreadsheet/"/>
+      <url>/spreadsheet/</url>
+      
       
       
     </entry>
@@ -943,17 +965,6 @@
     
     
     <entry>
-      <title>SimpleForm</title>
-      <link href="/simple_form/"/>
-      <url>/simple_form/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Siege</title>
       <link href="/siege/"/>
       <url>/siege/</url>
@@ -964,6 +975,17 @@
           <category> Others </category>
           
       </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SimpleForm</title>
+      <link href="/simple_form/"/>
+      <url>/simple_form/</url>
+      
       
       
     </entry>
@@ -1005,14 +1027,14 @@
     
     
     <entry>
-      <title>Shell: named pipes</title>
-      <link href="/sh-pipes/"/>
-      <url>/sh-pipes/</url>
+      <title>Sequelize</title>
+      <link href="/sequelize/"/>
+      <url>/sequelize/</url>
       
       
       <categories>
           
-          <category> CLI </category>
+          <category> Ruby libraries </category>
           
       </categories>
       
@@ -1022,14 +1044,14 @@
     
     
     <entry>
-      <title>Sequelize</title>
-      <link href="/sequelize/"/>
-      <url>/sequelize/</url>
+      <title>Shell: named pipes</title>
+      <link href="/sh-pipes/"/>
+      <url>/sh-pipes/</url>
       
       
       <categories>
           
-          <category> Ruby libraries </category>
+          <category> CLI </category>
           
       </categories>
       
@@ -1067,9 +1089,9 @@
     
     
     <entry>
-      <title>sed</title>
-      <link href="/sed/"/>
-      <url>/sed/</url>
+      <title>scp</title>
+      <link href="/scp/"/>
+      <url>/scp/</url>
       
       
       <categories>
@@ -1084,9 +1106,9 @@
     
     
     <entry>
-      <title>scp</title>
-      <link href="/scp/"/>
-      <url>/scp/</url>
+      <title>sed</title>
+      <link href="/sed/"/>
+      <url>/sed/</url>
       
       
       <categories>
@@ -1169,17 +1191,6 @@
     
     
     <entry>
-      <title>Rubiks cube</title>
-      <link href="/rubiks/"/>
-      <url>/rubiks/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Ruby</title>
       <link href="/ruby/"/>
       <url>/ruby/</url>
@@ -1197,9 +1208,20 @@
     
     
     <entry>
-      <title>Rsync</title>
-      <link href="/rsync/"/>
-      <url>/rsync/</url>
+      <title>Rubiks cube</title>
+      <link href="/rubiks/"/>
+      <url>/rubiks/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>rTorrent</title>
+      <link href="/rtorrent/"/>
+      <url>/rtorrent/</url>
       
       
       <categories>
@@ -1214,9 +1236,9 @@
     
     
     <entry>
-      <title>rTorrent</title>
-      <link href="/rtorrent/"/>
-      <url>/rtorrent/</url>
+      <title>Rsync</title>
+      <link href="/rsync/"/>
+      <url>/rsync/</url>
       
       
       <categories>
@@ -1316,17 +1338,6 @@
     
     
     <entry>
-      <title>RESTful API</title>
-      <link href="/rest-api/"/>
-      <url>/rest-api/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Riot.js</title>
       <link href="/riot/"/>
       <url>/riot/</url>
@@ -1337,6 +1348,17 @@
           <category> JavaScript libraries </category>
           
       </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>RESTful API</title>
+      <link href="/rest-api/"/>
+      <url>/rest-api/</url>
+      
       
       
     </entry>
@@ -1582,9 +1604,9 @@
     
     
     <entry>
-      <title>i18n</title>
-      <link href="/rails-i18n/"/>
-      <url>/rails-i18n/</url>
+      <title>Migrations</title>
+      <link href="/rails-migrations/"/>
+      <url>/rails-migrations/</url>
       
       
       <categories>
@@ -1599,9 +1621,9 @@
     
     
     <entry>
-      <title>Migrations</title>
-      <link href="/rails-migrations/"/>
-      <url>/rails-migrations/</url>
+      <title>i18n</title>
+      <link href="/rails-i18n/"/>
+      <url>/rails-i18n/</url>
       
       
       <categories>
@@ -1809,9 +1831,9 @@
     
     
     <entry>
-      <title>PSD.rb</title>
-      <link href="/psdrb/"/>
-      <url>/psdrb/</url>
+      <title>Pry</title>
+      <link href="/pry/"/>
+      <url>/pry/</url>
       
       
       <categories>
@@ -1826,9 +1848,9 @@
     
     
     <entry>
-      <title>Pry</title>
-      <link href="/pry/"/>
-      <url>/pry/</url>
+      <title>PSD.rb</title>
+      <link href="/psdrb/"/>
+      <url>/psdrb/</url>
       
       
       <categories>
@@ -1888,9 +1910,9 @@
     
     
     <entry>
-      <title>PostgreSQL</title>
-      <link href="/postgresql/"/>
-      <url>/postgresql/</url>
+      <title>PostgreSQL JSON</title>
+      <link href="/postgresql-json/"/>
+      <url>/postgresql-json/</url>
       
       
       <categories>
@@ -1905,9 +1927,9 @@
     
     
     <entry>
-      <title>PostgreSQL JSON</title>
-      <link href="/postgresql-json/"/>
-      <url>/postgresql-json/</url>
+      <title>PostgreSQL</title>
+      <link href="/postgresql/"/>
+      <url>/postgresql/</url>
       
       
       <categories>
@@ -1967,9 +1989,9 @@
     
     
     <entry>
-      <title>Phoenix 1.2</title>
-      <link href="/phoenix@1.2/"/>
-      <url>/phoenix@1.2/</url>
+      <title>Phoenix</title>
+      <link href="/phoenix/"/>
+      <url>/phoenix/</url>
       
       
       <categories>
@@ -1984,9 +2006,9 @@
     
     
     <entry>
-      <title>Phoenix</title>
-      <link href="/phoenix/"/>
-      <url>/phoenix/</url>
+      <title>Phoenix 1.2</title>
+      <link href="/phoenix@1.2/"/>
+      <url>/phoenix@1.2/</url>
       
       
       <categories>
@@ -2137,17 +2159,6 @@
     
     
     <entry>
-      <title>Phusion Passenger</title>
-      <link href="/passenger/"/>
-      <url>/passenger/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Pass</title>
       <link href="/pass/"/>
       <url>/pass/</url>
@@ -2158,6 +2169,17 @@
           <category> CLI </category>
           
       </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Phusion Passenger</title>
+      <link href="/passenger/"/>
+      <url>/passenger/</url>
+      
       
       
     </entry>
@@ -2182,14 +2204,14 @@
     
     
     <entry>
-      <title>Pacman</title>
-      <link href="/pacman/"/>
-      <url>/pacman/</url>
+      <title>Parsimmon</title>
+      <link href="/parsimmon/"/>
+      <url>/parsimmon/</url>
       
       
       <categories>
           
-          <category> Linux </category>
+          <category> JavaScript libraries </category>
           
       </categories>
       
@@ -2199,14 +2221,14 @@
     
     
     <entry>
-      <title>Parsimmon</title>
-      <link href="/parsimmon/"/>
-      <url>/parsimmon/</url>
+      <title>Pacman</title>
+      <link href="/pacman/"/>
+      <url>/pacman/</url>
       
       
       <categories>
           
-          <category> JavaScript libraries </category>
+          <category> Linux </category>
           
       </categories>
       
@@ -2307,14 +2329,14 @@
     
     
     <entry>
-      <title>Nopt</title>
-      <link href="/nopt/"/>
-      <url>/nopt/</url>
+      <title>Node.js API</title>
+      <link href="/nodejs/"/>
+      <url>/nodejs/</url>
       
       
       <categories>
           
-          <category> JavaScript libraries </category>
+          <category> Node.js </category>
           
       </categories>
       
@@ -2324,14 +2346,14 @@
     
     
     <entry>
-      <title>Node.js API</title>
-      <link href="/nodejs/"/>
-      <url>/nodejs/</url>
+      <title>Nopt</title>
+      <link href="/nopt/"/>
+      <url>/nopt/</url>
       
       
       <categories>
           
-          <category> Node.js </category>
+          <category> JavaScript libraries </category>
           
       </categories>
       
@@ -2596,9 +2618,9 @@
     
     
     <entry>
-      <title>Mocha HTML</title>
-      <link href="/mocha-html/"/>
-      <url>/mocha-html/</url>
+      <title>Mocha blanket</title>
+      <link href="/mocha-blanket/"/>
+      <url>/mocha-blanket/</url>
       
       
       <categories>
@@ -2613,9 +2635,9 @@
     
     
     <entry>
-      <title>Mocha blanket</title>
-      <link href="/mocha-blanket/"/>
-      <url>/mocha-blanket/</url>
+      <title>Mocha HTML</title>
+      <link href="/mocha-html/"/>
+      <url>/mocha-html/</url>
       
       
       <categories>
@@ -2749,14 +2771,14 @@
     
     
     <entry>
-      <title>Markdown</title>
-      <link href="/markdown/"/>
-      <url>/markdown/</url>
+      <title>Man</title>
+      <link href="/man/"/>
+      <url>/man/</url>
       
       
       <categories>
           
-          <category> Markup </category>
+          <category> CLI </category>
           
       </categories>
       
@@ -2766,14 +2788,14 @@
     
     
     <entry>
-      <title>Man</title>
-      <link href="/man/"/>
-      <url>/man/</url>
+      <title>Markdown</title>
+      <link href="/markdown/"/>
+      <url>/markdown/</url>
       
       
       <categories>
           
-          <category> CLI </category>
+          <category> Markup </category>
           
       </categories>
       
@@ -2845,6 +2867,17 @@
     
     
     <entry>
+      <title>Lua</title>
+      <link href="/lua/"/>
+      <url>/lua/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Lodash</title>
       <link href="/lodash/"/>
       <url>/lodash/</url>
@@ -2855,17 +2888,6 @@
           <category> JavaScript libraries </category>
           
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Lua</title>
-      <link href="/lua/"/>
-      <url>/lua/</url>
-      
       
       
     </entry>
@@ -2884,9 +2906,9 @@
     
     
     <entry>
-      <title>Licenses</title>
-      <link href="/licenses/"/>
-      <url>/licenses/</url>
+      <title>Less.js</title>
+      <link href="/less/"/>
+      <url>/less/</url>
       
       
       
@@ -2895,9 +2917,9 @@
     
     
     <entry>
-      <title>Less.js</title>
-      <link href="/less/"/>
-      <url>/less/</url>
+      <title>Licenses</title>
+      <link href="/licenses/"/>
+      <url>/licenses/</url>
       
       
       
@@ -2940,9 +2962,9 @@
     
     
     <entry>
-      <title>Ledger periods</title>
-      <link href="/ledger-periods/"/>
-      <url>/ledger-periods/</url>
+      <title>Ledger format</title>
+      <link href="/ledger-format/"/>
+      <url>/ledger-format/</url>
       
       
       <categories>
@@ -2957,9 +2979,9 @@
     
     
     <entry>
-      <title>Ledger format</title>
-      <link href="/ledger-format/"/>
-      <url>/ledger-format/</url>
+      <title>Ledger periods</title>
+      <link href="/ledger-periods/"/>
+      <url>/ledger-periods/</url>
       
       
       <categories>
@@ -3008,14 +3030,14 @@
     
     
     <entry>
-      <title>Layout thrashing</title>
-      <link href="/layout-thrashing/"/>
-      <url>/layout-thrashing/</url>
+      <title>Kramdown</title>
+      <link href="/kramdown/"/>
+      <url>/kramdown/</url>
       
       
       <categories>
           
-          <category> HTML </category>
+          <category> Markup </category>
           
       </categories>
       
@@ -3025,14 +3047,14 @@
     
     
     <entry>
-      <title>Kramdown</title>
-      <link href="/kramdown/"/>
-      <url>/kramdown/</url>
+      <title>Layout thrashing</title>
+      <link href="/layout-thrashing/"/>
+      <url>/layout-thrashing/</url>
       
       
       <categories>
           
-          <category> Markup </category>
+          <category> HTML </category>
           
       </categories>
       
@@ -3178,9 +3200,9 @@
     
     
     <entry>
-      <title>fetch()</title>
-      <link href="/js-fetch/"/>
-      <url>/js-fetch/</url>
+      <title>JavaScript Date</title>
+      <link href="/js-date/"/>
+      <url>/js-date/</url>
       
       
       <categories>
@@ -3195,9 +3217,9 @@
     
     
     <entry>
-      <title>JavaScript Date</title>
-      <link href="/js-date/"/>
-      <url>/js-date/</url>
+      <title>fetch()</title>
+      <link href="/js-fetch/"/>
+      <url>/js-fetch/</url>
       
       
       <categories>
@@ -3229,23 +3251,6 @@
     
     
     <entry>
-      <title>applicationCache</title>
-      <link href="/js-appcache/"/>
-      <url>/js-appcache/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>jQuery</title>
       <link href="/jquery/"/>
       <url>/jquery/</url>
@@ -3263,6 +3268,23 @@
             <tag> WIP </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>applicationCache</title>
+      <link href="/js-appcache/"/>
+      <url>/js-appcache/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -3428,9 +3450,9 @@
     
     
     <entry>
-      <title>index@2016</title>
-      <link href="/index@2016/"/>
-      <url>/index@2016/</url>
+      <title>index</title>
+      <link href="/index/"/>
+      <url>/index/</url>
       
       
       
@@ -3439,9 +3461,9 @@
     
     
     <entry>
-      <title>index</title>
-      <link href="/index/"/>
-      <url>/index/</url>
+      <title>index@2016</title>
+      <link href="/index@2016/"/>
+      <url>/index@2016/</url>
       
       
       
@@ -3467,6 +3489,17 @@
     
     
     <entry>
+      <title>Imagemagick</title>
+      <link href="/imagemagick/"/>
+      <url>/imagemagick/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Immutable.js</title>
       <link href="/immutable-js/"/>
       <url>/immutable-js/</url>
@@ -3477,17 +3510,6 @@
           <category> Hidden </category>
           
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Imagemagick</title>
-      <link href="/imagemagick/"/>
-      <url>/imagemagick/</url>
-      
       
       
     </entry>
@@ -3529,14 +3551,14 @@
     
     
     <entry>
-      <title>httpie</title>
-      <link href="/httpie/"/>
-      <url>/httpie/</url>
+      <title>HTTP Status</title>
+      <link href="/http-status/"/>
+      <url>/http-status/</url>
       
       
       <categories>
           
-          <category> CLI </category>
+          <category> HTTP </category>
           
       </categories>
       
@@ -3546,14 +3568,14 @@
     
     
     <entry>
-      <title>HTTP Status</title>
-      <link href="/http-status/"/>
-      <url>/http-status/</url>
+      <title>httpie</title>
+      <link href="/httpie/"/>
+      <url>/httpie/</url>
       
       
       <categories>
           
-          <category> HTTP </category>
+          <category> CLI </category>
           
       </categories>
       
@@ -3597,9 +3619,9 @@
     
     
     <entry>
-      <title>Microformats</title>
-      <link href="/html-microformats/"/>
-      <url>/html-microformats/</url>
+      <title>HTML meta tags</title>
+      <link href="/html-meta/"/>
+      <url>/html-meta/</url>
       
       
       <categories>
@@ -3614,9 +3636,9 @@
     
     
     <entry>
-      <title>HTML meta tags</title>
-      <link href="/html-meta/"/>
-      <url>/html-meta/</url>
+      <title>Microformats</title>
+      <link href="/html-microformats/"/>
+      <url>/html-microformats/</url>
       
       
       <categories>
@@ -4140,14 +4162,14 @@
     
     
     <entry>
-      <title>Flynn</title>
-      <link href="/flynn/"/>
-      <url>/flynn/</url>
+      <title>Flux architecture</title>
+      <link href="/flux/"/>
+      <url>/flux/</url>
       
       
       <categories>
           
-          <category> Devops </category>
+          <category> React </category>
           
       </categories>
       
@@ -4157,14 +4179,14 @@
     
     
     <entry>
-      <title>Flux architecture</title>
-      <link href="/flux/"/>
-      <url>/flux/</url>
+      <title>Flynn</title>
+      <link href="/flynn/"/>
+      <url>/flynn/</url>
       
       
       <categories>
           
-          <category> React </category>
+          <category> Devops </category>
           
       </categories>
       
@@ -4214,14 +4236,14 @@
     
     
     <entry>
-      <title>Flashlight</title>
-      <link href="/flashlight/"/>
-      <url>/flashlight/</url>
+      <title>Flexbox</title>
+      <link href="/flexbox/"/>
+      <url>/flexbox/</url>
       
       
       <categories>
           
-          <category> Apps </category>
+          <category> Hidden </category>
           
       </categories>
       
@@ -4231,14 +4253,14 @@
     
     
     <entry>
-      <title>Flexbox</title>
-      <link href="/flexbox/"/>
-      <url>/flexbox/</url>
+      <title>Flashlight</title>
+      <link href="/flashlight/"/>
+      <url>/flashlight/</url>
       
       
       <categories>
           
-          <category> Hidden </category>
+          <category> Apps </category>
           
       </categories>
       
@@ -4338,23 +4360,6 @@
     
     
     <entry>
-      <title>fetch()</title>
-      <link href="/fetch/"/>
-      <url>/fetch/</url>
-      
-      
-      <categories>
-          
-          <category> Hidden </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>FFaker</title>
       <link href="/ffaker/"/>
       <url>/ffaker/</url>
@@ -4372,14 +4377,14 @@
     
     
     <entry>
-      <title>Fastify</title>
-      <link href="/fastify/"/>
-      <url>/fastify/</url>
+      <title>fetch()</title>
+      <link href="/fetch/"/>
+      <url>/fetch/</url>
       
       
       <categories>
           
-          <category> JavaScript libraries </category>
+          <category> Hidden </category>
           
       </categories>
       
@@ -4389,14 +4394,14 @@
     
     
     <entry>
-      <title>Factory Girl</title>
-      <link href="/factory_girl/"/>
-      <url>/factory_girl/</url>
+      <title>Fastify</title>
+      <link href="/fastify/"/>
+      <url>/fastify/</url>
       
       
       <categories>
           
-          <category> Ruby libraries </category>
+          <category> JavaScript libraries </category>
           
       </categories>
       
@@ -4429,6 +4434,23 @@
     
     
     <entry>
+      <title>Factory Girl</title>
+      <link href="/factory_girl/"/>
+      <url>/factory_girl/</url>
+      
+      
+      <categories>
+          
+          <category> Ruby libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ExUnit</title>
       <link href="/exunit/"/>
       <url>/exunit/</url>
@@ -4446,9 +4468,9 @@
     
     
     <entry>
-      <title>expect.js</title>
-      <link href="/expectjs/"/>
-      <url>/expectjs/</url>
+      <title>Express.js</title>
+      <link href="/express/"/>
+      <url>/express/</url>
       
       
       <categories>
@@ -4463,9 +4485,9 @@
     
     
     <entry>
-      <title>Express.js</title>
-      <link href="/express/"/>
-      <url>/express/</url>
+      <title>expect.js</title>
+      <link href="/expectjs/"/>
+      <url>/expectjs/</url>
       
       
       <categories>
@@ -4497,6 +4519,23 @@
     
     
     <entry>
+      <title>Erlang ETS</title>
+      <link href="/ets/"/>
+      <url>/ets/</url>
+      
+      
+      <categories>
+          
+          <category> Elixir </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ES2015+</title>
       <link href="/es6/"/>
       <url>/es6/</url>
@@ -4514,23 +4553,6 @@
             <tag> Featured </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Erlang ETS</title>
-      <link href="/ets/"/>
-      <url>/ets/</url>
-      
-      
-      <categories>
-          
-          <category> Elixir </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -4945,6 +4967,23 @@
     
     
     <entry>
+      <title>CSS</title>
+      <link href="/css/"/>
+      <url>/css/</url>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>cssnext</title>
       <link href="/cssnext/"/>
       <url>/cssnext/</url>
@@ -4968,9 +5007,9 @@
     
     
     <entry>
-      <title>CSS</title>
-      <link href="/css/"/>
-      <url>/css/</url>
+      <title>CSS tricks</title>
+      <link href="/css-tricks/"/>
+      <url>/css-tricks/</url>
       
       
       <categories>
@@ -4985,14 +5024,14 @@
     
     
     <entry>
-      <title>CSS tricks</title>
-      <link href="/css-tricks/"/>
-      <url>/css-tricks/</url>
+      <title>CSS selectors</title>
+      <link href="/css-selectors/"/>
+      <url>/css-selectors/</url>
       
       
       <categories>
           
-          <category> CSS </category>
+          <category> Hidden </category>
           
       </categories>
       
@@ -5025,14 +5064,14 @@
     
     
     <entry>
-      <title>CSS selectors</title>
-      <link href="/css-selectors/"/>
-      <url>/css-selectors/</url>
+      <title>CSS Grid</title>
+      <link href="/css-grid/"/>
+      <url>/css-grid/</url>
       
       
       <categories>
           
-          <category> Hidden </category>
+          <category> CSS </category>
           
       </categories>
       
@@ -5059,14 +5098,14 @@
     
     
     <entry>
-      <title>CSS Grid</title>
-      <link href="/css-grid/"/>
-      <url>/css-grid/</url>
+      <title>CSS background</title>
+      <link href="/css-background/"/>
+      <url>/css-background/</url>
       
       
       <categories>
           
-          <category> CSS </category>
+          <category> Hidden </category>
           
       </categories>
       
@@ -5093,14 +5132,14 @@
     
     
     <entry>
-      <title>CSS background</title>
-      <link href="/css-background/"/>
-      <url>/css-background/</url>
+      <title>CSS antialiasing</title>
+      <link href="/css-antialias/"/>
+      <url>/css-antialias/</url>
       
       
       <categories>
           
-          <category> Hidden </category>
+          <category> CSS </category>
           
       </categories>
       
@@ -5118,23 +5157,6 @@
       <categories>
           
           <category> Hidden </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CSS antialiasing</title>
-      <link href="/css-antialias/"/>
-      <url>/css-antialias/</url>
-      
-      
-      <categories>
-          
-          <category> CSS </category>
           
       </categories>
       
@@ -5279,14 +5301,14 @@
     
     
     <entry>
-      <title>CircleCI</title>
-      <link href="/circle/"/>
-      <url>/circle/</url>
+      <title>CIDR</title>
+      <link href="/cidr/"/>
+      <url>/cidr/</url>
       
       
       <categories>
           
-          <category> Devops </category>
+          <category> Misc </category>
           
       </categories>
       
@@ -5296,14 +5318,14 @@
     
     
     <entry>
-      <title>CIDR</title>
-      <link href="/cidr/"/>
-      <url>/cidr/</url>
+      <title>CircleCI</title>
+      <link href="/circle/"/>
+      <url>/circle/</url>
       
       
       <categories>
           
-          <category> Misc </category>
+          <category> Devops </category>
           
       </categories>
       
@@ -5432,14 +5454,14 @@
     
     
     <entry>
-      <title>C Preprocessor</title>
-      <link href="/c_preprocessor/"/>
-      <url>/c_preprocessor/</url>
+      <title>Bundler</title>
+      <link href="/bundler/"/>
+      <url>/bundler/</url>
       
       
       <categories>
           
-          <category> C-like </category>
+          <category> Ruby </category>
           
       </categories>
       
@@ -5449,14 +5471,14 @@
     
     
     <entry>
-      <title>Bundler</title>
-      <link href="/bundler/"/>
-      <url>/bundler/</url>
+      <title>C Preprocessor</title>
+      <link href="/c_preprocessor/"/>
+      <url>/c_preprocessor/</url>
       
       
       <categories>
           
-          <category> Ruby </category>
+          <category> C-like </category>
           
       </categories>
       
@@ -5670,6 +5692,17 @@
     
     
     <entry>
+      <title>Code badges</title>
+      <link href="/badges/"/>
+      <url>/badges/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Backbone.js</title>
       <link href="/backbone/"/>
       <url>/backbone/</url>
@@ -5680,17 +5713,6 @@
           <category> JavaScript libraries </category>
           
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Code badges</title>
-      <link href="/badges/"/>
-      <url>/badges/</url>
-      
       
       
     </entry>
@@ -5766,6 +5788,23 @@
     
     
     <entry>
+      <title>AppleScript</title>
+      <link href="/applescript/"/>
+      <url>/applescript/</url>
+      
+      
+      <categories>
+          
+          <category> macOS </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Applinks</title>
       <link href="/applinks/"/>
       <url>/applinks/</url>
@@ -5791,23 +5830,6 @@
       <categories>
           
           <category> HTML </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>AppleScript</title>
-      <link href="/applescript/"/>
-      <url>/applescript/</url>
-      
-      
-      <categories>
-          
-          <category> macOS </category>
           
       </categories>
       
@@ -5902,9 +5924,9 @@
     
     
     <entry>
-      <title>Animated GIFs</title>
-      <link href="/animated_gif/"/>
-      <url>/animated_gif/</url>
+      <title>Ansi codes</title>
+      <link href="/ansi/"/>
+      <url>/ansi/</url>
       
       
       <categories>
@@ -5919,9 +5941,9 @@
     
     
     <entry>
-      <title>Ansi codes</title>
-      <link href="/ansi/"/>
-      <url>/ansi/</url>
+      <title>Animated GIFs</title>
+      <link href="/animated_gif/"/>
+      <url>/animated_gif/</url>
       
       
       <categories>
@@ -5987,14 +6009,14 @@
     
     
     <entry>
-      <title>adb (Android Debug Bridge)</title>
-      <link href="/adb/"/>
-      <url>/adb/</url>
+      <title>ActiveAdmin</title>
+      <link href="/activeadmin/"/>
+      <url>/activeadmin/</url>
       
       
       <categories>
           
-          <category> CLI </category>
+          <category> Ruby </category>
           
       </categories>
       
@@ -6004,14 +6026,14 @@
     
     
     <entry>
-      <title>ActiveAdmin</title>
-      <link href="/activeadmin/"/>
-      <url>/activeadmin/</url>
+      <title>adb (Android Debug Bridge)</title>
+      <link href="/adb/"/>
+      <url>/adb/</url>
       
       
       <categories>
           
-          <category> Ruby </category>
+          <category> CLI </category>
           
       </categories>
       
@@ -6059,28 +6081,6 @@
           <category> JavaScript </category>
           
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>status code</title>
-      <link href="/status%20code/"/>
-      <url>/status%20code/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>nginx</title>
-      <link href="/nginx/"/>
-      <url>/nginx/</url>
-      
       
       
     </entry>
