@@ -1194,17 +1194,16 @@
   <script src="../../js/search.js"></script>
   <script type="text/javascript">
   $(function() {
-    const isLocal = location.origin.includes('localhost');
+
     var $inputArea = $("input#search-input");
     var $resultArea = document.querySelector("div#search-result");
 
     $inputArea.focus(function() {
-      let path;
-      if (isLocal) {
-        path = "../../search.xml";
-      } else {
-        path = "../../devhints/search.xml";
+      var search_path = "search.xml";
+      if (search_path.length == 0) {
+        search_path = "search.xml";
       }
+      var path = "../../search.xml" + search_path;
       searchFunc(path, 'search-input', 'search-result');
     });
 
