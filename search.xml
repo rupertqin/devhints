@@ -252,17 +252,6 @@
     
     
     <entry>
-      <title>Watchman</title>
-      <link href="/watchman/"/>
-      <url>/watchman/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Watchexec</title>
       <link href="/watchexec/"/>
       <url>/watchexec/</url>
@@ -280,6 +269,17 @@
     
     
     <entry>
+      <title>Watchman</title>
+      <link href="/watchman/"/>
+      <url>/watchman/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue</title>
       <link href="/vue/"/>
       <url>/vue/</url>
@@ -288,6 +288,23 @@
       <categories>
           
           <category> JavaScript libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Visual Studio Code</title>
+      <link href="/vscode/"/>
+      <url>/vscode/</url>
+      
+      
+      <categories>
+          
+          <category> Apps </category>
           
       </categories>
       
@@ -314,14 +331,14 @@
     
     
     <entry>
-      <title>Visual Studio Code</title>
-      <link href="/vscode/"/>
-      <url>/vscode/</url>
+      <title>Virtual-dom</title>
+      <link href="/virtual-dom/"/>
+      <url>/virtual-dom/</url>
       
       
       <categories>
           
-          <category> Apps </category>
+          <category> JavaScript libraries </category>
           
       </categories>
       
@@ -354,14 +371,14 @@
     
     
     <entry>
-      <title>Virtual-dom</title>
-      <link href="/virtual-dom/"/>
-      <url>/virtual-dom/</url>
+      <title>Vimscript snippets</title>
+      <link href="/vimscript-snippets/"/>
+      <url>/vimscript-snippets/</url>
       
       
       <categories>
           
-          <category> JavaScript libraries </category>
+          <category> Vim </category>
           
       </categories>
       
@@ -388,9 +405,9 @@
     
     
     <entry>
-      <title>Vimscript snippets</title>
-      <link href="/vimscript-snippets/"/>
-      <url>/vimscript-snippets/</url>
+      <title>Vim-rails</title>
+      <link href="/vim-rails/"/>
+      <url>/vim-rails/</url>
       
       
       <categories>
@@ -408,23 +425,6 @@
       <title>Vim-Unite</title>
       <link href="/vim-unite/"/>
       <url>/vim-unite/</url>
-      
-      
-      <categories>
-          
-          <category> Vim </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Vim-rails</title>
-      <link href="/vim-rails/"/>
-      <url>/vim-rails/</url>
       
       
       <categories>
@@ -507,6 +507,17 @@
     
     
     <entry>
+      <title>Vainglory</title>
+      <link href="/vainglory/"/>
+      <url>/vainglory/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vagrantfile</title>
       <link href="/vagrantfile/"/>
       <url>/vagrantfile/</url>
@@ -517,17 +528,6 @@
           <category> Devops </category>
           
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Vainglory</title>
-      <link href="/vainglory/"/>
-      <url>/vainglory/</url>
-      
       
       
     </entry>
@@ -835,6 +835,17 @@
     
     
     <entry>
+      <title>Spreadsheet functions</title>
+      <link href="/spreadsheet/"/>
+      <url>/spreadsheet/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Spine</title>
       <link href="/spine/"/>
       <url>/spine/</url>
@@ -845,17 +856,6 @@
           <category> JavaScript libraries </category>
           
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Spreadsheet functions</title>
-      <link href="/spreadsheet/"/>
-      <url>/spreadsheet/</url>
-      
       
       
     </entry>
@@ -1027,14 +1027,14 @@
     
     
     <entry>
-      <title>Sequelize</title>
-      <link href="/sequelize/"/>
-      <url>/sequelize/</url>
+      <title>Shell: named pipes</title>
+      <link href="/sh-pipes/"/>
+      <url>/sh-pipes/</url>
       
       
       <categories>
           
-          <category> Ruby libraries </category>
+          <category> CLI </category>
           
       </categories>
       
@@ -1044,14 +1044,14 @@
     
     
     <entry>
-      <title>Shell: named pipes</title>
-      <link href="/sh-pipes/"/>
-      <url>/sh-pipes/</url>
+      <title>Sequelize</title>
+      <link href="/sequelize/"/>
+      <url>/sequelize/</url>
       
       
       <categories>
           
-          <category> CLI </category>
+          <category> Ruby libraries </category>
           
       </categories>
       
@@ -1089,9 +1089,9 @@
     
     
     <entry>
-      <title>scp</title>
-      <link href="/scp/"/>
-      <url>/scp/</url>
+      <title>sed</title>
+      <link href="/sed/"/>
+      <url>/sed/</url>
       
       
       <categories>
@@ -1106,9 +1106,9 @@
     
     
     <entry>
-      <title>sed</title>
-      <link href="/sed/"/>
-      <url>/sed/</url>
+      <title>scp</title>
+      <link href="/scp/"/>
+      <url>/scp/</url>
       
       
       <categories>
@@ -1219,9 +1219,9 @@
     
     
     <entry>
-      <title>rTorrent</title>
-      <link href="/rtorrent/"/>
-      <url>/rtorrent/</url>
+      <title>Rsync</title>
+      <link href="/rsync/"/>
+      <url>/rsync/</url>
       
       
       <categories>
@@ -1236,9 +1236,9 @@
     
     
     <entry>
-      <title>Rsync</title>
-      <link href="/rsync/"/>
-      <url>/rsync/</url>
+      <title>rTorrent</title>
+      <link href="/rtorrent/"/>
+      <url>/rtorrent/</url>
       
       
       <categories>
@@ -1287,14 +1287,14 @@
     
     
     <entry>
-      <title>Rspec-rails</title>
-      <link href="/rspec-rails/"/>
-      <url>/rspec-rails/</url>
+      <title>Ronn</title>
+      <link href="/ronn/"/>
+      <url>/ronn/</url>
       
       
       <categories>
           
-          <category> Ruby </category>
+          <category> Ruby libraries </category>
           
       </categories>
       
@@ -1304,14 +1304,14 @@
     
     
     <entry>
-      <title>Ronn</title>
-      <link href="/ronn/"/>
-      <url>/ronn/</url>
+      <title>Rspec-rails</title>
+      <link href="/rspec-rails/"/>
+      <url>/rspec-rails/</url>
       
       
       <categories>
           
-          <category> Ruby libraries </category>
+          <category> Ruby </category>
           
       </categories>
       
@@ -1394,14 +1394,14 @@
     
     
     <entry>
-      <title>regexp</title>
-      <link href="/regexp/"/>
-      <url>/regexp/</url>
+      <title>Redux</title>
+      <link href="/redux/"/>
+      <url>/redux/</url>
       
       
       <categories>
           
-          <category> Others </category>
+          <category> React </category>
           
       </categories>
       
@@ -1411,14 +1411,14 @@
     
     
     <entry>
-      <title>Redux</title>
-      <link href="/redux/"/>
-      <url>/redux/</url>
+      <title>regexp</title>
+      <link href="/regexp/"/>
+      <url>/regexp/</url>
       
       
       <categories>
           
-          <category> React </category>
+          <category> Others </category>
           
       </categories>
       
@@ -1604,9 +1604,9 @@
     
     
     <entry>
-      <title>Migrations</title>
-      <link href="/rails-migrations/"/>
-      <url>/rails-migrations/</url>
+      <title>i18n</title>
+      <link href="/rails-i18n/"/>
+      <url>/rails-i18n/</url>
       
       
       <categories>
@@ -1621,9 +1621,9 @@
     
     
     <entry>
-      <title>i18n</title>
-      <link href="/rails-i18n/"/>
-      <url>/rails-i18n/</url>
+      <title>Migrations</title>
+      <link href="/rails-migrations/"/>
+      <url>/rails-migrations/</url>
       
       
       <categories>
@@ -1910,9 +1910,9 @@
     
     
     <entry>
-      <title>PostgreSQL JSON</title>
-      <link href="/postgresql-json/"/>
-      <url>/postgresql-json/</url>
+      <title>PostgreSQL</title>
+      <link href="/postgresql/"/>
+      <url>/postgresql/</url>
       
       
       <categories>
@@ -1927,9 +1927,9 @@
     
     
     <entry>
-      <title>PostgreSQL</title>
-      <link href="/postgresql/"/>
-      <url>/postgresql/</url>
+      <title>PostgreSQL JSON</title>
+      <link href="/postgresql-json/"/>
+      <url>/postgresql-json/</url>
       
       
       <categories>
@@ -1989,23 +1989,6 @@
     
     
     <entry>
-      <title>Phoenix</title>
-      <link href="/phoenix/"/>
-      <url>/phoenix/</url>
-      
-      
-      <categories>
-          
-          <category> Elixir </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Phoenix 1.2</title>
       <link href="/phoenix@1.2/"/>
       <url>/phoenix@1.2/</url>
@@ -2023,9 +2006,9 @@
     
     
     <entry>
-      <title>Phoenix: Routing</title>
-      <link href="/phoenix-routing/"/>
-      <url>/phoenix-routing/</url>
+      <title>Phoenix</title>
+      <link href="/phoenix/"/>
+      <url>/phoenix/</url>
       
       
       <categories>
@@ -2043,6 +2026,23 @@
       <title>Phoenix: Ecto migrations</title>
       <link href="/phoenix-migrations/"/>
       <url>/phoenix-migrations/</url>
+      
+      
+      <categories>
+          
+          <category> Elixir </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Phoenix: Routing</title>
+      <link href="/phoenix-routing/"/>
+      <url>/phoenix-routing/</url>
       
       
       <categories>
@@ -2159,6 +2159,17 @@
     
     
     <entry>
+      <title>Phusion Passenger</title>
+      <link href="/passenger/"/>
+      <url>/passenger/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Pass</title>
       <link href="/pass/"/>
       <url>/pass/</url>
@@ -2169,17 +2180,6 @@
           <category> CLI </category>
           
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Phusion Passenger</title>
-      <link href="/passenger/"/>
-      <url>/passenger/</url>
-      
       
       
     </entry>
@@ -2397,23 +2397,6 @@
     
     
     <entry>
-      <title>fs</title>
-      <link href="/nodejs-fs/"/>
-      <url>/nodejs-fs/</url>
-      
-      
-      <categories>
-          
-          <category> Node.js </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>path</title>
       <link href="/nodejs-path/"/>
       <url>/nodejs-path/</url>
@@ -2431,9 +2414,9 @@
     
     
     <entry>
-      <title>assert</title>
-      <link href="/nodejs-assert/"/>
-      <url>/nodejs-assert/</url>
+      <title>fs</title>
+      <link href="/nodejs-fs/"/>
+      <url>/nodejs-fs/</url>
       
       
       <categories>
@@ -2452,6 +2435,23 @@
       <link href="/nocode/"/>
       <url>/nocode/</url>
       
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>assert</title>
+      <link href="/nodejs-assert/"/>
+      <url>/nodejs-assert/</url>
+      
+      
+      <categories>
+          
+          <category> Node.js </category>
+          
+      </categories>
       
       
     </entry>
@@ -2550,23 +2550,6 @@
     
     
     <entry>
-      <title>Modernizr</title>
-      <link href="/modernizr/"/>
-      <url>/modernizr/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Modella</title>
       <link href="/modella/"/>
       <url>/modella/</url>
@@ -2584,9 +2567,9 @@
     
     
     <entry>
-      <title>Mocha.js</title>
-      <link href="/mocha/"/>
-      <url>/mocha/</url>
+      <title>Modernizr</title>
+      <link href="/modernizr/"/>
+      <url>/modernizr/</url>
       
       
       <categories>
@@ -2618,9 +2601,9 @@
     
     
     <entry>
-      <title>Mocha blanket</title>
-      <link href="/mocha-blanket/"/>
-      <url>/mocha-blanket/</url>
+      <title>Mocha.js</title>
+      <link href="/mocha/"/>
+      <url>/mocha/</url>
       
       
       <categories>
@@ -2638,6 +2621,23 @@
       <title>Mocha HTML</title>
       <link href="/mocha-html/"/>
       <url>/mocha-html/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mocha blanket</title>
+      <link href="/mocha-blanket/"/>
+      <url>/mocha-blanket/</url>
       
       
       <categories>
@@ -2737,14 +2737,14 @@
     
     
     <entry>
-      <title>Meow</title>
-      <link href="/meow/"/>
-      <url>/meow/</url>
+      <title>Meta-tags gem</title>
+      <link href="/meta-tags/"/>
+      <url>/meta-tags/</url>
       
       
       <categories>
           
-          <category> JavaScript libraries </category>
+          <category> Ruby libraries </category>
           
       </categories>
       
@@ -2754,14 +2754,14 @@
     
     
     <entry>
-      <title>Meta-tags gem</title>
-      <link href="/meta-tags/"/>
-      <url>/meta-tags/</url>
+      <title>Meow</title>
+      <link href="/meow/"/>
+      <url>/meow/</url>
       
       
       <categories>
           
-          <category> Ruby libraries </category>
+          <category> JavaScript libraries </category>
           
       </categories>
       
@@ -2867,17 +2867,6 @@
     
     
     <entry>
-      <title>Lua</title>
-      <link href="/lua/"/>
-      <url>/lua/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Lodash</title>
       <link href="/lodash/"/>
       <url>/lodash/</url>
@@ -2888,6 +2877,17 @@
           <category> JavaScript libraries </category>
           
       </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Lua</title>
+      <link href="/lua/"/>
+      <url>/lua/</url>
+      
       
       
     </entry>
@@ -2996,23 +2996,6 @@
     
     
     <entry>
-      <title>Ledger CSV format</title>
-      <link href="/ledger-csv/"/>
-      <url>/ledger-csv/</url>
-      
-      
-      <categories>
-          
-          <category> Ledger </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Ledger examples</title>
       <link href="/ledger-examples/"/>
       <url>/ledger-examples/</url>
@@ -3030,14 +3013,14 @@
     
     
     <entry>
-      <title>Kramdown</title>
-      <link href="/kramdown/"/>
-      <url>/kramdown/</url>
+      <title>Ledger CSV format</title>
+      <link href="/ledger-csv/"/>
+      <url>/ledger-csv/</url>
       
       
       <categories>
           
-          <category> Markup </category>
+          <category> Ledger </category>
           
       </categories>
       
@@ -3055,6 +3038,23 @@
       <categories>
           
           <category> HTML </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Kramdown</title>
+      <link href="/kramdown/"/>
+      <url>/kramdown/</url>
+      
+      
+      <categories>
+          
+          <category> Markup </category>
           
       </categories>
       
@@ -3098,14 +3098,14 @@
     
     
     <entry>
-      <title>Jshint</title>
-      <link href="/jshint/"/>
-      <url>/jshint/</url>
+      <title>Knex</title>
+      <link href="/knex/"/>
+      <url>/knex/</url>
       
       
       <categories>
           
-          <category> JavaScript libraries </category>
+          <category> Databases </category>
           
       </categories>
       
@@ -3115,14 +3115,14 @@
     
     
     <entry>
-      <title>Knex</title>
-      <link href="/knex/"/>
-      <url>/knex/</url>
+      <title>Jshint</title>
+      <link href="/jshint/"/>
+      <url>/jshint/</url>
       
       
       <categories>
           
-          <category> Databases </category>
+          <category> JavaScript libraries </category>
           
       </categories>
       
@@ -3149,14 +3149,14 @@
     
     
     <entry>
-      <title>JavaScript speech synthesis</title>
-      <link href="/js-speech/"/>
-      <url>/js-speech/</url>
+      <title>js-model</title>
+      <link href="/js-model/"/>
+      <url>/js-model/</url>
       
       
       <categories>
           
-          <category> JavaScript </category>
+          <category> JavaScript libraries </category>
           
       </categories>
       
@@ -3166,14 +3166,14 @@
     
     
     <entry>
-      <title>js-model</title>
-      <link href="/js-model/"/>
-      <url>/js-model/</url>
+      <title>JavaScript speech synthesis</title>
+      <link href="/js-speech/"/>
+      <url>/js-speech/</url>
       
       
       <categories>
           
-          <category> JavaScript libraries </category>
+          <category> JavaScript </category>
           
       </categories>
       
@@ -3251,6 +3251,23 @@
     
     
     <entry>
+      <title>applicationCache</title>
+      <link href="/js-appcache/"/>
+      <url>/js-appcache/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>jQuery</title>
       <link href="/jquery/"/>
       <url>/jquery/</url>
@@ -3274,40 +3291,6 @@
     
     
     <entry>
-      <title>applicationCache</title>
-      <link href="/js-appcache/"/>
-      <url>/js-appcache/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>jQuery CDN</title>
-      <link href="/jquery-cdn/"/>
-      <url>/jquery-cdn/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Jest</title>
       <link href="/jest/"/>
       <url>/jest/</url>
@@ -3325,6 +3308,23 @@
             <tag> Featurable </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>jQuery CDN</title>
+      <link href="/jquery-cdn/"/>
+      <url>/jquery-cdn/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript libraries </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -3489,17 +3489,6 @@
     
     
     <entry>
-      <title>Imagemagick</title>
-      <link href="/imagemagick/"/>
-      <url>/imagemagick/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Immutable.js</title>
       <link href="/immutable-js/"/>
       <url>/immutable-js/</url>
@@ -3510,6 +3499,17 @@
           <category> Hidden </category>
           
       </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Imagemagick</title>
+      <link href="/imagemagick/"/>
+      <url>/imagemagick/</url>
+      
       
       
     </entry>
@@ -3551,14 +3551,14 @@
     
     
     <entry>
-      <title>HTTP Status</title>
-      <link href="/http-status/"/>
-      <url>/http-status/</url>
+      <title>httpie</title>
+      <link href="/httpie/"/>
+      <url>/httpie/</url>
       
       
       <categories>
           
-          <category> HTTP </category>
+          <category> CLI </category>
           
       </categories>
       
@@ -3568,14 +3568,14 @@
     
     
     <entry>
-      <title>httpie</title>
-      <link href="/httpie/"/>
-      <url>/httpie/</url>
+      <title>HTTP Status</title>
+      <link href="/http-status/"/>
+      <url>/http-status/</url>
       
       
       <categories>
           
-          <category> CLI </category>
+          <category> HTTP </category>
           
       </categories>
       
@@ -3687,14 +3687,14 @@
     
     
     <entry>
-      <title>Hledger</title>
-      <link href="/hledger/"/>
-      <url>/hledger/</url>
+      <title>Homebrew</title>
+      <link href="/homebrew/"/>
+      <url>/homebrew/</url>
       
       
       <categories>
           
-          <category> Ledger </category>
+          <category> CLI </category>
           
       </categories>
       
@@ -3704,14 +3704,14 @@
     
     
     <entry>
-      <title>Homebrew</title>
-      <link href="/homebrew/"/>
-      <url>/homebrew/</url>
+      <title>Hledger</title>
+      <link href="/hledger/"/>
+      <url>/hledger/</url>
       
       
       <categories>
           
-          <category> CLI </category>
+          <category> Ledger </category>
           
       </categories>
       
@@ -3987,6 +3987,17 @@
     
     
     <entry>
+      <title>Gmail</title>
+      <link href="/gmail/"/>
+      <url>/gmail/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>GnuPG</title>
       <link href="/gnupg/"/>
       <url>/gnupg/</url>
@@ -3997,17 +4008,6 @@
           <category> CLI </category>
           
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Gmail</title>
-      <link href="/gmail/"/>
-      <url>/gmail/</url>
-      
       
       
     </entry>
@@ -4049,9 +4049,9 @@
     
     
     <entry>
-      <title>git log</title>
-      <link href="/git-log/"/>
-      <url>/git-log/</url>
+      <title>Git log format string</title>
+      <link href="/git-log-format/"/>
+      <url>/git-log-format/</url>
       
       
       <categories>
@@ -4066,9 +4066,9 @@
     
     
     <entry>
-      <title>Git log format string</title>
-      <link href="/git-log-format/"/>
-      <url>/git-log-format/</url>
+      <title>git log</title>
+      <link href="/git-log/"/>
+      <url>/git-log/</url>
       
       
       <categories>
@@ -4100,14 +4100,14 @@
     
     
     <entry>
-      <title>GitHub pages</title>
-      <link href="/gh-pages/"/>
-      <url>/gh-pages/</url>
+      <title>Git branches</title>
+      <link href="/git-branch/"/>
+      <url>/git-branch/</url>
       
       
       <categories>
           
-          <category> Jekyll </category>
+          <category> Git </category>
           
       </categories>
       
@@ -4117,14 +4117,14 @@
     
     
     <entry>
-      <title>Git branches</title>
-      <link href="/git-branch/"/>
-      <url>/git-branch/</url>
+      <title>GitHub pages</title>
+      <link href="/gh-pages/"/>
+      <url>/gh-pages/</url>
       
       
       <categories>
           
-          <category> Git </category>
+          <category> Jekyll </category>
           
       </categories>
       
@@ -4162,14 +4162,14 @@
     
     
     <entry>
-      <title>Flux architecture</title>
-      <link href="/flux/"/>
-      <url>/flux/</url>
+      <title>Flynn</title>
+      <link href="/flynn/"/>
+      <url>/flynn/</url>
       
       
       <categories>
           
-          <category> React </category>
+          <category> Devops </category>
           
       </categories>
       
@@ -4179,14 +4179,14 @@
     
     
     <entry>
-      <title>Flynn</title>
-      <link href="/flynn/"/>
-      <url>/flynn/</url>
+      <title>Flux architecture</title>
+      <link href="/flux/"/>
+      <url>/flux/</url>
       
       
       <categories>
           
-          <category> Devops </category>
+          <category> React </category>
           
       </categories>
       
@@ -4411,6 +4411,23 @@
     
     
     <entry>
+      <title>Factory Girl</title>
+      <link href="/factory_girl/"/>
+      <url>/factory_girl/</url>
+      
+      
+      <categories>
+          
+          <category> Ruby libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Factory Bot</title>
       <link href="/factory_bot/"/>
       <url>/factory_bot/</url>
@@ -4428,23 +4445,6 @@
             <tag> Featurable </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Factory Girl</title>
-      <link href="/factory_girl/"/>
-      <url>/factory_girl/</url>
-      
-      
-      <categories>
-          
-          <category> Ruby libraries </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -4519,23 +4519,6 @@
     
     
     <entry>
-      <title>Erlang ETS</title>
-      <link href="/ets/"/>
-      <url>/ets/</url>
-      
-      
-      <categories>
-          
-          <category> Elixir </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>ES2015+</title>
       <link href="/es6/"/>
       <url>/es6/</url>
@@ -4553,6 +4536,23 @@
             <tag> Featured </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Erlang ETS</title>
+      <link href="/ets/"/>
+      <url>/ets/</url>
+      
+      
+      <categories>
+          
+          <category> Elixir </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -4758,23 +4758,6 @@
     
     
     <entry>
-      <title>editorconfig</title>
-      <link href="/editorconfig/"/>
-      <url>/editorconfig/</url>
-      
-      
-      <categories>
-          
-          <category> Apps </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>EC2 API tools</title>
       <link href="/ec2/"/>
       <url>/ec2/</url>
@@ -4792,14 +4775,14 @@
     
     
     <entry>
-      <title>DOM Selection</title>
-      <link href="/dom-selection/"/>
-      <url>/dom-selection/</url>
+      <title>editorconfig</title>
+      <link href="/editorconfig/"/>
+      <url>/editorconfig/</url>
       
       
       <categories>
           
-          <category> JavaScript </category>
+          <category> Apps </category>
           
       </categories>
       
@@ -4809,9 +4792,9 @@
     
     
     <entry>
-      <title>DOM Range</title>
-      <link href="/dom-range/"/>
-      <url>/dom-range/</url>
+      <title>DOM Selection</title>
+      <link href="/dom-selection/"/>
+      <url>/dom-selection/</url>
       
       
       <categories>
@@ -4843,9 +4826,26 @@
     
     
     <entry>
-      <title>Docker CLI</title>
-      <link href="/docker/"/>
-      <url>/docker/</url>
+      <title>DOM Range</title>
+      <link href="/dom-range/"/>
+      <url>/dom-range/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>docker-compose</title>
+      <link href="/docker-compose/"/>
+      <url>/docker-compose/</url>
       
       
       <categories>
@@ -4860,9 +4860,9 @@
     
     
     <entry>
-      <title>docker-compose</title>
-      <link href="/docker-compose/"/>
-      <url>/docker-compose/</url>
+      <title>Docker CLI</title>
+      <link href="/docker/"/>
+      <url>/docker/</url>
       
       
       <categories>
@@ -5024,23 +5024,6 @@
     
     
     <entry>
-      <title>CSS selectors</title>
-      <link href="/css-selectors/"/>
-      <url>/css-selectors/</url>
-      
-      
-      <categories>
-          
-          <category> Hidden </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>CSS system fonts</title>
       <link href="/css-system-font-stack/"/>
       <url>/css-system-font-stack/</url>
@@ -5058,6 +5041,23 @@
             <tag> Featurable </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS selectors</title>
+      <link href="/css-selectors/"/>
+      <url>/css-selectors/</url>
+      
+      
+      <categories>
+          
+          <category> Hidden </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -5132,14 +5132,14 @@
     
     
     <entry>
-      <title>CSS antialiasing</title>
-      <link href="/css-antialias/"/>
-      <url>/css-antialias/</url>
+      <title>CSS animations</title>
+      <link href="/css-animation/"/>
+      <url>/css-animation/</url>
       
       
       <categories>
           
-          <category> CSS </category>
+          <category> Hidden </category>
           
       </categories>
       
@@ -5149,14 +5149,14 @@
     
     
     <entry>
-      <title>CSS animations</title>
-      <link href="/css-animation/"/>
-      <url>/css-animation/</url>
+      <title>CSS antialiasing</title>
+      <link href="/css-antialias/"/>
+      <url>/css-antialias/</url>
       
       
       <categories>
           
-          <category> Hidden </category>
+          <category> CSS </category>
           
       </categories>
       
@@ -5240,13 +5240,13 @@
     
     <entry>
       <title>Commander.js</title>
-      <link href="/commander.js/"/>
-      <url>/commander.js/</url>
+      <link href="/commander-js/"/>
+      <url>/commander-js/</url>
       
       
       <categories>
           
-          <category> JavaScript libraries </category>
+          <category> Hidden </category>
           
       </categories>
       
@@ -5257,13 +5257,13 @@
     
     <entry>
       <title>Commander.js</title>
-      <link href="/commander-js/"/>
-      <url>/commander-js/</url>
+      <link href="/commander.js/"/>
+      <url>/commander.js/</url>
       
       
       <categories>
           
-          <category> Hidden </category>
+          <category> JavaScript libraries </category>
           
       </categories>
       
@@ -5454,14 +5454,14 @@
     
     
     <entry>
-      <title>Bundler</title>
-      <link href="/bundler/"/>
-      <url>/bundler/</url>
+      <title>C Preprocessor</title>
+      <link href="/c_preprocessor/"/>
+      <url>/c_preprocessor/</url>
       
       
       <categories>
           
-          <category> Ruby </category>
+          <category> C-like </category>
           
       </categories>
       
@@ -5471,14 +5471,14 @@
     
     
     <entry>
-      <title>C Preprocessor</title>
-      <link href="/c_preprocessor/"/>
-      <url>/c_preprocessor/</url>
+      <title>Bundler</title>
+      <link href="/bundler/"/>
+      <url>/bundler/</url>
       
       
       <categories>
           
-          <category> C-like </category>
+          <category> Ruby </category>
           
       </categories>
       
@@ -5692,17 +5692,6 @@
     
     
     <entry>
-      <title>Code badges</title>
-      <link href="/badges/"/>
-      <url>/badges/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Backbone.js</title>
       <link href="/backbone/"/>
       <url>/backbone/</url>
@@ -5713,6 +5702,17 @@
           <category> JavaScript libraries </category>
           
       </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Code badges</title>
+      <link href="/badges/"/>
+      <url>/badges/</url>
+      
       
       
     </entry>
@@ -5737,14 +5737,14 @@
     
     
     <entry>
-      <title>Awesome Redux</title>
-      <link href="/awesome-redux/"/>
-      <url>/awesome-redux/</url>
+      <title>Atom</title>
+      <link href="/atom/"/>
+      <url>/atom/</url>
       
       
       <categories>
           
-          <category> React </category>
+          <category> Apps </category>
           
       </categories>
       
@@ -5754,14 +5754,14 @@
     
     
     <entry>
-      <title>Atom</title>
-      <link href="/atom/"/>
-      <url>/atom/</url>
+      <title>Awesome Redux</title>
+      <link href="/awesome-redux/"/>
+      <url>/awesome-redux/</url>
       
       
       <categories>
           
-          <category> Apps </category>
+          <category> React </category>
           
       </categories>
       
@@ -5839,9 +5839,9 @@
     
     
     <entry>
-      <title>Ansible</title>
-      <link href="/ansible/"/>
-      <url>/ansible/</url>
+      <title>Ansible roles</title>
+      <link href="/ansible-roles/"/>
+      <url>/ansible-roles/</url>
       
       
       <categories>
@@ -5856,9 +5856,9 @@
     
     
     <entry>
-      <title>Ansible roles</title>
-      <link href="/ansible-roles/"/>
-      <url>/ansible-roles/</url>
+      <title>Ansible</title>
+      <link href="/ansible/"/>
+      <url>/ansible/</url>
       
       
       <categories>
@@ -5975,23 +5975,6 @@
     
     
     <entry>
-      <title>Analytics libraries</title>
-      <link href="/analytics/"/>
-      <url>/analytics/</url>
-      
-      
-      <categories>
-          
-          <category> Analytics </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Google Analytics&#39;s analytics.js</title>
       <link href="/analytics.js/"/>
       <url>/analytics.js/</url>
@@ -6009,14 +5992,14 @@
     
     
     <entry>
-      <title>ActiveAdmin</title>
-      <link href="/activeadmin/"/>
-      <url>/activeadmin/</url>
+      <title>Analytics libraries</title>
+      <link href="/analytics/"/>
+      <url>/analytics/</url>
       
       
       <categories>
           
-          <category> Ruby </category>
+          <category> Analytics </category>
           
       </categories>
       
@@ -6034,6 +6017,23 @@
       <categories>
           
           <category> CLI </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ActiveAdmin</title>
+      <link href="/activeadmin/"/>
+      <url>/activeadmin/</url>
+      
+      
+      <categories>
+          
+          <category> Ruby </category>
           
       </categories>
       
