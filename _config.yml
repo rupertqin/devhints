@@ -14,7 +14,7 @@ timezone:
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://rupertqin.github.io/devhints
-root: /
+root: /devhints/
 permalink: :title/
 permalink_defaults:
 
@@ -56,7 +56,7 @@ index_generator:
 
 # https://github.com/wzpan/hexo-generator-search
 search:
-  path: devhints/search.xml
+  path: search.xml
   field: post
   content: false
   
