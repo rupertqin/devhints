@@ -5,8 +5,8 @@
     
     <entry>
       <title>vim</title>
-      <link href="/vim/"/>
-      <url>/vim/</url>
+      <link href="/devhints/vim/"/>
+      <url>/devhints/vim/</url>
       
       
       
@@ -16,30 +16,8 @@
     
     <entry>
       <title>tmux</title>
-      <link href="/tmux/"/>
-      <url>/tmux/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>status code</title>
-      <link href="/status%20code/"/>
-      <url>/status%20code/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>nginx</title>
-      <link href="/nginx/"/>
-      <url>/nginx/</url>
+      <link href="/devhints/tmux/"/>
+      <url>/devhints/tmux/</url>
       
       
       
@@ -49,8 +27,8 @@
     
     <entry>
       <title>curl</title>
-      <link href="/curl/"/>
-      <url>/curl/</url>
+      <link href="/devhints/curl/"/>
+      <url>/devhints/curl/</url>
       
       
       
@@ -60,8 +38,8 @@
     
     <entry>
       <title>zsh</title>
-      <link href="/zsh/"/>
-      <url>/zsh/</url>
+      <link href="/devhints/zsh/"/>
+      <url>/devhints/zsh/</url>
       
       
       <categories>
@@ -77,8 +55,8 @@
     
     <entry>
       <title>Zombie</title>
-      <link href="/zombie/"/>
-      <url>/zombie/</url>
+      <link href="/devhints/zombie/"/>
+      <url>/devhints/zombie/</url>
       
       
       <categories>
@@ -94,8 +72,8 @@
     
     <entry>
       <title>ZNC bouncer</title>
-      <link href="/znc/"/>
-      <url>/znc/</url>
+      <link href="/devhints/znc/"/>
+      <url>/devhints/znc/</url>
       
       
       
@@ -105,8 +83,8 @@
     
     <entry>
       <title>Yarn</title>
-      <link href="/yarn/"/>
-      <url>/yarn/</url>
+      <link href="/devhints/yarn/"/>
+      <url>/devhints/yarn/</url>
       
       
       <categories>
@@ -128,8 +106,8 @@
     
     <entry>
       <title>Yargs</title>
-      <link href="/yargs/"/>
-      <url>/yargs/</url>
+      <link href="/devhints/yargs/"/>
+      <url>/devhints/yargs/</url>
       
       
       <categories>
@@ -145,8 +123,8 @@
     
     <entry>
       <title>Yaml</title>
-      <link href="/yaml/"/>
-      <url>/yaml/</url>
+      <link href="/devhints/yaml/"/>
+      <url>/devhints/yaml/</url>
       
       
       <categories>
@@ -162,8 +140,8 @@
     
     <entry>
       <title>Xpath</title>
-      <link href="/xpath/"/>
-      <url>/xpath/</url>
+      <link href="/devhints/xpath/"/>
+      <url>/devhints/xpath/</url>
       
       
       <categories>
@@ -185,8 +163,8 @@
     
     <entry>
       <title>Weinre</title>
-      <link href="/weinre/"/>
-      <url>/weinre/</url>
+      <link href="/devhints/weinre/"/>
+      <url>/devhints/weinre/</url>
       
       
       <categories>
@@ -202,8 +180,8 @@
     
     <entry>
       <title>Weechat</title>
-      <link href="/weechat/"/>
-      <url>/weechat/</url>
+      <link href="/devhints/weechat/"/>
+      <url>/devhints/weechat/</url>
       
       
       <categories>
@@ -219,8 +197,8 @@
     
     <entry>
       <title>Webpack</title>
-      <link href="/webpack/"/>
-      <url>/webpack/</url>
+      <link href="/devhints/webpack/"/>
+      <url>/devhints/webpack/</url>
       
       
       <categories>
@@ -236,8 +214,8 @@
     
     <entry>
       <title>Web workers</title>
-      <link href="/web-workers/"/>
-      <url>/web-workers/</url>
+      <link href="/devhints/web-workers/"/>
+      <url>/devhints/web-workers/</url>
       
       
       <categories>
@@ -252,9 +230,20 @@
     
     
     <entry>
+      <title>Watchman</title>
+      <link href="/devhints/watchman/"/>
+      <url>/devhints/watchman/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Watchexec</title>
-      <link href="/watchexec/"/>
-      <url>/watchexec/</url>
+      <link href="/devhints/watchexec/"/>
+      <url>/devhints/watchexec/</url>
       
       
       <categories>
@@ -269,20 +258,9 @@
     
     
     <entry>
-      <title>Watchman</title>
-      <link href="/watchman/"/>
-      <url>/watchman/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Vue</title>
-      <link href="/vue/"/>
-      <url>/vue/</url>
+      <link href="/devhints/vue/"/>
+      <url>/devhints/vue/</url>
       
       
       <categories>
@@ -298,8 +276,8 @@
     
     <entry>
       <title>Visual Studio Code</title>
-      <link href="/vscode/"/>
-      <url>/vscode/</url>
+      <link href="/devhints/vscode/"/>
+      <url>/devhints/vscode/</url>
       
       
       <categories>
@@ -315,25 +293,8 @@
     
     <entry>
       <title>Vows</title>
-      <link href="/vows/"/>
-      <url>/vows/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Virtual-dom</title>
-      <link href="/virtual-dom/"/>
-      <url>/virtual-dom/</url>
+      <link href="/devhints/vows/"/>
+      <url>/devhints/vows/</url>
       
       
       <categories>
@@ -349,8 +310,8 @@
     
     <entry>
       <title>Vim scripting</title>
-      <link href="/vimscript/"/>
-      <url>/vimscript/</url>
+      <link href="/devhints/vimscript/"/>
+      <url>/devhints/vimscript/</url>
       
       
       <categories>
@@ -371,9 +332,26 @@
     
     
     <entry>
+      <title>Virtual-dom</title>
+      <link href="/devhints/virtual-dom/"/>
+      <url>/devhints/virtual-dom/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vimscript snippets</title>
-      <link href="/vimscript-snippets/"/>
-      <url>/vimscript-snippets/</url>
+      <link href="/devhints/vimscript-snippets/"/>
+      <url>/devhints/vimscript-snippets/</url>
       
       
       <categories>
@@ -389,25 +367,8 @@
     
     <entry>
       <title>Vimscript functions</title>
-      <link href="/vimscript-functions/"/>
-      <url>/vimscript-functions/</url>
-      
-      
-      <categories>
-          
-          <category> Vim </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Vim-rails</title>
-      <link href="/vim-rails/"/>
-      <url>/vim-rails/</url>
+      <link href="/devhints/vimscript-functions/"/>
+      <url>/devhints/vimscript-functions/</url>
       
       
       <categories>
@@ -423,8 +384,25 @@
     
     <entry>
       <title>Vim-Unite</title>
-      <link href="/vim-unite/"/>
-      <url>/vim-unite/</url>
+      <link href="/devhints/vim-unite/"/>
+      <url>/devhints/vim-unite/</url>
+      
+      
+      <categories>
+          
+          <category> Vim </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vim-rails</title>
+      <link href="/devhints/vim-rails/"/>
+      <url>/devhints/vim-rails/</url>
       
       
       <categories>
@@ -440,8 +418,8 @@
     
     <entry>
       <title>Vim helpfiles</title>
-      <link href="/vim-help/"/>
-      <url>/vim-help/</url>
+      <link href="/devhints/vim-help/"/>
+      <url>/devhints/vim-help/</url>
       
       
       <categories>
@@ -457,8 +435,8 @@
     
     <entry>
       <title>Vim Easyalign</title>
-      <link href="/vim-easyalign/"/>
-      <url>/vim-easyalign/</url>
+      <link href="/devhints/vim-easyalign/"/>
+      <url>/devhints/vim-easyalign/</url>
       
       
       <categories>
@@ -474,8 +452,8 @@
     
     <entry>
       <title>Vim digraphs</title>
-      <link href="/vim-digraphs/"/>
-      <url>/vim-digraphs/</url>
+      <link href="/devhints/vim-digraphs/"/>
+      <url>/devhints/vim-digraphs/</url>
       
       
       <categories>
@@ -491,8 +469,8 @@
     
     <entry>
       <title>Vimdiff</title>
-      <link href="/vim-diff/"/>
-      <url>/vim-diff/</url>
+      <link href="/devhints/vim-diff/"/>
+      <url>/devhints/vim-diff/</url>
       
       
       <categories>
@@ -507,20 +485,9 @@
     
     
     <entry>
-      <title>Vainglory</title>
-      <link href="/vainglory/"/>
-      <url>/vainglory/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Vagrantfile</title>
-      <link href="/vagrantfile/"/>
-      <url>/vagrantfile/</url>
+      <link href="/devhints/vagrantfile/"/>
+      <url>/devhints/vagrantfile/</url>
       
       
       <categories>
@@ -535,9 +502,20 @@
     
     
     <entry>
+      <title>Vainglory</title>
+      <link href="/devhints/vainglory/"/>
+      <url>/devhints/vainglory/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vagrant</title>
-      <link href="/vagrant/"/>
-      <url>/vagrant/</url>
+      <link href="/devhints/vagrant/"/>
+      <url>/devhints/vagrant/</url>
       
       
       <categories>
@@ -553,8 +531,8 @@
     
     <entry>
       <title>Unicode symbols</title>
-      <link href="/unicode/"/>
-      <url>/unicode/</url>
+      <link href="/devhints/unicode/"/>
+      <url>/devhints/unicode/</url>
       
       
       
@@ -564,8 +542,8 @@
     
     <entry>
       <title>Underscore-string</title>
-      <link href="/underscore-string/"/>
-      <url>/underscore-string/</url>
+      <link href="/devhints/underscore-string/"/>
+      <url>/devhints/underscore-string/</url>
       
       
       <categories>
@@ -581,8 +559,8 @@
     
     <entry>
       <title>Universal JS module loader</title>
-      <link href="/umdjs/"/>
-      <url>/umdjs/</url>
+      <link href="/devhints/umdjs/"/>
+      <url>/devhints/umdjs/</url>
       
       
       <categories>
@@ -598,8 +576,8 @@
     
     <entry>
       <title>Ubuntu</title>
-      <link href="/ubuntu/"/>
-      <url>/ubuntu/</url>
+      <link href="/devhints/ubuntu/"/>
+      <url>/devhints/ubuntu/</url>
       
       
       
@@ -609,8 +587,8 @@
     
     <entry>
       <title>TypeScript</title>
-      <link href="/typescript/"/>
-      <url>/typescript/</url>
+      <link href="/devhints/typescript/"/>
+      <url>/devhints/typescript/</url>
       
       
       <categories>
@@ -626,8 +604,8 @@
     
     <entry>
       <title>Travis.yml</title>
-      <link href="/travis/"/>
-      <url>/travis/</url>
+      <link href="/devhints/travis/"/>
+      <url>/devhints/travis/</url>
       
       
       <categories>
@@ -643,8 +621,8 @@
     
     <entry>
       <title>Deploy gh-pages via Travis</title>
-      <link href="/travis-gh-pages/"/>
-      <url>/travis-gh-pages/</url>
+      <link href="/devhints/travis-gh-pages/"/>
+      <url>/devhints/travis-gh-pages/</url>
       
       
       <categories>
@@ -660,8 +638,8 @@
     
     <entry>
       <title>Tomdoc</title>
-      <link href="/tomdoc/"/>
-      <url>/tomdoc/</url>
+      <link href="/devhints/tomdoc/"/>
+      <url>/devhints/tomdoc/</url>
       
       
       <categories>
@@ -677,8 +655,8 @@
     
     <entry>
       <title>Tig</title>
-      <link href="/tig/"/>
-      <url>/tig/</url>
+      <link href="/devhints/tig/"/>
+      <url>/devhints/tig/</url>
       
       
       <categories>
@@ -694,8 +672,8 @@
     
     <entry>
       <title>Textile</title>
-      <link href="/textile/"/>
-      <url>/textile/</url>
+      <link href="/devhints/textile/"/>
+      <url>/devhints/textile/</url>
       
       
       <categories>
@@ -711,8 +689,8 @@
     
     <entry>
       <title>Tape</title>
-      <link href="/tape/"/>
-      <url>/tape/</url>
+      <link href="/devhints/tape/"/>
+      <url>/devhints/tape/</url>
       
       
       <categories>
@@ -728,8 +706,8 @@
     
     <entry>
       <title>Tabular</title>
-      <link href="/tabular/"/>
-      <url>/tabular/</url>
+      <link href="/devhints/tabular/"/>
+      <url>/devhints/tabular/</url>
       
       
       <categories>
@@ -745,8 +723,8 @@
     
     <entry>
       <title>Superagent</title>
-      <link href="/superagent/"/>
-      <url>/superagent/</url>
+      <link href="/devhints/superagent/"/>
+      <url>/devhints/superagent/</url>
       
       
       <categories>
@@ -762,8 +740,8 @@
     
     <entry>
       <title>Sublime Text</title>
-      <link href="/sublime-text/"/>
-      <url>/sublime-text/</url>
+      <link href="/devhints/sublime-text/"/>
+      <url>/devhints/sublime-text/</url>
       
       
       <categories>
@@ -779,8 +757,8 @@
     
     <entry>
       <title>Stylus</title>
-      <link href="/stylus/"/>
-      <url>/stylus/</url>
+      <link href="/devhints/stylus/"/>
+      <url>/devhints/stylus/</url>
       
       
       <categories>
@@ -802,8 +780,8 @@
     
     <entry>
       <title>Stencil</title>
-      <link href="/stencil/"/>
-      <url>/stencil/</url>
+      <link href="/devhints/stencil/"/>
+      <url>/devhints/stencil/</url>
       
       
       <categories>
@@ -819,8 +797,8 @@
     
     <entry>
       <title>SQL joins</title>
-      <link href="/sql-join/"/>
-      <url>/sql-join/</url>
+      <link href="/devhints/sql-join/"/>
+      <url>/devhints/sql-join/</url>
       
       
       <categories>
@@ -836,8 +814,8 @@
     
     <entry>
       <title>Spreadsheet functions</title>
-      <link href="/spreadsheet/"/>
-      <url>/spreadsheet/</url>
+      <link href="/devhints/spreadsheet/"/>
+      <url>/devhints/spreadsheet/</url>
       
       
       
@@ -847,8 +825,8 @@
     
     <entry>
       <title>Spine</title>
-      <link href="/spine/"/>
-      <url>/spine/</url>
+      <link href="/devhints/spine/"/>
+      <url>/devhints/spine/</url>
       
       
       <categories>
@@ -864,8 +842,8 @@
     
     <entry>
       <title>Spacemacs</title>
-      <link href="/spacemacs/"/>
-      <url>/spacemacs/</url>
+      <link href="/devhints/spacemacs/"/>
+      <url>/devhints/spacemacs/</url>
       
       
       <categories>
@@ -887,8 +865,8 @@
     
     <entry>
       <title>Social media images</title>
-      <link href="/social-images/"/>
-      <url>/social-images/</url>
+      <link href="/devhints/social-images/"/>
+      <url>/devhints/social-images/</url>
       
       
       
@@ -898,8 +876,8 @@
     
     <entry>
       <title>Slim</title>
-      <link href="/slim/"/>
-      <url>/slim/</url>
+      <link href="/devhints/slim/"/>
+      <url>/devhints/slim/</url>
       
       
       <categories>
@@ -915,8 +893,8 @@
     
     <entry>
       <title>Sketch</title>
-      <link href="/sketch/"/>
-      <url>/sketch/</url>
+      <link href="/devhints/sketch/"/>
+      <url>/devhints/sketch/</url>
       
       
       <categories>
@@ -932,8 +910,8 @@
     
     <entry>
       <title>Sinon</title>
-      <link href="/sinon/"/>
-      <url>/sinon/</url>
+      <link href="/devhints/sinon/"/>
+      <url>/devhints/sinon/</url>
       
       
       <categories>
@@ -949,8 +927,8 @@
     
     <entry>
       <title>Sinon-chai</title>
-      <link href="/sinon-chai/"/>
-      <url>/sinon-chai/</url>
+      <link href="/devhints/sinon-chai/"/>
+      <url>/devhints/sinon-chai/</url>
       
       
       <categories>
@@ -965,9 +943,20 @@
     
     
     <entry>
+      <title>SimpleForm</title>
+      <link href="/devhints/simple_form/"/>
+      <url>/devhints/simple_form/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Siege</title>
-      <link href="/siege/"/>
-      <url>/siege/</url>
+      <link href="/devhints/siege/"/>
+      <url>/devhints/siege/</url>
       
       
       <categories>
@@ -982,20 +971,9 @@
     
     
     <entry>
-      <title>SimpleForm</title>
-      <link href="/simple_form/"/>
-      <url>/simple_form/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Shell.js</title>
-      <link href="/shelljs/"/>
-      <url>/shelljs/</url>
+      <link href="/devhints/shelljs/"/>
+      <url>/devhints/shelljs/</url>
       
       
       <categories>
@@ -1011,8 +989,8 @@
     
     <entry>
       <title>Shell scripting</title>
-      <link href="/sh/"/>
-      <url>/sh/</url>
+      <link href="/devhints/sh/"/>
+      <url>/devhints/sh/</url>
       
       
       <categories>
@@ -1028,8 +1006,8 @@
     
     <entry>
       <title>Shell: named pipes</title>
-      <link href="/sh-pipes/"/>
-      <url>/sh-pipes/</url>
+      <link href="/devhints/sh-pipes/"/>
+      <url>/devhints/sh-pipes/</url>
       
       
       <categories>
@@ -1045,8 +1023,8 @@
     
     <entry>
       <title>Sequelize</title>
-      <link href="/sequelize/"/>
-      <url>/sequelize/</url>
+      <link href="/devhints/sequelize/"/>
+      <url>/devhints/sequelize/</url>
       
       
       <categories>
@@ -1062,8 +1040,8 @@
     
     <entry>
       <title>Sequel</title>
-      <link href="/sequel/"/>
-      <url>/sequel/</url>
+      <link href="/devhints/sequel/"/>
+      <url>/devhints/sequel/</url>
       
       
       <categories>
@@ -1079,8 +1057,8 @@
     
     <entry>
       <title>Semver</title>
-      <link href="/semver/"/>
-      <url>/semver/</url>
+      <link href="/devhints/semver/"/>
+      <url>/devhints/semver/</url>
       
       
       
@@ -1090,8 +1068,8 @@
     
     <entry>
       <title>sed</title>
-      <link href="/sed/"/>
-      <url>/sed/</url>
+      <link href="/devhints/sed/"/>
+      <url>/devhints/sed/</url>
       
       
       <categories>
@@ -1107,8 +1085,8 @@
     
     <entry>
       <title>scp</title>
-      <link href="/scp/"/>
-      <url>/scp/</url>
+      <link href="/devhints/scp/"/>
+      <url>/devhints/scp/</url>
       
       
       <categories>
@@ -1124,8 +1102,8 @@
     
     <entry>
       <title>Saucelabs</title>
-      <link href="/saucelabs/"/>
-      <url>/saucelabs/</url>
+      <link href="/devhints/saucelabs/"/>
+      <url>/devhints/saucelabs/</url>
       
       
       
@@ -1135,8 +1113,8 @@
     
     <entry>
       <title>Sass</title>
-      <link href="/sass/"/>
-      <url>/sass/</url>
+      <link href="/devhints/sass/"/>
+      <url>/devhints/sass/</url>
       
       
       <categories>
@@ -1158,8 +1136,8 @@
     
     <entry>
       <title>Rubygems</title>
-      <link href="/rubygems/"/>
-      <url>/rubygems/</url>
+      <link href="/devhints/rubygems/"/>
+      <url>/devhints/rubygems/</url>
       
       
       <categories>
@@ -1175,25 +1153,8 @@
     
     <entry>
       <title>Ruby 2.1</title>
-      <link href="/ruby21/"/>
-      <url>/ruby21/</url>
-      
-      
-      <categories>
-          
-          <category> Ruby </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Ruby</title>
-      <link href="/ruby/"/>
-      <url>/ruby/</url>
+      <link href="/devhints/ruby21/"/>
+      <url>/devhints/ruby21/</url>
       
       
       <categories>
@@ -1209,8 +1170,8 @@
     
     <entry>
       <title>Rubiks cube</title>
-      <link href="/rubiks/"/>
-      <url>/rubiks/</url>
+      <link href="/devhints/rubiks/"/>
+      <url>/devhints/rubiks/</url>
       
       
       
@@ -1219,9 +1180,26 @@
     
     
     <entry>
+      <title>Ruby</title>
+      <link href="/devhints/ruby/"/>
+      <url>/devhints/ruby/</url>
+      
+      
+      <categories>
+          
+          <category> Ruby </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Rsync</title>
-      <link href="/rsync/"/>
-      <url>/rsync/</url>
+      <link href="/devhints/rsync/"/>
+      <url>/devhints/rsync/</url>
       
       
       <categories>
@@ -1237,8 +1215,8 @@
     
     <entry>
       <title>rTorrent</title>
-      <link href="/rtorrent/"/>
-      <url>/rtorrent/</url>
+      <link href="/devhints/rtorrent/"/>
+      <url>/devhints/rtorrent/</url>
       
       
       <categories>
@@ -1254,8 +1232,8 @@
     
     <entry>
       <title>ReStructuredText</title>
-      <link href="/rst/"/>
-      <url>/rst/</url>
+      <link href="/devhints/rst/"/>
+      <url>/devhints/rst/</url>
       
       
       <categories>
@@ -1271,8 +1249,25 @@
     
     <entry>
       <title>RSpec</title>
-      <link href="/rspec/"/>
-      <url>/rspec/</url>
+      <link href="/devhints/rspec/"/>
+      <url>/devhints/rspec/</url>
+      
+      
+      <categories>
+          
+          <category> Ruby </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Rspec-rails</title>
+      <link href="/devhints/rspec-rails/"/>
+      <url>/devhints/rspec-rails/</url>
       
       
       <categories>
@@ -1288,8 +1283,8 @@
     
     <entry>
       <title>Ronn</title>
-      <link href="/ronn/"/>
-      <url>/ronn/</url>
+      <link href="/devhints/ronn/"/>
+      <url>/devhints/ronn/</url>
       
       
       <categories>
@@ -1304,43 +1299,9 @@
     
     
     <entry>
-      <title>Rspec-rails</title>
-      <link href="/rspec-rails/"/>
-      <url>/rspec-rails/</url>
-      
-      
-      <categories>
-          
-          <category> Ruby </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Rollup.js</title>
-      <link href="/rollup/"/>
-      <url>/rollup/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Riot.js</title>
-      <link href="/riot/"/>
-      <url>/riot/</url>
+      <link href="/devhints/rollup/"/>
+      <url>/devhints/rollup/</url>
       
       
       <categories>
@@ -1356,8 +1317,8 @@
     
     <entry>
       <title>RESTful API</title>
-      <link href="/rest-api/"/>
-      <url>/rest-api/</url>
+      <link href="/devhints/rest-api/"/>
+      <url>/devhints/rest-api/</url>
       
       
       
@@ -1366,9 +1327,26 @@
     
     
     <entry>
+      <title>Riot.js</title>
+      <link href="/devhints/riot/"/>
+      <url>/devhints/riot/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Screen resolutions</title>
-      <link href="/resolutions/"/>
-      <url>/resolutions/</url>
+      <link href="/devhints/resolutions/"/>
+      <url>/devhints/resolutions/</url>
       
       
       
@@ -1378,8 +1356,8 @@
     
     <entry>
       <title>rename</title>
-      <link href="/rename/"/>
-      <url>/rename/</url>
+      <link href="/devhints/rename/"/>
+      <url>/devhints/rename/</url>
       
       
       <categories>
@@ -1394,26 +1372,9 @@
     
     
     <entry>
-      <title>Redux</title>
-      <link href="/redux/"/>
-      <url>/redux/</url>
-      
-      
-      <categories>
-          
-          <category> React </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>regexp</title>
-      <link href="/regexp/"/>
-      <url>/regexp/</url>
+      <link href="/devhints/regexp/"/>
+      <url>/devhints/regexp/</url>
       
       
       <categories>
@@ -1428,9 +1389,26 @@
     
     
     <entry>
+      <title>Redux</title>
+      <link href="/devhints/redux/"/>
+      <url>/devhints/redux/</url>
+      
+      
+      <categories>
+          
+          <category> React </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>React.js</title>
-      <link href="/react/"/>
-      <url>/react/</url>
+      <link href="/devhints/react/"/>
+      <url>/devhints/react/</url>
       
       
       <categories>
@@ -1452,8 +1430,8 @@
     
     <entry>
       <title>React-router</title>
-      <link href="/react-router/"/>
-      <url>/react-router/</url>
+      <link href="/devhints/react-router/"/>
+      <url>/devhints/react-router/</url>
       
       
       <categories>
@@ -1469,8 +1447,8 @@
     
     <entry>
       <title>Rdoc</title>
-      <link href="/rdoc/"/>
-      <url>/rdoc/</url>
+      <link href="/devhints/rdoc/"/>
+      <url>/devhints/rdoc/</url>
       
       
       <categories>
@@ -1486,8 +1464,8 @@
     
     <entry>
       <title>rbenv</title>
-      <link href="/rbenv/"/>
-      <url>/rbenv/</url>
+      <link href="/devhints/rbenv/"/>
+      <url>/devhints/rbenv/</url>
       
       
       <categories>
@@ -1503,8 +1481,8 @@
     
     <entry>
       <title>Rake</title>
-      <link href="/rake/"/>
-      <url>/rake/</url>
+      <link href="/devhints/rake/"/>
+      <url>/devhints/rake/</url>
       
       
       <categories>
@@ -1520,8 +1498,8 @@
     
     <entry>
       <title>Rails</title>
-      <link href="/rails/"/>
-      <url>/rails/</url>
+      <link href="/devhints/rails/"/>
+      <url>/devhints/rails/</url>
       
       
       <categories>
@@ -1537,8 +1515,8 @@
     
     <entry>
       <title>Rails tricks</title>
-      <link href="/rails-tricks/"/>
-      <url>/rails-tricks/</url>
+      <link href="/devhints/rails-tricks/"/>
+      <url>/devhints/rails-tricks/</url>
       
       
       <categories>
@@ -1554,8 +1532,8 @@
     
     <entry>
       <title>Routes</title>
-      <link href="/rails-routes/"/>
-      <url>/rails-routes/</url>
+      <link href="/devhints/rails-routes/"/>
+      <url>/devhints/rails-routes/</url>
       
       
       <categories>
@@ -1571,8 +1549,8 @@
     
     <entry>
       <title>Rails plugins</title>
-      <link href="/rails-plugins/"/>
-      <url>/rails-plugins/</url>
+      <link href="/devhints/rails-plugins/"/>
+      <url>/devhints/rails-plugins/</url>
       
       
       <categories>
@@ -1588,8 +1566,8 @@
     
     <entry>
       <title>Rails models</title>
-      <link href="/rails-models/"/>
-      <url>/rails-models/</url>
+      <link href="/devhints/rails-models/"/>
+      <url>/devhints/rails-models/</url>
       
       
       <categories>
@@ -1605,8 +1583,8 @@
     
     <entry>
       <title>i18n</title>
-      <link href="/rails-i18n/"/>
-      <url>/rails-i18n/</url>
+      <link href="/devhints/rails-i18n/"/>
+      <url>/devhints/rails-i18n/</url>
       
       
       <categories>
@@ -1622,8 +1600,8 @@
     
     <entry>
       <title>Migrations</title>
-      <link href="/rails-migrations/"/>
-      <url>/rails-migrations/</url>
+      <link href="/devhints/rails-migrations/"/>
+      <url>/devhints/rails-migrations/</url>
       
       
       <categories>
@@ -1639,8 +1617,8 @@
     
     <entry>
       <title>Helpers</title>
-      <link href="/rails-helpers/"/>
-      <url>/rails-helpers/</url>
+      <link href="/devhints/rails-helpers/"/>
+      <url>/devhints/rails-helpers/</url>
       
       
       <categories>
@@ -1656,8 +1634,8 @@
     
     <entry>
       <title>Rails gems</title>
-      <link href="/rails-gems/"/>
-      <url>/rails-gems/</url>
+      <link href="/devhints/rails-gems/"/>
+      <url>/devhints/rails-gems/</url>
       
       
       <categories>
@@ -1673,8 +1651,8 @@
     
     <entry>
       <title>Form helpers</title>
-      <link href="/rails-forms/"/>
-      <url>/rails-forms/</url>
+      <link href="/devhints/rails-forms/"/>
+      <url>/devhints/rails-forms/</url>
       
       
       <categories>
@@ -1690,8 +1668,8 @@
     
     <entry>
       <title>Rails features</title>
-      <link href="/rails-features/"/>
-      <url>/rails-features/</url>
+      <link href="/devhints/rails-features/"/>
+      <url>/devhints/rails-features/</url>
       
       
       <categories>
@@ -1707,8 +1685,8 @@
     
     <entry>
       <title>Controllers</title>
-      <link href="/rails-controllers/"/>
-      <url>/rails-controllers/</url>
+      <link href="/devhints/rails-controllers/"/>
+      <url>/devhints/rails-controllers/</url>
       
       
       <categories>
@@ -1724,8 +1702,8 @@
     
     <entry>
       <title>Ractive.js</title>
-      <link href="/ractive/"/>
-      <url>/ractive/</url>
+      <link href="/devhints/ractive/"/>
+      <url>/devhints/ractive/</url>
       
       
       <categories>
@@ -1741,8 +1719,8 @@
     
     <entry>
       <title>rack-test</title>
-      <link href="/rack-test/"/>
-      <url>/rack-test/</url>
+      <link href="/devhints/rack-test/"/>
+      <url>/devhints/rack-test/</url>
       
       
       <categories>
@@ -1758,8 +1736,8 @@
     
     <entry>
       <title>Qunit</title>
-      <link href="/qunit/"/>
-      <url>/qunit/</url>
+      <link href="/devhints/qunit/"/>
+      <url>/devhints/qunit/</url>
       
       
       <categories>
@@ -1775,8 +1753,8 @@
     
     <entry>
       <title>Python</title>
-      <link href="/python/"/>
-      <url>/python/</url>
+      <link href="/devhints/python/"/>
+      <url>/devhints/python/</url>
       
       
       <categories>
@@ -1792,8 +1770,8 @@
     
     <entry>
       <title>Q.js</title>
-      <link href="/qjs/"/>
-      <url>/qjs/</url>
+      <link href="/devhints/qjs/"/>
+      <url>/devhints/qjs/</url>
       
       
       <categories>
@@ -1809,8 +1787,8 @@
     
     <entry>
       <title>Pug</title>
-      <link href="/pug/"/>
-      <url>/pug/</url>
+      <link href="/devhints/pug/"/>
+      <url>/devhints/pug/</url>
       
       
       <categories>
@@ -1831,9 +1809,9 @@
     
     
     <entry>
-      <title>Pry</title>
-      <link href="/pry/"/>
-      <url>/pry/</url>
+      <title>PSD.rb</title>
+      <link href="/devhints/psdrb/"/>
+      <url>/devhints/psdrb/</url>
       
       
       <categories>
@@ -1848,9 +1826,9 @@
     
     
     <entry>
-      <title>PSD.rb</title>
-      <link href="/psdrb/"/>
-      <url>/psdrb/</url>
+      <title>Pry</title>
+      <link href="/devhints/pry/"/>
+      <url>/devhints/pry/</url>
       
       
       <categories>
@@ -1866,8 +1844,8 @@
     
     <entry>
       <title>Promises</title>
-      <link href="/promise/"/>
-      <url>/promise/</url>
+      <link href="/devhints/promise/"/>
+      <url>/devhints/promise/</url>
       
       
       <categories>
@@ -1883,8 +1861,8 @@
     
     <entry>
       <title>Projectionist</title>
-      <link href="/projectionist/"/>
-      <url>/projectionist/</url>
+      <link href="/devhints/projectionist/"/>
+      <url>/devhints/projectionist/</url>
       
       
       <categories>
@@ -1900,8 +1878,8 @@
     
     <entry>
       <title>Premailer</title>
-      <link href="/premailer/"/>
-      <url>/premailer/</url>
+      <link href="/devhints/premailer/"/>
+      <url>/devhints/premailer/</url>
       
       
       
@@ -1911,8 +1889,8 @@
     
     <entry>
       <title>PostgreSQL</title>
-      <link href="/postgresql/"/>
-      <url>/postgresql/</url>
+      <link href="/devhints/postgresql/"/>
+      <url>/devhints/postgresql/</url>
       
       
       <categories>
@@ -1928,8 +1906,8 @@
     
     <entry>
       <title>PostgreSQL JSON</title>
-      <link href="/postgresql-json/"/>
-      <url>/postgresql-json/</url>
+      <link href="/devhints/postgresql-json/"/>
+      <url>/devhints/postgresql-json/</url>
       
       
       <categories>
@@ -1945,8 +1923,8 @@
     
     <entry>
       <title>Polyfill.io</title>
-      <link href="/polyfill.io/"/>
-      <url>/polyfill.io/</url>
+      <link href="/devhints/polyfill.io/"/>
+      <url>/devhints/polyfill.io/</url>
       
       
       <categories>
@@ -1962,8 +1940,8 @@
     
     <entry>
       <title>pm2</title>
-      <link href="/pm2/"/>
-      <url>/pm2/</url>
+      <link href="/devhints/pm2/"/>
+      <url>/devhints/pm2/</url>
       
       
       <categories>
@@ -1979,8 +1957,8 @@
     
     <entry>
       <title>PlantUML</title>
-      <link href="/plantuml/"/>
-      <url>/plantuml/</url>
+      <link href="/devhints/plantuml/"/>
+      <url>/devhints/plantuml/</url>
       
       
       
@@ -1990,8 +1968,8 @@
     
     <entry>
       <title>Phoenix 1.2</title>
-      <link href="/phoenix@1.2/"/>
-      <url>/phoenix@1.2/</url>
+      <link href="/devhints/phoenix@1.2/"/>
+      <url>/devhints/phoenix@1.2/</url>
       
       
       <categories>
@@ -2007,25 +1985,8 @@
     
     <entry>
       <title>Phoenix</title>
-      <link href="/phoenix/"/>
-      <url>/phoenix/</url>
-      
-      
-      <categories>
-          
-          <category> Elixir </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Phoenix: Ecto migrations</title>
-      <link href="/phoenix-migrations/"/>
-      <url>/phoenix-migrations/</url>
+      <link href="/devhints/phoenix/"/>
+      <url>/devhints/phoenix/</url>
       
       
       <categories>
@@ -2041,8 +2002,25 @@
     
     <entry>
       <title>Phoenix: Routing</title>
-      <link href="/phoenix-routing/"/>
-      <url>/phoenix-routing/</url>
+      <link href="/devhints/phoenix-routing/"/>
+      <url>/devhints/phoenix-routing/</url>
+      
+      
+      <categories>
+          
+          <category> Elixir </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Phoenix: Ecto migrations</title>
+      <link href="/devhints/phoenix-migrations/"/>
+      <url>/devhints/phoenix-migrations/</url>
       
       
       <categories>
@@ -2058,8 +2036,8 @@
     
     <entry>
       <title>Phoenix: Ecto models</title>
-      <link href="/phoenix-ecto@1.3/"/>
-      <url>/phoenix-ecto@1.3/</url>
+      <link href="/devhints/phoenix-ecto@1.3/"/>
+      <url>/devhints/phoenix-ecto@1.3/</url>
       
       
       <categories>
@@ -2075,8 +2053,8 @@
     
     <entry>
       <title>Phoenix: Ecto models</title>
-      <link href="/phoenix-ecto@1.2/"/>
-      <url>/phoenix-ecto@1.2/</url>
+      <link href="/devhints/phoenix-ecto@1.2/"/>
+      <url>/devhints/phoenix-ecto@1.2/</url>
       
       
       <categories>
@@ -2092,8 +2070,8 @@
     
     <entry>
       <title>Phoenix: Ecto</title>
-      <link href="/phoenix-ecto/"/>
-      <url>/phoenix-ecto/</url>
+      <link href="/devhints/phoenix-ecto/"/>
+      <url>/devhints/phoenix-ecto/</url>
       
       
       <categories>
@@ -2115,8 +2093,8 @@
     
     <entry>
       <title>Phoenix: Plug.Conn</title>
-      <link href="/phoenix-conn/"/>
-      <url>/phoenix-conn/</url>
+      <link href="/devhints/phoenix-conn/"/>
+      <url>/devhints/phoenix-conn/</url>
       
       
       <categories>
@@ -2132,8 +2110,8 @@
     
     <entry>
       <title>Food delivery (Philippines)</title>
-      <link href="/ph-food-delivery/"/>
-      <url>/ph-food-delivery/</url>
+      <link href="/devhints/ph-food-delivery/"/>
+      <url>/devhints/ph-food-delivery/</url>
       
       
       
@@ -2143,8 +2121,8 @@
     
     <entry>
       <title>Perl-pie</title>
-      <link href="/perl-pie/"/>
-      <url>/perl-pie/</url>
+      <link href="/devhints/perl-pie/"/>
+      <url>/devhints/perl-pie/</url>
       
       
       <categories>
@@ -2160,8 +2138,8 @@
     
     <entry>
       <title>Phusion Passenger</title>
-      <link href="/passenger/"/>
-      <url>/passenger/</url>
+      <link href="/devhints/passenger/"/>
+      <url>/devhints/passenger/</url>
       
       
       
@@ -2171,8 +2149,8 @@
     
     <entry>
       <title>Pass</title>
-      <link href="/pass/"/>
-      <url>/pass/</url>
+      <link href="/devhints/pass/"/>
+      <url>/devhints/pass/</url>
       
       
       <categories>
@@ -2188,25 +2166,8 @@
     
     <entry>
       <title>Parsley.js</title>
-      <link href="/parsley/"/>
-      <url>/parsley/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Parsimmon</title>
-      <link href="/parsimmon/"/>
-      <url>/parsimmon/</url>
+      <link href="/devhints/parsley/"/>
+      <url>/devhints/parsley/</url>
       
       
       <categories>
@@ -2222,8 +2183,8 @@
     
     <entry>
       <title>Pacman</title>
-      <link href="/pacman/"/>
-      <url>/pacman/</url>
+      <link href="/devhints/pacman/"/>
+      <url>/devhints/pacman/</url>
       
       
       <categories>
@@ -2238,9 +2199,26 @@
     
     
     <entry>
+      <title>Parsimmon</title>
+      <link href="/devhints/parsimmon/"/>
+      <url>/devhints/parsimmon/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>package.json</title>
-      <link href="/package/"/>
-      <url>/package/</url>
+      <link href="/devhints/package/"/>
+      <url>/devhints/package/</url>
       
       
       <categories>
@@ -2256,8 +2234,8 @@
     
     <entry>
       <title>package.json</title>
-      <link href="/package.json/"/>
-      <url>/package.json/</url>
+      <link href="/devhints/package.json/"/>
+      <url>/devhints/package.json/</url>
       
       
       <categories>
@@ -2273,8 +2251,8 @@
     
     <entry>
       <title>Org Mode</title>
-      <link href="/org-mode/"/>
-      <url>/org-mode/</url>
+      <link href="/devhints/org-mode/"/>
+      <url>/devhints/org-mode/</url>
       
       
       <categories>
@@ -2296,8 +2274,8 @@
     
     <entry>
       <title>OS X</title>
-      <link href="/osx/"/>
-      <url>/osx/</url>
+      <link href="/devhints/osx/"/>
+      <url>/devhints/osx/</url>
       
       
       <categories>
@@ -2313,8 +2291,8 @@
     
     <entry>
       <title>npm</title>
-      <link href="/npm/"/>
-      <url>/npm/</url>
+      <link href="/devhints/npm/"/>
+      <url>/devhints/npm/</url>
       
       
       <categories>
@@ -2329,26 +2307,9 @@
     
     
     <entry>
-      <title>Node.js API</title>
-      <link href="/nodejs/"/>
-      <url>/nodejs/</url>
-      
-      
-      <categories>
-          
-          <category> Node.js </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Nopt</title>
-      <link href="/nopt/"/>
-      <url>/nopt/</url>
+      <link href="/devhints/nopt/"/>
+      <url>/devhints/nopt/</url>
       
       
       <categories>
@@ -2363,9 +2324,26 @@
     
     
     <entry>
+      <title>Node.js API</title>
+      <link href="/devhints/nodejs/"/>
+      <url>/devhints/nodejs/</url>
+      
+      
+      <categories>
+          
+          <category> Node.js </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Node.js streams</title>
-      <link href="/nodejs-stream/"/>
-      <url>/nodejs-stream/</url>
+      <link href="/devhints/nodejs-stream/"/>
+      <url>/devhints/nodejs-stream/</url>
       
       
       <categories>
@@ -2381,25 +2359,8 @@
     
     <entry>
       <title>process</title>
-      <link href="/nodejs-process/"/>
-      <url>/nodejs-process/</url>
-      
-      
-      <categories>
-          
-          <category> Node.js </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>path</title>
-      <link href="/nodejs-path/"/>
-      <url>/nodejs-path/</url>
+      <link href="/devhints/nodejs-process/"/>
+      <url>/devhints/nodejs-process/</url>
       
       
       <categories>
@@ -2415,8 +2376,42 @@
     
     <entry>
       <title>fs</title>
-      <link href="/nodejs-fs/"/>
-      <url>/nodejs-fs/</url>
+      <link href="/devhints/nodejs-fs/"/>
+      <url>/devhints/nodejs-fs/</url>
+      
+      
+      <categories>
+          
+          <category> Node.js </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>path</title>
+      <link href="/devhints/nodejs-path/"/>
+      <url>/devhints/nodejs-path/</url>
+      
+      
+      <categories>
+          
+          <category> Node.js </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>assert</title>
+      <link href="/devhints/nodejs-assert/"/>
+      <url>/devhints/nodejs-assert/</url>
       
       
       <categories>
@@ -2432,26 +2427,9 @@
     
     <entry>
       <title>Nocode</title>
-      <link href="/nocode/"/>
-      <url>/nocode/</url>
+      <link href="/devhints/nocode/"/>
+      <url>/devhints/nocode/</url>
       
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>assert</title>
-      <link href="/nodejs-assert/"/>
-      <url>/nodejs-assert/</url>
-      
-      
-      <categories>
-          
-          <category> Node.js </category>
-          
-      </categories>
       
       
     </entry>
@@ -2460,8 +2438,8 @@
     
     <entry>
       <title>Nock</title>
-      <link href="/nock/"/>
-      <url>/nock/</url>
+      <link href="/devhints/nock/"/>
+      <url>/devhints/nock/</url>
       
       
       <categories>
@@ -2477,8 +2455,8 @@
     
     <entry>
       <title>ncftp</title>
-      <link href="/ncftp/"/>
-      <url>/ncftp/</url>
+      <link href="/devhints/ncftp/"/>
+      <url>/devhints/ncftp/</url>
       
       
       <categories>
@@ -2494,8 +2472,8 @@
     
     <entry>
       <title>MySQL</title>
-      <link href="/mysql/"/>
-      <url>/mysql/</url>
+      <link href="/devhints/mysql/"/>
+      <url>/devhints/mysql/</url>
       
       
       <categories>
@@ -2511,8 +2489,8 @@
     
     <entry>
       <title>MongoDB</title>
-      <link href="/mongodb/"/>
-      <url>/mongodb/</url>
+      <link href="/devhints/mongodb/"/>
+      <url>/devhints/mongodb/</url>
       
       
       <categories>
@@ -2528,8 +2506,8 @@
     
     <entry>
       <title>Moment.js</title>
-      <link href="/moment/"/>
-      <url>/moment/</url>
+      <link href="/devhints/moment/"/>
+      <url>/devhints/moment/</url>
       
       
       <categories>
@@ -2550,26 +2528,9 @@
     
     
     <entry>
-      <title>Modella</title>
-      <link href="/modella/"/>
-      <url>/modella/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Modernizr</title>
-      <link href="/modernizr/"/>
-      <url>/modernizr/</url>
+      <link href="/devhints/modernizr/"/>
+      <url>/devhints/modernizr/</url>
       
       
       <categories>
@@ -2584,9 +2545,9 @@
     
     
     <entry>
-      <title>Mocha.js TDD interface</title>
-      <link href="/mocha-tdd/"/>
-      <url>/mocha-tdd/</url>
+      <title>Modella</title>
+      <link href="/devhints/modella/"/>
+      <url>/devhints/modella/</url>
       
       
       <categories>
@@ -2602,8 +2563,25 @@
     
     <entry>
       <title>Mocha.js</title>
-      <link href="/mocha/"/>
-      <url>/mocha/</url>
+      <link href="/devhints/mocha/"/>
+      <url>/devhints/mocha/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mocha.js TDD interface</title>
+      <link href="/devhints/mocha-tdd/"/>
+      <url>/devhints/mocha-tdd/</url>
       
       
       <categories>
@@ -2619,8 +2597,8 @@
     
     <entry>
       <title>Mocha HTML</title>
-      <link href="/mocha-html/"/>
-      <url>/mocha-html/</url>
+      <link href="/devhints/mocha-html/"/>
+      <url>/devhints/mocha-html/</url>
       
       
       <categories>
@@ -2636,8 +2614,8 @@
     
     <entry>
       <title>Mocha blanket</title>
-      <link href="/mocha-blanket/"/>
-      <url>/mocha-blanket/</url>
+      <link href="/devhints/mocha-blanket/"/>
+      <url>/devhints/mocha-blanket/</url>
       
       
       <categories>
@@ -2653,8 +2631,8 @@
     
     <entry>
       <title>Mobx</title>
-      <link href="/mobx/"/>
-      <url>/mobx/</url>
+      <link href="/devhints/mobx/"/>
+      <url>/devhints/mobx/</url>
       
       
       <categories>
@@ -2670,8 +2648,8 @@
     
     <entry>
       <title>Mixpanel</title>
-      <link href="/mixpanel/"/>
-      <url>/mixpanel/</url>
+      <link href="/devhints/mixpanel/"/>
+      <url>/devhints/mixpanel/</url>
       
       
       <categories>
@@ -2687,8 +2665,8 @@
     
     <entry>
       <title>Minitest</title>
-      <link href="/minitest/"/>
-      <url>/minitest/</url>
+      <link href="/devhints/minitest/"/>
+      <url>/devhints/minitest/</url>
       
       
       <categories>
@@ -2704,8 +2682,8 @@
     
     <entry>
       <title>minimist</title>
-      <link href="/minimist/"/>
-      <url>/minimist/</url>
+      <link href="/devhints/minimist/"/>
+      <url>/devhints/minimist/</url>
       
       
       <categories>
@@ -2721,8 +2699,25 @@
     
     <entry>
       <title>Middleman 3</title>
-      <link href="/middleman/"/>
-      <url>/middleman/</url>
+      <link href="/devhints/middleman/"/>
+      <url>/devhints/middleman/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Meow</title>
+      <link href="/devhints/meow/"/>
+      <url>/devhints/meow/</url>
       
       
       <categories>
@@ -2738,8 +2733,8 @@
     
     <entry>
       <title>Meta-tags gem</title>
-      <link href="/meta-tags/"/>
-      <url>/meta-tags/</url>
+      <link href="/devhints/meta-tags/"/>
+      <url>/devhints/meta-tags/</url>
       
       
       <categories>
@@ -2754,43 +2749,9 @@
     
     
     <entry>
-      <title>Meow</title>
-      <link href="/meow/"/>
-      <url>/meow/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Man</title>
-      <link href="/man/"/>
-      <url>/man/</url>
-      
-      
-      <categories>
-          
-          <category> CLI </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Markdown</title>
-      <link href="/markdown/"/>
-      <url>/markdown/</url>
+      <link href="/devhints/markdown/"/>
+      <url>/devhints/markdown/</url>
       
       
       <categories>
@@ -2805,9 +2766,26 @@
     
     
     <entry>
+      <title>Man</title>
+      <link href="/devhints/man/"/>
+      <url>/devhints/man/</url>
+      
+      
+      <categories>
+          
+          <category> CLI </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Makefile</title>
-      <link href="/makefile/"/>
-      <url>/makefile/</url>
+      <link href="/devhints/makefile/"/>
+      <url>/devhints/makefile/</url>
       
       
       <categories>
@@ -2823,8 +2801,8 @@
     
     <entry>
       <title>Make for assets</title>
-      <link href="/make-assets/"/>
-      <url>/make-assets/</url>
+      <link href="/devhints/make-assets/"/>
+      <url>/devhints/make-assets/</url>
       
       
       
@@ -2834,8 +2812,8 @@
     
     <entry>
       <title>Mouse Acceleration</title>
-      <link href="/macos-mouse-acceleration/"/>
-      <url>/macos-mouse-acceleration/</url>
+      <link href="/devhints/macos-mouse-acceleration/"/>
+      <url>/devhints/macos-mouse-acceleration/</url>
       
       
       <categories>
@@ -2851,8 +2829,8 @@
     
     <entry>
       <title>Machinist</title>
-      <link href="/machinist/"/>
-      <url>/machinist/</url>
+      <link href="/devhints/machinist/"/>
+      <url>/devhints/machinist/</url>
       
       
       <categories>
@@ -2868,8 +2846,8 @@
     
     <entry>
       <title>Lodash</title>
-      <link href="/lodash/"/>
-      <url>/lodash/</url>
+      <link href="/devhints/lodash/"/>
+      <url>/devhints/lodash/</url>
       
       
       <categories>
@@ -2885,8 +2863,8 @@
     
     <entry>
       <title>Lua</title>
-      <link href="/lua/"/>
-      <url>/lua/</url>
+      <link href="/devhints/lua/"/>
+      <url>/devhints/lua/</url>
       
       
       
@@ -2896,19 +2874,8 @@
     
     <entry>
       <title>Linux</title>
-      <link href="/linux/"/>
-      <url>/linux/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Less.js</title>
-      <link href="/less/"/>
-      <url>/less/</url>
+      <link href="/devhints/linux/"/>
+      <url>/devhints/linux/</url>
       
       
       
@@ -2918,8 +2885,19 @@
     
     <entry>
       <title>Licenses</title>
-      <link href="/licenses/"/>
-      <url>/licenses/</url>
+      <link href="/devhints/licenses/"/>
+      <url>/devhints/licenses/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Less.js</title>
+      <link href="/devhints/less/"/>
+      <url>/devhints/less/</url>
       
       
       
@@ -2929,8 +2907,8 @@
     
     <entry>
       <title>Ledger CLI</title>
-      <link href="/ledger/"/>
-      <url>/ledger/</url>
+      <link href="/devhints/ledger/"/>
+      <url>/devhints/ledger/</url>
       
       
       <categories>
@@ -2946,25 +2924,8 @@
     
     <entry>
       <title>Ledger queries</title>
-      <link href="/ledger-query/"/>
-      <url>/ledger-query/</url>
-      
-      
-      <categories>
-          
-          <category> Ledger </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Ledger format</title>
-      <link href="/ledger-format/"/>
-      <url>/ledger-format/</url>
+      <link href="/devhints/ledger-query/"/>
+      <url>/devhints/ledger-query/</url>
       
       
       <categories>
@@ -2980,8 +2941,8 @@
     
     <entry>
       <title>Ledger periods</title>
-      <link href="/ledger-periods/"/>
-      <url>/ledger-periods/</url>
+      <link href="/devhints/ledger-periods/"/>
+      <url>/devhints/ledger-periods/</url>
       
       
       <categories>
@@ -2996,9 +2957,9 @@
     
     
     <entry>
-      <title>Ledger examples</title>
-      <link href="/ledger-examples/"/>
-      <url>/ledger-examples/</url>
+      <title>Ledger format</title>
+      <link href="/devhints/ledger-format/"/>
+      <url>/devhints/ledger-format/</url>
       
       
       <categories>
@@ -3014,8 +2975,25 @@
     
     <entry>
       <title>Ledger CSV format</title>
-      <link href="/ledger-csv/"/>
-      <url>/ledger-csv/</url>
+      <link href="/devhints/ledger-csv/"/>
+      <url>/devhints/ledger-csv/</url>
+      
+      
+      <categories>
+          
+          <category> Ledger </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Ledger examples</title>
+      <link href="/devhints/ledger-examples/"/>
+      <url>/devhints/ledger-examples/</url>
       
       
       <categories>
@@ -3031,8 +3009,8 @@
     
     <entry>
       <title>Layout thrashing</title>
-      <link href="/layout-thrashing/"/>
-      <url>/layout-thrashing/</url>
+      <link href="/devhints/layout-thrashing/"/>
+      <url>/devhints/layout-thrashing/</url>
       
       
       <categories>
@@ -3048,8 +3026,8 @@
     
     <entry>
       <title>Kramdown</title>
-      <link href="/kramdown/"/>
-      <url>/kramdown/</url>
+      <link href="/devhints/kramdown/"/>
+      <url>/devhints/kramdown/</url>
       
       
       <categories>
@@ -3065,8 +3043,8 @@
     
     <entry>
       <title>Koa</title>
-      <link href="/koa/"/>
-      <url>/koa/</url>
+      <link href="/devhints/koa/"/>
+      <url>/devhints/koa/</url>
       
       
       <categories>
@@ -3082,8 +3060,8 @@
     
     <entry>
       <title>Kotlin</title>
-      <link href="/kotlin/"/>
-      <url>/kotlin/</url>
+      <link href="/devhints/kotlin/"/>
+      <url>/devhints/kotlin/</url>
       
       
       <categories>
@@ -3098,9 +3076,26 @@
     
     
     <entry>
+      <title>Jshint</title>
+      <link href="/devhints/jshint/"/>
+      <url>/devhints/jshint/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Knex</title>
-      <link href="/knex/"/>
-      <url>/knex/</url>
+      <link href="/devhints/knex/"/>
+      <url>/devhints/knex/</url>
       
       
       <categories>
@@ -3115,43 +3110,9 @@
     
     
     <entry>
-      <title>Jshint</title>
-      <link href="/jshint/"/>
-      <url>/jshint/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>jscoverage</title>
-      <link href="/jscoverage/"/>
-      <url>/jscoverage/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>js-model</title>
-      <link href="/js-model/"/>
-      <url>/js-model/</url>
+      <link href="/devhints/jscoverage/"/>
+      <url>/devhints/jscoverage/</url>
       
       
       <categories>
@@ -3167,13 +3128,30 @@
     
     <entry>
       <title>JavaScript speech synthesis</title>
-      <link href="/js-speech/"/>
-      <url>/js-speech/</url>
+      <link href="/devhints/js-speech/"/>
+      <url>/devhints/js-speech/</url>
       
       
       <categories>
           
           <category> JavaScript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>js-model</title>
+      <link href="/devhints/js-model/"/>
+      <url>/devhints/js-model/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript libraries </category>
           
       </categories>
       
@@ -3184,25 +3162,8 @@
     
     <entry>
       <title>JavaScript lazy shortcuts</title>
-      <link href="/js-lazy/"/>
-      <url>/js-lazy/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JavaScript Date</title>
-      <link href="/js-date/"/>
-      <url>/js-date/</url>
+      <link href="/devhints/js-lazy/"/>
+      <url>/devhints/js-lazy/</url>
       
       
       <categories>
@@ -3218,8 +3179,25 @@
     
     <entry>
       <title>fetch()</title>
-      <link href="/js-fetch/"/>
-      <url>/js-fetch/</url>
+      <link href="/devhints/js-fetch/"/>
+      <url>/devhints/js-fetch/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript Date</title>
+      <link href="/devhints/js-date/"/>
+      <url>/devhints/js-date/</url>
       
       
       <categories>
@@ -3235,8 +3213,8 @@
     
     <entry>
       <title>JavaScript Arrays</title>
-      <link href="/js-array/"/>
-      <url>/js-array/</url>
+      <link href="/devhints/js-array/"/>
+      <url>/devhints/js-array/</url>
       
       
       <categories>
@@ -3252,8 +3230,8 @@
     
     <entry>
       <title>applicationCache</title>
-      <link href="/js-appcache/"/>
-      <url>/js-appcache/</url>
+      <link href="/devhints/js-appcache/"/>
+      <url>/devhints/js-appcache/</url>
       
       
       <categories>
@@ -3269,8 +3247,8 @@
     
     <entry>
       <title>jQuery</title>
-      <link href="/jquery/"/>
-      <url>/jquery/</url>
+      <link href="/devhints/jquery/"/>
+      <url>/devhints/jquery/</url>
       
       
       <categories>
@@ -3291,9 +3269,26 @@
     
     
     <entry>
+      <title>jQuery CDN</title>
+      <link href="/devhints/jquery-cdn/"/>
+      <url>/devhints/jquery-cdn/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Jest</title>
-      <link href="/jest/"/>
-      <url>/jest/</url>
+      <link href="/devhints/jest/"/>
+      <url>/devhints/jest/</url>
       
       
       <categories>
@@ -3314,26 +3309,9 @@
     
     
     <entry>
-      <title>jQuery CDN</title>
-      <link href="/jquery-cdn/"/>
-      <url>/jquery-cdn/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Jekyll</title>
-      <link href="/jekyll/"/>
-      <url>/jekyll/</url>
+      <link href="/devhints/jekyll/"/>
+      <url>/devhints/jekyll/</url>
       
       
       <categories>
@@ -3349,8 +3327,8 @@
     
     <entry>
       <title>Jasmine</title>
-      <link href="/jasmine/"/>
-      <url>/jasmine/</url>
+      <link href="/devhints/jasmine/"/>
+      <url>/devhints/jasmine/</url>
       
       
       <categories>
@@ -3366,8 +3344,8 @@
     
     <entry>
       <title>Jekyll for GitHub pages</title>
-      <link href="/jekyll-github/"/>
-      <url>/jekyll-github/</url>
+      <link href="/devhints/jekyll-github/"/>
+      <url>/devhints/jekyll-github/</url>
       
       
       <categories>
@@ -3389,8 +3367,8 @@
     
     <entry>
       <title>Jade</title>
-      <link href="/jade/"/>
-      <url>/jade/</url>
+      <link href="/devhints/jade/"/>
+      <url>/devhints/jade/</url>
       
       
       <categories>
@@ -3406,8 +3384,8 @@
     
     <entry>
       <title>iOS Provisioning Profiles</title>
-      <link href="/ios-provision/"/>
-      <url>/ios-provision/</url>
+      <link href="/devhints/ios-provision/"/>
+      <url>/devhints/ios-provision/</url>
       
       
       
@@ -3417,8 +3395,8 @@
     
     <entry>
       <title>Inline documentation</title>
-      <link href="/inline-docs/"/>
-      <url>/inline-docs/</url>
+      <link href="/devhints/inline-docs/"/>
+      <url>/devhints/inline-docs/</url>
       
       
       
@@ -3428,8 +3406,8 @@
     
     <entry>
       <title>Inkscape</title>
-      <link href="/inkscape/"/>
-      <url>/inkscape/</url>
+      <link href="/devhints/inkscape/"/>
+      <url>/devhints/inkscape/</url>
       
       
       <categories>
@@ -3450,9 +3428,9 @@
     
     
     <entry>
-      <title>index</title>
-      <link href="/index/"/>
-      <url>/index/</url>
+      <title>index@2016</title>
+      <link href="/devhints/index@2016/"/>
+      <url>/devhints/index@2016/</url>
       
       
       
@@ -3461,9 +3439,9 @@
     
     
     <entry>
-      <title>index@2016</title>
-      <link href="/index@2016/"/>
-      <url>/index@2016/</url>
+      <title>index</title>
+      <link href="/devhints/index/"/>
+      <url>/devhints/index/</url>
       
       
       
@@ -3473,8 +3451,8 @@
     
     <entry>
       <title>Immutable.js</title>
-      <link href="/immutable.js/"/>
-      <url>/immutable.js/</url>
+      <link href="/devhints/immutable.js/"/>
+      <url>/devhints/immutable.js/</url>
       
       
       <categories>
@@ -3490,8 +3468,8 @@
     
     <entry>
       <title>Immutable.js</title>
-      <link href="/immutable-js/"/>
-      <url>/immutable-js/</url>
+      <link href="/devhints/immutable-js/"/>
+      <url>/devhints/immutable-js/</url>
       
       
       <categories>
@@ -3507,8 +3485,8 @@
     
     <entry>
       <title>Imagemagick</title>
-      <link href="/imagemagick/"/>
-      <url>/imagemagick/</url>
+      <link href="/devhints/imagemagick/"/>
+      <url>/devhints/imagemagick/</url>
       
       
       
@@ -3518,8 +3496,8 @@
     
     <entry>
       <title>Legacy IE bugs</title>
-      <link href="/ie_bugs/"/>
-      <url>/ie_bugs/</url>
+      <link href="/devhints/ie_bugs/"/>
+      <url>/devhints/ie_bugs/</url>
       
       
       <categories>
@@ -3535,8 +3513,8 @@
     
     <entry>
       <title>Internet Explorer</title>
-      <link href="/ie/"/>
-      <url>/ie/</url>
+      <link href="/devhints/ie/"/>
+      <url>/devhints/ie/</url>
       
       
       <categories>
@@ -3552,8 +3530,8 @@
     
     <entry>
       <title>httpie</title>
-      <link href="/httpie/"/>
-      <url>/httpie/</url>
+      <link href="/devhints/httpie/"/>
+      <url>/devhints/httpie/</url>
       
       
       <categories>
@@ -3569,8 +3547,8 @@
     
     <entry>
       <title>HTTP Status</title>
-      <link href="/http-status/"/>
-      <url>/http-status/</url>
+      <link href="/devhints/http-status/"/>
+      <url>/devhints/http-status/</url>
       
       
       <categories>
@@ -3586,8 +3564,8 @@
     
     <entry>
       <title>HTML</title>
-      <link href="/html/"/>
-      <url>/html/</url>
+      <link href="/devhints/html/"/>
+      <url>/devhints/html/</url>
       
       
       <categories>
@@ -3603,25 +3581,8 @@
     
     <entry>
       <title>Share links</title>
-      <link href="/html-share/"/>
-      <url>/html-share/</url>
-      
-      
-      <categories>
-          
-          <category> HTML </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>HTML meta tags</title>
-      <link href="/html-meta/"/>
-      <url>/html-meta/</url>
+      <link href="/devhints/html-share/"/>
+      <url>/devhints/html-share/</url>
       
       
       <categories>
@@ -3637,8 +3598,25 @@
     
     <entry>
       <title>Microformats</title>
-      <link href="/html-microformats/"/>
-      <url>/html-microformats/</url>
+      <link href="/devhints/html-microformats/"/>
+      <url>/devhints/html-microformats/</url>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTML meta tags</title>
+      <link href="/devhints/html-meta/"/>
+      <url>/devhints/html-meta/</url>
       
       
       <categories>
@@ -3654,8 +3632,8 @@
     
     <entry>
       <title>Input tag</title>
-      <link href="/html-input/"/>
-      <url>/html-input/</url>
+      <link href="/devhints/html-input/"/>
+      <url>/devhints/html-input/</url>
       
       
       <categories>
@@ -3671,8 +3649,8 @@
     
     <entry>
       <title>HTML emails</title>
-      <link href="/html-email/"/>
-      <url>/html-email/</url>
+      <link href="/devhints/html-email/"/>
+      <url>/devhints/html-email/</url>
       
       
       <categories>
@@ -3687,26 +3665,9 @@
     
     
     <entry>
-      <title>Homebrew</title>
-      <link href="/homebrew/"/>
-      <url>/homebrew/</url>
-      
-      
-      <categories>
-          
-          <category> CLI </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hledger</title>
-      <link href="/hledger/"/>
-      <url>/hledger/</url>
+      <link href="/devhints/hledger/"/>
+      <url>/devhints/hledger/</url>
       
       
       <categories>
@@ -3721,9 +3682,26 @@
     
     
     <entry>
+      <title>Homebrew</title>
+      <link href="/devhints/homebrew/"/>
+      <url>/devhints/homebrew/</url>
+      
+      
+      <categories>
+          
+          <category> CLI </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Heroku</title>
-      <link href="/heroku/"/>
-      <url>/heroku/</url>
+      <link href="/devhints/heroku/"/>
+      <url>/devhints/heroku/</url>
       
       
       <categories>
@@ -3739,8 +3717,8 @@
     
     <entry>
       <title>Harvey.js</title>
-      <link href="/harvey.js/"/>
-      <url>/harvey.js/</url>
+      <link href="/devhints/harvey.js/"/>
+      <url>/devhints/harvey.js/</url>
       
       
       <categories>
@@ -3756,8 +3734,8 @@
     
     <entry>
       <title>Harvey.js</title>
-      <link href="/harvey-js/"/>
-      <url>/harvey-js/</url>
+      <link href="/devhints/harvey-js/"/>
+      <url>/devhints/harvey-js/</url>
       
       
       <categories>
@@ -3773,8 +3751,8 @@
     
     <entry>
       <title>Handlebars.js</title>
-      <link href="/handlebars.js/"/>
-      <url>/handlebars.js/</url>
+      <link href="/devhints/handlebars.js/"/>
+      <url>/devhints/handlebars.js/</url>
       
       
       <categories>
@@ -3790,8 +3768,8 @@
     
     <entry>
       <title>Handlebars.js</title>
-      <link href="/handlebars-js/"/>
-      <url>/handlebars-js/</url>
+      <link href="/devhints/handlebars-js/"/>
+      <url>/devhints/handlebars-js/</url>
       
       
       <categories>
@@ -3807,8 +3785,8 @@
     
     <entry>
       <title>Haml</title>
-      <link href="/haml/"/>
-      <url>/haml/</url>
+      <link href="/devhints/haml/"/>
+      <url>/devhints/haml/</url>
       
       
       <categories>
@@ -3824,8 +3802,8 @@
     
     <entry>
       <title>Gutom</title>
-      <link href="/gutom/"/>
-      <url>/gutom/</url>
+      <link href="/devhints/gutom/"/>
+      <url>/devhints/gutom/</url>
       
       
       <categories>
@@ -3841,8 +3819,8 @@
     
     <entry>
       <title>Gulp</title>
-      <link href="/gulp/"/>
-      <url>/gulp/</url>
+      <link href="/devhints/gulp/"/>
+      <url>/devhints/gulp/</url>
       
       
       <categories>
@@ -3858,8 +3836,8 @@
     
     <entry>
       <title>Gremlins.js</title>
-      <link href="/gremlins/"/>
-      <url>/gremlins/</url>
+      <link href="/devhints/gremlins/"/>
+      <url>/devhints/gremlins/</url>
       
       
       <categories>
@@ -3875,8 +3853,8 @@
     
     <entry>
       <title>GraphQL</title>
-      <link href="/graphql/"/>
-      <url>/graphql/</url>
+      <link href="/devhints/graphql/"/>
+      <url>/devhints/graphql/</url>
       
       
       <categories>
@@ -3892,8 +3870,8 @@
     
     <entry>
       <title>gpgconf</title>
-      <link href="/gpgconf/"/>
-      <url>/gpgconf/</url>
+      <link href="/devhints/gpgconf/"/>
+      <url>/devhints/gpgconf/</url>
       
       
       <categories>
@@ -3909,8 +3887,8 @@
     
     <entry>
       <title>GPG</title>
-      <link href="/gpg/"/>
-      <url>/gpg/</url>
+      <link href="/devhints/gpg/"/>
+      <url>/devhints/gpg/</url>
       
       
       <categories>
@@ -3926,8 +3904,8 @@
     
     <entry>
       <title>Google Analytics</title>
-      <link href="/google_analytics/"/>
-      <url>/google_analytics/</url>
+      <link href="/devhints/google_analytics/"/>
+      <url>/devhints/google_analytics/</url>
       
       
       
@@ -3937,8 +3915,8 @@
     
     <entry>
       <title>Google Webfonts</title>
-      <link href="/google-webfonts/"/>
-      <url>/google-webfonts/</url>
+      <link href="/devhints/google-webfonts/"/>
+      <url>/devhints/google-webfonts/</url>
       
       
       
@@ -3948,8 +3926,8 @@
     
     <entry>
       <title>Goby</title>
-      <link href="/goby/"/>
-      <url>/goby/</url>
+      <link href="/devhints/goby/"/>
+      <url>/devhints/goby/</url>
       
       
       <categories>
@@ -3965,8 +3943,8 @@
     
     <entry>
       <title>Go</title>
-      <link href="/go/"/>
-      <url>/go/</url>
+      <link href="/devhints/go/"/>
+      <url>/devhints/go/</url>
       
       
       <categories>
@@ -3987,20 +3965,9 @@
     
     
     <entry>
-      <title>Gmail</title>
-      <link href="/gmail/"/>
-      <url>/gmail/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>GnuPG</title>
-      <link href="/gnupg/"/>
-      <url>/gnupg/</url>
+      <link href="/devhints/gnupg/"/>
+      <url>/devhints/gnupg/</url>
       
       
       <categories>
@@ -4015,9 +3982,20 @@
     
     
     <entry>
+      <title>Gmail</title>
+      <link href="/devhints/gmail/"/>
+      <url>/devhints/gmail/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git tricks</title>
-      <link href="/git-tricks/"/>
-      <url>/git-tricks/</url>
+      <link href="/devhints/git-tricks/"/>
+      <url>/devhints/git-tricks/</url>
       
       
       <categories>
@@ -4033,25 +4011,8 @@
     
     <entry>
       <title>Git revisions</title>
-      <link href="/git-revisions/"/>
-      <url>/git-revisions/</url>
-      
-      
-      <categories>
-          
-          <category> Git </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Git log format string</title>
-      <link href="/git-log-format/"/>
-      <url>/git-log-format/</url>
+      <link href="/devhints/git-revisions/"/>
+      <url>/devhints/git-revisions/</url>
       
       
       <categories>
@@ -4067,8 +4028,25 @@
     
     <entry>
       <title>git log</title>
-      <link href="/git-log/"/>
-      <url>/git-log/</url>
+      <link href="/devhints/git-log/"/>
+      <url>/devhints/git-log/</url>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git log format string</title>
+      <link href="/devhints/git-log-format/"/>
+      <url>/devhints/git-log-format/</url>
       
       
       <categories>
@@ -4084,25 +4062,8 @@
     
     <entry>
       <title>Git extras</title>
-      <link href="/git-extras/"/>
-      <url>/git-extras/</url>
-      
-      
-      <categories>
-          
-          <category> Git </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Git branches</title>
-      <link href="/git-branch/"/>
-      <url>/git-branch/</url>
+      <link href="/devhints/git-extras/"/>
+      <url>/devhints/git-extras/</url>
       
       
       <categories>
@@ -4118,8 +4079,8 @@
     
     <entry>
       <title>GitHub pages</title>
-      <link href="/gh-pages/"/>
-      <url>/gh-pages/</url>
+      <link href="/devhints/gh-pages/"/>
+      <url>/devhints/gh-pages/</url>
       
       
       <categories>
@@ -4134,9 +4095,26 @@
     
     
     <entry>
+      <title>Git branches</title>
+      <link href="/devhints/git-branch/"/>
+      <url>/devhints/git-branch/</url>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Freenode</title>
-      <link href="/freenode/"/>
-      <url>/freenode/</url>
+      <link href="/devhints/freenode/"/>
+      <url>/devhints/freenode/</url>
       
       
       
@@ -4146,8 +4124,8 @@
     
     <entry>
       <title>Frequency separation retouching</title>
-      <link href="/frequency-separation-retouching/"/>
-      <url>/frequency-separation-retouching/</url>
+      <link href="/devhints/frequency-separation-retouching/"/>
+      <url>/devhints/frequency-separation-retouching/</url>
       
       
       <categories>
@@ -4163,8 +4141,8 @@
     
     <entry>
       <title>Flynn</title>
-      <link href="/flynn/"/>
-      <url>/flynn/</url>
+      <link href="/devhints/flynn/"/>
+      <url>/devhints/flynn/</url>
       
       
       <categories>
@@ -4180,8 +4158,8 @@
     
     <entry>
       <title>Flux architecture</title>
-      <link href="/flux/"/>
-      <url>/flux/</url>
+      <link href="/devhints/flux/"/>
+      <url>/devhints/flux/</url>
       
       
       <categories>
@@ -4197,8 +4175,8 @@
     
     <entry>
       <title>Flow</title>
-      <link href="/flowtype/"/>
-      <url>/flowtype/</url>
+      <link href="/devhints/flowtype/"/>
+      <url>/devhints/flowtype/</url>
       
       
       <categories>
@@ -4214,8 +4192,8 @@
     
     <entry>
       <title>Flow</title>
-      <link href="/flow/"/>
-      <url>/flow/</url>
+      <link href="/devhints/flow/"/>
+      <url>/devhints/flow/</url>
       
       
       <categories>
@@ -4236,26 +4214,9 @@
     
     
     <entry>
-      <title>Flexbox</title>
-      <link href="/flexbox/"/>
-      <url>/flexbox/</url>
-      
-      
-      <categories>
-          
-          <category> Hidden </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Flashlight</title>
-      <link href="/flashlight/"/>
-      <url>/flashlight/</url>
+      <link href="/devhints/flashlight/"/>
+      <url>/devhints/flashlight/</url>
       
       
       <categories>
@@ -4270,9 +4231,26 @@
     
     
     <entry>
+      <title>Flexbox</title>
+      <link href="/devhints/flexbox/"/>
+      <url>/devhints/flexbox/</url>
+      
+      
+      <categories>
+          
+          <category> Hidden </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Fish shell</title>
-      <link href="/fish-shell/"/>
-      <url>/fish-shell/</url>
+      <link href="/devhints/fish-shell/"/>
+      <url>/devhints/fish-shell/</url>
       
       
       <categories>
@@ -4288,8 +4266,8 @@
     
     <entry>
       <title>Firefox</title>
-      <link href="/firefox/"/>
-      <url>/firefox/</url>
+      <link href="/devhints/firefox/"/>
+      <url>/devhints/firefox/</url>
       
       
       
@@ -4299,8 +4277,8 @@
     
     <entry>
       <title>Firebase</title>
-      <link href="/firebase/"/>
-      <url>/firebase/</url>
+      <link href="/devhints/firebase/"/>
+      <url>/devhints/firebase/</url>
       
       
       
@@ -4316,8 +4294,8 @@
     
     <entry>
       <title>Find</title>
-      <link href="/find/"/>
-      <url>/find/</url>
+      <link href="/devhints/find/"/>
+      <url>/devhints/find/</url>
       
       
       <categories>
@@ -4333,8 +4311,8 @@
     
     <entry>
       <title>Figlet</title>
-      <link href="/figlet/"/>
-      <url>/figlet/</url>
+      <link href="/devhints/figlet/"/>
+      <url>/devhints/figlet/</url>
       
       
       
@@ -4344,8 +4322,8 @@
     
     <entry>
       <title>ffmpeg</title>
-      <link href="/ffmpeg/"/>
-      <url>/ffmpeg/</url>
+      <link href="/devhints/ffmpeg/"/>
+      <url>/devhints/ffmpeg/</url>
       
       
       <categories>
@@ -4360,26 +4338,9 @@
     
     
     <entry>
-      <title>FFaker</title>
-      <link href="/ffaker/"/>
-      <url>/ffaker/</url>
-      
-      
-      <categories>
-          
-          <category> Ruby libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>fetch()</title>
-      <link href="/fetch/"/>
-      <url>/fetch/</url>
+      <link href="/devhints/fetch/"/>
+      <url>/devhints/fetch/</url>
       
       
       <categories>
@@ -4394,9 +4355,26 @@
     
     
     <entry>
+      <title>FFaker</title>
+      <link href="/devhints/ffaker/"/>
+      <url>/devhints/ffaker/</url>
+      
+      
+      <categories>
+          
+          <category> Ruby libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Fastify</title>
-      <link href="/fastify/"/>
-      <url>/fastify/</url>
+      <link href="/devhints/fastify/"/>
+      <url>/devhints/fastify/</url>
       
       
       <categories>
@@ -4412,8 +4390,8 @@
     
     <entry>
       <title>Factory Girl</title>
-      <link href="/factory_girl/"/>
-      <url>/factory_girl/</url>
+      <link href="/devhints/factory_girl/"/>
+      <url>/devhints/factory_girl/</url>
       
       
       <categories>
@@ -4429,8 +4407,8 @@
     
     <entry>
       <title>Factory Bot</title>
-      <link href="/factory_bot/"/>
-      <url>/factory_bot/</url>
+      <link href="/devhints/factory_bot/"/>
+      <url>/devhints/factory_bot/</url>
       
       
       <categories>
@@ -4452,8 +4430,8 @@
     
     <entry>
       <title>ExUnit</title>
-      <link href="/exunit/"/>
-      <url>/exunit/</url>
+      <link href="/devhints/exunit/"/>
+      <url>/devhints/exunit/</url>
       
       
       <categories>
@@ -4468,9 +4446,26 @@
     
     
     <entry>
+      <title>expect.js</title>
+      <link href="/devhints/expectjs/"/>
+      <url>/devhints/expectjs/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Express.js</title>
-      <link href="/express/"/>
-      <url>/express/</url>
+      <link href="/devhints/express/"/>
+      <url>/devhints/express/</url>
       
       
       <categories>
@@ -4486,25 +4481,8 @@
     
     <entry>
       <title>expect.js</title>
-      <link href="/expectjs/"/>
-      <url>/expectjs/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>expect.js</title>
-      <link href="/expect.js/"/>
-      <url>/expect.js/</url>
+      <link href="/devhints/expect.js/"/>
+      <url>/devhints/expect.js/</url>
       
       
       <categories>
@@ -4520,8 +4498,8 @@
     
     <entry>
       <title>ES2015+</title>
-      <link href="/es6/"/>
-      <url>/es6/</url>
+      <link href="/devhints/es6/"/>
+      <url>/devhints/es6/</url>
       
       
       <categories>
@@ -4543,8 +4521,8 @@
     
     <entry>
       <title>Erlang ETS</title>
-      <link href="/ets/"/>
-      <url>/ets/</url>
+      <link href="/devhints/ets/"/>
+      <url>/devhints/ets/</url>
       
       
       <categories>
@@ -4560,8 +4538,8 @@
     
     <entry>
       <title>ES2018</title>
-      <link href="/es2018/"/>
-      <url>/es2018/</url>
+      <link href="/devhints/es2018/"/>
+      <url>/devhints/es2018/</url>
       
       
       <categories>
@@ -4577,8 +4555,8 @@
     
     <entry>
       <title>ES2016</title>
-      <link href="/es2016/"/>
-      <url>/es2016/</url>
+      <link href="/devhints/es2016/"/>
+      <url>/devhints/es2016/</url>
       
       
       <categories>
@@ -4594,8 +4572,8 @@
     
     <entry>
       <title>ES2017</title>
-      <link href="/es2017/"/>
-      <url>/es2017/</url>
+      <link href="/devhints/es2017/"/>
+      <url>/devhints/es2017/</url>
       
       
       <categories>
@@ -4611,8 +4589,8 @@
     
     <entry>
       <title>ES2015</title>
-      <link href="/es2015/"/>
-      <url>/es2015/</url>
+      <link href="/devhints/es2015/"/>
+      <url>/devhints/es2015/</url>
       
       
       <categories>
@@ -4628,8 +4606,8 @@
     
     <entry>
       <title>Enzyme v2</title>
-      <link href="/enzyme@2/"/>
-      <url>/enzyme@2/</url>
+      <link href="/devhints/enzyme@2/"/>
+      <url>/devhints/enzyme@2/</url>
       
       
       <categories>
@@ -4645,8 +4623,8 @@
     
     <entry>
       <title>Enzyme</title>
-      <link href="/enzyme/"/>
-      <url>/enzyme/</url>
+      <link href="/devhints/enzyme/"/>
+      <url>/devhints/enzyme/</url>
       
       
       <categories>
@@ -4668,8 +4646,8 @@
     
     <entry>
       <title>Emmet</title>
-      <link href="/emmet/"/>
-      <url>/emmet/</url>
+      <link href="/devhints/emmet/"/>
+      <url>/devhints/emmet/</url>
       
       
       <categories>
@@ -4685,8 +4663,8 @@
     
     <entry>
       <title>Ember.js</title>
-      <link href="/ember/"/>
-      <url>/ember/</url>
+      <link href="/devhints/ember/"/>
+      <url>/devhints/ember/</url>
       
       
       <categories>
@@ -4702,8 +4680,8 @@
     
     <entry>
       <title>Emacs</title>
-      <link href="/emacs/"/>
-      <url>/emacs/</url>
+      <link href="/devhints/emacs/"/>
+      <url>/devhints/emacs/</url>
       
       
       <categories>
@@ -4719,8 +4697,8 @@
     
     <entry>
       <title>Elixir</title>
-      <link href="/elixir/"/>
-      <url>/elixir/</url>
+      <link href="/devhints/elixir/"/>
+      <url>/devhints/elixir/</url>
       
       
       <categories>
@@ -4742,8 +4720,8 @@
     
     <entry>
       <title>Elixir metaprogramming</title>
-      <link href="/elixir-metaprogramming/"/>
-      <url>/elixir-metaprogramming/</url>
+      <link href="/devhints/elixir-metaprogramming/"/>
+      <url>/devhints/elixir-metaprogramming/</url>
       
       
       <categories>
@@ -4758,26 +4736,9 @@
     
     
     <entry>
-      <title>EC2 API tools</title>
-      <link href="/ec2/"/>
-      <url>/ec2/</url>
-      
-      
-      <categories>
-          
-          <category> Devops </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>editorconfig</title>
-      <link href="/editorconfig/"/>
-      <url>/editorconfig/</url>
+      <link href="/devhints/editorconfig/"/>
+      <url>/devhints/editorconfig/</url>
       
       
       <categories>
@@ -4792,9 +4753,43 @@
     
     
     <entry>
+      <title>EC2 API tools</title>
+      <link href="/devhints/ec2/"/>
+      <url>/devhints/ec2/</url>
+      
+      
+      <categories>
+          
+          <category> Devops </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>DOM Selection</title>
-      <link href="/dom-selection/"/>
-      <url>/dom-selection/</url>
+      <link href="/devhints/dom-selection/"/>
+      <url>/devhints/dom-selection/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>DOM Range</title>
+      <link href="/devhints/dom-range/"/>
+      <url>/devhints/dom-range/</url>
       
       
       <categories>
@@ -4810,42 +4805,8 @@
     
     <entry>
       <title>Dockerfile</title>
-      <link href="/dockerfile/"/>
-      <url>/dockerfile/</url>
-      
-      
-      <categories>
-          
-          <category> Devops </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>DOM Range</title>
-      <link href="/dom-range/"/>
-      <url>/dom-range/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>docker-compose</title>
-      <link href="/docker-compose/"/>
-      <url>/docker-compose/</url>
+      <link href="/devhints/dockerfile/"/>
+      <url>/devhints/dockerfile/</url>
       
       
       <categories>
@@ -4861,8 +4822,25 @@
     
     <entry>
       <title>Docker CLI</title>
-      <link href="/docker/"/>
-      <url>/docker/</url>
+      <link href="/devhints/docker/"/>
+      <url>/devhints/docker/</url>
+      
+      
+      <categories>
+          
+          <category> Devops </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>docker-compose</title>
+      <link href="/devhints/docker-compose/"/>
+      <url>/devhints/docker-compose/</url>
       
       
       <categories>
@@ -4878,8 +4856,8 @@
     
     <entry>
       <title>Do gem</title>
-      <link href="/do/"/>
-      <url>/do/</url>
+      <link href="/devhints/do/"/>
+      <url>/devhints/do/</url>
       
       
       <categories>
@@ -4895,8 +4873,8 @@
     
     <entry>
       <title>Devise</title>
-      <link href="/devise/"/>
-      <url>/devise/</url>
+      <link href="/devhints/devise/"/>
+      <url>/devhints/devise/</url>
       
       
       
@@ -4906,8 +4884,8 @@
     
     <entry>
       <title>Divshot</title>
-      <link href="/divshot/"/>
-      <url>/divshot/</url>
+      <link href="/devhints/divshot/"/>
+      <url>/devhints/divshot/</url>
       
       
       
@@ -4917,8 +4895,8 @@
     
     <entry>
       <title>Deku v1</title>
-      <link href="/deku@1/"/>
-      <url>/deku@1/</url>
+      <link href="/devhints/deku@1/"/>
+      <url>/devhints/deku@1/</url>
       
       
       <categories>
@@ -4934,8 +4912,8 @@
     
     <entry>
       <title>Deku v2</title>
-      <link href="/deku/"/>
-      <url>/deku/</url>
+      <link href="/devhints/deku/"/>
+      <url>/devhints/deku/</url>
       
       
       <categories>
@@ -4951,8 +4929,8 @@
     
     <entry>
       <title>Deis</title>
-      <link href="/deis/"/>
-      <url>/deis/</url>
+      <link href="/devhints/deis/"/>
+      <url>/devhints/deis/</url>
       
       
       <categories>
@@ -4967,26 +4945,9 @@
     
     
     <entry>
-      <title>CSS</title>
-      <link href="/css/"/>
-      <url>/css/</url>
-      
-      
-      <categories>
-          
-          <category> CSS </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>cssnext</title>
-      <link href="/cssnext/"/>
-      <url>/cssnext/</url>
+      <link href="/devhints/cssnext/"/>
+      <url>/devhints/cssnext/</url>
       
       
       <categories>
@@ -5007,9 +4968,26 @@
     
     
     <entry>
+      <title>CSS</title>
+      <link href="/devhints/css/"/>
+      <url>/devhints/css/</url>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS tricks</title>
-      <link href="/css-tricks/"/>
-      <url>/css-tricks/</url>
+      <link href="/devhints/css-tricks/"/>
+      <url>/devhints/css-tricks/</url>
       
       
       <categories>
@@ -5025,8 +5003,8 @@
     
     <entry>
       <title>CSS system fonts</title>
-      <link href="/css-system-font-stack/"/>
-      <url>/css-system-font-stack/</url>
+      <link href="/devhints/css-system-font-stack/"/>
+      <url>/devhints/css-system-font-stack/</url>
       
       
       <categories>
@@ -5048,8 +5026,25 @@
     
     <entry>
       <title>CSS selectors</title>
-      <link href="/css-selectors/"/>
-      <url>/css-selectors/</url>
+      <link href="/devhints/css-selectors/"/>
+      <url>/devhints/css-selectors/</url>
+      
+      
+      <categories>
+          
+          <category> Hidden </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS font</title>
+      <link href="/devhints/css-font/"/>
+      <url>/devhints/css-font/</url>
       
       
       <categories>
@@ -5065,47 +5060,13 @@
     
     <entry>
       <title>CSS Grid</title>
-      <link href="/css-grid/"/>
-      <url>/css-grid/</url>
+      <link href="/devhints/css-grid/"/>
+      <url>/devhints/css-grid/</url>
       
       
       <categories>
           
           <category> CSS </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CSS font</title>
-      <link href="/css-font/"/>
-      <url>/css-font/</url>
-      
-      
-      <categories>
-          
-          <category> Hidden </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CSS background</title>
-      <link href="/css-background/"/>
-      <url>/css-background/</url>
-      
-      
-      <categories>
-          
-          <category> Hidden </category>
           
       </categories>
       
@@ -5116,8 +5077,8 @@
     
     <entry>
       <title>CSS flexbox</title>
-      <link href="/css-flexbox/"/>
-      <url>/css-flexbox/</url>
+      <link href="/devhints/css-flexbox/"/>
+      <url>/devhints/css-flexbox/</url>
       
       
       <categories>
@@ -5132,9 +5093,26 @@
     
     
     <entry>
+      <title>CSS background</title>
+      <link href="/devhints/css-background/"/>
+      <url>/devhints/css-background/</url>
+      
+      
+      <categories>
+          
+          <category> Hidden </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS animations</title>
-      <link href="/css-animation/"/>
-      <url>/css-animation/</url>
+      <link href="/devhints/css-animation/"/>
+      <url>/devhints/css-animation/</url>
       
       
       <categories>
@@ -5150,8 +5128,8 @@
     
     <entry>
       <title>CSS antialiasing</title>
-      <link href="/css-antialias/"/>
-      <url>/css-antialias/</url>
+      <link href="/devhints/css-antialias/"/>
+      <url>/devhints/css-antialias/</url>
       
       
       <categories>
@@ -5167,8 +5145,8 @@
     
     <entry>
       <title>C# 7</title>
-      <link href="/csharp7/"/>
-      <url>/csharp7/</url>
+      <link href="/devhints/csharp7/"/>
+      <url>/devhints/csharp7/</url>
       
       
       <categories>
@@ -5184,8 +5162,8 @@
     
     <entry>
       <title>Cryptography</title>
-      <link href="/crypto/"/>
-      <url>/crypto/</url>
+      <link href="/devhints/crypto/"/>
+      <url>/devhints/crypto/</url>
       
       
       
@@ -5195,8 +5173,8 @@
     
     <entry>
       <title>Cron</title>
-      <link href="/cron/"/>
-      <url>/cron/</url>
+      <link href="/devhints/cron/"/>
+      <url>/devhints/cron/</url>
       
       
       <categories>
@@ -5212,8 +5190,8 @@
     
     <entry>
       <title>Cordova</title>
-      <link href="/cordova/"/>
-      <url>/cordova/</url>
+      <link href="/devhints/cordova/"/>
+      <url>/devhints/cordova/</url>
       
       
       
@@ -5223,8 +5201,8 @@
     
     <entry>
       <title>composer</title>
-      <link href="/composer/"/>
-      <url>/composer/</url>
+      <link href="/devhints/composer/"/>
+      <url>/devhints/composer/</url>
       
       
       <categories>
@@ -5240,8 +5218,25 @@
     
     <entry>
       <title>Commander.js</title>
-      <link href="/commander-js/"/>
-      <url>/commander-js/</url>
+      <link href="/devhints/commander.js/"/>
+      <url>/devhints/commander.js/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Commander.js</title>
+      <link href="/devhints/commander-js/"/>
+      <url>/devhints/commander-js/</url>
       
       
       <categories>
@@ -5256,26 +5251,9 @@
     
     
     <entry>
-      <title>Commander.js</title>
-      <link href="/commander.js/"/>
-      <url>/commander.js/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Command line stuff</title>
-      <link href="/command_line/"/>
-      <url>/command_line/</url>
+      <link href="/devhints/command_line/"/>
+      <url>/devhints/command_line/</url>
       
       
       
@@ -5285,30 +5263,13 @@
     
     <entry>
       <title>co</title>
-      <link href="/co/"/>
-      <url>/co/</url>
+      <link href="/devhints/co/"/>
+      <url>/devhints/co/</url>
       
       
       <categories>
           
           <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CIDR</title>
-      <link href="/cidr/"/>
-      <url>/cidr/</url>
-      
-      
-      <categories>
-          
-          <category> Misc </category>
           
       </categories>
       
@@ -5319,8 +5280,8 @@
     
     <entry>
       <title>CircleCI</title>
-      <link href="/circle/"/>
-      <url>/circle/</url>
+      <link href="/devhints/circle/"/>
+      <url>/devhints/circle/</url>
       
       
       <categories>
@@ -5335,9 +5296,26 @@
     
     
     <entry>
+      <title>CIDR</title>
+      <link href="/devhints/cidr/"/>
+      <url>/devhints/cidr/</url>
+      
+      
+      <categories>
+          
+          <category> Misc </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Chunky PNG</title>
-      <link href="/chunky_png/"/>
-      <url>/chunky_png/</url>
+      <link href="/devhints/chunky_png/"/>
+      <url>/devhints/chunky_png/</url>
       
       
       <categories>
@@ -5353,8 +5331,8 @@
     
     <entry>
       <title>Chef</title>
-      <link href="/chef/"/>
-      <url>/chef/</url>
+      <link href="/devhints/chef/"/>
+      <url>/devhints/chef/</url>
       
       
       <categories>
@@ -5370,8 +5348,8 @@
     
     <entry>
       <title>Chai.js</title>
-      <link href="/chai/"/>
-      <url>/chai/</url>
+      <link href="/devhints/chai/"/>
+      <url>/devhints/chai/</url>
       
       
       <categories>
@@ -5387,8 +5365,8 @@
     
     <entry>
       <title>Caskroom index</title>
-      <link href="/cask-index/"/>
-      <url>/cask-index/</url>
+      <link href="/devhints/cask-index/"/>
+      <url>/devhints/cask-index/</url>
       
       
       
@@ -5398,8 +5376,8 @@
     
     <entry>
       <title>Capybara</title>
-      <link href="/capybara/"/>
-      <url>/capybara/</url>
+      <link href="/devhints/capybara/"/>
+      <url>/devhints/capybara/</url>
       
       
       <categories>
@@ -5421,8 +5399,8 @@
     
     <entry>
       <title>Canvas</title>
-      <link href="/canvas/"/>
-      <url>/canvas/</url>
+      <link href="/devhints/canvas/"/>
+      <url>/devhints/canvas/</url>
       
       
       <categories>
@@ -5438,8 +5416,8 @@
     
     <entry>
       <title>Camp</title>
-      <link href="/camp/"/>
-      <url>/camp/</url>
+      <link href="/devhints/camp/"/>
+      <url>/devhints/camp/</url>
       
       
       <categories>
@@ -5455,8 +5433,8 @@
     
     <entry>
       <title>C Preprocessor</title>
-      <link href="/c_preprocessor/"/>
-      <url>/c_preprocessor/</url>
+      <link href="/devhints/c_preprocessor/"/>
+      <url>/devhints/c_preprocessor/</url>
       
       
       <categories>
@@ -5472,8 +5450,8 @@
     
     <entry>
       <title>Bundler</title>
-      <link href="/bundler/"/>
-      <url>/bundler/</url>
+      <link href="/devhints/bundler/"/>
+      <url>/devhints/bundler/</url>
       
       
       <categories>
@@ -5489,8 +5467,8 @@
     
     <entry>
       <title>Bulma</title>
-      <link href="/bulma/"/>
-      <url>/bulma/</url>
+      <link href="/devhints/bulma/"/>
+      <url>/devhints/bulma/</url>
       
       
       <categories>
@@ -5506,8 +5484,8 @@
     
     <entry>
       <title>Brunch</title>
-      <link href="/brunch/"/>
-      <url>/brunch/</url>
+      <link href="/devhints/brunch/"/>
+      <url>/devhints/brunch/</url>
       
       
       <categories>
@@ -5523,8 +5501,8 @@
     
     <entry>
       <title>Browserify</title>
-      <link href="/browserify/"/>
-      <url>/browserify/</url>
+      <link href="/devhints/browserify/"/>
+      <url>/devhints/browserify/</url>
       
       
       <categories>
@@ -5540,8 +5518,8 @@
     
     <entry>
       <title>Browsersync</title>
-      <link href="/browser-sync/"/>
-      <url>/browser-sync/</url>
+      <link href="/devhints/browser-sync/"/>
+      <url>/devhints/browser-sync/</url>
       
       
       <categories>
@@ -5557,8 +5535,8 @@
     
     <entry>
       <title>Homebrew</title>
-      <link href="/brew/"/>
-      <url>/brew/</url>
+      <link href="/devhints/brew/"/>
+      <url>/devhints/brew/</url>
       
       
       <categories>
@@ -5574,8 +5552,8 @@
     
     <entry>
       <title>Bootstrap</title>
-      <link href="/bootstrap/"/>
-      <url>/bootstrap/</url>
+      <link href="/devhints/bootstrap/"/>
+      <url>/devhints/bootstrap/</url>
       
       
       <categories>
@@ -5591,8 +5569,8 @@
     
     <entry>
       <title>Bookshelf.js</title>
-      <link href="/bookshelf/"/>
-      <url>/bookshelf/</url>
+      <link href="/devhints/bookshelf/"/>
+      <url>/devhints/bookshelf/</url>
       
       
       <categories>
@@ -5608,8 +5586,8 @@
     
     <entry>
       <title>bookshelf-contrib</title>
-      <link href="/bookshelf-contrib/"/>
-      <url>/bookshelf-contrib/</url>
+      <link href="/devhints/bookshelf-contrib/"/>
+      <url>/devhints/bookshelf-contrib/</url>
       
       
       
@@ -5619,8 +5597,8 @@
     
     <entry>
       <title>Bolt Quickstart</title>
-      <link href="/bolt/"/>
-      <url>/bolt/</url>
+      <link href="/devhints/bolt/"/>
+      <url>/devhints/bolt/</url>
       
       
       <categories>
@@ -5636,8 +5614,8 @@
     
     <entry>
       <title>Blessed</title>
-      <link href="/blessed/"/>
-      <url>/blessed/</url>
+      <link href="/devhints/blessed/"/>
+      <url>/devhints/blessed/</url>
       
       
       <categories>
@@ -5653,8 +5631,8 @@
     
     <entry>
       <title>bluebird.js</title>
-      <link href="/bluebird/"/>
-      <url>/bluebird/</url>
+      <link href="/devhints/bluebird/"/>
+      <url>/devhints/bluebird/</url>
       
       
       <categories>
@@ -5670,8 +5648,8 @@
     
     <entry>
       <title>Bash scripting</title>
-      <link href="/bash/"/>
-      <url>/bash/</url>
+      <link href="/devhints/bash/"/>
+      <url>/devhints/bash/</url>
       
       
       <categories>
@@ -5693,8 +5671,8 @@
     
     <entry>
       <title>Backbone.js</title>
-      <link href="/backbone/"/>
-      <url>/backbone/</url>
+      <link href="/devhints/backbone/"/>
+      <url>/devhints/backbone/</url>
       
       
       <categories>
@@ -5710,8 +5688,8 @@
     
     <entry>
       <title>Code badges</title>
-      <link href="/badges/"/>
-      <url>/badges/</url>
+      <link href="/devhints/badges/"/>
+      <url>/devhints/badges/</url>
       
       
       
@@ -5721,8 +5699,8 @@
     
     <entry>
       <title>AWS CLI</title>
-      <link href="/awscli/"/>
-      <url>/awscli/</url>
+      <link href="/devhints/awscli/"/>
+      <url>/devhints/awscli/</url>
       
       
       <categories>
@@ -5737,26 +5715,9 @@
     
     
     <entry>
-      <title>Atom</title>
-      <link href="/atom/"/>
-      <url>/atom/</url>
-      
-      
-      <categories>
-          
-          <category> Apps </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Awesome Redux</title>
-      <link href="/awesome-redux/"/>
-      <url>/awesome-redux/</url>
+      <link href="/devhints/awesome-redux/"/>
+      <url>/devhints/awesome-redux/</url>
       
       
       <categories>
@@ -5771,9 +5732,26 @@
     
     
     <entry>
+      <title>Atom</title>
+      <link href="/devhints/atom/"/>
+      <url>/devhints/atom/</url>
+      
+      
+      <categories>
+          
+          <category> Apps </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Arel</title>
-      <link href="/arel/"/>
-      <url>/arel/</url>
+      <link href="/devhints/arel/"/>
+      <url>/devhints/arel/</url>
       
       
       <categories>
@@ -5788,26 +5766,9 @@
     
     
     <entry>
-      <title>AppleScript</title>
-      <link href="/applescript/"/>
-      <url>/applescript/</url>
-      
-      
-      <categories>
-          
-          <category> macOS </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Applinks</title>
-      <link href="/applinks/"/>
-      <url>/applinks/</url>
+      <link href="/devhints/applinks/"/>
+      <url>/devhints/applinks/</url>
       
       
       <categories>
@@ -5823,8 +5784,8 @@
     
     <entry>
       <title>Appcache</title>
-      <link href="/appcache/"/>
-      <url>/appcache/</url>
+      <link href="/devhints/appcache/"/>
+      <url>/devhints/appcache/</url>
       
       
       <categories>
@@ -5839,9 +5800,26 @@
     
     
     <entry>
-      <title>Ansible roles</title>
-      <link href="/ansible-roles/"/>
-      <url>/ansible-roles/</url>
+      <title>AppleScript</title>
+      <link href="/devhints/applescript/"/>
+      <url>/devhints/applescript/</url>
+      
+      
+      <categories>
+          
+          <category> macOS </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Ansible</title>
+      <link href="/devhints/ansible/"/>
+      <url>/devhints/ansible/</url>
       
       
       <categories>
@@ -5856,9 +5834,9 @@
     
     
     <entry>
-      <title>Ansible</title>
-      <link href="/ansible/"/>
-      <url>/ansible/</url>
+      <title>Ansible roles</title>
+      <link href="/devhints/ansible-roles/"/>
+      <url>/devhints/ansible-roles/</url>
       
       
       <categories>
@@ -5874,8 +5852,8 @@
     
     <entry>
       <title>Ansible modules</title>
-      <link href="/ansible-modules/"/>
-      <url>/ansible-modules/</url>
+      <link href="/devhints/ansible-modules/"/>
+      <url>/devhints/ansible-modules/</url>
       
       
       <categories>
@@ -5891,8 +5869,8 @@
     
     <entry>
       <title>Ansible quickstart</title>
-      <link href="/ansible-guide/"/>
-      <url>/ansible-guide/</url>
+      <link href="/devhints/ansible-guide/"/>
+      <url>/devhints/ansible-guide/</url>
       
       
       <categories>
@@ -5908,8 +5886,8 @@
     
     <entry>
       <title>Ansible examples</title>
-      <link href="/ansible-examples/"/>
-      <url>/ansible-examples/</url>
+      <link href="/devhints/ansible-examples/"/>
+      <url>/devhints/ansible-examples/</url>
       
       
       <categories>
@@ -5924,9 +5902,9 @@
     
     
     <entry>
-      <title>Ansi codes</title>
-      <link href="/ansi/"/>
-      <url>/ansi/</url>
+      <title>Animated GIFs</title>
+      <link href="/devhints/animated_gif/"/>
+      <url>/devhints/animated_gif/</url>
       
       
       <categories>
@@ -5941,9 +5919,9 @@
     
     
     <entry>
-      <title>Animated GIFs</title>
-      <link href="/animated_gif/"/>
-      <url>/animated_gif/</url>
+      <title>Ansi codes</title>
+      <link href="/devhints/ansi/"/>
+      <url>/devhints/ansi/</url>
       
       
       <categories>
@@ -5959,8 +5937,8 @@
     
     <entry>
       <title>Angular.js</title>
-      <link href="/angularjs/"/>
-      <url>/angularjs/</url>
+      <link href="/devhints/angularjs/"/>
+      <url>/devhints/angularjs/</url>
       
       
       <categories>
@@ -5975,9 +5953,9 @@
     
     
     <entry>
-      <title>Google Analytics&#39;s analytics.js</title>
-      <link href="/analytics.js/"/>
-      <url>/analytics.js/</url>
+      <title>Analytics libraries</title>
+      <link href="/devhints/analytics/"/>
+      <url>/devhints/analytics/</url>
       
       
       <categories>
@@ -5992,9 +5970,9 @@
     
     
     <entry>
-      <title>Analytics libraries</title>
-      <link href="/analytics/"/>
-      <url>/analytics/</url>
+      <title>Google Analytics&#39;s analytics.js</title>
+      <link href="/devhints/analytics.js/"/>
+      <url>/devhints/analytics.js/</url>
       
       
       <categories>
@@ -6010,8 +5988,8 @@
     
     <entry>
       <title>adb (Android Debug Bridge)</title>
-      <link href="/adb/"/>
-      <url>/adb/</url>
+      <link href="/devhints/adb/"/>
+      <url>/devhints/adb/</url>
       
       
       <categories>
@@ -6027,8 +6005,8 @@
     
     <entry>
       <title>ActiveAdmin</title>
-      <link href="/activeadmin/"/>
-      <url>/activeadmin/</url>
+      <link href="/devhints/activeadmin/"/>
+      <url>/devhints/activeadmin/</url>
       
       
       <categories>
@@ -6044,8 +6022,8 @@
     
     <entry>
       <title>101</title>
-      <link href="/101/"/>
-      <url>/101/</url>
+      <link href="/devhints/101/"/>
+      <url>/devhints/101/</url>
       
       
       <categories>
@@ -6061,8 +6039,8 @@
     
     <entry>
       <title>git</title>
-      <link href="/git/"/>
-      <url>/git/</url>
+      <link href="/devhints/git/"/>
+      <url>/devhints/git/</url>
       
       
       
@@ -6072,8 +6050,8 @@
     
     <entry>
       <title>Jsdoc</title>
-      <link href="/jsdoc/"/>
-      <url>/jsdoc/</url>
+      <link href="/devhints/jsdoc/"/>
+      <url>/devhints/jsdoc/</url>
       
       
       <categories>
@@ -6081,6 +6059,28 @@
           <category> JavaScript </category>
           
       </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>status code</title>
+      <link href="/devhints/status%20code/"/>
+      <url>/devhints/status%20code/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>nginx</title>
+      <link href="/devhints/nginx/"/>
+      <url>/devhints/nginx/</url>
+      
       
       
     </entry>
