@@ -12,6 +12,7 @@ Replace anything within `<placeholder>` accordingly
 
 ### Commands
 
+ * Show commands: `\?`
  * Show roles: `\du`
  * Show tables: `\dt`
  * Show databases: `\l`

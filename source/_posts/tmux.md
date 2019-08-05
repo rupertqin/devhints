@@ -1,4 +1,5 @@
-tmux shortcuts & cheatsheet
+
+```sh
 tmux            start new
 tmux ls           list sessions
 tmux new -s myname        start new with session name
@@ -10,14 +11,20 @@ tmux a -t myname        attach to named
 tmux kill-session -t myname     kill
 tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill     kill all
 tmux source-file ~/.tmux.conf                           source conf
-Sessions
+```
+
+### Sessions
+```sh
 s  list sessions
 $  name session
 d  detach
 t  big clock
 ?  list shortcuts
 :  prompt
-Windows (tabs)
+```
+
+### Windows (tabs)
+```sh
 d  dettach window
 c  new window
 w  list windows
@@ -25,7 +32,10 @@ f  find window
 ,  name window
 &  kill window
   (num 0,1,2,3 etc.) switch window
-Panes
+```
+
+### Panes
+```sh
 %  vertical split
 "  horizontal split
 o  swap panes
@@ -38,3 +48,19 @@ x  kill pane
 <prefix> { (Move the current pane left)
 <prefix> } (Move the current pane right)
 <prefix> z toggle pane zoom
+```
+
+### scrolling
+
+1: mouse mode
+
+```sh
+C-b : setw -g mode-mouse on # or  setw -g mouse on 
+```
+2: (MacOS)
+```sh
+C-b : [
+### then
+fn + ArrowUp/ArrowDown # or
+alt + ArrowUp/ArrowDown
+```
