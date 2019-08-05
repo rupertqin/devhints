@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="tmux shortcuts &amp;amp; cheatsheettmux            start newtmux ls           list sessionstmux new -s myname        start new with session nametmux rename -t 0  bynametmux a  #  (or at, or attach)     at">
+    <meta name="description" content="1234567891011tmux            start newtmux ls           list sessionstmux new -s myname        start new with session nametmux rename -t 0  bynametmux a  #  (or at, or attach)     attachtmux detach">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tmux">
 <meta property="og:url" content="https://rupertqin.github.io/devhints/tmux/index.html">
 <meta property="og:site_name" content="Dev Hints">
-<meta property="og:description" content="tmux shortcuts &amp;amp; cheatsheettmux            start newtmux ls           list sessionstmux new -s myname        start new with session nametmux rename -t 0  bynametmux a  #  (or at, or attach)     at">
+<meta property="og:description" content="1234567891011tmux            start newtmux ls           list sessionstmux new -s myname        start new with session nametmux rename -t 0  bynametmux a  #  (or at, or attach)     attachtmux detach">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-28T15:46:26.746Z">
+<meta property="og:updated_time" content="2019-06-03T05:31:29.932Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tmux">
-<meta name="twitter:description" content="tmux shortcuts &amp;amp; cheatsheettmux            start newtmux ls           list sessionstmux new -s myname        start new with session nametmux rename -t 0  bynametmux a  #  (or at, or attach)     at">
+<meta name="twitter:description" content="1234567891011tmux            start newtmux ls           list sessionstmux new -s myname        start new with session nametmux rename -t 0  bynametmux a  #  (or at, or attach)     attachtmux detach">
     
     
         
@@ -72,10 +72,8 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="../vim/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
-        
-        <li><a class="icon" href="../curl/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="../regexp/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -102,7 +100,7 @@
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Sessions"><span class="toc-number">1.</span> <span class="toc-text">Sessions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-tabs"><span class="toc-number">2.</span> <span class="toc-text">Windows (tabs)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Panes"><span class="toc-number">3.</span> <span class="toc-text">Panes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#scrolling"><span class="toc-number">4.</span> <span class="toc-text">scrolling</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -126,7 +124,7 @@
       
     <div class="postdate">
       
-        <time datetime="2019-05-28T15:46:26.746Z" itemprop="datePublished">2019-05-28</time>
+        <time datetime="2019-05-29T06:23:02.513Z" itemprop="datePublished">2019-05-29</time>
         
       
     </div>
@@ -141,13 +139,13 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p>tmux shortcuts &amp; cheatsheet<br>tmux            start new<br>tmux ls           list sessions<br>tmux new -s myname        start new with session name<br>tmux rename -t 0  byname<br>tmux a  #  (or at, or attach)     attach<br>tmux detach                     detach one<br>tmux a(ttach)                   attach one<br>tmux a -t myname        attach to named<br>tmux kill-session -t myname     kill<br>tmux ls | grep : | cut -d. -f1 | awk ‘{print substr($1, 0, length($1)-1)}’ | xargs kill     kill all<br>tmux source-file ~/.tmux.conf                           source conf<br>Sessions<br>s  list sessions<br>$  name session<br>d  detach<br>t  big clock<br>?  list shortcuts<br>:  prompt<br>Windows (tabs)<br>d  dettach window<br>c  new window<br>w  list windows<br>f  find window<br>,  name window<br>&amp;  kill window<br>  (num 0,1,2,3 etc.) switch window<br>Panes<br>%  vertical split<br>“  horizontal split<br>o  swap panes<br>q  show pane numbers<br>x  kill pane</p>
-<ul>
-<li>break pane into window (e.g. to select text by mouse to copy)</li>
-</ul>
-<ul>
-<li>restore pane from window<br>⍽  space - toggle between layouts<br><prefix> q (Show pane numbers, when the numbers show up type the key to goto that pane)<br><prefix> { (Move the current pane left)<br><prefix> } (Move the current pane right)<br><prefix> z toggle pane zoom</prefix></prefix></prefix></prefix></li>
-</ul>
+    <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">tmux            start new</span><br><span class="line">tmux ls           list sessions</span><br><span class="line">tmux new -s myname        start new with session name</span><br><span class="line">tmux rename -t 0  byname</span><br><span class="line">tmux a  <span class="comment">#  (or at, or attach)     attach</span></span><br><span class="line">tmux detach                     detach one</span><br><span class="line">tmux a(ttach)                   attach one</span><br><span class="line">tmux a -t myname        attach to named</span><br><span class="line">tmux <span class="built_in">kill</span>-session -t myname     <span class="built_in">kill</span></span><br><span class="line">tmux ls | grep : | cut -d. -f1 | awk <span class="string">'&#123;print substr($1, 0, length($1)-1)&#125;'</span> | xargs <span class="built_in">kill</span>     <span class="built_in">kill</span> all</span><br><span class="line">tmux <span class="built_in">source</span>-file ~/.tmux.conf                           <span class="built_in">source</span> conf</span><br></pre></td></tr></table></figure>
+<h3 id="Sessions"><a href="#Sessions" class="headerlink" title="Sessions"></a>Sessions</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">s  list sessions</span><br><span class="line">$  name session</span><br><span class="line">d  detach</span><br><span class="line">t  big clock</span><br><span class="line">?  list shortcuts</span><br><span class="line">:  prompt</span><br></pre></td></tr></table></figure>
+<h3 id="Windows-tabs"><a href="#Windows-tabs" class="headerlink" title="Windows (tabs)"></a>Windows (tabs)</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">d  dettach window</span><br><span class="line">c  new window</span><br><span class="line">w  list windows</span><br><span class="line">f  find window</span><br><span class="line">,  name window</span><br><span class="line">&amp;  <span class="built_in">kill</span> window</span><br><span class="line">  (num 0,1,2,3 etc.) switch window</span><br></pre></td></tr></table></figure>
+<h3 id="Panes"><a href="#Panes" class="headerlink" title="Panes"></a>Panes</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">%  vertical split</span><br><span class="line"><span class="string">"  horizontal split</span></span><br><span class="line"><span class="string">o  swap panes</span></span><br><span class="line"><span class="string">q  show pane numbers</span></span><br><span class="line"><span class="string">x  kill pane</span></span><br><span class="line"><span class="string">+  break pane into window (e.g. to select text by mouse to copy)</span></span><br><span class="line"><span class="string">-  restore pane from window</span></span><br><span class="line"><span class="string">⍽  space - toggle between layouts</span></span><br><span class="line"><span class="string">&lt;prefix&gt; q (Show pane numbers, when the numbers show up type the key to goto that pane)</span></span><br><span class="line"><span class="string">&lt;prefix&gt; &#123; (Move the current pane left)</span></span><br><span class="line"><span class="string">&lt;prefix&gt; &#125; (Move the current pane right)</span></span><br><span class="line"><span class="string">&lt;prefix&gt; z toggle pane zoom</span></span><br></pre></td></tr></table></figure>
+<h3 id="scrolling"><a href="#scrolling" class="headerlink" title="scrolling"></a>scrolling</h3><p>1: mouse mode</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C-b : setw -g mode-mouse on <span class="comment"># or  setw -g mouse on</span></span><br></pre></td></tr></table></figure>
+<p>2: (MacOS)<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C-b : [</span><br><span class="line"><span class="comment">### then</span></span><br><span class="line">fn + ArrowUp/ArrowDown <span class="comment"># or</span></span><br><span class="line">alt + ArrowUp/ArrowDown</span><br></pre></td></tr></table></figure></p>
 
   </div>
 </article>
@@ -173,7 +171,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Sessions"><span class="toc-number">1.</span> <span class="toc-text">Sessions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-tabs"><span class="toc-number">2.</span> <span class="toc-text">Windows (tabs)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Panes"><span class="toc-number">3.</span> <span class="toc-text">Panes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#scrolling"><span class="toc-number">4.</span> <span class="toc-text">scrolling</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">

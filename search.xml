@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title>vim</title>
-      <link href="/devhints/vim/"/>
-      <url>/devhints/vim/</url>
+      <title>tmux</title>
+      <link href="/devhints/tmux/"/>
+      <url>/devhints/tmux/</url>
       
       
       
@@ -15,9 +15,43 @@
     
     
     <entry>
-      <title>tmux</title>
-      <link href="/devhints/tmux/"/>
-      <url>/devhints/tmux/</url>
+      <title>regexp</title>
+      <link href="/devhints/regexp/"/>
+      <url>/devhints/regexp/</url>
+      
+      
+      <categories>
+          
+          <category> Others </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PostgreSQL</title>
+      <link href="/devhints/postgresql/"/>
+      <url>/devhints/postgresql/</url>
+      
+      
+      <categories>
+          
+          <category> Databases </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vim</title>
+      <link href="/devhints/vim/"/>
+      <url>/devhints/vim/</url>
       
       
       
@@ -230,17 +264,6 @@
     
     
     <entry>
-      <title>Watchman</title>
-      <link href="/devhints/watchman/"/>
-      <url>/devhints/watchman/</url>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Watchexec</title>
       <link href="/devhints/watchexec/"/>
       <url>/devhints/watchexec/</url>
@@ -251,6 +274,17 @@
           <category> CLI </category>
           
       </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Watchman</title>
+      <link href="/devhints/watchman/"/>
+      <url>/devhints/watchman/</url>
+      
       
       
     </entry>
@@ -309,6 +343,23 @@
     
     
     <entry>
+      <title>Virtual-dom</title>
+      <link href="/devhints/virtual-dom/"/>
+      <url>/devhints/virtual-dom/</url>
+      
+      
+      <categories>
+          
+          <category> JavaScript libraries </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vim scripting</title>
       <link href="/devhints/vimscript/"/>
       <url>/devhints/vimscript/</url>
@@ -332,26 +383,9 @@
     
     
     <entry>
-      <title>Virtual-dom</title>
-      <link href="/devhints/virtual-dom/"/>
-      <url>/devhints/virtual-dom/</url>
-      
-      
-      <categories>
-          
-          <category> JavaScript libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Vimscript snippets</title>
-      <link href="/devhints/vimscript-snippets/"/>
-      <url>/devhints/vimscript-snippets/</url>
+      <title>Vimscript functions</title>
+      <link href="/devhints/vimscript-functions/"/>
+      <url>/devhints/vimscript-functions/</url>
       
       
       <categories>
@@ -366,9 +400,9 @@
     
     
     <entry>
-      <title>Vimscript functions</title>
-      <link href="/devhints/vimscript-functions/"/>
-      <url>/devhints/vimscript-functions/</url>
+      <title>Vimscript snippets</title>
+      <link href="/devhints/vimscript-snippets/"/>
+      <url>/devhints/vimscript-snippets/</url>
       
       
       <categories>
@@ -1372,23 +1406,6 @@
     
     
     <entry>
-      <title>regexp</title>
-      <link href="/devhints/regexp/"/>
-      <url>/devhints/regexp/</url>
-      
-      
-      <categories>
-          
-          <category> Others </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Redux</title>
       <link href="/devhints/redux/"/>
       <url>/devhints/redux/</url>
@@ -1888,23 +1905,6 @@
     
     
     <entry>
-      <title>PostgreSQL</title>
-      <link href="/devhints/postgresql/"/>
-      <url>/devhints/postgresql/</url>
-      
-      
-      <categories>
-          
-          <category> Databases </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>PostgreSQL JSON</title>
       <link href="/devhints/postgresql-json/"/>
       <url>/devhints/postgresql-json/</url>
@@ -2182,14 +2182,14 @@
     
     
     <entry>
-      <title>Pacman</title>
-      <link href="/devhints/pacman/"/>
-      <url>/devhints/pacman/</url>
+      <title>Parsimmon</title>
+      <link href="/devhints/parsimmon/"/>
+      <url>/devhints/parsimmon/</url>
       
       
       <categories>
           
-          <category> Linux </category>
+          <category> JavaScript libraries </category>
           
       </categories>
       
@@ -2199,14 +2199,14 @@
     
     
     <entry>
-      <title>Parsimmon</title>
-      <link href="/devhints/parsimmon/"/>
-      <url>/devhints/parsimmon/</url>
+      <title>Pacman</title>
+      <link href="/devhints/pacman/"/>
+      <url>/devhints/pacman/</url>
       
       
       <categories>
           
-          <category> JavaScript libraries </category>
+          <category> Linux </category>
           
       </categories>
       
@@ -2341,9 +2341,9 @@
     
     
     <entry>
-      <title>Node.js streams</title>
-      <link href="/devhints/nodejs-stream/"/>
-      <url>/devhints/nodejs-stream/</url>
+      <title>process</title>
+      <link href="/devhints/nodejs-process/"/>
+      <url>/devhints/nodejs-process/</url>
       
       
       <categories>
@@ -2358,9 +2358,9 @@
     
     
     <entry>
-      <title>process</title>
-      <link href="/devhints/nodejs-process/"/>
-      <url>/devhints/nodejs-process/</url>
+      <title>Node.js streams</title>
+      <link href="/devhints/nodejs-stream/"/>
+      <url>/devhints/nodejs-stream/</url>
       
       
       <categories>
@@ -2528,9 +2528,9 @@
     
     
     <entry>
-      <title>Modernizr</title>
-      <link href="/devhints/modernizr/"/>
-      <url>/devhints/modernizr/</url>
+      <title>Modella</title>
+      <link href="/devhints/modella/"/>
+      <url>/devhints/modella/</url>
       
       
       <categories>
@@ -2545,9 +2545,9 @@
     
     
     <entry>
-      <title>Modella</title>
-      <link href="/devhints/modella/"/>
-      <url>/devhints/modella/</url>
+      <title>Modernizr</title>
+      <link href="/devhints/modernizr/"/>
+      <url>/devhints/modernizr/</url>
       
       
       <categories>
@@ -2715,14 +2715,14 @@
     
     
     <entry>
-      <title>Meow</title>
-      <link href="/devhints/meow/"/>
-      <url>/devhints/meow/</url>
+      <title>Meta-tags gem</title>
+      <link href="/devhints/meta-tags/"/>
+      <url>/devhints/meta-tags/</url>
       
       
       <categories>
           
-          <category> JavaScript libraries </category>
+          <category> Ruby libraries </category>
           
       </categories>
       
@@ -2732,14 +2732,14 @@
     
     
     <entry>
-      <title>Meta-tags gem</title>
-      <link href="/devhints/meta-tags/"/>
-      <url>/devhints/meta-tags/</url>
+      <title>Meow</title>
+      <link href="/devhints/meow/"/>
+      <url>/devhints/meow/</url>
       
       
       <categories>
           
-          <category> Ruby libraries </category>
+          <category> JavaScript libraries </category>
           
       </categories>
       
@@ -2940,9 +2940,9 @@
     
     
     <entry>
-      <title>Ledger periods</title>
-      <link href="/devhints/ledger-periods/"/>
-      <url>/devhints/ledger-periods/</url>
+      <title>Ledger format</title>
+      <link href="/devhints/ledger-format/"/>
+      <url>/devhints/ledger-format/</url>
       
       
       <categories>
@@ -2957,9 +2957,9 @@
     
     
     <entry>
-      <title>Ledger format</title>
-      <link href="/devhints/ledger-format/"/>
-      <url>/devhints/ledger-format/</url>
+      <title>Ledger periods</title>
+      <link href="/devhints/ledger-periods/"/>
+      <url>/devhints/ledger-periods/</url>
       
       
       <categories>
@@ -3665,14 +3665,14 @@
     
     
     <entry>
-      <title>Hledger</title>
-      <link href="/devhints/hledger/"/>
-      <url>/devhints/hledger/</url>
+      <title>Homebrew</title>
+      <link href="/devhints/homebrew/"/>
+      <url>/devhints/homebrew/</url>
       
       
       <categories>
           
-          <category> Ledger </category>
+          <category> CLI </category>
           
       </categories>
       
@@ -3682,14 +3682,14 @@
     
     
     <entry>
-      <title>Homebrew</title>
-      <link href="/devhints/homebrew/"/>
-      <url>/devhints/homebrew/</url>
+      <title>Hledger</title>
+      <link href="/devhints/hledger/"/>
+      <url>/devhints/hledger/</url>
       
       
       <categories>
           
-          <category> CLI </category>
+          <category> Ledger </category>
           
       </categories>
       
@@ -4078,14 +4078,14 @@
     
     
     <entry>
-      <title>GitHub pages</title>
-      <link href="/devhints/gh-pages/"/>
-      <url>/devhints/gh-pages/</url>
+      <title>Git branches</title>
+      <link href="/devhints/git-branch/"/>
+      <url>/devhints/git-branch/</url>
       
       
       <categories>
           
-          <category> Jekyll </category>
+          <category> Git </category>
           
       </categories>
       
@@ -4095,14 +4095,14 @@
     
     
     <entry>
-      <title>Git branches</title>
-      <link href="/devhints/git-branch/"/>
-      <url>/devhints/git-branch/</url>
+      <title>GitHub pages</title>
+      <link href="/devhints/gh-pages/"/>
+      <url>/devhints/gh-pages/</url>
       
       
       <categories>
           
-          <category> Git </category>
+          <category> Jekyll </category>
           
       </categories>
       
@@ -4214,14 +4214,14 @@
     
     
     <entry>
-      <title>Flashlight</title>
-      <link href="/devhints/flashlight/"/>
-      <url>/devhints/flashlight/</url>
+      <title>Flexbox</title>
+      <link href="/devhints/flexbox/"/>
+      <url>/devhints/flexbox/</url>
       
       
       <categories>
           
-          <category> Apps </category>
+          <category> Hidden </category>
           
       </categories>
       
@@ -4231,14 +4231,14 @@
     
     
     <entry>
-      <title>Flexbox</title>
-      <link href="/devhints/flexbox/"/>
-      <url>/devhints/flexbox/</url>
+      <title>Flashlight</title>
+      <link href="/devhints/flashlight/"/>
+      <url>/devhints/flashlight/</url>
       
       
       <categories>
           
-          <category> Hidden </category>
+          <category> Apps </category>
           
       </categories>
       
@@ -4338,14 +4338,14 @@
     
     
     <entry>
-      <title>fetch()</title>
-      <link href="/devhints/fetch/"/>
-      <url>/devhints/fetch/</url>
+      <title>FFaker</title>
+      <link href="/devhints/ffaker/"/>
+      <url>/devhints/ffaker/</url>
       
       
       <categories>
           
-          <category> Hidden </category>
+          <category> Ruby libraries </category>
           
       </categories>
       
@@ -4355,14 +4355,14 @@
     
     
     <entry>
-      <title>FFaker</title>
-      <link href="/devhints/ffaker/"/>
-      <url>/devhints/ffaker/</url>
+      <title>fetch()</title>
+      <link href="/devhints/fetch/"/>
+      <url>/devhints/fetch/</url>
       
       
       <categories>
           
-          <category> Ruby libraries </category>
+          <category> Hidden </category>
           
       </categories>
       
@@ -4389,23 +4389,6 @@
     
     
     <entry>
-      <title>Factory Girl</title>
-      <link href="/devhints/factory_girl/"/>
-      <url>/devhints/factory_girl/</url>
-      
-      
-      <categories>
-          
-          <category> Ruby libraries </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Factory Bot</title>
       <link href="/devhints/factory_bot/"/>
       <url>/devhints/factory_bot/</url>
@@ -4423,6 +4406,23 @@
             <tag> Featurable </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Factory Girl</title>
+      <link href="/devhints/factory_girl/"/>
+      <url>/devhints/factory_girl/</url>
+      
+      
+      <categories>
+          
+          <category> Ruby libraries </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -4622,6 +4622,23 @@
     
     
     <entry>
+      <title>Emmet</title>
+      <link href="/devhints/emmet/"/>
+      <url>/devhints/emmet/</url>
+      
+      
+      <categories>
+          
+          <category> Markup </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Enzyme</title>
       <link href="/devhints/enzyme/"/>
       <url>/devhints/enzyme/</url>
@@ -4639,23 +4656,6 @@
             <tag> Featured </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Emmet</title>
-      <link href="/devhints/emmet/"/>
-      <url>/devhints/emmet/</url>
-      
-      
-      <categories>
-          
-          <category> Markup </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -4821,9 +4821,9 @@
     
     
     <entry>
-      <title>Docker CLI</title>
-      <link href="/devhints/docker/"/>
-      <url>/devhints/docker/</url>
+      <title>docker-compose</title>
+      <link href="/devhints/docker-compose/"/>
+      <url>/devhints/docker-compose/</url>
       
       
       <categories>
@@ -4838,9 +4838,9 @@
     
     
     <entry>
-      <title>docker-compose</title>
-      <link href="/devhints/docker-compose/"/>
-      <url>/devhints/docker-compose/</url>
+      <title>Docker CLI</title>
+      <link href="/devhints/docker/"/>
+      <url>/devhints/docker/</url>
       
       
       <categories>
@@ -4872,9 +4872,9 @@
     
     
     <entry>
-      <title>Devise</title>
-      <link href="/devhints/devise/"/>
-      <url>/devhints/devise/</url>
+      <title>Divshot</title>
+      <link href="/devhints/divshot/"/>
+      <url>/devhints/divshot/</url>
       
       
       
@@ -4883,9 +4883,9 @@
     
     
     <entry>
-      <title>Divshot</title>
-      <link href="/devhints/divshot/"/>
-      <url>/devhints/divshot/</url>
+      <title>Devise</title>
+      <link href="/devhints/devise/"/>
+      <url>/devhints/devise/</url>
       
       
       
@@ -5002,6 +5002,23 @@
     
     
     <entry>
+      <title>CSS selectors</title>
+      <link href="/devhints/css-selectors/"/>
+      <url>/devhints/css-selectors/</url>
+      
+      
+      <categories>
+          
+          <category> Hidden </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS system fonts</title>
       <link href="/devhints/css-system-font-stack/"/>
       <url>/devhints/css-system-font-stack/</url>
@@ -5019,23 +5036,6 @@
             <tag> Featurable </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CSS selectors</title>
-      <link href="/devhints/css-selectors/"/>
-      <url>/devhints/css-selectors/</url>
-      
-      
-      <categories>
-          
-          <category> Hidden </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -5110,14 +5110,14 @@
     
     
     <entry>
-      <title>CSS animations</title>
-      <link href="/devhints/css-animation/"/>
-      <url>/devhints/css-animation/</url>
+      <title>CSS antialiasing</title>
+      <link href="/devhints/css-antialias/"/>
+      <url>/devhints/css-antialias/</url>
       
       
       <categories>
           
-          <category> Hidden </category>
+          <category> CSS </category>
           
       </categories>
       
@@ -5127,14 +5127,14 @@
     
     
     <entry>
-      <title>CSS antialiasing</title>
-      <link href="/devhints/css-antialias/"/>
-      <url>/devhints/css-antialias/</url>
+      <title>CSS animations</title>
+      <link href="/devhints/css-animation/"/>
+      <url>/devhints/css-animation/</url>
       
       
       <categories>
           
-          <category> CSS </category>
+          <category> Hidden </category>
           
       </categories>
       
@@ -5172,6 +5172,17 @@
     
     
     <entry>
+      <title>Cordova</title>
+      <link href="/devhints/cordova/"/>
+      <url>/devhints/cordova/</url>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Cron</title>
       <link href="/devhints/cron/"/>
       <url>/devhints/cron/</url>
@@ -5182,17 +5193,6 @@
           <category> CLI </category>
           
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Cordova</title>
-      <link href="/devhints/cordova/"/>
-      <url>/devhints/cordova/</url>
-      
       
       
     </entry>
@@ -5613,9 +5613,9 @@
     
     
     <entry>
-      <title>Blessed</title>
-      <link href="/devhints/blessed/"/>
-      <url>/devhints/blessed/</url>
+      <title>bluebird.js</title>
+      <link href="/devhints/bluebird/"/>
+      <url>/devhints/bluebird/</url>
       
       
       <categories>
@@ -5630,9 +5630,9 @@
     
     
     <entry>
-      <title>bluebird.js</title>
-      <link href="/devhints/bluebird/"/>
-      <url>/devhints/bluebird/</url>
+      <title>Blessed</title>
+      <link href="/devhints/blessed/"/>
+      <url>/devhints/blessed/</url>
       
       
       <categories>
@@ -5902,9 +5902,9 @@
     
     
     <entry>
-      <title>Animated GIFs</title>
-      <link href="/devhints/animated_gif/"/>
-      <url>/devhints/animated_gif/</url>
+      <title>Ansi codes</title>
+      <link href="/devhints/ansi/"/>
+      <url>/devhints/ansi/</url>
       
       
       <categories>
@@ -5919,9 +5919,9 @@
     
     
     <entry>
-      <title>Ansi codes</title>
-      <link href="/devhints/ansi/"/>
-      <url>/devhints/ansi/</url>
+      <title>Animated GIFs</title>
+      <link href="/devhints/animated_gif/"/>
+      <url>/devhints/animated_gif/</url>
       
       
       <categories>

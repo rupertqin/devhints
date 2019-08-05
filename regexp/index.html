@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Basic cheatsheets for regular expression">
+    <meta name="description" content="reference:Regular Expressions Quick Reference揭开正则表达式的神秘面纱正则表达式30分钟教程前端进阶必须知道的正则表达式知识 example:最全的常用正则表达式大全——包括校验数字、字符、一些特殊的需求等等由数字、26个英文字母、下划线或汉字的正则表达式常用的正则表达式全面总结 online tool:RegExrDebuggexregex101 元字">
 <meta property="og:type" content="article">
 <meta property="og:title" content="regexp">
 <meta property="og:url" content="https://rupertqin.github.io/devhints/regexp/index.html">
 <meta property="og:site_name" content="Dev Hints">
-<meta property="og:description" content="Basic cheatsheets for regular expression">
+<meta property="og:description" content="reference:Regular Expressions Quick Reference揭开正则表达式的神秘面纱正则表达式30分钟教程前端进阶必须知道的正则表达式知识 example:最全的常用正则表达式大全——包括校验数字、字符、一些特殊的需求等等由数字、26个英文字母、下划线或汉字的正则表达式常用的正则表达式全面总结 online tool:RegExrDebuggexregex101 元字">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-23T16:00:00.000Z">
+<meta property="og:updated_time" content="2019-07-30T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="regexp">
-<meta name="twitter:description" content="Basic cheatsheets for regular expression">
+<meta name="twitter:description" content="reference:Regular Expressions Quick Reference揭开正则表达式的神秘面纱正则表达式30分钟教程前端进阶必须知道的正则表达式知识 example:最全的常用正则表达式大全——包括校验数字、字符、一些特殊的需求等等由数字、26个英文字母、下划线或汉字的正则表达式常用的正则表达式全面总结 online tool:RegExrDebuggexregex101 元字">
     
     
         
@@ -72,10 +72,10 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="../rename/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" href="../tmux/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" href="../redux/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="../postgresql/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -102,7 +102,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Character-classes"><span class="toc-number">1.</span> <span class="toc-text">Character classes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Anchors"><span class="toc-number">2.</span> <span class="toc-text">Anchors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Escaped-characters"><span class="toc-number">3.</span> <span class="toc-text">Escaped characters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Groups"><span class="toc-number">4.</span> <span class="toc-text">Groups</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Quantifiers"><span class="toc-number">5.</span> <span class="toc-text">Quantifiers</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#元字符-（需转义-）"><span class="toc-number">1.</span> <span class="toc-text">元字符 （需转义\）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Character-classes"><span class="toc-number">2.</span> <span class="toc-text">Character classes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Anchors"><span class="toc-number">3.</span> <span class="toc-text">Anchors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Escaped-characters"><span class="toc-number">4.</span> <span class="toc-text">Escaped characters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Groups"><span class="toc-number">5.</span> <span class="toc-text">Groups</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Quantifiers"><span class="toc-number">6.</span> <span class="toc-text">Quantifiers</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -126,7 +126,7 @@
       
     <div class="postdate">
       
-        <time datetime="2019-05-28T15:23:51.410Z" itemprop="datePublished">2019-05-28</time>
+        <time datetime="2019-05-29T06:23:02.490Z" itemprop="datePublished">2019-05-29</time>
         
       
     </div>
@@ -146,7 +146,10 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p>##</p>
+    <p>reference:<br><a href="http://www.regular-expressions.info/refquick.html" target="_blank" rel="noopener">Regular Expressions Quick Reference</a><br><a href="http://www.regexlab.com/zh/regref.htm" target="_blank" rel="noopener">揭开正则表达式的神秘面纱</a><br><a href="http://deerchao.net/" target="_blank" rel="noopener">正则表达式30分钟教程</a><br><a href="https://mp.weixin.qq.com/s/_C3hqSq_tZUhl4IULPYv3A" target="_blank" rel="noopener">前端进阶必须知道的正则表达式知识</a></p>
+<p>example:<br><a href="http://www.cnblogs.com/zxin/archive/2013/01/26/2877765.html" target="_blank" rel="noopener">最全的常用正则表达式大全——包括校验数字、字符、一些特殊的需求等等</a><br><a href="http://blog.sina.com.cn/s/blog_887d00920100tvvd.html" target="_blank" rel="noopener">由数字、26个英文字母、下划线或汉字的正则表达式</a><br><a href="http://www.ha97.com/4458.html" target="_blank" rel="noopener">常用的正则表达式全面总结</a></p>
+<p>online tool:<br><a href="http://gskinner.com/RegExr/" target="_blank" rel="noopener">RegExr</a><br><a href="https://www.debuggex.com" target="_blank" rel="noopener">Debuggex</a><br><a href="https://regex101.com/" target="_blank" rel="noopener">regex101</a></p>
+<h3 id="元字符-（需转义-）"><a href="#元字符-（需转义-）" class="headerlink" title="元字符 （需转义\）"></a>元字符 （需转义<code>\</code>）</h3><p><code>( [ { \ ^ $ | ) ? * + . ] }</code></p>
 <h3 id="Character-classes"><a href="#Character-classes" class="headerlink" title="Character classes"></a>Character classes</h3><table>
 <thead>
 <tr>
@@ -318,7 +321,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Character-classes"><span class="toc-number">1.</span> <span class="toc-text">Character classes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Anchors"><span class="toc-number">2.</span> <span class="toc-text">Anchors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Escaped-characters"><span class="toc-number">3.</span> <span class="toc-text">Escaped characters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Groups"><span class="toc-number">4.</span> <span class="toc-text">Groups</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Quantifiers"><span class="toc-number">5.</span> <span class="toc-text">Quantifiers</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#元字符-（需转义-）"><span class="toc-number">1.</span> <span class="toc-text">元字符 （需转义\）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Character-classes"><span class="toc-number">2.</span> <span class="toc-text">Character classes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Anchors"><span class="toc-number">3.</span> <span class="toc-text">Anchors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Escaped-characters"><span class="toc-number">4.</span> <span class="toc-text">Escaped characters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Groups"><span class="toc-number">5.</span> <span class="toc-text">Groups</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Quantifiers"><span class="toc-number">6.</span> <span class="toc-text">Quantifiers</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
